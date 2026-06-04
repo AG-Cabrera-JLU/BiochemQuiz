@@ -152,7 +152,9 @@ biochemquiz/
 
 ## Troubleshooting
 
-**QR code not working on phones:** The server must be reachable from the phone. On Render this is automatic. Locally, phones must be on the same network and you must use the LAN IP shown in the terminal (not `localhost`).
+**QR code not working on phones:** It depends on where the server is running.
+- **Render (recommended):** The URL is public — students can connect from any network: campus WiFi, home WiFi, 4G, 5G. No restrictions.
+- **Running locally on your laptop:** Phones must be on the **same WiFi network** as your laptop, and you must use the LAN IP shown in the terminal (e.g. `http://192.168.x.x:3000`), not `localhost`. Mobile data will not work in this case because your laptop is not publicly reachable.
 
 **Server sleeping on Render:** Open the URL ~2 minutes before class. The free tier sleeps after inactivity; the first request wakes it up in 30–60 seconds.
 
