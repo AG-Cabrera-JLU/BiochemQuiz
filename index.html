@@ -48,7 +48,7 @@ img { max-width: 100%; }
 
 /* ── Views ── */
 #instructor-view { display: none; max-width: 780px; margin: 0 auto; padding: 1rem; }
-#student-view    { display: none; max-width: 480px; margin: 0 auto; padding: 1rem; }
+#student-view    { display: none; max-width: 520px; margin: 0 auto; padding: 0.75rem; }
 
 /* ── Top bar ── */
 .topbar {
@@ -67,21 +67,23 @@ img { max-width: 100%; }
 .lang-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 /* ── Tabs ── */
-.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.tabs { display: flex; gap: 2px; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
 .tab-btn {
-  border: none; background: none; padding: 0.5rem 1rem; font-size: 0.88rem;
-  color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px;
+  border: none; background: none; padding: 0.6rem 1.1rem; font-size: 0.9rem;
+  color: var(--text-muted); border-bottom: 3px solid transparent; margin-bottom: -2px;
   transition: color 0.15s; font-weight: 500;
 }
 .tab-btn:hover { color: var(--text); }
-.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
 .tab-panel { display: none; }
-.tab-panel.active { display: block; }
+.tab-panel.active { display: block; animation: tabFadeIn 0.18s ease; }
+@keyframes tabFadeIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ── Cards ── */
 .card {
   background: var(--bg); border: 0.5px solid var(--border);
   border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
 }
 
 /* ── Buttons ── */
@@ -163,11 +165,11 @@ img { max-width: 100%; }
 .session-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
 .session-name { font-weight: 700; font-size: 1rem; }
 .q-counter { font-size: 0.85rem; color: var(--text-muted); }
-.progress-bar-wrap { height: 4px; background: var(--border); border-radius: 99px; margin-bottom: 1rem; }
+.progress-bar-wrap { height: 6px; background: var(--border); border-radius: 99px; margin-bottom: 1rem; }
 .progress-bar-fill { height: 100%; background: var(--primary); border-radius: 99px; transition: width 0.4s ease; }
 
 /* ── Question card (active session) ── */
-.q-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 0.75rem; }
+.q-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
 .q-card-topic { margin-bottom: 0.5rem; }
 .q-card-text { font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
 .q-card-body { display: flex; align-items: flex-start; gap: 1rem; }
@@ -180,16 +182,17 @@ img { max-width: 100%; }
 .ring-fill { fill: none; stroke: var(--primary); stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 1s linear, stroke 0.3s; }
 .ring-fill.danger { stroke: var(--danger); }
 .ring-number { font-size: 1.1rem; font-weight: 700; text-anchor: middle; dominant-baseline: central; fill: var(--text); }
+.sv-ring-number-text { font-size: 1.6rem; }
 
 /* ── Bar chart ── */
 .bar-list { list-style: none; margin-bottom: 0.5rem; }
-.bar-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.bar-label { font-size: 0.82rem; width: 200px; flex-shrink: 0; display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bar-letter { font-weight: 700; font-size: 0.85rem; color: var(--text-muted); flex-shrink: 0; }
-.bar-track  { flex: 1; height: 22px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden; }
-.bar-fill   { height: 100%; background: var(--primary-light); border-radius: 4px; transition: width 0.4s ease; min-width: 2px; }
-.bar-fill.correct { background: var(--success-light); border: 1px solid var(--success); }
-.bar-stat   { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
+.bar-item { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.bar-label { font-size: 0.85rem; width: 200px; flex-shrink: 0; display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-letter { font-weight: 700; font-size: 0.88rem; color: var(--text-muted); flex-shrink: 0; }
+.bar-track  { flex: 1; height: 28px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; }
+.bar-fill   { height: 100%; background: var(--primary-light); border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
+.bar-fill.correct { background: var(--success-light); border: 1.5px solid var(--success); }
+.bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
 .votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
 /* ── Action buttons row ── */
@@ -201,12 +204,16 @@ img { max-width: 100%; }
 .explain-img   { border-radius: var(--radius); margin-top: 0.5rem; }
 
 /* ── QR section ── */
-.qr-section { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-.qr-label   { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-.qr-row     { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-#qr-container canvas, #qr-container img { border-radius: var(--radius); border: 1px solid var(--border); }
+.qr-section {
+  margin-top: 1rem; background: var(--bg); border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1rem 1.25rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.qr-label   { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem; }
+.qr-row     { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+#qr-container canvas, #qr-container img { border-radius: var(--radius); border: 1px solid var(--border); display: block; }
 .qr-url-wrap { flex: 1; min-width: 0; }
-.qr-url     { font-size: 0.78rem; color: var(--text-muted); word-break: break-all; margin-bottom: 4px; }
+.qr-url     { font-size: 0.82rem; color: var(--text-muted); word-break: break-all; margin-bottom: 6px; }
 
 /* ── Results tab ── */
 .metric-cards { display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
@@ -218,17 +225,18 @@ img { max-width: 100%; }
 /* ── Student view ── */
 .student-header {
   background: var(--primary); color: #fff;
-  border-radius: var(--radius-lg); padding: 0.75rem 1rem; margin-bottom: 1rem;
+  border-radius: var(--radius-lg); padding: 0.9rem 1.1rem; margin-bottom: 1rem;
   display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(24,95,165,0.25);
 }
-.student-header-title { font-weight: 700; font-size: 0.95rem; }
-.student-header-sub   { font-size: 0.78rem; opacity: 0.8; }
-.student-q-counter { font-size: 0.82rem; opacity: 0.85; }
+.student-header-title { font-weight: 700; font-size: 1rem; }
+.student-header-sub   { font-size: 0.8rem; opacity: 0.8; margin-top: 1px; }
+.student-q-counter { font-size: 0.88rem; opacity: 0.9; font-weight: 600; }
 
 .waiting-card { text-align: center; padding: 3rem 1rem; }
-.waiting-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-.waiting-msg   { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-.dots span { display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; margin: 0 3px; animation: bounce 1.2s infinite; }
+.waiting-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.waiting-msg   { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5; }
+.dots span { display: inline-block; width: 9px; height: 9px; background: var(--primary); border-radius: 50%; margin: 0 3px; animation: bounce 1.2s infinite; }
 .dots span:nth-child(2) { animation-delay: 0.2s; }
 .dots span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes bounce {
@@ -236,40 +244,43 @@ img { max-width: 100%; }
   40% { transform: translateY(-8px); }
 }
 
-.student-q-text { font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
+.sv-ring-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
+.student-q-text { font-size: 1.15rem; font-weight: 600; line-height: 1.55; margin-bottom: 1.1rem; }
 .answer-btn {
-  display: flex; align-items: center; gap: 10px; width: 100%;
-  border: 0.5px solid var(--border-strong); border-radius: var(--radius-lg);
-  padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: var(--bg);
-  color: var(--text); font-size: 0.92rem; text-align: left;
-  transition: background 0.15s, border-color 0.15s;
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  border: 1.5px solid var(--border-strong); border-radius: 12px;
+  padding: 1rem 1.1rem; margin-bottom: 0.65rem; background: var(--bg);
+  color: var(--text); font-size: 1rem; text-align: left; min-height: 58px;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
 }
 .answer-btn:hover:not(:disabled) { background: var(--primary-light); border-color: var(--primary); }
-.answer-btn:disabled { cursor: not-allowed; }
-.answer-btn.selected  { background: var(--primary-light); border-color: var(--primary); }
-.answer-btn.correct   { background: var(--success-light); border-color: var(--success); }
-.answer-btn.wrong     { background: var(--danger-light); border-color: var(--danger); }
+.answer-btn:active:not(:disabled) { transform: scale(0.98); }
+.answer-btn:disabled { cursor: not-allowed; opacity: 0.85; }
+.answer-btn.selected  { background: var(--primary-light); border-color: var(--primary); border-width: 2px; }
+.answer-btn.correct   { background: var(--success-light); border-color: var(--success); border-width: 2px; }
+.answer-btn.wrong     { background: var(--danger-light);  border-color: var(--danger);  border-width: 2px; }
 .answer-letter {
-  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 0.82rem;
-  background: var(--primary-light); color: var(--primary);
+  font-weight: 700; font-size: 0.9rem;
+  background: var(--bg-secondary); color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
 }
 .answer-btn.correct .answer-letter { background: var(--success); color: #fff; }
-.answer-btn.wrong   .answer-letter { background: var(--danger); color: #fff; }
+.answer-btn.wrong   .answer-letter { background: var(--danger);  color: #fff; }
 .answer-btn.selected:not(.correct):not(.wrong) .answer-letter { background: var(--primary); color: #fff; }
 
-.mini-bar { height: 4px; background: var(--border); border-radius: 99px; margin-top: 4px; }
+.mini-bar { height: 4px; background: var(--border); border-radius: 99px; margin-top: 5px; }
 .mini-bar-fill { height: 100%; background: var(--primary); border-radius: 99px; transition: width 0.4s ease; }
-.answer-pct { font-size: 0.75rem; color: var(--text-muted); margin-top: 1px; }
+.answer-pct { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
 
 .student-explain { background: var(--bg-secondary); border-radius: var(--radius); padding: 0.75rem 1rem; margin-top: 1rem; }
 .student-explain-title { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.4rem; }
 
 .status-pill {
-  display: inline-block; font-size: 0.8rem; font-weight: 600;
+  display: inline-block; font-size: 0.85rem; font-weight: 600;
   background: var(--primary-light); color: var(--primary);
-  border-radius: 99px; padding: 4px 12px; margin-bottom: 0.75rem;
+  border-radius: 99px; padding: 5px 14px; margin-bottom: 0.75rem;
 }
 
 /* ── Error / setup message ── */
@@ -311,13 +322,13 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
 
   <!-- Tabs -->
   <div class="tabs">
-    <button class="tab-btn active" data-tab="bank"    id="tab-bank">Question Bank</button>
-    <button class="tab-btn"        data-tab="session" id="tab-session">Session</button>
+    <button class="tab-btn active" data-tab="session" id="tab-session">Session</button>
     <button class="tab-btn"        data-tab="results" id="tab-results">Results</button>
+    <button class="tab-btn"        data-tab="bank"    id="tab-bank">Question Bank</button>
   </div>
 
-  <!-- ── TAB 1: Question Bank ── -->
-  <div class="tab-panel active" id="panel-bank">
+  <!-- ── TAB 3: Question Bank (last) ── -->
+  <div class="tab-panel" id="panel-bank">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
       <span id="bank-count" class="text-muted" style="font-size:0.85rem;"></span>
       <button class="btn btn-primary btn-sm" id="btn-add-q" onclick="showAddForm()">+ <span data-i18n="bank.addBtn">Add question</span></button>
@@ -327,8 +338,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     <div id="bank-form" class="hidden"></div>
   </div>
 
-  <!-- ── TAB 2: Session (pre-launch) ── -->
-  <div class="tab-panel" id="panel-session">
+  <!-- ── TAB 1: Session (pre-launch, default) ── -->
+  <div class="tab-panel active" id="panel-session">
     <div id="session-prelaunched">
       <p class="section-title" data-i18n="session.launchTitle">Launch a session</p>
       <div class="chips" id="session-chips"></div>
@@ -407,7 +418,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     </div>
   </div>
 
-  <!-- ── TAB 3: Results ── -->
+  <!-- ── TAB 2: Results ── -->
   <div class="tab-panel" id="panel-results">
     <div id="results-empty" class="waiting-card">
       <p class="text-muted" data-i18n="results.noSession">No completed session yet. Launch a session to see results here.</p>
@@ -468,12 +479,12 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     </div>
 
     <!-- Timer ring (student) -->
-    <div style="display:flex;justify-content:center;margin-bottom:0.75rem;" id="sv-ring-wrap">
-      <svg class="ring-svg" width="64" height="64" viewBox="0 0 64 64">
-        <circle class="ring-bg" cx="32" cy="32" r="27"/>
-        <circle class="ring-fill" id="sv-ring-fill" cx="32" cy="32" r="27"
-          stroke-dasharray="169.6" stroke-dashoffset="0"/>
-        <text class="ring-number" id="sv-ring-number" x="32" y="50" transform="rotate(90,32,32)">—</text>
+    <div class="sv-ring-wrap" id="sv-ring-wrap">
+      <svg class="ring-svg" width="96" height="96" viewBox="0 0 96 96">
+        <circle class="ring-bg"   cx="48" cy="48" r="40" stroke-width="6"/>
+        <circle class="ring-fill" id="sv-ring-fill" cx="48" cy="48" r="40" stroke-width="6"
+          stroke-dasharray="251.3" stroke-dashoffset="0"/>
+        <text class="ring-number sv-ring-number-text" id="sv-ring-number" x="48" y="74" transform="rotate(90,48,48)">—</text>
       </svg>
     </div>
 
@@ -983,7 +994,11 @@ function togglePoolQ(id, checked) {
 }
 
 function updateLaunchBtn() {
-  document.getElementById('btn-launch').disabled = sessionPool.length === 0;
+  const n = sessionPool.length;
+  const btn = document.getElementById('btn-launch');
+  btn.disabled = n === 0;
+  const span = btn.querySelector('[data-i18n="session.launchBtn"]');
+  if (span) span.textContent = n > 0 ? `${t('session.launchBtn')} (${n})` : t('session.launchBtn');
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1172,8 +1187,9 @@ function setRing(fillId, numberId, current, total) {
   const fill = document.getElementById(fillId);
   const num  = document.getElementById(numberId);
   if (!fill || !num) return;
+  const circ = parseFloat(fill.getAttribute('stroke-dasharray')) || RING_CIRCUMFERENCE;
   const fraction = total > 0 ? current / total : 0;
-  fill.style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - fraction);
+  fill.style.strokeDashoffset = circ * (1 - fraction);
   fill.classList.toggle('danger', current <= 10 && current > 0);
   num.textContent = current;
 }
