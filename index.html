@@ -724,8 +724,11 @@ function wsSend(obj) {
   if (ws && ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify(obj));
 }
 
-function broadcastSession(session, resetResponses) {
-  wsSend({ type: 'set_session', session, resetResponses: !!resetResponses });
+function broadcastSession(session, opts) {
+  const payload = { type: 'set_session', session };
+  if (opts === true) payload.resetAll = true;
+  else if (opts && typeof opts === 'object') Object.assign(payload, opts);
+  wsSend(payload);
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1102,10 +1105,11 @@ function addBtn(parent, label, cls, fn) {
 
 function startQuestion() {
   if (!sessionData) return;
+  const q = sessionData.questions[sessionData.currentIdx];
   sessionData.started = true;
   sessionData.startedAt = Date.now();
   sessionData.revealed = false;
-  broadcastSession(sessionData, true); // reset responses for new question start
+  broadcastSession(sessionData, { resetQuestion: q.id }); // reset only this question's votes
   renderActionRow(sessionData);
   startTimer(sessionData.timerSecs, sessionData.startedAt);
 }
@@ -1134,7 +1138,7 @@ function nextQuestion() {
   sessionData.started = false;
   sessionData.startedAt = null;
   sessionData.revealed = false;
-  broadcastSession(sessionData, true);
+  broadcastSession(sessionData, false); // keep accumulated responses for all questions
   stopTimer();
   renderActiveQuestion(sessionData);
 }
@@ -1175,7 +1179,15 @@ function startTimer(timerSecs, startedAt) {
     const elapsed = Math.floor((Date.now() - startedAt) / 1000);
     const left = Math.max(0, timerSecs - elapsed);
     setRing('ring-fill', 'ring-number', left, timerSecs);
-    if (left <= 0) { stopTimer(); if (sessionData) { stopQuestion(); } }
+    if (left <= 0) {
+      stopTimer();
+      if (sessionData && !sessionData.revealed) {
+        sessionData.started = false;
+        sessionData.revealed = true;
+        broadcastSession(sessionData, false);
+        renderActionRow(sessionData);
+      }
+    }
   }, 500);
 }
 

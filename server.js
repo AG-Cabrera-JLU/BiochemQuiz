@@ -86,10 +86,14 @@ wss.on('connection', (ws, req) => {
 
     if (msg.type === 'set_session' && ws.role === 'instructor') {
       state.session = msg.session;
-      // Reset responses when moving to a new question or launching
-      if (msg.resetResponses) {
+      if (msg.resetAll) {
+        // Full reset on session launch
         state.responses = {};
         state.studentAnswers = {};
+      } else if (msg.resetQuestion) {
+        // Reset only the current question (restart same question)
+        delete state.responses[msg.resetQuestion];
+        delete state.studentAnswers[msg.resetQuestion];
       }
       broadcast({ type: 'state', session: state.session, responses: state.responses });
     }
