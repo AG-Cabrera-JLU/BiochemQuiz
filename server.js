@@ -54,7 +54,8 @@ const wss = new WebSocket.Server({ server });
 // In-memory state
 let state = {
   session: null,
-  responses: {}
+  responses: {},
+  studentAnswers: {}  // { questionId: { clientId: optionIndex } }
 };
 
 function broadcast(data) {
@@ -83,22 +84,32 @@ wss.on('connection', (ws, req) => {
       // Reset responses when moving to a new question or launching
       if (msg.resetResponses) {
         state.responses = {};
+        state.studentAnswers = {};
       }
       broadcast({ type: 'state', session: state.session, responses: state.responses });
     }
 
     if (msg.type === 'answer' && ws.role === 'student') {
-      const { questionId, optionIndex } = msg;
+      const { questionId, optionIndex, clientId } = msg;
       if (!state.session || !state.session.started) return;
       if (!state.responses[questionId]) {
-        state.responses[questionId] = { 0: 0, 1: 0, 2: 0, 3: 0 };
+        state.responses[questionId] = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0 };
       }
+      if (!state.studentAnswers[questionId]) {
+        state.studentAnswers[questionId] = {};
+      }
+      // If this client already answered, undo their previous vote
+      const prev = state.studentAnswers[questionId][clientId];
+      if (prev !== undefined) {
+        const prevKey = String(prev);
+        if (state.responses[questionId][prevKey] > 0) {
+          state.responses[questionId][prevKey]--;
+        }
+      }
+      // Record new vote
+      state.studentAnswers[questionId][clientId] = optionIndex;
       const key = String(optionIndex);
-      if (state.responses[questionId][key] !== undefined) {
-        state.responses[questionId][key]++;
-      } else {
-        state.responses[questionId][key] = 1;
-      }
+      state.responses[questionId][key] = (state.responses[questionId][key] || 0) + 1;
       broadcast({ type: 'state', session: state.session, responses: state.responses });
     }
   });

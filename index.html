@@ -514,6 +514,11 @@ let explainVisible = false;
 let lastResponses = {};
 let lastServerState = { session: null, responses: {} };
 let studentAnswered = null; // optionIndex chosen by student, or null
+const clientId = (() => {
+  let id = sessionStorage.getItem('bq_cid');
+  if (!id) { id = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem('bq_cid', id); }
+  return id;
+})();
 let lastQuestionIdx = null; // to detect question change on student
 let serverUrl = ''; // populated from /api/info
 
@@ -1060,7 +1065,7 @@ function renderActionRow(session) {
   }
 
   const revBtn = addBtn(row, session.revealed ? t('session.revealed') : t('session.reveal'), session.revealed ? 'btn-success' : '', revealQuestion);
-  revBtn.disabled = !session.started && !session.revealed;
+  revBtn.disabled = !session.revealed && !session.startedAt;
 
   if (!isLast) {
     const nextBtn = addBtn(row, t('session.nextQ'), '', nextQuestion);
@@ -1390,7 +1395,7 @@ function handleStudentState(session, responses) {
     const pct = total > 0 ? Math.round(counts[i] / total * 100) : 0;
     const miniBar = revealed ? `<div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div><div class="answer-pct">${pct}%</div>` : '';
 
-    return `<button class="${cls}" ${(answered||revealed)?'disabled':''} onclick="submitAnswer(${i}, '${q.id}')">
+    return `<button class="${cls}" ${revealed?'disabled':''} onclick="submitAnswer(${i}, '${q.id}')">
       <span class="answer-letter">${letter}</span>
       <span style="flex:1;">${esc(opt||'')}${miniBar}</span>
     </button>`;
@@ -1407,17 +1412,8 @@ function handleStudentState(session, responses) {
     statusWrap.classList.add('hidden');
   }
 
-  // Explanation
-  const svExplain = document.getElementById('sv-explain');
-  if (revealed && (lq.explain || q.explainImg)) {
-    svExplain.classList.remove('hidden');
-    document.getElementById('sv-explain-text').textContent = lq.explain || '';
-    const img = document.getElementById('sv-explain-img');
-    if (q.explainImg) { img.src = q.explainImg; img.style.display = 'block'; }
-    else img.style.display = 'none';
-  } else {
-    svExplain.classList.add('hidden');
-  }
+  // Explanation is shown only on the instructor's screen, not on student phones
+  document.getElementById('sv-explain').classList.add('hidden');
 }
 
 function updateSvTimer(session) {
@@ -1428,13 +1424,11 @@ function updateSvTimer(session) {
 }
 
 function submitAnswer(optionIndex, questionId) {
-  if (studentAnswered !== null) return;
   studentAnswered = optionIndex;
-  wsSend({ type: 'answer', questionId, optionIndex });
-  // Re-render buttons to show selected state immediately
+  wsSend({ type: 'answer', questionId, optionIndex, clientId });
+  // Update button selection visually without a full re-render
   document.querySelectorAll('.answer-btn').forEach((btn, i) => {
-    btn.disabled = true;
-    if (i === optionIndex) btn.classList.add('selected');
+    btn.classList.toggle('selected', i === optionIndex);
   });
   document.getElementById('sv-status-wrap').classList.remove('hidden');
   document.getElementById('sv-status-pill').textContent = t('student.submitted') || 'Answer submitted!';
