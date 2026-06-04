@@ -1,0 +1,68 @@
+{
+  "appTitle": "BiochemQuiz",
+  "tabs": {
+    "bank": "Fragenkatalog",
+    "session": "Sitzung",
+    "results": "Ergebnisse"
+  },
+  "bank": {
+    "title": "Fragenkatalog",
+    "count": "Fragen",
+    "addBtn": "Frage hinzufügen",
+    "editTitle": "Frage bearbeiten",
+    "newTitle": "Neue Frage",
+    "questionText": "Fragetext",
+    "topic": "Thema",
+    "topicPlaceholder": "z. B. Glykolyse",
+    "options": "Antwortoptionen (richtige markieren)",
+    "optionPlaceholder": "Option",
+    "explanation": "Erklärungstext (wird nach der Antwort angezeigt)",
+    "explainImg": "Bildpfad oder URL zur Erklärung (optional)",
+    "save": "Änderungen speichern",
+    "add": "Zum Katalog hinzufügen",
+    "cancel": "Abbrechen",
+    "deleteConfirm": "Diese Frage löschen?",
+    "noQuestions": "Noch keine Fragen. Fügen Sie unten eine hinzu.",
+    "filterAll": "Alle"
+  },
+  "session": {
+    "launchTitle": "Sitzung starten",
+    "pool": "Fragen im Pool",
+    "sessionName": "Sitzungsname",
+    "timerLabel": "Zeit pro Frage (Sekunden)",
+    "launchBtn": "Sitzung starten",
+    "startQ": "Frage starten",
+    "stopTimer": "Timer stoppen",
+    "reveal": "Für Studierende aufdecken",
+    "revealed": "Aufgedeckt",
+    "nextQ": "Nächste Frage",
+    "endSession": "Sitzung beenden",
+    "endConfirm": "Sitzung wirklich beenden?",
+    "showExplain": "Erklärung anzeigen",
+    "hideExplain": "Erklärung ausblenden",
+    "noExplain": "Keine Erklärung hinzugefügt.",
+    "votes": "Antworten eingegangen",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link kopiert!",
+    "studentAccess": "Studentenzugang — QR-Code oder Link teilen",
+    "qCounter": "Frage",
+    "of": "von"
+  },
+  "results": {
+    "title": "Ergebnisse",
+    "questions": "Fragen",
+    "overallCorrect": "Gesamt richtig",
+    "exportCSV": "CSV exportieren",
+    "noSession": "Noch keine abgeschlossene Sitzung. Starten Sie eine Sitzung, um Ergebnisse zu sehen.",
+    "responses": "Antworten gesamt"
+  },
+  "student": {
+    "connecting": "Verbinde...",
+    "waiting": "Warte auf Sitzung",
+    "waitingMsg": "Ihr Dozent hat noch keine Sitzung gestartet. Diese Seite wird automatisch aktualisiert.",
+    "waitingQ": "Warte auf den Dozenten...",
+    "submitted": "Antwort abgeschickt!",
+    "waitingReveal": "Warte auf Aufdeckung durch den Dozenten...",
+    "explanation": "Erklärung"
+  }
+}

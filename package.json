@@ -1,0 +1,12 @@
+{
+  "name": "biochemquiz",
+  "version": "1.0.0",
+  "description": "Live instructor-led quiz app for JLU Giessen",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "ws": "^8.16.0"
+  }
+}

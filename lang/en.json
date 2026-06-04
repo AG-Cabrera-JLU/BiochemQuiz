@@ -1,0 +1,68 @@
+{
+  "appTitle": "BiochemQuiz",
+  "tabs": {
+    "bank": "Question Bank",
+    "session": "Session",
+    "results": "Results"
+  },
+  "bank": {
+    "title": "Question bank",
+    "count": "questions",
+    "addBtn": "Add question",
+    "editTitle": "Edit question",
+    "newTitle": "New question",
+    "questionText": "Question text",
+    "topic": "Topic",
+    "topicPlaceholder": "e.g. Glycolysis",
+    "options": "Answer options (mark correct)",
+    "optionPlaceholder": "Option",
+    "explanation": "Explanation text (shown after answer)",
+    "explainImg": "Explanation image path or URL (optional)",
+    "save": "Save changes",
+    "add": "Add to bank",
+    "cancel": "Cancel",
+    "deleteConfirm": "Delete this question?",
+    "noQuestions": "No questions yet. Add one below.",
+    "filterAll": "All"
+  },
+  "session": {
+    "launchTitle": "Launch a session",
+    "pool": "Questions in pool",
+    "sessionName": "Session name",
+    "timerLabel": "Time per question (seconds)",
+    "launchBtn": "Launch session",
+    "startQ": "Start question",
+    "stopTimer": "Stop timer",
+    "reveal": "Reveal to students",
+    "revealed": "Revealed",
+    "nextQ": "Next question",
+    "endSession": "End session",
+    "endConfirm": "End this session?",
+    "showExplain": "Show explanation",
+    "hideExplain": "Hide explanation",
+    "noExplain": "No explanation added.",
+    "votes": "responses received",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "studentAccess": "Student access — share this QR or link",
+    "qCounter": "Question",
+    "of": "of"
+  },
+  "results": {
+    "title": "Results",
+    "questions": "Questions",
+    "overallCorrect": "Overall correct",
+    "exportCSV": "Export CSV",
+    "noSession": "No completed session yet. Launch a session to see results here.",
+    "responses": "responses total"
+  },
+  "student": {
+    "connecting": "Connecting...",
+    "waiting": "Waiting for session",
+    "waitingMsg": "Your instructor hasn't started a session yet. This page will refresh automatically.",
+    "waitingQ": "Waiting for instructor to start the question...",
+    "submitted": "Answer submitted!",
+    "waitingReveal": "Waiting for instructor to reveal results...",
+    "explanation": "Explanation"
+  }
+}

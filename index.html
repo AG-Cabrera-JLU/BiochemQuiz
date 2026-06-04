@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BiochemQuiz</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+/* ── CSS custom properties ── */
+:root {
+  --primary: #185FA5;
+  --primary-light: #E6F1FB;
+  --primary-dark: #0C447C;
+  --success: #3B6D11;
+  --success-light: #EAF3DE;
+  --danger: #A32D2D;
+  --danger-light: #FCEBEB;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --text-hint: #999;
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f3;
+  --border: rgba(0,0,0,0.12);
+  --border-strong: rgba(0,0,0,0.25);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --bg-secondary: #242424;
+    --text: #f0f0f0;
+    --text-muted: #aaa;
+    --border: rgba(255,255,255,0.12);
+    --primary-light: #1a3050;
+    --success-light: #1c2e10;
+    --danger-light: #2e1212;
+  }
+}
+
+/* ── Reset / base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+button { font-family: var(--font); cursor: pointer; }
+textarea, input { font-family: var(--font); font-size: 14px; }
+img { max-width: 100%; }
+
+/* ── Views ── */
+#instructor-view { display: none; max-width: 780px; margin: 0 auto; padding: 1rem; }
+#student-view    { display: none; max-width: 480px; margin: 0 auto; padding: 1rem; }
+
+/* ── Top bar ── */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem;
+}
+.topbar-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+.topbar-sub   { font-size: 0.8rem; color: var(--text-muted); margin-left: 0.4rem; }
+.lang-toggle  { display: flex; gap: 4px; }
+.lang-btn {
+  border: 0.5px solid var(--border-strong); background: var(--bg-secondary);
+  color: var(--text-muted); border-radius: var(--radius); padding: 3px 9px;
+  font-size: 0.78rem; font-weight: 600; transition: background 0.15s;
+}
+.lang-btn:hover { background: var(--primary-light); color: var(--primary); }
+.lang-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ── Tabs ── */
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.tab-btn {
+  border: none; background: none; padding: 0.5rem 1rem; font-size: 0.88rem;
+  color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 0.15s; font-weight: 500;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── Cards ── */
+.card {
+  background: var(--bg); border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 0.5px solid var(--border-strong); border-radius: var(--radius);
+  padding: 0.45rem 1rem; font-size: 0.88rem; font-weight: 500;
+  background: var(--bg-secondary); color: var(--text);
+  transition: background 0.15s, color 0.15s; white-space: nowrap;
+}
+.btn:hover { background: #e0e0dd; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary-dark); }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-danger  { background: var(--danger); color: #fff; border-color: #7a1f1f; }
+.btn-danger:hover  { background: #7a1f1f; }
+.btn-success { background: var(--success); color: #fff; border-color: #2a4f0c; }
+.btn-success:hover { background: #2a4f0c; }
+.btn-sm { padding: 0.3rem 0.7rem; font-size: 0.8rem; }
+
+/* ── Topic chips ── */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.75rem; }
+.chip {
+  border: 0.5px solid var(--border-strong); border-radius: 99px;
+  padding: 3px 12px; font-size: 0.78rem; background: var(--bg-secondary);
+  color: var(--text-muted); cursor: pointer; transition: background 0.15s;
+}
+.chip:hover { background: var(--primary-light); color: var(--primary); }
+.chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ── Topic badge ── */
+.badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 600;
+  background: var(--primary-light); color: var(--primary);
+  border-radius: 99px; padding: 2px 8px;
+}
+
+/* ── Question list (bank) ── */
+.q-row {
+  display: flex; align-items: flex-start; gap: 0.5rem;
+  padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+}
+.q-row:last-child { border-bottom: none; }
+.q-text { flex: 1; font-size: 0.88rem; line-height: 1.4; }
+.q-actions { display: flex; gap: 4px; flex-shrink: 0; }
+.icon-btn {
+  border: none; background: none; color: var(--text-muted);
+  cursor: pointer; font-size: 1rem; padding: 2px 4px; border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+.icon-btn:hover { color: var(--text); background: var(--bg-secondary); }
+
+/* ── Inline form ── */
+.inline-form { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1rem; margin-top: 0.75rem; }
+.form-row { margin-bottom: 0.65rem; }
+.form-label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+.form-input, .form-textarea {
+  width: 100%; border: 0.5px solid var(--border-strong); border-radius: var(--radius);
+  padding: 0.45rem 0.6rem; background: var(--bg); color: var(--text);
+  font-size: 0.88rem; outline: none;
+}
+.form-input:focus, .form-textarea:focus { border-color: var(--primary); }
+.form-textarea { resize: vertical; min-height: 70px; }
+.option-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.option-row input[type=radio] { accent-color: var(--primary); flex-shrink: 0; }
+.option-letter { font-weight: 700; color: var(--text-muted); font-size: 0.85rem; flex-shrink: 0; width: 14px; }
+.form-actions { display: flex; gap: 8px; margin-top: 0.75rem; }
+
+/* ── Checkbox list (session pool) ── */
+.check-row {
+  display: flex; align-items: flex-start; gap: 0.5rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.check-row:last-child { border-bottom: none; }
+.check-row input[type=checkbox] { accent-color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+.check-text { flex: 1; font-size: 0.88rem; }
+
+/* ── Session active layout ── */
+.session-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+.session-name { font-weight: 700; font-size: 1rem; }
+.q-counter { font-size: 0.85rem; color: var(--text-muted); }
+.progress-bar-wrap { height: 4px; background: var(--border); border-radius: 99px; margin-bottom: 1rem; }
+.progress-bar-fill { height: 100%; background: var(--primary); border-radius: 99px; transition: width 0.4s ease; }
+
+/* ── Question card (active session) ── */
+.q-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 0.75rem; }
+.q-card-topic { margin-bottom: 0.5rem; }
+.q-card-text { font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
+.q-card-body { display: flex; align-items: flex-start; gap: 1rem; }
+.q-card-content { flex: 1; }
+
+/* ── SVG countdown ring ── */
+.ring-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.ring-svg { transform: rotate(-90deg); }
+.ring-bg   { fill: none; stroke: var(--border); stroke-width: 5; }
+.ring-fill { fill: none; stroke: var(--primary); stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 1s linear, stroke 0.3s; }
+.ring-fill.danger { stroke: var(--danger); }
+.ring-number { font-size: 1.1rem; font-weight: 700; text-anchor: middle; dominant-baseline: central; fill: var(--text); }
+
+/* ── Bar chart ── */
+.bar-list { list-style: none; margin-bottom: 0.5rem; }
+.bar-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.bar-label { font-size: 0.82rem; width: 200px; flex-shrink: 0; display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-letter { font-weight: 700; font-size: 0.85rem; color: var(--text-muted); flex-shrink: 0; }
+.bar-track  { flex: 1; height: 22px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden; }
+.bar-fill   { height: 100%; background: var(--primary-light); border-radius: 4px; transition: width 0.4s ease; min-width: 2px; }
+.bar-fill.correct { background: var(--success-light); border: 1px solid var(--success); }
+.bar-stat   { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
+.votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+
+/* ── Action buttons row ── */
+.action-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.75rem; }
+
+/* ── Explanation panel ── */
+.explain-panel { background: var(--bg-secondary); border-radius: var(--radius); padding: 0.75rem 1rem; margin-top: 0.5rem; }
+.explain-text  { font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.5rem; }
+.explain-img   { border-radius: var(--radius); margin-top: 0.5rem; }
+
+/* ── QR section ── */
+.qr-section { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.qr-label   { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.qr-row     { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+#qr-container canvas, #qr-container img { border-radius: var(--radius); border: 1px solid var(--border); }
+.qr-url-wrap { flex: 1; min-width: 0; }
+.qr-url     { font-size: 0.78rem; color: var(--text-muted); word-break: break-all; margin-bottom: 4px; }
+
+/* ── Results tab ── */
+.metric-cards { display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.metric-card { flex: 1; min-width: 120px; background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 0.75rem 1rem; text-align: center; }
+.metric-val  { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+.metric-lbl  { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.result-q-card { margin-bottom: 0.75rem; }
+
+/* ── Student view ── */
+.student-header {
+  background: var(--primary); color: #fff;
+  border-radius: var(--radius-lg); padding: 0.75rem 1rem; margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.student-header-title { font-weight: 700; font-size: 0.95rem; }
+.student-header-sub   { font-size: 0.78rem; opacity: 0.8; }
+.student-q-counter { font-size: 0.82rem; opacity: 0.85; }
+
+.waiting-card { text-align: center; padding: 3rem 1rem; }
+.waiting-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.waiting-msg   { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+.dots span { display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; margin: 0 3px; animation: bounce 1.2s infinite; }
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+}
+
+.student-q-text { font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
+.answer-btn {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  border: 0.5px solid var(--border-strong); border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: var(--bg);
+  color: var(--text); font-size: 0.92rem; text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+}
+.answer-btn:hover:not(:disabled) { background: var(--primary-light); border-color: var(--primary); }
+.answer-btn:disabled { cursor: not-allowed; }
+.answer-btn.selected  { background: var(--primary-light); border-color: var(--primary); }
+.answer-btn.correct   { background: var(--success-light); border-color: var(--success); }
+.answer-btn.wrong     { background: var(--danger-light); border-color: var(--danger); }
+.answer-letter {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.82rem;
+  background: var(--primary-light); color: var(--primary);
+}
+.answer-btn.correct .answer-letter { background: var(--success); color: #fff; }
+.answer-btn.wrong   .answer-letter { background: var(--danger); color: #fff; }
+.answer-btn.selected:not(.correct):not(.wrong) .answer-letter { background: var(--primary); color: #fff; }
+
+.mini-bar { height: 4px; background: var(--border); border-radius: 99px; margin-top: 4px; }
+.mini-bar-fill { height: 100%; background: var(--primary); border-radius: 99px; transition: width 0.4s ease; }
+.answer-pct { font-size: 0.75rem; color: var(--text-muted); margin-top: 1px; }
+
+.student-explain { background: var(--bg-secondary); border-radius: var(--radius); padding: 0.75rem 1rem; margin-top: 1rem; }
+.student-explain-title { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+
+.status-pill {
+  display: inline-block; font-size: 0.8rem; font-weight: 600;
+  background: var(--primary-light); color: var(--primary);
+  border-radius: 99px; padding: 4px 12px; margin-bottom: 0.75rem;
+}
+
+/* ── Error / setup message ── */
+.error-card {
+  background: var(--danger-light); border: 1px solid var(--danger);
+  border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin: 1rem 0;
+  font-size: 0.88rem; line-height: 1.6;
+}
+
+/* ── Utility ── */
+.hidden { display: none !important; }
+.mt-1 { margin-top: 0.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.text-muted { color: var(--text-muted); }
+.section-title { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     INSTRUCTOR VIEW
+══════════════════════════════════════════ -->
+<div id="instructor-view">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div>
+      <span class="topbar-title">BiochemQuiz</span>
+      <span class="topbar-sub">JLU Giessen</span>
+    </div>
+    <div class="lang-toggle" id="lang-toggle"></div>
+  </div>
+
+  <!-- Connection error -->
+  <div class="error-card hidden" id="ws-error">
+    Could not connect to the BiochemQuiz server. Make sure <code>node server.js</code> is running.
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="bank"    id="tab-bank">Question Bank</button>
+    <button class="tab-btn"        data-tab="session" id="tab-session">Session</button>
+    <button class="tab-btn"        data-tab="results" id="tab-results">Results</button>
+  </div>
+
+  <!-- ── TAB 1: Question Bank ── -->
+  <div class="tab-panel active" id="panel-bank">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+      <span id="bank-count" class="text-muted" style="font-size:0.85rem;"></span>
+      <button class="btn btn-primary btn-sm" id="btn-add-q" onclick="showAddForm()">+ <span data-i18n="bank.addBtn">Add question</span></button>
+    </div>
+    <div class="chips" id="bank-chips"></div>
+    <div id="bank-list"></div>
+    <div id="bank-form" class="hidden"></div>
+  </div>
+
+  <!-- ── TAB 2: Session (pre-launch) ── -->
+  <div class="tab-panel" id="panel-session">
+    <div id="session-prelaunched">
+      <p class="section-title" data-i18n="session.launchTitle">Launch a session</p>
+      <div class="chips" id="session-chips"></div>
+      <div class="card" style="padding:0.5rem 0.75rem;">
+        <div id="session-pool-list" style="max-height:320px;overflow-y:auto;"></div>
+      </div>
+      <div class="card">
+        <div class="form-row">
+          <label class="form-label" data-i18n="session.sessionName">Session name</label>
+          <input class="form-input" id="session-name-input" type="text" value="Session 1">
+        </div>
+        <div class="form-row">
+          <label class="form-label" data-i18n="session.timerLabel">Time per question (seconds)</label>
+          <input class="form-input" id="timer-input" type="number" value="90" min="15" max="300">
+        </div>
+        <button class="btn btn-primary" id="btn-launch" onclick="launchSession()" disabled>
+          <span data-i18n="session.launchBtn">Launch session</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Session active panel -->
+    <div id="session-active" class="hidden">
+      <div class="session-header">
+        <span class="session-name" id="active-session-name"></span>
+        <span class="q-counter" id="active-q-counter"></span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="active-progress-bar" style="width:0%"></div>
+      </div>
+
+      <div class="q-card" id="active-q-card">
+        <div class="q-card-topic"><span class="badge" id="active-q-topic"></span></div>
+        <div class="q-card-text" id="active-q-text"></div>
+        <div class="q-card-body">
+          <div class="q-card-content">
+            <ul class="bar-list" id="active-bar-list"></ul>
+            <p class="votes-count" id="active-votes-count"></p>
+          </div>
+          <div class="ring-wrap">
+            <svg class="ring-svg" width="64" height="64" viewBox="0 0 64 64">
+              <circle class="ring-bg" cx="32" cy="32" r="27"/>
+              <circle class="ring-fill" id="ring-fill" cx="32" cy="32" r="27"
+                stroke-dasharray="169.6" stroke-dashoffset="0"/>
+              <text class="ring-number" id="ring-number" x="32" y="50" transform="rotate(90,32,32)">90</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-row" id="action-row"></div>
+
+      <div id="explain-toggle-row" class="hidden">
+        <button class="btn btn-sm" onclick="toggleExplain()" id="btn-explain-toggle">
+          <span data-i18n="session.showExplain">Show explanation</span>
+        </button>
+      </div>
+      <div id="explain-panel" class="explain-panel hidden">
+        <p class="explain-text" id="explain-text"></p>
+        <img id="explain-img" class="explain-img" src="" alt="" style="display:none;">
+      </div>
+
+      <!-- QR section -->
+      <div class="qr-section">
+        <p class="qr-label" data-i18n="session.studentAccess">Student access — share this QR or link</p>
+        <div class="qr-row">
+          <div id="qr-container"></div>
+          <div class="qr-url-wrap">
+            <p class="qr-url" id="qr-url-text"></p>
+            <button class="btn btn-sm" onclick="copyStudentLink()" id="btn-copy-link">
+              <span data-i18n="session.copyLink">Copy link</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: Results ── -->
+  <div class="tab-panel" id="panel-results">
+    <div id="results-empty" class="waiting-card">
+      <p class="text-muted" data-i18n="results.noSession">No completed session yet. Launch a session to see results here.</p>
+    </div>
+    <div id="results-content" class="hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+        <h2 style="font-size:1rem;font-weight:700;" id="results-session-name"></h2>
+        <button class="btn btn-sm btn-primary" onclick="exportCSV()">
+          ↓ <span data-i18n="results.exportCSV">Export CSV</span>
+        </button>
+      </div>
+      <div class="metric-cards" id="results-metrics"></div>
+      <div id="results-list"></div>
+    </div>
+  </div>
+
+</div><!-- end instructor-view -->
+
+
+<!-- ══════════════════════════════════════════
+     STUDENT VIEW
+══════════════════════════════════════════ -->
+<div id="student-view">
+
+  <!-- State 1: no session -->
+  <div id="sv-waiting" class="hidden">
+    <div class="waiting-card card">
+      <p class="topbar-title" style="margin-bottom:0.25rem;">BiochemQuiz</p>
+      <p class="waiting-title" data-i18n="student.waiting">Waiting for session</p>
+      <p class="waiting-msg"  data-i18n="student.waitingMsg">Your instructor hasn't started a session yet. This page will refresh automatically.</p>
+      <div class="dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- State 2: session active, question not started -->
+  <div id="sv-session-waiting" class="hidden">
+    <div class="student-header">
+      <div>
+        <div class="student-header-title" id="sv-session-name"></div>
+        <div class="student-header-sub" id="sv-session-topic"></div>
+      </div>
+      <div class="student-q-counter" id="sv-q-counter"></div>
+    </div>
+    <div class="waiting-card">
+      <p class="waiting-msg" data-i18n="student.waitingQ">Waiting for instructor to start the question...</p>
+      <div class="dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- State 3+: question active / answered / revealed -->
+  <div id="sv-question" class="hidden">
+    <div class="student-header">
+      <div>
+        <div class="student-header-title" id="sv-q-session-name"></div>
+        <div class="student-header-sub" id="sv-q-topic"></div>
+      </div>
+      <div class="student-q-counter" id="sv-q-counter2"></div>
+    </div>
+
+    <!-- Timer ring (student) -->
+    <div style="display:flex;justify-content:center;margin-bottom:0.75rem;" id="sv-ring-wrap">
+      <svg class="ring-svg" width="64" height="64" viewBox="0 0 64 64">
+        <circle class="ring-bg" cx="32" cy="32" r="27"/>
+        <circle class="ring-fill" id="sv-ring-fill" cx="32" cy="32" r="27"
+          stroke-dasharray="169.6" stroke-dashoffset="0"/>
+        <text class="ring-number" id="sv-ring-number" x="32" y="50" transform="rotate(90,32,32)">—</text>
+      </svg>
+    </div>
+
+    <p class="student-q-text" id="sv-q-text"></p>
+    <div id="sv-answer-btns"></div>
+
+    <div id="sv-status-wrap" class="hidden">
+      <span class="status-pill" id="sv-status-pill"></span>
+    </div>
+
+    <div id="sv-explain" class="student-explain hidden">
+      <p class="student-explain-title" data-i18n="student.explanation">Explanation</p>
+      <p id="sv-explain-text" style="font-size:0.88rem;line-height:1.6;"></p>
+      <img id="sv-explain-img" src="" alt="" style="display:none;margin-top:0.5rem;border-radius:var(--radius);">
+    </div>
+  </div>
+
+</div><!-- end student-view -->
+
+<script>
+// ══════════════════════════════════════════════════════════
+// CONSTANTS & STATE
+// ══════════════════════════════════════════════════════════
+const DEFAULT_LANG = 'en';
+const SUPPORTED_LANGS = ['en', 'de', 'es'];
+const RING_CIRCUMFERENCE = 169.6; // 2 * PI * 27
+
+let lang = {};
+let allQuestions = [];
+let currentLang = localStorage.getItem('biochemquiz_lang') || DEFAULT_LANG;
+let bankFilter = 'All';
+let sessionFilter = 'All';
+let sessionPool = []; // array of question ids checked in pool
+let sessionData = null; // full session object in instructor state
+let resultsData = null; // stored after session ends
+let timerInterval = null;
+let explainVisible = false;
+let lastResponses = {};
+let lastServerState = { session: null, responses: {} };
+let studentAnswered = null; // optionIndex chosen by student, or null
+let lastQuestionIdx = null; // to detect question change on student
+let serverUrl = ''; // populated from /api/info
+
+// WebSocket
+let ws = null;
+let wsRole = 'instructor';
+
+// ══════════════════════════════════════════════════════════
+// STARTUP
+// ══════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', async () => {
+  const params = new URLSearchParams(location.search);
+  wsRole = params.get('role') === 'student' ? 'student' : 'instructor';
+
+  if (wsRole === 'student') {
+    document.getElementById('student-view').style.display = 'block';
+    showStudentState('waiting');
+  } else {
+    document.getElementById('instructor-view').style.display = 'block';
+  }
+
+  await loadLang(currentLang);
+  await loadQuestions();
+  buildLangToggle();
+
+  if (wsRole === 'instructor') {
+    renderBankChips();
+    renderBankList();
+    renderSessionChips();
+    renderSessionPool();
+    fetchServerUrl();
+  }
+
+  connectWebSocket();
+});
+
+// ══════════════════════════════════════════════════════════
+// LANGUAGE
+// ══════════════════════════════════════════════════════════
+async function loadLang(code) {
+  try {
+    const r = await fetch(`lang/${code}.json`);
+    if (!r.ok) throw new Error();
+    lang = await r.json();
+    currentLang = code;
+    localStorage.setItem('biochemquiz_lang', code);
+    applyLang();
+  } catch {
+    if (code !== DEFAULT_LANG) await loadLang(DEFAULT_LANG);
+  }
+}
+
+function applyLang() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = deepGet(lang, key);
+    if (val) el.textContent = val;
+  });
+  setEl('tab-bank',    deepGet(lang, 'tabs.bank'));
+  setEl('tab-session', deepGet(lang, 'tabs.session'));
+  setEl('tab-results', deepGet(lang, 'tabs.results'));
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+
+  // Switch active question array to match selected language, then re-render
+  allQuestions = questionsByLang[currentLang] || questionsByLang['en'];
+  // Reset topic filters — names differ per language (e.g. Glycolysis → Glykolyse)
+  bankFilter = 'All';
+  sessionFilter = 'All';
+  if (allQuestions.length > 0) {
+    if (wsRole === 'instructor') {
+      renderBankChips();
+      renderBankList();
+      renderSessionChips();
+      renderSessionPool();
+      if (sessionData) renderActiveQuestion(sessionData);
+      if (resultsData) renderResults();
+    } else if (lastServerState.session) {
+      handleStudentState(lastServerState.session, lastServerState.responses);
+    }
+  }
+}
+
+function buildLangToggle() {
+  const wrap = document.getElementById('lang-toggle');
+  wrap.innerHTML = '';
+  SUPPORTED_LANGS.forEach(code => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-btn' + (code === currentLang ? ' active' : '');
+    btn.dataset.lang = code;
+    btn.textContent = code.toUpperCase();
+    btn.onclick = () => { loadLang(code); };
+    wrap.appendChild(btn);
+  });
+}
+
+function deepGet(obj, path) {
+  return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), obj);
+}
+
+function t(key) { return deepGet(lang, key) || key; }
+
+// ══════════════════════════════════════════════════════════
+// QUESTIONS LOAD
+// ══════════════════════════════════════════════════════════
+let questionsByLang = { en: [], de: [], es: [] };
+
+async function loadQuestions() {
+  const files = ['questions.json', 'questions.de.json', 'questions.es.json'];
+  const keys  = ['en', 'de', 'es'];
+  const results = await Promise.allSettled(
+    files.map(f => fetch(f + '?t=' + Date.now()).then(r => { if (!r.ok) throw new Error(); return r.json(); }))
+  );
+  results.forEach((r, i) => {
+    if (r.status === 'fulfilled') {
+      questionsByLang[keys[i]] = r.value.questions || [];
+    }
+  });
+  allQuestions = questionsByLang[currentLang] || questionsByLang['en'];
+}
+
+// Derive topics array from questions for a given language
+function topicsForLang(lang) {
+  const qs = questionsByLang[lang] || [];
+  return Array.from(new Set(qs.map(q => q.topic).filter(Boolean))).sort();
+}
+
+// Save questionsByLang[lang] to the server (writes the JSON file on disk)
+async function persistQuestions(lang) {
+  const questions = questionsByLang[lang] || [];
+  const topics    = topicsForLang(lang);
+  setSaveStatus('saving');
+  try {
+    const r = await fetch(`/api/questions/${lang}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ questions, topics })
+    });
+    if (!r.ok) throw new Error((await r.json()).error || 'Server error');
+    setSaveStatus('saved');
+  } catch (e) {
+    setSaveStatus('error', e.message);
+  }
+}
+
+function setSaveStatus(state, msg) {
+  const el = document.getElementById('save-status');
+  if (!el) return;
+  el.className = 'save-status ' + state;
+  el.textContent = state === 'saving' ? 'Saving…'
+    : state === 'saved'  ? '✓ Saved to file'
+    : '⚠ Save failed: ' + (msg || 'unknown error');
+  if (state === 'saved') setTimeout(() => { el.textContent = ''; el.className = 'save-status'; }, 3000);
+}
+
+function allTopics() {
+  const s = new Set(allQuestions.map(q => q.topic).filter(Boolean));
+  return Array.from(s).sort();
+}
+
+// ══════════════════════════════════════════════════════════
+// WEBSOCKET
+// ══════════════════════════════════════════════════════════
+function connectWebSocket() {
+  const proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const url = `${proto}//${location.host}?role=${wsRole}`;
+  ws = new WebSocket(url);
+
+  ws.onopen = () => {
+    if (wsRole === 'instructor') {
+      document.getElementById('ws-error').classList.add('hidden');
+    }
+  };
+
+  ws.onmessage = (evt) => {
+    try {
+      const msg = JSON.parse(evt.data);
+      if (msg.type === 'state') handleServerState(msg.session, msg.responses);
+    } catch {}
+  };
+
+  ws.onerror = () => {
+    if (wsRole === 'instructor') document.getElementById('ws-error').classList.remove('hidden');
+  };
+
+  ws.onclose = () => {
+    // Reconnect after 3s
+    setTimeout(connectWebSocket, 3000);
+  };
+}
+
+function wsSend(obj) {
+  if (ws && ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify(obj));
+}
+
+function broadcastSession(session, resetResponses) {
+  wsSend({ type: 'set_session', session, resetResponses: !!resetResponses });
+}
+
+// ══════════════════════════════════════════════════════════
+// SERVER STATE HANDLER (both roles)
+// ══════════════════════════════════════════════════════════
+function handleServerState(session, responses) {
+  lastServerState = { session, responses };
+  if (wsRole === 'instructor') {
+    handleInstructorState(session, responses);
+  } else {
+    handleStudentState(session, responses);
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// INSTRUCTOR STATE
+// ══════════════════════════════════════════════════════════
+function handleInstructorState(session, responses) {
+  lastResponses = responses;
+  if (!session || !session.active) return;
+  if (session.finished) return;
+  sessionData = session;
+
+  if (session.started) {
+    const q = session.questions[session.currentIdx];
+    if (q) updateBarChart(q, responses[q.id] || {}, session.revealed, true);
+    updateVotesCount(responses[q.id] || {});
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// SERVER URL (for QR)
+// ══════════════════════════════════════════════════════════
+async function fetchServerUrl() {
+  try {
+    const r = await fetch('/api/info');
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    serverUrl = data.url;
+    renderQR();
+  } catch {
+    serverUrl = location.origin;
+    renderQR();
+  }
+}
+
+function getStudentUrl() {
+  const base = serverUrl || location.origin;
+  return base.replace(/\/$/, '') + '?role=student';
+}
+
+function renderQR() {
+  const container = document.getElementById('qr-container');
+  if (!container) return;
+  container.innerHTML = '';
+  const url = getStudentUrl();
+  document.getElementById('qr-url-text').textContent = url;
+  try {
+    new QRCode(container, { text: url, width: 128, height: 128, correctLevel: QRCode.CorrectLevel.M });
+  } catch {}
+}
+
+function copyStudentLink() {
+  navigator.clipboard.writeText(getStudentUrl()).then(() => {
+    const btn = document.getElementById('btn-copy-link');
+    const orig = btn.querySelector('[data-i18n]');
+    if (orig) { orig.textContent = t('session.linkCopied'); setTimeout(() => { orig.textContent = t('session.copyLink'); }, 2000); }
+  });
+}
+
+// ══════════════════════════════════════════════════════════
+// TABS
+// ══════════════════════════════════════════════════════════
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ══════════════════════════════════════════════════════════
+// QUESTION BANK TAB
+// ══════════════════════════════════════════════════════════
+function renderBankChips() {
+  const wrap = document.getElementById('bank-chips');
+  const topics = allTopics();
+  wrap.innerHTML = '';
+  ['All', ...topics].forEach(t => {
+    const c = document.createElement('div');
+    c.className = 'chip' + (bankFilter === t ? ' active' : '');
+    c.textContent = t === 'All' ? (deepGet(lang,'bank.filterAll') || 'All') : t;
+    c.onclick = () => { bankFilter = t; renderBankChips(); renderBankList(); };
+    wrap.appendChild(c);
+  });
+}
+
+function renderBankList() {
+  const list = document.getElementById('bank-list');
+  const count = document.getElementById('bank-count');
+  const filtered = bankFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === bankFilter);
+  count.textContent = `${filtered.length} ${t('bank.count')}`;
+
+  if (!filtered.length) {
+    list.innerHTML = `<p class="text-muted" style="padding:1rem 0;font-size:0.88rem;">${t('bank.noQuestions')}</p>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map((q, _) => {
+    const idx = allQuestions.indexOf(q);
+    const lq = localizeQ(q);
+    return `<div class="q-row">
+      <div class="q-text">
+        <span class="badge" style="margin-right:6px;">${esc(q.topic)}</span>
+        ${esc(lq.text)}
+      </div>
+      <div class="q-actions">
+        <button class="icon-btn" title="Edit" onclick="editQuestion(${idx})">✏️</button>
+        <button class="icon-btn" title="Delete" onclick="deleteQuestion(${idx})">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function showAddForm() {
+  showQuestionForm(null);
+}
+
+function editQuestion(idx) {
+  showQuestionForm(idx);
+}
+
+function showQuestionForm(idx) {
+  const q = idx !== null ? allQuestions[idx] : null;
+  const isEdit = q !== null;
+  const formDiv = document.getElementById('bank-form');
+  formDiv.classList.remove('hidden');
+
+  const opts = isEdit ? q.options : ['','','',''];
+  const correct = isEdit ? q.correct : 0;
+
+  formDiv.innerHTML = `
+    <div class="inline-form">
+      <p class="section-title">${isEdit ? t('bank.editTitle') : t('bank.newTitle')}</p>
+      <div class="form-row">
+        <label class="form-label">${t('bank.questionText')}</label>
+        <textarea class="form-textarea" id="fq-text" rows="3">${isEdit ? esc(q.text) : ''}</textarea>
+      </div>
+      <div class="form-row">
+        <label class="form-label">${t('bank.topic')}</label>
+        <input class="form-input" id="fq-topic" list="topic-datalist" placeholder="${t('bank.topicPlaceholder')}" value="${isEdit ? esc(q.topic) : ''}">
+        <datalist id="topic-datalist">${allTopics().map(t2 => `<option value="${esc(t2)}">`).join('')}</datalist>
+      </div>
+      <div class="form-row">
+        <label class="form-label">${t('bank.options')}</label>
+        ${['A','B','C','D','E'].map((l,i) => `
+          <div class="option-row">
+            <input type="radio" name="fq-correct" value="${i}" ${correct===i?'checked':''}>
+            <span class="option-letter">${l}</span>
+            <input class="form-input" id="fq-opt-${i}" placeholder="${t('bank.optionPlaceholder')} ${l}" value="${isEdit ? esc(opts[i]||'') : ''}">
+          </div>`).join('')}
+      </div>
+      <div class="form-row">
+        <label class="form-label">${t('bank.explanation')}</label>
+        <textarea class="form-textarea" id="fq-explain" rows="3">${isEdit ? esc(q.explain||'') : ''}</textarea>
+      </div>
+      <div class="form-row">
+        <label class="form-label">${t('bank.explainImg')}</label>
+        <input class="form-input" id="fq-explain-img" value="${isEdit ? esc(q.explainImg||'') : ''}">
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary btn-sm" onclick="saveQuestionForm(${idx})">${isEdit ? t('bank.save') : t('bank.add')}</button>
+        <button class="btn btn-sm" onclick="cancelForm()">${t('bank.cancel')}</button>
+      </div>
+      <p class="text-muted mt-1" style="font-size:0.75rem;">In-app edits save to your browser. For permanent changes, update questions.json directly.</p>
+    </div>`;
+  formDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function saveQuestionForm(idx) {
+  const text    = document.getElementById('fq-text').value.trim();
+  const topic   = document.getElementById('fq-topic').value.trim();
+  const opts    = [0,1,2,3,4].map(i => document.getElementById(`fq-opt-${i}`).value.trim());
+  const correct = parseInt(document.querySelector('input[name="fq-correct"]:checked')?.value ?? '0');
+  const explain = document.getElementById('fq-explain').value.trim();
+  const explainImg = document.getElementById('fq-explain-img').value.trim();
+
+  if (!text || !topic) { alert('Question text and topic are required.'); return; }
+  if (opts.some(o => !o)) { alert('All 5 answer options are required.'); return; }
+
+  const q = {
+    id: idx !== null ? allQuestions[idx].id : 'custom_' + Date.now(),
+    topic, text, options: opts, correct, explain, explainImg
+  };
+
+  if (idx !== null) allQuestions[idx] = q;
+  else allQuestions.push(q);
+
+  saveQuestionsToStorage();
+  cancelForm();
+  renderBankChips();
+  renderBankList();
+  renderSessionChips();
+  renderSessionPool();
+}
+
+function deleteQuestion(idx) {
+  if (!confirm(t('bank.deleteConfirm'))) return;
+  allQuestions.splice(idx, 1);
+  saveQuestionsToStorage();
+  renderBankChips();
+  renderBankList();
+  renderSessionChips();
+  renderSessionPool();
+}
+
+function cancelForm() {
+  document.getElementById('bank-form').classList.add('hidden');
+  document.getElementById('bank-form').innerHTML = '';
+}
+
+// ══════════════════════════════════════════════════════════
+// SESSION TAB — PRE-LAUNCH
+// ══════════════════════════════════════════════════════════
+function renderSessionChips() {
+  const wrap = document.getElementById('session-chips');
+  const topics = allTopics();
+  wrap.innerHTML = '';
+  ['All', ...topics].forEach(t2 => {
+    const c = document.createElement('div');
+    c.className = 'chip' + (sessionFilter === t2 ? ' active' : '');
+    c.textContent = t2 === 'All' ? (deepGet(lang,'bank.filterAll') || 'All') : t2;
+    c.onclick = () => { sessionFilter = t2; renderSessionChips(); renderSessionPool(); };
+    wrap.appendChild(c);
+  });
+}
+
+function renderSessionPool() {
+  const list = document.getElementById('session-pool-list');
+  const filtered = sessionFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === sessionFilter);
+
+  if (!filtered.length) {
+    list.innerHTML = `<p class="text-muted" style="padding:0.5rem 0;font-size:0.85rem;">No questions match this filter.</p>`;
+    updateLaunchBtn();
+    return;
+  }
+
+  list.innerHTML = filtered.map(q => {
+    const checked = sessionPool.includes(q.id);
+    const lq = localizeQ(q);
+    return `<label class="check-row">
+      <input type="checkbox" ${checked ? 'checked' : ''} onchange="togglePoolQ('${q.id}', this.checked)">
+      <span class="check-text">
+        <span class="badge" style="margin-right:5px;">${esc(q.topic)}</span>${esc(lq.text)}
+      </span>
+    </label>`;
+  }).join('');
+  updateLaunchBtn();
+}
+
+function togglePoolQ(id, checked) {
+  if (checked) { if (!sessionPool.includes(id)) sessionPool.push(id); }
+  else sessionPool = sessionPool.filter(i => i !== id);
+  updateLaunchBtn();
+}
+
+function updateLaunchBtn() {
+  document.getElementById('btn-launch').disabled = sessionPool.length === 0;
+}
+
+// ══════════════════════════════════════════════════════════
+// SESSION — LAUNCH & CONTROL
+// ══════════════════════════════════════════════════════════
+function launchSession() {
+  if (!sessionPool.length) return;
+  const questions = allQuestions.filter(q => sessionPool.includes(q.id));
+  const name = document.getElementById('session-name-input').value.trim() || 'Session 1';
+  const timerSecs = Math.min(300, Math.max(15, parseInt(document.getElementById('timer-input').value) || 90));
+
+  const session = {
+    active: true, name, questions, currentIdx: 0, timerSecs,
+    startedAt: null, started: false, finished: false, revealed: false
+  };
+
+  sessionData = session;
+  broadcastSession(session, true);
+  showActiveSession(session);
+}
+
+function showActiveSession(session) {
+  document.getElementById('session-prelaunched').classList.add('hidden');
+  document.getElementById('session-active').classList.remove('hidden');
+
+  // Switch to session tab
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-session').classList.add('active');
+  document.getElementById('panel-session').classList.add('active');
+
+  renderActiveQuestion(session);
+  renderQR();
+}
+
+function renderActiveQuestion(session) {
+  const q = session.questions[session.currentIdx];
+  const total = session.questions.length;
+
+  document.getElementById('active-session-name').textContent = session.name;
+  document.getElementById('active-q-counter').textContent = `${t('session.qCounter')} ${session.currentIdx+1} ${t('session.of')} ${total}`;
+  document.getElementById('active-progress-bar').style.width = `${(session.currentIdx / total) * 100}%`;
+
+  const lq = localizeQ(q);
+  document.getElementById('active-q-topic').textContent = q.topic;
+  document.getElementById('active-q-text').textContent = lq.text;
+
+  // Bar chart (empty)
+  renderBarList(q, {}, false, true);
+  updateVotesCount({});
+
+  // Timer ring reset
+  setRing('ring-fill', 'ring-number', session.timerSecs, session.timerSecs);
+
+  // Explanation
+  explainVisible = false;
+  document.getElementById('explain-panel').classList.add('hidden');
+  const hasExplain = lq.explain || q.explainImg;
+  document.getElementById('explain-toggle-row').classList.toggle('hidden', !hasExplain);
+  document.getElementById('explain-text').textContent = lq.explain || '';
+  const eImg = document.getElementById('explain-img');
+  if (q.explainImg) { eImg.src = q.explainImg; eImg.style.display = 'block'; }
+  else { eImg.style.display = 'none'; }
+
+  renderActionRow(session);
+  stopTimer();
+}
+
+function renderActionRow(session) {
+  const row = document.getElementById('action-row');
+  const q = session.questions[session.currentIdx];
+  const isLast = session.currentIdx >= session.questions.length - 1;
+  row.innerHTML = '';
+
+  if (!session.started) {
+    addBtn(row, t('session.startQ'), 'btn-primary', startQuestion);
+  } else {
+    addBtn(row, t('session.stopTimer'), '', stopQuestion);
+  }
+
+  const revBtn = addBtn(row, session.revealed ? t('session.revealed') : t('session.reveal'), session.revealed ? 'btn-success' : '', revealQuestion);
+  revBtn.disabled = !session.started && !session.revealed;
+
+  if (!isLast) {
+    const nextBtn = addBtn(row, t('session.nextQ'), '', nextQuestion);
+    nextBtn.disabled = !session.revealed;
+  }
+
+  const endBtn = addBtn(row, t('session.endSession'), isLast && session.revealed ? 'btn-primary' : 'btn-danger btn-sm', endSession);
+  if (isLast) endBtn.disabled = !session.revealed;
+}
+
+function addBtn(parent, label, cls, fn) {
+  const b = document.createElement('button');
+  b.className = 'btn ' + cls;
+  b.textContent = label;
+  b.onclick = fn;
+  parent.appendChild(b);
+  return b;
+}
+
+function startQuestion() {
+  if (!sessionData) return;
+  sessionData.started = true;
+  sessionData.startedAt = Date.now();
+  sessionData.revealed = false;
+  broadcastSession(sessionData, true); // reset responses for new question start
+  renderActionRow(sessionData);
+  startTimer(sessionData.timerSecs, sessionData.startedAt);
+}
+
+function stopQuestion() {
+  if (!sessionData) return;
+  sessionData.started = false;
+  broadcastSession(sessionData, false);
+  stopTimer();
+  renderActionRow(sessionData);
+}
+
+function revealQuestion() {
+  if (!sessionData) return;
+  sessionData.revealed = true;
+  broadcastSession(sessionData, false);
+  renderActionRow(sessionData);
+  // Re-render bar with correct shown
+  const q = sessionData.questions[sessionData.currentIdx];
+  // bar will update via handleInstructorState on next server echo
+}
+
+function nextQuestion() {
+  if (!sessionData) return;
+  sessionData.currentIdx++;
+  sessionData.started = false;
+  sessionData.startedAt = null;
+  sessionData.revealed = false;
+  broadcastSession(sessionData, true);
+  stopTimer();
+  renderActiveQuestion(sessionData);
+}
+
+function endSession() {
+  if (!sessionData) return;
+  if (!confirm(t('session.endConfirm'))) return;
+  sessionData.finished = true;
+  sessionData.active = false;
+  broadcastSession(sessionData, false);
+  stopTimer();
+
+  resultsData = {
+    session: JSON.parse(JSON.stringify(sessionData)),
+    responses: JSON.parse(JSON.stringify(lastResponses))
+  };
+  renderResults();
+
+  document.getElementById('session-active').classList.add('hidden');
+  document.getElementById('session-prelaunched').classList.remove('hidden');
+  sessionData = null;
+  sessionPool = [];
+  renderSessionPool();
+
+  // Switch to results tab
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-results').classList.add('active');
+  document.getElementById('panel-results').classList.add('active');
+}
+
+// ══════════════════════════════════════════════════════════
+// TIMER
+// ══════════════════════════════════════════════════════════
+function startTimer(timerSecs, startedAt) {
+  stopTimer();
+  timerInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - startedAt) / 1000);
+    const left = Math.max(0, timerSecs - elapsed);
+    setRing('ring-fill', 'ring-number', left, timerSecs);
+    if (left <= 0) { stopTimer(); if (sessionData) { stopQuestion(); } }
+  }, 500);
+}
+
+function stopTimer() {
+  if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+}
+
+function setRing(fillId, numberId, current, total) {
+  const fill = document.getElementById(fillId);
+  const num  = document.getElementById(numberId);
+  if (!fill || !num) return;
+  const fraction = total > 0 ? current / total : 0;
+  fill.style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - fraction);
+  fill.classList.toggle('danger', current <= 10 && current > 0);
+  num.textContent = current;
+}
+
+// ══════════════════════════════════════════════════════════
+// BAR CHART
+// ══════════════════════════════════════════════════════════
+function renderBarList(q, responsesForQ, revealed, instructorMode) {
+  const list = document.getElementById('active-bar-list');
+  list.innerHTML = buildBarItems(q, responsesForQ, revealed, instructorMode);
+}
+
+function updateBarChart(q, responsesForQ, revealed, instructorMode) {
+  const list = document.getElementById('active-bar-list');
+  if (!list) return;
+  list.innerHTML = buildBarItems(q, responsesForQ, revealed, instructorMode);
+}
+
+function buildBarItems(q, responsesForQ, revealed, instructorMode) {
+  const lq     = localizeQ(q);
+  const counts = lq.options.map((_, i) => (responsesForQ[i] || responsesForQ[String(i)] || 0));
+  const total  = counts.reduce((a,b) => a+b, 0);
+  return counts.map((count, i) => {
+    const pct    = total > 0 ? Math.round(count / total * 100) : 0;
+    const isCorrect = i === q.correct;
+    const showGreen = isCorrect && (revealed || instructorMode);
+    return `<li class="bar-item">
+      <div class="bar-label">
+        <span class="bar-letter">${'ABCDE'[i]}</span>
+        <span style="overflow:hidden;text-overflow:ellipsis;">${esc(lq.options[i] || '')}</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill ${showGreen ? 'correct' : ''}" style="width:${pct}%"></div>
+      </div>
+      <span class="bar-stat">${count} (${pct}%)</span>
+    </li>`;
+  }).join('');
+}
+
+function updateVotesCount(responsesForQ) {
+  const el = document.getElementById('active-votes-count');
+  if (!el) return;
+  const total = Object.values(responsesForQ).reduce((a, v) => a + (Number(v) || 0), 0);
+  el.textContent = `${total} ${t('session.votes')}`;
+}
+
+// ══════════════════════════════════════════════════════════
+// EXPLANATION TOGGLE
+// ══════════════════════════════════════════════════════════
+function toggleExplain() {
+  explainVisible = !explainVisible;
+  document.getElementById('explain-panel').classList.toggle('hidden', !explainVisible);
+  const btn = document.getElementById('btn-explain-toggle');
+  const span = btn.querySelector('[data-i18n]');
+  if (span) span.textContent = explainVisible ? t('session.hideExplain') : t('session.showExplain');
+}
+
+// ══════════════════════════════════════════════════════════
+// RESULTS TAB
+// ══════════════════════════════════════════════════════════
+function renderResults() {
+  if (!resultsData) return;
+  document.getElementById('results-empty').classList.add('hidden');
+  document.getElementById('results-content').classList.remove('hidden');
+
+  const session = resultsData.session;
+  const responses = resultsData.responses || {};
+
+  document.getElementById('results-session-name').textContent = session.name;
+
+  let totalCorrect = 0, totalAnswered = 0;
+  session.questions.forEach(q => {
+    const r = responses[q.id] || {};
+    const counts = [0,1,2,3].map(i => r[i] || r[String(i)] || 0);
+    const total = counts.reduce((a,b) => a+b, 0);
+    totalAnswered += total;
+    totalCorrect  += counts[q.correct];
+  });
+  const overallPct = totalAnswered > 0 ? Math.round(totalCorrect / totalAnswered * 100) : 0;
+
+  document.getElementById('results-metrics').innerHTML = `
+    <div class="metric-card">
+      <div class="metric-val">${session.questions.length}</div>
+      <div class="metric-lbl">${t('results.questions')}</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">${overallPct}%</div>
+      <div class="metric-lbl">${t('results.overallCorrect')}</div>
+    </div>`;
+
+  const list = document.getElementById('results-list');
+  list.innerHTML = session.questions.map(q => {
+    const lq = localizeQ(q);
+    const r = responses[q.id] || {};
+    const counts = lq.options.map((_, i) => r[i] || r[String(i)] || 0);
+    const total = counts.reduce((a,b) => a+b, 0);
+    const bars = counts.map((count, i) => {
+      const pct = total > 0 ? Math.round(count / total * 100) : 0;
+      const isCorrect = i === q.correct;
+      return `<li class="bar-item">
+        <div class="bar-label">
+          <span class="bar-letter">${'ABCDE'[i]}</span>
+          <span style="overflow:hidden;text-overflow:ellipsis;">${esc(lq.options[i]||'')}</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill ${isCorrect ? 'correct' : ''}" style="width:${pct}%"></div>
+        </div>
+        <span class="bar-stat">${count} (${pct}%)</span>
+      </li>`;
+    }).join('');
+    return `<div class="card result-q-card">
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">${esc(q.topic)}</p>
+      <p style="font-size:0.9rem;font-weight:500;margin-bottom:0.6rem;">${esc(lq.text)}</p>
+      <ul class="bar-list">${bars}</ul>
+      <p class="votes-count">${total} ${t('results.responses')}</p>
+    </div>`;
+  }).join('');
+}
+
+function exportCSV() {
+  if (!resultsData) return;
+  const session = resultsData.session;
+  const responses = resultsData.responses || {};
+  const rows = [['Question','Topic','Option A','Option B','Option C','Option D','Option E','Correct Option','Votes A','Votes B','Votes C','Votes D','Votes E','Total Votes','% Correct']];
+  session.questions.forEach(q => {
+    const lq = localizeQ(q);
+    const r = responses[q.id] || {};
+    const counts = lq.options.map((_, i) => r[i] || r[String(i)] || 0);
+    const total = counts.reduce((a,b) => a+b, 0);
+    const pct = total > 0 ? Math.round(counts[q.correct] / total * 100) : 0;
+    rows.push([
+      csvEsc(lq.text), csvEsc(q.topic),
+      csvEsc(lq.options[0]||''), csvEsc(lq.options[1]||''), csvEsc(lq.options[2]||''), csvEsc(lq.options[3]||''), csvEsc(lq.options[4]||''),
+      'ABCDE'[q.correct],
+      counts[0]||0, counts[1]||0, counts[2]||0, counts[3]||0, counts[4]||0, total, pct + '%'
+    ]);
+  });
+  const csv = rows.map(r => r.join(',')).join('\n');
+  const date = new Date().toISOString().slice(0,10);
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `biochemquiz_results_${date}.csv`;
+  a.click();
+}
+
+function csvEsc(s) { s = String(s||''); return '"' + s.replace(/"/g,'""') + '"'; }
+
+// ══════════════════════════════════════════════════════════
+// STUDENT VIEW
+// ══════════════════════════════════════════════════════════
+function showStudentState(state) {
+  ['sv-waiting','sv-session-waiting','sv-question'].forEach(id => {
+    document.getElementById(id).classList.add('hidden');
+  });
+  document.getElementById('sv-' + state)?.classList.remove('hidden');
+}
+
+let svTimerInterval = null;
+
+function handleStudentState(session, responses) {
+  if (!session || !session.active || session.finished) {
+    showStudentState('waiting');
+    studentAnswered = null;
+    lastQuestionIdx = null;
+    clearInterval(svTimerInterval);
+    return;
+  }
+
+  const q = session.questions[session.currentIdx];
+
+  // Detect question change → reset answer
+  if (lastQuestionIdx !== session.currentIdx) {
+    studentAnswered = null;
+    lastQuestionIdx = session.currentIdx;
+  }
+
+  if (!session.started) {
+    showStudentState('session-waiting');
+    document.getElementById('sv-session-name').textContent = session.name;
+    document.getElementById('sv-session-topic').textContent = q.topic;
+    document.getElementById('sv-q-counter').textContent = `Q ${session.currentIdx+1} / ${session.questions.length}`;
+    clearInterval(svTimerInterval);
+    return;
+  }
+
+  const lq = localizeQ(q);
+  showStudentState('question');
+  document.getElementById('sv-q-session-name').textContent = session.name;
+  document.getElementById('sv-q-topic').textContent = q.topic;
+  document.getElementById('sv-q-counter2').textContent = `Q ${session.currentIdx+1} / ${session.questions.length}`;
+  document.getElementById('sv-q-text').textContent = lq.text;
+
+  // Timer
+  clearInterval(svTimerInterval);
+  if (!session.revealed) {
+    updateSvTimer(session);
+    svTimerInterval = setInterval(() => updateSvTimer(session), 500);
+  } else {
+    clearInterval(svTimerInterval);
+    setRing('sv-ring-fill', 'sv-ring-number', 0, session.timerSecs);
+  }
+
+  // Answer buttons
+  const answered = studentAnswered !== null;
+  const revealed = session.revealed;
+  const r = responses[q.id] || {};
+  const counts = lq.options.map((_, i) => r[i] || r[String(i)] || 0);
+  const total  = counts.reduce((a,b) => a+b, 0);
+
+  const wrap = document.getElementById('sv-answer-btns');
+  wrap.innerHTML = lq.options.map((opt, i) => {
+    const letter = 'ABCDE'[i];
+    let cls = 'answer-btn';
+    if (answered && studentAnswered === i) cls += ' selected';
+    if (revealed && i === q.correct) cls += ' correct';
+    if (revealed && answered && studentAnswered === i && i !== q.correct) cls += ' wrong';
+
+    const pct = total > 0 ? Math.round(counts[i] / total * 100) : 0;
+    const miniBar = revealed ? `<div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div><div class="answer-pct">${pct}%</div>` : '';
+
+    return `<button class="${cls}" ${(answered||revealed)?'disabled':''} onclick="submitAnswer(${i}, '${q.id}')">
+      <span class="answer-letter">${letter}</span>
+      <span style="flex:1;">${esc(opt||'')}${miniBar}</span>
+    </button>`;
+  }).join('');
+
+  // Status pill
+  const statusWrap = document.getElementById('sv-status-wrap');
+  if (answered && !revealed) {
+    statusWrap.classList.remove('hidden');
+    document.getElementById('sv-status-pill').textContent = t('student.waitingReveal');
+  } else if (answered && revealed) {
+    statusWrap.classList.add('hidden');
+  } else {
+    statusWrap.classList.add('hidden');
+  }
+
+  // Explanation
+  const svExplain = document.getElementById('sv-explain');
+  if (revealed && (lq.explain || q.explainImg)) {
+    svExplain.classList.remove('hidden');
+    document.getElementById('sv-explain-text').textContent = lq.explain || '';
+    const img = document.getElementById('sv-explain-img');
+    if (q.explainImg) { img.src = q.explainImg; img.style.display = 'block'; }
+    else img.style.display = 'none';
+  } else {
+    svExplain.classList.add('hidden');
+  }
+}
+
+function updateSvTimer(session) {
+  const elapsed = Math.floor((Date.now() - session.startedAt) / 1000);
+  const left = Math.max(0, session.timerSecs - elapsed);
+  setRing('sv-ring-fill', 'sv-ring-number', left, session.timerSecs);
+  if (left <= 0) clearInterval(svTimerInterval);
+}
+
+function submitAnswer(optionIndex, questionId) {
+  if (studentAnswered !== null) return;
+  studentAnswered = optionIndex;
+  wsSend({ type: 'answer', questionId, optionIndex });
+  // Re-render buttons to show selected state immediately
+  document.querySelectorAll('.answer-btn').forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === optionIndex) btn.classList.add('selected');
+  });
+  document.getElementById('sv-status-wrap').classList.remove('hidden');
+  document.getElementById('sv-status-pill').textContent = t('student.submitted') || 'Answer submitted!';
+}
+
+// ══════════════════════════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════════════════════════
+
+// Returns a question with text/options/explain overridden for currentLang if available.
+// Questions can carry optional i18n: { de: { text, options, explain }, es: {...} }
+// Falls back to base (English) fields when no translation exists.
+function localizeQ(q) {
+  if (!q) return q;
+  const ov = q.i18n && q.i18n[currentLang];
+  if (!ov) return q;
+  return Object.assign({}, q, {
+    text:    ov.text    || q.text,
+    options: ov.options || q.options,
+    explain: ov.explain !== undefined ? ov.explain : q.explain
+  });
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function setEl(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
+</script>
+</body>
+</html>

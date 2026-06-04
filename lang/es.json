@@ -1,0 +1,68 @@
+{
+  "appTitle": "BiochemQuiz",
+  "tabs": {
+    "bank": "Banco de preguntas",
+    "session": "Sesión",
+    "results": "Resultados"
+  },
+  "bank": {
+    "title": "Banco de preguntas",
+    "count": "preguntas",
+    "addBtn": "Agregar pregunta",
+    "editTitle": "Editar pregunta",
+    "newTitle": "Nueva pregunta",
+    "questionText": "Texto de la pregunta",
+    "topic": "Tema",
+    "topicPlaceholder": "ej. Glucólisis",
+    "options": "Opciones de respuesta (marcar la correcta)",
+    "optionPlaceholder": "Opción",
+    "explanation": "Texto de explicación (se muestra tras responder)",
+    "explainImg": "Ruta o URL de imagen explicativa (opcional)",
+    "save": "Guardar cambios",
+    "add": "Agregar al banco",
+    "cancel": "Cancelar",
+    "deleteConfirm": "¿Eliminar esta pregunta?",
+    "noQuestions": "Aún no hay preguntas. Agregue una abajo.",
+    "filterAll": "Todas"
+  },
+  "session": {
+    "launchTitle": "Iniciar sesión",
+    "pool": "Preguntas disponibles",
+    "sessionName": "Nombre de la sesión",
+    "timerLabel": "Tiempo por pregunta (segundos)",
+    "launchBtn": "Iniciar sesión",
+    "startQ": "Iniciar pregunta",
+    "stopTimer": "Detener temporizador",
+    "reveal": "Revelar a los estudiantes",
+    "revealed": "Revelado",
+    "nextQ": "Siguiente pregunta",
+    "endSession": "Finalizar sesión",
+    "endConfirm": "¿Finalizar esta sesión?",
+    "showExplain": "Mostrar explicación",
+    "hideExplain": "Ocultar explicación",
+    "noExplain": "No se ha añadido explicación.",
+    "votes": "respuestas recibidas",
+    "copyLink": "Copiar enlace",
+    "linkCopied": "¡Enlace copiado!",
+    "studentAccess": "Acceso para estudiantes — compartir QR o enlace",
+    "qCounter": "Pregunta",
+    "of": "de"
+  },
+  "results": {
+    "title": "Resultados",
+    "questions": "Preguntas",
+    "overallCorrect": "Correcto global",
+    "exportCSV": "Exportar CSV",
+    "noSession": "Aún no hay sesión completada. Inicie una sesión para ver resultados.",
+    "responses": "respuestas en total"
+  },
+  "student": {
+    "connecting": "Conectando...",
+    "waiting": "Esperando sesión",
+    "waitingMsg": "Su profesor aún no ha iniciado una sesión. Esta página se actualizará automáticamente.",
+    "waitingQ": "Esperando que el profesor inicie la pregunta...",
+    "submitted": "¡Respuesta enviada!",
+    "waitingReveal": "Esperando que el profesor revele los resultados...",
+    "explanation": "Explicación"
+  }
+}
