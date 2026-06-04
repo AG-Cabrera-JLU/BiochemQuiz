@@ -1351,7 +1351,7 @@ function handleStudentState(session, responses) {
     lastQuestionIdx = session.currentIdx;
   }
 
-  if (!session.started) {
+  if (!session.started && !session.revealed) {
     showStudentState('session-waiting');
     document.getElementById('sv-session-name').textContent = session.name;
     document.getElementById('sv-session-topic').textContent = q.topic;

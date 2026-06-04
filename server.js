@@ -21,6 +21,11 @@ function getLocalIP() {
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
+// Prevent browsers from caching index.html so phones always get the latest JS
+app.get('/', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 app.use(express.static(path.join(__dirname)));
 
 app.get('/api/info', (req, res) => {
