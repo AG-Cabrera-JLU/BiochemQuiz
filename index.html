@@ -502,6 +502,18 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     </div>
   </div>
 
+  <!-- State 4: session finished — score screen -->
+  <div id="sv-finished" class="hidden">
+    <div class="waiting-card card" style="text-align:center;padding:2rem 1.5rem;">
+      <p class="topbar-title" style="margin-bottom:1.25rem;">Session complete</p>
+      <div style="font-size:3rem;font-weight:700;color:var(--primary);line-height:1;">
+        <span id="sv-score-correct">0</span><span style="font-size:1.5rem;color:var(--text-muted);">/<span id="sv-score-total">0</span></span>
+      </div>
+      <div style="font-size:1.1rem;color:var(--text-muted);margin-top:0.4rem;" id="sv-score-pct">0%</div>
+      <p style="margin-top:1.25rem;font-size:0.9rem;color:var(--text-muted);">correct answers</p>
+    </div>
+  </div>
+
 </div><!-- end student-view -->
 
 <script>
@@ -525,6 +537,8 @@ let explainVisible = false;
 let lastResponses = {};
 let lastServerState = { session: null, responses: {} };
 let studentAnswered = null; // optionIndex chosen by student, or null
+let myAnswers = {};        // { questionId: optionIndex } — all answers this session
+let lastSessionId = null;  // detect new session to reset myAnswers
 const clientId = (() => {
   let id = sessionStorage.getItem('bq_cid');
   if (!id) { id = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem('bq_cid', id); }
@@ -1354,7 +1368,7 @@ function csvEsc(s) { s = String(s||''); return '"' + s.replace(/"/g,'""') + '"';
 // STUDENT VIEW
 // ══════════════════════════════════════════════════════════
 function showStudentState(state) {
-  ['sv-waiting','sv-session-waiting','sv-question'].forEach(id => {
+  ['sv-waiting','sv-session-waiting','sv-question','sv-finished'].forEach(id => {
     document.getElementById(id).classList.add('hidden');
   });
   document.getElementById('sv-' + state)?.classList.remove('hidden');
@@ -1363,10 +1377,29 @@ function showStudentState(state) {
 let svTimerInterval = null;
 
 function handleStudentState(session, responses) {
-  if (!session || !session.active || session.finished) {
+  if (!session || !session.active) {
     showStudentState('waiting');
     studentAnswered = null;
     lastQuestionIdx = null;
+    clearInterval(svTimerInterval);
+    return;
+  }
+
+  // Reset myAnswers when a new session starts
+  const sessionId = session.name + '_' + (session.questions[0]?.id || '');
+  if (sessionId !== lastSessionId) {
+    myAnswers = {};
+    lastSessionId = sessionId;
+  }
+
+  if (session.finished) {
+    const correct = session.questions.filter(q => myAnswers[q.id] === q.correct).length;
+    const total   = session.questions.length;
+    document.getElementById('sv-score-correct').textContent = correct;
+    document.getElementById('sv-score-total').textContent   = total;
+    const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+    document.getElementById('sv-score-pct').textContent = pct + '%';
+    showStudentState('finished');
     clearInterval(svTimerInterval);
     return;
   }
@@ -1453,6 +1486,7 @@ function updateSvTimer(session) {
 
 function submitAnswer(optionIndex, questionId) {
   studentAnswered = optionIndex;
+  myAnswers[questionId] = optionIndex;
   wsSend({ type: 'answer', questionId, optionIndex, clientId });
   // Update button selection visually without a full re-render
   document.querySelectorAll('.answer-btn').forEach((btn, i) => {
