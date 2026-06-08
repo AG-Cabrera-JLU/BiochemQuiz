@@ -1227,7 +1227,7 @@ function buildBarItems(q, responsesForQ, revealed, instructorMode) {
   return counts.map((count, i) => {
     const pct    = total > 0 ? Math.round(count / total * 100) : 0;
     const isCorrect = i === q.correct;
-    const showGreen = isCorrect && (revealed || instructorMode);
+    const showGreen = isCorrect && revealed;
     return `<li class="bar-item">
       <div class="bar-label">
         <span class="bar-letter">${'ABCDE'[i]}</span>
