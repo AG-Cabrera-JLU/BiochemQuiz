@@ -14,7 +14,7 @@
   <!-- Arrow Pyruvat → OAA -->
   <line x1="69" y1="70" x2="69" y2="82" stroke="#d97706" stroke-width="1.5"/>
   <polygon points="64,79 69,88 74,79" fill="#d97706"/>
-  <text x="100" y="80" font-family="Arial, sans-serif" font-size="9" fill="#78350f">PC (+CO₂, ATP)</text>
+  <text x="76" y="80" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#78350f">PC (+CO₂, ATP)</text>
 
   <!-- OAA mito -->
   <rect x="24" y="88" width="90" height="22" rx="4" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
@@ -23,16 +23,16 @@
   <!-- Arrow OAA → Malat -->
   <line x1="69" y1="110" x2="69" y2="122" stroke="#d97706" stroke-width="1.5"/>
   <polygon points="64,119 69,128 74,119" fill="#d97706"/>
-  <text x="100" y="121" font-family="Arial, sans-serif" font-size="9" fill="#78350f">MDH (NADH)</text>
+  <text x="76" y="121" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#78350f">MDH (NADH)</text>
 
   <!-- Malat mito -->
   <rect x="24" y="128" width="90" height="22" rx="4" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
   <text x="69" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7c2d12">Malat</text>
 
-  <!-- Export arrow right -->
-  <line x1="114" y1="139" x2="144" y2="139" stroke="#d97706" stroke-width="2"/>
-  <polygon points="140,134 150,139 140,144" fill="#d97706"/>
-  <text x="129" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#78350f">Export</text>
+  <!-- Export arrow right (crosses membrane gap) -->
+  <line x1="114" y1="139" x2="220" y2="139" stroke="#d97706" stroke-width="2"/>
+  <polygon points="216,134 226,139 216,144" fill="#d97706"/>
+  <text x="168" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#78350f">als Malat</text>
 
   <!-- CYTOSOL box -->
   <rect x="224" y="24" width="168" height="152" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
