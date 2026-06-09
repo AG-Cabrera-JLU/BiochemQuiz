@@ -310,7 +310,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
   <div class="topbar">
     <div>
       <span class="topbar-title">BiochemQuiz</span>
-      <span class="topbar-sub">JLU Giessen · v0.5.1</span>
+      <span class="topbar-sub">JLU Giessen · v0.5.2</span>
     </div>
     <div class="lang-toggle" id="lang-toggle"></div>
   </div>
@@ -426,9 +426,12 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     <div id="results-content" class="hidden">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
         <h2 style="font-size:1rem;font-weight:700;" id="results-session-name"></h2>
-        <button class="btn btn-sm btn-primary" onclick="exportCSV()">
-          ↓ <span data-i18n="results.exportCSV">Export CSV</span>
-        </button>
+        <div style="display:flex;gap:0.5rem;">
+          <button class="btn btn-sm" onclick="switchTab('session')">+ New session</button>
+          <button class="btn btn-sm btn-primary" onclick="exportCSV()">
+            ↓ <span data-i18n="results.exportCSV">Export CSV</span>
+          </button>
+        </div>
       </div>
       <div class="metric-cards" id="results-metrics"></div>
       <div id="results-list"></div>
@@ -1157,6 +1160,13 @@ function nextQuestion() {
   renderActiveQuestion(sessionData);
 }
 
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+}
+
 function endSession() {
   if (!sessionData) return;
   if (!confirm(t('session.endConfirm'))) return;
@@ -1177,11 +1187,7 @@ function endSession() {
   sessionPool = [];
   renderSessionPool();
 
-  // Switch to results tab
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('tab-results').classList.add('active');
-  document.getElementById('panel-results').classList.add('active');
+  switchTab('results');
 }
 
 // ══════════════════════════════════════════════════════════
