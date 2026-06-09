@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="195" viewBox="0 0 400 195">
+  <rect width="400" height="195" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">ATP-Bilanz der Glykolyse</text>
+
+  <!-- Phase 1 strip -->
+  <rect x="10" y="28" width="110" height="90" rx="7" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="65" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#7f1d1d">Phase 1</text>
+  <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7f1d1d">Energie-Investition</text>
+  <text x="65" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">Hexokinase: −1 ATP</text>
+  <text x="65" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">PFK-1: −1 ATP</text>
+  <rect x="28" y="100" width="74" height="12" rx="4" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="65" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7f1d1d">−2 ATP</text>
+
+  <!-- Phase 2 strip -->
+  <rect x="145" y="28" width="110" height="90" rx="7" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#334155">Phase 2</text>
+  <text x="200" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">Spaltung</text>
+  <text x="200" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">Fru-1,6-bisP</text>
+  <text x="200" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">→ 2 × DHAP/G3P</text>
+  <rect x="163" y="100" width="74" height="12" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="200" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#334155">0 ATP</text>
+
+  <!-- Phase 3 strip -->
+  <rect x="280" y="28" width="110" height="90" rx="7" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="335" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#065f46">Phase 3</text>
+  <text x="335" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#065f46">Energie-Gewinn</text>
+  <text x="335" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">PGK: 2 × +1 ATP</text>
+  <text x="335" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#475569">PK: 2 × +1 ATP</text>
+  <rect x="298" y="100" width="74" height="12" rx="4" fill="#bbf7d0" stroke="#059669" stroke-width="1"/>
+  <text x="335" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#065f46">+4 ATP</text>
+
+  <!-- Net arrow pointing right -->
+  <line x1="120" y1="73" x2="142" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="138,69 145,73 138,77" fill="#94a3b8"/>
+  <line x1="255" y1="73" x2="277" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="273,69 280,73 273,77" fill="#94a3b8"/>
+
+  <!-- Net badge -->
+  <rect x="100" y="134" width="200" height="46" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="200" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#78350f">Netto pro Glucose:</text>
+  <text x="200" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#d97706">+2 ATP   +2 NADH   +2 Pyruvat</text>
+</svg>

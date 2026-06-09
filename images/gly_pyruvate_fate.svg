@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="210" viewBox="0 0 400 210">
+  <rect width="400" height="210" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Weiteres Schicksal des Pyruvats</text>
+
+  <!-- Pyruvat box (top center) -->
+  <rect x="148" y="28" width="104" height="32" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="200" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#312e81">Pyruvat</text>
+
+  <!-- Left branch line (anaerob) -->
+  <line x1="160" y1="60" x2="88" y2="92" stroke="#dc2626" stroke-width="1.5"/>
+  <!-- Right branch line (aerob) -->
+  <line x1="240" y1="60" x2="312" y2="92" stroke="#059669" stroke-width="1.5"/>
+
+  <!-- Anaerob label -->
+  <rect x="14" y="92" width="80" height="22" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="54" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">anaerob</text>
+
+  <!-- Aerob label -->
+  <rect x="306" y="92" width="80" height="22" rx="4" fill="#d1fae5" stroke="#059669" stroke-width="1"/>
+  <text x="346" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#064e3b">aerob</text>
+
+  <!-- Anaerob: LDH arrow + box -->
+  <line x1="54" y1="114" x2="54" y2="132" stroke="#dc2626" stroke-width="1.5"/>
+  <polygon points="49,128 54,138 59,128" fill="#dc2626"/>
+  <text x="62" y="128" font-family="Arial, sans-serif" font-size="9" fill="#7f1d1d">LDH</text>
+  <text x="62" y="139" font-family="Arial, sans-serif" font-size="9" fill="#7f1d1d">NADH→NAD⁺</text>
+
+  <!-- Lactat box -->
+  <rect x="14" y="142" width="80" height="30" rx="5" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="54" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f1d1d">Lactat</text>
+
+  <!-- Cytosol label under Lactat -->
+  <text x="54" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">(Zytosol)</text>
+
+  <!-- Aerob: PDH arrow + box -->
+  <line x1="346" y1="114" x2="346" y2="132" stroke="#059669" stroke-width="1.5"/>
+  <polygon points="341,128 346,138 351,128" fill="#059669"/>
+  <text x="356" y="128" font-family="Arial, sans-serif" font-size="9" fill="#064e3b">PDH</text>
+  <text x="356" y="139" font-family="Arial, sans-serif" font-size="9" fill="#064e3b">CO₂, NADH</text>
+
+  <!-- Acetyl-CoA box -->
+  <rect x="296" y="142" width="100" height="30" rx="5" fill="#bbf7d0" stroke="#059669" stroke-width="2"/>
+  <text x="346" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#064e3b">Acetyl-CoA</text>
+
+  <!-- Arrow Acetyl-CoA → Citratzyklus -->
+  <line x1="346" y1="172" x2="346" y2="188" stroke="#059669" stroke-width="1.5"/>
+  <polygon points="341,184 346,194 351,184" fill="#059669"/>
+
+  <!-- Citratzyklus box -->
+  <rect x="285" y="192" width="122" height="14" rx="3" fill="#86efac" stroke="#16a34a" stroke-width="1"/>
+  <text x="346" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#14532d">Citratzyklus (Mitochondrien)</text>
+</svg>

@@ -201,7 +201,7 @@ img { max-width: 100%; }
 /* ── Explanation panel ── */
 .explain-panel { background: var(--bg-secondary); border-radius: var(--radius); padding: 0.75rem 1rem; margin-top: 0.5rem; }
 .explain-text  { font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.5rem; }
-.explain-img   { border-radius: var(--radius); margin-top: 0.5rem; }
+.explain-img   { border-radius: var(--radius); margin-top: 0.5rem; max-width: 100%; display: block; }
 
 /* ── QR section ── */
 .qr-section {
@@ -913,15 +913,10 @@ function showQuestionForm(idx) {
         <label class="form-label">${t('bank.explanation')}</label>
         <textarea class="form-textarea" id="fq-explain" rows="3">${isEdit ? esc(q.explain||'') : ''}</textarea>
       </div>
-      <div class="form-row">
-        <label class="form-label">${t('bank.explainImg')}</label>
-        <input class="form-input" id="fq-explain-img" value="${isEdit ? esc(q.explainImg||'') : ''}">
-      </div>
       <div class="form-actions">
         <button class="btn btn-primary btn-sm" onclick="saveQuestionForm(${idx})">${isEdit ? t('bank.save') : t('bank.add')}</button>
         <button class="btn btn-sm" onclick="cancelForm()">${t('bank.cancel')}</button>
       </div>
-      <p class="text-muted mt-1" style="font-size:0.75rem;">In-app edits save to your browser. For permanent changes, update questions.json directly.</p>
     </div>`;
   formDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
@@ -932,11 +927,11 @@ function saveQuestionForm(idx) {
   const opts    = [0,1,2,3,4].map(i => document.getElementById(`fq-opt-${i}`).value.trim());
   const correct = parseInt(document.querySelector('input[name="fq-correct"]:checked')?.value ?? '0');
   const explain = document.getElementById('fq-explain').value.trim();
-  const explainImg = document.getElementById('fq-explain-img').value.trim();
 
   if (!text || !topic) { alert('Question text and topic are required.'); return; }
   if (opts.some(o => !o)) { alert('All 5 answer options are required.'); return; }
 
+  const explainImg = idx !== null ? (allQuestions[idx].explainImg || '') : '';
   const q = {
     id: idx !== null ? allQuestions[idx].id : 'custom_' + Date.now(),
     topic, text, options: opts, correct, explain, explainImg
@@ -945,7 +940,7 @@ function saveQuestionForm(idx) {
   if (idx !== null) allQuestions[idx] = q;
   else allQuestions.push(q);
 
-  saveQuestionsToStorage();
+  persistQuestions(currentLang);
   cancelForm();
   renderBankChips();
   renderBankList();
@@ -956,7 +951,7 @@ function saveQuestionForm(idx) {
 function deleteQuestion(idx) {
   if (!confirm(t('bank.deleteConfirm'))) return;
   allQuestions.splice(idx, 1);
-  saveQuestionsToStorage();
+  persistQuestions(currentLang);
   renderBankChips();
   renderBankList();
   renderSessionChips();

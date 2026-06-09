@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="215" viewBox="0 0 400 215">
+  <rect width="400" height="215" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Glukoneogenese: Kompartimentierung</text>
+
+  <!-- MITOCHONDRIA box -->
+  <rect x="8" y="24" width="168" height="152" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="92" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#78350f">Mitochondrium</text>
+
+  <!-- Pyruvat -->
+  <rect x="24" y="48" width="90" height="22" rx="4" fill="#fde68a" stroke="#b45309" stroke-width="1.5"/>
+  <text x="69" y="63" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#78350f">Pyruvat</text>
+
+  <!-- Arrow Pyruvat → OAA -->
+  <line x1="69" y1="70" x2="69" y2="82" stroke="#d97706" stroke-width="1.5"/>
+  <polygon points="64,79 69,88 74,79" fill="#d97706"/>
+  <text x="100" y="80" font-family="Arial, sans-serif" font-size="9" fill="#78350f">PC (+CO₂, ATP)</text>
+
+  <!-- OAA mito -->
+  <rect x="24" y="88" width="90" height="22" rx="4" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="69" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7c2d12">OAA</text>
+
+  <!-- Arrow OAA → Malat -->
+  <line x1="69" y1="110" x2="69" y2="122" stroke="#d97706" stroke-width="1.5"/>
+  <polygon points="64,119 69,128 74,119" fill="#d97706"/>
+  <text x="100" y="121" font-family="Arial, sans-serif" font-size="9" fill="#78350f">MDH (NADH)</text>
+
+  <!-- Malat mito -->
+  <rect x="24" y="128" width="90" height="22" rx="4" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="69" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7c2d12">Malat</text>
+
+  <!-- Export arrow right -->
+  <line x1="114" y1="139" x2="144" y2="139" stroke="#d97706" stroke-width="2"/>
+  <polygon points="140,134 150,139 140,144" fill="#d97706"/>
+  <text x="129" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#78350f">Export</text>
+
+  <!-- CYTOSOL box -->
+  <rect x="224" y="24" width="168" height="152" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="308" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#075985">Zytosol</text>
+
+  <!-- Malat cytosol -->
+  <rect x="256" y="48" width="88" height="22" rx="4" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="300" y="63" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#075985">Malat</text>
+
+  <!-- Arrow Malat → OAA cyt -->
+  <line x1="300" y1="70" x2="300" y2="82" stroke="#0284c7" stroke-width="1.5"/>
+  <polygon points="295,79 300,88 305,79" fill="#0284c7"/>
+  <text x="264" y="80" font-family="Arial, sans-serif" font-size="9" fill="#075985">MDH (NAD⁺)</text>
+
+  <!-- OAA cytosol -->
+  <rect x="256" y="88" width="88" height="22" rx="4" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="300" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#075985">OAA</text>
+
+  <!-- Arrow OAA → PEP -->
+  <line x1="300" y1="110" x2="300" y2="122" stroke="#0284c7" stroke-width="1.5"/>
+  <polygon points="295,119 300,128 305,119" fill="#0284c7"/>
+  <text x="252" y="121" font-family="Arial, sans-serif" font-size="9" fill="#075985">PEPCK (GTP, −CO₂)</text>
+
+  <!-- PEP -->
+  <rect x="256" y="128" width="88" height="22" rx="4" fill="#38bdf8" stroke="#0369a1" stroke-width="2"/>
+  <text x="300" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#075985">PEP</text>
+
+  <!-- Arrow PEP → Glucose -->
+  <line x1="300" y1="150" x2="300" y2="162" stroke="#0284c7" stroke-width="1.5"/>
+  <polygon points="295,159 300,168 305,159" fill="#0284c7"/>
+  <text x="252" y="166" font-family="Arial, sans-serif" font-size="9" fill="#075985">GNG-Enzyme →</text>
+
+  <!-- Glucose output -->
+  <rect x="258" y="168" width="84" height="20" rx="4" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="300" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">Glucose</text>
+
+  <!-- Key note -->
+  <rect x="80" y="184" width="240" height="26" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="200" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#14532d">PC (Mitochondrium) → PEPCK (Zytosol):</text>
+  <text x="200" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#14532d">OAA überwindet innere Mitochondrienmembran als Malat</text>
+</svg>
