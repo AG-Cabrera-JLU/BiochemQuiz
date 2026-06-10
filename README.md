@@ -9,13 +9,14 @@ A live instructor-led quiz app for medical biochemistry students at JLU Giessen.
 ## Features
 
 - **Real-time sync** via WebSocket — answers appear instantly on the instructor's bar chart
-- **90 questions** across 9 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation & Biosynthesis, Amino Acid Catabolism, Urea Cycle)
+- **100 questions** across 9 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation & Biosynthesis, Amino Acid Catabolism, Urea Cycle)
 - **3 languages** — EN / DE / ES, switchable in one click; questions, options, and explanations all translate
 - **5 answer options** (A–E) per question
 - **SVG countdown timer** with danger highlight in the last 10 seconds
 - **QR code** auto-generated from the server's public URL — students scan it to join
 - **Student answer changes** — students can revise their answer before the instructor reveals
-- **Instructor-only explanation** — explanation text and images shown only on the instructor screen after reveal
+- **Explanation panel** — explanation text and optional diagrams shown after reveal
+- **Explanation images** — static figures committed to the `images/` folder and linked per question via `explainImg`
 - **Question bank editor** — add, edit, delete questions in-app; auto-saves to disk (persists across restarts)
 - **CSV export** of session results
 - **Dark mode** (follows system preference)
@@ -82,8 +83,9 @@ To deploy your own:
 4. **Start question** → countdown begins, students answer on their phones
 5. Watch live bar chart update as answers come in (correct answer highlighted for you only)
 6. **Reveal** → students see correct/wrong result on their phones
-7. **Next question** → phones reset to waiting
-8. **End session** → Results tab shows full breakdown, exportable as CSV
+7. **Show explanation** → explanation text and optional diagram appear
+8. **Next question** → phones reset to waiting
+9. **End session** → Results tab shows full breakdown, exportable as CSV
 
 ---
 
@@ -115,16 +117,28 @@ Each question follows this structure:
   "text": "Which enzyme catalyzes the first committed step of glycolysis?",
   "options": ["Option A", "Option B", "Option C", "Option D", "Option E"],
   "correct": 1,
-  "explain": "Explanation shown after reveal (instructor screen only).",
-  "explainImg": "images/optional_figure.png"
+  "explain": "Explanation shown after reveal.",
+  "explainImg": "images/optional_figure.svg"
 }
 ```
 
 - `correct` is the **0-based index** of the correct option (0 = A, 1 = B, …, 4 = E)
-- `explainImg` is optional — use `""` if no image
+- `explainImg` is optional — use `""` if no image; supports PNG, JPG, SVG, WebP
 - Questions can also be added/edited live in-app via the Question Bank tab
 
-You can also edit questions directly in the app (Question Bank tab → pencil icon). Changes auto-save to disk on the server.
+---
+
+## Explanation images
+
+Images are static assets committed to the `images/` folder and served directly by the server. To add or replace an image:
+
+1. Place the file in `images/` (e.g. `images/gly_atp_structure.svg`)
+2. Set `"explainImg": "images/gly_atp_structure.svg"` in the relevant question(s) across all three language files
+3. Commit and push — Render redeploys automatically
+
+**To replace with a different format** (e.g. swap an SVG for a PNG): use a new filename and update the `explainImg` path in the JSON files accordingly.
+
+Any browser-supported format works: SVG (recommended for diagrams), PNG, JPG, WebP.
 
 ---
 
@@ -142,8 +156,8 @@ biochemquiz/
 │   ├── en.json          ← UI strings — English
 │   ├── de.json          ← UI strings — German
 │   └── es.json          ← UI strings — Spanish
-├── images/              ← explanation figures (optional)
-├── config.example.js    ← unused placeholder (legacy)
+├── images/              ← explanation figures (committed to git, served as static assets)
+├── config.example.js    ← optional local configuration example
 ├── .gitignore
 └── README.md
 ```
