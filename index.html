@@ -769,11 +769,17 @@ function handleInstructorState(session, responses) {
   if (session.finished) return;
   sessionData = session;
 
-  if (session.started) {
-    const q = session.questions[session.currentIdx];
-    if (q) updateBarChart(q, responses[q.id] || {}, session.revealed, true);
-    updateVotesCount(responses[q.id] || {});
+  if (session.started || session.revealed) {
+    refreshInstructorQuestion(session, responses);
   }
+}
+
+function refreshInstructorQuestion(session, responses) {
+  const q = session?.questions?.[session.currentIdx];
+  if (!q) return;
+  const responsesForQ = (responses || {})[q.id] || {};
+  updateBarChart(q, responsesForQ, session.revealed, true);
+  updateVotesCount(responsesForQ);
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1141,9 +1147,7 @@ function revealQuestion() {
   sessionData.revealed = true;
   broadcastSession(sessionData, false);
   renderActionRow(sessionData);
-  // Re-render bar with correct shown
-  const q = sessionData.questions[sessionData.currentIdx];
-  // bar will update via handleInstructorState on next server echo
+  refreshInstructorQuestion(sessionData, lastResponses);
 }
 
 function nextQuestion() {
@@ -1203,6 +1207,7 @@ function startTimer(timerSecs, startedAt) {
         sessionData.revealed = true;
         broadcastSession(sessionData, false);
         renderActionRow(sessionData);
+        refreshInstructorQuestion(sessionData, lastResponses);
       }
     }
   }, 500);
