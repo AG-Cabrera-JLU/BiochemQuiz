@@ -1,4 +1,4 @@
-# BiochemQuiz · v0.5
+# BiochemQuiz · v0.6
 
 A live instructor-led quiz app for medical biochemistry students at JLU Giessen. The instructor projects the app on screen, students join via QR code on their phones, answer in real time, and results appear as a live bar chart — no installation required for anyone.
 
