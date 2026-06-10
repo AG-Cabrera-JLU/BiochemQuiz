@@ -4,6 +4,7 @@ const WebSocket = require('ws');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const pkg = require('./package.json');
 
 const PORT = process.env.PORT || 3000;
 
@@ -31,7 +32,7 @@ app.use(express.static(path.join(__dirname)));
 app.get('/api/info', (req, res) => {
   const externalUrl = process.env.RENDER_EXTERNAL_URL
     || `http://${getLocalIP()}:${PORT}`;
-  res.json({ url: externalUrl });
+  res.json({ url: externalUrl, version: pkg.version });
 });
 
 app.post('/api/questions/:lang', (req, res) => {
