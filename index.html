@@ -1071,6 +1071,8 @@ function renderActiveQuestion(session) {
   // Explanation
   explainVisible = false;
   document.getElementById('explain-panel').classList.add('hidden');
+  const btnSpan = document.querySelector('#btn-explain-toggle span');
+  if (btnSpan) btnSpan.textContent = t('session.showExplain');
   const hasExplain = lq.explain || q.explainImg;
   document.getElementById('explain-toggle-row').classList.toggle('hidden', !hasExplain);
   document.getElementById('explain-text').textContent = lq.explain || '';
@@ -1290,7 +1292,7 @@ function renderResults() {
   let totalCorrect = 0, totalAnswered = 0;
   session.questions.forEach(q => {
     const r = responses[q.id] || {};
-    const counts = [0,1,2,3].map(i => r[i] || r[String(i)] || 0);
+    const counts = [0,1,2,3,4].map(i => r[i] || r[String(i)] || 0);
     const total = counts.reduce((a,b) => a+b, 0);
     totalAnswered += total;
     totalCorrect  += counts[q.correct];
