@@ -197,9 +197,6 @@ img { max-width: 100%; }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
 .votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
-/* ── Import modal ── */
-#import-modal.open { display:flex !important; }
-
 /* ── Presets ── */
 .preset-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid var(--border); }
 .preset-row:last-child { border-bottom: none; }
@@ -360,7 +357,6 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <span style="font-weight:600;font-size:0.9rem;" data-i18n="session.presetsTitle">Saved presets</span>
           <div style="display:flex;gap:6px;">
             <button class="btn btn-sm" onclick="downloadPresets()" data-i18n="session.exportPresets">Export</button>
-            <button class="btn btn-sm" onclick="showImportModal()" data-i18n="session.importPresets">Import</button>
           </div>
         </div>
         <div id="presets-list"></div>
@@ -1064,21 +1060,49 @@ function updateLaunchBtn() {
 // ══════════════════════════════════════════════════════════
 // PRESETS
 // ══════════════════════════════════════════════════════════
+// localStorage is the primary store (survives server restarts).
+// Server memory is a live cache populated from localStorage on connect.
+const LS_PRESETS_KEY = 'biochemquiz_presets';
 let presetCache = [];
 
+function lsLoadPresets() {
+  try { return JSON.parse(localStorage.getItem(LS_PRESETS_KEY) || '[]'); } catch { return []; }
+}
+
+function lsSavePresets(list) {
+  localStorage.setItem(LS_PRESETS_KEY, JSON.stringify(list));
+}
+
 async function loadPresets() {
+  // 1. Read localStorage immediately so UI appears without waiting for network
+  presetCache = lsLoadPresets();
+  renderPresets();
+
+  // 2. Check server; if empty, push localStorage presets to repopulate after restart
   try {
     const r = await fetch('/api/presets');
-    presetCache = await r.json();
-    renderPresets();
+    const serverList = await r.json();
+    if (serverList.length > 0) {
+      // Server has presets (from presets.json seed or another device) — use them
+      presetCache = serverList;
+      lsSavePresets(presetCache);
+    } else if (presetCache.length > 0) {
+      // Server is empty (restarted) — push our localStorage copy back up
+      await fetch('/api/presets', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(presetCache)
+      });
+    }
   } catch {}
+  renderPresets();
 }
 
 function renderPresets() {
   const list = document.getElementById('presets-list');
   if (!list) return;
   if (!presetCache.length) {
-    list.innerHTML = `<p style="font-size:0.82rem;color:var(--text-muted);margin:0;" data-i18n="session.noPresets">${t('session.noPresets')}</p>`;
+    list.innerHTML = `<p style="font-size:0.82rem;color:var(--text-muted);margin:0;">${t('session.noPresets')}</p>`;
     return;
   }
   list.innerHTML = presetCache.map((p, i) => `
@@ -1107,56 +1131,37 @@ async function savePreset() {
   const name = prompt(t('session.presetNamePrompt'), document.getElementById('session-name-input').value || '');
   if (!name || !name.trim()) return;
   const timerSecs = Math.min(300, Math.max(15, parseInt(document.getElementById('timer-input').value) || 90));
-  await fetch('/api/presets', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: name.trim(), timerSecs, questionIds: [...sessionPool] })
-  });
-  await loadPresets();
+  const preset = { name: name.trim(), timerSecs, questionIds: [...sessionPool] };
+  presetCache = presetCache.filter(p => p.name !== preset.name);
+  presetCache.push(preset);
+  lsSavePresets(presetCache);
+  renderPresets();
+  try {
+    await fetch('/api/presets', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(preset)
+    });
+  } catch {}
 }
 
 async function deletePreset(idx) {
   const p = presetCache[idx];
   if (!p || !confirm(`Delete preset "${p.name}"?`)) return;
-  await fetch(`/api/presets/${encodeURIComponent(p.name)}`, { method: 'DELETE' });
-  await loadPresets();
+  presetCache.splice(idx, 1);
+  lsSavePresets(presetCache);
+  renderPresets();
+  try {
+    await fetch(`/api/presets/${encodeURIComponent(p.name)}`, { method: 'DELETE' });
+  } catch {}
 }
 
-async function downloadPresets() {
-  const r = await fetch('/api/presets');
-  const data = await r.json();
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+function downloadPresets() {
+  const blob = new Blob([JSON.stringify(presetCache, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'biochemquiz-presets.json';
   a.click();
-}
-
-function showImportModal() {
-  document.getElementById('import-modal-text').value = '';
-  document.getElementById('import-modal').classList.add('open');
-  setTimeout(() => document.getElementById('import-modal-text').focus(), 50);
-}
-
-function hideImportModal() {
-  document.getElementById('import-modal').classList.remove('open');
-}
-
-async function applyImportModal() {
-  const text = document.getElementById('import-modal-text').value.trim();
-  if (!text) return;
-  let data;
-  try { data = JSON.parse(text); } catch { alert('Invalid JSON — check the pasted text.'); return; }
-  if (!Array.isArray(data)) { alert('Expected a JSON array.'); return; }
-  try {
-    await fetch('/api/presets', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    await loadPresets();
-    hideImportModal();
-  } catch { alert('Failed to save presets. Check the server is running.'); }
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1673,17 +1678,5 @@ function esc(s) {
 function setEl(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
 </script>
 
-<!-- Import presets modal -->
-<div id="import-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;">
-  <div style="background:var(--bg);border-radius:var(--radius-lg);padding:1.25rem;width:min(420px,92vw);box-shadow:0 4px 24px rgba(0,0,0,0.18);">
-    <p style="font-weight:600;margin-bottom:0.5rem;">Import presets</p>
-    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Open your exported <code>biochemquiz-presets.json</code> file in any text editor, select all, copy, and paste below.</p>
-    <textarea id="import-modal-text" rows="7" style="width:100%;box-sizing:border-box;font-size:0.8rem;font-family:monospace;border:1px solid var(--border);border-radius:6px;padding:0.5rem;background:var(--bg-secondary);color:var(--text);resize:vertical;" placeholder='[{"name":"Week 4","timerSecs":30,"questionIds":["gly001"]}]'></textarea>
-    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:0.75rem;">
-      <button class="btn" onclick="hideImportModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="applyImportModal()">Import</button>
-    </div>
-  </div>
-</div>
 </body>
 </html>
