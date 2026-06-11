@@ -186,10 +186,12 @@ img { max-width: 100%; }
 
 /* ── Bar chart ── */
 .bar-list { list-style: none; margin-bottom: 0.5rem; }
-.bar-item { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.bar-label { font-size: 0.85rem; width: 200px; flex-shrink: 0; display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.bar-label { font-size: 0.85rem; width: 200px; flex-shrink: 0; display: flex; align-items: flex-start; gap: 5px; }
 .bar-letter { font-weight: 700; font-size: 0.88rem; color: var(--text-muted); flex-shrink: 0; }
-.bar-track  { flex: 1; height: 28px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; }
+.bar-track  { flex: 1; height: 18px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; margin-top: 3px; }
+.bars-hidden .bar-track, .bars-hidden .bar-stat { display: none; }
+.bars-hidden .bar-label { width: auto; }
 .bar-fill   { height: 100%; background: var(--primary-light); border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
 .bar-fill.correct { background: var(--success-light); border: 1.5px solid var(--success); }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
@@ -780,6 +782,10 @@ function refreshInstructorQuestion(session, responses) {
   const responsesForQ = (responses || {})[q.id] || {};
   updateBarChart(q, responsesForQ, session.revealed, true);
   updateVotesCount(responsesForQ);
+  const barList = document.getElementById('active-bar-list');
+  if (barList) {
+    barList.classList.toggle('bars-hidden', !!(session.started && !session.revealed));
+  }
 }
 
 // ══════════════════════════════════════════════════════════
