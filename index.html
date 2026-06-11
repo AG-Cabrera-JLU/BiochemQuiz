@@ -357,8 +357,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <span style="font-weight:600;font-size:0.9rem;" data-i18n="session.presetsTitle">Saved presets</span>
           <div style="display:flex;gap:6px;">
             <button class="btn btn-sm" onclick="downloadPresets()" data-i18n="session.exportPresets">Export</button>
-            <button class="btn btn-sm" onclick="document.getElementById('preset-file-input').click()" data-i18n="session.importPresets">Import</button>
-            <input type="file" id="preset-file-input" accept=".json" style="display:none" onchange="importPresets(this)">
+            <button class="btn btn-sm" onclick="const el=document.getElementById('preset-file-input');el.value='';el.click();" data-i18n="session.importPresets">Import</button>
+            <input type="file" id="preset-file-input" accept=".json" style="position:absolute;opacity:0;width:0;height:0;overflow:hidden;" onchange="importPresets(this)">
           </div>
         </div>
         <div id="presets-list"></div>
