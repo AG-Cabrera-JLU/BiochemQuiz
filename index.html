@@ -364,7 +364,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       </div>
 
       <div class="card" style="padding:0.5rem 0.75rem;">
-        <div id="session-pool-list" style="max-height:320px;overflow-y:auto;"></div>
+        <div style="display:flex;gap:6px;margin-bottom:0.4rem;">
+          <button class="btn btn-sm" onclick="selectAllPool()" data-i18n="session.selectAll">Select all</button>
+          <button class="btn btn-sm" onclick="deselectAllPool()" data-i18n="session.deselectAll">Deselect all</button>
+        </div>
+        <div id="session-pool-list" style="max-height:300px;overflow-y:auto;"></div>
       </div>
       <div class="card">
         <div class="form-row">
@@ -1044,6 +1048,21 @@ function renderSessionPool() {
 function togglePoolQ(id, checked) {
   if (checked) { if (!sessionPool.includes(id)) sessionPool.push(id); }
   else sessionPool = sessionPool.filter(i => i !== id);
+  updateLaunchBtn();
+}
+
+function selectAllPool() {
+  const visible = sessionFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === sessionFilter);
+  visible.forEach(q => { if (!sessionPool.includes(q.id)) sessionPool.push(q.id); });
+  renderSessionPool();
+  updateLaunchBtn();
+}
+
+function deselectAllPool() {
+  const visible = sessionFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === sessionFilter);
+  const ids = new Set(visible.map(q => q.id));
+  sessionPool = sessionPool.filter(id => !ids.has(id));
+  renderSessionPool();
   updateLaunchBtn();
 }
 

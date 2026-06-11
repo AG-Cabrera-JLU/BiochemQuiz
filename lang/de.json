@@ -47,6 +47,8 @@
     "studentAccess": "Studentenzugang — QR-Code oder Link teilen",
     "qCounter": "Frage",
     "of": "von",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Alle abwählen",
     "presetsTitle": "Gespeicherte Voreinstellungen",
     "savePreset": "Aktuelle Auswahl als Voreinstellung speichern",
     "exportPresets": "Exportieren",

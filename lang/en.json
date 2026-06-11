@@ -47,6 +47,8 @@
     "studentAccess": "Student access — share this QR or link",
     "qCounter": "Question",
     "of": "of",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
     "presetsTitle": "Saved presets",
     "savePreset": "Save current selection as preset",
     "exportPresets": "Export",

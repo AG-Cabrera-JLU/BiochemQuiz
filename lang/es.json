@@ -47,6 +47,8 @@
     "studentAccess": "Acceso para estudiantes — compartir QR o enlace",
     "qCounter": "Pregunta",
     "of": "de",
+    "selectAll": "Seleccionar todo",
+    "deselectAll": "Deseleccionar todo",
     "presetsTitle": "Preajustes guardados",
     "savePreset": "Guardar selección actual como preajuste",
     "exportPresets": "Exportar",
