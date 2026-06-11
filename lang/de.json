@@ -46,7 +46,15 @@
     "linkCopied": "Link kopiert!",
     "studentAccess": "Studentenzugang — QR-Code oder Link teilen",
     "qCounter": "Frage",
-    "of": "von"
+    "of": "von",
+    "presetsTitle": "Gespeicherte Voreinstellungen",
+    "savePreset": "Aktuelle Auswahl als Voreinstellung speichern",
+    "exportPresets": "Exportieren",
+    "importPresets": "Importieren",
+    "noPresets": "Noch keine Voreinstellungen gespeichert.",
+    "presetQuestions": "Fragen",
+    "loadPreset": "Laden",
+    "presetNamePrompt": "Name der Voreinstellung:"
   },
   "results": {
     "title": "Ergebnisse",

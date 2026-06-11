@@ -46,7 +46,15 @@
     "linkCopied": "Link copied!",
     "studentAccess": "Student access — share this QR or link",
     "qCounter": "Question",
-    "of": "of"
+    "of": "of",
+    "presetsTitle": "Saved presets",
+    "savePreset": "Save current selection as preset",
+    "exportPresets": "Export",
+    "importPresets": "Import",
+    "noPresets": "No presets saved yet.",
+    "presetQuestions": "questions",
+    "loadPreset": "Load",
+    "presetNamePrompt": "Preset name:"
   },
   "results": {
     "title": "Results",

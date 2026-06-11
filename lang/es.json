@@ -46,7 +46,15 @@
     "linkCopied": "¡Enlace copiado!",
     "studentAccess": "Acceso para estudiantes — compartir QR o enlace",
     "qCounter": "Pregunta",
-    "of": "de"
+    "of": "de",
+    "presetsTitle": "Preajustes guardados",
+    "savePreset": "Guardar selección actual como preajuste",
+    "exportPresets": "Exportar",
+    "importPresets": "Importar",
+    "noPresets": "Aún no hay preajustes guardados.",
+    "presetQuestions": "preguntas",
+    "loadPreset": "Cargar",
+    "presetNamePrompt": "Nombre del preajuste:"
   },
   "results": {
     "title": "Resultados",

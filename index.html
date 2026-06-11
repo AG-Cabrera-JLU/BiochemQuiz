@@ -197,6 +197,12 @@ img { max-width: 100%; }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
 .votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
+/* ── Presets ── */
+.preset-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid var(--border); }
+.preset-row:last-child { border-bottom: none; }
+.preset-name { flex: 1; min-width: 0; font-size: 0.88rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.preset-meta { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
+
 /* ── Action buttons row ── */
 .action-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.75rem; }
 
@@ -345,6 +351,19 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
     <div id="session-prelaunched">
       <p class="section-title" data-i18n="session.launchTitle">Launch a session</p>
       <div class="chips" id="session-chips"></div>
+      <!-- Presets card -->
+      <div class="card" style="padding:0.75rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+          <span style="font-weight:600;font-size:0.9rem;" data-i18n="session.presetsTitle">Saved presets</span>
+          <div style="display:flex;gap:6px;">
+            <button class="btn btn-sm" onclick="downloadPresets()" data-i18n="session.exportPresets">Export</button>
+            <label class="btn btn-sm" style="cursor:pointer;margin:0;"><span data-i18n="session.importPresets">Import</span><input type="file" accept=".json" style="display:none" onchange="importPresets(this)"></label>
+          </div>
+        </div>
+        <div id="presets-list"></div>
+        <button class="btn btn-sm" id="btn-save-preset" onclick="savePreset()" style="margin-top:0.5rem;width:100%;" disabled data-i18n="session.savePreset">Save current selection as preset</button>
+      </div>
+
       <div class="card" style="padding:0.5rem 0.75rem;">
         <div id="session-pool-list" style="max-height:320px;overflow-y:auto;"></div>
       </div>
@@ -580,6 +599,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     renderSessionChips();
     renderSessionPool();
     fetchServerUrl();
+    loadPresets();
   }
 
   connectWebSocket();
@@ -1034,6 +1054,96 @@ function updateLaunchBtn() {
   btn.disabled = n === 0;
   const span = btn.querySelector('[data-i18n="session.launchBtn"]');
   if (span) span.textContent = n > 0 ? `${t('session.launchBtn')} (${n})` : t('session.launchBtn');
+  const saveBtn = document.getElementById('btn-save-preset');
+  if (saveBtn) saveBtn.disabled = n === 0;
+}
+
+// ══════════════════════════════════════════════════════════
+// PRESETS
+// ══════════════════════════════════════════════════════════
+let presetCache = [];
+
+async function loadPresets() {
+  try {
+    const r = await fetch('/api/presets');
+    presetCache = await r.json();
+    renderPresets();
+  } catch {}
+}
+
+function renderPresets() {
+  const list = document.getElementById('presets-list');
+  if (!list) return;
+  if (!presetCache.length) {
+    list.innerHTML = `<p style="font-size:0.82rem;color:var(--text-muted);margin:0;" data-i18n="session.noPresets">${t('session.noPresets')}</p>`;
+    return;
+  }
+  list.innerHTML = presetCache.map((p, i) => `
+    <div class="preset-row">
+      <div style="flex:1;min-width:0;">
+        <div class="preset-name">${esc(p.name)}</div>
+        <div class="preset-meta">${p.questionIds.length} ${t('session.presetQuestions')} · ${p.timerSecs}s</div>
+      </div>
+      <button class="btn btn-sm btn-primary" onclick="applyPreset(${i})">${t('session.loadPreset')}</button>
+      <button class="btn btn-sm" onclick="deletePreset(${i})" style="color:var(--danger,#c00);">✕</button>
+    </div>`).join('');
+}
+
+function applyPreset(idx) {
+  const p = presetCache[idx];
+  if (!p) return;
+  sessionPool = p.questionIds.filter(id => allQuestions.some(q => q.id === id));
+  document.getElementById('timer-input').value = p.timerSecs;
+  document.getElementById('session-name-input').value = p.name;
+  renderSessionPool();
+  updateLaunchBtn();
+}
+
+async function savePreset() {
+  if (!sessionPool.length) return;
+  const name = prompt(t('session.presetNamePrompt'), document.getElementById('session-name-input').value || '');
+  if (!name || !name.trim()) return;
+  const timerSecs = Math.min(300, Math.max(15, parseInt(document.getElementById('timer-input').value) || 90));
+  await fetch('/api/presets', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: name.trim(), timerSecs, questionIds: [...sessionPool] })
+  });
+  await loadPresets();
+}
+
+async function deletePreset(idx) {
+  const p = presetCache[idx];
+  if (!p || !confirm(`Delete preset "${p.name}"?`)) return;
+  await fetch(`/api/presets/${encodeURIComponent(p.name)}`, { method: 'DELETE' });
+  await loadPresets();
+}
+
+async function downloadPresets() {
+  const r = await fetch('/api/presets');
+  const data = await r.json();
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'biochemquiz-presets.json';
+  a.click();
+}
+
+async function importPresets(input) {
+  const file = input.files[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    const data = JSON.parse(text);
+    if (!Array.isArray(data)) throw new Error('Not an array');
+    await fetch('/api/presets', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    await loadPresets();
+    input.value = '';
+  } catch { alert('Invalid presets file.'); }
 }
 
 // ══════════════════════════════════════════════════════════

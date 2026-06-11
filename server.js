@@ -64,6 +64,32 @@ let state = {
   studentAnswers: {}  // { questionId: { clientId: optionIndex } }
 };
 
+// Presets — loaded from presets.json at startup; changes are in-memory only
+const PRESETS_FILE = path.join(__dirname, 'presets.json');
+let presets = [];
+try { presets = JSON.parse(fs.readFileSync(PRESETS_FILE, 'utf8')); } catch {}
+
+app.get('/api/presets', (_req, res) => res.json(presets));
+
+app.post('/api/presets', (req, res) => {
+  const { name, timerSecs, questionIds } = req.body;
+  if (!name || !Array.isArray(questionIds)) return res.status(400).json({ error: 'Invalid payload' });
+  presets = presets.filter(p => p.name !== name); // replace if same name
+  presets.push({ name, timerSecs: timerSecs || 90, questionIds });
+  res.json({ ok: true });
+});
+
+app.delete('/api/presets/:name', (req, res) => {
+  presets = presets.filter(p => p.name !== decodeURIComponent(req.params.name));
+  res.json({ ok: true });
+});
+
+app.put('/api/presets', (req, res) => {
+  if (!Array.isArray(req.body)) return res.status(400).json({ error: 'Expected array' });
+  presets = req.body;
+  res.json({ ok: true });
+});
+
 function broadcast(data) {
   const msg = JSON.stringify(data);
   wss.clients.forEach(client => {
