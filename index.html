@@ -197,6 +197,9 @@ img { max-width: 100%; }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
 .votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
+/* ── Import modal ── */
+#import-modal.open { display:flex !important; }
+
 /* ── Presets ── */
 .preset-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid var(--border); }
 .preset-row:last-child { border-bottom: none; }
@@ -357,8 +360,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <span style="font-weight:600;font-size:0.9rem;" data-i18n="session.presetsTitle">Saved presets</span>
           <div style="display:flex;gap:6px;">
             <button class="btn btn-sm" onclick="downloadPresets()" data-i18n="session.exportPresets">Export</button>
-            <button class="btn btn-sm" onclick="const el=document.getElementById('preset-file-input');el.value='';el.click();" data-i18n="session.importPresets">Import</button>
-            <input type="file" id="preset-file-input" accept=".json" style="position:absolute;opacity:0;width:0;height:0;overflow:hidden;" onchange="importPresets(this)">
+            <button class="btn btn-sm" onclick="showImportModal()" data-i18n="session.importPresets">Import</button>
           </div>
         </div>
         <div id="presets-list"></div>
@@ -1130,21 +1132,31 @@ async function downloadPresets() {
   a.click();
 }
 
-async function importPresets(input) {
-  const file = input.files[0];
-  if (!file) return;
+function showImportModal() {
+  document.getElementById('import-modal-text').value = '';
+  document.getElementById('import-modal').classList.add('open');
+  setTimeout(() => document.getElementById('import-modal-text').focus(), 50);
+}
+
+function hideImportModal() {
+  document.getElementById('import-modal').classList.remove('open');
+}
+
+async function applyImportModal() {
+  const text = document.getElementById('import-modal-text').value.trim();
+  if (!text) return;
+  let data;
+  try { data = JSON.parse(text); } catch { alert('Invalid JSON — check the pasted text.'); return; }
+  if (!Array.isArray(data)) { alert('Expected a JSON array.'); return; }
   try {
-    const text = await file.text();
-    const data = JSON.parse(text);
-    if (!Array.isArray(data)) throw new Error('Not an array');
     await fetch('/api/presets', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
     await loadPresets();
-    input.value = '';
-  } catch { alert('Invalid presets file.'); }
+    hideImportModal();
+  } catch { alert('Failed to save presets. Check the server is running.'); }
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1660,5 +1672,18 @@ function esc(s) {
 }
 function setEl(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
 </script>
+
+<!-- Import presets modal -->
+<div id="import-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;">
+  <div style="background:var(--bg);border-radius:var(--radius-lg);padding:1.25rem;width:min(420px,92vw);box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+    <p style="font-weight:600;margin-bottom:0.5rem;">Import presets</p>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Open your exported <code>biochemquiz-presets.json</code> file in any text editor, select all, copy, and paste below.</p>
+    <textarea id="import-modal-text" rows="7" style="width:100%;box-sizing:border-box;font-size:0.8rem;font-family:monospace;border:1px solid var(--border);border-radius:6px;padding:0.5rem;background:var(--bg-secondary);color:var(--text);resize:vertical;" placeholder='[{"name":"Week 4","timerSecs":30,"questionIds":["gly001"]}]'></textarea>
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:0.75rem;">
+      <button class="btn" onclick="hideImportModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="applyImportModal()">Import</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
