@@ -1,9 +1,11 @@
 {
   "name": "biochemquiz",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "Live instructor-led biochemistry quiz app for JLU Giessen — WebSocket-based, EN/DE/ES, deployed on Render",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "setup-hooks": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit && echo 'Git hooks installed.'",
+    "check": "node scripts/check-questions.js"
   },
   "dependencies": {
     "express": "^4.18.0",
