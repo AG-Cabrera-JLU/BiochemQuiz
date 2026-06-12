@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 <title>BiochemQuiz</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
@@ -298,6 +298,12 @@ img { max-width: 100%; }
   border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin: 1rem 0;
   font-size: 0.88rem; line-height: 1.6;
 }
+
+/* ── Save status ── */
+.save-status { font-size: 0.8rem; margin-top: 0.4rem; min-height: 1.2em; transition: color 0.2s; }
+.save-status.saving { color: var(--text-muted); }
+.save-status.saved  { color: var(--success); }
+.save-status.error  { color: var(--danger); }
 
 /* ── Utility ── */
 .hidden { display: none !important; }
@@ -929,7 +935,7 @@ function showQuestionForm(idx) {
   const formDiv = document.getElementById('bank-form');
   formDiv.classList.remove('hidden');
 
-  const opts = isEdit ? q.options : ['','','',''];
+  const opts = isEdit ? q.options : ['','','','',''];
   const correct = isEdit ? q.correct : 0;
 
   formDiv.innerHTML = `
@@ -961,6 +967,7 @@ function showQuestionForm(idx) {
         <button class="btn btn-primary btn-sm" onclick="saveQuestionForm(${idx})">${isEdit ? t('bank.save') : t('bank.add')}</button>
         <button class="btn btn-sm" onclick="cancelForm()">${t('bank.cancel')}</button>
       </div>
+      <div id="save-status" class="save-status"></div>
     </div>`;
   formDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
@@ -1223,7 +1230,7 @@ function renderActiveQuestion(session) {
 
   document.getElementById('active-session-name').textContent = session.name;
   document.getElementById('active-q-counter').textContent = `${t('session.qCounter')} ${session.currentIdx+1} ${t('session.of')} ${total}`;
-  document.getElementById('active-progress-bar').style.width = `${(session.currentIdx / total) * 100}%`;
+  document.getElementById('active-progress-bar').style.width = `${((session.currentIdx + 1) / total) * 100}%`;
 
   const lq = localizeQ(q);
   document.getElementById('active-q-topic').textContent = q.topic;
@@ -1488,7 +1495,7 @@ function renderResults() {
       return `<li class="bar-item">
         <div class="bar-label">
           <span class="bar-letter">${'ABCDE'[i]}</span>
-          <span style="overflow:hidden;text-overflow:ellipsis;">${esc(lq.options[i]||'')}</span>
+          <span style="min-width:0;flex:1;word-break:break-word;">${esc(lq.options[i]||'')}</span>
         </div>
         <div class="bar-track">
           <div class="bar-fill ${isCorrect ? 'correct' : ''}" style="width:${pct}%"></div>
