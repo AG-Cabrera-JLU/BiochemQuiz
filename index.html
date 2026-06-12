@@ -192,7 +192,7 @@ img { max-width: 100%; }
 .bar-letter { font-weight: 700; font-size: 0.88rem; color: var(--text-muted); flex-shrink: 0; }
 .bar-track  { flex: 1; height: 18px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; margin-top: 3px; }
 .bars-hidden .bar-track, .bars-hidden .bar-stat { display: none; }
-.bars-hidden .bar-label { flex: 0 0 auto; }
+.bars-hidden .bar-label { flex: 1; min-width: 0; }
 .bar-fill   { height: 100%; background: var(--primary-light); border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
 .bar-fill.correct { background: var(--success-light); border: 1.5px solid var(--success); }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
@@ -1415,7 +1415,7 @@ function buildBarItems(q, responsesForQ, revealed, instructorMode) {
     return `<li class="bar-item">
       <div class="bar-label">
         <span class="bar-letter">${'ABCDE'[i]}</span>
-        <span style="overflow:hidden;text-overflow:ellipsis;">${esc(lq.options[i] || '')}</span>
+        <span style="min-width:0;flex:1;word-break:break-word;">${esc(lq.options[i] || '')}</span>
       </div>
       <div class="bar-track">
         <div class="bar-fill ${showGreen ? 'correct' : ''}" style="width:${pct}%"></div>
