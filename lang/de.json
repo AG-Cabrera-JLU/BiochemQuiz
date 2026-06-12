@@ -55,7 +55,9 @@
     "noPresets": "Noch keine Voreinstellungen gespeichert.",
     "presetQuestions": "Fragen",
     "loadPreset": "Laden",
-    "presetNamePrompt": "Name der Voreinstellung:"
+    "presetNamePrompt": "Name der Voreinstellung:",
+    "shuffleLabel": "Fragen mischen",
+    "students": "Studierende verbunden"
   },
   "results": {
     "title": "Ergebnisse",

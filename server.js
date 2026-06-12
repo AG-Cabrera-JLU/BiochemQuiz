@@ -22,7 +22,6 @@ function getLocalIP() {
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
-// Prevent browsers from caching index.html so phones always get the latest JS
 app.get('/', (req, res) => {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -61,7 +60,8 @@ const wss = new WebSocket.Server({ server });
 let state = {
   session: null,
   responses: {},
-  studentAnswers: {}  // { questionId: { clientId: optionIndex } }
+  studentAnswers: {},  // { questionId: { clientId: optionIndex } }
+  timerTimeout: null,  // server-side auto-reveal timer
 };
 
 // Presets — loaded from presets.json at startup; changes are in-memory only
@@ -74,7 +74,7 @@ app.get('/api/presets', (_req, res) => res.json(presets));
 app.post('/api/presets', (req, res) => {
   const { name, timerSecs, questionIds } = req.body;
   if (!name || !Array.isArray(questionIds)) return res.status(400).json({ error: 'Invalid payload' });
-  presets = presets.filter(p => p.name !== name); // replace if same name
+  presets = presets.filter(p => p.name !== name);
   presets.push({ name, timerSecs: timerSecs || 90, questionIds });
   res.json({ ok: true });
 });
@@ -90,13 +90,36 @@ app.put('/api/presets', (req, res) => {
   res.json({ ok: true });
 });
 
-function broadcast(data) {
-  const msg = JSON.stringify(data);
+// Strip the `correct` field from question objects before sending to students.
+// Students can still answer correctly because the server validates nothing server-side —
+// the correct index is revealed only when the instructor triggers reveal.
+function stripCorrect(session) {
+  if (!session) return null;
+  return {
+    ...session,
+    questions: (session.questions || []).map(({ correct, ...rest }) => rest)
+  };
+}
+
+function studentCount() {
+  return [...wss.clients].filter(c => c.readyState === WebSocket.OPEN && c.role === 'student').length;
+}
+
+// Send role-appropriate state to every connected client.
+function broadcastState() {
+  const count = studentCount();
   wss.clients.forEach(client => {
-    if (client.readyState === WebSocket.OPEN) {
-      client.send(msg);
-    }
+    if (client.readyState !== WebSocket.OPEN) return;
+    const session = client.role === 'student' ? stripCorrect(state.session) : state.session;
+    client.send(JSON.stringify({ type: 'state', session, responses: state.responses, studentCount: count }));
   });
+}
+
+function cancelTimer() {
+  if (state.timerTimeout) {
+    clearTimeout(state.timerTimeout);
+    state.timerTimeout = null;
+  }
 }
 
 wss.on('connection', (ws, req) => {
@@ -105,24 +128,47 @@ wss.on('connection', (ws, req) => {
   ws.role = role;
 
   // Send current state immediately on connect
-  ws.send(JSON.stringify({ type: 'state', session: state.session, responses: state.responses }));
+  const count = studentCount();
+  const session = role === 'student' ? stripCorrect(state.session) : state.session;
+  ws.send(JSON.stringify({ type: 'state', session, responses: state.responses, studentCount: count }));
+
+  // Notify all clients when a student connects (updates student count)
+  if (role === 'student') broadcastState();
 
   ws.on('message', (raw) => {
     let msg;
     try { msg = JSON.parse(raw); } catch { return; }
 
     if (msg.type === 'set_session' && ws.role === 'instructor') {
+      // Cancel any running server-side timer before applying new state
+      cancelTimer();
+
       state.session = msg.session;
       if (msg.resetAll) {
-        // Full reset on session launch
         state.responses = {};
         state.studentAnswers = {};
       } else if (msg.resetQuestion) {
-        // Reset only the current question (restart same question)
         delete state.responses[msg.resetQuestion];
         delete state.studentAnswers[msg.resetQuestion];
       }
-      broadcast({ type: 'state', session: state.session, responses: state.responses });
+
+      // Start server-side auto-reveal timer when a question is started
+      if (state.session && state.session.started && state.session.startedAt && state.session.timerSecs) {
+        const elapsed = Date.now() - state.session.startedAt;
+        const remaining = Math.max(0, state.session.timerSecs * 1000 - elapsed);
+        if (remaining > 0) {
+          state.timerTimeout = setTimeout(() => {
+            state.timerTimeout = null;
+            if (state.session && state.session.started && !state.session.revealed) {
+              state.session.started = false;
+              state.session.revealed = true;
+              broadcastState();
+            }
+          }, remaining);
+        }
+      }
+
+      broadcastState();
     }
 
     if (msg.type === 'answer' && ws.role === 'student') {
@@ -134,7 +180,6 @@ wss.on('connection', (ws, req) => {
       if (!state.studentAnswers[questionId]) {
         state.studentAnswers[questionId] = {};
       }
-      // If this client already answered, undo their previous vote
       const prev = state.studentAnswers[questionId][clientId];
       if (prev !== undefined) {
         const prevKey = String(prev);
@@ -142,12 +187,16 @@ wss.on('connection', (ws, req) => {
           state.responses[questionId][prevKey]--;
         }
       }
-      // Record new vote
       state.studentAnswers[questionId][clientId] = optionIndex;
       const key = String(optionIndex);
       state.responses[questionId][key] = (state.responses[questionId][key] || 0) + 1;
-      broadcast({ type: 'state', session: state.session, responses: state.responses });
+      broadcastState();
     }
+  });
+
+  ws.on('close', () => {
+    // Update student count when a student disconnects
+    if (ws.role === 'student') broadcastState();
   });
 
   ws.on('error', () => {});

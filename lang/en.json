@@ -55,7 +55,9 @@
     "noPresets": "No presets saved yet.",
     "presetQuestions": "questions",
     "loadPreset": "Load",
-    "presetNamePrompt": "Preset name:"
+    "presetNamePrompt": "Preset name:",
+    "shuffleLabel": "Shuffle questions",
+    "students": "students connected"
   },
   "results": {
     "title": "Results",

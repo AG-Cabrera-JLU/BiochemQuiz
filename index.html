@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 <title>BiochemQuiz</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="vendor/qrcode.min.js"></script>
 <style>
 /* ── CSS custom properties ── */
 :root {
@@ -292,6 +292,13 @@ img { max-width: 100%; }
   border-radius: 99px; padding: 5px 14px; margin-bottom: 0.75rem;
 }
 
+/* ── Language-switch fade ── */
+#instructor-view, #student-view { transition: opacity 0.15s ease; }
+.lang-switching { opacity: 0 !important; }
+
+/* ── Student topbar ── */
+.sv-topbar { display: flex; justify-content: flex-end; padding: 0.4rem 0 0.6rem; }
+
 /* ── Error / setup message ── */
 .error-card {
   background: var(--danger-light); border: 1px solid var(--danger);
@@ -386,6 +393,10 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <label class="form-label" data-i18n="session.timerLabel">Time per question (seconds)</label>
           <input class="form-input" id="timer-input" type="number" value="90" min="15" max="300">
         </div>
+        <div class="form-row" style="display:flex;align-items:center;gap:8px;">
+          <input type="checkbox" id="shuffle-toggle" style="accent-color:var(--primary);width:16px;height:16px;flex-shrink:0;">
+          <label for="shuffle-toggle" class="form-label" style="margin:0;cursor:pointer;" data-i18n="session.shuffleLabel">Shuffle questions</label>
+        </div>
         <button class="btn btn-primary" id="btn-launch" onclick="launchSession()" disabled>
           <span data-i18n="session.launchBtn">Launch session</span>
         </button>
@@ -397,6 +408,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       <div class="session-header">
         <span class="session-name" id="active-session-name"></span>
         <span class="q-counter" id="active-q-counter"></span>
+        <span class="q-counter" id="active-student-count" style="color:var(--text-hint);"></span>
       </div>
       <div class="progress-bar-wrap">
         <div class="progress-bar-fill" id="active-progress-bar" style="width:0%"></div>
@@ -476,6 +488,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
      STUDENT VIEW
 ══════════════════════════════════════════ -->
 <div id="student-view">
+
+  <!-- Language toggle (persistent across all student states) -->
+  <div class="sv-topbar">
+    <div class="lang-toggle" id="sv-lang-toggle"></div>
+  </div>
 
   <!-- State 1: no session -->
   <div id="sv-waiting" class="hidden">
@@ -569,7 +586,8 @@ let resultsData = null; // stored after session ends
 let timerInterval = null;
 let explainVisible = false;
 let lastResponses = {};
-let lastServerState = { session: null, responses: {} };
+let lastServerState = { session: null, responses: {}, studentCount: 0 };
+let lastStudentCount = 0;
 let studentAnswered = null; // optionIndex chosen by student, or null
 let myAnswers = {};        // { questionId: optionIndex } — all answers this session
 let lastSessionId = null;  // detect new session to reset myAnswers
@@ -610,6 +628,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     renderSessionPool();
     fetchServerUrl();
     loadPresets();
+    // Restore last session results so a page refresh doesn't wipe the Results tab
+    try {
+      const saved = sessionStorage.getItem('bq_results');
+      if (saved) { resultsData = JSON.parse(saved); renderResults(); }
+    } catch {}
   }
 
   connectWebSocket();
@@ -619,6 +642,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 // LANGUAGE
 // ══════════════════════════════════════════════════════════
 async function loadLang(code) {
+  const viewId = wsRole === 'instructor' ? 'instructor-view' : 'student-view';
+  const view = document.getElementById(viewId);
+  if (view) {
+    view.classList.add('lang-switching');
+    await new Promise(r => requestAnimationFrame(r)); // let browser render the dim
+  }
   try {
     const r = await fetch(`lang/${code}.json`);
     if (!r.ok) throw new Error();
@@ -629,6 +658,7 @@ async function loadLang(code) {
   } catch {
     if (code !== DEFAULT_LANG) await loadLang(DEFAULT_LANG);
   }
+  if (view) requestAnimationFrame(() => view.classList.remove('lang-switching'));
 }
 
 function applyLang() {
@@ -641,6 +671,7 @@ function applyLang() {
   setEl('tab-session', deepGet(lang, 'tabs.session'));
   setEl('tab-results', deepGet(lang, 'tabs.results'));
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+  updateStudentCountDisplay(lastStudentCount);
 
   // Switch active question array to match selected language, then re-render
   allQuestions = questionsByLang[currentLang] || questionsByLang['en'];
@@ -662,15 +693,18 @@ function applyLang() {
 }
 
 function buildLangToggle() {
-  const wrap = document.getElementById('lang-toggle');
-  wrap.innerHTML = '';
-  SUPPORTED_LANGS.forEach(code => {
-    const btn = document.createElement('button');
-    btn.className = 'lang-btn' + (code === currentLang ? ' active' : '');
-    btn.dataset.lang = code;
-    btn.textContent = code.toUpperCase();
-    btn.onclick = () => { loadLang(code); };
-    wrap.appendChild(btn);
+  ['lang-toggle', 'sv-lang-toggle'].forEach(id => {
+    const wrap = document.getElementById(id);
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    SUPPORTED_LANGS.forEach(code => {
+      const btn = document.createElement('button');
+      btn.className = 'lang-btn' + (code === currentLang ? ' active' : '');
+      btn.dataset.lang = code;
+      btn.textContent = code.toUpperCase();
+      btn.onclick = () => { loadLang(code); };
+      wrap.appendChild(btn);
+    });
   });
 }
 
@@ -755,7 +789,7 @@ function connectWebSocket() {
   ws.onmessage = (evt) => {
     try {
       const msg = JSON.parse(evt.data);
-      if (msg.type === 'state') handleServerState(msg.session, msg.responses);
+      if (msg.type === 'state') handleServerState(msg.session, msg.responses, msg.studentCount);
     } catch {}
   };
 
@@ -783,13 +817,21 @@ function broadcastSession(session, opts) {
 // ══════════════════════════════════════════════════════════
 // SERVER STATE HANDLER (both roles)
 // ══════════════════════════════════════════════════════════
-function handleServerState(session, responses) {
-  lastServerState = { session, responses };
+function handleServerState(session, responses, studentCount) {
+  lastServerState = { session, responses, studentCount: studentCount || 0 };
+  lastStudentCount = studentCount || 0;
+  updateStudentCountDisplay(lastStudentCount);
   if (wsRole === 'instructor') {
     handleInstructorState(session, responses);
   } else {
     handleStudentState(session, responses);
   }
+}
+
+function updateStudentCountDisplay(count) {
+  const el = document.getElementById('active-student-count');
+  if (!el) return;
+  el.textContent = count > 0 ? `${count} ${t('session.students')}` : '';
 }
 
 // ══════════════════════════════════════════════════════════
@@ -799,10 +841,19 @@ function handleInstructorState(session, responses) {
   lastResponses = responses;
   if (!session || !session.active) return;
   if (session.finished) return;
+
+  const prevStarted  = sessionData?.started;
+  const prevRevealed = sessionData?.revealed;
   sessionData = session;
 
   if (session.started || session.revealed) {
     refreshInstructorQuestion(session, responses);
+  }
+
+  // Re-render action row whenever started/revealed state changes (covers server auto-reveal)
+  if (prevStarted !== session.started || prevRevealed !== session.revealed) {
+    renderActionRow(session);
+    if (!session.started) stopTimer();
   }
 }
 
@@ -984,14 +1035,21 @@ function saveQuestionForm(idx) {
 
   const explainImg = idx !== null ? (allQuestions[idx].explainImg || '') : '';
   const q = {
-    id: idx !== null ? allQuestions[idx].id : 'custom_' + Date.now(),
+    id: idx !== null ? allQuestions[idx].id : generateNextId(topic),
     topic, text, options: opts, correct, explain, explainImg
   };
 
-  if (idx !== null) allQuestions[idx] = q;
-  else allQuestions.push(q);
+  if (idx !== null) {
+    // Edit: update current language only (translator edits the right file)
+    allQuestions[idx] = q;
+    persistQuestions(currentLang);
+  } else {
+    // Add: save identical entry to all three language files so IDs stay in sync
+    ['en', 'de', 'es'].forEach(l => questionsByLang[l].push({ ...q }));
+    allQuestions = questionsByLang[currentLang];
+    persistAllLanguages();
+  }
 
-  persistQuestions(currentLang);
   cancelForm();
   renderBankChips();
   renderBankList();
@@ -999,14 +1057,46 @@ function saveQuestionForm(idx) {
   renderSessionPool();
 }
 
+// Topic prefix map — covers all three language variants of each topic name
+const TOPIC_PREFIXES = {
+  'glycolysis': 'gly', 'glykolyse': 'gly', 'glucólisis': 'gly',
+  'gluconeogenesis': 'gcn', 'glukoneogenese': 'gcn', 'gluconeogénesis': 'gcn',
+  'glycogen metabolism': 'glg', 'glykogenstoffwechsel': 'glg', 'metabolismo del glucógeno': 'glg',
+  'krebs cycle': 'tca', 'zitratzyklus': 'tca', 'ciclo de krebs': 'tca',
+  'respiratory chain and oxphos': 'rc', 'atmungskette und oxphos': 'rc', 'cadena respiratoria y oxphos': 'rc',
+  'fatty acid oxidation': 'fao', 'fettsäureoxidation': 'fao', 'oxidación de ácidos grasos': 'fao',
+  'fatty acid biosynthesis': 'fab', 'fettsäurebiosynthese': 'fab', 'biosíntesis de ácidos grasos': 'fab',
+  'amino acid catabolism': 'aac', 'aminosäurekatabolismus': 'aac', 'catabolismo de aminoácidos': 'aac',
+  'urea cycle': 'uc', 'harnstoffzyklus': 'uc', 'ciclo de la urea': 'uc',
+};
+
+function generateNextId(topic) {
+  const prefix = TOPIC_PREFIXES[topic.toLowerCase()] ||
+    topic.slice(0, 3).toLowerCase().replace(/[^a-z]/g, '') || 'q';
+  const allIds = new Set(
+    [...questionsByLang.en, ...questionsByLang.de, ...questionsByLang.es].map(q => q.id)
+  );
+  let n = 1;
+  while (allIds.has(`${prefix}${String(n).padStart(3, '0')}`)) n++;
+  return `${prefix}${String(n).padStart(3, '0')}`;
+}
+
 function deleteQuestion(idx) {
   if (!confirm(t('bank.deleteConfirm'))) return;
-  allQuestions.splice(idx, 1);
-  persistQuestions(currentLang);
+  const id = allQuestions[idx].id;
+  ['en', 'de', 'es'].forEach(l => {
+    questionsByLang[l] = questionsByLang[l].filter(q => q.id !== id);
+  });
+  allQuestions = questionsByLang[currentLang];
+  persistAllLanguages();
   renderBankChips();
   renderBankList();
   renderSessionChips();
   renderSessionPool();
+}
+
+async function persistAllLanguages() {
+  await Promise.all(['en', 'de', 'es'].map(l => persistQuestions(l)));
 }
 
 function cancelForm() {
@@ -1200,9 +1290,18 @@ function launchSession() {
   const name = document.getElementById('session-name-input').value.trim() || 'Session 1';
   const timerSecs = Math.min(300, Math.max(15, parseInt(document.getElementById('timer-input').value) || 90));
 
+  const shuffle = document.getElementById('shuffle-toggle')?.checked;
+  if (shuffle) {
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+  }
+
   const session = {
     active: true, name, questions, currentIdx: 0, timerSecs,
-    startedAt: null, started: false, finished: false, revealed: false
+    startedAt: null, started: false, finished: false, revealed: false,
+    sessionId: Math.random().toString(36).slice(2) + Date.now().toString(36)
   };
 
   sessionData = session;
@@ -1233,11 +1332,11 @@ function renderActiveQuestion(session) {
   document.getElementById('active-progress-bar').style.width = `${((session.currentIdx + 1) / total) * 100}%`;
 
   const lq = localizeQ(q);
-  document.getElementById('active-q-topic').textContent = q.topic;
+  document.getElementById('active-q-topic').textContent = lq.topic || q.topic;
   document.getElementById('active-q-text').textContent = lq.text;
 
   // Bar chart (empty)
-  renderBarList(q, {}, false, true);
+  updateBarChart(q, {}, false, true);
   updateVotesCount({});
 
   // Timer ring reset
@@ -1349,6 +1448,7 @@ function endSession() {
     session: JSON.parse(JSON.stringify(sessionData)),
     responses: JSON.parse(JSON.stringify(lastResponses))
   };
+  try { sessionStorage.setItem('bq_results', JSON.stringify(resultsData)); } catch {}
   renderResults();
 
   document.getElementById('session-active').classList.add('hidden');
@@ -1400,11 +1500,6 @@ function setRing(fillId, numberId, current, total) {
 // ══════════════════════════════════════════════════════════
 // BAR CHART
 // ══════════════════════════════════════════════════════════
-function renderBarList(q, responsesForQ, revealed, instructorMode) {
-  const list = document.getElementById('active-bar-list');
-  list.innerHTML = buildBarItems(q, responsesForQ, revealed, instructorMode);
-}
-
 function updateBarChart(q, responsesForQ, revealed, instructorMode) {
   const list = document.getElementById('active-bar-list');
   if (!list) return;
@@ -1562,8 +1657,8 @@ function handleStudentState(session, responses) {
     return;
   }
 
-  // Reset myAnswers when a new session starts
-  const sessionId = session.name + '_' + (session.questions[0]?.id || '');
+  // Reset myAnswers when a new session starts (keyed by unique session ID)
+  const sessionId = session.sessionId || (session.name + '_' + (session.questions[0]?.id || ''));
   if (sessionId !== lastSessionId) {
     myAnswers = {};
     lastSessionId = sessionId;
@@ -1590,26 +1685,27 @@ function handleStudentState(session, responses) {
   }
 
   const q = session.questions[session.currentIdx];
+  const lq = localizeQ(q);
 
-  // Detect question change → reset answer
+  // Detect question change → reset transient answer state
   if (lastQuestionIdx !== session.currentIdx) {
-    studentAnswered = null;
+    // Restore from myAnswers if student already answered this question (e.g. after reconnect)
+    studentAnswered = myAnswers[q.id] !== undefined ? myAnswers[q.id] : null;
     lastQuestionIdx = session.currentIdx;
   }
 
   if (!session.started && !session.revealed) {
     showStudentState('session-waiting');
     document.getElementById('sv-session-name').textContent = session.name;
-    document.getElementById('sv-session-topic').textContent = q.topic;
+    document.getElementById('sv-session-topic').textContent = lq.topic || q.topic;
     document.getElementById('sv-q-counter').textContent = `Q ${session.currentIdx+1} / ${session.questions.length}`;
     clearInterval(svTimerInterval);
     return;
   }
 
-  const lq = localizeQ(q);
   showStudentState('question');
   document.getElementById('sv-q-session-name').textContent = session.name;
-  document.getElementById('sv-q-topic').textContent = q.topic;
+  document.getElementById('sv-q-topic').textContent = lq.topic || q.topic;
   document.getElementById('sv-q-counter2').textContent = `Q ${session.currentIdx+1} / ${session.questions.length}`;
   document.getElementById('sv-q-text').textContent = lq.text;
 
@@ -1685,18 +1781,12 @@ function submitAnswer(optionIndex, questionId) {
 // UTILS
 // ══════════════════════════════════════════════════════════
 
-// Returns a question with text/options/explain overridden for currentLang if available.
-// Questions can carry optional i18n: { de: { text, options, explain }, es: {...} }
-// Falls back to base (English) fields when no translation exists.
+// Returns the version of a question in the currently selected language by ID lookup.
+// Falls back to the original question object if no translation is found.
 function localizeQ(q) {
   if (!q) return q;
-  const ov = q.i18n && q.i18n[currentLang];
-  if (!ov) return q;
-  return Object.assign({}, q, {
-    text:    ov.text    || q.text,
-    options: ov.options || q.options,
-    explain: ov.explain !== undefined ? ov.explain : q.explain
-  });
+  const langQ = (questionsByLang[currentLang] || []).find(lq => lq.id === q.id);
+  return langQ || q;
 }
 
 function esc(s) {

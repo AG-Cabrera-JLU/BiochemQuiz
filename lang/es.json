@@ -55,7 +55,9 @@
     "noPresets": "Aún no hay preajustes guardados.",
     "presetQuestions": "preguntas",
     "loadPreset": "Cargar",
-    "presetNamePrompt": "Nombre del preajuste:"
+    "presetNamePrompt": "Nombre del preajuste:",
+    "shuffleLabel": "Mezclar preguntas",
+    "students": "estudiantes conectados"
   },
   "results": {
     "title": "Resultados",
