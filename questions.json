@@ -9,7 +9,8 @@
     "Fatty Acid Biosynthesis",
     "Amino Acid Catabolism",
     "Urea Cycle",
-    "Water and pH"
+    "Water and pH",
+    "Proteins"
   ],
   "questions": [
     {
@@ -1915,6 +1916,231 @@
       ],
       "correct": 2,
       "explain": "Serine proteases (trypsin, chymotrypsin, elastase) cleave peptide bonds using water as the second substrate. The catalytic serine attacks the carbonyl carbon forming an acyl-enzyme intermediate; a water molecule then performs deacylation, regenerating the enzyme and releasing the C-terminal fragment. Water also participates in phosphatase reactions, DNA hydrolysis, and hundreds of other metabolic hydrolase reactions.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro001",
+      "topic": "Proteins",
+      "text": "What is the general structure shared by all 20 standard amino acids at physiological pH?",
+      "options": [
+        "An α-carbon bonded to an amino group, a carboxyl group, a hydrogen, and an R-group",
+        "A central carbon bearing two amino groups, a carboxyl group, and a hydrogen",
+        "A nitrogen atom bearing a carboxyl group, a hydrogen, and a variable side chain",
+        "A central carbon bearing one amino group, two carboxyl groups, and a variable side chain",
+        "A six-membered ring structure carrying both an amino and a carboxyl group"
+      ],
+      "correct": 0,
+      "explain": "All standard amino acids share a central α-carbon bonded to: an amino group (–NH₃⁺ at pH 7), a carboxyl group (–COO⁻ at pH 7), a hydrogen atom, and a variable R-group (side chain). At physiological pH they exist as zwitterions — simultaneously carrying positive and negative charges. The R-group alone determines each amino acid's chemical identity and properties.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro002",
+      "topic": "Proteins",
+      "text": "What type of bond links amino acids in a polypeptide chain, and what structural feature restricts rotation around it?",
+      "options": [
+        "An ester bond between the carboxyl and a hydroxyl group; rotation restricted by steric clashes",
+        "An amide (peptide) bond; planar due to resonance delocalization on the C–N bond",
+        "A phosphodiester bond as found in nucleic acids; restricted by the phosphate geometry",
+        "A hydrogen bond between adjacent carbonyl and amino groups along the backbone",
+        "A disulfide bond formed by oxidation of two adjacent cysteine thiol side chains"
+      ],
+      "correct": 1,
+      "explain": "A peptide bond is an amide bond formed by condensation between the α-carboxyl of one amino acid and the α-amino group of the next (–H₂O). Resonance delocalization gives the C–N bond ~40% double-bond character, making the six atoms of the peptide unit coplanar and rigid. Free rotation occurs only at the N–Cα bond (φ angle) and the Cα–C bond (ψ angle), which define backbone conformation.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro003",
+      "topic": "Proteins",
+      "text": "What defines the primary structure of a protein?",
+      "options": [
+        "The three-dimensional fold of the polypeptide chain",
+        "The spatial arrangement of secondary structure elements",
+        "The linear sequence of amino acids from N- to C-terminus",
+        "The arrangement of multiple polypeptide subunits",
+        "The pattern of disulfide bonds between cysteine residues"
+      ],
+      "correct": 2,
+      "explain": "Primary structure is the covalent sequence of amino acids linked by peptide bonds, written N→C by convention. It is encoded by the gene and determined during ribosomal translation. All higher-order structure is determined by the primary sequence. Even a single substitution can be catastrophic: Val→Glu in β-globin causes sickle cell disease by promoting haemoglobin polymerization.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro004",
+      "topic": "Proteins",
+      "text": "Which statement best describes the α-helix?",
+      "options": [
+        "A left-handed helix with 3.6 residues per turn, stabilized by hydrogen bonds between side chains",
+        "A right-handed helix with 3.6 residues/turn; backbone NH of residue i bonds to C=O of residue i+4",
+        "A structure built from alternating glycine and alanine residues stacked in rigid parallel sheets",
+        "Extended antiparallel strands joined by backbone hydrogen bonds perpendicular to the strand direction",
+        "A coiled coil of two α-helices wound around each other, stabilized by a hydrophobic interface"
+      ],
+      "correct": 1,
+      "explain": "The α-helix is right-handed with 3.6 residues per turn and a rise of 0.15 nm per residue (pitch 0.54 nm). Each backbone N–H donates a hydrogen bond to the backbone C=O four residues earlier (i→i+4), running parallel to the helix axis. Side chains project outward. Proline disrupts α-helices at internal positions because it lacks a backbone NH and its ring fixes the φ angle.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro005",
+      "topic": "Proteins",
+      "text": "How are hydrogen bonds oriented in a β-pleated sheet?",
+      "options": [
+        "Between side chains of residues within the same strand",
+        "Between backbone NH and C=O groups of residues i and i+4 within a single strand",
+        "Between backbone NH and C=O groups of adjacent parallel or antiparallel strands",
+        "Between Cα hydrogens of residues on opposite strands",
+        "Only between cysteine residues forming disulfide bonds across strands"
+      ],
+      "correct": 2,
+      "explain": "In a β-sheet, extended strands are held laterally by inter-strand backbone hydrogen bonds between the NH of one strand and the C=O of an adjacent strand. In parallel β-sheets both strands run N→C; in antiparallel sheets they run in opposite directions, giving more linear (stronger) hydrogen bonds. Side chains alternate above and below the sheet plane.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro006",
+      "topic": "Proteins",
+      "text": "Which combination of forces primarily maintains the tertiary structure of a globular protein?",
+      "options": [
+        "Covalent peptide bonds supplemented by covalent phosphodiester crosslinks between backbone residues",
+        "Disulfide bonds exclusively, since all non-covalent interactions are too weak to maintain structure",
+        "Hydrophobic interactions, H-bonds, ionic bonds, van der Waals forces, and disulfide bonds",
+        "Direct covalent bonds between all adjacent side chains, forming a rigid and inflexible network",
+        "Exclusively van der Waals interactions between backbone atoms, with no contribution from side chains"
+      ],
+      "correct": 2,
+      "explain": "Tertiary structure is stabilized by multiple forces acting cooperatively: the hydrophobic effect (burial of nonpolar residues — typically the dominant force), hydrogen bonds between polar side chains and backbone, ionic interactions (salt bridges), van der Waals contacts, and for extracellular proteins, covalent disulfide bonds. No single interaction is sufficient alone; denaturation occurs when their combined stabilization is overcome.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro007",
+      "topic": "Proteins",
+      "text": "What is quaternary protein structure?",
+      "options": [
+        "The linear sequence of amino acids in a polypeptide",
+        "The three-dimensional fold of a single polypeptide chain",
+        "The spatial arrangement of α-helices and β-sheets within one chain",
+        "The assembly of two or more polypeptide subunits into a functional complex",
+        "The pattern of post-translational modifications on amino acid side chains"
+      ],
+      "correct": 3,
+      "explain": "Quaternary structure describes how multiple polypeptide chains (subunits) associate via non-covalent interactions (and sometimes disulfide bonds) to form a larger functional complex. Example: haemoglobin is an α₂β₂ tetramer. Not all proteins have quaternary structure — monomeric myoglobin does not. Subunit assembly can enable cooperativity and allosteric regulation.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro008",
+      "topic": "Proteins",
+      "text": "What is the isoelectric point (pI) of a protein?",
+      "options": [
+        "The pH of maximum protein solubility",
+        "The pH at which the protein carries a net positive charge",
+        "The pH at which the net charge of the protein is zero",
+        "The pH at which all ionizable groups are fully protonated",
+        "The pH equal to the average pKa of all ionizable residues"
+      ],
+      "correct": 2,
+      "explain": "At pH = pI, the sum of positive charges exactly equals the sum of negative charges (net charge = 0). Below pI the protein is net positive; above pI it is net negative. At pI, electrostatic repulsion between molecules is minimal, so solubility is lowest — the basis of isoelectric precipitation and isoelectric focusing (IEF) in 2D-gel electrophoresis.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro009",
+      "topic": "Proteins",
+      "text": "Why does proline disrupt α-helices at internal positions?",
+      "options": [
+        "Its bulky aromatic ring system generates steric clashes with backbone atoms of adjacent residues",
+        "Its ring fixes the φ angle and removes the backbone NH needed for helix H-bonds",
+        "It carries a net negative charge at pH 7 that electrostatically repels the helix macrodipole",
+        "It spontaneously forms disulfide bonds that lock the backbone into a non-helical geometry",
+        "Its side chain competes with helix backbone C=O groups for the backbone NH hydrogen-bond donor"
+      ],
+      "correct": 1,
+      "explain": "Proline's side chain is covalently bonded to its own backbone nitrogen, forming a five-membered pyrrolidine ring. This (1) constrains the φ angle to approximately −60°, and (2) eliminates the backbone N–H group, removing the hydrogen bond donor required for α-helix formation. Proline therefore acts as a helix breaker but is common at helix N-termini and in tight turns.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro010",
+      "topic": "Proteins",
+      "text": "What happens to a protein during denaturation?",
+      "options": [
+        "Peptide bonds are hydrolyzed and free amino acids are released into solution",
+        "Secondary and higher-order structure is lost while the primary sequence remains intact",
+        "Only disulfide bonds are broken, leaving the secondary structure fully intact",
+        "The protein gains additional hydrogen bonds and becomes more ordered",
+        "Post-translational modifications are selectively cleaved from side chains"
+      ],
+      "correct": 1,
+      "explain": "Denaturation disrupts non-covalent interactions (and sometimes disulfide bonds), unfolding secondary, tertiary, and quaternary structure. The covalent peptide backbone is not broken, so the primary sequence is preserved. Denaturing agents include heat, extreme pH, urea/guanidinium chloride (disrupt H-bonds), and SDS (disrupts the hydrophobic core). Denaturation may be reversible (ribonuclease A) or irreversible (cooked egg white).",
+      "explainImg": ""
+    },
+    {
+      "id": "pro011",
+      "topic": "Proteins",
+      "text": "What is the role of molecular chaperones in protein folding?",
+      "options": [
+        "They synthesize the polypeptide chain by catalyzing peptide bond formation at the ribosome",
+        "They bind hydrophobic patches on unfolded chains, preventing aggregation",
+        "They tag misfolded proteins with ubiquitin and deliver them to the 26S proteasome for degradation",
+        "They thread unfolded polypeptides through membrane channels to reach their target organelle",
+        "They catalyze post-translational modifications including glycosylation and phosphorylation events"
+      ],
+      "correct": 1,
+      "explain": "Molecular chaperones (e.g., Hsp70, GroEL/GroES, Hsp90) recognize exposed hydrophobic regions on nascent or stress-unfolded polypeptides, transiently binding them to prevent aggregation. ATP-driven binding and release cycles give the chain multiple opportunities to reach its native fold. Chaperones do not supply folding information — the native structure is determined solely by the amino acid sequence (Anfinsen's principle).",
+      "explainImg": ""
+    },
+    {
+      "id": "pro012",
+      "topic": "Proteins",
+      "text": "Where do disulfide bonds form in proteins, and what prevents their formation in the cytoplasm?",
+      "options": [
+        "In the cytoplasm, where reactive oxygen species drive oxidation of all exposed cysteine residues",
+        "In the ER lumen and extracellular space; the reducing cytoplasm (high GSH) prevents –S–S– formation",
+        "In the mitochondrial matrix, where they stabilize subunits of the electron transport chain",
+        "In the nucleus, where they crosslink adjacent histone octamers to compact chromatin structure",
+        "On the ribosome, where they join the nascent chain covalently to ribosomal RNA during translation"
+      ],
+      "correct": 1,
+      "explain": "Disulfide bonds form by oxidation of two cysteine –SH groups (–S–S– + 2H). The endoplasmic reticulum lumen is oxidizing; the cytoplasm is highly reducing (~1–10 mM glutathione, GSH), keeping cysteines in the –SH state. Disulfide bonds stabilize secreted and extracellular proteins (antibodies, insulin, digestive enzymes) that must function in variable environmental conditions.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro013",
+      "topic": "Proteins",
+      "text": "What information does a Ramachandran plot convey?",
+      "options": [
+        "The free energy change of protein folding as a function of temperature for each residue type",
+        "The sterically allowed φ/ψ backbone dihedral angle pairs for amino acid residues",
+        "The distribution of side-chain rotamer conformations observed in crystal structures",
+        "The correlation of protein molecular weight with sedimentation rate in ultracentrifugation",
+        "The geometry and pattern of backbone hydrogen bonds within a single α-helical repeat"
+      ],
+      "correct": 1,
+      "explain": "The Ramachandran plot (1963) maps the sterically permitted combinations of φ (N–Cα bond) and ψ (Cα–C bond) backbone dihedral angles, derived from van der Waals clash criteria. Favored regions correspond to α-helix (~φ = −57°, ψ = −47°) and β-sheet (~φ = −120°, ψ = +120°). Glycine, lacking a Cβ, populates a much larger region; proline is confined to a narrow area. The plot is used to validate protein crystal structures.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro014",
+      "topic": "Proteins",
+      "text": "What is the defining structural feature of collagen that gives connective tissue its tensile strength?",
+      "options": [
+        "A compact globular fold with a buried hydrophobic core and amphipathic helices at the surface",
+        "A Gly-X-Pro triple helix of three polyproline II-type chains wound into a right-handed superhelix",
+        "An antiparallel β-sheet with interchain disulfide bonds connecting every adjacent cysteine pair",
+        "A right-handed α-helix with covalent crosslinks between hydroxylysine and lysine of adjacent chains",
+        "A β-barrel whose hydrophobic lumen forms a protected channel for water and small-ion transport"
+      ],
+      "correct": 1,
+      "explain": "Each collagen chain repeats Gly–X–Pro/Hyp. Three left-handed polyproline II-type helices coil into a right-handed superhelix stabilized by interchain hydrogen bonds. Glycine — the smallest amino acid — must occupy every third position to fit the sterically crowded interior of the triple helix. Hydroxyproline (formed by prolyl hydroxylase using vitamin C) is essential for this stability; vitamin C deficiency causes scurvy through defective collagen.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro015",
+      "topic": "Proteins",
+      "text": "What does Anfinsen's thermodynamic hypothesis (Anfinsen's dogma) state?",
+      "options": [
+        "Correct folding always requires ATP-driven chaperones and cannot occur spontaneously for any protein",
+        "The native state has the highest free energy and is maintained by the kinetic barrier of disulfide bonds",
+        "The sequence encodes the fold; the native state is the global free energy minimum",
+        "The ribosome determines tertiary structure by geometrically constraining the emerging polypeptide chain",
+        "Secondary structure must fully assemble before any tertiary contacts can form in a strict hierarchy"
+      ],
+      "correct": 2,
+      "explain": "Anfinsen showed (Nobel Prize 1972) that fully denatured ribonuclease A (unfolded with urea + β-mercaptoethanol) spontaneously refolded to full enzymatic activity upon removal of denaturants. This proved all information for correct folding is encoded in the primary sequence. The native state is the thermodynamically most stable (lowest free energy) structure. Chaperones assist kinetics in vivo but do not alter the thermodynamic endpoint.",
       "explainImg": ""
     }
   ]

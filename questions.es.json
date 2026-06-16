@@ -9,7 +9,8 @@
     "Biosíntesis de Ácidos Grasos",
     "Catabolismo de Aminoácidos",
     "Ciclo de la Urea",
-    "Agua y pH"
+    "Agua y pH",
+    "Proteínas"
   ],
   "questions": [
     {
@@ -1915,6 +1916,231 @@
       ],
       "correct": 2,
       "explain": "Las serina proteasas (tripsina, quimotripsina, elastasa) escinden enlaces peptídicos usando el agua como segundo sustrato. La serina nucleofílica ataca el carbono carbonílico formando un intermediario acil-enzima, que luego es resuelto por una molécula de agua (desacilación), regenerando la enzima y liberando el fragmento C-terminal. El agua también participa en la hidrólisis del ADN, las reacciones de fosfatasas y cientos de otras reacciones metabólicas.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro001",
+      "topic": "Proteínas",
+      "text": "¿Cuál es la estructura general compartida por los 20 aminoácidos estándar a pH fisiológico?",
+      "options": [
+        "Un α-carbono unido a un grupo amino, un grupo carboxilo, un hidrógeno y un grupo R",
+        "Un carbono central con dos grupos amino, un grupo carboxilo y un hidrógeno",
+        "Un átomo de nitrógeno con un grupo carboxilo, un hidrógeno y una cadena lateral variable",
+        "Un carbono central con un grupo amino, dos grupos carboxilo y una cadena lateral variable",
+        "Una estructura de anillo de seis miembros con un grupo amino y un grupo carboxilo"
+      ],
+      "correct": 0,
+      "explain": "Todos los aminoácidos estándar comparten un α-carbono central unido a: un grupo amino (–NH₃⁺ a pH 7), un grupo carboxilo (–COO⁻ a pH 7), un hidrógeno y un grupo R (cadena lateral). A pH fisiológico existen como zwitteriones — con carga positiva y negativa simultáneas. Solo el grupo R determina la identidad química y las propiedades de cada aminoácido.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro002",
+      "topic": "Proteínas",
+      "text": "¿Qué tipo de enlace une los aminoácidos en una cadena polipeptídica y qué característica estructural restringe la rotación?",
+      "options": [
+        "Un enlace éster entre el carboxilo y un grupo hidroxilo; rotación restringida por colisiones estéricas",
+        "Un enlace amida (peptídico); plano por la deslocalización de resonancia en el enlace C–N",
+        "Un enlace fosfodiéster como en los ácidos nucleicos; restringido por la geometría del fosfato",
+        "Un puente de hidrógeno entre grupos carbonilo y amino adyacentes a lo largo del esqueleto",
+        "Un enlace disulfuro formado por oxidación de dos grupos tiol de cisteína adyacentes"
+      ],
+      "correct": 1,
+      "explain": "El enlace peptídico es un enlace amida formado por condensación entre el grupo α-carboxilo de un aminoácido y el grupo α-amino del siguiente (–H₂O). La deslocalización de resonancia confiere al enlace C–N un ~40% de carácter de doble enlace, haciendo los seis átomos de la unidad peptídica coplanares y rígidos. La rotación libre solo ocurre alrededor del enlace N–Cα (ángulo φ) y del enlace Cα–C (ángulo ψ), que definen la conformación del esqueleto.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro003",
+      "topic": "Proteínas",
+      "text": "¿Qué define la estructura primaria de una proteína?",
+      "options": [
+        "El plegamiento tridimensional de la cadena polipeptídica",
+        "La disposición espacial de los elementos de estructura secundaria",
+        "La secuencia lineal de aminoácidos del extremo N al C-terminal",
+        "La disposición de múltiples subunidades polipeptídicas",
+        "El patrón de enlaces disulfuro entre residuos de cisteína"
+      ],
+      "correct": 2,
+      "explain": "La estructura primaria es la secuencia covalente de aminoácidos unidos por enlaces peptídicos, escrita por convención de N→C. Está codificada por el gen y determinada durante la traducción ribosomal. Toda estructura de orden superior está determinada por la secuencia primaria. Incluso una sustitución única puede ser devastadora: Val→Glu en la β-globina causa anemia de células falciformes.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro004",
+      "topic": "Proteínas",
+      "text": "¿Cuál de las siguientes afirmaciones describe mejor la hélice α?",
+      "options": [
+        "Una hélice levógira con 3,6 residuos por vuelta, estabilizada por puentes de hidrógeno entre cadenas laterales",
+        "Una hélice dextrógira con 3,6 residuos/vuelta; el NH del residuo i forma puente de H con el C=O del residuo i+4",
+        "Una estructura de residuos alternos de glicina y alanina apilados en láminas paralelas rígidas",
+        "Cadenas antiparalelas extendidas unidas por puentes de H del esqueleto perpendiculares a la dirección",
+        "Una bobina enrollada de dos hélices α enrolladas entre sí, estabilizada por una interfaz hidrofóbica"
+      ],
+      "correct": 1,
+      "explain": "La hélice α es dextrógira con 3,6 residuos por vuelta y un avance de 0,15 nm por residuo (paso 0,54 nm). Cada N–H del esqueleto dona un puente de hidrógeno al C=O del esqueleto cuatro residuos antes (i→i+4), paralelo al eje helicoidal. Las cadenas laterales apuntan hacia fuera. La prolina interrumpe las hélices α en posiciones internas porque carece de N–H esqueletal y su anillo fija el ángulo φ.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro005",
+      "topic": "Proteínas",
+      "text": "¿Cómo se orientan los puentes de hidrógeno en una lámina β?",
+      "options": [
+        "Entre cadenas laterales de residuos dentro de la misma cadena",
+        "Entre grupos NH y C=O del esqueleto de los residuos i e i+4 dentro de una misma cadena",
+        "Entre grupos NH y C=O del esqueleto de cadenas adyacentes paralelas o antiparalelas",
+        "Entre hidrógenos del Cα de residuos en cadenas opuestas",
+        "Solo entre residuos de cisteína que forman enlaces disulfuro entre cadenas"
+      ],
+      "correct": 2,
+      "explain": "En una lámina β, las cadenas extendidas están unidas lateralmente por puentes de hidrógeno del esqueleto entre el NH de una cadena y el C=O de una cadena adyacente. En las láminas β paralelas ambas cadenas corren en dirección N→C; en las antiparalelas corren en direcciones opuestas, generando puentes de H más lineales (más fuertes). Las cadenas laterales alternan por encima y por debajo del plano de la lámina.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro006",
+      "topic": "Proteínas",
+      "text": "¿Qué combinación de fuerzas mantiene principalmente la estructura terciaria de una proteína globular?",
+      "options": [
+        "Enlaces peptídicos covalentes complementados por enlaces fosfodiéster covalentes entre residuos del esqueleto",
+        "Exclusivamente enlaces disulfuro, ya que todas las interacciones no covalentes son demasiado débiles",
+        "Interacciones hidrofóbicas, puentes H, enlaces iónicos, fuerzas de van der Waals y enlaces disulfuro",
+        "Enlaces covalentes entre todas las cadenas laterales adyacentes, formando una red rígida e inflexible",
+        "Exclusivamente interacciones de van der Waals entre átomos del esqueleto, sin contribución de las cadenas laterales"
+      ],
+      "correct": 2,
+      "explain": "La estructura terciaria se estabiliza por múltiples fuerzas cooperativas: el efecto hidrofóbico (enterramiento de residuos apolares — generalmente la fuerza dominante), puentes de hidrógeno entre cadenas laterales polares y esqueleto, interacciones iónicas (puentes salinos), contactos de van der Waals y, para proteínas extracelulares, enlaces disulfuro covalentes. Ninguna fuerza individual es suficiente por sí sola; la desnaturalización ocurre cuando su estabilización combinada es superada.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro007",
+      "topic": "Proteínas",
+      "text": "¿Qué es la estructura cuaternaria de una proteína?",
+      "options": [
+        "La secuencia lineal de aminoácidos en un polipéptido",
+        "El plegamiento tridimensional de una única cadena polipeptídica",
+        "La disposición espacial de hélices α y láminas β dentro de una cadena",
+        "El ensamblaje de dos o más subunidades polipeptídicas en un complejo funcional",
+        "El patrón de modificaciones postraduccionales en las cadenas laterales de aminoácidos"
+      ],
+      "correct": 3,
+      "explain": "La estructura cuaternaria describe cómo múltiples cadenas polipeptídicas (subunidades) se asocian mediante interacciones no covalentes (y a veces enlaces disulfuro) para formar un complejo funcional mayor. Ejemplo: la hemoglobina es un tetrámero α₂β₂. No todas las proteínas tienen estructura cuaternaria — la mioglobina monomérica no la tiene. El ensamblaje de subunidades puede habilitar cooperatividad y regulación alostérica.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro008",
+      "topic": "Proteínas",
+      "text": "¿Qué es el punto isoeléctrico (pI) de una proteína?",
+      "options": [
+        "El pH de máxima solubilidad de la proteína",
+        "El pH al que la proteína tiene carga neta positiva",
+        "El pH al que la carga neta de la proteína es cero",
+        "El pH al que todos los grupos ionizables están completamente protonados",
+        "El pH igual al promedio de los valores de pKa de todos los residuos ionizables"
+      ],
+      "correct": 2,
+      "explain": "En pH = pI, la suma de cargas positivas iguala exactamente a la suma de cargas negativas (carga neta = 0). Por debajo del pI la proteína tiene carga neta positiva; por encima, negativa. En el pI la repulsión electrostática entre moléculas es mínima y la solubilidad es mínima — base de la precipitación isoeléctrica y del enfoque isoeléctrico (IEF) en electroforesis 2D.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro009",
+      "topic": "Proteínas",
+      "text": "¿Por qué la prolina interrumpe las hélices α en posiciones internas?",
+      "options": [
+        "Su voluminoso sistema de anillo aromático genera choques estéricos con átomos del esqueleto adyacente",
+        "Su anillo fija el ángulo φ y elimina el NH del esqueleto necesario para los puentes H de la hélice",
+        "Tiene carga neta negativa a pH 7, lo que repele electrostáticamente el macrodipolo de la hélice",
+        "Forma espontáneamente enlaces disulfuro que fijan el esqueleto en una geometría no helicoidal",
+        "Su cadena lateral compite con los grupos C=O del esqueleto de la hélice por el dador del puente de H"
+      ],
+      "correct": 1,
+      "explain": "La cadena lateral de la prolina está unida covalentemente a su propio nitrógeno esqueletal, formando un anillo de pirrolidina de cinco miembros. Esto (1) restringe el ángulo φ a aproximadamente −60°, y (2) elimina el grupo N–H del esqueleto, suprimiendo el dador de puente de hidrógeno esencial para la formación de la hélice α. La prolina actúa así como rompedora de hélices, pero es frecuente en los N-terminales de hélices y en giros.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro010",
+      "topic": "Proteínas",
+      "text": "¿Qué ocurre con una proteína durante la desnaturalización?",
+      "options": [
+        "Los enlaces peptídicos se hidrolizan y se liberan aminoácidos libres a la solución",
+        "Se pierde la estructura secundaria y superior mientras la secuencia primaria permanece intacta",
+        "Solo se rompen los enlaces disulfuro, dejando completamente intacta la estructura secundaria",
+        "La proteína gana puentes de hidrógeno adicionales y se vuelve más ordenada",
+        "Las modificaciones postraduccionales se escinden selectivamente de las cadenas laterales"
+      ],
+      "correct": 1,
+      "explain": "La desnaturalización interrumpe las interacciones no covalentes (y a veces los enlaces disulfuro), desplegando la estructura secundaria, terciaria y cuaternaria. El esqueleto peptídico covalente no se rompe, por lo que la secuencia primaria se conserva. Agentes desnaturalizantes: calor, pH extremo, urea/cloruro de guanidinio (alteran los puentes H) y SDS (altera el núcleo hidrofóbico). La desnaturalización puede ser reversible (RNasa A) o irreversible (clara de huevo cocida).",
+      "explainImg": ""
+    },
+    {
+      "id": "pro011",
+      "topic": "Proteínas",
+      "text": "¿Cuál es la función de los chaperonas moleculares en el plegamiento de proteínas?",
+      "options": [
+        "Sintetizan la cadena polipeptídica catalizando la formación de enlaces peptídicos en el ribosoma",
+        "Se unen a regiones hidrofóbicas de cadenas sin plegar, previniendo la agregación",
+        "Marcan las proteínas mal plegadas con ubiquitina y las envían al proteasoma 26S para su degradación",
+        "Conducen polipéptidos sin plegar a través de canales de membrana hacia su orgánulo diana",
+        "Catalizan modificaciones postraduccionales como la glicosilación y eventos de fosforilación"
+      ],
+      "correct": 1,
+      "explain": "Los chaperonas moleculares (p. ej., Hsp70, GroEL/GroES, Hsp90) reconocen regiones hidrofóbicas expuestas en polipéptidos nacientes o desnaturalizados por estrés, uniéndose transitoriamente para evitar la agregación. Los ciclos de unión y liberación impulsados por ATP dan a la cadena múltiples oportunidades de alcanzar su plegamiento nativo. Los chaperonas no aportan información de plegamiento — la estructura nativa está determinada solo por la secuencia de aminoácidos (principio de Anfinsen).",
+      "explainImg": ""
+    },
+    {
+      "id": "pro012",
+      "topic": "Proteínas",
+      "text": "¿Dónde se forman los enlaces disulfuro en las proteínas y qué impide su formación en el citoplasma?",
+      "options": [
+        "En el citoplasma, donde las especies reactivas de oxígeno impulsan la oxidación de todos los residuos de cisteína",
+        "En el lumen del RE y espacio extracelular; el citoplasma reductor (alto GSH) previene la formación de –S–S–",
+        "En la matriz mitocondrial, donde estabilizan las subunidades de la cadena de transporte de electrones",
+        "En el núcleo, donde entrelazan octámeros de histonas adyacentes para compactar la cromatina",
+        "En el ribosoma, donde unen covalentemente la cadena naciente al ARN ribosomal durante la traducción"
+      ],
+      "correct": 1,
+      "explain": "Los enlaces disulfuro se forman por oxidación de dos grupos –SH de cisteína (–S–S– + 2H). El lumen del retículo endoplasmático es oxidante; el citoplasma es fuertemente reductor (~1–10 mM glutatión, GSH), manteniendo las cisteínas en estado –SH. Los enlaces disulfuro estabilizan proteínas secretadas y extracelulares (anticuerpos, insulina, enzimas digestivas) que deben funcionar en condiciones extracelulares variables.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro013",
+      "topic": "Proteínas",
+      "text": "¿Qué información transmite un diagrama de Ramachandran?",
+      "options": [
+        "El cambio de energía libre del plegamiento proteico en función de la temperatura para cada tipo de residuo",
+        "Los pares de ángulos diedros φ/ψ del esqueleto estéricamente permitidos para los residuos aminoácidos",
+        "La distribución de las conformaciones rotámeras de las cadenas laterales en estructuras cristalinas",
+        "La correlación del peso molecular de la proteína con la tasa de sedimentación en ultracentrifugación",
+        "La geometría y el patrón de puentes de H del esqueleto dentro de una vuelta de hélice α"
+      ],
+      "correct": 1,
+      "explain": "El diagrama de Ramachandran (1963) representa las combinaciones estéricamente permitidas de los ángulos diedros del esqueleto φ (enlace N–Cα) y ψ (enlace Cα–C), derivadas de criterios de choque de van der Waals. Las regiones favorecidas corresponden a la hélice α (~φ = −57°, ψ = −47°) y la lámina β (~φ = −120°, ψ = +120°). La glicina, sin Cβ, ocupa una región mucho mayor; la prolina está confinada a una zona estrecha. Se usa para validar estructuras cristalinas de proteínas.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro014",
+      "topic": "Proteínas",
+      "text": "¿Cuál es la característica estructural definitoria del colágeno que confiere resistencia a la tracción al tejido conjuntivo?",
+      "options": [
+        "Un plegamiento globular compacto con núcleo hidrofóbico enterrado y hélices anfipáticas en la superficie",
+        "Una triple hélice Gly-X-Pro de tres cadenas tipo poliprolina II enrolladas en una superhélice dextrógira",
+        "Una lámina β antiparalela con enlaces disulfuro intercatenarios entre cada par adyacente de cisteínas",
+        "Una hélice α dextrógira con entrecruzamientos covalentes entre hidroxilisina y lisina de cadenas adyacentes",
+        "Un barril β cuyo lumen hidrofóbico forma un canal protegido para el transporte de agua e iones"
+      ],
+      "correct": 1,
+      "explain": "Cada cadena de colágeno repite Gly–X–Pro/Hyp. Tres cadenas tipo poliprolina II levógiras se enrollan en una superhélice dextrógira estabilizada por puentes de hidrógeno intercatenarios. La glicina — el aminoácido más pequeño — debe ocupar cada tercera posición para encajar en el interior estéricamente restringido de la triple hélice. La hidroxiprolina (formada por prolil-hidroxilasa con vitamina C) es esencial; su deficiencia causa escorbuto por colágeno defectuoso.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro015",
+      "topic": "Proteínas",
+      "text": "¿Qué establece la hipótesis termodinámica de Anfinsen (dogma de Anfinsen)?",
+      "options": [
+        "El plegamiento correcto siempre requiere chaperonas impulsadas por ATP y no puede ocurrir espontáneamente",
+        "El estado nativo tiene la energía libre más alta y se mantiene por la barrera cinética de los enlaces disulfuro",
+        "La secuencia codifica el plegamiento; el estado nativo es el mínimo global de energía libre",
+        "El ribosoma determina la estructura terciaria al restringir geométricamente la cadena polipeptídica emergente",
+        "La estructura secundaria debe ensamblarse completamente antes de que puedan formarse contactos terciarios"
+      ],
+      "correct": 2,
+      "explain": "Anfinsen demostró (Premio Nobel 1972) que la RNasa A completamente desnaturalizada (con urea + β-mercaptoetanol) se replegó espontáneamente hasta recuperar plena actividad enzimática al retirar los desnaturalizantes. Esto demostró que toda la información para el plegamiento correcto está codificada en la secuencia primaria. El estado nativo es la estructura termodinámicamente más estable (mínima energía libre). Los chaperonas ayudan a la cinética in vivo pero no cambian el resultado termodinámico.",
       "explainImg": ""
     }
   ]

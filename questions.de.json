@@ -9,7 +9,8 @@
     "Fettsäurebiosynthese",
     "Aminosäurekatabolismus",
     "Harnstoffzyklus",
-    "Wasser und pH"
+    "Wasser und pH",
+    "Proteine"
   ],
   "questions": [
     {
@@ -1915,6 +1916,231 @@
       ],
       "correct": 2,
       "explain": "Serinproteasen (z. B. Trypsin, Chymotrypsin) spalten Peptidbindungen unter Verwendung von Wasser als zweitem Substrat. Das nukleophile Serin greift den Carbonylkohlenstoff an und bildet ein Acyl-Enzym-Intermediat, das anschließend durch ein Wassermolekül aufgelöst wird (Deacylierung). Wasser ist auch an der DNA-Hydrolyse, Phosphatase-Reaktionen und Hunderten anderer metabolischer Hydrolyse-Reaktionen beteiligt.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro001",
+      "topic": "Proteine",
+      "text": "Was ist die allgemeine Struktur aller 20 Standard-Aminosäuren bei physiologischem pH-Wert?",
+      "options": [
+        "Ein α-Kohlenstoff, gebunden an eine Aminogruppe, eine Carboxylgruppe, ein H und eine R-Gruppe",
+        "Ein zentrales Kohlenstoffatom mit zwei Aminogruppen, einer Carboxylgruppe und einem Wasserstoff",
+        "Ein Stickstoffatom mit einer Carboxylgruppe, einem Wasserstoff und einer variablen Seitenkette",
+        "Ein zentrales Kohlenstoffatom mit einer Aminogruppe, zwei Carboxylgruppen und einer variablen Seitenkette",
+        "Ein Sechsringsystem mit je einer Amino- und einer Carboxylgruppe"
+      ],
+      "correct": 0,
+      "explain": "Alle Standard-Aminosäuren teilen ein zentrales α-Kohlenstoffatom, das gebunden ist an: eine Aminogruppe (–NH₃⁺ bei pH 7), eine Carboxylgruppe (–COO⁻ bei pH 7), ein Wasserstoffatom und eine variable R-Gruppe (Seitenkette). Bei physiologischem pH liegen sie als Zwitterionen vor — gleichzeitig positiv und negativ geladen. Allein die R-Gruppe bestimmt die chemische Identität und Eigenschaften jeder Aminosäure.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro002",
+      "topic": "Proteine",
+      "text": "Welche Art von Bindung verknüpft Aminosäuren in einer Polypeptidkette, und welche Eigenschaft verhindert die Rotation?",
+      "options": [
+        "Eine Esterbindung zwischen Carboxyl- und Hydroxylgruppe; Rotation durch sterische Konflikte gehemmt",
+        "Eine Amidbindung (Peptidbindung); planar durch Resonanzdelokalisierung an der C-N-Bindung",
+        "Eine Phosphodiesterbindung wie in Nukleinsäuren; durch die Geometrie der Phosphatgruppe eingeschränkt",
+        "Eine Wasserstoffbrücke zwischen benachbarten Carbonyl- und Aminogruppen entlang des Rückgrats",
+        "Eine Disulfidbindung durch Oxidation zweier benachbarter Cystein-Thiolgruppen"
+      ],
+      "correct": 1,
+      "explain": "Eine Peptidbindung ist eine Amidbindung, die durch Kondensation zwischen der α-Carboxylgruppe einer Aminosäure und der α-Aminogruppe der nächsten gebildet wird (–H₂O). Resonanzdelokalisierung verleiht der C-N-Bindung einen ca. 40%-igen Doppelbindungscharakter, wodurch die sechs Atome der Peptideinheit koplanar und starr sind. Freie Rotation ist nur um die N-Cα-Bindung (φ-Winkel) und die Cα-C-Bindung (ψ-Winkel) möglich.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro003",
+      "topic": "Proteine",
+      "text": "Was definiert die Primärstruktur eines Proteins?",
+      "options": [
+        "Die dreidimensionale Faltung der Polypeptidkette",
+        "Die räumliche Anordnung der Sekundärstrukturelemente",
+        "Die lineare Sequenz der Aminosäuren vom N- zum C-Terminus",
+        "Die Anordnung mehrerer Polypeptiduntereinheiten",
+        "Das Muster der Disulfidbindungen zwischen Cysteinresten"
+      ],
+      "correct": 2,
+      "explain": "Die Primärstruktur ist die kovalente Sequenz der durch Peptidbindungen verknüpften Aminosäuren, geschrieben vom N-Terminus zum C-Terminus. Sie wird durch das Gen kodiert und während der ribosomalen Translation festgelegt. Alle übergeordneten Strukturen werden durch die Primärsequenz bestimmt. Selbst ein einziger Aminosäureaustausch kann gravierend sein: Val→Glu im β-Globin verursacht die Sichelzellanämie.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro004",
+      "topic": "Proteine",
+      "text": "Welche Aussage beschreibt die α-Helix am besten?",
+      "options": [
+        "Eine linkshändige Helix mit 3,6 Resten pro Windung, stabilisiert durch Wasserstoffbrücken zwischen Seitenketten",
+        "Eine rechtshändige Helix mit 3,6 Resten/Windung; das Rückgrat-NH von Rest i bindet an das C=O von Rest i+4",
+        "Eine Struktur aus alternierenden Glycin- und Alaninresten, die in parallelen Schichten gestapelt sind",
+        "Antiparallele gestreckte Stränge, verbunden durch Rückgrat-H-Brücken senkrecht zur Strangrichtung",
+        "Eine Coiled-Coil aus zwei α-Helices, die umeinander gewunden und durch eine hydrophobe Grenzfläche stabilisiert werden"
+      ],
+      "correct": 1,
+      "explain": "Die α-Helix ist rechtshändig mit 3,6 Resten pro Windung und einem Anstieg von 0,15 nm pro Rest (Steigung 0,54 nm). Jedes Rückgrat-NH doniert eine Wasserstoffbrücke an das Rückgrat-C=O vier Reste früher (i→i+4), parallel zur Helixachse. Die Seitenketten ragen nach außen. Prolin stört α-Helices an internen Positionen, weil es kein Rückgrat-NH besitzt und sein Ring den φ-Winkel fixiert.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro005",
+      "topic": "Proteine",
+      "text": "Wie sind die Wasserstoffbrückenbindungen in einem β-Faltblatt angeordnet?",
+      "options": [
+        "Zwischen Seitenketten von Resten innerhalb desselben Strangs",
+        "Zwischen Rückgrat-NH und C=O von Resten i und i+4 innerhalb eines einzelnen Strangs",
+        "Zwischen Rückgrat-NH und C=O benachbarter paralleler oder antiparalleler Stränge",
+        "Zwischen Cα-Wasserstoffatomen von Resten auf gegenüberliegenden Strängen",
+        "Ausschließlich zwischen Cysteinresten, die Disulfidbindungen über die Stränge hinweg bilden"
+      ],
+      "correct": 2,
+      "explain": "In einem β-Faltblatt werden gestreckte Stränge lateral durch Rückgrat-Wasserstoffbrücken zusammengehalten: das NH eines Strangs bindet an das C=O eines benachbarten Strangs. In parallelen β-Faltblättern laufen beide Stränge in gleicher N→C-Richtung; in antiparallelen Faltblättern laufen sie entgegengesetzt, was linearere (stärkere) Wasserstoffbrücken ergibt. Seitenketten wechseln ober- und unterhalb der Faltblattebene.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro006",
+      "topic": "Proteine",
+      "text": "Welche Kombination von Kräften stabilisiert hauptsächlich die Tertiärstruktur eines globulären Proteins?",
+      "options": [
+        "Kovalente Peptidbindungen ergänzt durch kovalente Phosphodiesterbindungen zwischen Rückgratresten",
+        "Ausschließlich Disulfidbindungen, da alle nicht-kovalenten Wechselwirkungen zu schwach sind",
+        "Hydrophobe Wechselwirkungen, H-Brücken, Ionenbindungen, van-der-Waals-Kräfte und Disulfidbindungen",
+        "Kovalente Bindungen zwischen allen benachbarten Seitenketten, die ein starres vernetztes Netzwerk bilden",
+        "Ausschließlich van-der-Waals-Wechselwirkungen zwischen Rückgratatomen ohne Beteiligung der Seitenketten"
+      ],
+      "correct": 2,
+      "explain": "Die Tertiärstruktur wird durch mehrere kooperative Kräfte stabilisiert: den hydrophoben Effekt (Vergraben unpolarer Reste — meist die dominante Kraft), Wasserstoffbrücken zwischen polaren Seitenketten und Rückgrat, ionische Wechselwirkungen (Salzbrücken), van-der-Waals-Kontakte und — bei extrazellulären Proteinen — kovalente Disulfidbindungen. Keine einzelne Wechselwirkung ist allein ausreichend; Denaturierung tritt auf, wenn ihre kombinierte Stabilisierung überwunden wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro007",
+      "topic": "Proteine",
+      "text": "Was ist die Quartärstruktur eines Proteins?",
+      "options": [
+        "Die lineare Sequenz der Aminosäuren in einem Polypeptid",
+        "Die dreidimensionale Faltung einer einzelnen Polypeptidkette",
+        "Die räumliche Anordnung von α-Helices und β-Faltblättern innerhalb einer Kette",
+        "Die Zusammenlagerung von zwei oder mehr Polypeptiduntereinheiten zu einem funktionellen Komplex",
+        "Das Muster der posttranslationalen Modifikationen an Aminosäureseitenketten"
+      ],
+      "correct": 3,
+      "explain": "Die Quartärstruktur beschreibt, wie mehrere Polypeptidketten (Untereinheiten) über nicht-kovalente Wechselwirkungen (und manchmal Disulfidbindungen) zu einem größeren funktionellen Komplex zusammentreten. Beispiel: Hämoglobin ist ein α₂β₂-Tetramer. Nicht alle Proteine besitzen Quartärstruktur — das monomere Myoglobin hat keine. Die Untereinheiten-Assemblierung kann Kooperativität und allosterische Regulation ermöglichen.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro008",
+      "topic": "Proteine",
+      "text": "Was ist der isoelektrische Punkt (pI) eines Proteins?",
+      "options": [
+        "Der pH-Wert maximaler Löslichkeit",
+        "Der pH-Wert, bei dem das Protein eine netto positive Ladung trägt",
+        "Der pH-Wert, bei dem die Nettoladung des Proteins null beträgt",
+        "Der pH-Wert, bei dem alle ionisierbaren Gruppen vollständig protoniert sind",
+        "Der pH-Wert, der dem Mittelwert der pKs-Werte aller ionisierbaren Reste entspricht"
+      ],
+      "correct": 2,
+      "explain": "Beim pH = pI entspricht die Summe der positiven Ladungen genau der Summe der negativen Ladungen (Nettoladung = 0). Unterhalb des pI ist das Protein netto positiv; oberhalb netto negativ. Am pI ist die elektrostatische Abstoßung zwischen den Molekülen minimal, sodass die Löslichkeit am geringsten ist — Grundlage der isoelektrischen Fällung und der isoelektrischen Fokussierung (IEF) in der 2D-Gelelektrophorese.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro009",
+      "topic": "Proteine",
+      "text": "Warum stört Prolin α-Helices an internen Positionen?",
+      "options": [
+        "Sein voluminöses aromatisches Ringsystem erzeugt sterische Konflikte mit Rückgratatomen benachbarter Reste",
+        "Sein Ring fixiert den φ-Winkel und entfernt das Rückgrat-NH, das für Helix-H-Brücken benötigt wird",
+        "Es trägt bei pH 7 eine netto negative Ladung, die das Helixmakrodipol elektrostatisch abstößt",
+        "Es bildet spontan Disulfidbindungen, die das Rückgrat in eine nicht-helikale Geometrie sperren",
+        "Seine Seitenkette konkurriert mit den C=O-Gruppen des Helixrückgrats um den NH-Wasserstoffbrückendonor"
+      ],
+      "correct": 1,
+      "explain": "Die Seitenkette des Prolins ist kovalent an sein eigenes Rückgrat-Stickstoffatom gebunden und bildet einen fünfgliedrigen Pyrrolidinring. Dadurch wird (1) der φ-Winkel auf ca. −60° fixiert und (2) die Rückgrat-NH-Gruppe entfernt, die als Wasserstoffbrückendonor für die α-Helixbildung notwendig ist. Prolin wirkt daher als Helixbrecher, kommt aber häufig an Helix-N-Termini und in engen Schleifen vor.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro010",
+      "topic": "Proteine",
+      "text": "Was geschieht mit einem Protein während der Denaturierung?",
+      "options": [
+        "Peptidbindungen werden hydrolysiert und freie Aminosäuren freigesetzt",
+        "Sekundär- und höherwertige Strukturen gehen verloren, während die Primärsequenz erhalten bleibt",
+        "Nur Disulfidbindungen werden gespalten, während die Sekundärstruktur vollständig intakt bleibt",
+        "Das Protein gewinnt zusätzliche Wasserstoffbrücken und wird geordneter",
+        "Posttranslationale Modifikationen werden selektiv von den Seitenketten abgespalten"
+      ],
+      "correct": 1,
+      "explain": "Denaturierung unterbricht nicht-kovalente Wechselwirkungen (und manchmal Disulfidbindungen) und entfaltet Sekundär-, Tertiär- und Quartärstruktur. Das kovalente Peptidrückgrat bleibt intakt, sodass die Primärsequenz erhalten bleibt. Denaturierende Agenzien: Hitze, extreme pH-Werte, Harnstoff/Guanidiniumchlorid (stören H-Brücken) und SDS (stört hydrophoben Kern). Die Denaturierung kann reversibel (Ribonuklease A) oder irreversibel (gekochtes Eiweiß) sein.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro011",
+      "topic": "Proteine",
+      "text": "Was ist die Rolle molekularer Chaperone bei der Proteinfaltung?",
+      "options": [
+        "Sie synthetisieren die Polypeptidkette durch Katalyse der Peptidbindungsbildung am Ribosom",
+        "Sie binden hydrophobe Bereiche ungefalteter Ketten und verhindern Aggregation",
+        "Sie markieren fehlgefaltete Proteine mit Ubiquitin und liefern sie zum 26S-Proteasom zur Degradation",
+        "Sie schleusen ungefaltete Polypeptide durch Membrankanäle zu ihrem Zielorganell",
+        "Sie katalysieren posttranslationale Modifikationen wie Glykosylierung und Phosphorylierungsereignisse"
+      ],
+      "correct": 1,
+      "explain": "Molekulare Chaperone (z. B. Hsp70, GroEL/GroES, Hsp90) erkennen exponierte hydrophobe Bereiche an naszenten oder stressbedingt entfalteten Polypeptiden, binden sie vorübergehend und verhindern so Aggregation. ATP-getriebene Bindungs- und Freisetzungszyklen geben der Kette mehrere Chancen, ihre native Faltung zu erreichen. Chaperone liefern keine Faltungsinformation — die native Struktur wird allein durch die Aminosäuresequenz bestimmt (Anfinsen-Prinzip).",
+      "explainImg": ""
+    },
+    {
+      "id": "pro012",
+      "topic": "Proteine",
+      "text": "Wo bilden sich Disulfidbindungen in Proteinen, und was verhindert ihre Bildung im Zytoplasma?",
+      "options": [
+        "Im Zytoplasma, wo reaktive Sauerstoffspezies die Oxidation aller exponierten Cysteinreste vorantreiben",
+        "Im ER-Lumen und extrazellulären Raum; das reduzierende Zytoplasma (hohes GSH) verhindert –S–S–-Bildung",
+        "In der mitochondrialen Matrix, wo sie Untereinheiten der Elektronentransportkette stabilisieren",
+        "Im Zellkern, wo sie benachbarte Histonoktamere zur Verdichtung des Chromatins vernetzen",
+        "Am Ribosom, wo sie die wachsende Kette kovalent mit ribosomaler RNA während der Translation verbinden"
+      ],
+      "correct": 1,
+      "explain": "Disulfidbindungen entstehen durch Oxidation zweier Cystein-SH-Gruppen (–S–S– + 2H). Das ER-Lumen ist oxidierend; das Zytoplasma ist stark reduzierend (~1–10 mM Glutathion, GSH) und hält Cysteine im –SH-Zustand. Disulfidbindungen stabilisieren sezernierte und extrazelluläre Proteine (Antikörper, Insulin, Verdauungsenzyme), die unter variablen extrazellulären Bedingungen funktionieren müssen.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro013",
+      "topic": "Proteine",
+      "text": "Welche Information vermittelt ein Ramachandran-Diagramm?",
+      "options": [
+        "Die Änderung der freien Energie der Proteinfaltung als Funktion der Temperatur für jeden Resttyp",
+        "Die sterisch erlaubten φ/ψ-Rückgrat-Dihedralwinkelpaare für Aminosäurereste",
+        "Die Verteilung der Seitenketten-Rotamerkonformationen in Kristallstrukturen",
+        "Die Korrelation des Proteinmolekulargewichts mit der Sedimentationsrate in der Ultrazentrifuge",
+        "Die Geometrie und das Muster der Rückgrat-H-Brücken innerhalb einer einzelnen α-Helixwindung"
+      ],
+      "correct": 1,
+      "explain": "Das Ramachandran-Diagramm (1963) kartiert die sterisch erlaubten Kombinationen der Rückgrat-Dihedralwinkel φ (N-Cα-Bindung) und ψ (Cα-C-Bindung) auf Basis von van-der-Waals-Kriterien. Bevorzugte Bereiche entsprechen der α-Helix (~φ = −57°, ψ = −47°) und dem β-Faltblatt (~φ = −120°, ψ = +120°). Glycin besetzt aufgrund fehlenden Cβ einen viel größeren Bereich; Prolin ist auf einen engen Bereich beschränkt. Das Diagramm dient zur Validierung von Proteinkristallstrukturen.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro014",
+      "topic": "Proteine",
+      "text": "Was ist das definierende strukturelle Merkmal von Kollagen, das Bindegewebe seine Zugfestigkeit verleiht?",
+      "options": [
+        "Eine kompakte globuläre Faltung mit vergrabenen hydrophobem Kern und amphipatischen Helices an der Oberfläche",
+        "Eine Gly-X-Pro-Dreifachhelix aus drei Polyprolin-II-Ketten, aufgewickelt zu einer rechtshändigen Superhelix",
+        "Ein antiparalleles β-Faltblatt mit umfangreichen Interchain-Disulfidbindungen zwischen je zwei Cysteinpaaren",
+        "Eine rechtshändige α-Helix mit kovalenten Quervernetzungen zwischen Hydroxylysin und Lysin benachbarter Ketten",
+        "Ein β-Barrel, dessen hydrophobes Lumen einen geschützten Kanal für Wasser- und Ionentransport bildet"
+      ],
+      "correct": 1,
+      "explain": "Jede Kollagenkette wiederholt Gly–X–Pro/Hyp. Drei linkshändige Polyprolin-II-Ketten wickeln sich zu einer rechtshändigen Superhelix, stabilisiert durch Interchain-Wasserstoffbrücken. Glycin — die kleinste Aminosäure — muss an jeder dritten Position stehen, um in das sterisch beengte Innere der Dreifachhelix zu passen. Hydroxyprolin (durch Prolyl-Hydroxylase unter Vitamin-C-Verbrauch gebildet) ist für diese Stabilität essenziell; Vitamin-C-Mangel führt durch defekte Kollagenquervernetzung zu Skorbut.",
+      "explainImg": ""
+    },
+    {
+      "id": "pro015",
+      "topic": "Proteine",
+      "text": "Was besagt die thermodynamische Hypothese von Anfinsen (Anfinsens Dogma)?",
+      "options": [
+        "Korrekte Faltung erfordert stets ATP-getriebene Chaperone und kann für kein Protein spontan erfolgen",
+        "Der native Zustand hat die höchste freie Energie und wird durch die kinetische Barriere der Disulfidbindungen aufrechterhalten",
+        "Die Sequenz kodiert die Faltung; der native Zustand ist das globale Minimum der freien Energie",
+        "Das Ribosom bestimmt die Tertiärstruktur durch geometrische Einschränkung der wachsenden Polypeptidkette",
+        "Sekundärstrukturen müssen vollständig ausgebildet sein, bevor sich tertiäre Kontakte bilden können"
+      ],
+      "correct": 2,
+      "explain": "Anfinsen zeigte (Nobelpreis 1972), dass vollständig denaturierte Ribonuklease A (entfaltet mit Harnstoff + β-Mercaptoethanol) nach Entfernen der Denaturierungsmittel spontan zu voller enzymatischer Aktivität zurückfaltete. Dies bewies, dass alle Information für die korrekte Faltung in der Primärsequenz kodiert ist. Der native Zustand ist die thermodynamisch stabilste (energieärmste) Struktur. Chaperone unterstützen die Kinetik in vivo, verändern aber nicht das thermodynamische Ergebnis.",
       "explainImg": ""
     }
   ]

@@ -68,6 +68,7 @@ If you edit `text`, `options`, or `explain` in one language, also update the cor
 | Amino Acid Catabolism | `aac` | aac001–aac010 |
 | Urea Cycle | `uc` | uc001–uc010 |
 | Water and pH | `wph` | wph001–wph015 |
+| Proteins | `pro` | pro001–pro015 |
 
 ---
 
