@@ -1,127 +1,1921 @@
 {
   "topics": [
-      "Glykolyse",
-      "Glukoneogenese",
-      "Glykogenstoffwechsel",
-      "Zitronensäurezyklus",
-      "Atmungskette und OXPHOS",
-      "Fettsäureoxidation",
-      "Fettsäurebiosynthese",
-      "Aminosäurekatabolismus",
-      "Harnstoffzyklus"
+    "Glykolyse",
+    "Glukoneogenese",
+    "Glykogenstoffwechsel",
+    "Zitronensäurezyklus",
+    "Atmungskette und OXPHOS",
+    "Fettsäureoxidation",
+    "Fettsäurebiosynthese",
+    "Aminosäurekatabolismus",
+    "Harnstoffzyklus",
+    "Wasser und pH"
   ],
   "questions": [
-    {"id":"gly001","topic":"Glykolyse","text":"Wo findet die Glykolyse statt?","options":["Im Mitochondrium","Im Zytosol","Im Lysosom","Im Zellkern","Im Peroxisom"],"correct":1,"explain":"Die Glykolyse ist ein zytosolischer Stoffwechselweg und läuft vollständig im Zytoplasma ab. Im Gegensatz dazu finden der Citratzyklus und die oxidative Phosphorylierung in den Mitochondrien statt. Diese räumliche Trennung ermöglicht eine unabhängige Regulation beider Wege. Auch unter anaeroben Bedingungen bleibt die Glykolyse im Zytosol aktiv.","explainImg":""},
-    {"id":"gly002","topic":"Glykolyse","text":"Welche Energie wird bei der Hydrolyse von ATP freigesetzt?","options":["−60 kJ/mol","−10 kJ/mol","−45 kJ/mol","−31 kJ/mol","−20 kJ/mol"],"correct":3,"explain":"Bei der Hydrolyse einer Phosphoanhydridbindung des ATP werden unter Standardbedingungen ca. −31 kJ/mol freigesetzt. Dieser Wert erklärt, warum ATP als universeller Energieträger der Zelle gilt. Die freie Energie stammt aus der elektrostatischen Abstoßung der Phosphatgruppen und der Resonanzstabilisierung des entstehenden ADP und anorganischen Phosphats. In der Zelle kann der tatsächliche Wert aufgrund der Ionenkonzentrationen noch höher liegen.","explainImg":"images/gly002.svg"},
-    {"id":"gly003","topic":"Glykolyse","text":"Was unterscheidet die aerobe von der anaeroben Glykolyse?","options":["Das weitere Schicksal des gebildeten Pyruvats","Die Anzahl der verbrauchten ATP-Moleküle","Die Aktivität der Phosphofructokinase 1","Die Anzahl der durchlaufenen Reaktionsschritte","Den Ort der Glucose-Phosphorylierung"],"correct":0,"explain":"Die Glykolyse selbst verläuft in beiden Fällen identisch und endet mit Pyruvat. Der entscheidende Unterschied liegt im weiteren Schicksal des Pyruvats: aerob wird es in die Mitochondrien importiert und zu Acetyl-CoA decarboxyliert. Anaerob hingegen wird Pyruvat im Zytosol durch die Lactatdehydrogenase zu Lactat reduziert, um NAD⁺ zu regenerieren.","explainImg":"images/gly003.svg"},
-    {"id":"gly004","topic":"Glykolyse","text":"Welches Produkt entsteht beim anaeroben Abbau von Pyruvat im Zytosol?","options":["Citrat","Acetyl-CoA","Succinat","Oxalacetat","Lactat"],"correct":4,"explain":"Unter anaeroben Bedingungen wird Pyruvat durch die Lactatdehydrogenase (LDH) zu Lactat reduziert. Dabei wird NADH zu NAD⁺ reoxidiert, was für die Fortsetzung der Glykolyse unerlässlich ist. Lactat wird ins Blut abgegeben und kann in der Leber im Rahmen des Cori-Zyklus wieder zu Glucose umgewandelt werden. Klinisch steigt Lactat bei Hypoxie, Sepsis und intensiver körperlicher Belastung.","explainImg":""},
-    {"id":"gly005","topic":"Glykolyse","text":"Wie lautet die korrekte Nettobilanz der Glykolyse?","options":["Glucose + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Pyruvat + 2 NADH + 4 ATP + 2 H₂O","Glucose + 4 ADP → 2 Pyruvat + 4 ATP + 2 CO₂","Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Pyruvat + 2 NADH + 2 ATP + 2 H₂O","Glucose + 2 ADP + 2 Pᵢ → 2 Pyruvat + 2 ATP + 2 NADH + 2 CO₂","Glucose + 2 NADH → 2 Pyruvat + 2 NAD⁺ + 4 ATP"],"correct":2,"explain":"Die Nettobilanz der Glykolyse ergibt 2 ATP (4 gebildet minus 2 verbraucht in Phase 1), 2 NADH und 2 Pyruvat pro Glucose. Das NADH kann unter aeroben Bedingungen in der Atmungskette weitere ATP liefern. Wichtig: Es entsteht kein CO₂ in der Glykolyse — CO₂ wird erst bei der oxidativen Decarboxylierung von Pyruvat freigesetzt.","explainImg":""},
-    {"id":"gly006","topic":"Glykolyse","text":"Welche drei Enzyme gelten als Schlüsselenzyme der Glykolyse?","options":["Glucokinase, Aldolase, Pyruvatdehydrogenase","Hexokinase, Phosphofructokinase 1, Pyruvatkinase","Lactatdehydrogenase, Hexokinase, Phosphoglyceratkinase","Aldolase, Enolase, Phosphoglyceratmutase","Phosphoglyceratkinase, Triosephosphatisomerase, Enolase"],"correct":1,"explain":"Die drei Schlüsselenzyme der Glykolyse katalysieren irreversible, stark exergone Reaktionen und sind Hauptangriffspunkte der Regulation. Hexokinase phosphoryliert Glucose zu Glucose-6-phosphat; PFK-1 ist das wichtigste regulatorische Enzym; Pyruvatkinase katalysiert den letzten ATP-liefernden Schritt. Alle drei unterliegen allosterischer und hormoneller Kontrolle.","explainImg":""},
-    {"id":"gly007","topic":"Glykolyse","text":"Durch welche Substanz wird die Phosphofructokinase 1 allosterisch aktiviert?","options":["ATP","Citrat","Glucose-6-phosphat","Phosphoenolpyruvat","Fructose-2,6-bisphosphat"],"correct":4,"explain":"Fructose-2,6-bisphosphat ist der stärkste allosterische Aktivator der PFK-1 und ein zentrales Regulationsmolekül. Es wird durch PFK-2 gebildet, deren Aktivität hormonell gesteuert wird: Insulin fördert, Glucagon hemmt die PFK-2-Aktivität. ATP und Citrat hemmen die PFK-1 (Energieüberschuss), während AMP und ADP sie aktivieren.","explainImg":""},
-    {"id":"gly008","topic":"Glykolyse","text":"Welches Hormon hemmt die Transkription der Hexokinase?","options":["Glucagon","Insulin","Thyroxin","Adrenalin","Cortisol"],"correct":0,"explain":"Glucagon signalisiert einen niedrigen Blutzucker und hemmt die Transkription glykolytischer Enzyme wie der Hexokinase. Insulin hat den entgegengesetzten Effekt und steigert deren Expression. Diese hormonelle Kontrolle der Genexpression ermöglicht eine langfristige Anpassung der Glykolyserate an den Ernährungszustand. Glucagon fördert gleichzeitig die Gluconeogenese in der Leber.","explainImg":""},
-    {"id":"gly009","topic":"Glykolyse","text":"Was beschreibt der Cori-Zyklus?","options":["Synthese von Glucose aus Aminosäuren im Muskel","Regeneration von NAD⁺ durch den Citratzyklus in der Leber","Abbau von Fettsäuren zu Acetyl-CoA in der Leber","Umwandlung von Lactat zu Glucose zwischen Muskel und Leber","Transport von Pyruvat aus dem Zytosol in die Mitochondrien"],"correct":3,"explain":"Im Cori-Zyklus wird Lactat, das beim anaeroben Muskelstoffwechsel entsteht, über das Blut zur Leber transportiert. Dort wird es durch Gluconeogenese wieder zu Glucose umgewandelt (2 Lactat → 1 Glucose), die erneut dem Muskel zur Verfügung gestellt wird. Der Zyklus kostet netto Energie (6 ATP-Äquivalente pro Glucose) und findet hauptsächlich bei intensiver körperlicher Belastung statt.","explainImg":"images/gly009.svg"},
-    {"id":"gly010","topic":"Glykolyse","text":"Welche Aussage zur Regulation der Pyruvatkinase ist korrekt?","options":["Sie wird durch Citrat allosterisch aktiviert","Sie wird durch Fructose-1,6-bisphosphat aktiviert","Sie wird durch Glucose-6-phosphat allosterisch gehemmt","Insulin hemmt die Expression des Pyruvatkinasegens","Sie wird durch AMP allosterisch gehemmt"],"correct":1,"explain":"Die Pyruvatkinase wird durch Fructose-1,6-bisphosphat im Sinne einer Feedforward-Aktivierung stimuliert: Wenn PFK-1 aktiv ist und Fructose-1,6-bisphosphat akkumuliert, wird die Pyruvatkinase vorab aktiviert. Sie wird gehemmt durch ATP und Alanin (Energieüberschuss bzw. ausreichend Aminosäuren). Insulin steigert die Expression des Pyruvatkinasegens — der gegenteilige Effekt zu Option D.","explainImg":""},
-    {"id":"gly011","topic":"Glykolyse","text":"Was unterscheidet die Glucokinase von der Hexokinase?","options":["Glucokinase kommt in Erythrozyten vor, Hexokinase in der Leber","Glucokinase hat eine niedrigere Km für Glucose als Hexokinase","Glucokinase wird nicht durch Glucose-6-phosphat gehemmt","Glucokinase katalysiert die Phosphorylierung von Fructose","Glucokinase verbraucht GTP statt ATP bei der Reaktion"],"correct":2,"explain":"Glucokinase (Hexokinase IV) kommt hauptsächlich in der Leber und in Betazellen des Pankreas vor. Sie hat eine hohe Km (geringe Affinität) für Glucose, ist nicht durch Glucose-6-phosphat hemmbar und wird durch Insulin induziert. Diese Eigenschaften machen sie zum Glucosesensor der Leber: Sie wird nur bei hohem Blutzucker aktiv und passt die Glucosephosphorylierung dem Angebot an.","explainImg":""},
-    {"id":"gly012","topic":"Glykolyse","text":"Welche Kombination hemmt die Phosphofructokinase 1 allosterisch?","options":["ATP und Citrat","AMP und Fructose-2,6-bisphosphat","ADP und Glucose-6-phosphat","NAD⁺ und Oxalacetat","Insulin und Glucagon"],"correct":0,"explain":"Hohe ATP-Spiegel signalisieren Energieüberschuss und hemmen PFK-1, um die Glykolyse zu verlangsamen. Citrat, ein Zwischenprodukt des Citratzyklus, hemmt PFK-1 ebenfalls und zeigt an, dass die Zelle ausreichend Biosynthesevorstufen hat. Im Gegensatz dazu aktivieren AMP und ADP (Energiemangel) sowie Fructose-2,6-bisphosphat die PFK-1.","explainImg":""},
-    {"id":"gly013","topic":"Glykolyse","text":"Wie viele ATP-Moleküle werden netto direkt in der Glykolyse produziert?","options":["4 ATP, da in Phase 3 vier Moleküle gebildet werden","1 ATP, da nur ein Substratkettenphosphorylierungsschritt vorliegt","6 ATP, da zusätzlich das NADH eingerechnet wird","2 ATP, da in Phase 1 zwei verbraucht und in Phase 3 vier gebildet werden","8 ATP, da Glucose sechs Kohlenstoffatome besitzt"],"correct":3,"explain":"In Phase 1 (Investitionsphase) werden 2 ATP verbraucht (Hexokinase und PFK-1). In Phase 3 (Gewinnungsphase) werden 4 ATP gebildet (je 2 × Phosphoglyceratkinase und Pyruvatkinase). Der Nettgewinn beträgt also 2 ATP pro Glucose. Das produzierte NADH liefert unter aeroben Bedingungen weitere ATP — aber erst in der Atmungskette, nicht in der Glykolyse selbst.","explainImg":"images/gly013.svg"},
-    {"id":"gly014","topic":"Glykolyse","text":"Bei welchem klinischen Zustand ist ein erhöhter Lactat-Blutspiegel am wahrscheinlichsten?","options":["Hyperglykämie bei unkontrolliertem Typ-2-Diabetes","Langzeitfasten ohne körperliche Belastung","Erhöhter Insulinspiegel nach einer Mahlzeit","Chronische Niereninsuffizienz ohne Azidose","Gewebshypoxie bei Schock oder schwerer Sepsis"],"correct":4,"explain":"Bei Gewebshypoxie (z.B. Schock, Sepsis, Herzstillstand) kann die Atmungskette nicht ausreichend NADH oxidieren, sodass Pyruvat verstärkt zu Lactat reduziert wird. Dies führt zur Laktatazidose. Ein Lactat > 2 mmol/L ist ein klinischer Warnwert; Werte > 4 mmol/L weisen auf ein erhöhtes Mortalitätsrisiko hin. Regelmäßige Lactatmessungen sind daher in der Intensivmedizin Standard.","explainImg":""},
-    {"id":"gly015","topic":"Glykolyse","text":"Was ist das Endprodukt der Phase 1 der Glykolyse?","options":["Glucose-1-phosphat","Phosphoenolpyruvat","Fructose-1,6-bisphosphat","Glycerinaldehyd-3-phosphat","1,3-Bisphosphoglycerat"],"correct":2,"explain":"Phase 1 der Glykolyse (Investitionsphase) umfasst die Umwandlung von Glucose in Fructose-1,6-bisphosphat unter Verbrauch von 2 ATP. Schlüsselenzyme sind Hexokinase (Schritt 1) und Phosphofructokinase 1 (Schritt 3). Das entstehende Fructose-1,6-bisphosphat wird in Phase 2 durch die Aldolase in zwei C3-Körper gespalten: Glycerinaldehyd-3-phosphat (GAP) und Dihydroxyacetonphosphat (DHAP).","explainImg":"images/gly015.svg"},
-    {"id":"gcn001","topic":"Glukoneogenese","text":"Wo findet die Gluconeogenese hauptsächlich statt?","options":["Im Skelettmuskel und im Gehirn","Im Fettgewebe und in der Milz","Im Herzmuskel und im Dünndarm","In der Lunge und im Knochenmark","In der Leber und in der Niere"],"correct":4,"explain":"Die Gluconeogenese findet hauptsächlich in der Leber statt, die bis zu 90 % der Neusynthese übernimmt. Die Niere trägt vor allem beim Langzeitfasten und bei Azidose bei. Andere Organe wie Muskel oder Gehirn können keine nennenswerte Gluconeogenese betreiben, da ihnen entscheidende Enzyme fehlen (z.B. Glucose-6-Phosphatase).","explainImg":""},
-    {"id":"gcn002","topic":"Glukoneogenese","text":"Welches sind die drei Hauptausgangssubstrate der Gluconeogenese?","options":["Glucose, Fructose und Galactose","Lactat, Aminosäuren und Glycerol","Fettsäuren, Cholesterin und Ketonkörper","Acetyl-CoA, NADH und ATP","Pyruvat, CO₂ und GTP"],"correct":1,"explain":"Die wichtigsten Substrate für die Gluconeogenese sind Lactat (aus anaerober Glykolyse, Cori-Zyklus), glukogene Aminosäuren (z.B. Alanin aus dem Muskelabbau beim Fasten) und Glycerol (aus der Lipolyse im Fettgewebe). Fettsäuren können beim Menschen nicht zu Glucose umgewandelt werden, da Acetyl-CoA nicht in die Gluconeogenese eingeschleust werden kann.","explainImg":""},
-    {"id":"gcn003","topic":"Glukoneogenese","text":"Warum kann die Gluconeogenese nicht einfach die Glykolyse rückwärts ablaufen lassen?","options":["Weil andere Coenzyme in entgegengesetzter Richtung benötigt werden","Weil Glucose in der Leber nicht phosphoryliert werden kann","Weil NADH für die Rückreaktion nicht verfügbar ist","Weil drei glykolytische Reaktionen thermodynamisch irreversibel sind","Weil Pyruvat nicht in die Mitochondrien transportiert werden kann"],"correct":3,"explain":"Drei Reaktionen der Glykolyse sind unter physiologischen Bedingungen irreversibel: die Reaktionen der Hexokinase, der Phosphofructokinase 1 und der Pyruvatkinase. Diese müssen in der Gluconeogenese durch spezifische Umgehungsreaktionen mit eigenen Enzymen ersetzt werden. Die restlichen sieben Reaktionen der Glykolyse können in beiden Richtungen ablaufen.","explainImg":""},
-    {"id":"gcn004","topic":"Glukoneogenese","text":"Welches Enzym katalysiert den ersten Schritt der Gluconeogenese, ausgehend von Pyruvat?","options":["Pyruvatcarboxylase","PEP-Carboxykinase","Fructose-1,6-bisphosphatase","Glucose-6-Phosphatase","Pyruvatdehydrogenase"],"correct":0,"explain":"Die Pyruvatcarboxylase befindet sich in den Mitochondrien und katalysiert die ATP-abhängige Carboxylierung von Pyruvat zu Oxalacetat unter Verbrauch von HCO₃⁻. Sie benötigt Biotin als Cofaktor. Acetyl-CoA ist ein allosterischer Aktivator der Pyruvatcarboxylase — ein Signal, dass ausreichend Substrate für den Citratzyklus vorhanden sind und überschüssiges Pyruvat in die Gluconeogenese umgeleitet werden soll.","explainImg":""},
-    {"id":"gcn005","topic":"Glukoneogenese","text":"In welchem Zellkompartiment wird Oxalacetat durch die PEP-Carboxykinase zu PEP umgewandelt?","options":["Im Intermembranraum der Mitochondrien","Im endoplasmatischen Retikulum","Im Zytosol","In der mitochondrialen Matrix","Im Zellkern"],"correct":2,"explain":"Die PEP-Carboxykinase (PEPCK) ist ein zytosolisches Enzym, das Oxalacetat unter Verbrauch von GTP zu Phosphoenolpyruvat (PEP) und CO₂ umwandelt. Da Oxalacetat die innere Mitochondrienmembran nicht direkt passieren kann, wird es zunächst zu Malat reduziert, ins Zytosol transportiert und dort wieder zu Oxalacetat oxidiert, bevor PEPCK es zu PEP umwandelt.","explainImg":"images/gcn005.svg"},
-    {"id":"gcn006","topic":"Glukoneogenese","text":"Welches Enzym der Gluconeogenese ist im endoplasmatischen Retikulum lokalisiert?","options":["Pyruvatcarboxylase","Fructose-1,6-bisphosphatase","PEP-Carboxykinase","Phosphoglyceratkinase","Glucose-6-Phosphatase"],"correct":4,"explain":"Die Glucose-6-Phosphatase ist im endoplasmatischen Retikulum (ER) lokalisiert und katalysiert den letzten Schritt der Gluconeogenese: die Abspaltung des Phosphatrests von Glucose-6-phosphat zu freier Glucose. Nur Leber und Niere besitzen dieses Enzym, was erklärt, warum nur diese Organe Glucose ins Blut abgeben können. Ihr Fehlen verursacht Morbus von Gierke.","explainImg":""},
-    {"id":"gcn007","topic":"Glukoneogenese","text":"Wie lautet die korrekte Energiebilanz der Gluconeogenese für die Bildung von 1 Glucose aus 2 Pyruvat?","options":["Verbrauch von 2 ATP und 2 GTP, kein NADH benötigt","Verbrauch von 4 ATP, 2 GTP und 2 NADH","Verbrauch von 6 ATP und 2 FADH₂, kein GTP benötigt","Verbrauch von 2 ATP und 4 NADH, kein GTP benötigt","Verbrauch von 8 ATP und 4 GTP, 4 NADH benötigt"],"correct":1,"explain":"Die Gluconeogenese aus 2 Pyruvat benötigt: 2 ATP für Pyruvatcarboxylase, 2 GTP für PEPCK, 2 ATP für Phosphoglyceratkinase (Rückreaktion) und 2 NADH für die Umkehr der Glycerinaldehyd-3-phosphat-Dehydrogenase. Die Gesamtbilanz beträgt 4 ATP + 2 GTP + 2 NADH — deutlich mehr Energie als die Glykolyse liefert. Gluconeogenese wird durch Glucosemangel angetrieben, nicht durch Energieüberschuss.","explainImg":""},
-    {"id":"gcn008","topic":"Glukoneogenese","text":"Was stimuliert die Fructose-1,6-bisphosphatase allosterisch?","options":["AMP und Fructose-2,6-bisphosphat","ATP und Glucose-6-phosphat","Insulin und Pyruvat","Citrat","NADH und Oxalacetat"],"correct":3,"explain":"Citrat aktiviert die Fructose-1,6-bisphosphatase und hemmt gleichzeitig die PFK-1 — ein klassisches Beispiel für reziproke Regulation. Hohe Citratspiegel signalisieren, dass der Citratzyklus gesättigt ist und Glucose eher gespeichert als verbrannt werden sollte. AMP und Fructose-2,6-bisphosphat hingegen hemmen die Bisphosphatase und aktivieren die PFK-1, um die Glykolyse bei Energiemangel anzutreiben.","explainImg":"images/gcn008.svg"},
-    {"id":"gcn009","topic":"Glukoneogenese","text":"Welcher Mechanismus treibt die Gluconeogenese an, wenn Lactat im Blut ansteigt?","options":["Massenwirkungsgesetz: höhere Substratkonzentration treibt die Reaktion in Richtung Glucose","Allosterische Aktivierung der Pyruvatcarboxylase durch Lactat","Hormonelle Induktion der PEPCK durch Lactat direkt","Aktivierung der Glucose-6-Phosphatase durch erhöhtes Lactat","Hemmung der Glykolyse durch Lactat über PFK-1"],"correct":0,"explain":"Die Gluconeogenese wird durch Substratverfügbarkeit (Massenwirkungsgesetz) reguliert: Steigen die Konzentrationen von Lactat, Alanin oder Glycerol im Blut, wird die Gluconeogenese allein durch das chemische Gleichgewicht angetrieben, ohne dass Hormone eingreifen müssen. Beim Cori-Zyklus liefert der Muskel Lactat, das in der Leber direkt zur Glucosesynthese genutzt wird.","explainImg":""},
-    {"id":"gcn010","topic":"Glukoneogenese","text":"Wie beeinflusst Glucagon die Gluconeogenese auf hormoneller Ebene?","options":["Glucagon hemmt die Gluconeogenese durch Aktivierung von FOXO1","Glucagon hemmt die PEPCK-Genexpression über cAMP","Glucagon steigert die PEPCK-Genexpression über cAMP und CREB","Glucagon aktiviert Insulin-Rezeptoren in Hepatozyten","Glucagon steigert die Glykolyse und hemmt die Gluconeogenese"],"correct":2,"explain":"Glucagon bindet an seinen G-Protein-gekoppelten Rezeptor in Hepatozyten und erhöht den intrazellulären cAMP-Spiegel. cAMP aktiviert die Proteinkinase A, die den Transkriptionsfaktor CREB phosphoryliert. Phosphoryliertes CREB steigert die Transkription von PEPCK und Glucose-6-Phosphatase. Cortisol wirkt synergistisch über den Glucocorticoid-Rezeptor. Diese Induktion dauert Stunden bis Tage.","explainImg":""},
-    {"id":"gcn011","topic":"Glukoneogenese","text":"Wie hemmt Insulin die Gluconeogenese auf molekularer Ebene?","options":["Insulin aktiviert CREB und steigert die PEPCK-Transkription","Insulin hemmt die Pyruvatcarboxylase durch direkten Kontakt","Insulin aktiviert FOXO1 und steigert die PEPCK-Expression","Insulin senkt den cAMP-Spiegel durch Hemmung der Adenylatcyclase direkt","Insulin phosphoryliert und inaktiviert FOXO1, das sonst PEPCK fördert"],"correct":4,"explain":"Insulin aktiviert über den PI3K/Akt-Signalweg die Proteinkinase Akt (PKB), die den Transkriptionsfaktor FOXO1 phosphoryliert. Phosphoryliertes FOXO1 verlässt den Zellkern und kann die Transkription von PEPCK und Glucose-6-Phosphatase nicht mehr fördern. FOXO1 ist im aktiven (unphosphorylierten) Zustand ein Promotor der Gluconeogenese — Insulin schaltet ihn durch Phosphorylierung ab.","explainImg":""},
-    {"id":"gcn012","topic":"Glukoneogenese","text":"Welche Aussage zu Morbus von Gierke (Typ 1a) ist korrekt?","options":["Ursache ist ein Defekt der Fructose-1,6-bisphosphatase","Ursache ist ein Defekt der Glucose-6-Phosphatase","Ursache ist ein Defekt der Pyruvatcarboxylase","Ursache ist ein Defekt der PEP-Carboxykinase","Ursache ist ein Defekt der Lactatdehydrogenase"],"correct":1,"explain":"Morbus von Gierke Typ 1a wird autosomal-rezessiv vererbt und beruht auf einem Defekt der Glucose-6-Phosphatase im ER. Ohne dieses Enzym kann Glucose-6-phosphat weder aus der Gluconeogenese noch aus dem Glykogenabbau zu freier Glucose umgewandelt werden. Folgen sind schwere Nüchternhypoglykämien, Hepatomegalie durch Glykogenakkumulation, Lactatazidose und erhöhte Harnsäure- und Triglyceridspiegel.","explainImg":""},
-    {"id":"gcn013","topic":"Glukoneogenese","text":"Warum können Fettsäuren beim Menschen nicht zur Gluconeogenese beitragen?","options":["Weil Fettsäuren keine Mitochondrien erreichen können","Weil der Fettsäureabbau kein ATP erzeugt","Weil Fettsäuren direkt zu CO₂ und H₂O oxidiert werden","Weil Acetyl-CoA nicht in Oxalacetat oder PEP umgewandelt werden kann","Weil Fettsäuren die Pyruvatcarboxylase kompetitiv hemmen"],"correct":3,"explain":"Der β-Oxidationsabbau von Fettsäuren endet in Acetyl-CoA. Im Citratzyklus wird Acetyl-CoA vollständig zu CO₂ oxidiert — es gibt keinen Nettogewinn an Oxalacetat oder anderen C4-Körpern, die in die Gluconeogenese eingespeist werden könnten. Daher sind Fettsäuren keine gluconeogenen Substrate. Glycerol (aus Triglyceriden) hingegen kann als Glycerol-3-phosphat in die Gluconeogenese eintreten.","explainImg":""},
-    {"id":"gcn014","topic":"Glukoneogenese","text":"Bei welchem Zustand ist die Gluconeogenese am stärksten aktiviert?","options":["Langzeitfasten mit hohem Glucagon- und Cortisolspiegel","Kurz nach einer kohlenhydratreichen Mahlzeit","Während intensiver anaerober Muskelarbeit allein","Bei hohem Insulinspiegel und gefüllten Glykogenspeichern","Bei ausschließlicher Fetternährung ohne Proteinzufuhr"],"correct":0,"explain":"Beim Langzeitfasten sind Glucagon und Cortisol dauerhaft erhöht. Glucagon induziert über cAMP/CREB die Transkription von PEPCK und Glucose-6-Phosphatase; Cortisol wirkt synergistisch. Gleichzeitig liefern Muskelproteolyse (Alanin) und Lipolyse (Glycerol) reichlich Substrate. Insulin ist supprimiert, sodass FOXO1 aktiv bleibt und die Gluconeogenese-Enzyme weiter hochreguliert bleiben.","explainImg":""},
-    {"id":"gcn015","topic":"Glukoneogenese","text":"Welches Medikament hemmt die Gluconeogenese und wird als Erstlinientherapie bei Typ-2-Diabetes eingesetzt?","options":["Glibenclamid (Sulfonylharnstoff)","Sitagliptin (DPP-4-Hemmer)","Metformin (Biguanid)","Empagliflozin (SGLT-2-Hemmer)","Insulin glargin (Langzeitinsulin)"],"correct":2,"explain":"Metformin ist das meistverordnete orale Antidiabetikum weltweit. Es hemmt den Komplex I der mitochondrialen Atmungskette, was den AMP/ATP-Quotienten erhöht und AMPK aktiviert. AMPK phosphoryliert und inaktiviert CREB-Koaktivatoren (PGC-1α/TORC2), wodurch die Transkription von PEPCK und Glucose-6-Phosphatase abnimmt. Das Ergebnis ist eine deutliche Reduktion der hepatischen Gluconeogenese.","explainImg":""},
-    {"id":"glg001","topic":"Glykogenstoffwechsel","text":"Welches Enzym fügt Glucosereste am nicht-reduzierenden Ende des Glykogens hinzu?","options":["Glykogenphosphorylase","Glykogensynthase","Verzweigungsenzym","UDP-Glucose-Pyrophosphorylase","Entästelungsenzym"],"correct":1,"explain":"Die Glykogensynthase verlängert Glykogenketten durch Anfügen von UDP-Glucose an die nicht-reduzierenden Enden über α(1→4)-glykosidische Bindungen. Sie benötigt einen bereits vorhandenen Glykogenprimer (mindestens 4 Reste) oder das Protein Glykogenin als Initiator.","explainImg":""},
-    {"id":"glg002","topic":"Glykogenstoffwechsel","text":"Was ist die aktivierte Form der Glucose, die bei der Glykogensynthese verwendet wird?","options":["Glucose-1-phosphat","Glucose-6-phosphat","UDP-Glucose","ADP-Glucose","GDP-Glucose"],"correct":2,"explain":"Glucose muss durch UDP-Glucose-Pyrophosphorylase zu UDP-Glucose aktiviert werden, bevor sie in Glykogen eingebaut werden kann. Das dabei verwendete UTP wird zu UMP + PPi hydrolysiert; die anschließende Pyrophosphatase-Aktivität treibt die Reaktion voran.","explainImg":""},
-    {"id":"glg003","topic":"Glykogenstoffwechsel","text":"Die Glykogenphosphorylase spaltet Glykogen durch:","options":["Hydrolyse mit Wasser","Phosphorolyse mit anorganischem Phosphat","Transferasereaktion","Oxidative Spaltung","Lysosomale α-Glucosidase-Aktivität"],"correct":1,"explain":"Die Glykogenphosphorylase führt eine Phosphorolyse durch: Sie verwendet anorganisches Phosphat (Pi), um α(1→4)-Bindungen an nicht-reduzierenden Enden zu spalten und Glucose-1-phosphat freizusetzen. Dies ist energetisch vorteilhaft, da Glucose-1-phosphat bereits phosphoryliert ist.","explainImg":""},
-    {"id":"glg004","topic":"Glykogenstoffwechsel","text":"Die Von-Gierke-Krankheit (GSD Typ I) entsteht durch einen Mangel an:","options":["Glykogensynthase","Glucose-6-phosphatase","Entästelungsenzym","Saure Maltase (α-Glucosidase)","Leberglykogenphosphorylase"],"correct":1,"explain":"Die Von-Gierke-Krankheit wird durch Glucose-6-phosphatase-Mangel verursacht. Ohne dieses Enzym kann die Leber keine freie Glucose aus Glykogenolyse oder Glukoneogenese ins Blut abgeben. Dies führt zu schwerer Nüchternhypoglykämie und massiver hepatischer Glykogenakkumulation.","explainImg":""},
-    {"id":"glg005","topic":"Glykogenstoffwechsel","text":"Welches Hormon aktiviert die Glykogenolyse in der Leber über einen cAMP-abhängigen Weg?","options":["Insulin","Glukagon","Kortisol","Aldosteron","Somatostatin"],"correct":1,"explain":"Glukagon bindet an seinen GPCR auf Hepatozyten → Adenylatcyclase → cAMP → PKA-Aktivierung → Phosphorylasekinase-Aktivierung → Glykogenphosphorylase-Aktivierung. Gleichzeitig phosphoryliert PKA die Glykogensynthase und inaktiviert sie, um Substratkreisläufe zu verhindern.","explainImg":""},
-    {"id":"glg006","topic":"Glykogenstoffwechsel","text":"Das Entästelungsenzym hat zwei katalytische Aktivitäten. Welches Paar ist korrekt?","options":["Kinase + Phosphatase","4-α-Glucanotransferase + Amylo-1,6-Glucosidase","Synthase + Phosphorylase","Isomerase + Lyase","Hydrolase + Mutase"],"correct":1,"explain":"Das Entästelungsenzym überträgt zunächst einen Trisaccharid-Rest vom Ast auf die Hauptkette (Transferase-Aktivität), dann hydrolysiert es die verbleibende einzelne Glucose an der Verzweigungsstelle (Glucosidase-Aktivität) und setzt freie Glucose (nicht Glucose-1-phosphat) frei.","explainImg":""},
-    {"id":"glg007","topic":"Glykogenstoffwechsel","text":"Die McArdle-Krankheit (GSD Typ V) ist durch Muskelkrämpfe bei körperlicher Belastung aufgrund eines Mangels an __ gekennzeichnet:","options":["Saure Maltase","Leberphosphorylase","Muskelglykogenphosphorylase","Verzweigungsenzym","Phosphofructokinase"],"correct":2,"explain":"Die McArdle-Krankheit entsteht durch einen Mangel an Muskelglykogenphosphorylase. Der Muskel kann Glykogen bei Belastung nicht mobilisieren, was zu Energiemangel, schmerzhaften Krämpfen und Myoglobinurie führt. Der Blutlaktatspiegel steigt nach ischämischer Unterarmbelastung nicht an.","explainImg":""},
-    {"id":"glg008","topic":"Glykogenstoffwechsel","text":"Die Glykogensynthase ist maximal aktiv in ihrer:","options":["Phosphorylierten Form","Dephosphorylierten Form","AMP-gebundenen Form","Glukagon-stimulierten Form","Citrat-inhibierten Form"],"correct":1,"explain":"Die Glykogensynthase ist aktiv (a-Form), wenn sie dephosphoryliert ist, und inaktiv (b-Form), wenn sie phosphoryliert ist. Insulin fördert die Glykogensynthese durch Aktivierung der Proteinphosphatase 1 (PP1), die die Glykogensynthase dephosphoryliert und aktiviert.","explainImg":""},
-    {"id":"glg009","topic":"Glykogenstoffwechsel","text":"Welches Protein fungiert als Primer für die Glykogensynthese, indem es die ersten Glucosereste aufnimmt?","options":["Glykogenin","Glykogensynthase","Phosphoglucomutase","Laforin","Verzweigungsenzym"],"correct":0,"explain":"Glykogenin ist ein selbst-glukosylierendes Protein, das den Primer für die Glykogensynthese bildet. Es bindet die erste Glucose an einen Tyrosinrest und verlängert die Kette auf ~8 Reste, bevor die Glykogensynthase übernimmt.","explainImg":""},
-    {"id":"glg010","topic":"Glykogenstoffwechsel","text":"Insulin fördert die Glykogensynthese durch Aktivierung welcher Phosphatase, die die Glykogensynthase dephosphoryliert?","options":["Proteinphosphatase 1 (PP1)","Proteinphosphatase 2A (PP2A)","Calcineurin (PP2B)","PTP1B","Phosphorylasekinase"],"correct":0,"explain":"Das Insulin-Signaling aktiviert PP1 durch Akt-vermittelte Phosphorylierung ihrer regulatorischen Untereinheit. PP1 dephosphoryliert dann die Glykogensynthase (Aktivierung) und Glykogenphosphorylase (Inaktivierung) und fördert koordiniert die Glykogensynthese.","explainImg":""},
-    {"id":"tca001","topic":"Zitronensäurezyklus","text":"Welches Enzym katalysiert die Kondensationsreaktion, die den Zitronensäurezyklus einleitet?","options":["Citratsynthase","Isocitratdehydrogenase","Aconitase","Malatdehydrogenase","Fumarase"],"correct":0,"explain":"Die Citratsynthase kondensiert Acetyl-CoA (2C) mit Oxalacetat (4C) zu Citrat (6C). Dies ist der Eintrittspunkt des Zitronensäurezyklus. Das Enzym wird durch den Energiestatus der Zelle reguliert: gehemmt durch ATP, NADH und Succinyl-CoA.","explainImg":""},
-    {"id":"tca002","topic":"Zitronensäurezyklus","text":"Wie viele NADH-Moleküle werden pro vollständigem Durchgang des Zitronensäurezyklus produziert?","options":["1","2","4","3","5"],"correct":3,"explain":"Pro Durchgang werden drei NADH-Moleküle produziert: bei Isocitratdehydrogenase, α-Ketoglutaratdehydrogenase und Malatdehydrogenase. Außerdem wird ein FADH₂ an der Succinatdehydrogenase und ein GTP an der Succinyl-CoA-Synthetase produziert.","explainImg":""},
-    {"id":"tca003","topic":"Zitronensäurezyklus","text":"Welches Zwischenprodukt des Zitronensäurezyklus ist ein wichtiger Vorläufer für die Hämsynthese?","options":["Succinyl-CoA","Citrat","Fumarat","Malat","α-Ketoglutarat"],"correct":0,"explain":"Succinyl-CoA kondensiert mit Glycin (katalysiert durch ALA-Synthase, die Pyridoxalphosphat benötigt) zu δ-Aminolävulinsäure (ALA), dem ersten regulierten Schritt der Hämbiosynthese. Diese Reaktion findet in der Mitochondrienmatrix statt.","explainImg":""},
-    {"id":"tca004","topic":"Zitronensäurezyklus","text":"Welches Enzym des Zitronensäurezyklus produziert direkt GTP durch Substratkettenphosphorylierung?","options":["Isocitratdehydrogenase","Succinatdehydrogenase","Fumarase","Aconitase","Succinyl-CoA-Synthetase"],"correct":4,"explain":"Die Succinyl-CoA-Synthetase (auch Succinyl-CoA-Thiokinase) koppelt die Hydrolyse der energiereichen Thioesterbindung in Succinyl-CoA an die Phosphorylierung von GDP zu GTP (oder ADP zu ATP in manchen Geweben).","explainImg":""},
-    {"id":"tca005","topic":"Zitronensäurezyklus","text":"Thiaminmangel (Vitamin B1) beeinträchtigt den Zitronensäurezyklus durch Beeinflussung welches Enzymkomplexes?","options":["Citratsynthase","Pyruvatdehydrogenase und α-Ketoglutaratdehydrogenase","Succinatdehydrogenase","Aconitase","Malatdehydrogenase"],"correct":1,"explain":"Thiaminpyrophosphat (TPP) ist ein essenzieller Cofaktor sowohl für den Pyruvatdehydrogenase-Komplex (PDH) als auch für den α-Ketoglutaratdehydrogenase-Komplex (α-KGDH). Thiaminmangel verursacht Wernicke-Enzephalopathie und Beriberi.","explainImg":""},
-    {"id":"tca006","topic":"Zitronensäurezyklus","text":"Die Succinatdehydrogenase ist unter den Enzymen des Zitronensäurezyklus einzigartig, da sie:","options":["Im Matrix gelöst vorliegt","In die innere Mitochondrienmembran (Komplex II) eingebettet ist","Im Zytosol lokalisiert ist","Mit der äußeren Mitochondrienmembran assoziiert ist","Ein GTP-produzierendes Enzym ist"],"correct":1,"explain":"Die Succinatdehydrogenase ist das einzige Enzym des Zitratzyklus, das in die innere Mitochondrienmembran eingebettet ist. Sie ist identisch mit Komplex II der Atmungskette — sie oxidiert Succinat zu Fumarat und reduziert FAD zu FADH₂.","explainImg":""},
-    {"id":"tca007","topic":"Zitronensäurezyklus","text":"Welche Reaktion gilt unter den meisten physiologischen Bedingungen als geschwindigkeitsbestimmender Schritt des Zitronensäurezyklus?","options":["Citratsynthase","Aconitase","Isocitratdehydrogenase","Malatdehydrogenase","Fumarase"],"correct":2,"explain":"Die Isocitratdehydrogenase ist ein wichtiges regulatorisches Enzym. Sie wird durch ADP und Ca²⁺ allosterisch aktiviert und durch ATP und NADH gehemmt. Durch die Kontrolle dieses Schritts wird der Zitronensäurezyklus mit dem Energiebedarf der Zelle koordiniert.","explainImg":""},
-    {"id":"tca008","topic":"Zitronensäurezyklus","text":"Wenn Oxalacetat (OAA) erschöpft ist, welche anaplerotische Reaktion kann es direkt auffüllen?","options":["Pyruvat → Acetyl-CoA (PDH)","Glutamat → α-Ketoglutarat (Transaminierung)","Pyruvat → OAA (Pyruvatcarboxylase)","Succinyl-CoA → Succinat","Fumarat → Malat (Fumarase)"],"correct":2,"explain":"Die Pyruvatcarboxylase ist das primäre anaplerotische Enzym in der Leber: Pyruvat + CO₂ + ATP → OAA. Es wird durch Acetyl-CoA aktiviert — ein Signal, dass Acetyl-CoA vorhanden ist, OAA jedoch limitierend ist, was einen kontinuierlichen Zyklusfluss sichert.","explainImg":""},
-    {"id":"tca009","topic":"Zitronensäurezyklus","text":"Aus den Mitochondrien ins Zytosol exportiertes Citrat wird durch ATP-Citrat-Lyase gespalten, um Acetyl-CoA für __ bereitzustellen:","options":["Glykolyse","Glukoneogenese","Harnstoffsynthese","Hämsynthese","Fettsäure- und Cholesterinsynthese"],"correct":4,"explain":"Der Citrat-Transport ins Zytosol ist der primäre Mechanismus, um mitochondriales Acetyl-CoA für die Biosynthese zu exportieren. ATP-Citrat-Lyase spaltet Citrat in Acetyl-CoA + OAA. Dieses zytosolische Acetyl-CoA wird für die Fettsäure- und Cholesterinsynthese (über HMG-CoA) genutzt.","explainImg":""},
-    {"id":"tca010","topic":"Zitronensäurezyklus","text":"Welcher Schritt des Zitronensäurezyklus umfasst eine oxidative Decarboxylierung unter Produktion von CO₂ und NADH?","options":["Citrat → Isocitrat","Isocitrat → α-Ketoglutarat","Succinat → Fumarat","Malat → Oxalacetat","Fumarat → Malat"],"correct":1,"explain":"Die Isocitratdehydrogenase katalysiert die erste oxidative Decarboxylierung: Isocitrat → α-Ketoglutarat + CO₂ + NADH. Eine zweite oxidative Decarboxylierung findet an der α-Ketoglutaratdehydrogenase statt (α-Ketoglutarat → Succinyl-CoA + CO₂ + NADH).","explainImg":""},
-    {"id":"tca011","topic":"Zitronensäurezyklus","text":"Der Pyruvat-Dehydrogenase-Komplex (PDH) benötigt fünf Coenzyme. Welche Kombination benennt alle korrekt?","options":["TPP, Biotin, CoA, FMN, NADP⁺","PLP, Liponsäure, CoA, FAD, NADP⁺","TPP, Liponsäure, CoA, FMN, NAD⁺","TPP, Liponsäure, CoA, FAD, NAD⁺","Biotin, Liponsäure, AMP, FAD, NAD⁺"],"correct":3,"explain":"Der PDH-Komplex besteht aus drei katalytischen Untereinheiten: E1 (Pyruvat-Decarboxylase, nutzt TPP), E2 (Dihydrolipoyl-Transacetylase, nutzt Liponsäure und CoA) und E3 (Dihydrolipoyl-Dehydrogenase, nutzt FAD und NAD⁺). Alle fünf Coenzyme sind unverzichtbar; fehlt eines, kommt der gesamte Komplex zum Stillstand.","explainImg":""},
-    {"id":"tca012","topic":"Zitronensäurezyklus","text":"Pyruvat-Dehydrogenase (PDH) und α-Ketoglutarat-Dehydrogenase (OGDH) werden häufig gemeinsam besprochen. Welche Aussage beschreibt am besten, was sie wirklich gemeinsam haben?","options":["Beide verwenden Biotin und übertragen eine Carboxylgruppe auf einen mobilen Träger zwischen Untereinheiten","Beide sind zytosolisch und werden durch reversible Phosphorylierung via insulinsensitive Kinasen reguliert","Beide unterscheiden sich in der E1-Spezifität, teilen aber eine identische E2-Dihydrolipoyl-Transacylase","Beide produzieren Acetyl-CoA als Acyl-CoA-Produkt und teilen dieselbe Substratbindungstasche in E1","Beide sind E1/E2/E3-Komplexe mit denselben fünf Coenzymen für oxidative Decarboxylierungen"],"correct":4,"explain":"PDH und OGDH teilen dieselbe Drei-Komponenten-Architektur (E1/TPP, E2/Liponsäure+CoA, E3/FAD+NAD⁺) und katalysieren analoge oxidative Decarboxylierungen: PDH wandelt Pyruvat → Acetyl-CoA + CO₂ um, OGDH α-Ketoglutarat → Succinyl-CoA + CO₂. Ihre E3-Untereinheit (Dihydrolipoyl-Dehydrogenase) ist identisch — ein isolierter E3-Defekt beeinträchtigt daher beide Komplexe gleichzeitig.","explainImg":""},
-    {"id":"tca013","topic":"Zitronensäurezyklus","text":"Hohe Konzentrationen welches Metaboliten hemmen gleichzeitig Citratsynthase, Isocitratdehydrogenase und α-KGDH und verlangsamen so den Zitronensäurezyklus, wenn reduzierende Äquivalente im Überschuss vorliegen?","options":["NADH — reichert sich bei gesättigtem Elektronentransport an; direkter Produkthemmer aller drei Enzyme","ADP — signalisiert niedrigen Energieladungszustand; wirkt als Aktivator der Isocitratdehydrogenase und Citratsynthase","Ca²⁺ — tritt bei Muskelkontraktion in Mitochondrien ein; aktiviert Isocitratdehydrogenase, α-KGDH und PDH-Phosphatase","Succinyl-CoA — direkter Produkthemmer der α-KGDH; nachgeschalteter Feedbackhemmer der Citratsynthase","Acetyl-CoA — reichert sich bei β-Oxidation an; hemmt PDH, aber nicht alle drei TCA-Regulationsenzyme"],"correct":0,"explain":"NADH-Anreicherung signalisiert einen hohen Energie- und Reduktionszustand und hemmt alle drei wesentlichen Kontrollpunkte des Zitronensäurezyklus gleichzeitig. Diese Produkthemmung verlangsamt den Zyklus, bis NADH durch die Atmungskette reoxidiert wird. Ca²⁺ wirkt gegenteilig — es aktiviert den Zyklus bei Muskelaktivität —, während ADP die Isocitratdehydrogenase aktiviert (nicht hemmt).","explainImg":""},
-    {"id":"tca014","topic":"Zitronensäurezyklus","text":"FADH₂, das von der Succinat-Dehydrogenase produziert wird, liefert weniger ATP als NADH. Was ist der primäre mechanistische Grund?","options":["FADH₂ erreicht Komplex I an einer späteren Bindungsstelle als NADH und reduziert so das Protonenpumpen pro Elektronenpaar","FADH₂ hat ein negativeres Redoxpotenzial als NAD⁺/NADH und kann Ubiquinon ohne Zusatzenergie nicht reduzieren","FADH₂ ist in Komplex II proteingebunden und gibt Elektronen direkt an Ubiquinon ab, unter vollständiger Umgehung von Komplex I","FADH₂ überträgt Elektronen über einen Flavin-Carrier auf Komplex III, wobei Komplex I und II umgangen werden","FADH₂ wird auf der Intermembranraumseite oxidiert und verringert den für die ATP-Synthase verfügbaren Protonengradienten"],"correct":2,"explain":"NADH speist Elektronen in Komplex I ein, der 4 H⁺ pro Elektronenpaar pumpt → ~2,5 ATP. FADH₂ ist kovalent an die Succinat-Dehydrogenase (Komplex II) gebunden und überträgt Elektronen direkt auf Ubiquinon, wobei Komplex I vollständig umgangen wird — an diesem Schritt werden keine Protonen gepumpt, wodurch nur ~1,5 ATP entstehen. Der Eintrittspunkt in die Atmungskette ist der entscheidende Unterschied zwischen den beiden Trägern.","explainImg":""},
-    {"id":"tca015","topic":"Zitronensäurezyklus","text":"Die Succinyl-CoA-Synthetase erzeugt pro Umlauf des menschlichen Zitronensäurezyklus ein GTP. Was ist das primäre metabolische Schicksal dieses mitochondrialen GTP?","options":["Hydrolyse durch mitochondriale GTPase; Energie phosphoryliert AMP zu ADP in ungewöhnlicher Zweischritt-Transphosphorylierung","Anreicherung in der Matrix als regulatorisches Signal zur Aktivierung GTP-abhängiger Kinasen für Organellendynamik","Export über Adenin-Nukleotid-Translokator zur Aktivierung zytosolischer GTP-bindender Signalproteine","Umwandlung zu ATP durch Nukleosid-Diphosphat-Kinase: GTP + ADP → GDP + ATP","Nutzung durch ATP-Synthase als alternatives Substrat für ATP-Produktion ohne Protonengradienten"],"correct":3,"explain":"Die NDP-Kinase katalysiert die frei reversible Reaktion GTP + ADP ⇌ GDP + ATP, wodurch das im Zyklus gebildete GTP energetisch einem ATP entspricht. GTP kann auch direkt zytosolische Reaktionen antreiben — insbesondere die Gluconeogenese, wo die PEPCK GTP nutzt, um OAA in Phosphoenolpyruvat umzuwandeln —, was seine doppelte Rolle als Energiewährung und Stoffwechselsignal unterstreicht.","explainImg":""},
-    {"id":"rc001","topic":"Atmungskette und OXPHOS","text":"Welcher Komplex der Atmungskette nimmt Elektronen von Ubichinol (QH₂) auf und gibt sie an Cytochrom c weiter?","options":["Komplex I","Komplex II","Komplex IV","Komplex V","Komplex III (bc1-Komplex)"],"correct":4,"explain":"Komplex III (Ubichinol-Cytochrom-c-Oxidoreduktase) nimmt Elektronen von Ubichinol auf und überträgt sie über den Q-Zyklus-Mechanismus auf Cytochrom c, wobei gleichzeitig 4 Protonen pro 2 Elektronen über die innere Mitochondrienmembran gepumpt werden.","explainImg":""},
-    {"id":"rc002","topic":"Atmungskette und OXPHOS","text":"Der durch die Atmungskette erzeugte Protonengradient wird von der ATP-Synthase (Komplex V) über __ genutzt:","options":["Substratkettenphosphorylierung","Chemiosmose (Mitchell-Hypothese)","Direkten Elektronentransfer auf ADP","Oxidative Decarboxylierung","Transphosphorylierung von GTP"],"correct":1,"explain":"Nach Mitchells chemiosmotischer Hypothese treibt die Protonenmotivkraft (elektrochemischer Gradient) der Atmungskette Protonen durch die F₀-Untereinheit der ATP-Synthase zurück. Dieser Protonenfluss treibt die Rotation des c-Rings an und bewirkt Konformationsänderungen in der F₁-Untereinheit, die ATP synthetisieren.","explainImg":""},
-    {"id":"rc003","topic":"Atmungskette und OXPHOS","text":"Cyanid ist ein potenter Hemmstoff der Zellatmung, da es blockiert:","options":["Komplex I","Komplex III","ATP-Synthase","Komplex IV (Cytochrom-c-Oxidase)","Komplex II"],"correct":3,"explain":"Cyanid (CN⁻) bindet an die Fe³⁺-Form von Cytochrom a3 in Komplex IV und verhindert den Elektronentransfer auf O₂. Dies stoppt die gesamte Atmungskette, kollabiert den Protonengradienten und beendet die ATP-Synthese. Gewebe mit höchstem O₂-Bedarf (Gehirn, Herz) sind am empfindlichsten.","explainImg":""},
-    {"id":"rc004","topic":"Atmungskette und OXPHOS","text":"Wie viele ATP-Moleküle werden pro oxidiertem NADH in der oxidativen Phosphorylierung produziert (P/O-Verhältnis ~2,5)?","options":["1,0","1,5","2,5","3,5","2,0"],"correct":2,"explain":"Die moderne Schätzung des P/O-Verhältnisses für NADH beträgt ~2,5 ATP pro NADH (nicht die klassische '3' aus älteren Lehrbüchern). Dies berücksichtigt die tatsächliche H⁺/ATP-Stöchiometrie der ATP-Synthase (~8 Protonen pro 3 ATP) und den Energieaufwand für den ATP/ADP-Transport.","explainImg":""},
-    {"id":"rc005","topic":"Atmungskette und OXPHOS","text":"Entkopplungsproteine (UCPs) im braunen Fettgewebe dissipieren den Protonengradienten als:","options":["Wärme (Thermogenese)","ATP","NADH","CO₂","Mechanische Arbeit"],"correct":0,"explain":"UCP1 (Thermogenin) ermöglicht es Protonen, durch die innere Mitochondrienmembran zurückzulecken, ohne ATP-Synthese anzutreiben, und dissipiert die Protonenmotivkraft als Wärme. Dies ist die Grundlage der zitterfreien Thermogenese bei Neugeborenen und kälteangepassten Säugetieren.","explainImg":""},
-    {"id":"rc006","topic":"Atmungskette und OXPHOS","text":"Welcher mobile Elektronenträger transportiert Elektronen zwischen Komplex I/II und Komplex III?","options":["Cytochrom c","Ubichinon (Coenzym Q)","FAD","FMN","Eisen-Schwefel-Cluster"],"correct":1,"explain":"Ubichinon (CoQ) ist ein lipidlösliches Molekül, das innerhalb der inneren Mitochondrienmembran diffundiert, Elektronen von Komplex I und II (als QH₂) sammelt und sie an Komplex III abgibt. Cytochrom c ist der wasserlösliche Träger zwischen Komplex III und IV.","explainImg":""},
-    {"id":"rc007","topic":"Atmungskette und OXPHOS","text":"Rotenon, das als Pestizid und Fischgift verwendet wird, hemmt die Atmungskette durch Blockade von:","options":["Komplex II","Komplex III","Komplex I (NADH-Dehydrogenase)","Komplex IV","Komplex V (ATP-Synthase)"],"correct":2,"explain":"Rotenon blockiert den Elektronentransfer von den Eisen-Schwefel-Clustern des Komplexes I auf Ubichinon. Es hemmt die NADH-Oxidation, ohne die Succinat-Oxidation (Komplex II) zu beeinflussen. Rotenon wird auch experimentell zur Modellierung der Parkinson-Pathologie verwendet.","explainImg":""},
-    {"id":"rc008","topic":"Atmungskette und OXPHOS","text":"Der finale Elektronenakzeptor in der mitochondrialen Atmungskette ist:","options":["NAD⁺","Ubichinon","Cytochrom c","Molekularer Sauerstoff (O₂)","Kohlendioxid (CO₂)"],"correct":3,"explain":"Molekularer Sauerstoff (O₂) ist der terminale Elektronenakzeptor. Komplex IV (Cytochrom-c-Oxidase) überträgt Elektronen von Cytochrom c auf O₂ und reduziert es zu Wasser. Dieser irreversible Schritt treibt die gesamte Atmungskette voran.","explainImg":""},
-    {"id":"rc009","topic":"Atmungskette und OXPHOS","text":"Oligomycin hemmt die ATP-Synthese durch Blockade von:","options":["Cytochrom-c-Oxidase","Dem F₀-Protonenkanal der ATP-Synthase","Ubichinon-Reduktion","Komplex I","Adeninnukleotid-Translokase"],"correct":1,"explain":"Oligomycin bindet an die F₀-Untereinheit der ATP-Synthase und blockiert den Protonenkanal. Dies verhindert den Protoneneintritt und die ATP-Synthese. Da der Protonengradient nicht abgebaut werden kann, hemmt es sekundär auch die Atmungskette.","explainImg":""},
-    {"id":"rc010","topic":"Atmungskette und OXPHOS","text":"Welches der folgenden beschreibt korrekt das P/O-Verhältnis für FADH₂?","options":["~3,0","~2,5","~1,5","~1,0","~2,0"],"correct":2,"explain":"FADH₂ (erzeugt an der Succinatdehydrogenase) doniert Elektronen an Ubichinon und umgeht dabei Komplex I. Da Komplex I ~4 Protonen pumpt, wird durch sein Umgehen der Beitrag zum Protonengradienten verringert. Das P/O-Verhältnis für FADH₂ beträgt etwa 1,5 ATP.","explainImg":""},
-    {"id":"rc011","topic":"Atmungskette und OXPHOS","text":"Zytosolisches NADH aus der Glykolyse kann die innere Mitochondrienmembran nicht überqueren. Welches Shuttle überwiegt in Herz und Leber und erhält die volle ~2,5 ATP-Ausbeute?","options":["Malat-Aspartat-Shuttle — regeneriert NADH in der Matrix; ~2,5 ATP","Glycerin-3-Phosphat-Shuttle — liefert Elektronen an Komplex II; nur ~1,5 ATP","Citrat-Shuttle — exportiert Acetyl-CoA-Äquivalente für die zytosolische Lipidsynthese","Carnitin-Shuttle — transportiert Fettsäure-Acyl-CoA durch die innere Membran","Pyruvat-Transporter — importiert Pyruvat in die Matrix; kein NADH-Transfer"],"correct":0,"explain":"Der Malat-Aspartat-Shuttle verwendet Malatdehydrogenase und Aspartattransaminase auf beiden Membranseiten, um das zytosolische NADH-Äquivalent als NADH in die Matrix zu schleusen, wo es in Komplex I eintritt (~2,5 ATP). Der Glycerin-3-Phosphat-Shuttle ist schneller, aber weniger effizient (~1,5 ATP, Komplex-II-Eintritt) und überwiegt in Gehirn und Skelettmuskel. Die Citrat-, Carnitin- und Pyruvat-Transporter dienen vollständig anderen Transportfunktionen.","explainImg":""},
-    {"id":"rc012","topic":"Atmungskette und OXPHOS","text":"Der Q-Zyklus in Komplex III führt zu einem Nettopumpen von 4 H⁺ pro 2 Elektronen. Welches Merkmal verursacht diese Verstärkung direkt?","options":["Beide Elektronen von QH₂ umgehen das Rieske-Zentrum und fließen direkt zu Cytochrom b","Rieske akzeptiert beide Elektronen von QH₂ und spendet sie an zwei Cytochrom-c-Moleküle","QH₂ reduziert zunächst FMN in der Matrix, bevor Elektronen Cytochrom c erreichen","Konformationsänderungen von Cytochrom b treiben das Protonenpumpen ohne Semichinon","Die QH₂-Oxidation gabelt sich: ein Elektron zu Cytochrom c über Rieske, eines zum Qi-Semichinon"],"correct":4,"explain":"Am Qo-Standort gibt QH₂ seine zwei Elektronen auf verschiedenen Wegen ab: eines wandert über den Rieske-[2Fe-2S]-Cluster und Cytochrom c₁ zu Cytochrom c (Hochpotential-Kette), während das andere durch Cytochrom b (bL → bH) zu einem Ubichinon am Qi-Standort gelangt und ein Semichinon bildet. Eine zweite QH₂-Oxidation vervollständigt dies zu QH₂ am Qi-Standort und setzt 2 H⁺ zur Matrix frei. Diese Verzweigung verdoppelt effektiv die Protonentranslokation pro Elektronenpaar, das Cytochrom c erreicht, und ergibt 4 H⁺/2e⁻ netto.","explainImg":""},
-    {"id":"rc013","topic":"Atmungskette und OXPHOS","text":"Was ist die spezifische Rolle des Rieske-Eisen-Schwefel-Proteins in Komplex III?","options":["Akzeptiert Elektronen von QH₂ am Qo-Standort und leitet sie zu Cytochrom c₁","Akzeptiert Elektronen von NADH an der Matrixseite und überträgt sie über FMN auf Ubichinon","Akzeptiert Elektronen von Cytochrom c und leitet sie zu den Kupferzentren von Komplex IV","Spendet Elektronen direkt an O₂ und erzeugt Superoxid am Qo-Standort","Überträgt Elektronen von der Succinatdehydrogenase auf Ubichinon am Qi-Standort"],"correct":0,"explain":"Das Rieske-Protein enthält einen [2Fe-2S]-Cluster mit einem ungewöhnlich hohen Redoxpotential (~+0,28 V), der es zwischen Ubichinol und Cytochrom c₁ im Hochpotential-Ast des Q-Zyklus positioniert. Am Qo-Standort akzeptiert es eines der beiden Elektronen von QH₂ und spendet es an Cytochrom c₁, das dann lösliches Cytochrom c reduziert. Die physikalische Bewegung der Rieske-Kopfdomäne zwischen Cytochrom b und Cytochrom c₁ ist für den verzweigten Elektronentransfer wesentlich.","explainImg":""},
-    {"id":"rc014","topic":"Atmungskette und OXPHOS","text":"FMN ist der primäre Elektronenakzeptor von NADH in Komplex I. Welche Aussage beschreibt seine Funktion korrekt?","options":["Akzeptiert Elektronen von Ubichinol; überträgt sie zurück auf NAD⁺ in der Matrix","Wirkt als finaler Elektronensenke in Komplex I; bleibt reduziert wenn die PMF niedrig ist","Akzeptiert Elektronen von FADH₂ der Succinatdehydrogenase; leitet sie zu Fe-S-Clustern weiter","Akzeptiert 2e⁻ von NADH gleichzeitig; gibt sie einzeln über Fe-S-Cluster an CoQ weiter","Pumpt Protonen direkt von der Matrix ins IMS; keine Eisen-Schwefel-Cluster beteiligt"],"correct":3,"explain":"FMN ist ein Zwei-Elektronen-Akzeptor, der beide Elektronen von NADH gleichzeitig aufnimmt und FMNH₂ bildet. Es gibt sie dann einzeln an eine Reihe von Eisen-Schwefel-Clustern (N1a, N3, N1b, N4, N5, N6a/b, N2) weiter, die obligate Ein-Elektronen-Träger sind. Der Elektronenfluss durch diese Kette ist mit Konformationsänderungen gekoppelt, die 4 H⁺ pro NADH pumpen. Diese Zwei-zu-Eins-Elektronenkonvertierung ist die definierende Rolle von FMN in Komplex I.","explainImg":""},
-    {"id":"rc015","topic":"Atmungskette und OXPHOS","text":"Im Bindungsänderungs-Mechanismus von Boyer bildet die Protonenmotivkraft nicht direkt die ATP-Bindung. Was ist ihre tatsächliche Rolle?","options":["Spendet direkt ein Proton an die β-Phosphatgruppe von ADP zur Antrieb der Bindungsbildung","Öffnet einen Kanal in F₁ für die freie ATP- und ADP-Diffusion über die innere Membran","Treibt Elektronentransfer in F₁ an, der ADP zur anorganischen Phosphatgruppe aktiviert","Erzeugt NADPH in der Matrix zur Bereitstellung von Energie für die ATP-Bindungsbildung","Treibt die c-Ring-Rotation an und dreht die γ-Untereinheit; Konformationsänderungen der β-Untereinheit setzen gebundenes ATP frei"],"correct":4,"explain":"ATP bildet sich spontan (ΔG ≈ 0) am engen katalytischen Zentrum von F₁ — die Bindungsbildung selbst benötigt keine externe Energie. Die Protonenmotivkraft treibt die Rotation des F₀-c-Rings an, der die γ-Untereinheit in F₁ dreht und jede der drei β-Untereinheiten durch offen → lose → eng zykliert. Der energiebedürftige Schritt ist der Übergang von eng zu offen, der das neu gebildete ATP freisetzt. Diese Rotationskatalyse wurde von Boyer und Walker, Nobelpreis 1997, bestätigt.","explainImg":""},
-    {"id":"rc016","topic":"Atmungskette und OXPHOS","text":"Was ist die thermodynamische Triebkraft, die Elektronen entlang der Atmungskette von NADH zu O₂ bewegt?","options":["Der NADH/NAD⁺-Konzentrationsgradient über die innere Membran","Das ΔE°' zwischen NADH/NAD⁺ (−0,32 V) und O₂/H₂O (+0,82 V)","Die mechanische Rotation der ATP-Synthase, die Elektronen zu Komplex IV zieht","Der transmembranäre pH-Gradient, der den IMS ansäuert und den Elektronentransfer antreibt","Die hohe Cytochrom-c-Konzentration im IMS als permanente Elektronensenke"],"correct":1,"explain":"Der Elektronenfluss in der Atmungskette wird durch den Unterschied in den Standardredoxpotentialen angetrieben. Das NADH/NAD⁺-Paar hat E°' = −0,32 V; das O₂/H₂O-Paar hat E°' = +0,82 V, was insgesamt ΔE°' = +1,14 V ergibt. Mit ΔG°' = −nFΔE°' entspricht dies ~−220 kJ pro Mol Elektronenpaare — eine große spontane freie Energieänderung, die Elektronen von Komplex I bis Komplex IV treibt und an jedem Schritt das Protonenpumpen koppelt.","explainImg":""},
-    {"id":"rc017","topic":"Atmungskette und OXPHOS","text":"Genau genommen, was ist das direkte Produkt der Atmungskette bevor die ATP-Synthase darauf einwirkt?","options":["ATP — über Substratkettenphosphorylierung bei jedem Elektronentransfer-Schritt","NADPH — durch mitochondriale Transhydrogenase unter Verwendung von Elektronenfluss-Energie regeneriert","Ein elektrochemischer Protonengradient (Protonenmotivkraft) über die innere Membran","Wärme — thermische Energie freigesetzt wenn Elektronen durch die Komplexe fallen","Reduziertes Cytochrom c — akkumuliert im IMS wenn die ATP-Synthase gehemmt ist"],"correct":2,"explain":"Der einzige direkte Ausgang der Atmungskette ist die Protonenmotivkraft (PMF), die durch Pumpen von H⁺ von der Matrix in den IMS an den Komplexen I, III und IV aufgebaut wird. Die PMF hat zwei Komponenten: Membranpotential (ΔΨ ≈ 150–180 mV, der dominante Term in Mitochondrien) und pH-Gradient (ΔpH ≈ 0,5–1 Einheit). Die ATP-Synthase verbraucht dann diese PMF für die Phosphorylierung. Entscheidend ist, dass die PMF auch aktiven Transport und Wärmeproduktion über UCPs antreiben kann — ATP-Synthese ist sekundär.","explainImg":""},
-    {"id":"fao001","topic":"Fettsäureoxidation","text":"Wo findet die β-Oxidation langkettiger Fettsäuren hauptsächlich statt?","options":["Zytosol","Endoplasmatisches Retikulum","Mitochondrienmatrix","Peroxisom","Lysosom"],"correct":2,"explain":"Die β-Oxidation langkettiger Fettsäuren findet in der Mitochondrienmatrix statt. Fettsäuren werden im Zytosol zu Acyl-CoA aktiviert, über das Carnitin-Shuttle durch die innere Mitochondrienmembran transportiert und dann sukzessiven Runden der β-Oxidation unterzogen.","explainImg":""},
-    {"id":"fao002","topic":"Fettsäureoxidation","text":"Welches Transportsystem ist erforderlich, um langkettige Acylgruppen in die Mitochondrienmatrix zu transportieren?","options":["Malat-Aspartat-Shuttle","Carnitin-Shuttle (CPT-I und CPT-II)","Acetyl-CoA-Translokase","ATP-ADP-Translokase","Citrattransportsystem"],"correct":1,"explain":"Langkettiges Acyl-CoA kann die innere Mitochondrienmembran nicht direkt passieren. CPT-I (äußere Membran) wandelt Acyl-CoA in Acylcarnitin um, das durch Carnitin-Acylcarnitin-Translokase transportiert und durch CPT-II (innere Membran) wieder zu Acyl-CoA umgewandelt wird.","explainImg":""},
-    {"id":"fao003","topic":"Fettsäureoxidation","text":"Wie viele Runden der β-Oxidation sind erforderlich, um Palmitoyl-CoA (C16:0) vollständig zu oxidieren?","options":["6","7","8","9","5"],"correct":1,"explain":"Palmitoyl-CoA (16 Kohlenstoffatome) benötigt 7 Runden β-Oxidation, um 8 Acetyl-CoA-Moleküle zu produzieren. Jede Runde verkürzt die Kette um 2 Kohlenstoffatome und produziert 1 FADH₂ + 1 NADH + 1 Acetyl-CoA.","explainImg":""},
-    {"id":"fao004","topic":"Fettsäureoxidation","text":"Welches Enzym wird durch Malonyl-CoA gehemmt und reguliert dadurch den Eintritt von Fettsäuren in die Mitochondrien?","options":["CPT-II","Acyl-CoA-Synthetase","CPT-I","Carnitin-Acylcarnitin-Translokase","β-Hydroxyacyl-CoA-Dehydrogenase"],"correct":2,"explain":"CPT-I wird durch Malonyl-CoA allosterisch gehemmt, das erste regulierte Zwischenprodukt der Fettsäuresynthese. So wird sichergestellt, dass Fettsäuresynthese und -oxidation nicht gleichzeitig aktiv sind: Wenn Malonyl-CoA hoch ist, wird CPT-I gehemmt.","explainImg":""},
-    {"id":"fao005","topic":"Fettsäureoxidation","text":"Welche Produkte werden in jedem Zyklus der β-Oxidation erzeugt?","options":["1 NADH + 1 NADPH + 1 Acetyl-CoA","1 FADH₂ + 1 NADH + 1 Acetyl-CoA","2 FADH₂ + 1 Acetyl-CoA","1 FADH₂ + 1 NADH + 1 Succinyl-CoA","2 NADH + 1 Acetyl-CoA"],"correct":1,"explain":"Jede Runde β-Oxidation produziert: 1 FADH₂ (Acyl-CoA-Dehydrogenase-Schritt), 1 NADH (L-3-Hydroxyacyl-CoA-Dehydrogenase-Schritt) und 1 Acetyl-CoA (Thiolase-Schritt). Diese werden in Atmungskette bzw. Zitronensäurezyklus eingespeist.","explainImg":""},
-    {"id":"fao006","topic":"Fettsäureoxidation","text":"Bei der β-Oxidation ungesättigter Fettsäuren ist für Doppelbindungen in cis-Konfiguration welches zusätzliche Enzym erforderlich?","options":["Enoyl-CoA-Hydratase","2,4-Dienoyl-CoA-Reduktase","Enoyl-CoA-Isomerase","3-Hydroxyacyl-CoA-Epimerase","Acyl-CoA-Dehydrogenase"],"correct":2,"explain":"Ungesättigte Fettsäuren mit Doppelbindungen an ungeraden Kohlenstoffatomen (cis-Δ³) benötigen Enoyl-CoA-Isomerase, um cis-Δ³-Enoyl-CoA in das normale β-Oxidations-Substrat trans-Δ²-Enoyl-CoA umzuwandeln. Doppelbindungen an geraden Kohlenstoffatomen erfordern 2,4-Dienoyl-CoA-Reduktase.","explainImg":""},
-    {"id":"fao007","topic":"Fettsäureoxidation","text":"In welchem Organell findet die β-Oxidation sehr langkettiger Fettsäuren (>C22) hauptsächlich statt?","options":["Mitochondrien","Glattes ER","Peroxisomen","Lysosomen","Zellkern"],"correct":2,"explain":"Sehr langkettige Fettsäuren werden zunächst in Peroxisomen durch β-Oxidation zu mittelkettigen Fettsäuren verkürzt, die dann in Mitochondrien für die vollständige Oxidation transferiert werden. Die peroxisomale β-Oxidation produziert H₂O₂ (durch Katalase detoxifiziert) anstatt Protonen zu pumpen.","explainImg":""},
-    {"id":"fao008","topic":"Fettsäureoxidation","text":"Wie viel ATP wird netto bei der vollständigen Oxidation eines Palmitoyl-CoA-Moleküls (C16:0) gewonnen?","options":["106 ATP","100 ATP","108 ATP","129 ATP","80 ATP"],"correct":0,"explain":"Die Oxidation von Palmitoyl-CoA ergibt 7 Runden × (1 FADH₂ + 1 NADH) + 8 Acetyl-CoA. Mit modernen P/O-Verhältnissen: 7×1,5 + 7×2,5 + 8×10 = 10,5 + 17,5 + 80 = 108, minus 2 für die Aktivierung = 106 ATP-Äquivalente.","explainImg":""},
-    {"id":"fao009","topic":"Fettsäureoxidation","text":"Ein Carnitinmangel führt zu beeinträchtigter Fettsäureoxidation. Welches Symptom ist am ehesten zu erwarten?","options":["Hyperglykämie","Hyperlipidämie mit Muskelschwäche und Hypoglykämie","Ketoazidose","Erhöhtes Ammoniak","Metabolische Alkalose"],"correct":1,"explain":"Ohne Carnitin können langkettige Fettsäuren nicht in Mitochondrien für die β-Oxidation eintreten. Dies führt zu Fettsäureakkumulation (Hyperlipidämie), Muskelschwäche (beeinträchtigte Energieversorgung) und Hypoglykämie (Unfähigkeit, Glukose durch Fettoxidation zu schonen).","explainImg":""},
-    {"id":"fao010","topic":"Fettsäureoxidation","text":"MCAD-Mangel (mittelkettige Acyl-CoA-Dehydrogenase) ist beim Fasten gefährlich, weil:","options":["Überschüssige Ketonkörper Azidose verursachen","Fettsäuren nicht zur Energiegewinnung oxidiert werden können, was zu Hypoglykämie führt","Der Aminosäurekatabolismus gestört ist","Glykogenspeicher nicht mobilisiert werden können","Glukoneogenese durch Malonyl-CoA gehemmt wird"],"correct":1,"explain":"MCAD-Mangel verhindert die Oxidation mittelkettiger Fettsäuren. Beim Fasten, wenn Glukose knapp und Fettsäureoxidation kritisch ist, führt dies zu schwerer Hypoglykämie. Auch die Ketogenese ist beeinträchtigt, da das Acetyl-CoA-Angebot aus der β-Oxidation reduziert ist.","explainImg":""},
-    {"id":"fab001","topic":"Fettsäurebiosynthese","text":"Wo findet die Fettsäuresynthese hauptsächlich in der Zelle statt?","options":["Mitochondrienmatrix","Zytosol","Endoplasmatisches Retikulum","Zellkern","Peroxisom"],"correct":1,"explain":"Die Fettsäuresynthese findet im Zytosol statt und wird durch Fettsäuresynthase (FAS) katalysiert. Die Bausteine (Acetyl-CoA und Malonyl-CoA) müssen aus den Mitochondrien als Citrat exportiert und im Zytosol durch ATP-Citrat-Lyase gespalten werden.","explainImg":""},
-    {"id":"fab002","topic":"Fettsäurebiosynthese","text":"Was ist der regulierte (committed) Schritt der Fettsäurebiosynthese?","options":["Acetyl-CoA → Malonyl-CoA (Acetyl-CoA-Carboxylase)","Malonyl-CoA → Palmitat (FAS)","Citrat → Acetyl-CoA (ATP-Citrat-Lyase)","Palmitat → Palmitoyl-CoA","Acetyl-CoA → Acetoacetyl-CoA"],"correct":0,"explain":"Die Acetyl-CoA-Carboxylase (ACC) katalysiert die ATP-abhängige Carboxylierung von Acetyl-CoA zu Malonyl-CoA. Dies ist der regulierte, geschwindigkeitsbestimmende Schritt der Fettsäuresynthese. ACC wird durch Citrat aktiviert und durch Palmitoyl-CoA sowie AMPK-Phosphorylierung gehemmt.","explainImg":""},
-    {"id":"fab003","topic":"Fettsäurebiosynthese","text":"Welcher reduzierende Cofaktor wird von der Fettsäuresynthase für die Reduktionsschritte benötigt?","options":["NADH","NADPH","FADH₂","ATP","CoASH"],"correct":1,"explain":"Fettsäuresynthase benötigt NADPH für die zwei Reduktionsschritte pro Elongationszyklus (Ketoreduktion und Enoylreduktion). NADPH wird hauptsächlich durch den Pentosephosphatweg und die Malatenzym-Reaktion bereitgestellt.","explainImg":""},
-    {"id":"fab004","topic":"Fettsäurebiosynthese","text":"Was ist das primäre Produkt, das von der Fettsäuresynthase (FAS) beim Menschen freigesetzt wird?","options":["Stearat (C18:0)","Palmitat (C16:0)","Myristat (C14:0)","Arachidonat (C20:4)","Oleat (C18:1)"],"correct":1,"explain":"Die menschliche FAS gibt Palmitat (C16:0) als Hauptprodukt frei. Die weitere Verlängerung zu längerkettigen Fettsäuren und die Desaturierung finden im endoplasmatischen Retikulum durch spezifische Elongasen und Desaturasen statt.","explainImg":""},
-    {"id":"fab005","topic":"Fettsäurebiosynthese","text":"Wie viele Malonyl-CoA-Moleküle werden benötigt, um ein Palmitat-Molekül aus Acetyl-CoA zu synthetisieren?","options":["6","7","8","14","16"],"correct":1,"explain":"Palmitat (C16:0) wird aus 1 Acetyl-CoA-Starteinheit und 7 Malonyl-CoA-Verlängerungseinheiten synthetisiert. Jedes Malonyl-CoA fügt 2 Kohlenstoffatome hinzu (nach Decarboxylierung) und liefert 14 Kohlenstoffe; die Start-Acetyl-CoA liefert 2 weitere, zusammen 16.","explainImg":""},
-    {"id":"fab006","topic":"Fettsäurebiosynthese","text":"Die Acetyl-CoA-Carboxylase (ACC) wird allosterisch aktiviert durch:","options":["Palmitoyl-CoA","AMP","Citrat","Glukagon","Epinephrin"],"correct":2,"explain":"Citrat aktiviert ACC allosterisch, indem es seine Polymerisierung zur aktiven filamentösen Form fördert. Hohe Citratspiegel signalisieren Überfluss an Acetyl-CoA und Energie, was für die Fettsynthese günstig ist. Im Gegensatz dazu hemmen Palmitoyl-CoA (Endprodukt) und AMPK-Phosphorylierung die ACC.","explainImg":""},
-    {"id":"fab007","topic":"Fettsäurebiosynthese","text":"Welches Enzym führt die erste Doppelbindung in gesättigte Fettsäuren beim Menschen ein, typischerweise an der Δ9-Position?","options":["Fettsäure-Elongase","Stearoyl-CoA-Desaturase (SCD, Δ9-Desaturase)","Acetyl-CoA-Carboxylase","Phospholipase A2","FADS2 (Δ6-Desaturase)"],"correct":1,"explain":"Stearoyl-CoA-Desaturase (SCD) führt eine cis-Doppelbindung an der Δ9-Position ein und wandelt Stearoyl-CoA (C18:0) in Oleoyl-CoA (C18:1, Δ9) um. Da Säugetiere keine Δ12- und Δ15-Desaturasen besitzen, sind Linolsäure (Δ9,12) und α-Linolensäure (Δ9,12,15) essenziell.","explainImg":""},
-    {"id":"fab008","topic":"Fettsäurebiosynthese","text":"Das Acyl-Carrier-Protein (ACP) in der FAS hält Intermediate über welche Art von Bindung fest?","options":["Esterbindung an Serin","Phosphodiesterbindung","Thioesterbindung an eine Phosphopantethein-Gruppe","Amidbindung an Lysin","Anhydridbindung"],"correct":2,"explain":"Wachsende Fettsäureketten sind über eine Thioesterbindung an die Phosphopantethein-Gruppe (von CoA abgeleitet) des ACP kovalent gebunden. Diese Thioesterbindung hat ein hohes Gruppenübertragungspotenzial und ist für die Kondensationsreaktionen der FAS essenziell.","explainImg":""},
-    {"id":"fab009","topic":"Fettsäurebiosynthese","text":"Insulin stimuliert die Fettsäuresynthese primär durch:","options":["Direkte Aktivierung der FAS","Aktivierung von AMPK, das ACC phosphoryliert","Aktivierung einer Phosphatase, die ACC dephosphoryliert und aktiviert","Erhöhung des Malonyl-CoA-Abbaus","Hemmung des Citrat-Exports aus Mitochondrien"],"correct":2,"explain":"Insulin aktiviert Proteinphosphatase 2A, die ACC dephosphoryliert und aktiviert. Insulin induziert auch die Transkription von FAS- und ACC-Genen, erhöht die Glukoseaufnahme (liefert Acetyl-CoA und NADPH) und hemmt AMPK.","explainImg":""},
-    {"id":"fab010","topic":"Fettsäurebiosynthese","text":"Welches der folgenden beschreibt am besten, warum Linolsäure (18:2, Δ9,12) eine essentielle Fettsäure ist?","options":["Menschen können keine Fettsäuren länger als C16 synthetisieren","Menschen fehlt die Δ12-Desaturase für die Δ12-Doppelbindung","Linolsäure kann nicht zu Acyl-CoA aktiviert werden","Die β-Oxidation von Linolsäure ist toxisch","Linolsäure kommt nur in tierischen Fetten vor"],"correct":1,"explain":"Säugetiere besitzen Desaturasen für die Positionen Δ9, Δ6, Δ5 und Δ4, jedoch nicht Δ12 und Δ15. Daher müssen Linolsäure (18:2 Δ9,12) und α-Linolensäure (18:3 Δ9,12,15) über die Nahrung zugeführt werden und gelten als essentielle Fettsäuren.","explainImg":""},
-    {"id":"aac001","topic":"Aminosäurekatabolismus","text":"Was ist der erste Schritt beim Katabolismus der meisten Aminosäuren?","options":["Oxidative Decarboxylierung","Transaminierung oder oxidative Desaminierung","Phosphorylierung","Reduktion","Hydroxylierung"],"correct":1,"explain":"Der erste Schritt ist in der Regel die Entfernung der Aminogruppe, entweder durch Transaminierung (Transfer auf α-Ketoglutarat, Bildung von Glutamat) oder oxidative Desaminierung (Glutamatdehydrogenase, Freisetzung von NH₄⁺). Die entstehende α-Ketosäure tritt in zentrale Stoffwechselwege ein.","explainImg":""},
-    {"id":"aac002","topic":"Aminosäurekatabolismus","text":"Pyridoxalphosphat (PLP) ist der Cofaktor für welche Enzymklasse, die für den Aminosäurekatabolismus zentral ist?","options":["Oxidasen","Aminotransferasen (Transaminasen)","Carboxylasen","Kinasen","Reduktasen"],"correct":1,"explain":"PLP (Vitamin-B6-Derivat) bildet eine Schiff-Base mit Aminosäuren am aktiven Zentrum der Aminotransferasen und ermöglicht die Übertragung der Aminogruppe auf α-Ketoglutarat. PLP wird auch von Decarboxylasen, Racemasen und Serin/Threonin-Dehydratasen benötigt.","explainImg":""},
-    {"id":"aac003","topic":"Aminosäurekatabolismus","text":"Phenylketonurie (PKU) entsteht durch Phenylalanin-Hydroxylase-Mangel. Was akkumuliert als Folge?","options":["Tyrosin","Phenylalanin und Phenylpyruvat","Homogentisat","Fumarylacetoacetat","Melanin-Vorläufer"],"correct":1,"explain":"Ohne Phenylalanin-Hydroxylase (die Phenylalanin in Tyrosin umwandelt) akkumuliert Phenylalanin und wird zu Phenylpyruvat, Phenylacetat und Phenyllaktat umgeleitet (zusammen 'Phenylketone'). Diese sind neurotoxisch und führen unbehandelt zu geistiger Behinderung.","explainImg":""},
-    {"id":"aac004","topic":"Aminosäurekatabolismus","text":"Ahornsirupkrankheit wird durch einen Mangel am verzweigtkettigen α-Ketosäure-Dehydrogenase-Komplex verursacht, der den Katabolismus von __ betrifft:","options":["Phenylalanin, Tyrosin, Tryptophan","Leucin, Isoleucin, Valin","Lysin, Arginin, Histidin","Methionin, Cystein, Serin","Aspartat, Glutamat, Alanin"],"correct":1,"explain":"Der BCKDH-Komplex decarboxyliert oxidativ die α-Ketosäuren aus Leucin, Isoleucin und Valin. Mangel führt zur Akkumulation dieser Ketosäuren, die dem Urin einen süßlichen Ahornsirupgeruch verleihen und schwere neurologische Schäden verursachen.","explainImg":""},
-    {"id":"aac005","topic":"Aminosäurekatabolismus","text":"Welche Aminosäure ist der primäre Stickstoffträger von peripheren Geweben zur Leber?","options":["Glutamin","Alanin","Glycin","Aspartat","Serin"],"correct":1,"explain":"Alanin ist der primäre Stickstoffträger über den Glukose-Alanin-Zyklus: Muskel transaminiert Pyruvat mit der Aminogruppe aus dem Aminosäurekatabolismus zu Alanin, das zur Leber transportiert wird. Dort regeneriert Alaninaminotransferase Pyruvat (für Glukoneogenese) und Glutamat (tritt in Harnstoffzyklus ein).","explainImg":""},
-    {"id":"aac006","topic":"Aminosäurekatabolismus","text":"Homocystinurie ist mit einem Mangel an Cystathionin-β-Synthase verbunden. Welcher Stoffwechselweg ist primär betroffen?","options":["Phenylalanin-Abbau","Methioninkatabolismus (Transsulfurierungsweg)","Tryptophan-Katabolismus","Histidin-Katabolismus","Threonin-Abbau"],"correct":1,"explain":"Cystathionin-β-Synthase wandelt Homocystein + Serin → Cystathionin im Transsulfurierungsweg um. Mangel führt zu Homocysteinakkumulation mit kardiovaskulären Erkrankungen, Linsenluxation und geistiger Behinderung. Vitamin B6, B12 und Folsäure werden therapeutisch eingesetzt.","explainImg":""},
-    {"id":"aac007","topic":"Aminosäurekatabolismus","text":"Glukogene Aminosäuren können über Glukoneogenese zu Glukose umgewandelt werden. Welche der folgenden ist rein glukogen?","options":["Leucin","Lysin","Alanin","Phenylalanin","Isoleucin"],"correct":2,"explain":"Alanin ist rein glukogen — es wird durch Transaminierung zu Pyruvat umgewandelt, das durch Pyruvatcarboxylase zu OAA und dann über Glukoneogenese zu Glukose umgewandelt werden kann. Leucin und Lysin sind rein ketogen; Phenylalanin und Isoleucin sind sowohl glukogen als auch ketogen.","explainImg":""},
-    {"id":"aac008","topic":"Aminosäurekatabolismus","text":"Der Katabolismus von Phenylalanin und Tyrosin produziert letztendlich welche Vorläufer des Zitronensäurezyklus und der Ketonkörper?","options":["Oxalacetat und Malat","Fumarat und Acetoacetat","Succinat und Propionyl-CoA","α-Ketoglutarat und Acetyl-CoA","Citrat und NADH"],"correct":1,"explain":"Phenylalanin wird zunächst zu Tyrosin hydroxyliert. Der Tyrosinabbau verläuft über Homogentisat → Maleylacetoacetat → Fumarylacetoacetat → Fumarat + Acetoacetat. Dies macht Phenylalanin/Tyrosin sowohl glukogen (Fumarat → Zitronensäurezyklus → Glukoneogenese) als auch ketogen (Acetoacetat).","explainImg":""},
-    {"id":"aac009","topic":"Aminosäurekatabolismus","text":"Welche Reaktion entfernt die Aminogruppe von Glutamat und setzt freies Ammonium frei?","options":["Transaminierung durch AST","Oxidative Desaminierung durch Glutamatdehydrogenase","Decarboxylierung durch Glutamatdecarboxylase","Reduktion durch Glutamatreduktase","Phosphorylierung durch Glutamatkinase"],"correct":1,"explain":"Glutamatdehydrogenase (in der Mitochondrienmatrix) katalysiert: Glutamat + NAD⁺ → α-Ketoglutarat + NADH + NH₄⁺. Dies ist der Hauptweg zur Freisetzung von freiem Ammoniak in der Leber für die Harnstoffsynthese. Das Enzym kann NAD⁺ oder NADP⁺ verwenden und wird durch ATP und GTP (Hemmung) sowie ADP und GDP (Aktivierung) reguliert.","explainImg":""},
-    {"id":"aac010","topic":"Aminosäurekatabolismus","text":"Alkaptonurie entsteht durch einen Defekt der Homogentisat-Oxidase. Welche Aminosäuren können nicht normal abgebaut werden?","options":["Methionin und Cystein","Phenylalanin und Tyrosin","Tryptophan und Histidin","Leucin und Isoleucin","Lysin und Arginin"],"correct":1,"explain":"Homogentisat-Oxidase katalysiert einen Schritt beim Abbau von Phenylalanin und Tyrosin. Ihr Mangel führt zur Akkumulation von Homogentisinsäure, die im Urin ausgeschieden wird (wird bei Luftkontakt dunkel) und sich im Bindegewebe ablagert (Ochronose), was Arthritis verursacht.","explainImg":""},
-    {"id":"uc001","topic":"Harnstoffzyklus","text":"In welchen zwei Kompartimenten des Hepatozyten läuft der Harnstoffzyklus ab?","options":["Zytosol und Lysosom","Mitochondrienmatrix und Zytosol","Endoplasmatisches Retikulum und Zytosol","Zellkern und Zytosol","Peroxisom und Zytosol"],"correct":1,"explain":"Die ersten beiden Reaktionen des Harnstoffzyklus finden in der Mitochondrienmatrix statt (CPS-I und OTC), während die übrigen drei Reaktionen (ASS, ASL, Arginase) im Zytosol ablaufen. Citrullin wird über einen spezifischen Transporter aus den Mitochondrien exportiert.","explainImg":""},
-    {"id":"uc002","topic":"Harnstoffzyklus","text":"Welches Enzym katalysiert den geschwindigkeitsbestimmenden Schritt des Harnstoffzyklus?","options":["Ornithin-Transcarbamylase (OTC)","Carbamoylphosphat-Synthetase I (CPS-I)","Argininosuccinat-Synthetase","Argininosuccinat-Lyase","Arginase"],"correct":1,"explain":"CPS-I ist das geschwindigkeitsbestimmende Enzym des Harnstoffzyklus. Es kondensiert NH₃ + CO₂ + 2 ATP → Carbamoylphosphat. Es benötigt N-Acetylglutamat (NAG) als allosterischen Aktivator, das aus Acetyl-CoA + Glutamat synthetisiert wird, wenn die Aminosäurelast hoch ist.","explainImg":""},
-    {"id":"uc003","topic":"Harnstoffzyklus","text":"N-Acetylglutamat (NAG) aktiviert CPS-I. NAG wird synthetisiert, wenn der Aminosäurekatabolismus zunimmt, signalisiert durch erhöhte Spiegel von:","options":["Harnstoff","Glutamin","Acetyl-CoA und Glutamat","ATP","Arginin"],"correct":2,"explain":"NAG-Synthase wird durch Arginin aktiviert und verwendet Acetyl-CoA + Glutamat als Substrate. Wenn Aminosäuren in großen Mengen abgebaut werden, akkumulieren Glutamat (aus Transaminierung) und Acetyl-CoA, was die NAG-Synthese stimuliert und damit CPS-I aktiviert.","explainImg":""},
-    {"id":"uc004","topic":"Harnstoffzyklus","text":"OTC-Mangel ist der häufigste Harnstoffzyklusdefekt. Die X-chromosomale Vererbung bedeutet, dass betroffene Knaben präsentieren mit:","options":["Leichter Hyperammonämie","Schwerer neonataler Hyperammonämie, oft letal","Harnstoffakkumulation","Argininosuccinat-Akkumulation","Nur Orotatudurie"],"correct":1,"explain":"OTC-Mangel verursacht schwere Hyperammonämie bei betroffenen hemizygoten Knaben, da Carbamoylphosphat nicht auf Ornithin übertragen werden kann und akkumuliert und in den Pyrimidinsynthese-Weg überfließt (produziert Orotsäure). Hyperammonämie verursacht Hirnödem und ist oft neonatal letal.","explainImg":""},
-    {"id":"uc005","topic":"Harnstoffzyklus","text":"Welche Aminosäure wird am Ende jedes Durchgangs des Harnstoffzyklus regeneriert und dient als Träger?","options":["Arginin","Citrullin","Aspartat","Ornithin","Glutamin"],"correct":3,"explain":"Ornithin wird durch Arginase regeneriert, die Arginin in Harnstoff + Ornithin spaltet. Ornithin wird dann zurück in die Mitochondrien transportiert, um erneut mit Carbamoylphosphat zu reagieren, und fungiert als katalytisches Trägermolekül des Zyklus.","explainImg":""},
-    {"id":"uc006","topic":"Harnstoffzyklus","text":"Welches Stickstoffatom im Harnstoff stammt aus der direkten Zugabe von freiem Ammoniak (NH₄⁺) über CPS-I?","options":["Beide Stickstoffatome","Der Stickstoff aus Aspartat","Ein Stickstoff (aus NH₃ über Carbamoylphosphat)","Keiner — beide kommen aus Glutamin","Der Stickstoff aus Arginin"],"correct":2,"explain":"Harnstoff enthält zwei Stickstoffatome. Eines stammt aus freiem Ammoniak (NH₃), das durch CPS-I in Carbamoylphosphat eingebaut wird. Das zweite kommt aus der Aminogruppe von Aspartat, das im Argininosuccinat-Synthetase-Schritt eingebaut wird. Fumarat wird freigesetzt, wenn Aspartat seine Aminogruppe abgibt.","explainImg":""},
-    {"id":"uc007","topic":"Harnstoffzyklus","text":"Citrullinämie Typ I entsteht durch Argininosuccinat-Synthetase-Mangel (ASS). Was akkumuliert in Blut und Urin?","options":["Ornithin","Citrullin","Argininosuccinat","Arginin","Carbamoylphosphat"],"correct":1,"explain":"ASS katalysiert Citrullin + Aspartat → Argininosuccinat. Ihr Mangel führt zur dramatischen Akkumulation von Citrullin in Blut und Urin (Citrullinämie). Auch Ammoniak steigt an, weil der Harnstoffzyklus blockiert ist. Die Behandlung umfasst Proteinrestriktion sowie Natriumbenzoat/-phenylbutyrat.","explainImg":""},
-    {"id":"uc008","topic":"Harnstoffzyklus","text":"Das im Harnstoffzyklus durch Argininosuccinat-Lyase produzierte Fumarat ist wichtig, weil es:","options":["Direkt ausgeschieden wird","In den Zitronensäurezyklus eintritt und diesen mit dem Harnstoffzyklus verbindet","Nur für Glukoneogenese zu Malat umgewandelt wird","CPS-I hemmt","Nur im Zytosol zu Aspartat umgewandelt wird"],"correct":1,"explain":"Das von Argininosuccinat-Lyase freigesetzte Fumarat tritt in den Zitronensäurezyklus ein (Fumarat → Malat → OAA). OAA kann zu Aspartat transaminiert werden, das dann wieder in den Harnstoffzyklus eintritt. Diese Verbindung wird als 'Harnstoffzyklus-Zitratzyklus-Fahrrad' bezeichnet.","explainImg":""},
-    {"id":"uc009","topic":"Harnstoffzyklus","text":"Bei Hyperammonämie, welche Aminosäure transportiert Stickstoff von Muskeln zur Leber, und wie?","options":["Alanin — über den Glukose-Alanin-Zyklus; auch Glutamin — über Amidierung von Glutamat","Aspartat — direkt über das Blut","Glycin — über das Glycin-Spaltungssystem","Serin — über Hydroxymethyltransferase","Taurin — über Konjugation"],"correct":0,"explain":"Zwei Hauptstickstoffträger: (1) Alanin (Glukose-Alanin-Zyklus) — Muskel transaminiert Pyruvat zu Alanin; Leber extrahiert die Aminogruppe. (2) Glutamin — im Muskel/Gehirn durch Glutaminsynthetase synthetisiert (fixiert NH₃); von Leber und Darm aufgenommen und durch Glutaminase desaminiert.","explainImg":""},
-    {"id":"uc010","topic":"Harnstoffzyklus","text":"Arginase-Mangel verursacht Argininämie. Was ist das charakteristische neurologische Merkmal im Vergleich zu anderen Harnstoffzyklusdefekten?","options":["Episodisches Erbrechen","Progressive spastische Diplegie und geistige Behinderung statt akuter Hyperammonämie","Neonatale letale Hyperammonämie","Sensorineuraler Hörverlust","Krampfanfälle durch Hypoglykämie"],"correct":1,"explain":"Arginase-Mangel (Argininämie) manifestiert sich typischerweise mit progressiver spastischer Diplegie und geistiger Behinderung, nicht mit lebensbedrohlicher Hyperammonämie, da alternative Wege Ammoniak teilweise eliminieren können. Arginin akkumuliert und gilt als neurotoxisch. Die Ammoniakerhöhung ist milder als bei anderen Harnstoffzyklusdefekten.","explainImg":""}
+    {
+      "id": "gly001",
+      "topic": "Glykolyse",
+      "text": "Wo findet die Glykolyse statt?",
+      "options": [
+        "Im Mitochondrium",
+        "Im Zytosol",
+        "Im Lysosom",
+        "Im Zellkern",
+        "Im Peroxisom"
+      ],
+      "correct": 1,
+      "explain": "Die Glykolyse ist ein zytosolischer Stoffwechselweg und läuft vollständig im Zytoplasma ab. Im Gegensatz dazu finden der Citratzyklus und die oxidative Phosphorylierung in den Mitochondrien statt. Diese räumliche Trennung ermöglicht eine unabhängige Regulation beider Wege. Auch unter anaeroben Bedingungen bleibt die Glykolyse im Zytosol aktiv.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly002",
+      "topic": "Glykolyse",
+      "text": "Welche Energie wird bei der Hydrolyse von ATP freigesetzt?",
+      "options": [
+        "−60 kJ/mol",
+        "−10 kJ/mol",
+        "−45 kJ/mol",
+        "−31 kJ/mol",
+        "−20 kJ/mol"
+      ],
+      "correct": 3,
+      "explain": "Bei der Hydrolyse einer Phosphoanhydridbindung des ATP werden unter Standardbedingungen ca. −31 kJ/mol freigesetzt. Dieser Wert erklärt, warum ATP als universeller Energieträger der Zelle gilt. Die freie Energie stammt aus der elektrostatischen Abstoßung der Phosphatgruppen und der Resonanzstabilisierung des entstehenden ADP und anorganischen Phosphats. In der Zelle kann der tatsächliche Wert aufgrund der Ionenkonzentrationen noch höher liegen.",
+      "explainImg": "images/gly002.svg"
+    },
+    {
+      "id": "gly003",
+      "topic": "Glykolyse",
+      "text": "Was unterscheidet die aerobe von der anaeroben Glykolyse?",
+      "options": [
+        "Das weitere Schicksal des gebildeten Pyruvats",
+        "Die Anzahl der verbrauchten ATP-Moleküle",
+        "Die Aktivität der Phosphofructokinase 1",
+        "Die Anzahl der durchlaufenen Reaktionsschritte",
+        "Den Ort der Glucose-Phosphorylierung"
+      ],
+      "correct": 0,
+      "explain": "Die Glykolyse selbst verläuft in beiden Fällen identisch und endet mit Pyruvat. Der entscheidende Unterschied liegt im weiteren Schicksal des Pyruvats: aerob wird es in die Mitochondrien importiert und zu Acetyl-CoA decarboxyliert. Anaerob hingegen wird Pyruvat im Zytosol durch die Lactatdehydrogenase zu Lactat reduziert, um NAD⁺ zu regenerieren.",
+      "explainImg": "images/gly003.svg"
+    },
+    {
+      "id": "gly004",
+      "topic": "Glykolyse",
+      "text": "Welches Produkt entsteht beim anaeroben Abbau von Pyruvat im Zytosol?",
+      "options": [
+        "Citrat",
+        "Acetyl-CoA",
+        "Succinat",
+        "Oxalacetat",
+        "Lactat"
+      ],
+      "correct": 4,
+      "explain": "Unter anaeroben Bedingungen wird Pyruvat durch die Lactatdehydrogenase (LDH) zu Lactat reduziert. Dabei wird NADH zu NAD⁺ reoxidiert, was für die Fortsetzung der Glykolyse unerlässlich ist. Lactat wird ins Blut abgegeben und kann in der Leber im Rahmen des Cori-Zyklus wieder zu Glucose umgewandelt werden. Klinisch steigt Lactat bei Hypoxie, Sepsis und intensiver körperlicher Belastung.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly005",
+      "topic": "Glykolyse",
+      "text": "Wie lautet die korrekte Nettobilanz der Glykolyse?",
+      "options": [
+        "Glucose + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Pyruvat + 2 NADH + 4 ATP + 2 H₂O",
+        "Glucose + 4 ADP → 2 Pyruvat + 4 ATP + 2 CO₂",
+        "Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Pyruvat + 2 NADH + 2 ATP + 2 H₂O",
+        "Glucose + 2 ADP + 2 Pᵢ → 2 Pyruvat + 2 ATP + 2 NADH + 2 CO₂",
+        "Glucose + 2 NADH → 2 Pyruvat + 2 NAD⁺ + 4 ATP"
+      ],
+      "correct": 2,
+      "explain": "Die Nettobilanz der Glykolyse ergibt 2 ATP (4 gebildet minus 2 verbraucht in Phase 1), 2 NADH und 2 Pyruvat pro Glucose. Das NADH kann unter aeroben Bedingungen in der Atmungskette weitere ATP liefern. Wichtig: Es entsteht kein CO₂ in der Glykolyse — CO₂ wird erst bei der oxidativen Decarboxylierung von Pyruvat freigesetzt.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly006",
+      "topic": "Glykolyse",
+      "text": "Welche drei Enzyme gelten als Schlüsselenzyme der Glykolyse?",
+      "options": [
+        "Glucokinase, Aldolase, Pyruvatdehydrogenase",
+        "Hexokinase, Phosphofructokinase 1, Pyruvatkinase",
+        "Lactatdehydrogenase, Hexokinase, Phosphoglyceratkinase",
+        "Aldolase, Enolase, Phosphoglyceratmutase",
+        "Phosphoglyceratkinase, Triosephosphatisomerase, Enolase"
+      ],
+      "correct": 1,
+      "explain": "Die drei Schlüsselenzyme der Glykolyse katalysieren irreversible, stark exergone Reaktionen und sind Hauptangriffspunkte der Regulation. Hexokinase phosphoryliert Glucose zu Glucose-6-phosphat; PFK-1 ist das wichtigste regulatorische Enzym; Pyruvatkinase katalysiert den letzten ATP-liefernden Schritt. Alle drei unterliegen allosterischer und hormoneller Kontrolle.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly007",
+      "topic": "Glykolyse",
+      "text": "Durch welche Substanz wird die Phosphofructokinase 1 allosterisch aktiviert?",
+      "options": [
+        "ATP",
+        "Citrat",
+        "Glucose-6-phosphat",
+        "Phosphoenolpyruvat",
+        "Fructose-2,6-bisphosphat"
+      ],
+      "correct": 4,
+      "explain": "Fructose-2,6-bisphosphat ist der stärkste allosterische Aktivator der PFK-1 und ein zentrales Regulationsmolekül. Es wird durch PFK-2 gebildet, deren Aktivität hormonell gesteuert wird: Insulin fördert, Glucagon hemmt die PFK-2-Aktivität. ATP und Citrat hemmen die PFK-1 (Energieüberschuss), während AMP und ADP sie aktivieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly008",
+      "topic": "Glykolyse",
+      "text": "Welches Hormon hemmt die Transkription der Hexokinase?",
+      "options": [
+        "Glucagon",
+        "Insulin",
+        "Thyroxin",
+        "Adrenalin",
+        "Cortisol"
+      ],
+      "correct": 0,
+      "explain": "Glucagon signalisiert einen niedrigen Blutzucker und hemmt die Transkription glykolytischer Enzyme wie der Hexokinase. Insulin hat den entgegengesetzten Effekt und steigert deren Expression. Diese hormonelle Kontrolle der Genexpression ermöglicht eine langfristige Anpassung der Glykolyserate an den Ernährungszustand. Glucagon fördert gleichzeitig die Gluconeogenese in der Leber.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly009",
+      "topic": "Glykolyse",
+      "text": "Was beschreibt der Cori-Zyklus?",
+      "options": [
+        "Synthese von Glucose aus Aminosäuren im Muskel",
+        "Regeneration von NAD⁺ durch den Citratzyklus in der Leber",
+        "Abbau von Fettsäuren zu Acetyl-CoA in der Leber",
+        "Umwandlung von Lactat zu Glucose zwischen Muskel und Leber",
+        "Transport von Pyruvat aus dem Zytosol in die Mitochondrien"
+      ],
+      "correct": 3,
+      "explain": "Im Cori-Zyklus wird Lactat, das beim anaeroben Muskelstoffwechsel entsteht, über das Blut zur Leber transportiert. Dort wird es durch Gluconeogenese wieder zu Glucose umgewandelt (2 Lactat → 1 Glucose), die erneut dem Muskel zur Verfügung gestellt wird. Der Zyklus kostet netto Energie (6 ATP-Äquivalente pro Glucose) und findet hauptsächlich bei intensiver körperlicher Belastung statt.",
+      "explainImg": "images/gly009.svg"
+    },
+    {
+      "id": "gly010",
+      "topic": "Glykolyse",
+      "text": "Welche Aussage zur Regulation der Pyruvatkinase ist korrekt?",
+      "options": [
+        "Sie wird durch Citrat allosterisch aktiviert",
+        "Sie wird durch Fructose-1,6-bisphosphat aktiviert",
+        "Sie wird durch Glucose-6-phosphat allosterisch gehemmt",
+        "Insulin hemmt die Expression des Pyruvatkinasegens",
+        "Sie wird durch AMP allosterisch gehemmt"
+      ],
+      "correct": 1,
+      "explain": "Die Pyruvatkinase wird durch Fructose-1,6-bisphosphat im Sinne einer Feedforward-Aktivierung stimuliert: Wenn PFK-1 aktiv ist und Fructose-1,6-bisphosphat akkumuliert, wird die Pyruvatkinase vorab aktiviert. Sie wird gehemmt durch ATP und Alanin (Energieüberschuss bzw. ausreichend Aminosäuren). Insulin steigert die Expression des Pyruvatkinasegens — der gegenteilige Effekt zu Option D.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly011",
+      "topic": "Glykolyse",
+      "text": "Was unterscheidet die Glucokinase von der Hexokinase?",
+      "options": [
+        "Glucokinase kommt in Erythrozyten vor, Hexokinase in der Leber",
+        "Glucokinase hat eine niedrigere Km für Glucose als Hexokinase",
+        "Glucokinase wird nicht durch Glucose-6-phosphat gehemmt",
+        "Glucokinase katalysiert die Phosphorylierung von Fructose",
+        "Glucokinase verbraucht GTP statt ATP bei der Reaktion"
+      ],
+      "correct": 2,
+      "explain": "Glucokinase (Hexokinase IV) kommt hauptsächlich in der Leber und in Betazellen des Pankreas vor. Sie hat eine hohe Km (geringe Affinität) für Glucose, ist nicht durch Glucose-6-phosphat hemmbar und wird durch Insulin induziert. Diese Eigenschaften machen sie zum Glucosesensor der Leber: Sie wird nur bei hohem Blutzucker aktiv und passt die Glucosephosphorylierung dem Angebot an.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly012",
+      "topic": "Glykolyse",
+      "text": "Welche Kombination hemmt die Phosphofructokinase 1 allosterisch?",
+      "options": [
+        "ATP und Citrat",
+        "AMP und Fructose-2,6-bisphosphat",
+        "ADP und Glucose-6-phosphat",
+        "NAD⁺ und Oxalacetat",
+        "Insulin und Glucagon"
+      ],
+      "correct": 0,
+      "explain": "Hohe ATP-Spiegel signalisieren Energieüberschuss und hemmen PFK-1, um die Glykolyse zu verlangsamen. Citrat, ein Zwischenprodukt des Citratzyklus, hemmt PFK-1 ebenfalls und zeigt an, dass die Zelle ausreichend Biosynthesevorstufen hat. Im Gegensatz dazu aktivieren AMP und ADP (Energiemangel) sowie Fructose-2,6-bisphosphat die PFK-1.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly013",
+      "topic": "Glykolyse",
+      "text": "Wie viele ATP-Moleküle werden netto direkt in der Glykolyse produziert?",
+      "options": [
+        "4 ATP, da in Phase 3 vier Moleküle gebildet werden",
+        "1 ATP, da nur ein Substratkettenphosphorylierungsschritt vorliegt",
+        "6 ATP, da zusätzlich das NADH eingerechnet wird",
+        "2 ATP, da in Phase 1 zwei verbraucht und in Phase 3 vier gebildet werden",
+        "8 ATP, da Glucose sechs Kohlenstoffatome besitzt"
+      ],
+      "correct": 3,
+      "explain": "In Phase 1 (Investitionsphase) werden 2 ATP verbraucht (Hexokinase und PFK-1). In Phase 3 (Gewinnungsphase) werden 4 ATP gebildet (je 2 × Phosphoglyceratkinase und Pyruvatkinase). Der Nettgewinn beträgt also 2 ATP pro Glucose. Das produzierte NADH liefert unter aeroben Bedingungen weitere ATP — aber erst in der Atmungskette, nicht in der Glykolyse selbst.",
+      "explainImg": "images/gly013.svg"
+    },
+    {
+      "id": "gly014",
+      "topic": "Glykolyse",
+      "text": "Bei welchem klinischen Zustand ist ein erhöhter Lactat-Blutspiegel am wahrscheinlichsten?",
+      "options": [
+        "Hyperglykämie bei unkontrolliertem Typ-2-Diabetes",
+        "Langzeitfasten ohne körperliche Belastung",
+        "Erhöhter Insulinspiegel nach einer Mahlzeit",
+        "Chronische Niereninsuffizienz ohne Azidose",
+        "Gewebshypoxie bei Schock oder schwerer Sepsis"
+      ],
+      "correct": 4,
+      "explain": "Bei Gewebshypoxie (z.B. Schock, Sepsis, Herzstillstand) kann die Atmungskette nicht ausreichend NADH oxidieren, sodass Pyruvat verstärkt zu Lactat reduziert wird. Dies führt zur Laktatazidose. Ein Lactat > 2 mmol/L ist ein klinischer Warnwert; Werte > 4 mmol/L weisen auf ein erhöhtes Mortalitätsrisiko hin. Regelmäßige Lactatmessungen sind daher in der Intensivmedizin Standard.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly015",
+      "topic": "Glykolyse",
+      "text": "Was ist das Endprodukt der Phase 1 der Glykolyse?",
+      "options": [
+        "Glucose-1-phosphat",
+        "Phosphoenolpyruvat",
+        "Fructose-1,6-bisphosphat",
+        "Glycerinaldehyd-3-phosphat",
+        "1,3-Bisphosphoglycerat"
+      ],
+      "correct": 2,
+      "explain": "Phase 1 der Glykolyse (Investitionsphase) umfasst die Umwandlung von Glucose in Fructose-1,6-bisphosphat unter Verbrauch von 2 ATP. Schlüsselenzyme sind Hexokinase (Schritt 1) und Phosphofructokinase 1 (Schritt 3). Das entstehende Fructose-1,6-bisphosphat wird in Phase 2 durch die Aldolase in zwei C3-Körper gespalten: Glycerinaldehyd-3-phosphat (GAP) und Dihydroxyacetonphosphat (DHAP).",
+      "explainImg": "images/gly015.svg"
+    },
+    {
+      "id": "gcn001",
+      "topic": "Glukoneogenese",
+      "text": "Wo findet die Gluconeogenese hauptsächlich statt?",
+      "options": [
+        "Im Skelettmuskel und im Gehirn",
+        "Im Fettgewebe und in der Milz",
+        "Im Herzmuskel und im Dünndarm",
+        "In der Lunge und im Knochenmark",
+        "In der Leber und in der Niere"
+      ],
+      "correct": 4,
+      "explain": "Die Gluconeogenese findet hauptsächlich in der Leber statt, die bis zu 90 % der Neusynthese übernimmt. Die Niere trägt vor allem beim Langzeitfasten und bei Azidose bei. Andere Organe wie Muskel oder Gehirn können keine nennenswerte Gluconeogenese betreiben, da ihnen entscheidende Enzyme fehlen (z.B. Glucose-6-Phosphatase).",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn002",
+      "topic": "Glukoneogenese",
+      "text": "Welches sind die drei Hauptausgangssubstrate der Gluconeogenese?",
+      "options": [
+        "Glucose, Fructose und Galactose",
+        "Lactat, Aminosäuren und Glycerol",
+        "Fettsäuren, Cholesterin und Ketonkörper",
+        "Acetyl-CoA, NADH und ATP",
+        "Pyruvat, CO₂ und GTP"
+      ],
+      "correct": 1,
+      "explain": "Die wichtigsten Substrate für die Gluconeogenese sind Lactat (aus anaerober Glykolyse, Cori-Zyklus), glukogene Aminosäuren (z.B. Alanin aus dem Muskelabbau beim Fasten) und Glycerol (aus der Lipolyse im Fettgewebe). Fettsäuren können beim Menschen nicht zu Glucose umgewandelt werden, da Acetyl-CoA nicht in die Gluconeogenese eingeschleust werden kann.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn003",
+      "topic": "Glukoneogenese",
+      "text": "Warum kann die Gluconeogenese nicht einfach die Glykolyse rückwärts ablaufen lassen?",
+      "options": [
+        "Weil andere Coenzyme in entgegengesetzter Richtung benötigt werden",
+        "Weil Glucose in der Leber nicht phosphoryliert werden kann",
+        "Weil NADH für die Rückreaktion nicht verfügbar ist",
+        "Weil drei glykolytische Reaktionen thermodynamisch irreversibel sind",
+        "Weil Pyruvat nicht in die Mitochondrien transportiert werden kann"
+      ],
+      "correct": 3,
+      "explain": "Drei Reaktionen der Glykolyse sind unter physiologischen Bedingungen irreversibel: die Reaktionen der Hexokinase, der Phosphofructokinase 1 und der Pyruvatkinase. Diese müssen in der Gluconeogenese durch spezifische Umgehungsreaktionen mit eigenen Enzymen ersetzt werden. Die restlichen sieben Reaktionen der Glykolyse können in beiden Richtungen ablaufen.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn004",
+      "topic": "Glukoneogenese",
+      "text": "Welches Enzym katalysiert den ersten Schritt der Gluconeogenese, ausgehend von Pyruvat?",
+      "options": [
+        "Pyruvatcarboxylase",
+        "PEP-Carboxykinase",
+        "Fructose-1,6-bisphosphatase",
+        "Glucose-6-Phosphatase",
+        "Pyruvatdehydrogenase"
+      ],
+      "correct": 0,
+      "explain": "Die Pyruvatcarboxylase befindet sich in den Mitochondrien und katalysiert die ATP-abhängige Carboxylierung von Pyruvat zu Oxalacetat unter Verbrauch von HCO₃⁻. Sie benötigt Biotin als Cofaktor. Acetyl-CoA ist ein allosterischer Aktivator der Pyruvatcarboxylase — ein Signal, dass ausreichend Substrate für den Citratzyklus vorhanden sind und überschüssiges Pyruvat in die Gluconeogenese umgeleitet werden soll.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn005",
+      "topic": "Glukoneogenese",
+      "text": "In welchem Zellkompartiment wird Oxalacetat durch die PEP-Carboxykinase zu PEP umgewandelt?",
+      "options": [
+        "Im Intermembranraum der Mitochondrien",
+        "Im endoplasmatischen Retikulum",
+        "Im Zytosol",
+        "In der mitochondrialen Matrix",
+        "Im Zellkern"
+      ],
+      "correct": 2,
+      "explain": "Die PEP-Carboxykinase (PEPCK) ist ein zytosolisches Enzym, das Oxalacetat unter Verbrauch von GTP zu Phosphoenolpyruvat (PEP) und CO₂ umwandelt. Da Oxalacetat die innere Mitochondrienmembran nicht direkt passieren kann, wird es zunächst zu Malat reduziert, ins Zytosol transportiert und dort wieder zu Oxalacetat oxidiert, bevor PEPCK es zu PEP umwandelt.",
+      "explainImg": "images/gcn005.svg"
+    },
+    {
+      "id": "gcn006",
+      "topic": "Glukoneogenese",
+      "text": "Welches Enzym der Gluconeogenese ist im endoplasmatischen Retikulum lokalisiert?",
+      "options": [
+        "Pyruvatcarboxylase",
+        "Fructose-1,6-bisphosphatase",
+        "PEP-Carboxykinase",
+        "Phosphoglyceratkinase",
+        "Glucose-6-Phosphatase"
+      ],
+      "correct": 4,
+      "explain": "Die Glucose-6-Phosphatase ist im endoplasmatischen Retikulum (ER) lokalisiert und katalysiert den letzten Schritt der Gluconeogenese: die Abspaltung des Phosphatrests von Glucose-6-phosphat zu freier Glucose. Nur Leber und Niere besitzen dieses Enzym, was erklärt, warum nur diese Organe Glucose ins Blut abgeben können. Ihr Fehlen verursacht Morbus von Gierke.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn007",
+      "topic": "Glukoneogenese",
+      "text": "Wie lautet die korrekte Energiebilanz der Gluconeogenese für die Bildung von 1 Glucose aus 2 Pyruvat?",
+      "options": [
+        "Verbrauch von 2 ATP und 2 GTP, kein NADH benötigt",
+        "Verbrauch von 4 ATP, 2 GTP und 2 NADH",
+        "Verbrauch von 6 ATP und 2 FADH₂, kein GTP benötigt",
+        "Verbrauch von 2 ATP und 4 NADH, kein GTP benötigt",
+        "Verbrauch von 8 ATP und 4 GTP, 4 NADH benötigt"
+      ],
+      "correct": 1,
+      "explain": "Die Gluconeogenese aus 2 Pyruvat benötigt: 2 ATP für Pyruvatcarboxylase, 2 GTP für PEPCK, 2 ATP für Phosphoglyceratkinase (Rückreaktion) und 2 NADH für die Umkehr der Glycerinaldehyd-3-phosphat-Dehydrogenase. Die Gesamtbilanz beträgt 4 ATP + 2 GTP + 2 NADH — deutlich mehr Energie als die Glykolyse liefert. Gluconeogenese wird durch Glucosemangel angetrieben, nicht durch Energieüberschuss.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn008",
+      "topic": "Glukoneogenese",
+      "text": "Was stimuliert die Fructose-1,6-bisphosphatase allosterisch?",
+      "options": [
+        "AMP und Fructose-2,6-bisphosphat",
+        "ATP und Glucose-6-phosphat",
+        "Insulin und Pyruvat",
+        "Citrat",
+        "NADH und Oxalacetat"
+      ],
+      "correct": 3,
+      "explain": "Citrat aktiviert die Fructose-1,6-bisphosphatase und hemmt gleichzeitig die PFK-1 — ein klassisches Beispiel für reziproke Regulation. Hohe Citratspiegel signalisieren, dass der Citratzyklus gesättigt ist und Glucose eher gespeichert als verbrannt werden sollte. AMP und Fructose-2,6-bisphosphat hingegen hemmen die Bisphosphatase und aktivieren die PFK-1, um die Glykolyse bei Energiemangel anzutreiben.",
+      "explainImg": "images/gcn008.svg"
+    },
+    {
+      "id": "gcn009",
+      "topic": "Glukoneogenese",
+      "text": "Welcher Mechanismus treibt die Gluconeogenese an, wenn Lactat im Blut ansteigt?",
+      "options": [
+        "Massenwirkungsgesetz: höhere Substratkonzentration treibt die Reaktion in Richtung Glucose",
+        "Allosterische Aktivierung der Pyruvatcarboxylase durch Lactat",
+        "Hormonelle Induktion der PEPCK durch Lactat direkt",
+        "Aktivierung der Glucose-6-Phosphatase durch erhöhtes Lactat",
+        "Hemmung der Glykolyse durch Lactat über PFK-1"
+      ],
+      "correct": 0,
+      "explain": "Die Gluconeogenese wird durch Substratverfügbarkeit (Massenwirkungsgesetz) reguliert: Steigen die Konzentrationen von Lactat, Alanin oder Glycerol im Blut, wird die Gluconeogenese allein durch das chemische Gleichgewicht angetrieben, ohne dass Hormone eingreifen müssen. Beim Cori-Zyklus liefert der Muskel Lactat, das in der Leber direkt zur Glucosesynthese genutzt wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn010",
+      "topic": "Glukoneogenese",
+      "text": "Wie beeinflusst Glucagon die Gluconeogenese auf hormoneller Ebene?",
+      "options": [
+        "Glucagon hemmt die Gluconeogenese durch Aktivierung von FOXO1",
+        "Glucagon hemmt die PEPCK-Genexpression über cAMP",
+        "Glucagon steigert die PEPCK-Genexpression über cAMP und CREB",
+        "Glucagon aktiviert Insulin-Rezeptoren in Hepatozyten",
+        "Glucagon steigert die Glykolyse und hemmt die Gluconeogenese"
+      ],
+      "correct": 2,
+      "explain": "Glucagon bindet an seinen G-Protein-gekoppelten Rezeptor in Hepatozyten und erhöht den intrazellulären cAMP-Spiegel. cAMP aktiviert die Proteinkinase A, die den Transkriptionsfaktor CREB phosphoryliert. Phosphoryliertes CREB steigert die Transkription von PEPCK und Glucose-6-Phosphatase. Cortisol wirkt synergistisch über den Glucocorticoid-Rezeptor. Diese Induktion dauert Stunden bis Tage.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn011",
+      "topic": "Glukoneogenese",
+      "text": "Wie hemmt Insulin die Gluconeogenese auf molekularer Ebene?",
+      "options": [
+        "Insulin aktiviert CREB und steigert die PEPCK-Transkription",
+        "Insulin hemmt die Pyruvatcarboxylase durch direkten Kontakt",
+        "Insulin aktiviert FOXO1 und steigert die PEPCK-Expression",
+        "Insulin senkt den cAMP-Spiegel durch Hemmung der Adenylatcyclase direkt",
+        "Insulin phosphoryliert und inaktiviert FOXO1, das sonst PEPCK fördert"
+      ],
+      "correct": 4,
+      "explain": "Insulin aktiviert über den PI3K/Akt-Signalweg die Proteinkinase Akt (PKB), die den Transkriptionsfaktor FOXO1 phosphoryliert. Phosphoryliertes FOXO1 verlässt den Zellkern und kann die Transkription von PEPCK und Glucose-6-Phosphatase nicht mehr fördern. FOXO1 ist im aktiven (unphosphorylierten) Zustand ein Promotor der Gluconeogenese — Insulin schaltet ihn durch Phosphorylierung ab.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn012",
+      "topic": "Glukoneogenese",
+      "text": "Welche Aussage zu Morbus von Gierke (Typ 1a) ist korrekt?",
+      "options": [
+        "Ursache ist ein Defekt der Fructose-1,6-bisphosphatase",
+        "Ursache ist ein Defekt der Glucose-6-Phosphatase",
+        "Ursache ist ein Defekt der Pyruvatcarboxylase",
+        "Ursache ist ein Defekt der PEP-Carboxykinase",
+        "Ursache ist ein Defekt der Lactatdehydrogenase"
+      ],
+      "correct": 1,
+      "explain": "Morbus von Gierke Typ 1a wird autosomal-rezessiv vererbt und beruht auf einem Defekt der Glucose-6-Phosphatase im ER. Ohne dieses Enzym kann Glucose-6-phosphat weder aus der Gluconeogenese noch aus dem Glykogenabbau zu freier Glucose umgewandelt werden. Folgen sind schwere Nüchternhypoglykämien, Hepatomegalie durch Glykogenakkumulation, Lactatazidose und erhöhte Harnsäure- und Triglyceridspiegel.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn013",
+      "topic": "Glukoneogenese",
+      "text": "Warum können Fettsäuren beim Menschen nicht zur Gluconeogenese beitragen?",
+      "options": [
+        "Weil Fettsäuren keine Mitochondrien erreichen können",
+        "Weil der Fettsäureabbau kein ATP erzeugt",
+        "Weil Fettsäuren direkt zu CO₂ und H₂O oxidiert werden",
+        "Weil Acetyl-CoA nicht in Oxalacetat oder PEP umgewandelt werden kann",
+        "Weil Fettsäuren die Pyruvatcarboxylase kompetitiv hemmen"
+      ],
+      "correct": 3,
+      "explain": "Der β-Oxidationsabbau von Fettsäuren endet in Acetyl-CoA. Im Citratzyklus wird Acetyl-CoA vollständig zu CO₂ oxidiert — es gibt keinen Nettogewinn an Oxalacetat oder anderen C4-Körpern, die in die Gluconeogenese eingespeist werden könnten. Daher sind Fettsäuren keine gluconeogenen Substrate. Glycerol (aus Triglyceriden) hingegen kann als Glycerol-3-phosphat in die Gluconeogenese eintreten.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn014",
+      "topic": "Glukoneogenese",
+      "text": "Bei welchem Zustand ist die Gluconeogenese am stärksten aktiviert?",
+      "options": [
+        "Langzeitfasten mit hohem Glucagon- und Cortisolspiegel",
+        "Kurz nach einer kohlenhydratreichen Mahlzeit",
+        "Während intensiver anaerober Muskelarbeit allein",
+        "Bei hohem Insulinspiegel und gefüllten Glykogenspeichern",
+        "Bei ausschließlicher Fetternährung ohne Proteinzufuhr"
+      ],
+      "correct": 0,
+      "explain": "Beim Langzeitfasten sind Glucagon und Cortisol dauerhaft erhöht. Glucagon induziert über cAMP/CREB die Transkription von PEPCK und Glucose-6-Phosphatase; Cortisol wirkt synergistisch. Gleichzeitig liefern Muskelproteolyse (Alanin) und Lipolyse (Glycerol) reichlich Substrate. Insulin ist supprimiert, sodass FOXO1 aktiv bleibt und die Gluconeogenese-Enzyme weiter hochreguliert bleiben.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn015",
+      "topic": "Glukoneogenese",
+      "text": "Welches Medikament hemmt die Gluconeogenese und wird als Erstlinientherapie bei Typ-2-Diabetes eingesetzt?",
+      "options": [
+        "Glibenclamid (Sulfonylharnstoff)",
+        "Sitagliptin (DPP-4-Hemmer)",
+        "Metformin (Biguanid)",
+        "Empagliflozin (SGLT-2-Hemmer)",
+        "Insulin glargin (Langzeitinsulin)"
+      ],
+      "correct": 2,
+      "explain": "Metformin ist das meistverordnete orale Antidiabetikum weltweit. Es hemmt den Komplex I der mitochondrialen Atmungskette, was den AMP/ATP-Quotienten erhöht und AMPK aktiviert. AMPK phosphoryliert und inaktiviert CREB-Koaktivatoren (PGC-1α/TORC2), wodurch die Transkription von PEPCK und Glucose-6-Phosphatase abnimmt. Das Ergebnis ist eine deutliche Reduktion der hepatischen Gluconeogenese.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg001",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Welches Enzym fügt Glucosereste am nicht-reduzierenden Ende des Glykogens hinzu?",
+      "options": [
+        "Glykogenphosphorylase",
+        "Glykogensynthase",
+        "Verzweigungsenzym",
+        "UDP-Glucose-Pyrophosphorylase",
+        "Entästelungsenzym"
+      ],
+      "correct": 1,
+      "explain": "Die Glykogensynthase verlängert Glykogenketten durch Anfügen von UDP-Glucose an die nicht-reduzierenden Enden über α(1→4)-glykosidische Bindungen. Sie benötigt einen bereits vorhandenen Glykogenprimer (mindestens 4 Reste) oder das Protein Glykogenin als Initiator.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg002",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Was ist die aktivierte Form der Glucose, die bei der Glykogensynthese verwendet wird?",
+      "options": [
+        "Glucose-1-phosphat",
+        "Glucose-6-phosphat",
+        "UDP-Glucose",
+        "ADP-Glucose",
+        "GDP-Glucose"
+      ],
+      "correct": 2,
+      "explain": "Glucose muss durch UDP-Glucose-Pyrophosphorylase zu UDP-Glucose aktiviert werden, bevor sie in Glykogen eingebaut werden kann. Das dabei verwendete UTP wird zu UMP + PPi hydrolysiert; die anschließende Pyrophosphatase-Aktivität treibt die Reaktion voran.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg003",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Die Glykogenphosphorylase spaltet Glykogen durch:",
+      "options": [
+        "Hydrolyse mit Wasser",
+        "Phosphorolyse mit anorganischem Phosphat",
+        "Transferasereaktion",
+        "Oxidative Spaltung",
+        "Lysosomale α-Glucosidase-Aktivität"
+      ],
+      "correct": 1,
+      "explain": "Die Glykogenphosphorylase führt eine Phosphorolyse durch: Sie verwendet anorganisches Phosphat (Pi), um α(1→4)-Bindungen an nicht-reduzierenden Enden zu spalten und Glucose-1-phosphat freizusetzen. Dies ist energetisch vorteilhaft, da Glucose-1-phosphat bereits phosphoryliert ist.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg004",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Die Von-Gierke-Krankheit (GSD Typ I) entsteht durch einen Mangel an:",
+      "options": [
+        "Glykogensynthase",
+        "Glucose-6-phosphatase",
+        "Entästelungsenzym",
+        "Saure Maltase (α-Glucosidase)",
+        "Leberglykogenphosphorylase"
+      ],
+      "correct": 1,
+      "explain": "Die Von-Gierke-Krankheit wird durch Glucose-6-phosphatase-Mangel verursacht. Ohne dieses Enzym kann die Leber keine freie Glucose aus Glykogenolyse oder Glukoneogenese ins Blut abgeben. Dies führt zu schwerer Nüchternhypoglykämie und massiver hepatischer Glykogenakkumulation.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg005",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Welches Hormon aktiviert die Glykogenolyse in der Leber über einen cAMP-abhängigen Weg?",
+      "options": [
+        "Insulin",
+        "Glukagon",
+        "Kortisol",
+        "Aldosteron",
+        "Somatostatin"
+      ],
+      "correct": 1,
+      "explain": "Glukagon bindet an seinen GPCR auf Hepatozyten → Adenylatcyclase → cAMP → PKA-Aktivierung → Phosphorylasekinase-Aktivierung → Glykogenphosphorylase-Aktivierung. Gleichzeitig phosphoryliert PKA die Glykogensynthase und inaktiviert sie, um Substratkreisläufe zu verhindern.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg006",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Das Entästelungsenzym hat zwei katalytische Aktivitäten. Welches Paar ist korrekt?",
+      "options": [
+        "Kinase + Phosphatase",
+        "4-α-Glucanotransferase + Amylo-1,6-Glucosidase",
+        "Synthase + Phosphorylase",
+        "Isomerase + Lyase",
+        "Hydrolase + Mutase"
+      ],
+      "correct": 1,
+      "explain": "Das Entästelungsenzym überträgt zunächst einen Trisaccharid-Rest vom Ast auf die Hauptkette (Transferase-Aktivität), dann hydrolysiert es die verbleibende einzelne Glucose an der Verzweigungsstelle (Glucosidase-Aktivität) und setzt freie Glucose (nicht Glucose-1-phosphat) frei.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg007",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Die McArdle-Krankheit (GSD Typ V) ist durch Muskelkrämpfe bei körperlicher Belastung aufgrund eines Mangels an __ gekennzeichnet:",
+      "options": [
+        "Saure Maltase",
+        "Leberphosphorylase",
+        "Muskelglykogenphosphorylase",
+        "Verzweigungsenzym",
+        "Phosphofructokinase"
+      ],
+      "correct": 2,
+      "explain": "Die McArdle-Krankheit entsteht durch einen Mangel an Muskelglykogenphosphorylase. Der Muskel kann Glykogen bei Belastung nicht mobilisieren, was zu Energiemangel, schmerzhaften Krämpfen und Myoglobinurie führt. Der Blutlaktatspiegel steigt nach ischämischer Unterarmbelastung nicht an.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg008",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Die Glykogensynthase ist maximal aktiv in ihrer:",
+      "options": [
+        "Phosphorylierten Form",
+        "Dephosphorylierten Form",
+        "AMP-gebundenen Form",
+        "Glukagon-stimulierten Form",
+        "Citrat-inhibierten Form"
+      ],
+      "correct": 1,
+      "explain": "Die Glykogensynthase ist aktiv (a-Form), wenn sie dephosphoryliert ist, und inaktiv (b-Form), wenn sie phosphoryliert ist. Insulin fördert die Glykogensynthese durch Aktivierung der Proteinphosphatase 1 (PP1), die die Glykogensynthase dephosphoryliert und aktiviert.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg009",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Welches Protein fungiert als Primer für die Glykogensynthese, indem es die ersten Glucosereste aufnimmt?",
+      "options": [
+        "Glykogenin",
+        "Glykogensynthase",
+        "Phosphoglucomutase",
+        "Laforin",
+        "Verzweigungsenzym"
+      ],
+      "correct": 0,
+      "explain": "Glykogenin ist ein selbst-glukosylierendes Protein, das den Primer für die Glykogensynthese bildet. Es bindet die erste Glucose an einen Tyrosinrest und verlängert die Kette auf ~8 Reste, bevor die Glykogensynthase übernimmt.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg010",
+      "topic": "Glykogenstoffwechsel",
+      "text": "Insulin fördert die Glykogensynthese durch Aktivierung welcher Phosphatase, die die Glykogensynthase dephosphoryliert?",
+      "options": [
+        "Proteinphosphatase 1 (PP1)",
+        "Proteinphosphatase 2A (PP2A)",
+        "Calcineurin (PP2B)",
+        "PTP1B",
+        "Phosphorylasekinase"
+      ],
+      "correct": 0,
+      "explain": "Das Insulin-Signaling aktiviert PP1 durch Akt-vermittelte Phosphorylierung ihrer regulatorischen Untereinheit. PP1 dephosphoryliert dann die Glykogensynthase (Aktivierung) und Glykogenphosphorylase (Inaktivierung) und fördert koordiniert die Glykogensynthese.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca001",
+      "topic": "Zitronensäurezyklus",
+      "text": "Welches Enzym katalysiert die Kondensationsreaktion, die den Zitronensäurezyklus einleitet?",
+      "options": [
+        "Citratsynthase",
+        "Isocitratdehydrogenase",
+        "Aconitase",
+        "Malatdehydrogenase",
+        "Fumarase"
+      ],
+      "correct": 0,
+      "explain": "Die Citratsynthase kondensiert Acetyl-CoA (2C) mit Oxalacetat (4C) zu Citrat (6C). Dies ist der Eintrittspunkt des Zitronensäurezyklus. Das Enzym wird durch den Energiestatus der Zelle reguliert: gehemmt durch ATP, NADH und Succinyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca002",
+      "topic": "Zitronensäurezyklus",
+      "text": "Wie viele NADH-Moleküle werden pro vollständigem Durchgang des Zitronensäurezyklus produziert?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct": 3,
+      "explain": "Pro Durchgang werden drei NADH-Moleküle produziert: bei Isocitratdehydrogenase, α-Ketoglutaratdehydrogenase und Malatdehydrogenase. Außerdem wird ein FADH₂ an der Succinatdehydrogenase und ein GTP an der Succinyl-CoA-Synthetase produziert.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca003",
+      "topic": "Zitronensäurezyklus",
+      "text": "Welches Zwischenprodukt des Zitronensäurezyklus ist ein wichtiger Vorläufer für die Hämsynthese?",
+      "options": [
+        "Succinyl-CoA",
+        "Citrat",
+        "Fumarat",
+        "Malat",
+        "α-Ketoglutarat"
+      ],
+      "correct": 0,
+      "explain": "Succinyl-CoA kondensiert mit Glycin (katalysiert durch ALA-Synthase, die Pyridoxalphosphat benötigt) zu δ-Aminolävulinsäure (ALA), dem ersten regulierten Schritt der Hämbiosynthese. Diese Reaktion findet in der Mitochondrienmatrix statt.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca004",
+      "topic": "Zitronensäurezyklus",
+      "text": "Welches Enzym des Zitronensäurezyklus produziert direkt GTP durch Substratkettenphosphorylierung?",
+      "options": [
+        "Isocitratdehydrogenase",
+        "Succinatdehydrogenase",
+        "Fumarase",
+        "Aconitase",
+        "Succinyl-CoA-Synthetase"
+      ],
+      "correct": 4,
+      "explain": "Die Succinyl-CoA-Synthetase (auch Succinyl-CoA-Thiokinase) koppelt die Hydrolyse der energiereichen Thioesterbindung in Succinyl-CoA an die Phosphorylierung von GDP zu GTP (oder ADP zu ATP in manchen Geweben).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca005",
+      "topic": "Zitronensäurezyklus",
+      "text": "Thiaminmangel (Vitamin B1) beeinträchtigt den Zitronensäurezyklus durch Beeinflussung welches Enzymkomplexes?",
+      "options": [
+        "Citratsynthase",
+        "Pyruvatdehydrogenase und α-Ketoglutaratdehydrogenase",
+        "Succinatdehydrogenase",
+        "Aconitase",
+        "Malatdehydrogenase"
+      ],
+      "correct": 1,
+      "explain": "Thiaminpyrophosphat (TPP) ist ein essenzieller Cofaktor sowohl für den Pyruvatdehydrogenase-Komplex (PDH) als auch für den α-Ketoglutaratdehydrogenase-Komplex (α-KGDH). Thiaminmangel verursacht Wernicke-Enzephalopathie und Beriberi.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca006",
+      "topic": "Zitronensäurezyklus",
+      "text": "Die Succinatdehydrogenase ist unter den Enzymen des Zitronensäurezyklus einzigartig, da sie:",
+      "options": [
+        "Im Matrix gelöst vorliegt",
+        "In die innere Mitochondrienmembran (Komplex II) eingebettet ist",
+        "Im Zytosol lokalisiert ist",
+        "Mit der äußeren Mitochondrienmembran assoziiert ist",
+        "Ein GTP-produzierendes Enzym ist"
+      ],
+      "correct": 1,
+      "explain": "Die Succinatdehydrogenase ist das einzige Enzym des Zitratzyklus, das in die innere Mitochondrienmembran eingebettet ist. Sie ist identisch mit Komplex II der Atmungskette — sie oxidiert Succinat zu Fumarat und reduziert FAD zu FADH₂.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca007",
+      "topic": "Zitronensäurezyklus",
+      "text": "Welche Reaktion gilt unter den meisten physiologischen Bedingungen als geschwindigkeitsbestimmender Schritt des Zitronensäurezyklus?",
+      "options": [
+        "Citratsynthase",
+        "Aconitase",
+        "Isocitratdehydrogenase",
+        "Malatdehydrogenase",
+        "Fumarase"
+      ],
+      "correct": 2,
+      "explain": "Die Isocitratdehydrogenase ist ein wichtiges regulatorisches Enzym. Sie wird durch ADP und Ca²⁺ allosterisch aktiviert und durch ATP und NADH gehemmt. Durch die Kontrolle dieses Schritts wird der Zitronensäurezyklus mit dem Energiebedarf der Zelle koordiniert.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca008",
+      "topic": "Zitronensäurezyklus",
+      "text": "Wenn Oxalacetat (OAA) erschöpft ist, welche anaplerotische Reaktion kann es direkt auffüllen?",
+      "options": [
+        "Pyruvat → Acetyl-CoA (PDH)",
+        "Glutamat → α-Ketoglutarat (Transaminierung)",
+        "Pyruvat → OAA (Pyruvatcarboxylase)",
+        "Succinyl-CoA → Succinat",
+        "Fumarat → Malat (Fumarase)"
+      ],
+      "correct": 2,
+      "explain": "Die Pyruvatcarboxylase ist das primäre anaplerotische Enzym in der Leber: Pyruvat + CO₂ + ATP → OAA. Es wird durch Acetyl-CoA aktiviert — ein Signal, dass Acetyl-CoA vorhanden ist, OAA jedoch limitierend ist, was einen kontinuierlichen Zyklusfluss sichert.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca009",
+      "topic": "Zitronensäurezyklus",
+      "text": "Aus den Mitochondrien ins Zytosol exportiertes Citrat wird durch ATP-Citrat-Lyase gespalten, um Acetyl-CoA für __ bereitzustellen:",
+      "options": [
+        "Glykolyse",
+        "Glukoneogenese",
+        "Harnstoffsynthese",
+        "Hämsynthese",
+        "Fettsäure- und Cholesterinsynthese"
+      ],
+      "correct": 4,
+      "explain": "Der Citrat-Transport ins Zytosol ist der primäre Mechanismus, um mitochondriales Acetyl-CoA für die Biosynthese zu exportieren. ATP-Citrat-Lyase spaltet Citrat in Acetyl-CoA + OAA. Dieses zytosolische Acetyl-CoA wird für die Fettsäure- und Cholesterinsynthese (über HMG-CoA) genutzt.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca010",
+      "topic": "Zitronensäurezyklus",
+      "text": "Welcher Schritt des Zitronensäurezyklus umfasst eine oxidative Decarboxylierung unter Produktion von CO₂ und NADH?",
+      "options": [
+        "Citrat → Isocitrat",
+        "Isocitrat → α-Ketoglutarat",
+        "Succinat → Fumarat",
+        "Malat → Oxalacetat",
+        "Fumarat → Malat"
+      ],
+      "correct": 1,
+      "explain": "Die Isocitratdehydrogenase katalysiert die erste oxidative Decarboxylierung: Isocitrat → α-Ketoglutarat + CO₂ + NADH. Eine zweite oxidative Decarboxylierung findet an der α-Ketoglutaratdehydrogenase statt (α-Ketoglutarat → Succinyl-CoA + CO₂ + NADH).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca011",
+      "topic": "Zitronensäurezyklus",
+      "text": "Der Pyruvat-Dehydrogenase-Komplex (PDH) benötigt fünf Coenzyme. Welche Kombination benennt alle korrekt?",
+      "options": [
+        "TPP, Biotin, CoA, FMN, NADP⁺",
+        "PLP, Liponsäure, CoA, FAD, NADP⁺",
+        "TPP, Liponsäure, CoA, FMN, NAD⁺",
+        "TPP, Liponsäure, CoA, FAD, NAD⁺",
+        "Biotin, Liponsäure, AMP, FAD, NAD⁺"
+      ],
+      "correct": 3,
+      "explain": "Der PDH-Komplex besteht aus drei katalytischen Untereinheiten: E1 (Pyruvat-Decarboxylase, nutzt TPP), E2 (Dihydrolipoyl-Transacetylase, nutzt Liponsäure und CoA) und E3 (Dihydrolipoyl-Dehydrogenase, nutzt FAD und NAD⁺). Alle fünf Coenzyme sind unverzichtbar; fehlt eines, kommt der gesamte Komplex zum Stillstand.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca012",
+      "topic": "Zitronensäurezyklus",
+      "text": "Pyruvat-Dehydrogenase (PDH) und α-Ketoglutarat-Dehydrogenase (OGDH) werden häufig gemeinsam besprochen. Welche Aussage beschreibt am besten, was sie wirklich gemeinsam haben?",
+      "options": [
+        "Beide verwenden Biotin und übertragen eine Carboxylgruppe auf einen mobilen Träger zwischen Untereinheiten",
+        "Beide sind zytosolisch und werden durch reversible Phosphorylierung via insulinsensitive Kinasen reguliert",
+        "Beide unterscheiden sich in der E1-Spezifität, teilen aber eine identische E2-Dihydrolipoyl-Transacylase",
+        "Beide produzieren Acetyl-CoA als Acyl-CoA-Produkt und teilen dieselbe Substratbindungstasche in E1",
+        "Beide sind E1/E2/E3-Komplexe mit denselben fünf Coenzymen für oxidative Decarboxylierungen"
+      ],
+      "correct": 4,
+      "explain": "PDH und OGDH teilen dieselbe Drei-Komponenten-Architektur (E1/TPP, E2/Liponsäure+CoA, E3/FAD+NAD⁺) und katalysieren analoge oxidative Decarboxylierungen: PDH wandelt Pyruvat → Acetyl-CoA + CO₂ um, OGDH α-Ketoglutarat → Succinyl-CoA + CO₂. Ihre E3-Untereinheit (Dihydrolipoyl-Dehydrogenase) ist identisch — ein isolierter E3-Defekt beeinträchtigt daher beide Komplexe gleichzeitig.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca013",
+      "topic": "Zitronensäurezyklus",
+      "text": "Hohe Konzentrationen welches Metaboliten hemmen gleichzeitig Citratsynthase, Isocitratdehydrogenase und α-KGDH und verlangsamen so den Zitronensäurezyklus, wenn reduzierende Äquivalente im Überschuss vorliegen?",
+      "options": [
+        "NADH — reichert sich bei gesättigtem Elektronentransport an; direkter Produkthemmer aller drei Enzyme",
+        "ADP — signalisiert niedrigen Energieladungszustand; wirkt als Aktivator der Isocitratdehydrogenase und Citratsynthase",
+        "Ca²⁺ — tritt bei Muskelkontraktion in Mitochondrien ein; aktiviert Isocitratdehydrogenase, α-KGDH und PDH-Phosphatase",
+        "Succinyl-CoA — direkter Produkthemmer der α-KGDH; nachgeschalteter Feedbackhemmer der Citratsynthase",
+        "Acetyl-CoA — reichert sich bei β-Oxidation an; hemmt PDH, aber nicht alle drei TCA-Regulationsenzyme"
+      ],
+      "correct": 0,
+      "explain": "NADH-Anreicherung signalisiert einen hohen Energie- und Reduktionszustand und hemmt alle drei wesentlichen Kontrollpunkte des Zitronensäurezyklus gleichzeitig. Diese Produkthemmung verlangsamt den Zyklus, bis NADH durch die Atmungskette reoxidiert wird. Ca²⁺ wirkt gegenteilig — es aktiviert den Zyklus bei Muskelaktivität —, während ADP die Isocitratdehydrogenase aktiviert (nicht hemmt).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca014",
+      "topic": "Zitronensäurezyklus",
+      "text": "FADH₂, das von der Succinat-Dehydrogenase produziert wird, liefert weniger ATP als NADH. Was ist der primäre mechanistische Grund?",
+      "options": [
+        "FADH₂ erreicht Komplex I an einer späteren Bindungsstelle als NADH und reduziert so das Protonenpumpen pro Elektronenpaar",
+        "FADH₂ hat ein negativeres Redoxpotenzial als NAD⁺/NADH und kann Ubiquinon ohne Zusatzenergie nicht reduzieren",
+        "FADH₂ ist in Komplex II proteingebunden und gibt Elektronen direkt an Ubiquinon ab, unter vollständiger Umgehung von Komplex I",
+        "FADH₂ überträgt Elektronen über einen Flavin-Carrier auf Komplex III, wobei Komplex I und II umgangen werden",
+        "FADH₂ wird auf der Intermembranraumseite oxidiert und verringert den für die ATP-Synthase verfügbaren Protonengradienten"
+      ],
+      "correct": 2,
+      "explain": "NADH speist Elektronen in Komplex I ein, der 4 H⁺ pro Elektronenpaar pumpt → ~2,5 ATP. FADH₂ ist kovalent an die Succinat-Dehydrogenase (Komplex II) gebunden und überträgt Elektronen direkt auf Ubiquinon, wobei Komplex I vollständig umgangen wird — an diesem Schritt werden keine Protonen gepumpt, wodurch nur ~1,5 ATP entstehen. Der Eintrittspunkt in die Atmungskette ist der entscheidende Unterschied zwischen den beiden Trägern.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca015",
+      "topic": "Zitronensäurezyklus",
+      "text": "Die Succinyl-CoA-Synthetase erzeugt pro Umlauf des menschlichen Zitronensäurezyklus ein GTP. Was ist das primäre metabolische Schicksal dieses mitochondrialen GTP?",
+      "options": [
+        "Hydrolyse durch mitochondriale GTPase; Energie phosphoryliert AMP zu ADP in ungewöhnlicher Zweischritt-Transphosphorylierung",
+        "Anreicherung in der Matrix als regulatorisches Signal zur Aktivierung GTP-abhängiger Kinasen für Organellendynamik",
+        "Export über Adenin-Nukleotid-Translokator zur Aktivierung zytosolischer GTP-bindender Signalproteine",
+        "Umwandlung zu ATP durch Nukleosid-Diphosphat-Kinase: GTP + ADP → GDP + ATP",
+        "Nutzung durch ATP-Synthase als alternatives Substrat für ATP-Produktion ohne Protonengradienten"
+      ],
+      "correct": 3,
+      "explain": "Die NDP-Kinase katalysiert die frei reversible Reaktion GTP + ADP ⇌ GDP + ATP, wodurch das im Zyklus gebildete GTP energetisch einem ATP entspricht. GTP kann auch direkt zytosolische Reaktionen antreiben — insbesondere die Gluconeogenese, wo die PEPCK GTP nutzt, um OAA in Phosphoenolpyruvat umzuwandeln —, was seine doppelte Rolle als Energiewährung und Stoffwechselsignal unterstreicht.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc001",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Welcher Komplex der Atmungskette nimmt Elektronen von Ubichinol (QH₂) auf und gibt sie an Cytochrom c weiter?",
+      "options": [
+        "Komplex I",
+        "Komplex II",
+        "Komplex IV",
+        "Komplex V",
+        "Komplex III (bc1-Komplex)"
+      ],
+      "correct": 4,
+      "explain": "Komplex III (Ubichinol-Cytochrom-c-Oxidoreduktase) nimmt Elektronen von Ubichinol auf und überträgt sie über den Q-Zyklus-Mechanismus auf Cytochrom c, wobei gleichzeitig 4 Protonen pro 2 Elektronen über die innere Mitochondrienmembran gepumpt werden.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc002",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Der durch die Atmungskette erzeugte Protonengradient wird von der ATP-Synthase (Komplex V) über __ genutzt:",
+      "options": [
+        "Substratkettenphosphorylierung",
+        "Chemiosmose (Mitchell-Hypothese)",
+        "Direkten Elektronentransfer auf ADP",
+        "Oxidative Decarboxylierung",
+        "Transphosphorylierung von GTP"
+      ],
+      "correct": 1,
+      "explain": "Nach Mitchells chemiosmotischer Hypothese treibt die Protonenmotivkraft (elektrochemischer Gradient) der Atmungskette Protonen durch die F₀-Untereinheit der ATP-Synthase zurück. Dieser Protonenfluss treibt die Rotation des c-Rings an und bewirkt Konformationsänderungen in der F₁-Untereinheit, die ATP synthetisieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc003",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Cyanid ist ein potenter Hemmstoff der Zellatmung, da es blockiert:",
+      "options": [
+        "Komplex I",
+        "Komplex III",
+        "ATP-Synthase",
+        "Komplex IV (Cytochrom-c-Oxidase)",
+        "Komplex II"
+      ],
+      "correct": 3,
+      "explain": "Cyanid (CN⁻) bindet an die Fe³⁺-Form von Cytochrom a3 in Komplex IV und verhindert den Elektronentransfer auf O₂. Dies stoppt die gesamte Atmungskette, kollabiert den Protonengradienten und beendet die ATP-Synthese. Gewebe mit höchstem O₂-Bedarf (Gehirn, Herz) sind am empfindlichsten.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc004",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Wie viele ATP-Moleküle werden pro oxidiertem NADH in der oxidativen Phosphorylierung produziert (P/O-Verhältnis ~2,5)?",
+      "options": [
+        "1,0",
+        "1,5",
+        "2,5",
+        "3,5",
+        "2,0"
+      ],
+      "correct": 2,
+      "explain": "Die moderne Schätzung des P/O-Verhältnisses für NADH beträgt ~2,5 ATP pro NADH (nicht die klassische '3' aus älteren Lehrbüchern). Dies berücksichtigt die tatsächliche H⁺/ATP-Stöchiometrie der ATP-Synthase (~8 Protonen pro 3 ATP) und den Energieaufwand für den ATP/ADP-Transport.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc005",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Entkopplungsproteine (UCPs) im braunen Fettgewebe dissipieren den Protonengradienten als:",
+      "options": [
+        "Wärme (Thermogenese)",
+        "ATP",
+        "NADH",
+        "CO₂",
+        "Mechanische Arbeit"
+      ],
+      "correct": 0,
+      "explain": "UCP1 (Thermogenin) ermöglicht es Protonen, durch die innere Mitochondrienmembran zurückzulecken, ohne ATP-Synthese anzutreiben, und dissipiert die Protonenmotivkraft als Wärme. Dies ist die Grundlage der zitterfreien Thermogenese bei Neugeborenen und kälteangepassten Säugetieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc006",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Welcher mobile Elektronenträger transportiert Elektronen zwischen Komplex I/II und Komplex III?",
+      "options": [
+        "Cytochrom c",
+        "Ubichinon (Coenzym Q)",
+        "FAD",
+        "FMN",
+        "Eisen-Schwefel-Cluster"
+      ],
+      "correct": 1,
+      "explain": "Ubichinon (CoQ) ist ein lipidlösliches Molekül, das innerhalb der inneren Mitochondrienmembran diffundiert, Elektronen von Komplex I und II (als QH₂) sammelt und sie an Komplex III abgibt. Cytochrom c ist der wasserlösliche Träger zwischen Komplex III und IV.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc007",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Rotenon, das als Pestizid und Fischgift verwendet wird, hemmt die Atmungskette durch Blockade von:",
+      "options": [
+        "Komplex II",
+        "Komplex III",
+        "Komplex I (NADH-Dehydrogenase)",
+        "Komplex IV",
+        "Komplex V (ATP-Synthase)"
+      ],
+      "correct": 2,
+      "explain": "Rotenon blockiert den Elektronentransfer von den Eisen-Schwefel-Clustern des Komplexes I auf Ubichinon. Es hemmt die NADH-Oxidation, ohne die Succinat-Oxidation (Komplex II) zu beeinflussen. Rotenon wird auch experimentell zur Modellierung der Parkinson-Pathologie verwendet.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc008",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Der finale Elektronenakzeptor in der mitochondrialen Atmungskette ist:",
+      "options": [
+        "NAD⁺",
+        "Ubichinon",
+        "Cytochrom c",
+        "Molekularer Sauerstoff (O₂)",
+        "Kohlendioxid (CO₂)"
+      ],
+      "correct": 3,
+      "explain": "Molekularer Sauerstoff (O₂) ist der terminale Elektronenakzeptor. Komplex IV (Cytochrom-c-Oxidase) überträgt Elektronen von Cytochrom c auf O₂ und reduziert es zu Wasser. Dieser irreversible Schritt treibt die gesamte Atmungskette voran.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc009",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Oligomycin hemmt die ATP-Synthese durch Blockade von:",
+      "options": [
+        "Cytochrom-c-Oxidase",
+        "Dem F₀-Protonenkanal der ATP-Synthase",
+        "Ubichinon-Reduktion",
+        "Komplex I",
+        "Adeninnukleotid-Translokase"
+      ],
+      "correct": 1,
+      "explain": "Oligomycin bindet an die F₀-Untereinheit der ATP-Synthase und blockiert den Protonenkanal. Dies verhindert den Protoneneintritt und die ATP-Synthese. Da der Protonengradient nicht abgebaut werden kann, hemmt es sekundär auch die Atmungskette.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc010",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Welches der folgenden beschreibt korrekt das P/O-Verhältnis für FADH₂?",
+      "options": [
+        "~3,0",
+        "~2,5",
+        "~1,5",
+        "~1,0",
+        "~2,0"
+      ],
+      "correct": 2,
+      "explain": "FADH₂ (erzeugt an der Succinatdehydrogenase) doniert Elektronen an Ubichinon und umgeht dabei Komplex I. Da Komplex I ~4 Protonen pumpt, wird durch sein Umgehen der Beitrag zum Protonengradienten verringert. Das P/O-Verhältnis für FADH₂ beträgt etwa 1,5 ATP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc011",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Zytosolisches NADH aus der Glykolyse kann die innere Mitochondrienmembran nicht überqueren. Welches Shuttle überwiegt in Herz und Leber und erhält die volle ~2,5 ATP-Ausbeute?",
+      "options": [
+        "Malat-Aspartat-Shuttle — regeneriert NADH in der Matrix; ~2,5 ATP",
+        "Glycerin-3-Phosphat-Shuttle — liefert Elektronen an Komplex II; nur ~1,5 ATP",
+        "Citrat-Shuttle — exportiert Acetyl-CoA-Äquivalente für die zytosolische Lipidsynthese",
+        "Carnitin-Shuttle — transportiert Fettsäure-Acyl-CoA durch die innere Membran",
+        "Pyruvat-Transporter — importiert Pyruvat in die Matrix; kein NADH-Transfer"
+      ],
+      "correct": 0,
+      "explain": "Der Malat-Aspartat-Shuttle verwendet Malatdehydrogenase und Aspartattransaminase auf beiden Membranseiten, um das zytosolische NADH-Äquivalent als NADH in die Matrix zu schleusen, wo es in Komplex I eintritt (~2,5 ATP). Der Glycerin-3-Phosphat-Shuttle ist schneller, aber weniger effizient (~1,5 ATP, Komplex-II-Eintritt) und überwiegt in Gehirn und Skelettmuskel. Die Citrat-, Carnitin- und Pyruvat-Transporter dienen vollständig anderen Transportfunktionen.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc012",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Der Q-Zyklus in Komplex III führt zu einem Nettopumpen von 4 H⁺ pro 2 Elektronen. Welches Merkmal verursacht diese Verstärkung direkt?",
+      "options": [
+        "Beide Elektronen von QH₂ umgehen das Rieske-Zentrum und fließen direkt zu Cytochrom b",
+        "Rieske akzeptiert beide Elektronen von QH₂ und spendet sie an zwei Cytochrom-c-Moleküle",
+        "QH₂ reduziert zunächst FMN in der Matrix, bevor Elektronen Cytochrom c erreichen",
+        "Konformationsänderungen von Cytochrom b treiben das Protonenpumpen ohne Semichinon",
+        "Die QH₂-Oxidation gabelt sich: ein Elektron zu Cytochrom c über Rieske, eines zum Qi-Semichinon"
+      ],
+      "correct": 4,
+      "explain": "Am Qo-Standort gibt QH₂ seine zwei Elektronen auf verschiedenen Wegen ab: eines wandert über den Rieske-[2Fe-2S]-Cluster und Cytochrom c₁ zu Cytochrom c (Hochpotential-Kette), während das andere durch Cytochrom b (bL → bH) zu einem Ubichinon am Qi-Standort gelangt und ein Semichinon bildet. Eine zweite QH₂-Oxidation vervollständigt dies zu QH₂ am Qi-Standort und setzt 2 H⁺ zur Matrix frei. Diese Verzweigung verdoppelt effektiv die Protonentranslokation pro Elektronenpaar, das Cytochrom c erreicht, und ergibt 4 H⁺/2e⁻ netto.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc013",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Was ist die spezifische Rolle des Rieske-Eisen-Schwefel-Proteins in Komplex III?",
+      "options": [
+        "Akzeptiert Elektronen von QH₂ am Qo-Standort und leitet sie zu Cytochrom c₁",
+        "Akzeptiert Elektronen von NADH an der Matrixseite und überträgt sie über FMN auf Ubichinon",
+        "Akzeptiert Elektronen von Cytochrom c und leitet sie zu den Kupferzentren von Komplex IV",
+        "Spendet Elektronen direkt an O₂ und erzeugt Superoxid am Qo-Standort",
+        "Überträgt Elektronen von der Succinatdehydrogenase auf Ubichinon am Qi-Standort"
+      ],
+      "correct": 0,
+      "explain": "Das Rieske-Protein enthält einen [2Fe-2S]-Cluster mit einem ungewöhnlich hohen Redoxpotential (~+0,28 V), der es zwischen Ubichinol und Cytochrom c₁ im Hochpotential-Ast des Q-Zyklus positioniert. Am Qo-Standort akzeptiert es eines der beiden Elektronen von QH₂ und spendet es an Cytochrom c₁, das dann lösliches Cytochrom c reduziert. Die physikalische Bewegung der Rieske-Kopfdomäne zwischen Cytochrom b und Cytochrom c₁ ist für den verzweigten Elektronentransfer wesentlich.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc014",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "FMN ist der primäre Elektronenakzeptor von NADH in Komplex I. Welche Aussage beschreibt seine Funktion korrekt?",
+      "options": [
+        "Akzeptiert Elektronen von Ubichinol; überträgt sie zurück auf NAD⁺ in der Matrix",
+        "Wirkt als finaler Elektronensenke in Komplex I; bleibt reduziert wenn die PMF niedrig ist",
+        "Akzeptiert Elektronen von FADH₂ der Succinatdehydrogenase; leitet sie zu Fe-S-Clustern weiter",
+        "Akzeptiert 2e⁻ von NADH gleichzeitig; gibt sie einzeln über Fe-S-Cluster an CoQ weiter",
+        "Pumpt Protonen direkt von der Matrix ins IMS; keine Eisen-Schwefel-Cluster beteiligt"
+      ],
+      "correct": 3,
+      "explain": "FMN ist ein Zwei-Elektronen-Akzeptor, der beide Elektronen von NADH gleichzeitig aufnimmt und FMNH₂ bildet. Es gibt sie dann einzeln an eine Reihe von Eisen-Schwefel-Clustern (N1a, N3, N1b, N4, N5, N6a/b, N2) weiter, die obligate Ein-Elektronen-Träger sind. Der Elektronenfluss durch diese Kette ist mit Konformationsänderungen gekoppelt, die 4 H⁺ pro NADH pumpen. Diese Zwei-zu-Eins-Elektronenkonvertierung ist die definierende Rolle von FMN in Komplex I.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc015",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Im Bindungsänderungs-Mechanismus von Boyer bildet die Protonenmotivkraft nicht direkt die ATP-Bindung. Was ist ihre tatsächliche Rolle?",
+      "options": [
+        "Spendet direkt ein Proton an die β-Phosphatgruppe von ADP zur Antrieb der Bindungsbildung",
+        "Öffnet einen Kanal in F₁ für die freie ATP- und ADP-Diffusion über die innere Membran",
+        "Treibt Elektronentransfer in F₁ an, der ADP zur anorganischen Phosphatgruppe aktiviert",
+        "Erzeugt NADPH in der Matrix zur Bereitstellung von Energie für die ATP-Bindungsbildung",
+        "Treibt die c-Ring-Rotation an und dreht die γ-Untereinheit; Konformationsänderungen der β-Untereinheit setzen gebundenes ATP frei"
+      ],
+      "correct": 4,
+      "explain": "ATP bildet sich spontan (ΔG ≈ 0) am engen katalytischen Zentrum von F₁ — die Bindungsbildung selbst benötigt keine externe Energie. Die Protonenmotivkraft treibt die Rotation des F₀-c-Rings an, der die γ-Untereinheit in F₁ dreht und jede der drei β-Untereinheiten durch offen → lose → eng zykliert. Der energiebedürftige Schritt ist der Übergang von eng zu offen, der das neu gebildete ATP freisetzt. Diese Rotationskatalyse wurde von Boyer und Walker, Nobelpreis 1997, bestätigt.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc016",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Was ist die thermodynamische Triebkraft, die Elektronen entlang der Atmungskette von NADH zu O₂ bewegt?",
+      "options": [
+        "Der NADH/NAD⁺-Konzentrationsgradient über die innere Membran",
+        "Das ΔE°' zwischen NADH/NAD⁺ (−0,32 V) und O₂/H₂O (+0,82 V)",
+        "Die mechanische Rotation der ATP-Synthase, die Elektronen zu Komplex IV zieht",
+        "Der transmembranäre pH-Gradient, der den IMS ansäuert und den Elektronentransfer antreibt",
+        "Die hohe Cytochrom-c-Konzentration im IMS als permanente Elektronensenke"
+      ],
+      "correct": 1,
+      "explain": "Der Elektronenfluss in der Atmungskette wird durch den Unterschied in den Standardredoxpotentialen angetrieben. Das NADH/NAD⁺-Paar hat E°' = −0,32 V; das O₂/H₂O-Paar hat E°' = +0,82 V, was insgesamt ΔE°' = +1,14 V ergibt. Mit ΔG°' = −nFΔE°' entspricht dies ~−220 kJ pro Mol Elektronenpaare — eine große spontane freie Energieänderung, die Elektronen von Komplex I bis Komplex IV treibt und an jedem Schritt das Protonenpumpen koppelt.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc017",
+      "topic": "Atmungskette und OXPHOS",
+      "text": "Genau genommen, was ist das direkte Produkt der Atmungskette bevor die ATP-Synthase darauf einwirkt?",
+      "options": [
+        "ATP — über Substratkettenphosphorylierung bei jedem Elektronentransfer-Schritt",
+        "NADPH — durch mitochondriale Transhydrogenase unter Verwendung von Elektronenfluss-Energie regeneriert",
+        "Ein elektrochemischer Protonengradient (Protonenmotivkraft) über die innere Membran",
+        "Wärme — thermische Energie freigesetzt wenn Elektronen durch die Komplexe fallen",
+        "Reduziertes Cytochrom c — akkumuliert im IMS wenn die ATP-Synthase gehemmt ist"
+      ],
+      "correct": 2,
+      "explain": "Der einzige direkte Ausgang der Atmungskette ist die Protonenmotivkraft (PMF), die durch Pumpen von H⁺ von der Matrix in den IMS an den Komplexen I, III und IV aufgebaut wird. Die PMF hat zwei Komponenten: Membranpotential (ΔΨ ≈ 150–180 mV, der dominante Term in Mitochondrien) und pH-Gradient (ΔpH ≈ 0,5–1 Einheit). Die ATP-Synthase verbraucht dann diese PMF für die Phosphorylierung. Entscheidend ist, dass die PMF auch aktiven Transport und Wärmeproduktion über UCPs antreiben kann — ATP-Synthese ist sekundär.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao001",
+      "topic": "Fettsäureoxidation",
+      "text": "Wo findet die β-Oxidation langkettiger Fettsäuren hauptsächlich statt?",
+      "options": [
+        "Zytosol",
+        "Endoplasmatisches Retikulum",
+        "Mitochondrienmatrix",
+        "Peroxisom",
+        "Lysosom"
+      ],
+      "correct": 2,
+      "explain": "Die β-Oxidation langkettiger Fettsäuren findet in der Mitochondrienmatrix statt. Fettsäuren werden im Zytosol zu Acyl-CoA aktiviert, über das Carnitin-Shuttle durch die innere Mitochondrienmembran transportiert und dann sukzessiven Runden der β-Oxidation unterzogen.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao002",
+      "topic": "Fettsäureoxidation",
+      "text": "Welches Transportsystem ist erforderlich, um langkettige Acylgruppen in die Mitochondrienmatrix zu transportieren?",
+      "options": [
+        "Malat-Aspartat-Shuttle",
+        "Carnitin-Shuttle (CPT-I und CPT-II)",
+        "Acetyl-CoA-Translokase",
+        "ATP-ADP-Translokase",
+        "Citrattransportsystem"
+      ],
+      "correct": 1,
+      "explain": "Langkettiges Acyl-CoA kann die innere Mitochondrienmembran nicht direkt passieren. CPT-I (äußere Membran) wandelt Acyl-CoA in Acylcarnitin um, das durch Carnitin-Acylcarnitin-Translokase transportiert und durch CPT-II (innere Membran) wieder zu Acyl-CoA umgewandelt wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao003",
+      "topic": "Fettsäureoxidation",
+      "text": "Wie viele Runden der β-Oxidation sind erforderlich, um Palmitoyl-CoA (C16:0) vollständig zu oxidieren?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "Palmitoyl-CoA (16 Kohlenstoffatome) benötigt 7 Runden β-Oxidation, um 8 Acetyl-CoA-Moleküle zu produzieren. Jede Runde verkürzt die Kette um 2 Kohlenstoffatome und produziert 1 FADH₂ + 1 NADH + 1 Acetyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao004",
+      "topic": "Fettsäureoxidation",
+      "text": "Welches Enzym wird durch Malonyl-CoA gehemmt und reguliert dadurch den Eintritt von Fettsäuren in die Mitochondrien?",
+      "options": [
+        "CPT-II",
+        "Acyl-CoA-Synthetase",
+        "CPT-I",
+        "Carnitin-Acylcarnitin-Translokase",
+        "β-Hydroxyacyl-CoA-Dehydrogenase"
+      ],
+      "correct": 2,
+      "explain": "CPT-I wird durch Malonyl-CoA allosterisch gehemmt, das erste regulierte Zwischenprodukt der Fettsäuresynthese. So wird sichergestellt, dass Fettsäuresynthese und -oxidation nicht gleichzeitig aktiv sind: Wenn Malonyl-CoA hoch ist, wird CPT-I gehemmt.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao005",
+      "topic": "Fettsäureoxidation",
+      "text": "Welche Produkte werden in jedem Zyklus der β-Oxidation erzeugt?",
+      "options": [
+        "1 NADH + 1 NADPH + 1 Acetyl-CoA",
+        "1 FADH₂ + 1 NADH + 1 Acetyl-CoA",
+        "2 FADH₂ + 1 Acetyl-CoA",
+        "1 FADH₂ + 1 NADH + 1 Succinyl-CoA",
+        "2 NADH + 1 Acetyl-CoA"
+      ],
+      "correct": 1,
+      "explain": "Jede Runde β-Oxidation produziert: 1 FADH₂ (Acyl-CoA-Dehydrogenase-Schritt), 1 NADH (L-3-Hydroxyacyl-CoA-Dehydrogenase-Schritt) und 1 Acetyl-CoA (Thiolase-Schritt). Diese werden in Atmungskette bzw. Zitronensäurezyklus eingespeist.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao006",
+      "topic": "Fettsäureoxidation",
+      "text": "Bei der β-Oxidation ungesättigter Fettsäuren ist für Doppelbindungen in cis-Konfiguration welches zusätzliche Enzym erforderlich?",
+      "options": [
+        "Enoyl-CoA-Hydratase",
+        "2,4-Dienoyl-CoA-Reduktase",
+        "Enoyl-CoA-Isomerase",
+        "3-Hydroxyacyl-CoA-Epimerase",
+        "Acyl-CoA-Dehydrogenase"
+      ],
+      "correct": 2,
+      "explain": "Ungesättigte Fettsäuren mit Doppelbindungen an ungeraden Kohlenstoffatomen (cis-Δ³) benötigen Enoyl-CoA-Isomerase, um cis-Δ³-Enoyl-CoA in das normale β-Oxidations-Substrat trans-Δ²-Enoyl-CoA umzuwandeln. Doppelbindungen an geraden Kohlenstoffatomen erfordern 2,4-Dienoyl-CoA-Reduktase.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao007",
+      "topic": "Fettsäureoxidation",
+      "text": "In welchem Organell findet die β-Oxidation sehr langkettiger Fettsäuren (>C22) hauptsächlich statt?",
+      "options": [
+        "Mitochondrien",
+        "Glattes ER",
+        "Peroxisomen",
+        "Lysosomen",
+        "Zellkern"
+      ],
+      "correct": 2,
+      "explain": "Sehr langkettige Fettsäuren werden zunächst in Peroxisomen durch β-Oxidation zu mittelkettigen Fettsäuren verkürzt, die dann in Mitochondrien für die vollständige Oxidation transferiert werden. Die peroxisomale β-Oxidation produziert H₂O₂ (durch Katalase detoxifiziert) anstatt Protonen zu pumpen.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao008",
+      "topic": "Fettsäureoxidation",
+      "text": "Wie viel ATP wird netto bei der vollständigen Oxidation eines Palmitoyl-CoA-Moleküls (C16:0) gewonnen?",
+      "options": [
+        "106 ATP",
+        "100 ATP",
+        "108 ATP",
+        "129 ATP",
+        "80 ATP"
+      ],
+      "correct": 0,
+      "explain": "Die Oxidation von Palmitoyl-CoA ergibt 7 Runden × (1 FADH₂ + 1 NADH) + 8 Acetyl-CoA. Mit modernen P/O-Verhältnissen: 7×1,5 + 7×2,5 + 8×10 = 10,5 + 17,5 + 80 = 108, minus 2 für die Aktivierung = 106 ATP-Äquivalente.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao009",
+      "topic": "Fettsäureoxidation",
+      "text": "Ein Carnitinmangel führt zu beeinträchtigter Fettsäureoxidation. Welches Symptom ist am ehesten zu erwarten?",
+      "options": [
+        "Hyperglykämie",
+        "Hyperlipidämie mit Muskelschwäche und Hypoglykämie",
+        "Ketoazidose",
+        "Erhöhtes Ammoniak",
+        "Metabolische Alkalose"
+      ],
+      "correct": 1,
+      "explain": "Ohne Carnitin können langkettige Fettsäuren nicht in Mitochondrien für die β-Oxidation eintreten. Dies führt zu Fettsäureakkumulation (Hyperlipidämie), Muskelschwäche (beeinträchtigte Energieversorgung) und Hypoglykämie (Unfähigkeit, Glukose durch Fettoxidation zu schonen).",
+      "explainImg": ""
+    },
+    {
+      "id": "fao010",
+      "topic": "Fettsäureoxidation",
+      "text": "MCAD-Mangel (mittelkettige Acyl-CoA-Dehydrogenase) ist beim Fasten gefährlich, weil:",
+      "options": [
+        "Überschüssige Ketonkörper Azidose verursachen",
+        "Fettsäuren nicht zur Energiegewinnung oxidiert werden können, was zu Hypoglykämie führt",
+        "Der Aminosäurekatabolismus gestört ist",
+        "Glykogenspeicher nicht mobilisiert werden können",
+        "Glukoneogenese durch Malonyl-CoA gehemmt wird"
+      ],
+      "correct": 1,
+      "explain": "MCAD-Mangel verhindert die Oxidation mittelkettiger Fettsäuren. Beim Fasten, wenn Glukose knapp und Fettsäureoxidation kritisch ist, führt dies zu schwerer Hypoglykämie. Auch die Ketogenese ist beeinträchtigt, da das Acetyl-CoA-Angebot aus der β-Oxidation reduziert ist.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab001",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Wo findet die Fettsäuresynthese hauptsächlich in der Zelle statt?",
+      "options": [
+        "Mitochondrienmatrix",
+        "Zytosol",
+        "Endoplasmatisches Retikulum",
+        "Zellkern",
+        "Peroxisom"
+      ],
+      "correct": 1,
+      "explain": "Die Fettsäuresynthese findet im Zytosol statt und wird durch Fettsäuresynthase (FAS) katalysiert. Die Bausteine (Acetyl-CoA und Malonyl-CoA) müssen aus den Mitochondrien als Citrat exportiert und im Zytosol durch ATP-Citrat-Lyase gespalten werden.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab002",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Was ist der regulierte (committed) Schritt der Fettsäurebiosynthese?",
+      "options": [
+        "Acetyl-CoA → Malonyl-CoA (Acetyl-CoA-Carboxylase)",
+        "Malonyl-CoA → Palmitat (FAS)",
+        "Citrat → Acetyl-CoA (ATP-Citrat-Lyase)",
+        "Palmitat → Palmitoyl-CoA",
+        "Acetyl-CoA → Acetoacetyl-CoA"
+      ],
+      "correct": 0,
+      "explain": "Die Acetyl-CoA-Carboxylase (ACC) katalysiert die ATP-abhängige Carboxylierung von Acetyl-CoA zu Malonyl-CoA. Dies ist der regulierte, geschwindigkeitsbestimmende Schritt der Fettsäuresynthese. ACC wird durch Citrat aktiviert und durch Palmitoyl-CoA sowie AMPK-Phosphorylierung gehemmt.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab003",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welcher reduzierende Cofaktor wird von der Fettsäuresynthase für die Reduktionsschritte benötigt?",
+      "options": [
+        "NADH",
+        "NADPH",
+        "FADH₂",
+        "ATP",
+        "CoASH"
+      ],
+      "correct": 1,
+      "explain": "Fettsäuresynthase benötigt NADPH für die zwei Reduktionsschritte pro Elongationszyklus (Ketoreduktion und Enoylreduktion). NADPH wird hauptsächlich durch den Pentosephosphatweg und die Malatenzym-Reaktion bereitgestellt.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab004",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Was ist das primäre Produkt, das von der Fettsäuresynthase (FAS) beim Menschen freigesetzt wird?",
+      "options": [
+        "Stearat (C18:0)",
+        "Palmitat (C16:0)",
+        "Myristat (C14:0)",
+        "Arachidonat (C20:4)",
+        "Oleat (C18:1)"
+      ],
+      "correct": 1,
+      "explain": "Die menschliche FAS gibt Palmitat (C16:0) als Hauptprodukt frei. Die weitere Verlängerung zu längerkettigen Fettsäuren und die Desaturierung finden im endoplasmatischen Retikulum durch spezifische Elongasen und Desaturasen statt.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab005",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Wie viele Malonyl-CoA-Moleküle werden benötigt, um ein Palmitat-Molekül aus Acetyl-CoA zu synthetisieren?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "14",
+        "16"
+      ],
+      "correct": 1,
+      "explain": "Palmitat (C16:0) wird aus 1 Acetyl-CoA-Starteinheit und 7 Malonyl-CoA-Verlängerungseinheiten synthetisiert. Jedes Malonyl-CoA fügt 2 Kohlenstoffatome hinzu (nach Decarboxylierung) und liefert 14 Kohlenstoffe; die Start-Acetyl-CoA liefert 2 weitere, zusammen 16.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab006",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Die Acetyl-CoA-Carboxylase (ACC) wird allosterisch aktiviert durch:",
+      "options": [
+        "Palmitoyl-CoA",
+        "AMP",
+        "Citrat",
+        "Glukagon",
+        "Epinephrin"
+      ],
+      "correct": 2,
+      "explain": "Citrat aktiviert ACC allosterisch, indem es seine Polymerisierung zur aktiven filamentösen Form fördert. Hohe Citratspiegel signalisieren Überfluss an Acetyl-CoA und Energie, was für die Fettsynthese günstig ist. Im Gegensatz dazu hemmen Palmitoyl-CoA (Endprodukt) und AMPK-Phosphorylierung die ACC.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab007",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welches Enzym führt die erste Doppelbindung in gesättigte Fettsäuren beim Menschen ein, typischerweise an der Δ9-Position?",
+      "options": [
+        "Fettsäure-Elongase",
+        "Stearoyl-CoA-Desaturase (SCD, Δ9-Desaturase)",
+        "Acetyl-CoA-Carboxylase",
+        "Phospholipase A2",
+        "FADS2 (Δ6-Desaturase)"
+      ],
+      "correct": 1,
+      "explain": "Stearoyl-CoA-Desaturase (SCD) führt eine cis-Doppelbindung an der Δ9-Position ein und wandelt Stearoyl-CoA (C18:0) in Oleoyl-CoA (C18:1, Δ9) um. Da Säugetiere keine Δ12- und Δ15-Desaturasen besitzen, sind Linolsäure (Δ9,12) und α-Linolensäure (Δ9,12,15) essenziell.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab008",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Das Acyl-Carrier-Protein (ACP) in der FAS hält Intermediate über welche Art von Bindung fest?",
+      "options": [
+        "Esterbindung an Serin",
+        "Phosphodiesterbindung",
+        "Thioesterbindung an eine Phosphopantethein-Gruppe",
+        "Amidbindung an Lysin",
+        "Anhydridbindung"
+      ],
+      "correct": 2,
+      "explain": "Wachsende Fettsäureketten sind über eine Thioesterbindung an die Phosphopantethein-Gruppe (von CoA abgeleitet) des ACP kovalent gebunden. Diese Thioesterbindung hat ein hohes Gruppenübertragungspotenzial und ist für die Kondensationsreaktionen der FAS essenziell.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab009",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Insulin stimuliert die Fettsäuresynthese primär durch:",
+      "options": [
+        "Direkte Aktivierung der FAS",
+        "Aktivierung von AMPK, das ACC phosphoryliert",
+        "Aktivierung einer Phosphatase, die ACC dephosphoryliert und aktiviert",
+        "Erhöhung des Malonyl-CoA-Abbaus",
+        "Hemmung des Citrat-Exports aus Mitochondrien"
+      ],
+      "correct": 2,
+      "explain": "Insulin aktiviert Proteinphosphatase 2A, die ACC dephosphoryliert und aktiviert. Insulin induziert auch die Transkription von FAS- und ACC-Genen, erhöht die Glukoseaufnahme (liefert Acetyl-CoA und NADPH) und hemmt AMPK.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab010",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welches der folgenden beschreibt am besten, warum Linolsäure (18:2, Δ9,12) eine essentielle Fettsäure ist?",
+      "options": [
+        "Menschen können keine Fettsäuren länger als C16 synthetisieren",
+        "Menschen fehlt die Δ12-Desaturase für die Δ12-Doppelbindung",
+        "Linolsäure kann nicht zu Acyl-CoA aktiviert werden",
+        "Die β-Oxidation von Linolsäure ist toxisch",
+        "Linolsäure kommt nur in tierischen Fetten vor"
+      ],
+      "correct": 1,
+      "explain": "Säugetiere besitzen Desaturasen für die Positionen Δ9, Δ6, Δ5 und Δ4, jedoch nicht Δ12 und Δ15. Daher müssen Linolsäure (18:2 Δ9,12) und α-Linolensäure (18:3 Δ9,12,15) über die Nahrung zugeführt werden und gelten als essentielle Fettsäuren.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac001",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Was ist der erste Schritt beim Katabolismus der meisten Aminosäuren?",
+      "options": [
+        "Oxidative Decarboxylierung",
+        "Transaminierung oder oxidative Desaminierung",
+        "Phosphorylierung",
+        "Reduktion",
+        "Hydroxylierung"
+      ],
+      "correct": 1,
+      "explain": "Der erste Schritt ist in der Regel die Entfernung der Aminogruppe, entweder durch Transaminierung (Transfer auf α-Ketoglutarat, Bildung von Glutamat) oder oxidative Desaminierung (Glutamatdehydrogenase, Freisetzung von NH₄⁺). Die entstehende α-Ketosäure tritt in zentrale Stoffwechselwege ein.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac002",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Pyridoxalphosphat (PLP) ist der Cofaktor für welche Enzymklasse, die für den Aminosäurekatabolismus zentral ist?",
+      "options": [
+        "Oxidasen",
+        "Aminotransferasen (Transaminasen)",
+        "Carboxylasen",
+        "Kinasen",
+        "Reduktasen"
+      ],
+      "correct": 1,
+      "explain": "PLP (Vitamin-B6-Derivat) bildet eine Schiff-Base mit Aminosäuren am aktiven Zentrum der Aminotransferasen und ermöglicht die Übertragung der Aminogruppe auf α-Ketoglutarat. PLP wird auch von Decarboxylasen, Racemasen und Serin/Threonin-Dehydratasen benötigt.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac003",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Phenylketonurie (PKU) entsteht durch Phenylalanin-Hydroxylase-Mangel. Was akkumuliert als Folge?",
+      "options": [
+        "Tyrosin",
+        "Phenylalanin und Phenylpyruvat",
+        "Homogentisat",
+        "Fumarylacetoacetat",
+        "Melanin-Vorläufer"
+      ],
+      "correct": 1,
+      "explain": "Ohne Phenylalanin-Hydroxylase (die Phenylalanin in Tyrosin umwandelt) akkumuliert Phenylalanin und wird zu Phenylpyruvat, Phenylacetat und Phenyllaktat umgeleitet (zusammen 'Phenylketone'). Diese sind neurotoxisch und führen unbehandelt zu geistiger Behinderung.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac004",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Ahornsirupkrankheit wird durch einen Mangel am verzweigtkettigen α-Ketosäure-Dehydrogenase-Komplex verursacht, der den Katabolismus von __ betrifft:",
+      "options": [
+        "Phenylalanin, Tyrosin, Tryptophan",
+        "Leucin, Isoleucin, Valin",
+        "Lysin, Arginin, Histidin",
+        "Methionin, Cystein, Serin",
+        "Aspartat, Glutamat, Alanin"
+      ],
+      "correct": 1,
+      "explain": "Der BCKDH-Komplex decarboxyliert oxidativ die α-Ketosäuren aus Leucin, Isoleucin und Valin. Mangel führt zur Akkumulation dieser Ketosäuren, die dem Urin einen süßlichen Ahornsirupgeruch verleihen und schwere neurologische Schäden verursachen.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac005",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Welche Aminosäure ist der primäre Stickstoffträger von peripheren Geweben zur Leber?",
+      "options": [
+        "Glutamin",
+        "Alanin",
+        "Glycin",
+        "Aspartat",
+        "Serin"
+      ],
+      "correct": 1,
+      "explain": "Alanin ist der primäre Stickstoffträger über den Glukose-Alanin-Zyklus: Muskel transaminiert Pyruvat mit der Aminogruppe aus dem Aminosäurekatabolismus zu Alanin, das zur Leber transportiert wird. Dort regeneriert Alaninaminotransferase Pyruvat (für Glukoneogenese) und Glutamat (tritt in Harnstoffzyklus ein).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac006",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Homocystinurie ist mit einem Mangel an Cystathionin-β-Synthase verbunden. Welcher Stoffwechselweg ist primär betroffen?",
+      "options": [
+        "Phenylalanin-Abbau",
+        "Methioninkatabolismus (Transsulfurierungsweg)",
+        "Tryptophan-Katabolismus",
+        "Histidin-Katabolismus",
+        "Threonin-Abbau"
+      ],
+      "correct": 1,
+      "explain": "Cystathionin-β-Synthase wandelt Homocystein + Serin → Cystathionin im Transsulfurierungsweg um. Mangel führt zu Homocysteinakkumulation mit kardiovaskulären Erkrankungen, Linsenluxation und geistiger Behinderung. Vitamin B6, B12 und Folsäure werden therapeutisch eingesetzt.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac007",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Glukogene Aminosäuren können über Glukoneogenese zu Glukose umgewandelt werden. Welche der folgenden ist rein glukogen?",
+      "options": [
+        "Leucin",
+        "Lysin",
+        "Alanin",
+        "Phenylalanin",
+        "Isoleucin"
+      ],
+      "correct": 2,
+      "explain": "Alanin ist rein glukogen — es wird durch Transaminierung zu Pyruvat umgewandelt, das durch Pyruvatcarboxylase zu OAA und dann über Glukoneogenese zu Glukose umgewandelt werden kann. Leucin und Lysin sind rein ketogen; Phenylalanin und Isoleucin sind sowohl glukogen als auch ketogen.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac008",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Der Katabolismus von Phenylalanin und Tyrosin produziert letztendlich welche Vorläufer des Zitronensäurezyklus und der Ketonkörper?",
+      "options": [
+        "Oxalacetat und Malat",
+        "Fumarat und Acetoacetat",
+        "Succinat und Propionyl-CoA",
+        "α-Ketoglutarat und Acetyl-CoA",
+        "Citrat und NADH"
+      ],
+      "correct": 1,
+      "explain": "Phenylalanin wird zunächst zu Tyrosin hydroxyliert. Der Tyrosinabbau verläuft über Homogentisat → Maleylacetoacetat → Fumarylacetoacetat → Fumarat + Acetoacetat. Dies macht Phenylalanin/Tyrosin sowohl glukogen (Fumarat → Zitronensäurezyklus → Glukoneogenese) als auch ketogen (Acetoacetat).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac009",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Welche Reaktion entfernt die Aminogruppe von Glutamat und setzt freies Ammonium frei?",
+      "options": [
+        "Transaminierung durch AST",
+        "Oxidative Desaminierung durch Glutamatdehydrogenase",
+        "Decarboxylierung durch Glutamatdecarboxylase",
+        "Reduktion durch Glutamatreduktase",
+        "Phosphorylierung durch Glutamatkinase"
+      ],
+      "correct": 1,
+      "explain": "Glutamatdehydrogenase (in der Mitochondrienmatrix) katalysiert: Glutamat + NAD⁺ → α-Ketoglutarat + NADH + NH₄⁺. Dies ist der Hauptweg zur Freisetzung von freiem Ammoniak in der Leber für die Harnstoffsynthese. Das Enzym kann NAD⁺ oder NADP⁺ verwenden und wird durch ATP und GTP (Hemmung) sowie ADP und GDP (Aktivierung) reguliert.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac010",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Alkaptonurie entsteht durch einen Defekt der Homogentisat-Oxidase. Welche Aminosäuren können nicht normal abgebaut werden?",
+      "options": [
+        "Methionin und Cystein",
+        "Phenylalanin und Tyrosin",
+        "Tryptophan und Histidin",
+        "Leucin und Isoleucin",
+        "Lysin und Arginin"
+      ],
+      "correct": 1,
+      "explain": "Homogentisat-Oxidase katalysiert einen Schritt beim Abbau von Phenylalanin und Tyrosin. Ihr Mangel führt zur Akkumulation von Homogentisinsäure, die im Urin ausgeschieden wird (wird bei Luftkontakt dunkel) und sich im Bindegewebe ablagert (Ochronose), was Arthritis verursacht.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc001",
+      "topic": "Harnstoffzyklus",
+      "text": "In welchen zwei Kompartimenten des Hepatozyten läuft der Harnstoffzyklus ab?",
+      "options": [
+        "Zytosol und Lysosom",
+        "Mitochondrienmatrix und Zytosol",
+        "Endoplasmatisches Retikulum und Zytosol",
+        "Zellkern und Zytosol",
+        "Peroxisom und Zytosol"
+      ],
+      "correct": 1,
+      "explain": "Die ersten beiden Reaktionen des Harnstoffzyklus finden in der Mitochondrienmatrix statt (CPS-I und OTC), während die übrigen drei Reaktionen (ASS, ASL, Arginase) im Zytosol ablaufen. Citrullin wird über einen spezifischen Transporter aus den Mitochondrien exportiert.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc002",
+      "topic": "Harnstoffzyklus",
+      "text": "Welches Enzym katalysiert den geschwindigkeitsbestimmenden Schritt des Harnstoffzyklus?",
+      "options": [
+        "Ornithin-Transcarbamylase (OTC)",
+        "Carbamoylphosphat-Synthetase I (CPS-I)",
+        "Argininosuccinat-Synthetase",
+        "Argininosuccinat-Lyase",
+        "Arginase"
+      ],
+      "correct": 1,
+      "explain": "CPS-I ist das geschwindigkeitsbestimmende Enzym des Harnstoffzyklus. Es kondensiert NH₃ + CO₂ + 2 ATP → Carbamoylphosphat. Es benötigt N-Acetylglutamat (NAG) als allosterischen Aktivator, das aus Acetyl-CoA + Glutamat synthetisiert wird, wenn die Aminosäurelast hoch ist.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc003",
+      "topic": "Harnstoffzyklus",
+      "text": "N-Acetylglutamat (NAG) aktiviert CPS-I. NAG wird synthetisiert, wenn der Aminosäurekatabolismus zunimmt, signalisiert durch erhöhte Spiegel von:",
+      "options": [
+        "Harnstoff",
+        "Glutamin",
+        "Acetyl-CoA und Glutamat",
+        "ATP",
+        "Arginin"
+      ],
+      "correct": 2,
+      "explain": "NAG-Synthase wird durch Arginin aktiviert und verwendet Acetyl-CoA + Glutamat als Substrate. Wenn Aminosäuren in großen Mengen abgebaut werden, akkumulieren Glutamat (aus Transaminierung) und Acetyl-CoA, was die NAG-Synthese stimuliert und damit CPS-I aktiviert.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc004",
+      "topic": "Harnstoffzyklus",
+      "text": "OTC-Mangel ist der häufigste Harnstoffzyklusdefekt. Die X-chromosomale Vererbung bedeutet, dass betroffene Knaben präsentieren mit:",
+      "options": [
+        "Leichter Hyperammonämie",
+        "Schwerer neonataler Hyperammonämie, oft letal",
+        "Harnstoffakkumulation",
+        "Argininosuccinat-Akkumulation",
+        "Nur Orotatudurie"
+      ],
+      "correct": 1,
+      "explain": "OTC-Mangel verursacht schwere Hyperammonämie bei betroffenen hemizygoten Knaben, da Carbamoylphosphat nicht auf Ornithin übertragen werden kann und akkumuliert und in den Pyrimidinsynthese-Weg überfließt (produziert Orotsäure). Hyperammonämie verursacht Hirnödem und ist oft neonatal letal.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc005",
+      "topic": "Harnstoffzyklus",
+      "text": "Welche Aminosäure wird am Ende jedes Durchgangs des Harnstoffzyklus regeneriert und dient als Träger?",
+      "options": [
+        "Arginin",
+        "Citrullin",
+        "Aspartat",
+        "Ornithin",
+        "Glutamin"
+      ],
+      "correct": 3,
+      "explain": "Ornithin wird durch Arginase regeneriert, die Arginin in Harnstoff + Ornithin spaltet. Ornithin wird dann zurück in die Mitochondrien transportiert, um erneut mit Carbamoylphosphat zu reagieren, und fungiert als katalytisches Trägermolekül des Zyklus.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc006",
+      "topic": "Harnstoffzyklus",
+      "text": "Welches Stickstoffatom im Harnstoff stammt aus der direkten Zugabe von freiem Ammoniak (NH₄⁺) über CPS-I?",
+      "options": [
+        "Beide Stickstoffatome",
+        "Der Stickstoff aus Aspartat",
+        "Ein Stickstoff (aus NH₃ über Carbamoylphosphat)",
+        "Keiner — beide kommen aus Glutamin",
+        "Der Stickstoff aus Arginin"
+      ],
+      "correct": 2,
+      "explain": "Harnstoff enthält zwei Stickstoffatome. Eines stammt aus freiem Ammoniak (NH₃), das durch CPS-I in Carbamoylphosphat eingebaut wird. Das zweite kommt aus der Aminogruppe von Aspartat, das im Argininosuccinat-Synthetase-Schritt eingebaut wird. Fumarat wird freigesetzt, wenn Aspartat seine Aminogruppe abgibt.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc007",
+      "topic": "Harnstoffzyklus",
+      "text": "Citrullinämie Typ I entsteht durch Argininosuccinat-Synthetase-Mangel (ASS). Was akkumuliert in Blut und Urin?",
+      "options": [
+        "Ornithin",
+        "Citrullin",
+        "Argininosuccinat",
+        "Arginin",
+        "Carbamoylphosphat"
+      ],
+      "correct": 1,
+      "explain": "ASS katalysiert Citrullin + Aspartat → Argininosuccinat. Ihr Mangel führt zur dramatischen Akkumulation von Citrullin in Blut und Urin (Citrullinämie). Auch Ammoniak steigt an, weil der Harnstoffzyklus blockiert ist. Die Behandlung umfasst Proteinrestriktion sowie Natriumbenzoat/-phenylbutyrat.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc008",
+      "topic": "Harnstoffzyklus",
+      "text": "Das im Harnstoffzyklus durch Argininosuccinat-Lyase produzierte Fumarat ist wichtig, weil es:",
+      "options": [
+        "Direkt ausgeschieden wird",
+        "In den Zitronensäurezyklus eintritt und diesen mit dem Harnstoffzyklus verbindet",
+        "Nur für Glukoneogenese zu Malat umgewandelt wird",
+        "CPS-I hemmt",
+        "Nur im Zytosol zu Aspartat umgewandelt wird"
+      ],
+      "correct": 1,
+      "explain": "Das von Argininosuccinat-Lyase freigesetzte Fumarat tritt in den Zitronensäurezyklus ein (Fumarat → Malat → OAA). OAA kann zu Aspartat transaminiert werden, das dann wieder in den Harnstoffzyklus eintritt. Diese Verbindung wird als 'Harnstoffzyklus-Zitratzyklus-Fahrrad' bezeichnet.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc009",
+      "topic": "Harnstoffzyklus",
+      "text": "Bei Hyperammonämie, welche Aminosäure transportiert Stickstoff von Muskeln zur Leber, und wie?",
+      "options": [
+        "Alanin — über den Glukose-Alanin-Zyklus; auch Glutamin — über Amidierung von Glutamat",
+        "Aspartat — direkt über das Blut",
+        "Glycin — über das Glycin-Spaltungssystem",
+        "Serin — über Hydroxymethyltransferase",
+        "Taurin — über Konjugation"
+      ],
+      "correct": 0,
+      "explain": "Zwei Hauptstickstoffträger: (1) Alanin (Glukose-Alanin-Zyklus) — Muskel transaminiert Pyruvat zu Alanin; Leber extrahiert die Aminogruppe. (2) Glutamin — im Muskel/Gehirn durch Glutaminsynthetase synthetisiert (fixiert NH₃); von Leber und Darm aufgenommen und durch Glutaminase desaminiert.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc010",
+      "topic": "Harnstoffzyklus",
+      "text": "Arginase-Mangel verursacht Argininämie. Was ist das charakteristische neurologische Merkmal im Vergleich zu anderen Harnstoffzyklusdefekten?",
+      "options": [
+        "Episodisches Erbrechen",
+        "Progressive spastische Diplegie und geistige Behinderung statt akuter Hyperammonämie",
+        "Neonatale letale Hyperammonämie",
+        "Sensorineuraler Hörverlust",
+        "Krampfanfälle durch Hypoglykämie"
+      ],
+      "correct": 1,
+      "explain": "Arginase-Mangel (Argininämie) manifestiert sich typischerweise mit progressiver spastischer Diplegie und geistiger Behinderung, nicht mit lebensbedrohlicher Hyperammonämie, da alternative Wege Ammoniak teilweise eliminieren können. Arginin akkumuliert und gilt als neurotoxisch. Die Ammoniakerhöhung ist milder als bei anderen Harnstoffzyklusdefekten.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph001",
+      "topic": "Wasser und pH",
+      "text": "Welche strukturelle Eigenschaft des Wassermoleküls ermöglicht die Ausbildung von Wasserstoffbrückenbindungen?",
+      "options": [
+        "Gewinkelte Geometrie mit partiell negativer Ladung am O und partiell positiven Ladungen an den H-Atomen",
+        "Lineare Geometrie, die die Dipolausrichtung maximiert",
+        "Gleiche Elektronegativität von H und O in der O-H-Bindung",
+        "Vorhandensein unpolarer O-H-Bindungen",
+        "Trigonal-planare Anordnung der Elektronenpaare um das Sauerstoffatom"
+      ],
+      "correct": 0,
+      "explain": "Wasser ist ein polares Molekül mit gewinkelter Geometrie (~104,5°). Sauerstoff ist hochgradig elektronegativ und trägt eine partielle Negativladung sowie zwei freie Elektronenpaare, während die Wasserstoffatome partielle Positivladungen aufweisen. Diese Polarität ermöglicht es jedem Wassermolekül, bis zu vier Wasserstoffbrückenbindungen auszubilden: zwei als Donor (über seine H-Atome) und zwei als Akzeptor (über seine freien Elektronenpaare). Dieses ausgedehnte Netzwerk erklärt den hohen Siedepunkt, die Oberflächenspannung, die Wärmekapazität und die Lösungsmitteleigenschaften des Wassers.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph002",
+      "topic": "Wasser und pH",
+      "text": "Welche Formel definiert den pH-Wert korrekt?",
+      "options": [
+        "pH = log[H⁺]",
+        "pH = −log[H⁺]",
+        "pH = −log[OH⁻]",
+        "pH = log Kw",
+        "pH = [H⁺] × [OH⁻]"
+      ],
+      "correct": 1,
+      "explain": "Der pH-Wert ist der negative dekadische Logarithmus der molaren Protonenkonzentration. Da [H⁺] in reinem Wasser 10⁻⁷ mol/L beträgt, ergibt sich pH = 7. Option C beschreibt den pOH-Wert; Option D ergibt 14 (eine Konstante, keine Definition); Option E ist dimensionsmäßig falsch.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph003",
+      "topic": "Wasser und pH",
+      "text": "Wie groß ist das Ionenprodukt des Wassers (Kw) bei 25 °C?",
+      "options": [
+        "1 × 10⁻⁷ mol/L",
+        "1 × 10⁻¹⁴ mol²/L²",
+        "7,0 (dimensionslos)",
+        "1 × 10⁻⁷ mol²/L²",
+        "14 × 10⁻⁷ mol²/L²"
+      ],
+      "correct": 1,
+      "explain": "Das Ionenprodukt Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴ mol²/L² bei 25 °C. In reinem Wasser gilt [H⁺] = [OH⁻] = 10⁻⁷ mol/L, also pH = 7 (neutral). Kw steigt mit der Temperatur: Bei 37 °C beträgt es etwa 2,4 × 10⁻¹⁴, was bedeutet, dass der neutrale pH-Wert bei Körpertemperatur näher bei 6,8 liegt — das Blut wird jedoch bei 7,35–7,45 gehalten.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph004",
+      "topic": "Wasser und pH",
+      "text": "Eine Lösung hat [H⁺] = 1 × 10⁻³ mol/L. Was ist ihr pH-Wert und ihr Charakter?",
+      "options": [
+        "pH 3, sauer",
+        "pH 3, basisch",
+        "pH 11, sauer",
+        "pH −3, neutral",
+        "pH 7, neutral"
+      ],
+      "correct": 0,
+      "explain": "pH = −log(10⁻³) = 3. Ein pH-Wert unter 7 kennzeichnet eine saure Lösung ([H⁺] > [OH⁻]). Jede Änderung um eine pH-Einheit entspricht einer 10-fachen Änderung von [H⁺], daher ist pH 3 10.000-mal saurer als pH 7.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph005",
+      "topic": "Wasser und pH",
+      "text": "Was beschreibt die Henderson-Hasselbalch-Gleichung?",
+      "options": [
+        "Die Abhängigkeit der Enzymgeschwindigkeit von der Substratkonzentration",
+        "Die Beziehung zwischen pH, pKs-Wert und dem Verhältnis [A⁻]/[HA]",
+        "Die Temperaturabhängigkeit von pKs-Werten",
+        "Die Beziehung zwischen Osmolarität und pH-Wert",
+        "Die Beziehung zwischen Kw und der Temperatur"
+      ],
+      "correct": 1,
+      "explain": "Die Gleichung lautet: pH = pKs + log([A⁻]/[HA]). Sie beschreibt den pH-Wert einer Pufferlösung quantitativ aus dem pKs-Wert und dem Verhältnis von konjugierter Base zu Säure. Wenn [A⁻] = [HA], ist log(1) = 0 und pH = pKs — der Puffermittelpunkt. Angewandt auf Blut: pH = 6,1 + log([HCO₃⁻]/[gelöstes CO₂]).",
+      "explainImg": ""
+    },
+    {
+      "id": "wph006",
+      "topic": "Wasser und pH",
+      "text": "Bei welchem pH-Wert liegt eine schwache Säure mit pKs = 4,8 zu je 50 % als HA und als A⁻ vor?",
+      "options": [
+        "pH 2,4",
+        "pH 6,0",
+        "pH 9,6",
+        "pH 4,8",
+        "pH 7,0"
+      ],
+      "correct": 3,
+      "explain": "Nach der Henderson-Hasselbalch-Gleichung gilt: pH = pKs + log([A⁻]/[HA]). Wenn [A⁻] = [HA], ergibt der logarithmische Term null, also pH = pKs = 4,8. Dies ist der Puffermittelpunkt mit maximaler Pufferkapazität. Ein Puffer ist wirksam innerhalb von etwa ±1 pH-Einheit um seinen pKs-Wert.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph007",
+      "topic": "Wasser und pH",
+      "text": "Welches ist das wichtigste extrazelluläre Puffersystem im Blut?",
+      "options": [
+        "Phosphatpuffer (H₂PO₄⁻/HPO₄²⁻)",
+        "Ammoniak/Ammonium (NH₃/NH₄⁺)",
+        "Bikarbonat/Kohlensäure (HCO₃⁻/H₂CO₃)",
+        "Hämoglobin/Oxyhämoglobin",
+        "Carboxylatgruppen des Plasma-Albumins"
+      ],
+      "correct": 2,
+      "explain": "Das Bikarbonat-Puffersystem (HCO₃⁻/H₂CO₃) trägt etwa 50 % zur gesamten Pufferkapazität des Blutes bei. Seine Effektivität wird durch die Lunge (CO₂-Elimination) und die Niere (HCO₃⁻-Regulierung) verstärkt, was es zu einem offenen System macht. Das normale Verhältnis [HCO₃⁻]/[H₂CO₃] beträgt bei Blut-pH 7,4 etwa 20:1. Der pKs-Wert dieses Systems liegt bei 6,1.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph008",
+      "topic": "Wasser und pH",
+      "text": "Welcher pH-Bereich gilt als normal für arterielles Blut?",
+      "options": [
+        "6,8–7,2",
+        "7,0–7,2",
+        "7,35–7,45",
+        "7,5–7,8",
+        "7,2–7,6"
+      ],
+      "correct": 2,
+      "explain": "Der normale arterielle Blut-pH liegt bei 7,35–7,45 — leicht alkalisch — und wird durch Puffersysteme, die respiratorische Regulation (CO₂) und die renale Regulation (HCO₃⁻) aufrechterhalten. Ein pH unter 7,35 ist eine Azidämie; über 7,45 eine Alkalämie. Werte außerhalb von 7,0–7,8 sind lebensbedrohlich.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph009",
+      "topic": "Wasser und pH",
+      "text": "Wann ist die Pufferkapazität eines schwachen Säure/Base-Paares maximal?",
+      "options": [
+        "Wenn pH = 2 × pKs",
+        "Wenn pH = pKs + 3",
+        "Wenn pH = pKs (gleiche Konzentrationen von HA und A⁻)",
+        "Wenn die Lösung vollständig deprotoniert ist (pH >> pKs)",
+        "Wenn nur die konjugierte Säure HA vorliegt"
+      ],
+      "correct": 2,
+      "explain": "Die Pufferkapazität (β) ist maximal bei pH = pKs, wenn die Konzentrationen der schwachen Säure (HA) und ihrer konjugierten Base (A⁻) gleich sind. Mathematisch gilt: β = 2,303 × C × α(1 − α), maximiert bei α = 0,5. Eine wirksame Pufferung erfolgt innerhalb von ±1 pH-Einheit um den pKs-Wert; außerhalb dieses Bereichs nimmt die Kapazität stark ab.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph010",
+      "topic": "Wasser und pH",
+      "text": "Welche primäre Blutbildveränderung kennzeichnet die metabolische Azidose?",
+      "options": [
+        "Anstieg des pCO₂ bei normalem HCO₃⁻",
+        "Abfall des pCO₂ bei normalem HCO₃⁻",
+        "Abfall der Plasmakonzentration von HCO₃⁻",
+        "Anstieg der Plasmakonzentration von HCO₃⁻",
+        "Abfall des pO₂ bei normalem HCO₃⁻"
+      ],
+      "correct": 2,
+      "explain": "Eine metabolische Azidose ist durch einen primären Abfall der Plasma-HCO₃⁻-Konzentration (< 22 mmol/L) gekennzeichnet, der zu einem pH-Abfall unter 7,35 führt. Häufige Ursachen: diabetische Ketoazidose, Laktatazidose (Hypoxie, Sepsis), Nierenversagen oder schwere Diarrhö (HCO₃⁻-Verlust). Als Kompensation führt Hyperventilation (Kussmaul-Atmung) zu einem Abfall des pCO₂ und stellt den pH teilweise wieder her.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph011",
+      "topic": "Wasser und pH",
+      "text": "Ein Patient hyperventiliert aus Angst. Welche Säure-Base-Störung entwickelt sich?",
+      "options": [
+        "Metabolische Azidose",
+        "Respiratorische Azidose",
+        "Metabolische Alkalose",
+        "Respiratorische Alkalose",
+        "Gemischte respiratorische und metabolische Azidose"
+      ],
+      "correct": 3,
+      "explain": "Hyperventilation führt zur übermäßigen CO₂-Elimination und senkt den pCO₂ (Hypokapnie). Da CO₂ + H₂O ⇌ H⁺ + HCO₃⁻, verschiebt vermindertes CO₂ das Gleichgewicht nach links, senkt [H⁺] und erhöht den pH über 7,45 — respiratorische Alkalose. Symptome: Kribbeln, Karpopedalspasmen (durch verminderte ionisierte Ca²⁺-Konzentration bei höherem pH) und Schwindel. Therapie: kontrolliertes Atmen oder CO₂-Rückatmung.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph012",
+      "topic": "Wasser und pH",
+      "text": "Das Blut eines Patienten zeigt [HCO₃⁻] = 24 mmol/L und pCO₂ = 40 mmHg. Mit pH = 6,1 + log([HCO₃⁻] / (0,03 × pCO₂)): Wie lautet der Blut-pH?",
+      "options": [
+        "6,1",
+        "7,0",
+        "7,4",
+        "7,7",
+        "8,1"
+      ],
+      "correct": 2,
+      "explain": "Gelöstes CO₂ = 0,03 × 40 = 1,2 mmol/L. pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,30 = 7,40. Dies ist die Henderson-Hasselbalch-Berechnung für das Bikarbonat-Puffersystem. Das normale Verhältnis [HCO₃⁻] zu [gelöstem CO₂] beträgt etwa 20:1, was pH 7,4 ergibt. Die Lunge reguliert den pCO₂, die Niere reguliert [HCO₃⁻], um dieses Verhältnis aufrechtzuerhalten. Diese Berechnung ist die Grundlage der arteriellen Blutgasanalyse.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph013",
+      "topic": "Wasser und pH",
+      "text": "Was ist die thermodynamische Triebkraft des hydrophoben Effekts?",
+      "options": [
+        "Elektrostatische Abstoßung zwischen unpolaren Molekülen und Wasser",
+        "Entropiegewinn durch Freisetzung geordneter Wasserkäfige um unpolare Gruppen in das Bulk-Wasser",
+        "Enthalpiegewinn durch van-der-Waals-Bindungen zwischen hydrophoben Molekülen",
+        "Kovalente Bindungsbildung zwischen unpolaren Gruppen",
+        "Entropieabnahme, wenn sich unpolare Moleküle zusammenlagern"
+      ],
+      "correct": 1,
+      "explain": "Hydrophobe Moleküle können keine Wasserstoffbrücken mit Wasser ausbilden und zwingen umgebende Wassermoleküle zur Bildung einer starren, geordneten Käfigstruktur (verminderte Entropie). Wenn sich hydrophobe Gruppen zusammenlagern, lösen sich diese Käfige auf und Wasser tritt in den ungeordneten Bulk-Zustand über, was die Gesamtentropie des Systems deutlich erhöht (ΔS > 0). Dieser entropiegetriebene Prozess treibt die Bildung von Membranzwischenschichten, die Faltung hydrophober Proteinkerne und das Andocken von Liganden an.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph014",
+      "topic": "Wasser und pH",
+      "text": "Warum schirmt Wasser elektrostatische Wechselwirkungen zwischen Ionen viel effektiver ab als ein unpolares Lösungsmittel?",
+      "options": [
+        "Wasser erhöht die Ionenladungen durch Protonenübertragungsreaktionen",
+        "Wasser hat eine sehr hohe Dielektrizitätskonstante (~80), die Dipole um die Ionen ausrichtet und die Coulomb-Kräfte abschwächt",
+        "Wasser bindet kovalent an Ionen und neutralisiert deren Ladung",
+        "Der niedrige Siedepunkt des Wassers ermöglicht einen schnellen Ionenaustausch",
+        "Wasserstoffbrückenbindungen im Wasser neutralisieren direkt die Ionenladungen"
+      ],
+      "correct": 1,
+      "explain": "Die relative Permittivität (Dielektrizitätskonstante) ε von Wasser bei 25 °C beträgt ~80 gegenüber ~2 für Hexan. Ausgerichtete Hydrathüllen aus Wasserdipolen um Ionen reduzieren die effektive Coulomb-Kraft zwischen zwei Ladungen um den Faktor ε. Dies stabilisiert geladene und polare Übergangszustände in Enzymaktivzentren, ermöglicht das Lösen von Salzen und erlaubt biologischen Polyelektrolyten (DNA, RNA), in Lösung zu existieren, ohne zu aggregieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph015",
+      "topic": "Wasser und pH",
+      "text": "Bei welcher der folgenden Reaktionen ist Wasser direkt als Substrat beteiligt?",
+      "options": [
+        "Übertragung von Phosphat von ATP auf Glucose durch die Hexokinase",
+        "Reduktion von NAD⁺ zu NADH durch die Glycerinaldehyd-3-phosphat-Dehydrogenase",
+        "Hydrolyse einer Peptidbindung durch eine Serinprotease",
+        "Isomerisierung von Glucose-6-phosphat zu Fructose-6-phosphat",
+        "Decarboxylierung von Pyruvat zu Acetyl-CoA durch den Pyruvat-Dehydrogenase-Komplex"
+      ],
+      "correct": 2,
+      "explain": "Serinproteasen (z. B. Trypsin, Chymotrypsin) spalten Peptidbindungen unter Verwendung von Wasser als zweitem Substrat. Das nukleophile Serin greift den Carbonylkohlenstoff an und bildet ein Acyl-Enzym-Intermediat, das anschließend durch ein Wassermolekül aufgelöst wird (Deacylierung). Wasser ist auch an der DNA-Hydrolyse, Phosphatase-Reaktionen und Hunderten anderer metabolischer Hydrolyse-Reaktionen beteiligt.",
+      "explainImg": ""
+    }
   ]
 }

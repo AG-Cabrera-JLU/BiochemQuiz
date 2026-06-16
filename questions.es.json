@@ -1,127 +1,1921 @@
 {
   "topics": [
-      "Glucólisis",
-      "Gluconeogénesis",
-      "Metabolismo del Glucógeno",
-      "Ciclo de Krebs",
-      "Cadena Respiratoria y OXFOS",
-      "Oxidación de Ácidos Grasos",
-      "Biosíntesis de Ácidos Grasos",
-      "Catabolismo de Aminoácidos",
-      "Ciclo de la Urea"
+    "Glucólisis",
+    "Gluconeogénesis",
+    "Metabolismo del Glucógeno",
+    "Ciclo de Krebs",
+    "Cadena Respiratoria y OXFOS",
+    "Oxidación de Ácidos Grasos",
+    "Biosíntesis de Ácidos Grasos",
+    "Catabolismo de Aminoácidos",
+    "Ciclo de la Urea",
+    "Agua y pH"
   ],
   "questions": [
-    {"id":"gly001","topic":"Glucólisis","text":"¿Dónde tiene lugar la glucólisis?","options":["En las mitocondrias","En el citosol","En el lisosoma","En el núcleo","En el peroxisoma"],"correct":1,"explain":"La glucólisis es una vía metabólica citosólica que transcurre completamente en el citoplasma. En contraste, el ciclo de Krebs y la fosforilación oxidativa tienen lugar en las mitocondrias. Esta separación espacial permite una regulación independiente de ambas vías. La glucólisis permanece activa en el citosol incluso en condiciones anaerobias.","explainImg":""},
-    {"id":"gly002","topic":"Glucólisis","text":"¿Qué energía se libera durante la hidrólisis del ATP?","options":["−60 kJ/mol","−10 kJ/mol","−45 kJ/mol","−31 kJ/mol","−20 kJ/mol"],"correct":3,"explain":"La hidrólisis de un enlace fosfoanh ídrido del ATP libera aproximadamente −31 kJ/mol en condiciones estándar. Este valor explica por qué el ATP se considera el transportador universal de energía de la célula. La energía libre proviene de la repulsión electrostática entre los grupos fosfato y la estabilización por resonancia del ADP y fosfato inorgánico resultantes. En condiciones celulares, el valor real puede ser aún mayor.","explainImg":"images/gly002.svg"},
-    {"id":"gly003","topic":"Glucólisis","text":"¿Qué distingue la glucólisis aerobia de la anaerobia?","options":["El destino posterior del piruvato formado","El número de moléculas de ATP consumidas","La actividad de la fosfofructocinasa 1","El número de pasos de reacción completados","El lugar de fosforilación de la glucosa"],"correct":0,"explain":"La glucólisis en sí transcurre de manera idéntica en ambos casos y termina con piruvato. La diferencia clave reside en el destino posterior del piruvato: en aerobiosis se importa a las mitocondrias y se descarboxila a acetil-CoA. En anaerobiosis, el piruvato es reducido a lactato en el citosol por la lactato deshidrogenasa para regenerar NAD⁺.","explainImg":"images/gly003.svg"},
-    {"id":"gly004","topic":"Glucólisis","text":"¿Qué producto se forma durante la degradación anaerobia del piruvato en el citosol?","options":["Citrato","Acetil-CoA","Succinato","Oxalacetato","Lactato"],"correct":4,"explain":"En condiciones anaerobias, el piruvato es reducido a lactato por la lactato deshidrogenasa (LDH). En el proceso, el NADH se reoxida a NAD⁺, lo que es esencial para que la glucólisis continúe. El lactato se libera a la sangre y puede convertirse de nuevo en glucosa en el hígado a través del ciclo de Cori. Clínicamente, el lactato aumenta durante la hipoxia, la sepsis y el ejercicio intenso.","explainImg":""},
-    {"id":"gly005","topic":"Glucólisis","text":"¿Cuál es el balance neto correcto de la glucólisis?","options":["Glucosa + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Piruvato + 2 NADH + 4 ATP + 2 H₂O","Glucosa + 4 ADP → 2 Piruvato + 4 ATP + 2 CO₂","Glucosa + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Piruvato + 2 NADH + 2 ATP + 2 H₂O","Glucosa + 2 ADP + 2 Pᵢ → 2 Piruvato + 2 ATP + 2 NADH + 2 CO₂","Glucosa + 2 NADH → 2 Piruvato + 2 NAD⁺ + 4 ATP"],"correct":2,"explain":"El balance neto de la glucólisis produce 2 ATP (4 generados menos 2 consumidos en la fase 1), 2 NADH y 2 piruvatos por glucosa. El NADH puede aportar ATP adicional en la cadena respiratoria en condiciones aerobias. Importante: no se produce CO₂ en la glucólisis — el CO₂ solo se libera durante la descarboxilación oxidativa del piruvato.","explainImg":""},
-    {"id":"gly006","topic":"Glucólisis","text":"¿Qué tres enzimas se consideran enzimas clave de la glucólisis?","options":["Glucocinasa, aldolasa, piruvato deshidrogenasa","Hexocinasa, fosfofructocinasa 1, piruvato cinasa","Lactato deshidrogenasa, hexocinasa, fosfoglicerato cinasa","Aldolasa, enolasa, fosfoglicerato mutasa","Fosfoglicerato cinasa, triosa fosfato isomerasa, enolasa"],"correct":1,"explain":"Las tres enzimas clave de la glucólisis catalizan reacciones irreversibles y altamente exergónicas, siendo los principales puntos de regulación. La hexocinasa fosforila la glucosa a glucosa-6-fosfato; la PFK-1 es la enzima reguladora más importante; la piruvato cinasa cataliza el último paso productor de ATP. Las tres están sujetas a control alostérico y hormonal.","explainImg":""},
-    {"id":"gly007","topic":"Glucólisis","text":"¿Por qué sustancia es activada alostéricamente la fosfofructocinasa 1?","options":["ATP","Citrato","Glucosa-6-fosfato","Fosfoenolpiruvato","Fructosa-2,6-bisfosfato"],"correct":4,"explain":"La fructosa-2,6-bisfosfato es el activador alostérico más potente de la PFK-1 y una molécula reguladora central. Es producida por la PFK-2, cuya actividad está controlada hormonalmente: la insulina promueve y el glucagón inhibe la actividad de PFK-2. El ATP y el citrato inhiben la PFK-1 (exceso de energía), mientras que el AMP y el ADP la activan.","explainImg":""},
-    {"id":"gly008","topic":"Glucólisis","text":"¿Qué hormona inhibe la transcripción de la hexocinasa?","options":["Glucagón","Insulina","Tiroxina","Adrenalina","Cortisol"],"correct":0,"explain":"El glucagón señaliza glucosa sanguínea baja e inhibe la transcripción de enzimas glucolíticas como la hexocinasa. La insulina tiene el efecto contrario y aumenta su expresión. Este control hormonal de la expresión génica permite una adaptación a largo plazo de la tasa glucolítica al estado nutricional. El glucagón promueve simultáneamente la gluconeogénesis en el hígado.","explainImg":""},
-    {"id":"gly009","topic":"Glucólisis","text":"¿Qué describe el ciclo de Cori?","options":["Síntesis de glucosa a partir de aminoácidos en el músculo","Regeneración de NAD⁺ mediante el ciclo de Krebs en el hígado","Degradación de ácidos grasos a acetil-CoA en el hígado","Conversión de lactato a glucosa entre músculo e hígado","Transporte de piruvato del citosol a las mitocondrias"],"correct":3,"explain":"En el ciclo de Cori, el lactato producido durante el metabolismo muscular anaerobio es transportado por la sangre al hígado. Allí se convierte de nuevo en glucosa mediante gluconeogénesis (2 lactato → 1 glucosa), que se pone nuevamente a disposición del músculo. El ciclo tiene un coste neto de energía (6 equivalentes de ATP por glucosa) y ocurre principalmente durante el ejercicio físico intenso.","explainImg":"images/gly009.svg"},
-    {"id":"gly010","topic":"Glucólisis","text":"¿Qué afirmación sobre la regulación de la piruvato cinasa es correcta?","options":["Es activada alostéricamente por citrato","Es activada por fructosa-1,6-bisfosfato","Es inhibida alostéricamente por glucosa-6-fosfato","La insulina inhibe la expresión del gen de la piruvato cinasa","Es inhibida alostéricamente por AMP"],"correct":1,"explain":"La piruvato cinasa es estimulada por fructosa-1,6-bisfosfato en una activación de retroalimentación anticipada: cuando la PFK-1 está activa y se acumula fructosa-1,6-bisfosfato, la piruvato cinasa se activa de antemano. Es inhibida por ATP y alanina (exceso de energía o aminoácidos suficientes). La insulina aumenta la expresión del gen de la piruvato cinasa — el efecto contrario a la opción D.","explainImg":""},
-    {"id":"gly011","topic":"Glucólisis","text":"¿Qué distingue a la glucocinasa de la hexocinasa?","options":["La glucocinasa se encuentra en eritrocitos, la hexocinasa en el hígado","La glucocinasa tiene una Km más baja para la glucosa que la hexocinasa","La glucocinasa no es inhibida por la glucosa-6-fosfato","La glucocinasa cataliza la fosforilación de la fructosa","La glucocinasa consume GTP en lugar de ATP en la reacción"],"correct":2,"explain":"La glucocinasa (hexocinasa IV) se encuentra principalmente en el hígado y en las células beta del páncreas. Tiene una Km alta (baja afinidad) para la glucosa, no es inhibida por la glucosa-6-fosfato y es inducida por la insulina. Estas propiedades la convierten en el sensor de glucosa del hígado: solo se activa con glucosa sanguínea alta y adapta la fosforilación a la oferta.","explainImg":""},
-    {"id":"gly012","topic":"Glucólisis","text":"¿Qué combinación inhibe alostéricamente a la fosfofructocinasa 1?","options":["ATP y citrato","AMP y fructosa-2,6-bisfosfato","ADP y glucosa-6-fosfato","NAD⁺ y oxalacetato","Insulina y glucagón"],"correct":0,"explain":"Los niveles elevados de ATP señalan exceso de energía e inhiben la PFK-1 para ralentizar la glucólisis. El citrato, un intermediario del ciclo de Krebs, también inhibe la PFK-1 e indica que la célula tiene precursores biosintéticos suficientes. En contraste, el AMP y el ADP (déficit energético) y la fructosa-2,6-bisfosfato activan la PFK-1.","explainImg":""},
-    {"id":"gly013","topic":"Glucólisis","text":"¿Cuántas moléculas de ATP se producen neta y directamente en la glucólisis?","options":["4 ATP, ya que en la fase 3 se forman cuatro moléculas","1 ATP, ya que solo existe un paso de fosforilación a nivel de sustrato","6 ATP, ya que se incluye la contribución del NADH","2 ATP, ya que se consumen dos en la fase 1 y se forman cuatro en la fase 3","8 ATP, ya que la glucosa tiene seis átomos de carbono"],"correct":3,"explain":"En la fase 1 (fase de inversión) se consumen 2 ATP (hexocinasa y PFK-1). En la fase 3 (fase de recuperación) se forman 4 ATP (2 × fosfoglicerato cinasa y 2 × piruvato cinasa). La ganancia neta es por tanto de 2 ATP por glucosa. El NADH producido genera ATP adicional en condiciones aerobias — pero solo en la cadena respiratoria, no en la glucólisis misma.","explainImg":"images/gly013.svg"},
-    {"id":"gly014","topic":"Glucólisis","text":"¿En qué situación clínica es más probable encontrar un nivel elevado de lactato en sangre?","options":["Hiperglucemia en diabetes tipo 2 no controlada","Ayuno prolongado sin esfuerzo físico","Niveles elevados de insulina tras una comida","Insuficiencia renal crónica sin acidosis","Hipoxia tisular en shock o sepsis grave"],"correct":4,"explain":"En la hipoxia tisular (p. ej. shock, sepsis, paro cardíaco) la cadena respiratoria no puede oxidar suficientemente el NADH, lo que causa una mayor reducción del piruvato a lactato. Esto conduce a la acidosis láctica. Un lactato > 2 mmol/L es un valor de alerta clínico; valores > 4 mmol/L indican mayor riesgo de mortalidad. Las mediciones regulares de lactato son por ello estándar en medicina intensiva.","explainImg":""},
-    {"id":"gly015","topic":"Glucólisis","text":"¿Cuál es el producto final de la fase 1 de la glucólisis?","options":["Glucosa-1-fosfato","Fosfoenolpiruvato","Fructosa-1,6-bisfosfato","Gliceraldehído-3-fosfato","1,3-Bisfosfoglicerato"],"correct":2,"explain":"La fase 1 de la glucólisis (fase de inversión) comprende la conversión de glucosa a fructosa-1,6-bisfosfato consumiendo 2 ATP. Las enzimas clave son la hexocinasa (paso 1) y la fosfofructocinasa 1 (paso 3). La fructosa-1,6-bisfosfato resultante es escindida en la fase 2 por la aldolasa en dos unidades C3: gliceraldehído-3-fosfato (GAP) y dihidroxiacetona fosfato (DHAP).","explainImg":"images/gly015.svg"},
-    {"id":"gcn001","topic":"Gluconeogénesis","text":"¿Dónde tiene lugar principalmente la gluconeogénesis?","options":["En el músculo esquelético y el cerebro","En el tejido adiposo y el bazo","En el músculo cardíaco y el intestino delgado","En el pulmón y la médula ósea","En el hígado y el riñón"],"correct":4,"explain":"La gluconeogénesis ocurre principalmente en el hígado, que representa hasta el 90% de la nueva síntesis de glucosa. El riñón contribuye especialmente durante el ayuno prolongado y la acidosis. Otros órganos como el músculo o el cerebro no pueden realizar gluconeogénesis significativa porque carecen de enzimas clave (p. ej. glucosa-6-fosfatasa).","explainImg":""},
-    {"id":"gcn002","topic":"Gluconeogénesis","text":"¿Cuáles son los tres principales sustratos precursores de la gluconeogénesis?","options":["Glucosa, fructosa y galactosa","Lactato, aminoácidos y glicerol","Ácidos grasos, colesterol y cuerpos cetónicos","Acetil-CoA, NADH y ATP","Piruvato, CO₂ y GTP"],"correct":1,"explain":"Los principales sustratos para la gluconeogénesis son el lactato (de la glucólisis anaerobia, ciclo de Cori), los aminoácidos glucogénicos (p. ej. alanina del catabolismo muscular en ayuno) y el glicerol (de la lipólisis en tejido adiposo). Los ácidos grasos no pueden convertirse en glucosa en humanos porque el acetil-CoA no puede entrar en la gluconeogénesis.","explainImg":""},
-    {"id":"gcn003","topic":"Gluconeogénesis","text":"¿Por qué la gluconeogénesis no puede simplemente ejecutar la glucólisis en sentido inverso?","options":["Porque se necesitan coenzimas diferentes en la dirección inversa","Porque la glucosa no puede fosforilarse en el hígado","Porque el NADH no está disponible para la reacción inversa","Porque tres reacciones glucolíticas son termodinámicamente irreversibles","Porque el piruvato no puede transportarse a las mitocondrias"],"correct":3,"explain":"Tres reacciones glucolíticas son irreversibles en condiciones fisiológicas: las reacciones de la hexocinasa, la fosfofructocinasa 1 y la piruvato cinasa. Estas deben ser eludidas en la gluconeogénesis mediante reacciones específicas de desvío con sus propias enzimas. Las siete reacciones glucolíticas restantes son reversibles.","explainImg":""},
-    {"id":"gcn004","topic":"Gluconeogénesis","text":"¿Qué enzima cataliza el primer paso de la gluconeogénesis a partir del piruvato?","options":["Piruvato carboxilasa","PEP carboxicinasa","Fructosa-1,6-bisfosfatasa","Glucosa-6-fosfatasa","Piruvato deshidrogenasa"],"correct":0,"explain":"La piruvato carboxilasa se localiza en las mitocondrias y cataliza la carboxilación dependiente de ATP del piruvato a oxalacetato, consumiendo HCO₃⁻. Requiere biotina como cofactor. El acetil-CoA es un activador alostérico de la piruvato carboxilasa — una señal de que hay sustratos suficientes para el ciclo de Krebs y que el piruvato excedente debe redirigirse hacia la gluconeogénesis.","explainImg":""},
-    {"id":"gcn005","topic":"Gluconeogénesis","text":"¿En qué compartimento celular convierte la PEP carboxicinasa el oxalacetato en PEP?","options":["En el espacio intermembrana de las mitocondrias","En el retículo endoplasmático","En el citosol","En la matriz mitocondrial","En el núcleo"],"correct":2,"explain":"La PEP carboxicinasa (PEPCK) es una enzima citosólica que convierte el oxalacetato en fosfoenolpiruvato (PEP) y CO₂ consumiendo GTP. Como el oxalacetato no puede cruzar directamente la membrana mitocondrial interna, primero se reduce a malato, se transporta al citosol y allí se reoxida a oxalacetato antes de que la PEPCK lo convierta en PEP.","explainImg":"images/gcn005.svg"},
-    {"id":"gcn006","topic":"Gluconeogénesis","text":"¿Qué enzima de la gluconeogénesis está localizada en el retículo endoplasmático?","options":["Piruvato carboxilasa","Fructosa-1,6-bisfosfatasa","PEP carboxicinasa","Fosfoglicerato cinasa","Glucosa-6-fosfatasa"],"correct":4,"explain":"La glucosa-6-fosfatasa está localizada en el retículo endoplasmático (RE) y cataliza el último paso de la gluconeogénesis: la eliminación del grupo fosfato de la glucosa-6-fosfato para dar glucosa libre. Solo el hígado y el riñón poseen esta enzima, lo que explica por qué solo estos órganos pueden liberar glucosa a la sangre. Su ausencia causa la enfermedad de Von Gierke.","explainImg":""},
-    {"id":"gcn007","topic":"Gluconeogénesis","text":"¿Cuál es el balance energético correcto de la gluconeogénesis para formar 1 glucosa a partir de 2 piruvatos?","options":["Consumo de 2 ATP y 2 GTP, sin necesidad de NADH","Consumo de 4 ATP, 2 GTP y 2 NADH","Consumo de 6 ATP y 2 FADH₂, sin necesidad de GTP","Consumo de 2 ATP y 4 NADH, sin necesidad de GTP","Consumo de 8 ATP y 4 GTP, 4 NADH necesarios"],"correct":1,"explain":"La gluconeogénesis desde 2 piruvatos requiere: 2 ATP para la piruvato carboxilasa, 2 GTP para la PEPCK, 2 ATP para la fosfoglicerato cinasa (reacción inversa) y 2 NADH para la inversión de la gliceraldehído-3-fosfato deshidrogenasa. El balance total es 4 ATP + 2 GTP + 2 NADH — mucho más energía de la que produce la glucólisis. La gluconeogénesis es impulsada por la escasez de glucosa, no por el exceso de energía.","explainImg":""},
-    {"id":"gcn008","topic":"Gluconeogénesis","text":"¿Qué estimula alostéricamente a la fructosa-1,6-bisfosfatasa?","options":["AMP y fructosa-2,6-bisfosfato","ATP y glucosa-6-fosfato","Insulina y piruvato","Citrato","NADH y oxalacetato"],"correct":3,"explain":"El citrato activa la fructosa-1,6-bisfosfatasa e inhibe simultáneamente la PFK-1 — un ejemplo clásico de regulación recíproca. Los niveles elevados de citrato señalan que el ciclo de Krebs está saturado y que la glucosa debería almacenarse en lugar de quemarse. El AMP y la fructosa-2,6-bisfosfato, en cambio, inhiben la bisfosfatasa y activan la PFK-1 para impulsar la glucólisis durante el déficit energético.","explainImg":"images/gcn008.svg"},
-    {"id":"gcn009","topic":"Gluconeogénesis","text":"¿Qué mecanismo impulsa la gluconeogénesis cuando el lactato aumenta en la sangre?","options":["Ley de acción de masas: mayor concentración de sustrato dirige la reacción hacia la glucosa","Activación alostérica de la piruvato carboxilasa por el lactato","Inducción hormonal de la PEPCK directamente por el lactato","Activación de la glucosa-6-fosfatasa por el aumento del lactato","Inhibición de la glucólisis por el lactato a través de la PFK-1"],"correct":0,"explain":"La gluconeogénesis está regulada por la disponibilidad de sustratos (ley de acción de masas): cuando aumentan las concentraciones sanguíneas de lactato, alanina o glicerol, la gluconeogénesis es impulsada puramente por el equilibrio químico sin intervención hormonal. En el ciclo de Cori, el músculo suministra lactato que se utiliza directamente para la síntesis de glucosa en el hígado.","explainImg":""},
-    {"id":"gcn010","topic":"Gluconeogénesis","text":"¿Cómo influye el glucagón en la gluconeogénesis a nivel hormonal?","options":["El glucagón inhibe la gluconeogénesis activando FOXO1","El glucagón inhibe la expresión génica de PEPCK a través del cAMP","El glucagón aumenta la expresión génica de PEPCK a través de cAMP y CREB","El glucagón activa los receptores de insulina en hepatocitos","El glucagón estimula la glucólisis e inhibe la gluconeogénesis"],"correct":2,"explain":"El glucagón se une a su receptor acoplado a proteína G en hepatocitos y aumenta los niveles intracelulares de cAMP. El cAMP activa la proteína cinasa A, que fosforila el factor de transcripción CREB. El CREB fosforilado aumenta la transcripción de PEPCK y glucosa-6-fosfatasa. El cortisol actúa sinérgicamente a través del receptor de glucocorticoides. Esta inducción tarda horas o días.","explainImg":""},
-    {"id":"gcn011","topic":"Gluconeogénesis","text":"¿Cómo inhibe la insulina la gluconeogénesis a nivel molecular?","options":["La insulina activa CREB y aumenta la transcripción de PEPCK","La insulina inhibe directamente la piruvato carboxilasa por contacto","La insulina activa FOXO1 y aumenta la expresión de PEPCK","La insulina reduce el cAMP directamente inhibiendo la adenilato ciclasa","La insulina fosforila e inactiva FOXO1, que de otro modo promueve la PEPCK"],"correct":4,"explain":"La insulina activa la vía de señalización PI3K/Akt, que conduce a la fosforilación del factor de transcripción FOXO1 por Akt (PKB). El FOXO1 fosforilado abandona el núcleo y ya no puede promover la transcripción de PEPCK y glucosa-6-fosfatasa. El FOXO1 en su estado activo (no fosforilado) es por tanto un promotor de la gluconeogénesis — la insulina lo desactiva por fosforilación.","explainImg":""},
-    {"id":"gcn012","topic":"Gluconeogénesis","text":"¿Qué afirmación sobre la enfermedad de Von Gierke (tipo 1a) es correcta?","options":["La causa es un defecto en la fructosa-1,6-bisfosfatasa","La causa es un defecto en la glucosa-6-fosfatasa","La causa es un defecto en la piruvato carboxilasa","La causa es un defecto en la PEP carboxicinasa","La causa es un defecto en la lactato deshidrogenasa"],"correct":1,"explain":"La enfermedad de Von Gierke tipo 1a se hereda de forma autosómica recesiva y está causada por un defecto en la glucosa-6-fosfatasa en el RE. Sin esta enzima, la glucosa-6-fosfato no puede convertirse en glucosa libre ni desde la gluconeogénesis ni desde la degradación del glucógeno. Las consecuencias incluyen hipoglucemia grave en ayunas, hepatomegalia por acumulación de glucógeno, acidosis láctica y niveles elevados de ácido úrico y triglicéridos.","explainImg":""},
-    {"id":"gcn013","topic":"Gluconeogénesis","text":"¿Por qué los ácidos grasos no pueden contribuir a la gluconeogénesis en humanos?","options":["Porque los ácidos grasos no pueden llegar a las mitocondrias","Porque la degradación de ácidos grasos no genera ATP","Porque los ácidos grasos se oxidan directamente a CO₂ y H₂O","Porque el acetil-CoA no puede convertirse en oxalacetato ni en PEP","Porque los ácidos grasos inhiben competitivamente la piruvato carboxilasa"],"correct":3,"explain":"La β-oxidación de los ácidos grasos termina en acetil-CoA. En el ciclo de Krebs, el acetil-CoA se oxida completamente a CO₂ — no hay ganancia neta de oxalacetato ni de otros compuestos C4 que pudieran alimentar la gluconeogénesis. Por tanto, los ácidos grasos no son sustratos gluconeogénicos. El glicerol (de los triglicéridos) sí puede entrar en la gluconeogénesis como glicerol-3-fosfato.","explainImg":""},
-    {"id":"gcn014","topic":"Gluconeogénesis","text":"¿En qué situación está más fuertemente activada la gluconeogénesis?","options":["Ayuno prolongado con niveles elevados de glucagón y cortisol","Poco después de una comida rica en carbohidratos","Durante trabajo muscular anaerobio intenso solamente","Con niveles elevados de insulina y reservas de glucógeno llenas","Con dieta exclusivamente grasa sin ingesta de proteínas"],"correct":0,"explain":"Durante el ayuno prolongado, el glucagón y el cortisol están crónicamente elevados. El glucagón induce la transcripción de PEPCK y glucosa-6-fosfatasa a través de cAMP/CREB; el cortisol actúa sinérgicamente. Simultáneamente, la proteólisis muscular (alanina) y la lipólisis (glicerol) proporcionan sustrato abundante. La insulina está suprimida, por lo que FOXO1 permanece activo y las enzimas gluconeogénicas se mantienen reguladas al alza.","explainImg":""},
-    {"id":"gcn015","topic":"Gluconeogénesis","text":"¿Qué fármaco inhibe la gluconeogénesis y se utiliza como tratamiento de primera línea en la diabetes tipo 2?","options":["Glibenclamida (sulfonilurea)","Sitagliptina (inhibidor de DPP-4)","Metformina (biguanida)","Empagliflozina (inhibidor de SGLT-2)","Insulina glargina (insulina de acción prolongada)"],"correct":2,"explain":"La metformina es el antidiabético oral más prescrito en el mundo. Inhibe el complejo I de la cadena respiratoria mitocondrial, lo que eleva la relación AMP/ATP y activa la AMPK. La AMPK fosforila e inactiva los coactivadores de CREB (PGC-1α/TORC2), reduciendo así la transcripción de PEPCK y glucosa-6-fosfatasa. El resultado es una reducción marcada de la gluconeogénesis hepática.","explainImg":""},
-    {"id":"glg001","topic":"Metabolismo del Glucógeno","text":"¿Qué enzima agrega residuos de glucosa al extremo no reductor del glucógeno?","options":["Glucógeno fosforilasa","Glucógeno sintasa","Enzima ramificante","UDP-glucosa pirofosforilasa","Enzima desramificante"],"correct":1,"explain":"La glucógeno sintasa alarga las cadenas de glucógeno añadiendo UDP-glucosa a los extremos no reductores mediante enlaces glucosídicos α(1→4). Requiere un cebador de glucógeno preexistente (mínimo 4 residuos) o la proteína glucogenina como iniciador.","explainImg":""},
-    {"id":"glg002","topic":"Metabolismo del Glucógeno","text":"¿Cuál es la forma activada de glucosa utilizada en la síntesis de glucógeno?","options":["Glucosa-1-fosfato","Glucosa-6-fosfato","UDP-glucosa","ADP-glucosa","GDP-glucosa"],"correct":2,"explain":"La glucosa debe activarse a UDP-glucosa por la UDP-glucosa pirofosforilasa antes de incorporarse al glucógeno. El UTP usado se hidroliza a UMP + PPi; la actividad posterior de pirofosfatasa impulsa la reacción hacia adelante.","explainImg":""},
-    {"id":"glg003","topic":"Metabolismo del Glucógeno","text":"La glucógeno fosforilasa escinde el glucógeno mediante:","options":["Hidrólisis con agua","Fosforolisis usando fosfato inorgánico","Reacción de transferasa","Escisión oxidativa","Actividad de α-glucosidasa lisosomal"],"correct":1,"explain":"La glucógeno fosforilasa realiza fosforolisis: usa fosfato inorgánico (Pi) para escindir enlaces α(1→4) en extremos no reductores, liberando glucosa-1-fosfato. Esto es energéticamente favorable ya que la glucosa-1-fosfato ya está fosforilada.","explainImg":""},
-    {"id":"glg004","topic":"Metabolismo del Glucógeno","text":"La enfermedad de Von Gierke (GSD tipo I) resulta de deficiencia de:","options":["Glucógeno sintasa","Glucosa-6-fosfatasa","Enzima desramificante","Maltasa ácida (α-glucosidasa)","Glucógeno fosforilasa hepática"],"correct":1,"explain":"La enfermedad de Von Gierke es causada por deficiencia de glucosa-6-fosfatasa. Sin esta enzima, el hígado no puede liberar glucosa libre a la sangre desde glucogenólisis ni gluconeogénesis. Esto lleva a hipoglucemia grave en ayuno y acumulación masiva de glucógeno hepático.","explainImg":""},
-    {"id":"glg005","topic":"Metabolismo del Glucógeno","text":"¿Qué hormona activa la glucogenólisis en el hígado a través de una vía dependiente de cAMP?","options":["Insulina","Glucagón","Cortisol","Aldosterona","Somatostatina"],"correct":1,"explain":"El glucagón se une a su GPCR en hepatocitos → adenilil ciclasa → cAMP → activación de PKA → activación de fosforilasa cinasa → activación de glucógeno fosforilasa. Simultáneamente, la PKA fosforila e inactiva la glucógeno sintasa, previniendo ciclos fútiles.","explainImg":""},
-    {"id":"glg006","topic":"Metabolismo del Glucógeno","text":"La enzima desramificante tiene dos actividades catalíticas. ¿Qué par es correcto?","options":["Cinasa + fosfatasa","4-α-glucanotransferasa + amilo-1,6-glucosidasa","Sintasa + fosforilasa","Isomerasa + liasa","Hidrolasa + mutasa"],"correct":1,"explain":"La enzima desramificante primero transfiere un trisacárido de una rama a la cadena principal (actividad transferasa), luego hidroliza la glucosa restante en el punto de ramificación (actividad glucosidasa), liberando glucosa libre en lugar de glucosa-1-fosfato.","explainImg":""},
-    {"id":"glg007","topic":"Metabolismo del Glucógeno","text":"La enfermedad de McArdle (GSD tipo V) se caracteriza por calambres musculares durante el ejercicio debido a deficiencia de:","options":["Maltasa ácida","Fosforilasa hepática","Glucógeno fosforilasa muscular","Enzima ramificante","Fosfofructocinasa"],"correct":2,"explain":"La enfermedad de McArdle resulta de deficiencia de glucógeno fosforilasa muscular. El músculo no puede movilizar glucógeno durante el ejercicio, llevando a falla energética, calambres dolorosos y mioglobinuria. El lactato sanguíneo no aumenta tras ejercicio isquémico de antebrazo.","explainImg":""},
-    {"id":"glg008","topic":"Metabolismo del Glucógeno","text":"La glucógeno sintasa está máximamente activa en su forma:","options":["Fosforilada","Desfosforilada","Unida a AMP","Estimulada por glucagón","Inhibida por citrato"],"correct":1,"explain":"La glucógeno sintasa está activa (forma a) cuando está desfosforilada e inactiva (forma b) cuando está fosforilada. La insulina promueve la síntesis de glucógeno activando la proteína fosfatasa 1 (PP1), que desfosforila y activa la glucógeno sintasa.","explainImg":""},
-    {"id":"glg009","topic":"Metabolismo del Glucógeno","text":"¿Qué proteína actúa como cebador para la síntesis de glucógeno aceptando los primeros residuos de glucosa?","options":["Glucogenina","Glucógeno sintasa","Fosfoglucomutasa","Lafrina","Enzima ramificante"],"correct":0,"explain":"La glucogenina es una proteína autoglucosiltransferasa que forma el cebador para la síntesis de glucógeno. Fija la primera glucosa a un residuo de tirosina, luego extiende la cadena a ~8 residuos antes de que la glucógeno sintasa tome el control.","explainImg":""},
-    {"id":"glg010","topic":"Metabolismo del Glucógeno","text":"La insulina promueve la síntesis de glucógeno activando qué fosfatasa que desfosforila la glucógeno sintasa:","options":["Proteína fosfatasa 1 (PP1)","Proteína fosfatasa 2A (PP2A)","Calcineurina (PP2B)","PTP1B","Fosforilasa cinasa"],"correct":0,"explain":"La señalización de insulina activa PP1 a través de la fosforilación mediada por Akt de su subunidad reguladora. PP1 luego desfosforila la glucógeno sintasa (activándola) y la glucógeno fosforilasa (inactivándola), promoviendo coordinadamente la síntesis de glucógeno.","explainImg":""},
-    {"id":"tca001","topic":"Ciclo de Krebs","text":"¿Qué enzima cataliza la reacción de condensación que inicia el ciclo de Krebs?","options":["Citrato sintasa","Isocitrato deshidrogenasa","Aconitasa","Malato deshidrogenasa","Fumarasa"],"correct":0,"explain":"La citrato sintasa condensa acetil-CoA (2C) con oxalacetato (4C) para formar citrato (6C). Este es el punto de entrada del ciclo de Krebs. La enzima es regulada por el estado energético: inhibida por ATP, NADH y succinil-CoA.","explainImg":""},
-    {"id":"tca002","topic":"Ciclo de Krebs","text":"¿Cuántas moléculas de NADH se producen por cada vuelta completa del ciclo de Krebs?","options":["1","2","4","3","5"],"correct":3,"explain":"Se producen tres moléculas de NADH por vuelta: en isocitrato deshidrogenasa, α-cetoglutarato deshidrogenasa y malato deshidrogenasa. También se produce un FADH₂ en succinato deshidrogenasa y un GTP en succinil-CoA sintetasa.","explainImg":""},
-    {"id":"tca003","topic":"Ciclo de Krebs","text":"¿Qué intermediario del ciclo de Krebs es precursor clave para la síntesis de hemo?","options":["Succinil-CoA","Citrato","Fumarato","Malato","α-Cetoglutarato"],"correct":0,"explain":"El succinil-CoA se condensa con glicina (catalizado por ALA sintasa, requiriendo piridoxal fosfato) para formar ácido δ-aminolevulínico (ALA), el primer paso comprometido de la biosíntesis de hemo. Esta reacción ocurre en la matriz mitocondrial.","explainImg":""},
-    {"id":"tca004","topic":"Ciclo de Krebs","text":"¿Qué enzima del ciclo de Krebs produce directamente GTP por fosforilación a nivel de sustrato?","options":["Isocitrato deshidrogenasa","Succinato deshidrogenasa","Fumarasa","Aconitasa","Succinil-CoA sintetasa"],"correct":4,"explain":"La succinil-CoA sintetasa (también llamada succinato tiocinasa) acopla la hidrólisis del enlace tioéster de alta energía del succinil-CoA a la fosforilación de GDP a GTP (o ADP a ATP en algunos tejidos).","explainImg":""},
-    {"id":"tca005","topic":"Ciclo de Krebs","text":"La deficiencia de tiamina (B1) deteriora el ciclo de Krebs al afectar qué complejo enzimático:","options":["Citrato sintasa","Piruvato deshidrogenasa y α-cetoglutarato deshidrogenasa","Succinato deshidrogenasa","Aconitasa","Malato deshidrogenasa"],"correct":1,"explain":"El pirofosfato de tiamina (TPP) es un cofactor esencial tanto para el complejo piruvato deshidrogenasa (PDH) como para el α-cetoglutarato deshidrogenasa (α-CGDH). La deficiencia de tiamina causa encefalopatía de Wernicke y beriberi.","explainImg":""},
-    {"id":"tca006","topic":"Ciclo de Krebs","text":"La succinato deshidrogenasa es única entre las enzimas del ciclo de Krebs porque:","options":["Es soluble en la matriz","Está embebida en la membrana mitocondrial interna (Complejo II)","Está localizada en el citosol","Está asociada con la membrana mitocondrial externa","Es una enzima productora de GTP"],"correct":1,"explain":"La succinato deshidrogenasa es la única enzima del ciclo de Krebs embebida en la membrana mitocondrial interna. Es idéntica al Complejo II de la cadena respiratoria — oxida succinato a fumarato, reduciendo FAD a FADH₂.","explainImg":""},
-    {"id":"tca007","topic":"Ciclo de Krebs","text":"¿Qué reacción generalmente se considera el paso limitante de la velocidad del ciclo de Krebs bajo condiciones fisiológicas?","options":["Citrato sintasa","Aconitasa","Isocitrato deshidrogenasa","Malato deshidrogenasa","Fumarasa"],"correct":2,"explain":"La isocitrato deshidrogenasa es una enzima reguladora clave. Es activada alostéricamente por ADP y Ca²⁺ e inhibida por ATP y NADH. Al controlar el flujo en este paso, el ciclo de Krebs se coordina con las demandas energéticas de la célula.","explainImg":""},
-    {"id":"tca008","topic":"Ciclo de Krebs","text":"Si el oxalacetato (OAA) se agota, ¿qué reacción anaplerótica puede reponerlo directamente?","options":["Piruvato → acetil-CoA (PDH)","Glutamato → α-cetoglutarato (transaminación)","Piruvato → OAA (piruvato carboxilasa)","Succinil-CoA → succinato","Fumarato → malato (fumarasa)"],"correct":2,"explain":"La piruvato carboxilasa es la enzima anaplerótica primaria en el hígado: piruvato + CO₂ + ATP → OAA. Es activada por acetil-CoA — señal de que hay acetil-CoA disponible pero OAA es limitante, asegurando el flujo continuo del ciclo.","explainImg":""},
-    {"id":"tca009","topic":"Ciclo de Krebs","text":"El citrato exportado de las mitocondrias al citosol es escindido por ATP-citrato liasa para proporcionar acetil-CoA para:","options":["Glucólisis","Gluconeogénesis","Síntesis de urea","Síntesis de hemo","Síntesis de ácidos grasos y colesterol"],"correct":4,"explain":"El transporte de citrato al citosol es el mecanismo primario para exportar acetil-CoA mitocondrial para biosíntesis. La ATP-citrato liasa escinde el citrato en acetil-CoA + OAA. Este acetil-CoA citosólico se usa para síntesis de ácidos grasos y colesterol (vía HMG-CoA).","explainImg":""},
-    {"id":"tca010","topic":"Ciclo de Krebs","text":"¿Qué paso del ciclo de Krebs implica una descarboxilación oxidativa que produce CO₂ y NADH?","options":["Citrato → isocitrato","Isocitrato → α-cetoglutarato","Succinato → fumarato","Malato → oxalacetato","Fumarato → malato"],"correct":1,"explain":"La isocitrato deshidrogenasa cataliza la primera descarboxilación oxidativa: isocitrato → α-cetoglutarato + CO₂ + NADH. Una segunda descarboxilación oxidativa ocurre en la α-cetoglutarato deshidrogenasa (α-cetoglutarato → succinil-CoA + CO₂ + NADH).","explainImg":""},
-    {"id":"tca011","topic":"Ciclo de Krebs","text":"El complejo piruvato deshidrogenasa (PDH) requiere cinco coenzimas. ¿Qué combinación las nombra correctamente a todas?","options":["TPP, biotina, CoA, FMN, NADP⁺","PLP, ácido lipoico, CoA, FAD, NADP⁺","TPP, ácido lipoico, CoA, FMN, NAD⁺","TPP, ácido lipoico, CoA, FAD, NAD⁺","Biotina, ácido lipoico, AMP, FAD, NAD⁺"],"correct":3,"explain":"El PDH consta de tres subunidades catalíticas: E1 (piruvato descarboxilasa, usa TPP), E2 (dihidrolipoil transacetilasa, usa ácido lipoico y CoA) y E3 (dihidrolipoil deshidrogenasa, usa FAD y NAD⁺). Las cinco coenzimas son imprescindibles; la ausencia de cualquiera de ellas detiene por completo el complejo.","explainImg":""},
-    {"id":"tca012","topic":"Ciclo de Krebs","text":"La piruvato deshidrogenasa (PDH) y la α-cetoglutarato deshidrogenasa (OGDH) se estudian frecuentemente juntas. ¿Qué afirmación describe mejor lo que verdaderamente comparten?","options":["Ambas usan biotina y transfieren un grupo carboxilo a un portador móvil entre subunidades","Ambas son citosólicas y reguladas por fosforilación reversible vía cinasas sensibles a la insulina","Ambas difieren en especificidad de E1 pero comparten una subunidad E2 dihidrolipoil transacilasa idéntica","Ambas producen acetil-CoA y comparten el mismo sitio de unión al sustrato en su subunidad E1","Ambas son complejos E1/E2/E3 que usan los mismos cinco coenzimas para descarboxilaciones oxidativas"],"correct":4,"explain":"PDH y OGDH comparten la misma arquitectura de tres componentes (E1/TPP, E2/ácido lipoico+CoA, E3/FAD+NAD⁺) y catalizan reacciones de descarboxilación oxidativa análogas: PDH convierte piruvato → acetil-CoA + CO₂, mientras OGDH convierte α-cetoglutarato → succinil-CoA + CO₂. Su subunidad E3 (dihidrolipoil deshidrogenasa) es idéntica, por lo que un déficit de E3 deteriora ambos complejos simultáneamente.","explainImg":""},
-    {"id":"tca013","topic":"Ciclo de Krebs","text":"Concentraciones elevadas de ¿qué metabolito inhiben simultáneamente la citrato sintasa, la isocitrato deshidrogenasa y la α-KGDH, frenando el ciclo de Krebs cuando los equivalentes reductores están en exceso?","options":["NADH — se acumula cuando el transporte de electrones está saturado; inhibidor de producto directo en las tres enzimas","ADP — señaliza baja carga energética; actúa como activador de la isocitrato deshidrogenasa y la citrato sintasa","Ca²⁺ — entra a las mitocondrias durante la contracción muscular; activa isocitrato deshidrogenasa, α-KGDH y PDH fosfatasa","Succinil-CoA — inhibidor de producto directo de α-KGDH; inhibidor de retroalimentación de citrato sintasa","Acetil-CoA — se acumula en β-oxidación; inhibe la PDH pero no las tres enzimas reguladoras del ciclo"],"correct":0,"explain":"La acumulación de NADH indica un estado de alta energía y alta reducción, e inhibe los tres puntos de control principales del ciclo de Krebs de forma simultánea. Esta inhibición por producto frena el ciclo hasta que el NADH es reoxidado por la cadena respiratoria. El Ca²⁺ tiene el efecto contrario — activa el ciclo durante la actividad muscular —, mientras que el ADP activa (no inhibe) la isocitrato deshidrogenasa.","explainImg":""},
-    {"id":"tca014","topic":"Ciclo de Krebs","text":"El FADH₂ producido por la succinato deshidrogenasa genera menos ATP que el NADH. ¿Cuál es la razón mecanística principal?","options":["FADH₂ llega al Complejo I en un sitio de unión posterior al NADH, reduciendo el bombeo de protones por par","FADH₂ tiene un potencial de reducción más negativo que NAD⁺/NADH y no puede reducir ubiquinona sin energía adicional","FADH₂ está unido a proteína en el Complejo II y pasa electrones directamente a ubiquinona, eludiendo completamente el Complejo I","FADH₂ dona al Complejo III a través de un portador de flavina, saltando tanto el Complejo I como el Complejo II","FADH₂ se oxida en la cara del espacio intermembrana, reduciendo el gradiente de protones para la ATP sintasa"],"correct":2,"explain":"El NADH alimenta el Complejo I, que bombea 4 H⁺ por par electrónico → ~2,5 ATP. El FADH₂ está unido covalentemente a la succinato deshidrogenasa (Complejo II) y transfiere electrones directamente a la ubiquinona, eludiendo completamente el Complejo I — no se bombean protones en ese paso, por lo que se producen solo ~1,5 ATP. El punto de entrada en la cadena respiratoria es la diferencia decisiva entre los dos portadores.","explainImg":""},
-    {"id":"tca015","topic":"Ciclo de Krebs","text":"La succinil-CoA sintetasa genera un GTP por vuelta del ciclo de Krebs humano. ¿Cuál es el destino metabólico primario de este GTP mitocondrial?","options":["Hidrolizado por GTPasa mitocondrial; energía fosforila AMP a ADP en inusual transfosforilación en dos pasos","Se acumula en la matriz como señal reguladora que activa cinasas GTP-dependientes para dinámica organular","Exportado por el translocador de nucleótidos de adenina para activar proteínas de señalización citosólicas","Convertido a ATP por nucleósido difosfato cinasa: GTP + ADP → GDP + ATP","Usado por ATP sintasa como sustrato alternativo para producir ATP sin gradiente de protones"],"correct":3,"explain":"La NDP cinasa cataliza la reacción libremente reversible GTP + ADP ⇌ GDP + ATP, haciendo que el GTP derivado del ciclo sea energéticamente equivalente a un ATP. El GTP también puede impulsar directamente reacciones citosólicas — en particular la gluconeogénesis, donde la PEPCK usa GTP para convertir OAA en fosfoenolpiruvato —, subrayando su doble papel como moneda energética y señal metabólica.","explainImg":""},
-    {"id":"rc001","topic":"Cadena Respiratoria y OXFOS","text":"¿Qué complejo de la cadena respiratoria acepta electrones del ubiquinol (QH₂) y los transfiere al citocromo c?","options":["Complejo I","Complejo II","Complejo IV","Complejo V","Complejo III (complejo bc1)"],"correct":4,"explain":"El Complejo III (ubiquinol-citocromo c oxidorreductasa) acepta electrones del ubiquinol y los transfiere al citocromo c mediante el mecanismo del ciclo Q, bombeando simultáneamente 4 protones por 2 electrones a través de la membrana mitocondrial interna.","explainImg":""},
-    {"id":"rc002","topic":"Cadena Respiratoria y OXFOS","text":"El gradiente de protones generado por la cadena respiratoria es utilizado por la ATP sintasa (Complejo V) mediante:","options":["Fosforilación a nivel de sustrato","Quimiosmosis (hipótesis de Mitchell)","Transferencia directa de electrones al ADP","Descarboxilación oxidativa","Transfosforilación desde GTP"],"correct":1,"explain":"Según la hipótesis quimiosmótica de Mitchell, la fuerza protón-motriz (gradiente electroquímico) generada por la cadena respiratoria impulsa protones de vuelta a través de la subunidad F₀ de la ATP sintasa. Este flujo protónico impulsa la rotación del anillo c, causando cambios conformacionales en la subunidad F₁ que sintetizan ATP.","explainImg":""},
-    {"id":"rc003","topic":"Cadena Respiratoria y OXFOS","text":"El cianuro es un potente inhibidor de la respiración celular porque bloquea:","options":["Complejo I","Complejo III","ATP sintasa","Complejo IV (citocromo c oxidasa)","Complejo II"],"correct":3,"explain":"El cianuro (CN⁻) se une a la forma Fe³⁺ del citocromo a3 en el Complejo IV, impidiendo la transferencia de electrones al O₂. Esto detiene toda la cadena de transporte de electrones, colapsa el gradiente protónico y detiene la síntesis de ATP. Los tejidos con mayor demanda de O₂ (cerebro, corazón) son los más vulnerables.","explainImg":""},
-    {"id":"rc004","topic":"Cadena Respiratoria y OXFOS","text":"¿Cuántas moléculas de ATP se producen por NADH oxidado en la fosforilación oxidativa (P/O ~2,5)?","options":["1,0","1,5","2,5","3,5","2,0"],"correct":2,"explain":"La estimación moderna del cociente P/O para NADH es ~2,5 ATP por NADH (no el clásico '3' de los textos antiguos). Esto tiene en cuenta la estequiometría real H⁺/ATP de la ATP sintasa (~8 protones por 3 ATP) y el costo energético del transporte ATP/ADP.","explainImg":""},
-    {"id":"rc005","topic":"Cadena Respiratoria y OXFOS","text":"Las proteínas desacoplantes (UCPs) en el tejido adiposo pardo disipan el gradiente protónico como:","options":["Calor (termogénesis)","ATP","NADH","CO₂","Trabajo mecánico"],"correct":0,"explain":"UCP1 (termogenina) permite que los protones se filtren de vuelta a través de la membrana mitocondrial interna sin impulsar la síntesis de ATP, disipando la fuerza protón-motriz como calor. Esta es la base de la termogénesis sin temblor en recién nacidos y mamíferos adaptados al frío.","explainImg":""},
-    {"id":"rc006","topic":"Cadena Respiratoria y OXFOS","text":"¿Qué portador móvil de electrones transporta los electrones entre el Complejo I/II y el Complejo III?","options":["Citocromo c","Ubiquinona (Coenzima Q)","FAD","FMN","Grupos hierro-azufre"],"correct":1,"explain":"La ubiquinona (CoQ) es una molécula liposoluble que difunde dentro de la membrana mitocondrial interna, recogiendo electrones del Complejo I y II (como QH₂) y entregándolos al Complejo III. El citocromo c es el portador soluble en agua entre el Complejo III y IV.","explainImg":""},
-    {"id":"rc007","topic":"Cadena Respiratoria y OXFOS","text":"La rotenona, usada como pesticida y veneno para peces, inhibe la cadena respiratoria bloqueando:","options":["Complejo II","Complejo III","Complejo I (NADH deshidrogenasa)","Complejo IV","Complejo V (ATP sintasa)"],"correct":2,"explain":"La rotenona bloquea la transferencia de electrones desde los grupos hierro-azufre del Complejo I a la ubiquinona. Inhibe la oxidación de NADH sin afectar la oxidación de succinato (Complejo II). La rotenona también se usa experimentalmente para modelar la patología del Parkinson.","explainImg":""},
-    {"id":"rc008","topic":"Cadena Respiratoria y OXFOS","text":"El aceptor final de electrones en la cadena respiratoria mitocondrial es:","options":["NAD⁺","Ubiquinona","Citocromo c","Oxígeno molecular (O₂)","Dióxido de carbono (CO₂)"],"correct":3,"explain":"El oxígeno molecular (O₂) es el aceptor terminal de electrones. El Complejo IV (citocromo c oxidasa) transfiere electrones del citocromo c al O₂, reduciéndolo a agua. Este paso irreversible impulsa toda la cadena de transporte de electrones hacia adelante.","explainImg":""},
-    {"id":"rc009","topic":"Cadena Respiratoria y OXFOS","text":"La oligomicina inhibe la síntesis de ATP bloqueando:","options":["Citocromo c oxidasa","El canal protónico F₀ de la ATP sintasa","Reducción de ubiquinona","Complejo I","Translocasa de nucleótidos de adenina"],"correct":1,"explain":"La oligomicina se une a la subunidad F₀ de la ATP sintasa, bloqueando el canal protónico. Esto impide la re-entrada de protones y la síntesis de ATP. Como el gradiente protónico no puede disiparse, también inhibe secundariamente la cadena respiratoria.","explainImg":""},
-    {"id":"rc010","topic":"Cadena Respiratoria y OXFOS","text":"¿Cuál de los siguientes describe correctamente el cociente P/O para FADH₂?","options":["~3,0","~2,5","~1,5","~1,0","~2,0"],"correct":2,"explain":"El FADH₂ (generado en succinato deshidrogenasa) dona electrones a la ubiquinona, omitiendo el Complejo I. Dado que el Complejo I bombea ~4 protones, omitirlo reduce la contribución al gradiente protónico. El cociente P/O para FADH₂ es aproximadamente 1,5 ATP.","explainImg":""},
-    {"id":"rc011","topic":"Cadena Respiratoria y OXFOS","text":"El NADH citosólico de la glucólisis no puede cruzar la membrana mitocondrial interna. ¿Qué lanzadera predomina en corazón e hígado, preservando el rendimiento completo de ~2,5 ATP?","options":["Lanzadera malato-aspartato — regenera NADH en la matriz; ~2,5 ATP","Lanzadera glicerol-3-fosfato — alimenta electrones al Complejo II; solo ~1,5 ATP","Lanzadera del citrato — exporta equivalentes de acetil-CoA para síntesis lipídica citosólica","Lanzadera de carnitina — transporta acil-CoA de ácidos grasos a través de la membrana interna","Transportador de piruvato — importa piruvato a la matriz; sin transferencia de NADH"],"correct":0,"explain":"La lanzadera malato-aspartato usa malato deshidrogenasa y aspartato aminotransferasa en ambos lados de la membrana para canalizar el poder reductor equivalente al NADH citosólico como NADH hacia la matriz, entrando en el Complejo I (~2,5 ATP). La lanzadera glicerol-3-fosfato es más rápida pero menos eficiente (~1,5 ATP, entrada en Complejo II) y predomina en cerebro y músculo esquelético. Los transportadores de citrato, carnitina y piruvato sirven funciones de transporte completamente diferentes.","explainImg":""},
-    {"id":"rc012","topic":"Cadena Respiratoria y OXFOS","text":"El ciclo Q en el Complejo III resulta en el bombeo neto de 4 H⁺ por 2 electrones. ¿Qué característica causa directamente esta amplificación?","options":["Ambos electrones del QH₂ evitan el centro Rieske y fluyen directamente al citocromo b","Rieske acepta ambos electrones del QH₂ y los dona a dos moléculas de citocromo c","El QH₂ primero reduce FMN en la matriz antes de que los electrones alcancen el citocromo c","Los cambios conformacionales del citocromo b impulsan el bombeo de protones sin semiquinona","La oxidación del QH₂ se bifurca: un electrón al citocromo c vía Rieske, uno a la semiquinona del sitio Qi"],"correct":4,"explain":"En el sitio Qo, el QH₂ pierde sus dos electrones por caminos separados: uno viaja vía el clúster Rieske [2Fe-2S] y el citocromo c₁ al citocromo c (cadena de alto potencial), mientras el otro pasa por el citocromo b (bL → bH) a una ubiquinona en el sitio Qi, generando una semiquinona. Una segunda oxidación de QH₂ completa esto a QH₂ en el sitio Qi, liberando 2 H⁺ a la matriz. Esta bifurcación duplica efectivamente la translocación de protones por par de electrones que alcanza el citocromo c, produciendo 4 H⁺/2e⁻ netos.","explainImg":""},
-    {"id":"rc013","topic":"Cadena Respiratoria y OXFOS","text":"¿Cuál es el papel específico de la proteína Rieske hierro-azufre en el Complejo III?","options":["Acepta electrones del QH₂ en el sitio Qo y los transfiere al citocromo c₁","Acepta electrones del NADH en la cara de la matriz y los transfiere vía FMN a la ubiquinona","Acepta electrones del citocromo c y los transfiere a los centros de cobre del Complejo IV","Dona electrones directamente al O₂, generando superóxido en el sitio Qo","Transfiere electrones de la succinato deshidrogenasa a la ubiquinona en el sitio Qi"],"correct":0,"explain":"La proteína Rieske contiene un clúster [2Fe-2S] con un potencial de reducción inusualmente alto (~+0,28 V), situándolo entre el ubiquinol y el citocromo c₁ en la rama de alto potencial del ciclo Q. En el sitio Qo acepta uno de los dos electrones del QH₂ y lo dona al citocromo c₁, que luego reduce el citocromo c soluble. El movimiento físico del dominio cabeza de Rieske entre el citocromo b y el citocromo c₁ es esencial para la transferencia bifurcada de electrones.","explainImg":""},
-    {"id":"rc014","topic":"Cadena Respiratoria y OXFOS","text":"El FMN es el aceptor primario de electrones del NADH en el Complejo I. ¿Cuál de las siguientes afirmaciones describe correctamente su función?","options":["Acepta electrones del ubiquinol; los transfiere de vuelta al NAD⁺ en la matriz","Actúa como sumidero final de electrones en el Complejo I; permanece reducido cuando la FPM es baja","Acepta electrones del FADH₂ de la succinato deshidrogenasa; los transmite a los clústeres Fe-S","Acepta 2e⁻ del NADH de una vez; los pasa individualmente a través de clústeres Fe-S a la CoQ","Bombea protones de la matriz al EIM directamente; sin participación de clústeres hierro-azufre"],"correct":3,"explain":"El FMN es un aceptor de dos electrones que recibe ambos electrones del NADH simultáneamente, formando FMNH₂. Luego los re-dona uno a la vez a una serie de clústeres hierro-azufre (N1a, N3, N1b, N4, N5, N6a/b, N2), que son portadores obligados de un solo electrón. El flujo de electrones a través de esta cadena está acoplado a cambios conformacionales que bombean 4 H⁺ por NADH. Esta conversión de dos a un electrón es el papel definitorio del FMN en el Complejo I.","explainImg":""},
-    {"id":"rc015","topic":"Cadena Respiratoria y OXFOS","text":"En el mecanismo de cambio de unión de Boyer, la fuerza protón-motriz no forma directamente el enlace ATP. ¿Cuál es su papel real?","options":["Dona un protón directamente al β-fosfato del ADP para impulsar la formación del enlace","Abre un canal en F₁ permitiendo la difusión libre de ATP y ADP a través de la membrana interna","Impulsa la transferencia de electrones en F₁ que activa el ADP hacia el fosfato inorgánico","Genera NADPH en la matriz para suministrar energía para la formación del enlace ATP","Impulsa la rotación del anillo c, girando la subunidad γ; los cambios conformacionales de la subunidad β liberan el ATP unido"],"correct":4,"explain":"El ATP se forma espontáneamente (ΔG ≈ 0) en el sitio catalítico estrecho de F₁ — la formación del enlace en sí no requiere energía externa. La fuerza protón-motriz impulsa la rotación del anillo c de F₀, que gira la subunidad γ dentro de F₁, ciclando cada una de las tres subunidades β a través de conformaciones abierta → suelta → estrecha. El paso que requiere energía es la transición de estrecha a abierta, que libera el ATP recién formado. Esta catálisis rotatoria fue confirmada por Boyer y Walker, Premio Nobel 1997.","explainImg":""},
-    {"id":"rc016","topic":"Cadena Respiratoria y OXFOS","text":"¿Cuál es la fuerza termodinámica impulsora que mueve los electrones a lo largo de la cadena respiratoria desde el NADH hasta el O₂?","options":["El gradiente de concentración de NADH/NAD⁺ a través de la membrana interna","El ΔE°' entre NADH/NAD⁺ (−0,32 V) y O₂/H₂O (+0,82 V)","La rotación mecánica de la ATP sintasa que arrastra electrones hacia el Complejo IV","El gradiente de pH transmembranal que acidifica el EIM para impulsar la transferencia de electrones","La alta concentración de citocromo c en el EIM actuando como sumidero permanente de electrones"],"correct":1,"explain":"El flujo de electrones en la cadena respiratoria está impulsado por la diferencia en los potenciales de reducción estándar. El par NADH/NAD⁺ tiene E°' = −0,32 V; el par O₂/H₂O tiene E°' = +0,82 V, dando ΔE°' = +1,14 V en total. Mediante ΔG°' = −nFΔE°', esto corresponde a ~−220 kJ por mol de pares de electrones — un gran cambio de energía libre espontáneo que impulsa los electrones desde el Complejo I hasta el Complejo IV, acoplándose al bombeo de protones en cada paso.","explainImg":""},
-    {"id":"rc017","topic":"Cadena Respiratoria y OXFOS","text":"En sentido estricto, ¿cuál es el producto directo de la cadena respiratoria antes de que actúe la ATP sintasa?","options":["ATP — mediante fosforilación a nivel de sustrato en cada paso de transferencia de electrones","NADPH — regenerado por la transhydrogenasa mitocondrial usando la energía del flujo de electrones","Un gradiente electroquímico de protones (fuerza protón-motriz) a través de la membrana interna","Calor — energía térmica liberada cuando los electrones caen a través de los complejos","Citocromo c reducido — se acumula en el EIM cuando la ATP sintasa está inhibida"],"correct":2,"explain":"La única salida directa de la cadena respiratoria es la fuerza protón-motriz (FPM), acumulada bombeando H⁺ desde la matriz al EIM en los Complejos I, III y IV. La FPM tiene dos componentes: potencial de membrana (ΔΨ ≈ 150–180 mV, el término dominante en mitocondrias) y gradiente de pH (ΔpH ≈ 0,5–1 unidad). La ATP sintasa luego consume esta FPM para impulsar la fosforilación. Crucialmente, la FPM también puede impulsar el transporte activo y la producción de calor vía UCPs — la síntesis de ATP es secundaria.","explainImg":""},
-    {"id":"fao001","topic":"Oxidación de Ácidos Grasos","text":"¿Dónde ocurre principalmente la β-oxidación de ácidos grasos de cadena larga?","options":["Citosol","Retículo endoplásmico","Matriz mitocondrial","Peroxisoma","Lisosoma"],"correct":2,"explain":"La β-oxidación de ácidos grasos de cadena larga ocurre en la matriz mitocondrial. Los ácidos grasos se activan a acil-CoA en el citosol, se transportan a través de la membrana mitocondrial interna mediante el sistema de lanzadera de carnitina y luego sufren sucesivas rondas de β-oxidación.","explainImg":""},
-    {"id":"fao002","topic":"Oxidación de Ácidos Grasos","text":"¿Qué sistema de transporte es necesario para mover grupos acilo de cadena larga hacia la matriz mitocondrial?","options":["Lanzadera malato-aspartato","Lanzadera de carnitina (CPT-I y CPT-II)","Translocasa de acetil-CoA","Translocasa ATP-ADP","Sistema de transporte de citrato"],"correct":1,"explain":"El acil-CoA de cadena larga no puede cruzar directamente la membrana mitocondrial interna. CPT-I (membrana externa) convierte el acil-CoA en acilcarnitina, que es transportado por la translocasa carnitina-acilcarnitina y reconvertido a acil-CoA por CPT-II (membrana interna).","explainImg":""},
-    {"id":"fao003","topic":"Oxidación de Ácidos Grasos","text":"¿Cuántas rondas de β-oxidación se necesitan para oxidar completamente el palmitoil-CoA (C16:0)?","options":["6","7","8","9","5"],"correct":1,"explain":"El palmitoil-CoA (16 carbonos) requiere 7 rondas de β-oxidación para producir 8 moléculas de acetil-CoA. Cada ronda acorta la cadena en 2 carbonos y produce 1 FADH₂ + 1 NADH + 1 acetil-CoA.","explainImg":""},
-    {"id":"fao004","topic":"Oxidación de Ácidos Grasos","text":"¿Qué enzima es inhibida por malonil-CoA, regulando así la entrada de ácidos grasos en las mitocondrias?","options":["CPT-II","Acil-CoA sintetasa","CPT-I","Translocasa carnitina-acilcarnitina","β-Hidroxiacil-CoA deshidrogenasa"],"correct":2,"explain":"CPT-I es inhibida alostéricamente por malonil-CoA, el primer intermediario comprometido de la síntesis de ácidos grasos. Esto asegura que síntesis y oxidación de ácidos grasos no estén simultáneamente activas: cuando el malonil-CoA es alto, CPT-I es inhibida.","explainImg":""},
-    {"id":"fao005","topic":"Oxidación de Ácidos Grasos","text":"¿Qué productos se generan en cada ciclo de β-oxidación?","options":["1 NADH + 1 NADPH + 1 acetil-CoA","1 FADH₂ + 1 NADH + 1 acetil-CoA","2 FADH₂ + 1 acetil-CoA","1 FADH₂ + 1 NADH + 1 succinil-CoA","2 NADH + 1 acetil-CoA"],"correct":1,"explain":"Cada ronda de β-oxidación produce: 1 FADH₂ (paso acil-CoA deshidrogenasa), 1 NADH (paso L-3-hidroxiacil-CoA deshidrogenasa) y 1 acetil-CoA (paso tiolasa). Estos entran respectivamente en la cadena respiratoria y el ciclo de Krebs.","explainImg":""},
-    {"id":"fao006","topic":"Oxidación de Ácidos Grasos","text":"Durante la β-oxidación de ácidos grasos insaturados, ¿qué enzima adicional se requiere para dobles enlaces en configuración cis?","options":["Enoil-CoA hidratasa","2,4-Dienoil-CoA reductasa","Enoil-CoA isomerasa","3-Hidroxiacil-CoA epimerasa","Acil-CoA deshidrogenasa"],"correct":2,"explain":"Los ácidos grasos insaturados con dobles enlaces en carbonos impares (cis-Δ³) requieren enoil-CoA isomerasa para convertir cis-Δ³-enoil-CoA en el sustrato normal de β-oxidación trans-Δ²-enoil-CoA. Los dobles enlaces en carbonos pares requieren 2,4-dienoil-CoA reductasa.","explainImg":""},
-    {"id":"fao007","topic":"Oxidación de Ácidos Grasos","text":"¿En qué orgánulo ocurre principalmente la β-oxidación de ácidos grasos de cadena muy larga (>C22)?","options":["Mitocondrias","RE liso","Peroxisomas","Lisosomas","Núcleo"],"correct":2,"explain":"Los ácidos grasos de cadena muy larga se acortan primero en peroxisomas por β-oxidación a ácidos grasos de cadena media, que luego se transfieren a mitocondrias para oxidación completa. La β-oxidación peroxisomal produce H₂O₂ (detoxificado por catalasa) en lugar de bombear protones.","explainImg":""},
-    {"id":"fao008","topic":"Oxidación de Ácidos Grasos","text":"¿Cuál es el rendimiento neto de ATP de la oxidación completa de una molécula de palmitoil-CoA (C16:0)?","options":["106 ATP","100 ATP","108 ATP","129 ATP","80 ATP"],"correct":0,"explain":"La oxidación de palmitoil-CoA rinde 7 rondas × (1 FADH₂ + 1 NADH) + 8 acetil-CoA. Usando cocientes P/O modernos: 7×1,5 + 7×2,5 + 8×10 = 10,5 + 17,5 + 80 = 108, menos 2 por activación = 106 ATP equivalentes.","explainImg":""},
-    {"id":"fao009","topic":"Oxidación de Ácidos Grasos","text":"La deficiencia de carnitina conduce a deterioro de la oxidación de ácidos grasos. ¿Qué síntoma es más esperable?","options":["Hiperglucemia","Hiperlipidemia con debilidad muscular e hipoglucemia","Cetoacidosis","Amoniaco elevado","Alcalosis metabólica"],"correct":1,"explain":"Sin carnitina, los ácidos grasos de cadena larga no pueden entrar a las mitocondrias para β-oxidación. Esto causa acumulación de ácidos grasos (hiperlipidemia), debilidad muscular (suministro energético deteriorado) e hipoglucemia (incapacidad de ahorrar glucosa mediante oxidación de grasa).","explainImg":""},
-    {"id":"fao010","topic":"Oxidación de Ácidos Grasos","text":"La deficiencia de MCAD (acil-CoA deshidrogenasa de cadena media) es peligrosa en el ayuno porque:","options":["El exceso de cuerpos cetónicos causa acidosis","Los ácidos grasos no pueden oxidarse para energía, llevando a hipoglucemia","El catabolismo de aminoácidos está deteriorado","Las reservas de glucógeno no pueden movilizarse","La gluconeogénesis es inhibida por malonil-CoA"],"correct":1,"explain":"La deficiencia de MCAD impide la oxidación de ácidos grasos de cadena media. Durante el ayuno, cuando la glucosa es limitada y la oxidación de ácidos grasos es crítica, esto lleva a hipoglucemia grave. La cetogénesis también está deteriorada porque el suministro de acetil-CoA de la β-oxidación está reducido.","explainImg":""},
-    {"id":"fab001","topic":"Biosíntesis de Ácidos Grasos","text":"¿Dónde ocurre principalmente la síntesis de ácidos grasos en la célula?","options":["Matriz mitocondrial","Citosol","Retículo endoplásmico","Núcleo","Peroxisoma"],"correct":1,"explain":"La síntesis de ácidos grasos ocurre en el citosol, catalizada por la ácido graso sintasa (FAS). Los bloques de construcción (acetil-CoA y malonil-CoA) deben exportarse de las mitocondrias como citrato, luego escindidos por la ATP-citrato liasa en el citosol.","explainImg":""},
-    {"id":"fab002","topic":"Biosíntesis de Ácidos Grasos","text":"¿Cuál es el paso comprometido de la biosíntesis de ácidos grasos?","options":["Acetil-CoA → malonil-CoA (acetil-CoA carboxilasa)","Malonil-CoA → palmitato (FAS)","Citrato → acetil-CoA (ATP-citrato liasa)","Palmitato → palmitoil-CoA","Acetil-CoA → acetoacetil-CoA"],"correct":0,"explain":"La acetil-CoA carboxilasa (ACC) cataliza la carboxilación dependiente de ATP de acetil-CoA a malonil-CoA. Este es el paso comprometido y limitante de velocidad de la síntesis de ácidos grasos. La ACC es activada por citrato e inhibida por palmitoil-CoA y fosforilación por AMPK.","explainImg":""},
-    {"id":"fab003","topic":"Biosíntesis de Ácidos Grasos","text":"¿Qué cofactor reductor requiere la ácido graso sintasa para los pasos de reducción?","options":["NADH","NADPH","FADH₂","ATP","CoASH"],"correct":1,"explain":"La ácido graso sintasa requiere NADPH para los dos pasos de reducción por ciclo de elongación (cetorreducción y enoilreducción). El NADPH es suministrado principalmente por la vía de las pentosas fosfato y la reacción de la enzima málica.","explainImg":""},
-    {"id":"fab004","topic":"Biosíntesis de Ácidos Grasos","text":"¿Cuál es el producto primario liberado por la ácido graso sintasa (FAS) en mamíferos?","options":["Estearato (C18:0)","Palmitato (C16:0)","Miristato (C14:0)","Araquidonato (C20:4)","Oleato (C18:1)"],"correct":1,"explain":"La FAS de mamíferos libera palmitato (C16:0) como producto principal. La elongación adicional a ácidos grasos de cadena más larga y la desaturación ocurren en el retículo endoplásmico por elongasas y desaturasas específicas.","explainImg":""},
-    {"id":"fab005","topic":"Biosíntesis de Ácidos Grasos","text":"¿Cuántas moléculas de malonil-CoA se necesitan para sintetizar una molécula de palmitato a partir de acetil-CoA?","options":["6","7","8","14","16"],"correct":1,"explain":"El palmitato (C16:0) se sintetiza a partir de 1 unidad iniciadora de acetil-CoA y 7 unidades extensoras de malonil-CoA. Cada malonil-CoA añade 2 carbonos (tras descarboxilación), contribuyendo 14 carbonos; el acetil-CoA iniciador añade 2 más, para un total de 16.","explainImg":""},
-    {"id":"fab006","topic":"Biosíntesis de Ácidos Grasos","text":"La acetil-CoA carboxilasa (ACC) es activada alostéricamente por:","options":["Palmitoil-CoA","AMP","Citrato","Glucagón","Epinefrina"],"correct":2,"explain":"El citrato activa alostéricamente la ACC promoviendo su polimerización a la forma filamentosa activa. El citrato elevado señaliza abundancia de acetil-CoA y energía, indicando condiciones favorables para síntesis de grasa. Por el contrario, el palmitoil-CoA (producto final) y la fosforilación por AMPK inhiben la ACC.","explainImg":""},
-    {"id":"fab007","topic":"Biosíntesis de Ácidos Grasos","text":"¿Qué enzima introduce el primer doble enlace en ácidos grasos saturados en mamíferos, típicamente en la posición Δ9?","options":["Elongasa de ácidos grasos","Estearoil-CoA desaturasa (SCD, Δ9-desaturasa)","Acetil-CoA carboxilasa","Fosfolipasa A2","FADS2 (Δ6-desaturasa)"],"correct":1,"explain":"La estearoil-CoA desaturasa (SCD) introduce un doble enlace cis en la posición Δ9, convirtiendo estearoil-CoA (C18:0) en oleoil-CoA (C18:1, Δ9). Los mamíferos carecen de Δ12 y Δ15 desaturasos, haciendo esenciales el ácido linoleico (Δ9,12) y α-linolénico (Δ9,12,15).","explainImg":""},
-    {"id":"fab008","topic":"Biosíntesis de Ácidos Grasos","text":"La proteína transportadora de acilos (ACP) en la FAS retiene intermediarios mediante qué tipo de enlace:","options":["Enlace éster a serina","Enlace fosfodiéster","Enlace tioéster a un grupo fosfopanteteína","Enlace amida a lisina","Enlace anhídrido"],"correct":2,"explain":"Las cadenas de ácidos grasos en crecimiento están unidas covalentemente a la ACP mediante un enlace tioéster al grupo fosfopanteteína (derivado de CoA). Este enlace tioéster tiene alto potencial de transferencia de grupo y es esencial para las reacciones de condensación catalizada por FAS.","explainImg":""},
-    {"id":"fab009","topic":"Biosíntesis de Ácidos Grasos","text":"La insulina estimula la síntesis de ácidos grasos principalmente mediante:","options":["Activación directa de FAS","Activación de AMPK, que fosforila ACC","Activación de una fosfatasa que desfosforila y activa ACC","Aumento de la degradación de malonil-CoA","Inhibición de la exportación de citrato de mitocondrias"],"correct":2,"explain":"La insulina activa la proteína fosfatasa 2A, que desfosforila y activa la ACC. La insulina también induce la transcripción de los genes FAS y ACC, aumenta la captación de glucosa (proporcionando acetil-CoA y NADPH) e inhibe AMPK.","explainImg":""},
-    {"id":"fab010","topic":"Biosíntesis de Ácidos Grasos","text":"¿Cuál de los siguientes describe mejor por qué el ácido linoleico (18:2, Δ9,12) es un ácido graso esencial?","options":["Los humanos no pueden sintetizar ácidos grasos más largos de C16","Los humanos carecen de la Δ12-desaturasa para introducir el doble enlace Δ12","El ácido linoleico no puede activarse a acil-CoA","La β-oxidación del ácido linoleico es tóxica","El ácido linoleico solo se encuentra en grasas animales"],"correct":1,"explain":"Los mamíferos tienen desaturasas para las posiciones Δ9, Δ6, Δ5 y Δ4, pero carecen de Δ12 y Δ15 desaturasas. Por lo tanto, el ácido linoleico (18:2 Δ9,12) y el ácido α-linolénico (18:3 Δ9,12,15) deben obtenerse de la dieta y se clasifican como ácidos grasos esenciales.","explainImg":""},
-    {"id":"aac001","topic":"Catabolismo de Aminoácidos","text":"¿Cuál es el primer paso en el catabolismo de la mayoría de los aminoácidos?","options":["Descarboxilación oxidativa","Transaminación o desaminación oxidativa","Fosforilación","Reducción","Hidroxilación"],"correct":1,"explain":"El primer paso generalmente es la eliminación del grupo amino, ya sea por transaminación (transferencia al α-cetoglutarato, produciendo glutamato) o desaminación oxidativa (glutamato deshidrogenasa, liberando NH₄⁺). El α-cetoácido resultante entra en vías metabólicas centrales.","explainImg":""},
-    {"id":"aac002","topic":"Catabolismo de Aminoácidos","text":"El piridoxal fosfato (PLP) es el cofactor de qué tipo de enzima central para el catabolismo de aminoácidos:","options":["Oxidasas","Aminotransferasas (transaminasas)","Carboxilasas","Cinasas","Reductasas"],"correct":1,"explain":"El PLP (derivado de vitamina B6) forma una base de Schiff con aminoácidos en el sitio activo de las aminotransferasas, permitiendo la transferencia del grupo amino al α-cetoglutarato. El PLP también es requerido por descarboxilasas, racemasa y deshidratasas de serina/treonina.","explainImg":""},
-    {"id":"aac003","topic":"Catabolismo de Aminoácidos","text":"La fenilcetonuria (PKU) resulta de deficiencia de fenilalanina hidroxilasa. ¿Qué se acumula como resultado?","options":["Tirosina","Fenilalanina y fenilpiruvato","Homogentisato","Fumarilacetoacetato","Precursores de melanina"],"correct":1,"explain":"Sin fenilalanina hidroxilasa (que convierte fenilalanina en tirosina), la fenilalanina se acumula y se deriva a fenilpiruvato, fenilacetato y fenillactato (colectivamente 'fenilcetonas'). Estas son neurotóxicas y causan discapacidad intelectual si no se tratan.","explainImg":""},
-    {"id":"aac004","topic":"Catabolismo de Aminoácidos","text":"La enfermedad de la orina con olor a jarabe de arce es causada por deficiencia del complejo α-cetoácido deshidrogenasa de cadena ramificada, que afecta el catabolismo de:","options":["Fenilalanina, tirosina, triptófano","Leucina, isoleucina, valina","Lisina, arginina, histidina","Metionina, cisteína, serina","Aspartato, glutamato, alanina"],"correct":1,"explain":"El complejo BCKDH descarboxila oxidativamente los α-cetoácidos derivados de leucina, isoleucina y valina. La deficiencia causa acumulación de estos cetoácidos, que dan a la orina olor dulce a jarabe de arce y causan daño neurológico grave.","explainImg":""},
-    {"id":"aac005","topic":"Catabolismo de Aminoácidos","text":"¿Qué aminoácido es el principal transportador de nitrógeno desde tejidos periféricos al hígado?","options":["Glutamina","Alanina","Glicina","Aspartato","Serina"],"correct":1,"explain":"La alanina es el principal transportador de nitrógeno a través del ciclo glucosa-alanina: el músculo transamina piruvato con el grupo amino del catabolismo de aminoácidos para formar alanina, que viaja al hígado. Allí, la alanina aminotransferasa regenera piruvato (para gluconeogénesis) y glutamato (entra en el ciclo de la urea).","explainImg":""},
-    {"id":"aac006","topic":"Catabolismo de Aminoácidos","text":"La homocistinuria está asociada con deficiencia de cistationina β-sintasa. ¿Qué vía metabólica está principalmente afectada?","options":["Degradación de fenilalanina","Catabolismo de metionina (vía de transulfuración)","Catabolismo de triptófano","Catabolismo de histidina","Degradación de treonina"],"correct":1,"explain":"La cistationina β-sintasa convierte homocisteína + serina → cistationina en la vía de transulfuración. La deficiencia causa acumulación de homocisteína, con enfermedad cardiovascular, luxación del cristalino y discapacidad intelectual. Se usan vitamina B6, B12 y folato en el tratamiento.","explainImg":""},
-    {"id":"aac007","topic":"Catabolismo de Aminoácidos","text":"Los aminoácidos glucogénicos pueden convertirse en glucosa mediante gluconeogénesis. ¿Cuál de los siguientes es puramente glucogénico?","options":["Leucina","Lisina","Alanina","Fenilalanina","Isoleucina"],"correct":2,"explain":"La alanina es puramente glucogénica — se transamina a piruvato, que puede convertirse en OAA (por piruvato carboxilasa) y luego en glucosa mediante gluconeogénesis. La leucina y lisina son puramente cetogénicas; fenilalanina e isoleucina son tanto glucogénicas como cetogénicas.","explainImg":""},
-    {"id":"aac008","topic":"Catabolismo de Aminoácidos","text":"El catabolismo de fenilalanina y tirosina produce en última instancia qué precursores del ciclo de Krebs y cuerpos cetónicos:","options":["Oxalacetato y malato","Fumarato y acetoacetato","Succinato y propionil-CoA","α-Cetoglutarato y acetil-CoA","Citrato y NADH"],"correct":1,"explain":"La fenilalanina primero se hidroxila a tirosina. La degradación de tirosina procede a través de homogentisato → maleilacetoacetato → fumarilacetoacetato → fumarato + acetoacetato. Esto hace a fenilalanina/tirosina tanto glucogénica (fumarato → TCA → gluconeogénesis) como cetogénica (acetoacetato).","explainImg":""},
-    {"id":"aac009","topic":"Catabolismo de Aminoácidos","text":"¿Qué reacción elimina el grupo amino del glutamato, liberando amonio libre?","options":["Transaminación por AST","Desaminación oxidativa por glutamato deshidrogenasa","Descarboxilación por glutamato descarboxilasa","Reducción por glutamato reductasa","Fosforilación por glutamato cinasa"],"correct":1,"explain":"La glutamato deshidrogenasa (en la matriz mitocondrial) cataliza: glutamato + NAD⁺ → α-cetoglutarato + NADH + NH₄⁺. Esta es la principal ruta para liberar amoniaco libre en el hígado para la síntesis de urea. La enzima puede usar NAD⁺ o NADP⁺ y es regulada por ATP, GTP (inhiben) y ADP, GDP (activan).","explainImg":""},
-    {"id":"aac010","topic":"Catabolismo de Aminoácidos","text":"La alcaptonuria resulta de un defecto en la homogentisato oxidasa. ¿Qué aminoácidos no pueden catabolizarse normalmente?","options":["Metionina y cisteína","Fenilalanina y tirosina","Triptófano e histidina","Leucina e isoleucina","Lisina y arginina"],"correct":1,"explain":"La homogentisato oxidasa cataliza un paso en la degradación de fenilalanina y tirosina. Su deficiencia causa acumulación de ácido homogentísico, que se excreta en orina (se oscurece al contacto con el aire) y se deposita en tejido conectivo (ocronosis), causando artritis.","explainImg":""},
-    {"id":"uc001","topic":"Ciclo de la Urea","text":"¿En qué dos compartimentos del hepatocito opera el ciclo de la urea?","options":["Citosol y lisosoma","Matriz mitocondrial y citosol","Retículo endoplásmico y citosol","Núcleo y citosol","Peroxisoma y citosol"],"correct":1,"explain":"Las primeras dos reacciones del ciclo de la urea ocurren en la matriz mitocondrial (CPS-I y OTC), mientras que las tres reacciones restantes (ASS, ASL, arginasa) ocurren en el citosol. La citrulina es exportada de las mitocondrias mediante un transportador específico para continuar el ciclo.","explainImg":""},
-    {"id":"uc002","topic":"Ciclo de la Urea","text":"¿Qué enzima cataliza el paso limitante de velocidad del ciclo de la urea?","options":["Ornitina transcarbamilasa (OTC)","Carbamil fosfato sintetasa I (CPS-I)","Argininosuccinato sintetasa","Argininosuccinato liasa","Arginasa"],"correct":1,"explain":"CPS-I es la enzima limitante del ciclo de la urea. Condensa NH₃ + CO₂ + 2 ATP → carbamil fosfato. Requiere N-acetilglutamato (NAG) como activador alostérico, que se sintetiza a partir de acetil-CoA + glutamato cuando la carga de aminoácidos es alta.","explainImg":""},
-    {"id":"uc003","topic":"Ciclo de la Urea","text":"El N-acetilglutamato (NAG) activa la CPS-I. El NAG se sintetiza cuando aumenta el catabolismo de aminoácidos, señalizado por niveles elevados de:","options":["Urea","Glutamina","Acetil-CoA y glutamato","ATP","Arginina"],"correct":2,"explain":"La NAG sintasa es activada por arginina y usa acetil-CoA + glutamato como sustratos. Cuando se catabolizan grandes cantidades de aminoácidos, se acumulan glutamato (de transaminación) y acetil-CoA, estimulando la síntesis de NAG y así activando CPS-I.","explainImg":""},
-    {"id":"uc004","topic":"Ciclo de la Urea","text":"La deficiencia de OTC es el defecto del ciclo de la urea más común. Su herencia ligada al X significa que los varones afectados presentan:","options":["Hiperamoniemia leve","Hiperamoniemia neonatal grave, a menudo letal","Acumulación de urea","Acumulación de argininosuccinato","Solo aciduria orótica"],"correct":1,"explain":"La deficiencia de OTC causa hiperamoniemia grave en varones hemicigotos afectados porque el carbamil fosfato no puede transferirse a ornitina y se acumula, desbordándose en la vía de síntesis de pirimidinas (produciendo ácido orótico). La hiperamoniemia causa edema cerebral y suele ser fatal en el período neonatal.","explainImg":""},
-    {"id":"uc005","topic":"Ciclo de la Urea","text":"¿Qué aminoácido se regenera al final de cada vuelta del ciclo de la urea, sirviendo como transportador?","options":["Arginina","Citrulina","Aspartato","Ornitina","Glutamina"],"correct":3,"explain":"La ornitina es regenerada por la arginasa, que escinde la arginina en urea + ornitina. La ornitina es luego transportada de vuelta a las mitocondrias para reaccionar nuevamente con el carbamil fosfato, actuando como molécula transportadora catalítica del ciclo.","explainImg":""},
-    {"id":"uc006","topic":"Ciclo de la Urea","text":"¿Qué átomo de nitrógeno en la urea proviene de la adición directa de amoniaco libre (NH₄⁺) vía CPS-I?","options":["Ambos átomos de nitrógeno","El nitrógeno del aspartato","Un nitrógeno (del NH₃ vía carbamil fosfato)","Ninguno — ambos provienen de glutamina","El nitrógeno de la arginina"],"correct":2,"explain":"La urea contiene dos átomos de nitrógeno. Uno proviene del amoniaco libre (NH₃) incorporado por CPS-I en carbamil fosfato. El segundo proviene del grupo amino del aspartato, que es incorporado en el paso de argininosuccinato sintetasa. El fumarato se libera cuando el aspartato dona su grupo amino.","explainImg":""},
-    {"id":"uc007","topic":"Ciclo de la Urea","text":"La citrulinemia tipo I resulta de deficiencia de argininosuccinato sintetasa (ASS). ¿Qué se acumula en sangre y orina?","options":["Ornitina","Citrulina","Argininosuccinato","Arginina","Carbamil fosfato"],"correct":1,"explain":"La ASS cataliza citrulina + aspartato → argininosuccinato. Su deficiencia causa acumulación dramática de citrulina en sangre y orina (citrulinemia). El amoniaco también aumenta porque el ciclo de la urea está bloqueado. El tratamiento incluye restricción proteica y benzoato/fenilbutirato de sodio.","explainImg":""},
-    {"id":"uc008","topic":"Ciclo de la Urea","text":"El fumarato producido en el ciclo de la urea por argininosuccinato liasa es importante porque:","options":["Es excretado directamente","Entra en el ciclo de Krebs, conectándolo con el ciclo de la urea","Solo se convierte en malato para gluconeogénesis","Inhibe CPS-I","Solo se convierte en aspartato en el citosol"],"correct":1,"explain":"El fumarato liberado por la argininosuccinato liasa entra en el ciclo de Krebs (fumarato → malato → OAA). El OAA puede transaminarse a aspartato, que luego re-entra al ciclo de la urea. Esta conexión se llama 'bicicleta ciclo de la urea-ciclo de Krebs'.","explainImg":""},
-    {"id":"uc009","topic":"Ciclo de la Urea","text":"En la hiperamoniemia, ¿qué aminoácido transporta nitrógeno desde los músculos al hígado para detoxificación, y cómo?","options":["Alanina — vía el ciclo glucosa-alanina; también glutamina — vía amidación de glutamato","Aspartato — directamente por la sangre","Glicina — vía el sistema de escisión de glicina","Serina — vía hidroximetiltransferasa","Taurina — vía conjugación"],"correct":0,"explain":"Dos transportadores principales de nitrógeno: (1) Alanina (ciclo glucosa-alanina) — el músculo transamina piruvato a alanina; el hígado extrae el grupo amino. (2) Glutamina — sintetizada en músculo/cerebro por glutamina sintetasa (fija NH₃); captada por hígado e intestino y desaminada por glutaminasa.","explainImg":""},
-    {"id":"uc010","topic":"Ciclo de la Urea","text":"La deficiencia de arginasa causa argininemia. ¿Cuál es el rasgo neurológico distintivo en comparación con otros defectos del ciclo de la urea?","options":["Vómitos episódicos","Diplejía espástica progresiva y discapacidad intelectual en lugar de hiperamoniemia aguda","Hiperamoniemia neonatal letal","Pérdida auditiva sensorineural","Convulsiones por hipoglucemia"],"correct":1,"explain":"La deficiencia de arginasa (argininemia) se presenta típicamente con diplejía espástica progresiva y discapacidad intelectual en lugar de hiperamoniemia potencialmente mortal, ya que vías alternativas pueden eliminar el amoniaco parcialmente. La arginina se acumula y se considera neurotóxica. La elevación de amoniaco es más leve que en otros defectos del ciclo de la urea.","explainImg":""}
+    {
+      "id": "gly001",
+      "topic": "Glucólisis",
+      "text": "¿Dónde tiene lugar la glucólisis?",
+      "options": [
+        "En las mitocondrias",
+        "En el citosol",
+        "En el lisosoma",
+        "En el núcleo",
+        "En el peroxisoma"
+      ],
+      "correct": 1,
+      "explain": "La glucólisis es una vía metabólica citosólica que transcurre completamente en el citoplasma. En contraste, el ciclo de Krebs y la fosforilación oxidativa tienen lugar en las mitocondrias. Esta separación espacial permite una regulación independiente de ambas vías. La glucólisis permanece activa en el citosol incluso en condiciones anaerobias.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly002",
+      "topic": "Glucólisis",
+      "text": "¿Qué energía se libera durante la hidrólisis del ATP?",
+      "options": [
+        "−60 kJ/mol",
+        "−10 kJ/mol",
+        "−45 kJ/mol",
+        "−31 kJ/mol",
+        "−20 kJ/mol"
+      ],
+      "correct": 3,
+      "explain": "La hidrólisis de un enlace fosfoanh ídrido del ATP libera aproximadamente −31 kJ/mol en condiciones estándar. Este valor explica por qué el ATP se considera el transportador universal de energía de la célula. La energía libre proviene de la repulsión electrostática entre los grupos fosfato y la estabilización por resonancia del ADP y fosfato inorgánico resultantes. En condiciones celulares, el valor real puede ser aún mayor.",
+      "explainImg": "images/gly002.svg"
+    },
+    {
+      "id": "gly003",
+      "topic": "Glucólisis",
+      "text": "¿Qué distingue la glucólisis aerobia de la anaerobia?",
+      "options": [
+        "El destino posterior del piruvato formado",
+        "El número de moléculas de ATP consumidas",
+        "La actividad de la fosfofructocinasa 1",
+        "El número de pasos de reacción completados",
+        "El lugar de fosforilación de la glucosa"
+      ],
+      "correct": 0,
+      "explain": "La glucólisis en sí transcurre de manera idéntica en ambos casos y termina con piruvato. La diferencia clave reside en el destino posterior del piruvato: en aerobiosis se importa a las mitocondrias y se descarboxila a acetil-CoA. En anaerobiosis, el piruvato es reducido a lactato en el citosol por la lactato deshidrogenasa para regenerar NAD⁺.",
+      "explainImg": "images/gly003.svg"
+    },
+    {
+      "id": "gly004",
+      "topic": "Glucólisis",
+      "text": "¿Qué producto se forma durante la degradación anaerobia del piruvato en el citosol?",
+      "options": [
+        "Citrato",
+        "Acetil-CoA",
+        "Succinato",
+        "Oxalacetato",
+        "Lactato"
+      ],
+      "correct": 4,
+      "explain": "En condiciones anaerobias, el piruvato es reducido a lactato por la lactato deshidrogenasa (LDH). En el proceso, el NADH se reoxida a NAD⁺, lo que es esencial para que la glucólisis continúe. El lactato se libera a la sangre y puede convertirse de nuevo en glucosa en el hígado a través del ciclo de Cori. Clínicamente, el lactato aumenta durante la hipoxia, la sepsis y el ejercicio intenso.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly005",
+      "topic": "Glucólisis",
+      "text": "¿Cuál es el balance neto correcto de la glucólisis?",
+      "options": [
+        "Glucosa + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Piruvato + 2 NADH + 4 ATP + 2 H₂O",
+        "Glucosa + 4 ADP → 2 Piruvato + 4 ATP + 2 CO₂",
+        "Glucosa + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Piruvato + 2 NADH + 2 ATP + 2 H₂O",
+        "Glucosa + 2 ADP + 2 Pᵢ → 2 Piruvato + 2 ATP + 2 NADH + 2 CO₂",
+        "Glucosa + 2 NADH → 2 Piruvato + 2 NAD⁺ + 4 ATP"
+      ],
+      "correct": 2,
+      "explain": "El balance neto de la glucólisis produce 2 ATP (4 generados menos 2 consumidos en la fase 1), 2 NADH y 2 piruvatos por glucosa. El NADH puede aportar ATP adicional en la cadena respiratoria en condiciones aerobias. Importante: no se produce CO₂ en la glucólisis — el CO₂ solo se libera durante la descarboxilación oxidativa del piruvato.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly006",
+      "topic": "Glucólisis",
+      "text": "¿Qué tres enzimas se consideran enzimas clave de la glucólisis?",
+      "options": [
+        "Glucocinasa, aldolasa, piruvato deshidrogenasa",
+        "Hexocinasa, fosfofructocinasa 1, piruvato cinasa",
+        "Lactato deshidrogenasa, hexocinasa, fosfoglicerato cinasa",
+        "Aldolasa, enolasa, fosfoglicerato mutasa",
+        "Fosfoglicerato cinasa, triosa fosfato isomerasa, enolasa"
+      ],
+      "correct": 1,
+      "explain": "Las tres enzimas clave de la glucólisis catalizan reacciones irreversibles y altamente exergónicas, siendo los principales puntos de regulación. La hexocinasa fosforila la glucosa a glucosa-6-fosfato; la PFK-1 es la enzima reguladora más importante; la piruvato cinasa cataliza el último paso productor de ATP. Las tres están sujetas a control alostérico y hormonal.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly007",
+      "topic": "Glucólisis",
+      "text": "¿Por qué sustancia es activada alostéricamente la fosfofructocinasa 1?",
+      "options": [
+        "ATP",
+        "Citrato",
+        "Glucosa-6-fosfato",
+        "Fosfoenolpiruvato",
+        "Fructosa-2,6-bisfosfato"
+      ],
+      "correct": 4,
+      "explain": "La fructosa-2,6-bisfosfato es el activador alostérico más potente de la PFK-1 y una molécula reguladora central. Es producida por la PFK-2, cuya actividad está controlada hormonalmente: la insulina promueve y el glucagón inhibe la actividad de PFK-2. El ATP y el citrato inhiben la PFK-1 (exceso de energía), mientras que el AMP y el ADP la activan.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly008",
+      "topic": "Glucólisis",
+      "text": "¿Qué hormona inhibe la transcripción de la hexocinasa?",
+      "options": [
+        "Glucagón",
+        "Insulina",
+        "Tiroxina",
+        "Adrenalina",
+        "Cortisol"
+      ],
+      "correct": 0,
+      "explain": "El glucagón señaliza glucosa sanguínea baja e inhibe la transcripción de enzimas glucolíticas como la hexocinasa. La insulina tiene el efecto contrario y aumenta su expresión. Este control hormonal de la expresión génica permite una adaptación a largo plazo de la tasa glucolítica al estado nutricional. El glucagón promueve simultáneamente la gluconeogénesis en el hígado.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly009",
+      "topic": "Glucólisis",
+      "text": "¿Qué describe el ciclo de Cori?",
+      "options": [
+        "Síntesis de glucosa a partir de aminoácidos en el músculo",
+        "Regeneración de NAD⁺ mediante el ciclo de Krebs en el hígado",
+        "Degradación de ácidos grasos a acetil-CoA en el hígado",
+        "Conversión de lactato a glucosa entre músculo e hígado",
+        "Transporte de piruvato del citosol a las mitocondrias"
+      ],
+      "correct": 3,
+      "explain": "En el ciclo de Cori, el lactato producido durante el metabolismo muscular anaerobio es transportado por la sangre al hígado. Allí se convierte de nuevo en glucosa mediante gluconeogénesis (2 lactato → 1 glucosa), que se pone nuevamente a disposición del músculo. El ciclo tiene un coste neto de energía (6 equivalentes de ATP por glucosa) y ocurre principalmente durante el ejercicio físico intenso.",
+      "explainImg": "images/gly009.svg"
+    },
+    {
+      "id": "gly010",
+      "topic": "Glucólisis",
+      "text": "¿Qué afirmación sobre la regulación de la piruvato cinasa es correcta?",
+      "options": [
+        "Es activada alostéricamente por citrato",
+        "Es activada por fructosa-1,6-bisfosfato",
+        "Es inhibida alostéricamente por glucosa-6-fosfato",
+        "La insulina inhibe la expresión del gen de la piruvato cinasa",
+        "Es inhibida alostéricamente por AMP"
+      ],
+      "correct": 1,
+      "explain": "La piruvato cinasa es estimulada por fructosa-1,6-bisfosfato en una activación de retroalimentación anticipada: cuando la PFK-1 está activa y se acumula fructosa-1,6-bisfosfato, la piruvato cinasa se activa de antemano. Es inhibida por ATP y alanina (exceso de energía o aminoácidos suficientes). La insulina aumenta la expresión del gen de la piruvato cinasa — el efecto contrario a la opción D.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly011",
+      "topic": "Glucólisis",
+      "text": "¿Qué distingue a la glucocinasa de la hexocinasa?",
+      "options": [
+        "La glucocinasa se encuentra en eritrocitos, la hexocinasa en el hígado",
+        "La glucocinasa tiene una Km más baja para la glucosa que la hexocinasa",
+        "La glucocinasa no es inhibida por la glucosa-6-fosfato",
+        "La glucocinasa cataliza la fosforilación de la fructosa",
+        "La glucocinasa consume GTP en lugar de ATP en la reacción"
+      ],
+      "correct": 2,
+      "explain": "La glucocinasa (hexocinasa IV) se encuentra principalmente en el hígado y en las células beta del páncreas. Tiene una Km alta (baja afinidad) para la glucosa, no es inhibida por la glucosa-6-fosfato y es inducida por la insulina. Estas propiedades la convierten en el sensor de glucosa del hígado: solo se activa con glucosa sanguínea alta y adapta la fosforilación a la oferta.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly012",
+      "topic": "Glucólisis",
+      "text": "¿Qué combinación inhibe alostéricamente a la fosfofructocinasa 1?",
+      "options": [
+        "ATP y citrato",
+        "AMP y fructosa-2,6-bisfosfato",
+        "ADP y glucosa-6-fosfato",
+        "NAD⁺ y oxalacetato",
+        "Insulina y glucagón"
+      ],
+      "correct": 0,
+      "explain": "Los niveles elevados de ATP señalan exceso de energía e inhiben la PFK-1 para ralentizar la glucólisis. El citrato, un intermediario del ciclo de Krebs, también inhibe la PFK-1 e indica que la célula tiene precursores biosintéticos suficientes. En contraste, el AMP y el ADP (déficit energético) y la fructosa-2,6-bisfosfato activan la PFK-1.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly013",
+      "topic": "Glucólisis",
+      "text": "¿Cuántas moléculas de ATP se producen neta y directamente en la glucólisis?",
+      "options": [
+        "4 ATP, ya que en la fase 3 se forman cuatro moléculas",
+        "1 ATP, ya que solo existe un paso de fosforilación a nivel de sustrato",
+        "6 ATP, ya que se incluye la contribución del NADH",
+        "2 ATP, ya que se consumen dos en la fase 1 y se forman cuatro en la fase 3",
+        "8 ATP, ya que la glucosa tiene seis átomos de carbono"
+      ],
+      "correct": 3,
+      "explain": "En la fase 1 (fase de inversión) se consumen 2 ATP (hexocinasa y PFK-1). En la fase 3 (fase de recuperación) se forman 4 ATP (2 × fosfoglicerato cinasa y 2 × piruvato cinasa). La ganancia neta es por tanto de 2 ATP por glucosa. El NADH producido genera ATP adicional en condiciones aerobias — pero solo en la cadena respiratoria, no en la glucólisis misma.",
+      "explainImg": "images/gly013.svg"
+    },
+    {
+      "id": "gly014",
+      "topic": "Glucólisis",
+      "text": "¿En qué situación clínica es más probable encontrar un nivel elevado de lactato en sangre?",
+      "options": [
+        "Hiperglucemia en diabetes tipo 2 no controlada",
+        "Ayuno prolongado sin esfuerzo físico",
+        "Niveles elevados de insulina tras una comida",
+        "Insuficiencia renal crónica sin acidosis",
+        "Hipoxia tisular en shock o sepsis grave"
+      ],
+      "correct": 4,
+      "explain": "En la hipoxia tisular (p. ej. shock, sepsis, paro cardíaco) la cadena respiratoria no puede oxidar suficientemente el NADH, lo que causa una mayor reducción del piruvato a lactato. Esto conduce a la acidosis láctica. Un lactato > 2 mmol/L es un valor de alerta clínico; valores > 4 mmol/L indican mayor riesgo de mortalidad. Las mediciones regulares de lactato son por ello estándar en medicina intensiva.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly015",
+      "topic": "Glucólisis",
+      "text": "¿Cuál es el producto final de la fase 1 de la glucólisis?",
+      "options": [
+        "Glucosa-1-fosfato",
+        "Fosfoenolpiruvato",
+        "Fructosa-1,6-bisfosfato",
+        "Gliceraldehído-3-fosfato",
+        "1,3-Bisfosfoglicerato"
+      ],
+      "correct": 2,
+      "explain": "La fase 1 de la glucólisis (fase de inversión) comprende la conversión de glucosa a fructosa-1,6-bisfosfato consumiendo 2 ATP. Las enzimas clave son la hexocinasa (paso 1) y la fosfofructocinasa 1 (paso 3). La fructosa-1,6-bisfosfato resultante es escindida en la fase 2 por la aldolasa en dos unidades C3: gliceraldehído-3-fosfato (GAP) y dihidroxiacetona fosfato (DHAP).",
+      "explainImg": "images/gly015.svg"
+    },
+    {
+      "id": "gcn001",
+      "topic": "Gluconeogénesis",
+      "text": "¿Dónde tiene lugar principalmente la gluconeogénesis?",
+      "options": [
+        "En el músculo esquelético y el cerebro",
+        "En el tejido adiposo y el bazo",
+        "En el músculo cardíaco y el intestino delgado",
+        "En el pulmón y la médula ósea",
+        "En el hígado y el riñón"
+      ],
+      "correct": 4,
+      "explain": "La gluconeogénesis ocurre principalmente en el hígado, que representa hasta el 90% de la nueva síntesis de glucosa. El riñón contribuye especialmente durante el ayuno prolongado y la acidosis. Otros órganos como el músculo o el cerebro no pueden realizar gluconeogénesis significativa porque carecen de enzimas clave (p. ej. glucosa-6-fosfatasa).",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn002",
+      "topic": "Gluconeogénesis",
+      "text": "¿Cuáles son los tres principales sustratos precursores de la gluconeogénesis?",
+      "options": [
+        "Glucosa, fructosa y galactosa",
+        "Lactato, aminoácidos y glicerol",
+        "Ácidos grasos, colesterol y cuerpos cetónicos",
+        "Acetil-CoA, NADH y ATP",
+        "Piruvato, CO₂ y GTP"
+      ],
+      "correct": 1,
+      "explain": "Los principales sustratos para la gluconeogénesis son el lactato (de la glucólisis anaerobia, ciclo de Cori), los aminoácidos glucogénicos (p. ej. alanina del catabolismo muscular en ayuno) y el glicerol (de la lipólisis en tejido adiposo). Los ácidos grasos no pueden convertirse en glucosa en humanos porque el acetil-CoA no puede entrar en la gluconeogénesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn003",
+      "topic": "Gluconeogénesis",
+      "text": "¿Por qué la gluconeogénesis no puede simplemente ejecutar la glucólisis en sentido inverso?",
+      "options": [
+        "Porque se necesitan coenzimas diferentes en la dirección inversa",
+        "Porque la glucosa no puede fosforilarse en el hígado",
+        "Porque el NADH no está disponible para la reacción inversa",
+        "Porque tres reacciones glucolíticas son termodinámicamente irreversibles",
+        "Porque el piruvato no puede transportarse a las mitocondrias"
+      ],
+      "correct": 3,
+      "explain": "Tres reacciones glucolíticas son irreversibles en condiciones fisiológicas: las reacciones de la hexocinasa, la fosfofructocinasa 1 y la piruvato cinasa. Estas deben ser eludidas en la gluconeogénesis mediante reacciones específicas de desvío con sus propias enzimas. Las siete reacciones glucolíticas restantes son reversibles.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn004",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué enzima cataliza el primer paso de la gluconeogénesis a partir del piruvato?",
+      "options": [
+        "Piruvato carboxilasa",
+        "PEP carboxicinasa",
+        "Fructosa-1,6-bisfosfatasa",
+        "Glucosa-6-fosfatasa",
+        "Piruvato deshidrogenasa"
+      ],
+      "correct": 0,
+      "explain": "La piruvato carboxilasa se localiza en las mitocondrias y cataliza la carboxilación dependiente de ATP del piruvato a oxalacetato, consumiendo HCO₃⁻. Requiere biotina como cofactor. El acetil-CoA es un activador alostérico de la piruvato carboxilasa — una señal de que hay sustratos suficientes para el ciclo de Krebs y que el piruvato excedente debe redirigirse hacia la gluconeogénesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn005",
+      "topic": "Gluconeogénesis",
+      "text": "¿En qué compartimento celular convierte la PEP carboxicinasa el oxalacetato en PEP?",
+      "options": [
+        "En el espacio intermembrana de las mitocondrias",
+        "En el retículo endoplasmático",
+        "En el citosol",
+        "En la matriz mitocondrial",
+        "En el núcleo"
+      ],
+      "correct": 2,
+      "explain": "La PEP carboxicinasa (PEPCK) es una enzima citosólica que convierte el oxalacetato en fosfoenolpiruvato (PEP) y CO₂ consumiendo GTP. Como el oxalacetato no puede cruzar directamente la membrana mitocondrial interna, primero se reduce a malato, se transporta al citosol y allí se reoxida a oxalacetato antes de que la PEPCK lo convierta en PEP.",
+      "explainImg": "images/gcn005.svg"
+    },
+    {
+      "id": "gcn006",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué enzima de la gluconeogénesis está localizada en el retículo endoplasmático?",
+      "options": [
+        "Piruvato carboxilasa",
+        "Fructosa-1,6-bisfosfatasa",
+        "PEP carboxicinasa",
+        "Fosfoglicerato cinasa",
+        "Glucosa-6-fosfatasa"
+      ],
+      "correct": 4,
+      "explain": "La glucosa-6-fosfatasa está localizada en el retículo endoplasmático (RE) y cataliza el último paso de la gluconeogénesis: la eliminación del grupo fosfato de la glucosa-6-fosfato para dar glucosa libre. Solo el hígado y el riñón poseen esta enzima, lo que explica por qué solo estos órganos pueden liberar glucosa a la sangre. Su ausencia causa la enfermedad de Von Gierke.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn007",
+      "topic": "Gluconeogénesis",
+      "text": "¿Cuál es el balance energético correcto de la gluconeogénesis para formar 1 glucosa a partir de 2 piruvatos?",
+      "options": [
+        "Consumo de 2 ATP y 2 GTP, sin necesidad de NADH",
+        "Consumo de 4 ATP, 2 GTP y 2 NADH",
+        "Consumo de 6 ATP y 2 FADH₂, sin necesidad de GTP",
+        "Consumo de 2 ATP y 4 NADH, sin necesidad de GTP",
+        "Consumo de 8 ATP y 4 GTP, 4 NADH necesarios"
+      ],
+      "correct": 1,
+      "explain": "La gluconeogénesis desde 2 piruvatos requiere: 2 ATP para la piruvato carboxilasa, 2 GTP para la PEPCK, 2 ATP para la fosfoglicerato cinasa (reacción inversa) y 2 NADH para la inversión de la gliceraldehído-3-fosfato deshidrogenasa. El balance total es 4 ATP + 2 GTP + 2 NADH — mucho más energía de la que produce la glucólisis. La gluconeogénesis es impulsada por la escasez de glucosa, no por el exceso de energía.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn008",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué estimula alostéricamente a la fructosa-1,6-bisfosfatasa?",
+      "options": [
+        "AMP y fructosa-2,6-bisfosfato",
+        "ATP y glucosa-6-fosfato",
+        "Insulina y piruvato",
+        "Citrato",
+        "NADH y oxalacetato"
+      ],
+      "correct": 3,
+      "explain": "El citrato activa la fructosa-1,6-bisfosfatasa e inhibe simultáneamente la PFK-1 — un ejemplo clásico de regulación recíproca. Los niveles elevados de citrato señalan que el ciclo de Krebs está saturado y que la glucosa debería almacenarse en lugar de quemarse. El AMP y la fructosa-2,6-bisfosfato, en cambio, inhiben la bisfosfatasa y activan la PFK-1 para impulsar la glucólisis durante el déficit energético.",
+      "explainImg": "images/gcn008.svg"
+    },
+    {
+      "id": "gcn009",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué mecanismo impulsa la gluconeogénesis cuando el lactato aumenta en la sangre?",
+      "options": [
+        "Ley de acción de masas: mayor concentración de sustrato dirige la reacción hacia la glucosa",
+        "Activación alostérica de la piruvato carboxilasa por el lactato",
+        "Inducción hormonal de la PEPCK directamente por el lactato",
+        "Activación de la glucosa-6-fosfatasa por el aumento del lactato",
+        "Inhibición de la glucólisis por el lactato a través de la PFK-1"
+      ],
+      "correct": 0,
+      "explain": "La gluconeogénesis está regulada por la disponibilidad de sustratos (ley de acción de masas): cuando aumentan las concentraciones sanguíneas de lactato, alanina o glicerol, la gluconeogénesis es impulsada puramente por el equilibrio químico sin intervención hormonal. En el ciclo de Cori, el músculo suministra lactato que se utiliza directamente para la síntesis de glucosa en el hígado.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn010",
+      "topic": "Gluconeogénesis",
+      "text": "¿Cómo influye el glucagón en la gluconeogénesis a nivel hormonal?",
+      "options": [
+        "El glucagón inhibe la gluconeogénesis activando FOXO1",
+        "El glucagón inhibe la expresión génica de PEPCK a través del cAMP",
+        "El glucagón aumenta la expresión génica de PEPCK a través de cAMP y CREB",
+        "El glucagón activa los receptores de insulina en hepatocitos",
+        "El glucagón estimula la glucólisis e inhibe la gluconeogénesis"
+      ],
+      "correct": 2,
+      "explain": "El glucagón se une a su receptor acoplado a proteína G en hepatocitos y aumenta los niveles intracelulares de cAMP. El cAMP activa la proteína cinasa A, que fosforila el factor de transcripción CREB. El CREB fosforilado aumenta la transcripción de PEPCK y glucosa-6-fosfatasa. El cortisol actúa sinérgicamente a través del receptor de glucocorticoides. Esta inducción tarda horas o días.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn011",
+      "topic": "Gluconeogénesis",
+      "text": "¿Cómo inhibe la insulina la gluconeogénesis a nivel molecular?",
+      "options": [
+        "La insulina activa CREB y aumenta la transcripción de PEPCK",
+        "La insulina inhibe directamente la piruvato carboxilasa por contacto",
+        "La insulina activa FOXO1 y aumenta la expresión de PEPCK",
+        "La insulina reduce el cAMP directamente inhibiendo la adenilato ciclasa",
+        "La insulina fosforila e inactiva FOXO1, que de otro modo promueve la PEPCK"
+      ],
+      "correct": 4,
+      "explain": "La insulina activa la vía de señalización PI3K/Akt, que conduce a la fosforilación del factor de transcripción FOXO1 por Akt (PKB). El FOXO1 fosforilado abandona el núcleo y ya no puede promover la transcripción de PEPCK y glucosa-6-fosfatasa. El FOXO1 en su estado activo (no fosforilado) es por tanto un promotor de la gluconeogénesis — la insulina lo desactiva por fosforilación.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn012",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué afirmación sobre la enfermedad de Von Gierke (tipo 1a) es correcta?",
+      "options": [
+        "La causa es un defecto en la fructosa-1,6-bisfosfatasa",
+        "La causa es un defecto en la glucosa-6-fosfatasa",
+        "La causa es un defecto en la piruvato carboxilasa",
+        "La causa es un defecto en la PEP carboxicinasa",
+        "La causa es un defecto en la lactato deshidrogenasa"
+      ],
+      "correct": 1,
+      "explain": "La enfermedad de Von Gierke tipo 1a se hereda de forma autosómica recesiva y está causada por un defecto en la glucosa-6-fosfatasa en el RE. Sin esta enzima, la glucosa-6-fosfato no puede convertirse en glucosa libre ni desde la gluconeogénesis ni desde la degradación del glucógeno. Las consecuencias incluyen hipoglucemia grave en ayunas, hepatomegalia por acumulación de glucógeno, acidosis láctica y niveles elevados de ácido úrico y triglicéridos.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn013",
+      "topic": "Gluconeogénesis",
+      "text": "¿Por qué los ácidos grasos no pueden contribuir a la gluconeogénesis en humanos?",
+      "options": [
+        "Porque los ácidos grasos no pueden llegar a las mitocondrias",
+        "Porque la degradación de ácidos grasos no genera ATP",
+        "Porque los ácidos grasos se oxidan directamente a CO₂ y H₂O",
+        "Porque el acetil-CoA no puede convertirse en oxalacetato ni en PEP",
+        "Porque los ácidos grasos inhiben competitivamente la piruvato carboxilasa"
+      ],
+      "correct": 3,
+      "explain": "La β-oxidación de los ácidos grasos termina en acetil-CoA. En el ciclo de Krebs, el acetil-CoA se oxida completamente a CO₂ — no hay ganancia neta de oxalacetato ni de otros compuestos C4 que pudieran alimentar la gluconeogénesis. Por tanto, los ácidos grasos no son sustratos gluconeogénicos. El glicerol (de los triglicéridos) sí puede entrar en la gluconeogénesis como glicerol-3-fosfato.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn014",
+      "topic": "Gluconeogénesis",
+      "text": "¿En qué situación está más fuertemente activada la gluconeogénesis?",
+      "options": [
+        "Ayuno prolongado con niveles elevados de glucagón y cortisol",
+        "Poco después de una comida rica en carbohidratos",
+        "Durante trabajo muscular anaerobio intenso solamente",
+        "Con niveles elevados de insulina y reservas de glucógeno llenas",
+        "Con dieta exclusivamente grasa sin ingesta de proteínas"
+      ],
+      "correct": 0,
+      "explain": "Durante el ayuno prolongado, el glucagón y el cortisol están crónicamente elevados. El glucagón induce la transcripción de PEPCK y glucosa-6-fosfatasa a través de cAMP/CREB; el cortisol actúa sinérgicamente. Simultáneamente, la proteólisis muscular (alanina) y la lipólisis (glicerol) proporcionan sustrato abundante. La insulina está suprimida, por lo que FOXO1 permanece activo y las enzimas gluconeogénicas se mantienen reguladas al alza.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn015",
+      "topic": "Gluconeogénesis",
+      "text": "¿Qué fármaco inhibe la gluconeogénesis y se utiliza como tratamiento de primera línea en la diabetes tipo 2?",
+      "options": [
+        "Glibenclamida (sulfonilurea)",
+        "Sitagliptina (inhibidor de DPP-4)",
+        "Metformina (biguanida)",
+        "Empagliflozina (inhibidor de SGLT-2)",
+        "Insulina glargina (insulina de acción prolongada)"
+      ],
+      "correct": 2,
+      "explain": "La metformina es el antidiabético oral más prescrito en el mundo. Inhibe el complejo I de la cadena respiratoria mitocondrial, lo que eleva la relación AMP/ATP y activa la AMPK. La AMPK fosforila e inactiva los coactivadores de CREB (PGC-1α/TORC2), reduciendo así la transcripción de PEPCK y glucosa-6-fosfatasa. El resultado es una reducción marcada de la gluconeogénesis hepática.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg001",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "¿Qué enzima agrega residuos de glucosa al extremo no reductor del glucógeno?",
+      "options": [
+        "Glucógeno fosforilasa",
+        "Glucógeno sintasa",
+        "Enzima ramificante",
+        "UDP-glucosa pirofosforilasa",
+        "Enzima desramificante"
+      ],
+      "correct": 1,
+      "explain": "La glucógeno sintasa alarga las cadenas de glucógeno añadiendo UDP-glucosa a los extremos no reductores mediante enlaces glucosídicos α(1→4). Requiere un cebador de glucógeno preexistente (mínimo 4 residuos) o la proteína glucogenina como iniciador.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg002",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "¿Cuál es la forma activada de glucosa utilizada en la síntesis de glucógeno?",
+      "options": [
+        "Glucosa-1-fosfato",
+        "Glucosa-6-fosfato",
+        "UDP-glucosa",
+        "ADP-glucosa",
+        "GDP-glucosa"
+      ],
+      "correct": 2,
+      "explain": "La glucosa debe activarse a UDP-glucosa por la UDP-glucosa pirofosforilasa antes de incorporarse al glucógeno. El UTP usado se hidroliza a UMP + PPi; la actividad posterior de pirofosfatasa impulsa la reacción hacia adelante.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg003",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La glucógeno fosforilasa escinde el glucógeno mediante:",
+      "options": [
+        "Hidrólisis con agua",
+        "Fosforolisis usando fosfato inorgánico",
+        "Reacción de transferasa",
+        "Escisión oxidativa",
+        "Actividad de α-glucosidasa lisosomal"
+      ],
+      "correct": 1,
+      "explain": "La glucógeno fosforilasa realiza fosforolisis: usa fosfato inorgánico (Pi) para escindir enlaces α(1→4) en extremos no reductores, liberando glucosa-1-fosfato. Esto es energéticamente favorable ya que la glucosa-1-fosfato ya está fosforilada.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg004",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La enfermedad de Von Gierke (GSD tipo I) resulta de deficiencia de:",
+      "options": [
+        "Glucógeno sintasa",
+        "Glucosa-6-fosfatasa",
+        "Enzima desramificante",
+        "Maltasa ácida (α-glucosidasa)",
+        "Glucógeno fosforilasa hepática"
+      ],
+      "correct": 1,
+      "explain": "La enfermedad de Von Gierke es causada por deficiencia de glucosa-6-fosfatasa. Sin esta enzima, el hígado no puede liberar glucosa libre a la sangre desde glucogenólisis ni gluconeogénesis. Esto lleva a hipoglucemia grave en ayuno y acumulación masiva de glucógeno hepático.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg005",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "¿Qué hormona activa la glucogenólisis en el hígado a través de una vía dependiente de cAMP?",
+      "options": [
+        "Insulina",
+        "Glucagón",
+        "Cortisol",
+        "Aldosterona",
+        "Somatostatina"
+      ],
+      "correct": 1,
+      "explain": "El glucagón se une a su GPCR en hepatocitos → adenilil ciclasa → cAMP → activación de PKA → activación de fosforilasa cinasa → activación de glucógeno fosforilasa. Simultáneamente, la PKA fosforila e inactiva la glucógeno sintasa, previniendo ciclos fútiles.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg006",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La enzima desramificante tiene dos actividades catalíticas. ¿Qué par es correcto?",
+      "options": [
+        "Cinasa + fosfatasa",
+        "4-α-glucanotransferasa + amilo-1,6-glucosidasa",
+        "Sintasa + fosforilasa",
+        "Isomerasa + liasa",
+        "Hidrolasa + mutasa"
+      ],
+      "correct": 1,
+      "explain": "La enzima desramificante primero transfiere un trisacárido de una rama a la cadena principal (actividad transferasa), luego hidroliza la glucosa restante en el punto de ramificación (actividad glucosidasa), liberando glucosa libre en lugar de glucosa-1-fosfato.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg007",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La enfermedad de McArdle (GSD tipo V) se caracteriza por calambres musculares durante el ejercicio debido a deficiencia de:",
+      "options": [
+        "Maltasa ácida",
+        "Fosforilasa hepática",
+        "Glucógeno fosforilasa muscular",
+        "Enzima ramificante",
+        "Fosfofructocinasa"
+      ],
+      "correct": 2,
+      "explain": "La enfermedad de McArdle resulta de deficiencia de glucógeno fosforilasa muscular. El músculo no puede movilizar glucógeno durante el ejercicio, llevando a falla energética, calambres dolorosos y mioglobinuria. El lactato sanguíneo no aumenta tras ejercicio isquémico de antebrazo.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg008",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La glucógeno sintasa está máximamente activa en su forma:",
+      "options": [
+        "Fosforilada",
+        "Desfosforilada",
+        "Unida a AMP",
+        "Estimulada por glucagón",
+        "Inhibida por citrato"
+      ],
+      "correct": 1,
+      "explain": "La glucógeno sintasa está activa (forma a) cuando está desfosforilada e inactiva (forma b) cuando está fosforilada. La insulina promueve la síntesis de glucógeno activando la proteína fosfatasa 1 (PP1), que desfosforila y activa la glucógeno sintasa.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg009",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "¿Qué proteína actúa como cebador para la síntesis de glucógeno aceptando los primeros residuos de glucosa?",
+      "options": [
+        "Glucogenina",
+        "Glucógeno sintasa",
+        "Fosfoglucomutasa",
+        "Lafrina",
+        "Enzima ramificante"
+      ],
+      "correct": 0,
+      "explain": "La glucogenina es una proteína autoglucosiltransferasa que forma el cebador para la síntesis de glucógeno. Fija la primera glucosa a un residuo de tirosina, luego extiende la cadena a ~8 residuos antes de que la glucógeno sintasa tome el control.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg010",
+      "topic": "Metabolismo del Glucógeno",
+      "text": "La insulina promueve la síntesis de glucógeno activando qué fosfatasa que desfosforila la glucógeno sintasa:",
+      "options": [
+        "Proteína fosfatasa 1 (PP1)",
+        "Proteína fosfatasa 2A (PP2A)",
+        "Calcineurina (PP2B)",
+        "PTP1B",
+        "Fosforilasa cinasa"
+      ],
+      "correct": 0,
+      "explain": "La señalización de insulina activa PP1 a través de la fosforilación mediada por Akt de su subunidad reguladora. PP1 luego desfosforila la glucógeno sintasa (activándola) y la glucógeno fosforilasa (inactivándola), promoviendo coordinadamente la síntesis de glucógeno.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca001",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Qué enzima cataliza la reacción de condensación que inicia el ciclo de Krebs?",
+      "options": [
+        "Citrato sintasa",
+        "Isocitrato deshidrogenasa",
+        "Aconitasa",
+        "Malato deshidrogenasa",
+        "Fumarasa"
+      ],
+      "correct": 0,
+      "explain": "La citrato sintasa condensa acetil-CoA (2C) con oxalacetato (4C) para formar citrato (6C). Este es el punto de entrada del ciclo de Krebs. La enzima es regulada por el estado energético: inhibida por ATP, NADH y succinil-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca002",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Cuántas moléculas de NADH se producen por cada vuelta completa del ciclo de Krebs?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct": 3,
+      "explain": "Se producen tres moléculas de NADH por vuelta: en isocitrato deshidrogenasa, α-cetoglutarato deshidrogenasa y malato deshidrogenasa. También se produce un FADH₂ en succinato deshidrogenasa y un GTP en succinil-CoA sintetasa.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca003",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Qué intermediario del ciclo de Krebs es precursor clave para la síntesis de hemo?",
+      "options": [
+        "Succinil-CoA",
+        "Citrato",
+        "Fumarato",
+        "Malato",
+        "α-Cetoglutarato"
+      ],
+      "correct": 0,
+      "explain": "El succinil-CoA se condensa con glicina (catalizado por ALA sintasa, requiriendo piridoxal fosfato) para formar ácido δ-aminolevulínico (ALA), el primer paso comprometido de la biosíntesis de hemo. Esta reacción ocurre en la matriz mitocondrial.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca004",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Qué enzima del ciclo de Krebs produce directamente GTP por fosforilación a nivel de sustrato?",
+      "options": [
+        "Isocitrato deshidrogenasa",
+        "Succinato deshidrogenasa",
+        "Fumarasa",
+        "Aconitasa",
+        "Succinil-CoA sintetasa"
+      ],
+      "correct": 4,
+      "explain": "La succinil-CoA sintetasa (también llamada succinato tiocinasa) acopla la hidrólisis del enlace tioéster de alta energía del succinil-CoA a la fosforilación de GDP a GTP (o ADP a ATP en algunos tejidos).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca005",
+      "topic": "Ciclo de Krebs",
+      "text": "La deficiencia de tiamina (B1) deteriora el ciclo de Krebs al afectar qué complejo enzimático:",
+      "options": [
+        "Citrato sintasa",
+        "Piruvato deshidrogenasa y α-cetoglutarato deshidrogenasa",
+        "Succinato deshidrogenasa",
+        "Aconitasa",
+        "Malato deshidrogenasa"
+      ],
+      "correct": 1,
+      "explain": "El pirofosfato de tiamina (TPP) es un cofactor esencial tanto para el complejo piruvato deshidrogenasa (PDH) como para el α-cetoglutarato deshidrogenasa (α-CGDH). La deficiencia de tiamina causa encefalopatía de Wernicke y beriberi.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca006",
+      "topic": "Ciclo de Krebs",
+      "text": "La succinato deshidrogenasa es única entre las enzimas del ciclo de Krebs porque:",
+      "options": [
+        "Es soluble en la matriz",
+        "Está embebida en la membrana mitocondrial interna (Complejo II)",
+        "Está localizada en el citosol",
+        "Está asociada con la membrana mitocondrial externa",
+        "Es una enzima productora de GTP"
+      ],
+      "correct": 1,
+      "explain": "La succinato deshidrogenasa es la única enzima del ciclo de Krebs embebida en la membrana mitocondrial interna. Es idéntica al Complejo II de la cadena respiratoria — oxida succinato a fumarato, reduciendo FAD a FADH₂.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca007",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Qué reacción generalmente se considera el paso limitante de la velocidad del ciclo de Krebs bajo condiciones fisiológicas?",
+      "options": [
+        "Citrato sintasa",
+        "Aconitasa",
+        "Isocitrato deshidrogenasa",
+        "Malato deshidrogenasa",
+        "Fumarasa"
+      ],
+      "correct": 2,
+      "explain": "La isocitrato deshidrogenasa es una enzima reguladora clave. Es activada alostéricamente por ADP y Ca²⁺ e inhibida por ATP y NADH. Al controlar el flujo en este paso, el ciclo de Krebs se coordina con las demandas energéticas de la célula.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca008",
+      "topic": "Ciclo de Krebs",
+      "text": "Si el oxalacetato (OAA) se agota, ¿qué reacción anaplerótica puede reponerlo directamente?",
+      "options": [
+        "Piruvato → acetil-CoA (PDH)",
+        "Glutamato → α-cetoglutarato (transaminación)",
+        "Piruvato → OAA (piruvato carboxilasa)",
+        "Succinil-CoA → succinato",
+        "Fumarato → malato (fumarasa)"
+      ],
+      "correct": 2,
+      "explain": "La piruvato carboxilasa es la enzima anaplerótica primaria en el hígado: piruvato + CO₂ + ATP → OAA. Es activada por acetil-CoA — señal de que hay acetil-CoA disponible pero OAA es limitante, asegurando el flujo continuo del ciclo.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca009",
+      "topic": "Ciclo de Krebs",
+      "text": "El citrato exportado de las mitocondrias al citosol es escindido por ATP-citrato liasa para proporcionar acetil-CoA para:",
+      "options": [
+        "Glucólisis",
+        "Gluconeogénesis",
+        "Síntesis de urea",
+        "Síntesis de hemo",
+        "Síntesis de ácidos grasos y colesterol"
+      ],
+      "correct": 4,
+      "explain": "El transporte de citrato al citosol es el mecanismo primario para exportar acetil-CoA mitocondrial para biosíntesis. La ATP-citrato liasa escinde el citrato en acetil-CoA + OAA. Este acetil-CoA citosólico se usa para síntesis de ácidos grasos y colesterol (vía HMG-CoA).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca010",
+      "topic": "Ciclo de Krebs",
+      "text": "¿Qué paso del ciclo de Krebs implica una descarboxilación oxidativa que produce CO₂ y NADH?",
+      "options": [
+        "Citrato → isocitrato",
+        "Isocitrato → α-cetoglutarato",
+        "Succinato → fumarato",
+        "Malato → oxalacetato",
+        "Fumarato → malato"
+      ],
+      "correct": 1,
+      "explain": "La isocitrato deshidrogenasa cataliza la primera descarboxilación oxidativa: isocitrato → α-cetoglutarato + CO₂ + NADH. Una segunda descarboxilación oxidativa ocurre en la α-cetoglutarato deshidrogenasa (α-cetoglutarato → succinil-CoA + CO₂ + NADH).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca011",
+      "topic": "Ciclo de Krebs",
+      "text": "El complejo piruvato deshidrogenasa (PDH) requiere cinco coenzimas. ¿Qué combinación las nombra correctamente a todas?",
+      "options": [
+        "TPP, biotina, CoA, FMN, NADP⁺",
+        "PLP, ácido lipoico, CoA, FAD, NADP⁺",
+        "TPP, ácido lipoico, CoA, FMN, NAD⁺",
+        "TPP, ácido lipoico, CoA, FAD, NAD⁺",
+        "Biotina, ácido lipoico, AMP, FAD, NAD⁺"
+      ],
+      "correct": 3,
+      "explain": "El PDH consta de tres subunidades catalíticas: E1 (piruvato descarboxilasa, usa TPP), E2 (dihidrolipoil transacetilasa, usa ácido lipoico y CoA) y E3 (dihidrolipoil deshidrogenasa, usa FAD y NAD⁺). Las cinco coenzimas son imprescindibles; la ausencia de cualquiera de ellas detiene por completo el complejo.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca012",
+      "topic": "Ciclo de Krebs",
+      "text": "La piruvato deshidrogenasa (PDH) y la α-cetoglutarato deshidrogenasa (OGDH) se estudian frecuentemente juntas. ¿Qué afirmación describe mejor lo que verdaderamente comparten?",
+      "options": [
+        "Ambas usan biotina y transfieren un grupo carboxilo a un portador móvil entre subunidades",
+        "Ambas son citosólicas y reguladas por fosforilación reversible vía cinasas sensibles a la insulina",
+        "Ambas difieren en especificidad de E1 pero comparten una subunidad E2 dihidrolipoil transacilasa idéntica",
+        "Ambas producen acetil-CoA y comparten el mismo sitio de unión al sustrato en su subunidad E1",
+        "Ambas son complejos E1/E2/E3 que usan los mismos cinco coenzimas para descarboxilaciones oxidativas"
+      ],
+      "correct": 4,
+      "explain": "PDH y OGDH comparten la misma arquitectura de tres componentes (E1/TPP, E2/ácido lipoico+CoA, E3/FAD+NAD⁺) y catalizan reacciones de descarboxilación oxidativa análogas: PDH convierte piruvato → acetil-CoA + CO₂, mientras OGDH convierte α-cetoglutarato → succinil-CoA + CO₂. Su subunidad E3 (dihidrolipoil deshidrogenasa) es idéntica, por lo que un déficit de E3 deteriora ambos complejos simultáneamente.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca013",
+      "topic": "Ciclo de Krebs",
+      "text": "Concentraciones elevadas de ¿qué metabolito inhiben simultáneamente la citrato sintasa, la isocitrato deshidrogenasa y la α-KGDH, frenando el ciclo de Krebs cuando los equivalentes reductores están en exceso?",
+      "options": [
+        "NADH — se acumula cuando el transporte de electrones está saturado; inhibidor de producto directo en las tres enzimas",
+        "ADP — señaliza baja carga energética; actúa como activador de la isocitrato deshidrogenasa y la citrato sintasa",
+        "Ca²⁺ — entra a las mitocondrias durante la contracción muscular; activa isocitrato deshidrogenasa, α-KGDH y PDH fosfatasa",
+        "Succinil-CoA — inhibidor de producto directo de α-KGDH; inhibidor de retroalimentación de citrato sintasa",
+        "Acetil-CoA — se acumula en β-oxidación; inhibe la PDH pero no las tres enzimas reguladoras del ciclo"
+      ],
+      "correct": 0,
+      "explain": "La acumulación de NADH indica un estado de alta energía y alta reducción, e inhibe los tres puntos de control principales del ciclo de Krebs de forma simultánea. Esta inhibición por producto frena el ciclo hasta que el NADH es reoxidado por la cadena respiratoria. El Ca²⁺ tiene el efecto contrario — activa el ciclo durante la actividad muscular —, mientras que el ADP activa (no inhibe) la isocitrato deshidrogenasa.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca014",
+      "topic": "Ciclo de Krebs",
+      "text": "El FADH₂ producido por la succinato deshidrogenasa genera menos ATP que el NADH. ¿Cuál es la razón mecanística principal?",
+      "options": [
+        "FADH₂ llega al Complejo I en un sitio de unión posterior al NADH, reduciendo el bombeo de protones por par",
+        "FADH₂ tiene un potencial de reducción más negativo que NAD⁺/NADH y no puede reducir ubiquinona sin energía adicional",
+        "FADH₂ está unido a proteína en el Complejo II y pasa electrones directamente a ubiquinona, eludiendo completamente el Complejo I",
+        "FADH₂ dona al Complejo III a través de un portador de flavina, saltando tanto el Complejo I como el Complejo II",
+        "FADH₂ se oxida en la cara del espacio intermembrana, reduciendo el gradiente de protones para la ATP sintasa"
+      ],
+      "correct": 2,
+      "explain": "El NADH alimenta el Complejo I, que bombea 4 H⁺ por par electrónico → ~2,5 ATP. El FADH₂ está unido covalentemente a la succinato deshidrogenasa (Complejo II) y transfiere electrones directamente a la ubiquinona, eludiendo completamente el Complejo I — no se bombean protones en ese paso, por lo que se producen solo ~1,5 ATP. El punto de entrada en la cadena respiratoria es la diferencia decisiva entre los dos portadores.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca015",
+      "topic": "Ciclo de Krebs",
+      "text": "La succinil-CoA sintetasa genera un GTP por vuelta del ciclo de Krebs humano. ¿Cuál es el destino metabólico primario de este GTP mitocondrial?",
+      "options": [
+        "Hidrolizado por GTPasa mitocondrial; energía fosforila AMP a ADP en inusual transfosforilación en dos pasos",
+        "Se acumula en la matriz como señal reguladora que activa cinasas GTP-dependientes para dinámica organular",
+        "Exportado por el translocador de nucleótidos de adenina para activar proteínas de señalización citosólicas",
+        "Convertido a ATP por nucleósido difosfato cinasa: GTP + ADP → GDP + ATP",
+        "Usado por ATP sintasa como sustrato alternativo para producir ATP sin gradiente de protones"
+      ],
+      "correct": 3,
+      "explain": "La NDP cinasa cataliza la reacción libremente reversible GTP + ADP ⇌ GDP + ATP, haciendo que el GTP derivado del ciclo sea energéticamente equivalente a un ATP. El GTP también puede impulsar directamente reacciones citosólicas — en particular la gluconeogénesis, donde la PEPCK usa GTP para convertir OAA en fosfoenolpiruvato —, subrayando su doble papel como moneda energética y señal metabólica.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc001",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Qué complejo de la cadena respiratoria acepta electrones del ubiquinol (QH₂) y los transfiere al citocromo c?",
+      "options": [
+        "Complejo I",
+        "Complejo II",
+        "Complejo IV",
+        "Complejo V",
+        "Complejo III (complejo bc1)"
+      ],
+      "correct": 4,
+      "explain": "El Complejo III (ubiquinol-citocromo c oxidorreductasa) acepta electrones del ubiquinol y los transfiere al citocromo c mediante el mecanismo del ciclo Q, bombeando simultáneamente 4 protones por 2 electrones a través de la membrana mitocondrial interna.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc002",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El gradiente de protones generado por la cadena respiratoria es utilizado por la ATP sintasa (Complejo V) mediante:",
+      "options": [
+        "Fosforilación a nivel de sustrato",
+        "Quimiosmosis (hipótesis de Mitchell)",
+        "Transferencia directa de electrones al ADP",
+        "Descarboxilación oxidativa",
+        "Transfosforilación desde GTP"
+      ],
+      "correct": 1,
+      "explain": "Según la hipótesis quimiosmótica de Mitchell, la fuerza protón-motriz (gradiente electroquímico) generada por la cadena respiratoria impulsa protones de vuelta a través de la subunidad F₀ de la ATP sintasa. Este flujo protónico impulsa la rotación del anillo c, causando cambios conformacionales en la subunidad F₁ que sintetizan ATP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc003",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El cianuro es un potente inhibidor de la respiración celular porque bloquea:",
+      "options": [
+        "Complejo I",
+        "Complejo III",
+        "ATP sintasa",
+        "Complejo IV (citocromo c oxidasa)",
+        "Complejo II"
+      ],
+      "correct": 3,
+      "explain": "El cianuro (CN⁻) se une a la forma Fe³⁺ del citocromo a3 en el Complejo IV, impidiendo la transferencia de electrones al O₂. Esto detiene toda la cadena de transporte de electrones, colapsa el gradiente protónico y detiene la síntesis de ATP. Los tejidos con mayor demanda de O₂ (cerebro, corazón) son los más vulnerables.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc004",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Cuántas moléculas de ATP se producen por NADH oxidado en la fosforilación oxidativa (P/O ~2,5)?",
+      "options": [
+        "1,0",
+        "1,5",
+        "2,5",
+        "3,5",
+        "2,0"
+      ],
+      "correct": 2,
+      "explain": "La estimación moderna del cociente P/O para NADH es ~2,5 ATP por NADH (no el clásico '3' de los textos antiguos). Esto tiene en cuenta la estequiometría real H⁺/ATP de la ATP sintasa (~8 protones por 3 ATP) y el costo energético del transporte ATP/ADP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc005",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "Las proteínas desacoplantes (UCPs) en el tejido adiposo pardo disipan el gradiente protónico como:",
+      "options": [
+        "Calor (termogénesis)",
+        "ATP",
+        "NADH",
+        "CO₂",
+        "Trabajo mecánico"
+      ],
+      "correct": 0,
+      "explain": "UCP1 (termogenina) permite que los protones se filtren de vuelta a través de la membrana mitocondrial interna sin impulsar la síntesis de ATP, disipando la fuerza protón-motriz como calor. Esta es la base de la termogénesis sin temblor en recién nacidos y mamíferos adaptados al frío.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc006",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Qué portador móvil de electrones transporta los electrones entre el Complejo I/II y el Complejo III?",
+      "options": [
+        "Citocromo c",
+        "Ubiquinona (Coenzima Q)",
+        "FAD",
+        "FMN",
+        "Grupos hierro-azufre"
+      ],
+      "correct": 1,
+      "explain": "La ubiquinona (CoQ) es una molécula liposoluble que difunde dentro de la membrana mitocondrial interna, recogiendo electrones del Complejo I y II (como QH₂) y entregándolos al Complejo III. El citocromo c es el portador soluble en agua entre el Complejo III y IV.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc007",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "La rotenona, usada como pesticida y veneno para peces, inhibe la cadena respiratoria bloqueando:",
+      "options": [
+        "Complejo II",
+        "Complejo III",
+        "Complejo I (NADH deshidrogenasa)",
+        "Complejo IV",
+        "Complejo V (ATP sintasa)"
+      ],
+      "correct": 2,
+      "explain": "La rotenona bloquea la transferencia de electrones desde los grupos hierro-azufre del Complejo I a la ubiquinona. Inhibe la oxidación de NADH sin afectar la oxidación de succinato (Complejo II). La rotenona también se usa experimentalmente para modelar la patología del Parkinson.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc008",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El aceptor final de electrones en la cadena respiratoria mitocondrial es:",
+      "options": [
+        "NAD⁺",
+        "Ubiquinona",
+        "Citocromo c",
+        "Oxígeno molecular (O₂)",
+        "Dióxido de carbono (CO₂)"
+      ],
+      "correct": 3,
+      "explain": "El oxígeno molecular (O₂) es el aceptor terminal de electrones. El Complejo IV (citocromo c oxidasa) transfiere electrones del citocromo c al O₂, reduciéndolo a agua. Este paso irreversible impulsa toda la cadena de transporte de electrones hacia adelante.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc009",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "La oligomicina inhibe la síntesis de ATP bloqueando:",
+      "options": [
+        "Citocromo c oxidasa",
+        "El canal protónico F₀ de la ATP sintasa",
+        "Reducción de ubiquinona",
+        "Complejo I",
+        "Translocasa de nucleótidos de adenina"
+      ],
+      "correct": 1,
+      "explain": "La oligomicina se une a la subunidad F₀ de la ATP sintasa, bloqueando el canal protónico. Esto impide la re-entrada de protones y la síntesis de ATP. Como el gradiente protónico no puede disiparse, también inhibe secundariamente la cadena respiratoria.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc010",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Cuál de los siguientes describe correctamente el cociente P/O para FADH₂?",
+      "options": [
+        "~3,0",
+        "~2,5",
+        "~1,5",
+        "~1,0",
+        "~2,0"
+      ],
+      "correct": 2,
+      "explain": "El FADH₂ (generado en succinato deshidrogenasa) dona electrones a la ubiquinona, omitiendo el Complejo I. Dado que el Complejo I bombea ~4 protones, omitirlo reduce la contribución al gradiente protónico. El cociente P/O para FADH₂ es aproximadamente 1,5 ATP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc011",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El NADH citosólico de la glucólisis no puede cruzar la membrana mitocondrial interna. ¿Qué lanzadera predomina en corazón e hígado, preservando el rendimiento completo de ~2,5 ATP?",
+      "options": [
+        "Lanzadera malato-aspartato — regenera NADH en la matriz; ~2,5 ATP",
+        "Lanzadera glicerol-3-fosfato — alimenta electrones al Complejo II; solo ~1,5 ATP",
+        "Lanzadera del citrato — exporta equivalentes de acetil-CoA para síntesis lipídica citosólica",
+        "Lanzadera de carnitina — transporta acil-CoA de ácidos grasos a través de la membrana interna",
+        "Transportador de piruvato — importa piruvato a la matriz; sin transferencia de NADH"
+      ],
+      "correct": 0,
+      "explain": "La lanzadera malato-aspartato usa malato deshidrogenasa y aspartato aminotransferasa en ambos lados de la membrana para canalizar el poder reductor equivalente al NADH citosólico como NADH hacia la matriz, entrando en el Complejo I (~2,5 ATP). La lanzadera glicerol-3-fosfato es más rápida pero menos eficiente (~1,5 ATP, entrada en Complejo II) y predomina en cerebro y músculo esquelético. Los transportadores de citrato, carnitina y piruvato sirven funciones de transporte completamente diferentes.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc012",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El ciclo Q en el Complejo III resulta en el bombeo neto de 4 H⁺ por 2 electrones. ¿Qué característica causa directamente esta amplificación?",
+      "options": [
+        "Ambos electrones del QH₂ evitan el centro Rieske y fluyen directamente al citocromo b",
+        "Rieske acepta ambos electrones del QH₂ y los dona a dos moléculas de citocromo c",
+        "El QH₂ primero reduce FMN en la matriz antes de que los electrones alcancen el citocromo c",
+        "Los cambios conformacionales del citocromo b impulsan el bombeo de protones sin semiquinona",
+        "La oxidación del QH₂ se bifurca: un electrón al citocromo c vía Rieske, uno a la semiquinona del sitio Qi"
+      ],
+      "correct": 4,
+      "explain": "En el sitio Qo, el QH₂ pierde sus dos electrones por caminos separados: uno viaja vía el clúster Rieske [2Fe-2S] y el citocromo c₁ al citocromo c (cadena de alto potencial), mientras el otro pasa por el citocromo b (bL → bH) a una ubiquinona en el sitio Qi, generando una semiquinona. Una segunda oxidación de QH₂ completa esto a QH₂ en el sitio Qi, liberando 2 H⁺ a la matriz. Esta bifurcación duplica efectivamente la translocación de protones por par de electrones que alcanza el citocromo c, produciendo 4 H⁺/2e⁻ netos.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc013",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Cuál es el papel específico de la proteína Rieske hierro-azufre en el Complejo III?",
+      "options": [
+        "Acepta electrones del QH₂ en el sitio Qo y los transfiere al citocromo c₁",
+        "Acepta electrones del NADH en la cara de la matriz y los transfiere vía FMN a la ubiquinona",
+        "Acepta electrones del citocromo c y los transfiere a los centros de cobre del Complejo IV",
+        "Dona electrones directamente al O₂, generando superóxido en el sitio Qo",
+        "Transfiere electrones de la succinato deshidrogenasa a la ubiquinona en el sitio Qi"
+      ],
+      "correct": 0,
+      "explain": "La proteína Rieske contiene un clúster [2Fe-2S] con un potencial de reducción inusualmente alto (~+0,28 V), situándolo entre el ubiquinol y el citocromo c₁ en la rama de alto potencial del ciclo Q. En el sitio Qo acepta uno de los dos electrones del QH₂ y lo dona al citocromo c₁, que luego reduce el citocromo c soluble. El movimiento físico del dominio cabeza de Rieske entre el citocromo b y el citocromo c₁ es esencial para la transferencia bifurcada de electrones.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc014",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "El FMN es el aceptor primario de electrones del NADH en el Complejo I. ¿Cuál de las siguientes afirmaciones describe correctamente su función?",
+      "options": [
+        "Acepta electrones del ubiquinol; los transfiere de vuelta al NAD⁺ en la matriz",
+        "Actúa como sumidero final de electrones en el Complejo I; permanece reducido cuando la FPM es baja",
+        "Acepta electrones del FADH₂ de la succinato deshidrogenasa; los transmite a los clústeres Fe-S",
+        "Acepta 2e⁻ del NADH de una vez; los pasa individualmente a través de clústeres Fe-S a la CoQ",
+        "Bombea protones de la matriz al EIM directamente; sin participación de clústeres hierro-azufre"
+      ],
+      "correct": 3,
+      "explain": "El FMN es un aceptor de dos electrones que recibe ambos electrones del NADH simultáneamente, formando FMNH₂. Luego los re-dona uno a la vez a una serie de clústeres hierro-azufre (N1a, N3, N1b, N4, N5, N6a/b, N2), que son portadores obligados de un solo electrón. El flujo de electrones a través de esta cadena está acoplado a cambios conformacionales que bombean 4 H⁺ por NADH. Esta conversión de dos a un electrón es el papel definitorio del FMN en el Complejo I.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc015",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "En el mecanismo de cambio de unión de Boyer, la fuerza protón-motriz no forma directamente el enlace ATP. ¿Cuál es su papel real?",
+      "options": [
+        "Dona un protón directamente al β-fosfato del ADP para impulsar la formación del enlace",
+        "Abre un canal en F₁ permitiendo la difusión libre de ATP y ADP a través de la membrana interna",
+        "Impulsa la transferencia de electrones en F₁ que activa el ADP hacia el fosfato inorgánico",
+        "Genera NADPH en la matriz para suministrar energía para la formación del enlace ATP",
+        "Impulsa la rotación del anillo c, girando la subunidad γ; los cambios conformacionales de la subunidad β liberan el ATP unido"
+      ],
+      "correct": 4,
+      "explain": "El ATP se forma espontáneamente (ΔG ≈ 0) en el sitio catalítico estrecho de F₁ — la formación del enlace en sí no requiere energía externa. La fuerza protón-motriz impulsa la rotación del anillo c de F₀, que gira la subunidad γ dentro de F₁, ciclando cada una de las tres subunidades β a través de conformaciones abierta → suelta → estrecha. El paso que requiere energía es la transición de estrecha a abierta, que libera el ATP recién formado. Esta catálisis rotatoria fue confirmada por Boyer y Walker, Premio Nobel 1997.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc016",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "¿Cuál es la fuerza termodinámica impulsora que mueve los electrones a lo largo de la cadena respiratoria desde el NADH hasta el O₂?",
+      "options": [
+        "El gradiente de concentración de NADH/NAD⁺ a través de la membrana interna",
+        "El ΔE°' entre NADH/NAD⁺ (−0,32 V) y O₂/H₂O (+0,82 V)",
+        "La rotación mecánica de la ATP sintasa que arrastra electrones hacia el Complejo IV",
+        "El gradiente de pH transmembranal que acidifica el EIM para impulsar la transferencia de electrones",
+        "La alta concentración de citocromo c en el EIM actuando como sumidero permanente de electrones"
+      ],
+      "correct": 1,
+      "explain": "El flujo de electrones en la cadena respiratoria está impulsado por la diferencia en los potenciales de reducción estándar. El par NADH/NAD⁺ tiene E°' = −0,32 V; el par O₂/H₂O tiene E°' = +0,82 V, dando ΔE°' = +1,14 V en total. Mediante ΔG°' = −nFΔE°', esto corresponde a ~−220 kJ por mol de pares de electrones — un gran cambio de energía libre espontáneo que impulsa los electrones desde el Complejo I hasta el Complejo IV, acoplándose al bombeo de protones en cada paso.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc017",
+      "topic": "Cadena Respiratoria y OXFOS",
+      "text": "En sentido estricto, ¿cuál es el producto directo de la cadena respiratoria antes de que actúe la ATP sintasa?",
+      "options": [
+        "ATP — mediante fosforilación a nivel de sustrato en cada paso de transferencia de electrones",
+        "NADPH — regenerado por la transhydrogenasa mitocondrial usando la energía del flujo de electrones",
+        "Un gradiente electroquímico de protones (fuerza protón-motriz) a través de la membrana interna",
+        "Calor — energía térmica liberada cuando los electrones caen a través de los complejos",
+        "Citocromo c reducido — se acumula en el EIM cuando la ATP sintasa está inhibida"
+      ],
+      "correct": 2,
+      "explain": "La única salida directa de la cadena respiratoria es la fuerza protón-motriz (FPM), acumulada bombeando H⁺ desde la matriz al EIM en los Complejos I, III y IV. La FPM tiene dos componentes: potencial de membrana (ΔΨ ≈ 150–180 mV, el término dominante en mitocondrias) y gradiente de pH (ΔpH ≈ 0,5–1 unidad). La ATP sintasa luego consume esta FPM para impulsar la fosforilación. Crucialmente, la FPM también puede impulsar el transporte activo y la producción de calor vía UCPs — la síntesis de ATP es secundaria.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao001",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Dónde ocurre principalmente la β-oxidación de ácidos grasos de cadena larga?",
+      "options": [
+        "Citosol",
+        "Retículo endoplásmico",
+        "Matriz mitocondrial",
+        "Peroxisoma",
+        "Lisosoma"
+      ],
+      "correct": 2,
+      "explain": "La β-oxidación de ácidos grasos de cadena larga ocurre en la matriz mitocondrial. Los ácidos grasos se activan a acil-CoA en el citosol, se transportan a través de la membrana mitocondrial interna mediante el sistema de lanzadera de carnitina y luego sufren sucesivas rondas de β-oxidación.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao002",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Qué sistema de transporte es necesario para mover grupos acilo de cadena larga hacia la matriz mitocondrial?",
+      "options": [
+        "Lanzadera malato-aspartato",
+        "Lanzadera de carnitina (CPT-I y CPT-II)",
+        "Translocasa de acetil-CoA",
+        "Translocasa ATP-ADP",
+        "Sistema de transporte de citrato"
+      ],
+      "correct": 1,
+      "explain": "El acil-CoA de cadena larga no puede cruzar directamente la membrana mitocondrial interna. CPT-I (membrana externa) convierte el acil-CoA en acilcarnitina, que es transportado por la translocasa carnitina-acilcarnitina y reconvertido a acil-CoA por CPT-II (membrana interna).",
+      "explainImg": ""
+    },
+    {
+      "id": "fao003",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Cuántas rondas de β-oxidación se necesitan para oxidar completamente el palmitoil-CoA (C16:0)?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "El palmitoil-CoA (16 carbonos) requiere 7 rondas de β-oxidación para producir 8 moléculas de acetil-CoA. Cada ronda acorta la cadena en 2 carbonos y produce 1 FADH₂ + 1 NADH + 1 acetil-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao004",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Qué enzima es inhibida por malonil-CoA, regulando así la entrada de ácidos grasos en las mitocondrias?",
+      "options": [
+        "CPT-II",
+        "Acil-CoA sintetasa",
+        "CPT-I",
+        "Translocasa carnitina-acilcarnitina",
+        "β-Hidroxiacil-CoA deshidrogenasa"
+      ],
+      "correct": 2,
+      "explain": "CPT-I es inhibida alostéricamente por malonil-CoA, el primer intermediario comprometido de la síntesis de ácidos grasos. Esto asegura que síntesis y oxidación de ácidos grasos no estén simultáneamente activas: cuando el malonil-CoA es alto, CPT-I es inhibida.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao005",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Qué productos se generan en cada ciclo de β-oxidación?",
+      "options": [
+        "1 NADH + 1 NADPH + 1 acetil-CoA",
+        "1 FADH₂ + 1 NADH + 1 acetil-CoA",
+        "2 FADH₂ + 1 acetil-CoA",
+        "1 FADH₂ + 1 NADH + 1 succinil-CoA",
+        "2 NADH + 1 acetil-CoA"
+      ],
+      "correct": 1,
+      "explain": "Cada ronda de β-oxidación produce: 1 FADH₂ (paso acil-CoA deshidrogenasa), 1 NADH (paso L-3-hidroxiacil-CoA deshidrogenasa) y 1 acetil-CoA (paso tiolasa). Estos entran respectivamente en la cadena respiratoria y el ciclo de Krebs.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao006",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "Durante la β-oxidación de ácidos grasos insaturados, ¿qué enzima adicional se requiere para dobles enlaces en configuración cis?",
+      "options": [
+        "Enoil-CoA hidratasa",
+        "2,4-Dienoil-CoA reductasa",
+        "Enoil-CoA isomerasa",
+        "3-Hidroxiacil-CoA epimerasa",
+        "Acil-CoA deshidrogenasa"
+      ],
+      "correct": 2,
+      "explain": "Los ácidos grasos insaturados con dobles enlaces en carbonos impares (cis-Δ³) requieren enoil-CoA isomerasa para convertir cis-Δ³-enoil-CoA en el sustrato normal de β-oxidación trans-Δ²-enoil-CoA. Los dobles enlaces en carbonos pares requieren 2,4-dienoil-CoA reductasa.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao007",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿En qué orgánulo ocurre principalmente la β-oxidación de ácidos grasos de cadena muy larga (>C22)?",
+      "options": [
+        "Mitocondrias",
+        "RE liso",
+        "Peroxisomas",
+        "Lisosomas",
+        "Núcleo"
+      ],
+      "correct": 2,
+      "explain": "Los ácidos grasos de cadena muy larga se acortan primero en peroxisomas por β-oxidación a ácidos grasos de cadena media, que luego se transfieren a mitocondrias para oxidación completa. La β-oxidación peroxisomal produce H₂O₂ (detoxificado por catalasa) en lugar de bombear protones.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao008",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "¿Cuál es el rendimiento neto de ATP de la oxidación completa de una molécula de palmitoil-CoA (C16:0)?",
+      "options": [
+        "106 ATP",
+        "100 ATP",
+        "108 ATP",
+        "129 ATP",
+        "80 ATP"
+      ],
+      "correct": 0,
+      "explain": "La oxidación de palmitoil-CoA rinde 7 rondas × (1 FADH₂ + 1 NADH) + 8 acetil-CoA. Usando cocientes P/O modernos: 7×1,5 + 7×2,5 + 8×10 = 10,5 + 17,5 + 80 = 108, menos 2 por activación = 106 ATP equivalentes.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao009",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "La deficiencia de carnitina conduce a deterioro de la oxidación de ácidos grasos. ¿Qué síntoma es más esperable?",
+      "options": [
+        "Hiperglucemia",
+        "Hiperlipidemia con debilidad muscular e hipoglucemia",
+        "Cetoacidosis",
+        "Amoniaco elevado",
+        "Alcalosis metabólica"
+      ],
+      "correct": 1,
+      "explain": "Sin carnitina, los ácidos grasos de cadena larga no pueden entrar a las mitocondrias para β-oxidación. Esto causa acumulación de ácidos grasos (hiperlipidemia), debilidad muscular (suministro energético deteriorado) e hipoglucemia (incapacidad de ahorrar glucosa mediante oxidación de grasa).",
+      "explainImg": ""
+    },
+    {
+      "id": "fao010",
+      "topic": "Oxidación de Ácidos Grasos",
+      "text": "La deficiencia de MCAD (acil-CoA deshidrogenasa de cadena media) es peligrosa en el ayuno porque:",
+      "options": [
+        "El exceso de cuerpos cetónicos causa acidosis",
+        "Los ácidos grasos no pueden oxidarse para energía, llevando a hipoglucemia",
+        "El catabolismo de aminoácidos está deteriorado",
+        "Las reservas de glucógeno no pueden movilizarse",
+        "La gluconeogénesis es inhibida por malonil-CoA"
+      ],
+      "correct": 1,
+      "explain": "La deficiencia de MCAD impide la oxidación de ácidos grasos de cadena media. Durante el ayuno, cuando la glucosa es limitada y la oxidación de ácidos grasos es crítica, esto lleva a hipoglucemia grave. La cetogénesis también está deteriorada porque el suministro de acetil-CoA de la β-oxidación está reducido.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab001",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Dónde ocurre principalmente la síntesis de ácidos grasos en la célula?",
+      "options": [
+        "Matriz mitocondrial",
+        "Citosol",
+        "Retículo endoplásmico",
+        "Núcleo",
+        "Peroxisoma"
+      ],
+      "correct": 1,
+      "explain": "La síntesis de ácidos grasos ocurre en el citosol, catalizada por la ácido graso sintasa (FAS). Los bloques de construcción (acetil-CoA y malonil-CoA) deben exportarse de las mitocondrias como citrato, luego escindidos por la ATP-citrato liasa en el citosol.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab002",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Cuál es el paso comprometido de la biosíntesis de ácidos grasos?",
+      "options": [
+        "Acetil-CoA → malonil-CoA (acetil-CoA carboxilasa)",
+        "Malonil-CoA → palmitato (FAS)",
+        "Citrato → acetil-CoA (ATP-citrato liasa)",
+        "Palmitato → palmitoil-CoA",
+        "Acetil-CoA → acetoacetil-CoA"
+      ],
+      "correct": 0,
+      "explain": "La acetil-CoA carboxilasa (ACC) cataliza la carboxilación dependiente de ATP de acetil-CoA a malonil-CoA. Este es el paso comprometido y limitante de velocidad de la síntesis de ácidos grasos. La ACC es activada por citrato e inhibida por palmitoil-CoA y fosforilación por AMPK.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab003",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Qué cofactor reductor requiere la ácido graso sintasa para los pasos de reducción?",
+      "options": [
+        "NADH",
+        "NADPH",
+        "FADH₂",
+        "ATP",
+        "CoASH"
+      ],
+      "correct": 1,
+      "explain": "La ácido graso sintasa requiere NADPH para los dos pasos de reducción por ciclo de elongación (cetorreducción y enoilreducción). El NADPH es suministrado principalmente por la vía de las pentosas fosfato y la reacción de la enzima málica.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab004",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Cuál es el producto primario liberado por la ácido graso sintasa (FAS) en mamíferos?",
+      "options": [
+        "Estearato (C18:0)",
+        "Palmitato (C16:0)",
+        "Miristato (C14:0)",
+        "Araquidonato (C20:4)",
+        "Oleato (C18:1)"
+      ],
+      "correct": 1,
+      "explain": "La FAS de mamíferos libera palmitato (C16:0) como producto principal. La elongación adicional a ácidos grasos de cadena más larga y la desaturación ocurren en el retículo endoplásmico por elongasas y desaturasas específicas.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab005",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Cuántas moléculas de malonil-CoA se necesitan para sintetizar una molécula de palmitato a partir de acetil-CoA?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "14",
+        "16"
+      ],
+      "correct": 1,
+      "explain": "El palmitato (C16:0) se sintetiza a partir de 1 unidad iniciadora de acetil-CoA y 7 unidades extensoras de malonil-CoA. Cada malonil-CoA añade 2 carbonos (tras descarboxilación), contribuyendo 14 carbonos; el acetil-CoA iniciador añade 2 más, para un total de 16.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab006",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "La acetil-CoA carboxilasa (ACC) es activada alostéricamente por:",
+      "options": [
+        "Palmitoil-CoA",
+        "AMP",
+        "Citrato",
+        "Glucagón",
+        "Epinefrina"
+      ],
+      "correct": 2,
+      "explain": "El citrato activa alostéricamente la ACC promoviendo su polimerización a la forma filamentosa activa. El citrato elevado señaliza abundancia de acetil-CoA y energía, indicando condiciones favorables para síntesis de grasa. Por el contrario, el palmitoil-CoA (producto final) y la fosforilación por AMPK inhiben la ACC.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab007",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Qué enzima introduce el primer doble enlace en ácidos grasos saturados en mamíferos, típicamente en la posición Δ9?",
+      "options": [
+        "Elongasa de ácidos grasos",
+        "Estearoil-CoA desaturasa (SCD, Δ9-desaturasa)",
+        "Acetil-CoA carboxilasa",
+        "Fosfolipasa A2",
+        "FADS2 (Δ6-desaturasa)"
+      ],
+      "correct": 1,
+      "explain": "La estearoil-CoA desaturasa (SCD) introduce un doble enlace cis en la posición Δ9, convirtiendo estearoil-CoA (C18:0) en oleoil-CoA (C18:1, Δ9). Los mamíferos carecen de Δ12 y Δ15 desaturasos, haciendo esenciales el ácido linoleico (Δ9,12) y α-linolénico (Δ9,12,15).",
+      "explainImg": ""
+    },
+    {
+      "id": "fab008",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "La proteína transportadora de acilos (ACP) en la FAS retiene intermediarios mediante qué tipo de enlace:",
+      "options": [
+        "Enlace éster a serina",
+        "Enlace fosfodiéster",
+        "Enlace tioéster a un grupo fosfopanteteína",
+        "Enlace amida a lisina",
+        "Enlace anhídrido"
+      ],
+      "correct": 2,
+      "explain": "Las cadenas de ácidos grasos en crecimiento están unidas covalentemente a la ACP mediante un enlace tioéster al grupo fosfopanteteína (derivado de CoA). Este enlace tioéster tiene alto potencial de transferencia de grupo y es esencial para las reacciones de condensación catalizada por FAS.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab009",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "La insulina estimula la síntesis de ácidos grasos principalmente mediante:",
+      "options": [
+        "Activación directa de FAS",
+        "Activación de AMPK, que fosforila ACC",
+        "Activación de una fosfatasa que desfosforila y activa ACC",
+        "Aumento de la degradación de malonil-CoA",
+        "Inhibición de la exportación de citrato de mitocondrias"
+      ],
+      "correct": 2,
+      "explain": "La insulina activa la proteína fosfatasa 2A, que desfosforila y activa la ACC. La insulina también induce la transcripción de los genes FAS y ACC, aumenta la captación de glucosa (proporcionando acetil-CoA y NADPH) e inhibe AMPK.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab010",
+      "topic": "Biosíntesis de Ácidos Grasos",
+      "text": "¿Cuál de los siguientes describe mejor por qué el ácido linoleico (18:2, Δ9,12) es un ácido graso esencial?",
+      "options": [
+        "Los humanos no pueden sintetizar ácidos grasos más largos de C16",
+        "Los humanos carecen de la Δ12-desaturasa para introducir el doble enlace Δ12",
+        "El ácido linoleico no puede activarse a acil-CoA",
+        "La β-oxidación del ácido linoleico es tóxica",
+        "El ácido linoleico solo se encuentra en grasas animales"
+      ],
+      "correct": 1,
+      "explain": "Los mamíferos tienen desaturasas para las posiciones Δ9, Δ6, Δ5 y Δ4, pero carecen de Δ12 y Δ15 desaturasas. Por lo tanto, el ácido linoleico (18:2 Δ9,12) y el ácido α-linolénico (18:3 Δ9,12,15) deben obtenerse de la dieta y se clasifican como ácidos grasos esenciales.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac001",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "¿Cuál es el primer paso en el catabolismo de la mayoría de los aminoácidos?",
+      "options": [
+        "Descarboxilación oxidativa",
+        "Transaminación o desaminación oxidativa",
+        "Fosforilación",
+        "Reducción",
+        "Hidroxilación"
+      ],
+      "correct": 1,
+      "explain": "El primer paso generalmente es la eliminación del grupo amino, ya sea por transaminación (transferencia al α-cetoglutarato, produciendo glutamato) o desaminación oxidativa (glutamato deshidrogenasa, liberando NH₄⁺). El α-cetoácido resultante entra en vías metabólicas centrales.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac002",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "El piridoxal fosfato (PLP) es el cofactor de qué tipo de enzima central para el catabolismo de aminoácidos:",
+      "options": [
+        "Oxidasas",
+        "Aminotransferasas (transaminasas)",
+        "Carboxilasas",
+        "Cinasas",
+        "Reductasas"
+      ],
+      "correct": 1,
+      "explain": "El PLP (derivado de vitamina B6) forma una base de Schiff con aminoácidos en el sitio activo de las aminotransferasas, permitiendo la transferencia del grupo amino al α-cetoglutarato. El PLP también es requerido por descarboxilasas, racemasa y deshidratasas de serina/treonina.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac003",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "La fenilcetonuria (PKU) resulta de deficiencia de fenilalanina hidroxilasa. ¿Qué se acumula como resultado?",
+      "options": [
+        "Tirosina",
+        "Fenilalanina y fenilpiruvato",
+        "Homogentisato",
+        "Fumarilacetoacetato",
+        "Precursores de melanina"
+      ],
+      "correct": 1,
+      "explain": "Sin fenilalanina hidroxilasa (que convierte fenilalanina en tirosina), la fenilalanina se acumula y se deriva a fenilpiruvato, fenilacetato y fenillactato (colectivamente 'fenilcetonas'). Estas son neurotóxicas y causan discapacidad intelectual si no se tratan.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac004",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "La enfermedad de la orina con olor a jarabe de arce es causada por deficiencia del complejo α-cetoácido deshidrogenasa de cadena ramificada, que afecta el catabolismo de:",
+      "options": [
+        "Fenilalanina, tirosina, triptófano",
+        "Leucina, isoleucina, valina",
+        "Lisina, arginina, histidina",
+        "Metionina, cisteína, serina",
+        "Aspartato, glutamato, alanina"
+      ],
+      "correct": 1,
+      "explain": "El complejo BCKDH descarboxila oxidativamente los α-cetoácidos derivados de leucina, isoleucina y valina. La deficiencia causa acumulación de estos cetoácidos, que dan a la orina olor dulce a jarabe de arce y causan daño neurológico grave.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac005",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "¿Qué aminoácido es el principal transportador de nitrógeno desde tejidos periféricos al hígado?",
+      "options": [
+        "Glutamina",
+        "Alanina",
+        "Glicina",
+        "Aspartato",
+        "Serina"
+      ],
+      "correct": 1,
+      "explain": "La alanina es el principal transportador de nitrógeno a través del ciclo glucosa-alanina: el músculo transamina piruvato con el grupo amino del catabolismo de aminoácidos para formar alanina, que viaja al hígado. Allí, la alanina aminotransferasa regenera piruvato (para gluconeogénesis) y glutamato (entra en el ciclo de la urea).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac006",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "La homocistinuria está asociada con deficiencia de cistationina β-sintasa. ¿Qué vía metabólica está principalmente afectada?",
+      "options": [
+        "Degradación de fenilalanina",
+        "Catabolismo de metionina (vía de transulfuración)",
+        "Catabolismo de triptófano",
+        "Catabolismo de histidina",
+        "Degradación de treonina"
+      ],
+      "correct": 1,
+      "explain": "La cistationina β-sintasa convierte homocisteína + serina → cistationina en la vía de transulfuración. La deficiencia causa acumulación de homocisteína, con enfermedad cardiovascular, luxación del cristalino y discapacidad intelectual. Se usan vitamina B6, B12 y folato en el tratamiento.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac007",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "Los aminoácidos glucogénicos pueden convertirse en glucosa mediante gluconeogénesis. ¿Cuál de los siguientes es puramente glucogénico?",
+      "options": [
+        "Leucina",
+        "Lisina",
+        "Alanina",
+        "Fenilalanina",
+        "Isoleucina"
+      ],
+      "correct": 2,
+      "explain": "La alanina es puramente glucogénica — se transamina a piruvato, que puede convertirse en OAA (por piruvato carboxilasa) y luego en glucosa mediante gluconeogénesis. La leucina y lisina son puramente cetogénicas; fenilalanina e isoleucina son tanto glucogénicas como cetogénicas.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac008",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "El catabolismo de fenilalanina y tirosina produce en última instancia qué precursores del ciclo de Krebs y cuerpos cetónicos:",
+      "options": [
+        "Oxalacetato y malato",
+        "Fumarato y acetoacetato",
+        "Succinato y propionil-CoA",
+        "α-Cetoglutarato y acetil-CoA",
+        "Citrato y NADH"
+      ],
+      "correct": 1,
+      "explain": "La fenilalanina primero se hidroxila a tirosina. La degradación de tirosina procede a través de homogentisato → maleilacetoacetato → fumarilacetoacetato → fumarato + acetoacetato. Esto hace a fenilalanina/tirosina tanto glucogénica (fumarato → TCA → gluconeogénesis) como cetogénica (acetoacetato).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac009",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "¿Qué reacción elimina el grupo amino del glutamato, liberando amonio libre?",
+      "options": [
+        "Transaminación por AST",
+        "Desaminación oxidativa por glutamato deshidrogenasa",
+        "Descarboxilación por glutamato descarboxilasa",
+        "Reducción por glutamato reductasa",
+        "Fosforilación por glutamato cinasa"
+      ],
+      "correct": 1,
+      "explain": "La glutamato deshidrogenasa (en la matriz mitocondrial) cataliza: glutamato + NAD⁺ → α-cetoglutarato + NADH + NH₄⁺. Esta es la principal ruta para liberar amoniaco libre en el hígado para la síntesis de urea. La enzima puede usar NAD⁺ o NADP⁺ y es regulada por ATP, GTP (inhiben) y ADP, GDP (activan).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac010",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "La alcaptonuria resulta de un defecto en la homogentisato oxidasa. ¿Qué aminoácidos no pueden catabolizarse normalmente?",
+      "options": [
+        "Metionina y cisteína",
+        "Fenilalanina y tirosina",
+        "Triptófano e histidina",
+        "Leucina e isoleucina",
+        "Lisina y arginina"
+      ],
+      "correct": 1,
+      "explain": "La homogentisato oxidasa cataliza un paso en la degradación de fenilalanina y tirosina. Su deficiencia causa acumulación de ácido homogentísico, que se excreta en orina (se oscurece al contacto con el aire) y se deposita en tejido conectivo (ocronosis), causando artritis.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc001",
+      "topic": "Ciclo de la Urea",
+      "text": "¿En qué dos compartimentos del hepatocito opera el ciclo de la urea?",
+      "options": [
+        "Citosol y lisosoma",
+        "Matriz mitocondrial y citosol",
+        "Retículo endoplásmico y citosol",
+        "Núcleo y citosol",
+        "Peroxisoma y citosol"
+      ],
+      "correct": 1,
+      "explain": "Las primeras dos reacciones del ciclo de la urea ocurren en la matriz mitocondrial (CPS-I y OTC), mientras que las tres reacciones restantes (ASS, ASL, arginasa) ocurren en el citosol. La citrulina es exportada de las mitocondrias mediante un transportador específico para continuar el ciclo.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc002",
+      "topic": "Ciclo de la Urea",
+      "text": "¿Qué enzima cataliza el paso limitante de velocidad del ciclo de la urea?",
+      "options": [
+        "Ornitina transcarbamilasa (OTC)",
+        "Carbamil fosfato sintetasa I (CPS-I)",
+        "Argininosuccinato sintetasa",
+        "Argininosuccinato liasa",
+        "Arginasa"
+      ],
+      "correct": 1,
+      "explain": "CPS-I es la enzima limitante del ciclo de la urea. Condensa NH₃ + CO₂ + 2 ATP → carbamil fosfato. Requiere N-acetilglutamato (NAG) como activador alostérico, que se sintetiza a partir de acetil-CoA + glutamato cuando la carga de aminoácidos es alta.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc003",
+      "topic": "Ciclo de la Urea",
+      "text": "El N-acetilglutamato (NAG) activa la CPS-I. El NAG se sintetiza cuando aumenta el catabolismo de aminoácidos, señalizado por niveles elevados de:",
+      "options": [
+        "Urea",
+        "Glutamina",
+        "Acetil-CoA y glutamato",
+        "ATP",
+        "Arginina"
+      ],
+      "correct": 2,
+      "explain": "La NAG sintasa es activada por arginina y usa acetil-CoA + glutamato como sustratos. Cuando se catabolizan grandes cantidades de aminoácidos, se acumulan glutamato (de transaminación) y acetil-CoA, estimulando la síntesis de NAG y así activando CPS-I.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc004",
+      "topic": "Ciclo de la Urea",
+      "text": "La deficiencia de OTC es el defecto del ciclo de la urea más común. Su herencia ligada al X significa que los varones afectados presentan:",
+      "options": [
+        "Hiperamoniemia leve",
+        "Hiperamoniemia neonatal grave, a menudo letal",
+        "Acumulación de urea",
+        "Acumulación de argininosuccinato",
+        "Solo aciduria orótica"
+      ],
+      "correct": 1,
+      "explain": "La deficiencia de OTC causa hiperamoniemia grave en varones hemicigotos afectados porque el carbamil fosfato no puede transferirse a ornitina y se acumula, desbordándose en la vía de síntesis de pirimidinas (produciendo ácido orótico). La hiperamoniemia causa edema cerebral y suele ser fatal en el período neonatal.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc005",
+      "topic": "Ciclo de la Urea",
+      "text": "¿Qué aminoácido se regenera al final de cada vuelta del ciclo de la urea, sirviendo como transportador?",
+      "options": [
+        "Arginina",
+        "Citrulina",
+        "Aspartato",
+        "Ornitina",
+        "Glutamina"
+      ],
+      "correct": 3,
+      "explain": "La ornitina es regenerada por la arginasa, que escinde la arginina en urea + ornitina. La ornitina es luego transportada de vuelta a las mitocondrias para reaccionar nuevamente con el carbamil fosfato, actuando como molécula transportadora catalítica del ciclo.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc006",
+      "topic": "Ciclo de la Urea",
+      "text": "¿Qué átomo de nitrógeno en la urea proviene de la adición directa de amoniaco libre (NH₄⁺) vía CPS-I?",
+      "options": [
+        "Ambos átomos de nitrógeno",
+        "El nitrógeno del aspartato",
+        "Un nitrógeno (del NH₃ vía carbamil fosfato)",
+        "Ninguno — ambos provienen de glutamina",
+        "El nitrógeno de la arginina"
+      ],
+      "correct": 2,
+      "explain": "La urea contiene dos átomos de nitrógeno. Uno proviene del amoniaco libre (NH₃) incorporado por CPS-I en carbamil fosfato. El segundo proviene del grupo amino del aspartato, que es incorporado en el paso de argininosuccinato sintetasa. El fumarato se libera cuando el aspartato dona su grupo amino.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc007",
+      "topic": "Ciclo de la Urea",
+      "text": "La citrulinemia tipo I resulta de deficiencia de argininosuccinato sintetasa (ASS). ¿Qué se acumula en sangre y orina?",
+      "options": [
+        "Ornitina",
+        "Citrulina",
+        "Argininosuccinato",
+        "Arginina",
+        "Carbamil fosfato"
+      ],
+      "correct": 1,
+      "explain": "La ASS cataliza citrulina + aspartato → argininosuccinato. Su deficiencia causa acumulación dramática de citrulina en sangre y orina (citrulinemia). El amoniaco también aumenta porque el ciclo de la urea está bloqueado. El tratamiento incluye restricción proteica y benzoato/fenilbutirato de sodio.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc008",
+      "topic": "Ciclo de la Urea",
+      "text": "El fumarato producido en el ciclo de la urea por argininosuccinato liasa es importante porque:",
+      "options": [
+        "Es excretado directamente",
+        "Entra en el ciclo de Krebs, conectándolo con el ciclo de la urea",
+        "Solo se convierte en malato para gluconeogénesis",
+        "Inhibe CPS-I",
+        "Solo se convierte en aspartato en el citosol"
+      ],
+      "correct": 1,
+      "explain": "El fumarato liberado por la argininosuccinato liasa entra en el ciclo de Krebs (fumarato → malato → OAA). El OAA puede transaminarse a aspartato, que luego re-entra al ciclo de la urea. Esta conexión se llama 'bicicleta ciclo de la urea-ciclo de Krebs'.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc009",
+      "topic": "Ciclo de la Urea",
+      "text": "En la hiperamoniemia, ¿qué aminoácido transporta nitrógeno desde los músculos al hígado para detoxificación, y cómo?",
+      "options": [
+        "Alanina — vía el ciclo glucosa-alanina; también glutamina — vía amidación de glutamato",
+        "Aspartato — directamente por la sangre",
+        "Glicina — vía el sistema de escisión de glicina",
+        "Serina — vía hidroximetiltransferasa",
+        "Taurina — vía conjugación"
+      ],
+      "correct": 0,
+      "explain": "Dos transportadores principales de nitrógeno: (1) Alanina (ciclo glucosa-alanina) — el músculo transamina piruvato a alanina; el hígado extrae el grupo amino. (2) Glutamina — sintetizada en músculo/cerebro por glutamina sintetasa (fija NH₃); captada por hígado e intestino y desaminada por glutaminasa.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc010",
+      "topic": "Ciclo de la Urea",
+      "text": "La deficiencia de arginasa causa argininemia. ¿Cuál es el rasgo neurológico distintivo en comparación con otros defectos del ciclo de la urea?",
+      "options": [
+        "Vómitos episódicos",
+        "Diplejía espástica progresiva y discapacidad intelectual en lugar de hiperamoniemia aguda",
+        "Hiperamoniemia neonatal letal",
+        "Pérdida auditiva sensorineural",
+        "Convulsiones por hipoglucemia"
+      ],
+      "correct": 1,
+      "explain": "La deficiencia de arginasa (argininemia) se presenta típicamente con diplejía espástica progresiva y discapacidad intelectual en lugar de hiperamoniemia potencialmente mortal, ya que vías alternativas pueden eliminar el amoniaco parcialmente. La arginina se acumula y se considera neurotóxica. La elevación de amoniaco es más leve que en otros defectos del ciclo de la urea.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph001",
+      "topic": "Agua y pH",
+      "text": "¿Qué característica estructural de las moléculas de agua les permite formar puentes de hidrógeno?",
+      "options": [
+        "Geometría angular con carga parcial negativa en O y cargas parciales positivas en los átomos de H",
+        "Geometría lineal que maximiza la alineación del dipolo",
+        "Igual electronegatividad de H y O en el enlace O-H",
+        "Presencia de enlaces O-H apolares",
+        "Disposición trigonal plana de los pares de electrones alrededor del oxígeno"
+      ],
+      "correct": 0,
+      "explain": "El agua es una molécula polar con geometría angular (~104,5°). El oxígeno, con alta electronegatividad, presenta carga parcial negativa y dos pares de electrones libres, mientras que los átomos de hidrógeno tienen cargas parciales positivas. Esta polaridad permite a cada molécula de agua formar hasta cuatro puentes de hidrógeno: dos como dador (a través de sus átomos H) y dos como aceptor (a través de los pares libres). Esta extensa red explica el elevado punto de ebullición, la tensión superficial, la capacidad calorífica y el poder disolvente del agua.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph002",
+      "topic": "Agua y pH",
+      "text": "¿Qué fórmula define correctamente el pH?",
+      "options": [
+        "pH = log[H⁺]",
+        "pH = −log[H⁺]",
+        "pH = −log[OH⁻]",
+        "pH = log Kw",
+        "pH = [H⁺] × [OH⁻]"
+      ],
+      "correct": 1,
+      "explain": "El pH es el logaritmo decimal negativo de la concentración molar de protones. Como [H⁺] en agua pura es 10⁻⁷ mol/L, su pH = 7. La opción C describe el pOH; la opción D da 14 (una constante, no una definición); la opción E es dimensionalmente incorrecta.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph003",
+      "topic": "Agua y pH",
+      "text": "¿Cuál es el producto iónico del agua (Kw) a 25 °C?",
+      "options": [
+        "1 × 10⁻⁷ mol/L",
+        "1 × 10⁻¹⁴ mol²/L²",
+        "7,0 (adimensional)",
+        "1 × 10⁻⁷ mol²/L²",
+        "14 × 10⁻⁷ mol²/L²"
+      ],
+      "correct": 1,
+      "explain": "El producto iónico Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴ mol²/L² a 25 °C. En agua pura [H⁺] = [OH⁻] = 10⁻⁷ mol/L, por lo que pH = 7 (neutro). Kw aumenta con la temperatura: a 37 °C es ~2,4 × 10⁻¹⁴, lo que significa que el pH neutro a temperatura corporal se acerca a 6,8, aunque la sangre se mantiene entre 7,35 y 7,45.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph004",
+      "topic": "Agua y pH",
+      "text": "Una solución tiene [H⁺] = 1 × 10⁻³ mol/L. ¿Cuál es su pH y su carácter?",
+      "options": [
+        "pH 3, ácido",
+        "pH 3, básico",
+        "pH 11, ácido",
+        "pH −3, neutro",
+        "pH 7, neutro"
+      ],
+      "correct": 0,
+      "explain": "pH = −log(10⁻³) = 3. Un pH inferior a 7 indica una solución ácida ([H⁺] > [OH⁻]). Cada unidad de cambio en pH representa un cambio de 10 veces en [H⁺], por lo que pH 3 es 10.000 veces más ácido que pH 7.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph005",
+      "topic": "Agua y pH",
+      "text": "¿Qué describe la ecuación de Henderson-Hasselbalch?",
+      "options": [
+        "La dependencia de la velocidad enzimática de la concentración de sustrato",
+        "La relación entre pH, pKa y el cociente [A⁻]/[HA]",
+        "La dependencia de los valores de pKa con la temperatura",
+        "La relación entre osmolaridad y pH",
+        "La relación entre Kw y la temperatura"
+      ],
+      "correct": 1,
+      "explain": "La ecuación es: pH = pKa + log([A⁻]/[HA]). Cuantifica el pH de cualquier solución tampón a partir de su pKa y el cociente de base conjugada a ácido. Cuando [A⁻] = [HA], el término logarítmico es cero y pH = pKa — el punto medio de tamponamiento. Aplicada a la sangre: pH = 6,1 + log([HCO₃⁻]/[CO₂ disuelto]).",
+      "explainImg": ""
+    },
+    {
+      "id": "wph006",
+      "topic": "Agua y pH",
+      "text": "¿A qué pH existe un ácido débil con pKa = 4,8 al 50% como HA y al 50% como A⁻?",
+      "options": [
+        "pH 2,4",
+        "pH 6,0",
+        "pH 9,6",
+        "pH 4,8",
+        "pH 7,0"
+      ],
+      "correct": 3,
+      "explain": "Según la ecuación de Henderson-Hasselbalch, cuando [A⁻] = [HA], el término logarítmico es cero, por lo que pH = pKa = 4,8. Este es el punto medio de tamponamiento donde la capacidad tampón es máxima. Un tampón es efectivo dentro de aproximadamente ±1 unidad de pH respecto a su pKa.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph007",
+      "topic": "Agua y pH",
+      "text": "¿Cuál es el sistema tampón extracelular más importante en la sangre?",
+      "options": [
+        "Tampón fosfato (H₂PO₄⁻/HPO₄²⁻)",
+        "Amoníaco/amonio (NH₃/NH₄⁺)",
+        "Bicarbonato/ácido carbónico (HCO₃⁻/H₂CO₃)",
+        "Hemoglobina/oxihemoglobina",
+        "Grupos carboxilato de la albúmina plasmática"
+      ],
+      "correct": 2,
+      "explain": "El sistema tampón bicarbonato proporciona aproximadamente el 50% de la capacidad tampón total de la sangre. Su pKa es 6,1, pero es muy eficaz porque los pulmones eliminan continuamente CO₂ (sistema abierto), manteniendo bajo el CO₂ disuelto. Los riñones ajustan [HCO₃⁻] a lo largo de horas o días para la compensación a largo plazo. La relación normal [HCO₃⁻]/[H₂CO₃] a pH sanguíneo 7,4 es de aproximadamente 20:1.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph008",
+      "topic": "Agua y pH",
+      "text": "¿Cuál es el rango normal de pH de la sangre arterial?",
+      "options": [
+        "6,8–7,2",
+        "7,0–7,2",
+        "7,35–7,45",
+        "7,5–7,8",
+        "7,2–7,6"
+      ],
+      "correct": 2,
+      "explain": "El pH normal de la sangre arterial es 7,35–7,45, ligeramente alcalino, mantenido por sistemas tampón, el control pulmonar del CO₂ y la regulación renal del HCO₃⁻. Por debajo de 7,35 hay acidemia; por encima de 7,45, alcalemia. Valores fuera del rango 7,0–7,8 son incompatibles con la vida.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph009",
+      "topic": "Agua y pH",
+      "text": "¿En qué condición es máxima la capacidad tamponadora de un par ácido/base débil?",
+      "options": [
+        "Cuando pH = 2 × pKa",
+        "Cuando pH = pKa + 3",
+        "Cuando pH = pKa (concentraciones iguales de HA y A⁻)",
+        "Cuando la solución está completamente desprotonada (pH >> pKa)",
+        "Cuando solo está presente el ácido conjugado HA"
+      ],
+      "correct": 2,
+      "explain": "La capacidad tampón (β) es máxima cuando pH = pKa y las concentraciones del ácido débil (HA) y su base conjugada (A⁻) son iguales. Matemáticamente: β = 2,303 × C × α(1 − α), maximizado en α = 0,5. El tamponamiento efectivo ocurre dentro de ~1 unidad de pH por encima y por debajo del pKa; fuera de este rango la capacidad disminuye bruscamente.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph010",
+      "topic": "Agua y pH",
+      "text": "¿Qué cambio primario en la bioquímica sanguínea caracteriza la acidosis metabólica?",
+      "options": [
+        "Aumento de la pCO₂ con HCO₃⁻ normal",
+        "Descenso de la pCO₂ con HCO₃⁻ normal",
+        "Descenso de la concentración plasmática de HCO₃⁻",
+        "Aumento de la concentración plasmática de HCO₃⁻",
+        "Descenso de la pO₂ con HCO₃⁻ normal"
+      ],
+      "correct": 2,
+      "explain": "La acidosis metabólica es una reducción primaria en la concentración plasmática de HCO₃⁻ (< 22 mmol/L), que provoca una caída del pH por debajo de 7,35. Causas frecuentes: cetoacidosis diabética, acidosis láctica (hipoxia, sepsis), insuficiencia renal o diarrea grave (pérdida de HCO₃⁻). La compensación ocurre mediante hiperventilación (respiración de Kussmaul), que reduce la pCO₂ y restaura parcialmente el pH.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph011",
+      "topic": "Agua y pH",
+      "text": "Un paciente hiperventila por ansiedad. ¿Qué trastorno ácido-base se desarrolla?",
+      "options": [
+        "Acidosis metabólica",
+        "Acidosis respiratoria",
+        "Alcalosis metabólica",
+        "Alcalosis respiratoria",
+        "Acidosis mixta respiratoria y metabólica"
+      ],
+      "correct": 3,
+      "explain": "La hiperventilación elimina CO₂ más rápido de lo que se produce, disminuyendo la pCO₂ (hipocapnia). El equilibrio CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ se desplaza hacia la izquierda, reduciendo [H⁺] y elevando el pH por encima de 7,45 — alcalosis respiratoria. Los síntomas incluyen parestesias, espasmo carpopedal (por reducción del Ca²⁺ ionizado a mayor pH) y mareos. Tratamiento: respiración controlada o reinhalación de CO₂.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph012",
+      "topic": "Agua y pH",
+      "text": "La sangre de un paciente muestra [HCO₃⁻] = 24 mmol/L y pCO₂ = 40 mmHg. Usando pH = 6,1 + log([HCO₃⁻] / (0,03 × pCO₂)): ¿cuál es el pH sanguíneo?",
+      "options": [
+        "6,1",
+        "7,0",
+        "7,4",
+        "7,7",
+        "8,1"
+      ],
+      "correct": 2,
+      "explain": "CO₂ disuelto = 0,03 × 40 = 1,2 mmol/L. pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,30 = 7,40. Esta es la aplicación de la ecuación de Henderson-Hasselbalch al sistema bicarbonato. La relación normal [HCO₃⁻]/[CO₂ disuelto] de 20:1 siempre da pH 7,4. Los pulmones controlan la pCO₂; los riñones controlan [HCO₃⁻]. Este cálculo es la base de la interpretación de la gasometría arterial.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph013",
+      "topic": "Agua y pH",
+      "text": "¿Cuál es la fuerza impulsora termodinámica del efecto hidrofóbico?",
+      "options": [
+        "Repulsión electrostática entre moléculas apolares y el agua",
+        "Ganancia de entropía al liberar moléculas de agua ordenadas alrededor de grupos apolares hacia el agua libre",
+        "Ganancia de entalpía por enlaces de van der Waals entre moléculas hidrofóbicas",
+        "Formación de enlaces covalentes entre grupos apolares",
+        "Disminución de entropía cuando moléculas apolares se agrupan"
+      ],
+      "correct": 1,
+      "explain": "Las moléculas hidrofóbicas no pueden formar puentes de hidrógeno con el agua y obligan a las moléculas de agua circundantes a formar una estructura rígida y ordenada en forma de jaula (baja entropía). Cuando los grupos hidrofóbicos se agrupan, estas jaulas se disuelven en el agua libre desordenada, liberando muchas moléculas de agua y aumentando drásticamente la entropía del sistema (ΔS > 0). Este proceso impulsado por entropía dirige la formación de bicapas de membrana, el plegamiento del núcleo hidrofóbico de proteínas y el acoplamiento ligando-receptor.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph014",
+      "topic": "Agua y pH",
+      "text": "¿Por qué el agua apantalla las interacciones electrostáticas entre iones mucho más eficazmente que un disolvente apolar?",
+      "options": [
+        "El agua aumenta las cargas iónicas mediante reacciones de transferencia de protones",
+        "El agua tiene una constante dieléctrica muy alta (~80), que orienta sus dipolos alrededor de los iones y debilita las fuerzas culómbicas",
+        "El agua se une covalentemente a los iones y neutraliza su carga",
+        "El bajo punto de ebullición del agua permite un intercambio iónico rápido",
+        "Los puentes de hidrógeno del agua neutralizan directamente las cargas iónicas"
+      ],
+      "correct": 1,
+      "explain": "La permitividad relativa (constante dieléctrica) ε del agua a 25 °C es ~80 frente a ~2 del hexano. Las capas de hidratación de dipolos de agua orientadas alrededor de los iones reducen la fuerza culómbica efectiva entre dos cargas por un factor ε. Esto estabiliza los estados de transición cargados y polares en los centros activos enzimáticos, permite disolver sales y posibilita que los polielectrolitos biológicos (ADN, ARN) existan en solución sin autoagregarse.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph015",
+      "topic": "Agua y pH",
+      "text": "¿En cuál de las siguientes reacciones participa directamente el agua como sustrato?",
+      "options": [
+        "Transferencia de fosfato del ATP a la glucosa por la hexoquinasa",
+        "Reducción del NAD⁺ a NADH por la gliceraldehído-3-fosfato deshidrogenasa",
+        "Hidrólisis de un enlace peptídico por una serina proteasa",
+        "Isomerización de glucosa-6-fosfato a fructosa-6-fosfato",
+        "Descarboxilación de piruvato a acetil-CoA por el complejo piruvato deshidrogenasa"
+      ],
+      "correct": 2,
+      "explain": "Las serina proteasas (tripsina, quimotripsina, elastasa) escinden enlaces peptídicos usando el agua como segundo sustrato. La serina nucleofílica ataca el carbono carbonílico formando un intermediario acil-enzima, que luego es resuelto por una molécula de agua (desacilación), regenerando la enzima y liberando el fragmento C-terminal. El agua también participa en la hidrólisis del ADN, las reacciones de fosfatasas y cientos de otras reacciones metabólicas.",
+      "explainImg": ""
+    }
   ]
 }

@@ -1,127 +1,1921 @@
 {
   "topics": [
-      "Glycolysis",
-      "Gluconeogenesis",
-      "Glycogen Metabolism",
-      "Krebs Cycle",
-      "Respiratory Chain and OXPHOS",
-      "Fatty Acid Oxidation",
-      "Fatty Acid Biosynthesis",
-      "Amino Acid Catabolism",
-      "Urea Cycle"
+    "Glycolysis",
+    "Gluconeogenesis",
+    "Glycogen Metabolism",
+    "Krebs Cycle",
+    "Respiratory Chain and OXPHOS",
+    "Fatty Acid Oxidation",
+    "Fatty Acid Biosynthesis",
+    "Amino Acid Catabolism",
+    "Urea Cycle",
+    "Water and pH"
   ],
   "questions": [
-    {"id":"gly001","topic":"Glycolysis","text":"Where does glycolysis take place?","options":["In the mitochondria","In the cytosol","In the lysosome","In the nucleus","In the peroxisome"],"correct":1,"explain":"Glycolysis is a cytosolic pathway that runs entirely in the cytoplasm. In contrast, the citric acid cycle and oxidative phosphorylation take place in the mitochondria. This spatial separation allows both pathways to be regulated independently. Glycolysis remains active in the cytosol even under anaerobic conditions.","explainImg":""},
-    {"id":"gly002","topic":"Glycolysis","text":"How much energy is released during ATP hydrolysis?","options":["−60 kJ/mol","−10 kJ/mol","−45 kJ/mol","−31 kJ/mol","−20 kJ/mol"],"correct":3,"explain":"The hydrolysis of one phosphoanhydride bond of ATP releases approximately −31 kJ/mol under standard conditions. This value explains why ATP is considered the universal energy carrier of the cell. The free energy arises from electrostatic repulsion between phosphate groups and resonance stabilization of the resulting ADP and inorganic phosphate. Under cellular conditions the actual value can be even higher.","explainImg":"images/gly002.svg"},
-    {"id":"gly003","topic":"Glycolysis","text":"What distinguishes aerobic from anaerobic glycolysis?","options":["The further fate of the pyruvate produced","The number of ATP molecules consumed","The activity of phosphofructokinase 1","The number of reaction steps completed","The location of glucose phosphorylation"],"correct":0,"explain":"Glycolysis itself proceeds identically in both cases and ends with pyruvate. The key difference lies in the further fate of pyruvate: aerobically it is imported into mitochondria and decarboxylated to acetyl-CoA. Anaerobically, pyruvate is reduced to lactate in the cytosol by lactate dehydrogenase to regenerate NAD⁺.","explainImg":"images/gly003.svg"},
-    {"id":"gly004","topic":"Glycolysis","text":"What product is formed during the anaerobic breakdown of pyruvate in the cytosol?","options":["Citrate","Acetyl-CoA","Succinate","Oxaloacetate","Lactate"],"correct":4,"explain":"Under anaerobic conditions, pyruvate is reduced to lactate by lactate dehydrogenase (LDH). In the process, NADH is reoxidized to NAD⁺, which is essential for glycolysis to continue. Lactate is released into the blood and can be converted back to glucose in the liver via the Cori cycle. Clinically, lactate rises during hypoxia, sepsis, and intense exercise.","explainImg":""},
-    {"id":"gly005","topic":"Glycolysis","text":"What is the correct net balance of glycolysis?","options":["Glucose + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Pyruvate + 2 NADH + 4 ATP + 2 H₂O","Glucose + 4 ADP → 2 Pyruvate + 4 ATP + 2 CO₂","Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Pyruvate + 2 NADH + 2 ATP + 2 H₂O","Glucose + 2 ADP + 2 Pᵢ → 2 Pyruvate + 2 ATP + 2 NADH + 2 CO₂","Glucose + 2 NADH → 2 Pyruvate + 2 NAD⁺ + 4 ATP"],"correct":2,"explain":"The net balance of glycolysis yields 2 ATP (4 produced minus 2 consumed in phase 1), 2 NADH, and 2 pyruvate per glucose. The NADH can supply additional ATP in the electron transport chain under aerobic conditions. Important: no CO₂ is produced in glycolysis — CO₂ is only released during oxidative decarboxylation of pyruvate.","explainImg":""},
-    {"id":"gly006","topic":"Glycolysis","text":"Which three enzymes are considered the key regulatory enzymes of glycolysis?","options":["Glucokinase, aldolase, pyruvate dehydrogenase","Hexokinase, phosphofructokinase 1, pyruvate kinase","Lactate dehydrogenase, hexokinase, phosphoglycerate kinase","Aldolase, enolase, phosphoglycerate mutase","Phosphoglycerate kinase, triose phosphate isomerase, enolase"],"correct":1,"explain":"The three key enzymes of glycolysis catalyze irreversible, highly exergonic reactions and are the main targets of regulation. Hexokinase phosphorylates glucose to glucose-6-phosphate; PFK-1 is the most important regulatory enzyme; pyruvate kinase catalyzes the final ATP-producing step. All three are subject to allosteric and hormonal control.","explainImg":""},
-    {"id":"gly007","topic":"Glycolysis","text":"By which substance is phosphofructokinase 1 allosterically activated?","options":["ATP","Citrate","Glucose-6-phosphate","Phosphoenolpyruvate","Fructose-2,6-bisphosphate"],"correct":4,"explain":"Fructose-2,6-bisphosphate is the strongest allosteric activator of PFK-1 and a central regulatory molecule. It is produced by PFK-2, whose activity is hormonally controlled: insulin promotes, glucagon inhibits PFK-2 activity. ATP and citrate inhibit PFK-1 (energy surplus), while AMP and ADP activate it.","explainImg":""},
-    {"id":"gly008","topic":"Glycolysis","text":"Which hormone inhibits the transcription of hexokinase?","options":["Glucagon","Insulin","Thyroxine","Adrenaline","Cortisol"],"correct":0,"explain":"Glucagon signals low blood glucose and inhibits transcription of glycolytic enzymes such as hexokinase. Insulin has the opposite effect and increases their expression. This hormonal control of gene expression allows long-term adaptation of the glycolytic rate to nutritional status. Glucagon simultaneously promotes gluconeogenesis in the liver.","explainImg":""},
-    {"id":"gly009","topic":"Glycolysis","text":"What does the Cori cycle describe?","options":["Synthesis of glucose from amino acids in the muscle","Regeneration of NAD⁺ via the citric acid cycle in the liver","Breakdown of fatty acids to acetyl-CoA in the liver","Conversion of lactate to glucose between muscle and liver","Transport of pyruvate from the cytosol into mitochondria"],"correct":3,"explain":"In the Cori cycle, lactate produced during anaerobic muscle metabolism is transported via the blood to the liver. There it is converted back to glucose by gluconeogenesis (2 lactate → 1 glucose), which is made available to the muscle again. The cycle costs net energy (6 ATP equivalents per glucose) and occurs mainly during intense physical exercise.","explainImg":"images/gly009.svg"},
-    {"id":"gly010","topic":"Glycolysis","text":"Which statement about the regulation of pyruvate kinase is correct?","options":["It is allosterically activated by citrate","It is activated by fructose-1,6-bisphosphate","It is allosterically inhibited by glucose-6-phosphate","Insulin inhibits expression of the pyruvate kinase gene","It is allosterically inhibited by AMP"],"correct":1,"explain":"Pyruvate kinase is stimulated by fructose-1,6-bisphosphate in a feedforward activation: when PFK-1 is active and fructose-1,6-bisphosphate accumulates, pyruvate kinase is pre-activated. It is inhibited by ATP and alanine (energy surplus or sufficient amino acids). Insulin increases expression of the pyruvate kinase gene — the opposite of option D.","explainImg":""},
-    {"id":"gly011","topic":"Glycolysis","text":"What distinguishes glucokinase from hexokinase?","options":["Glucokinase is found in erythrocytes, hexokinase in the liver","Glucokinase has a lower Km for glucose than hexokinase","Glucokinase is not inhibited by glucose-6-phosphate","Glucokinase catalyzes the phosphorylation of fructose","Glucokinase consumes GTP instead of ATP in the reaction"],"correct":2,"explain":"Glucokinase (hexokinase IV) is found mainly in the liver and pancreatic beta cells. It has a high Km (low affinity) for glucose, is not inhibited by glucose-6-phosphate, and is induced by insulin. These properties make it the glucose sensor of the liver: it only becomes active at high blood glucose and adapts phosphorylation to supply.","explainImg":""},
-    {"id":"gly012","topic":"Glycolysis","text":"Which combination allosterically inhibits phosphofructokinase 1?","options":["ATP and citrate","AMP and fructose-2,6-bisphosphate","ADP and glucose-6-phosphate","NAD⁺ and oxaloacetate","Insulin and glucagon"],"correct":0,"explain":"High ATP levels signal energy surplus and inhibit PFK-1 to slow down glycolysis. Citrate, a citric acid cycle intermediate, also inhibits PFK-1 and signals that the cell has sufficient biosynthetic precursors. In contrast, AMP and ADP (energy deficit) and fructose-2,6-bisphosphate activate PFK-1.","explainImg":""},
-    {"id":"gly013","topic":"Glycolysis","text":"How many ATP molecules are produced directly and net in glycolysis?","options":["4 ATP, since four molecules are formed in phase 3","1 ATP, since only one substrate-level phosphorylation step exists","6 ATP, since the NADH contribution is included","2 ATP, since two are consumed in phase 1 and four are formed in phase 3","8 ATP, since glucose contains six carbon atoms"],"correct":3,"explain":"In phase 1 (investment phase) 2 ATP are consumed (hexokinase and PFK-1). In phase 3 (payoff phase) 4 ATP are formed (2 × phosphoglycerate kinase and 2 × pyruvate kinase). The net gain is therefore 2 ATP per glucose. The NADH produced yields additional ATP under aerobic conditions — but only in the electron transport chain, not in glycolysis itself.","explainImg":"images/gly013.svg"},
-    {"id":"gly014","topic":"Glycolysis","text":"In which clinical condition is an elevated blood lactate level most likely?","options":["Hyperglycemia in uncontrolled type 2 diabetes","Long-term fasting without physical exertion","Elevated insulin levels after a meal","Chronic renal insufficiency without acidosis","Tissue hypoxia in shock or severe sepsis"],"correct":4,"explain":"In tissue hypoxia (e.g. shock, sepsis, cardiac arrest) the electron transport chain cannot oxidize NADH sufficiently, causing increased reduction of pyruvate to lactate. This leads to lactic acidosis. A lactate > 2 mmol/L is a clinical warning value; values > 4 mmol/L indicate increased mortality risk. Regular lactate measurements are therefore standard in intensive care medicine.","explainImg":""},
-    {"id":"gly015","topic":"Glycolysis","text":"What is the end product of phase 1 of glycolysis?","options":["Glucose-1-phosphate","Phosphoenolpyruvate","Fructose-1,6-bisphosphate","Glyceraldehyde-3-phosphate","1,3-Bisphosphoglycerate"],"correct":2,"explain":"Phase 1 of glycolysis (investment phase) encompasses the conversion of glucose to fructose-1,6-bisphosphate consuming 2 ATP. Key enzymes are hexokinase (step 1) and phosphofructokinase 1 (step 3). The resulting fructose-1,6-bisphosphate is cleaved in phase 2 by aldolase into two C3 units: glyceraldehyde-3-phosphate (GAP) and dihydroxyacetone phosphate (DHAP).","explainImg":"images/gly015.svg"},
-    {"id":"gcn001","topic":"Gluconeogenesis","text":"Where does gluconeogenesis mainly take place?","options":["In skeletal muscle and the brain","In adipose tissue and the spleen","In cardiac muscle and the small intestine","In the lung and bone marrow","In the liver and kidney"],"correct":4,"explain":"Gluconeogenesis occurs mainly in the liver, which accounts for up to 90% of new glucose synthesis. The kidney contributes especially during prolonged fasting and acidosis. Other organs such as muscle or brain cannot perform significant gluconeogenesis because they lack key enzymes (e.g. glucose-6-phosphatase).","explainImg":""},
-    {"id":"gcn002","topic":"Gluconeogenesis","text":"What are the three main precursor substrates for gluconeogenesis?","options":["Glucose, fructose and galactose","Lactate, amino acids and glycerol","Fatty acids, cholesterol and ketone bodies","Acetyl-CoA, NADH and ATP","Pyruvate, CO₂ and GTP"],"correct":1,"explain":"The main substrates for gluconeogenesis are lactate (from anaerobic glycolysis, Cori cycle), glucogenic amino acids (e.g. alanine from muscle breakdown during fasting), and glycerol (from lipolysis in adipose tissue). Fatty acids cannot be converted to glucose in humans because acetyl-CoA cannot enter gluconeogenesis.","explainImg":""},
-    {"id":"gcn003","topic":"Gluconeogenesis","text":"Why can gluconeogenesis not simply run glycolysis in reverse?","options":["Because different coenzymes are needed in the reverse direction","Because glucose cannot be phosphorylated in the liver","Because NADH is not available for the reverse reaction","Because three glycolytic reactions are thermodynamically irreversible","Because pyruvate cannot be transported into mitochondria"],"correct":3,"explain":"Three glycolytic reactions are irreversible under physiological conditions: the reactions of hexokinase, phosphofructokinase 1, and pyruvate kinase. These must be bypassed in gluconeogenesis by specific circumventing reactions with their own enzymes. The remaining seven glycolytic reactions are reversible.","explainImg":""},
-    {"id":"gcn004","topic":"Gluconeogenesis","text":"Which enzyme catalyzes the first step of gluconeogenesis starting from pyruvate?","options":["Pyruvate carboxylase","PEP carboxykinase","Fructose-1,6-bisphosphatase","Glucose-6-phosphatase","Pyruvate dehydrogenase"],"correct":0,"explain":"Pyruvate carboxylase is located in the mitochondria and catalyzes the ATP-dependent carboxylation of pyruvate to oxaloacetate consuming HCO₃⁻. It requires biotin as a cofactor. Acetyl-CoA is an allosteric activator of pyruvate carboxylase — a signal that sufficient substrates for the citric acid cycle are available and excess pyruvate should be redirected into gluconeogenesis.","explainImg":""},
-    {"id":"gcn005","topic":"Gluconeogenesis","text":"In which cellular compartment is oxaloacetate converted to PEP by PEP carboxykinase?","options":["In the intermembrane space of mitochondria","In the endoplasmic reticulum","In the cytosol","In the mitochondrial matrix","In the nucleus"],"correct":2,"explain":"PEP carboxykinase (PEPCK) is a cytosolic enzyme that converts oxaloacetate to phosphoenolpyruvate (PEP) and CO₂ consuming GTP. Since oxaloacetate cannot directly cross the inner mitochondrial membrane, it is first reduced to malate, transported to the cytosol, and reoxidized to oxaloacetate there before PEPCK converts it to PEP.","explainImg":"images/gcn005.svg"},
-    {"id":"gcn006","topic":"Gluconeogenesis","text":"Which gluconeogenesis enzyme is localized in the endoplasmic reticulum?","options":["Pyruvate carboxylase","Fructose-1,6-bisphosphatase","PEP carboxykinase","Phosphoglycerate kinase","Glucose-6-phosphatase"],"correct":4,"explain":"Glucose-6-phosphatase is localized in the endoplasmic reticulum (ER) and catalyzes the final step of gluconeogenesis: removal of the phosphate group from glucose-6-phosphate to free glucose. Only the liver and kidney possess this enzyme, which explains why only these organs can release glucose into the blood. Its absence causes Von Gierke disease.","explainImg":""},
-    {"id":"gcn007","topic":"Gluconeogenesis","text":"What is the correct energy balance for gluconeogenesis forming 1 glucose from 2 pyruvate?","options":["Consumption of 2 ATP and 2 GTP, no NADH required","Consumption of 4 ATP, 2 GTP and 2 NADH","Consumption of 6 ATP and 2 FADH₂, no GTP required","Consumption of 2 ATP and 4 NADH, no GTP required","Consumption of 8 ATP and 4 GTP, 4 NADH required"],"correct":1,"explain":"Gluconeogenesis from 2 pyruvate requires: 2 ATP for pyruvate carboxylase, 2 GTP for PEPCK, 2 ATP for phosphoglycerate kinase (reverse), and 2 NADH for the reverse of glyceraldehyde-3-phosphate dehydrogenase. The total balance is 4 ATP + 2 GTP + 2 NADH — far more energy than glycolysis produces. Gluconeogenesis is driven by glucose shortage, not by energy surplus.","explainImg":""},
-    {"id":"gcn008","topic":"Gluconeogenesis","text":"What allosterically stimulates fructose-1,6-bisphosphatase?","options":["AMP and fructose-2,6-bisphosphate","ATP and glucose-6-phosphate","Insulin and pyruvate","Citrate","NADH and oxaloacetate"],"correct":3,"explain":"Citrate activates fructose-1,6-bisphosphatase and simultaneously inhibits PFK-1 — a classic example of reciprocal regulation. High citrate levels signal that the citric acid cycle is saturated and glucose should be stored rather than burned. AMP and fructose-2,6-bisphosphate, in contrast, inhibit the bisphosphatase and activate PFK-1 to drive glycolysis during energy deficit.","explainImg":"images/gcn008.svg"},
-    {"id":"gcn009","topic":"Gluconeogenesis","text":"What mechanism drives gluconeogenesis when lactate rises in the blood?","options":["Law of mass action: higher substrate concentration drives the reaction toward glucose","Allosteric activation of pyruvate carboxylase by lactate","Hormonal induction of PEPCK by lactate directly","Activation of glucose-6-phosphatase by elevated lactate","Inhibition of glycolysis by lactate via PFK-1"],"correct":0,"explain":"Gluconeogenesis is regulated by substrate availability (law of mass action): when blood concentrations of lactate, alanine, or glycerol rise, gluconeogenesis is driven purely by chemical equilibrium without hormonal intervention. In the Cori cycle, muscle supplies lactate that is directly used for glucose synthesis in the liver.","explainImg":""},
-    {"id":"gcn010","topic":"Gluconeogenesis","text":"How does glucagon influence gluconeogenesis at the hormonal level?","options":["Glucagon inhibits gluconeogenesis by activating FOXO1","Glucagon inhibits PEPCK gene expression via cAMP","Glucagon increases PEPCK gene expression via cAMP and CREB","Glucagon activates insulin receptors in hepatocytes","Glucagon stimulates glycolysis and inhibits gluconeogenesis"],"correct":2,"explain":"Glucagon binds to its G-protein-coupled receptor in hepatocytes and increases intracellular cAMP levels. cAMP activates protein kinase A, which phosphorylates the transcription factor CREB. Phosphorylated CREB increases transcription of PEPCK and glucose-6-phosphatase. Cortisol acts synergistically via the glucocorticoid receptor. This induction takes hours to days.","explainImg":""},
-    {"id":"gcn011","topic":"Gluconeogenesis","text":"How does insulin inhibit gluconeogenesis at the molecular level?","options":["Insulin activates CREB and increases PEPCK transcription","Insulin directly inhibits pyruvate carboxylase by contact","Insulin activates FOXO1 and increases PEPCK expression","Insulin lowers cAMP directly by inhibiting adenylate cyclase","Insulin phosphorylates and inactivates FOXO1, which otherwise promotes PEPCK"],"correct":4,"explain":"Insulin activates the PI3K/Akt signaling pathway, which leads to phosphorylation of the transcription factor FOXO1 by Akt (PKB). Phosphorylated FOXO1 exits the nucleus and can no longer promote transcription of PEPCK and glucose-6-phosphatase. FOXO1 in its active (unphosphorylated) state is thus a promoter of gluconeogenesis — insulin shuts it off by phosphorylation.","explainImg":""},
-    {"id":"gcn012","topic":"Gluconeogenesis","text":"Which statement about Von Gierke disease (type 1a) is correct?","options":["The cause is a defect in fructose-1,6-bisphosphatase","The cause is a defect in glucose-6-phosphatase","The cause is a defect in pyruvate carboxylase","The cause is a defect in PEP carboxykinase","The cause is a defect in lactate dehydrogenase"],"correct":1,"explain":"Von Gierke disease type 1a is inherited in an autosomal recessive manner and is caused by a defect in glucose-6-phosphatase in the ER. Without this enzyme, glucose-6-phosphate can be converted to free glucose neither from gluconeogenesis nor from glycogen breakdown. Consequences include severe fasting hypoglycemia, hepatomegaly from glycogen accumulation, lactic acidosis, and elevated uric acid and triglyceride levels.","explainImg":""},
-    {"id":"gcn013","topic":"Gluconeogenesis","text":"Why cannot fatty acids contribute to gluconeogenesis in humans?","options":["Because fatty acids cannot reach the mitochondria","Because fatty acid breakdown does not generate ATP","Because fatty acids are directly oxidized to CO₂ and H₂O","Because acetyl-CoA cannot be converted to oxaloacetate or PEP","Because fatty acids competitively inhibit pyruvate carboxylase"],"correct":3,"explain":"β-oxidation of fatty acids ends in acetyl-CoA. In the citric acid cycle, acetyl-CoA is completely oxidized to CO₂ — there is no net gain of oxaloacetate or other C4 compounds that could feed into gluconeogenesis. Therefore fatty acids are not gluconeogenic substrates. Glycerol (from triglycerides) can however enter gluconeogenesis as glycerol-3-phosphate.","explainImg":""},
-    {"id":"gcn014","topic":"Gluconeogenesis","text":"In which condition is gluconeogenesis most strongly activated?","options":["Prolonged fasting with high glucagon and cortisol levels","Shortly after a carbohydrate-rich meal","During intense anaerobic muscle work alone","With high insulin levels and full glycogen stores","On an exclusively fat diet without protein intake"],"correct":0,"explain":"During prolonged fasting, glucagon and cortisol are chronically elevated. Glucagon induces transcription of PEPCK and glucose-6-phosphatase via cAMP/CREB; cortisol acts synergistically. Simultaneously, muscle proteolysis (alanine) and lipolysis (glycerol) provide ample substrate. Insulin is suppressed, so FOXO1 remains active and gluconeogenic enzymes stay upregulated.","explainImg":""},
-    {"id":"gcn015","topic":"Gluconeogenesis","text":"Which drug inhibits gluconeogenesis and is used as first-line therapy in type 2 diabetes?","options":["Glibenclamide (sulfonylurea)","Sitagliptin (DPP-4 inhibitor)","Metformin (biguanide)","Empagliflozin (SGLT-2 inhibitor)","Insulin glargine (long-acting insulin)"],"correct":2,"explain":"Metformin is the most widely prescribed oral antidiabetic worldwide. It inhibits complex I of the mitochondrial respiratory chain, raising the AMP/ATP ratio and activating AMPK. AMPK phosphorylates and inactivates CREB coactivators (PGC-1α/TORC2), thereby reducing transcription of PEPCK and glucose-6-phosphatase. The result is a marked reduction in hepatic gluconeogenesis.","explainImg":""},
-    {"id":"glg001","topic":"Glycogen Metabolism","text":"Which enzyme adds glucose residues to the non-reducing end of glycogen?","options":["Glycogen phosphorylase","Glycogen synthase","Branching enzyme","UDP-glucose pyrophosphorylase","Debranching enzyme"],"correct":1,"explain":"Glycogen synthase elongates glycogen chains by adding UDP-glucose to the non-reducing ends via α(1→4) glycosidic bonds. It requires a pre-existing glycogen primer (minimum 4 residues) or the protein glycogenin as initiator.","explainImg":""},
-    {"id":"glg002","topic":"Glycogen Metabolism","text":"What is the activated form of glucose used in glycogen synthesis?","options":["Glucose-1-phosphate","Glucose-6-phosphate","UDP-glucose","ADP-glucose","GDP-glucose"],"correct":2,"explain":"Glucose must be activated to UDP-glucose by UDP-glucose pyrophosphorylase before it can be incorporated into glycogen. The UTP used in this reaction is hydrolyzed to UMP + PPi; subsequent pyrophosphatase activity drives the reaction forward.","explainImg":""},
-    {"id":"glg003","topic":"Glycogen Metabolism","text":"Glycogen phosphorylase cleaves glycogen by:","options":["Hydrolysis with water","Phosphorolysis using inorganic phosphate","Transferase reaction","Oxidative cleavage","Lysosomal α-glucosidase activity"],"correct":1,"explain":"Glycogen phosphorylase performs phosphorolysis: it uses inorganic phosphate (Pi) to cleave α(1→4) bonds at non-reducing ends, releasing glucose-1-phosphate. This is energetically favorable since glucose-1-phosphate is already phosphorylated, saving one ATP compared to hydrolysis.","explainImg":""},
-    {"id":"glg004","topic":"Glycogen Metabolism","text":"Von Gierke disease (GSD type I) results from a deficiency of:","options":["Glycogen synthase","Glucose-6-phosphatase","Debranching enzyme","Acid maltase (α-glucosidase)","Liver glycogen phosphorylase"],"correct":1,"explain":"Von Gierke disease is caused by glucose-6-phosphatase deficiency. Without this enzyme, the liver cannot release free glucose into the blood from either glycogenolysis or gluconeogenesis. This leads to severe fasting hypoglycemia and massive hepatic glycogen accumulation.","explainImg":""},
-    {"id":"glg005","topic":"Glycogen Metabolism","text":"Which hormone activates glycogenolysis in the liver via a cAMP-dependent pathway?","options":["Insulin","Glucagon","Cortisol","Aldosterone","Somatostatin"],"correct":1,"explain":"Glucagon binds its GPCR on hepatocytes → adenylyl cyclase → cAMP → PKA activation → phosphorylase kinase activation → glycogen phosphorylase activation. Simultaneously, PKA phosphorylates and inactivates glycogen synthase, preventing futile cycling.","explainImg":""},
-    {"id":"glg006","topic":"Glycogen Metabolism","text":"The debranching enzyme has two catalytic activities. Which pair is correct?","options":["Kinase + phosphatase","4-α-glucanotransferase + amylo-1,6-glucosidase","Synthase + phosphorylase","Isomerase + lyase","Hydrolase + mutase"],"correct":1,"explain":"The debranching enzyme first transfers a trisaccharide unit from a branch to the main chain (transferase activity), then hydrolyzes the remaining single glucose at the branch point (glucosidase activity), releasing free glucose rather than glucose-1-phosphate.","explainImg":""},
-    {"id":"glg007","topic":"Glycogen Metabolism","text":"McArdle disease (GSD type V) is characterized by muscle cramps during exercise due to deficiency of:","options":["Acid maltase","Liver phosphorylase","Muscle glycogen phosphorylase","Branching enzyme","Phosphofructokinase"],"correct":2,"explain":"McArdle disease results from deficiency of muscle glycogen phosphorylase. Muscle cannot mobilize glycogen during exercise, leading to energy failure, painful cramps, and myoglobinuria. Blood lactate fails to rise after forearm ischemic exercise — a classic diagnostic test.","explainImg":""},
-    {"id":"glg008","topic":"Glycogen Metabolism","text":"Glycogen synthase is maximally active in its:","options":["Phosphorylated form","Dephosphorylated form","AMP-bound form","Glucagon-stimulated form","Citrate-inhibited form"],"correct":1,"explain":"Glycogen synthase is active (a-form) when dephosphorylated and inactive (b-form) when phosphorylated. Insulin promotes glycogen synthesis by activating protein phosphatase 1 (PP1), which dephosphorylates and activates glycogen synthase.","explainImg":""},
-    {"id":"glg009","topic":"Glycogen Metabolism","text":"Which protein acts as a primer for glycogen synthesis by accepting the first glucose residues?","options":["Glycogenin","Glycogen synthase","Phosphoglucomutase","Laforin","Branching enzyme"],"correct":0,"explain":"Glycogenin is a self-glucosylating protein that forms the primer for glycogen synthesis. It attaches the first glucose to a tyrosine residue, then extends the chain to ~8 residues before glycogen synthase takes over.","explainImg":""},
-    {"id":"glg010","topic":"Glycogen Metabolism","text":"Insulin promotes glycogen synthesis by activating which phosphatase that dephosphorylates glycogen synthase?","options":["Protein phosphatase 1 (PP1)","Protein phosphatase 2A (PP2A)","Calcineurin (PP2B)","PTP1B","Phosphorylase kinase"],"correct":0,"explain":"Insulin signaling activates PP1 through Akt-mediated phosphorylation of its regulatory subunit. PP1 then dephosphorylates glycogen synthase (activating it) and glycogen phosphorylase (inactivating it), coordinately promoting glycogen synthesis.","explainImg":""},
-    {"id":"tca001","topic":"Krebs Cycle","text":"Which enzyme catalyzes the condensation reaction that initiates the TCA cycle?","options":["Citrate synthase","Isocitrate dehydrogenase","Aconitase","Malate dehydrogenase","Fumarase"],"correct":0,"explain":"Citrate synthase condenses acetyl-CoA (2C) with oxaloacetate (4C) to form citrate (6C). This is the entry point of the TCA cycle. The enzyme is regulated by the energy status of the cell: inhibited by ATP, NADH, and succinyl-CoA.","explainImg":""},
-    {"id":"tca002","topic":"Krebs Cycle","text":"How many NADH molecules are produced per complete turn of the TCA cycle?","options":["1","2","4","3","5"],"correct":3,"explain":"Three NADH molecules are produced per turn: at isocitrate dehydrogenase, α-ketoglutarate dehydrogenase, and malate dehydrogenase. One FADH₂ is also produced at succinate dehydrogenase, and one GTP at succinyl-CoA synthetase.","explainImg":""},
-    {"id":"tca003","topic":"Krebs Cycle","text":"Which TCA cycle intermediate is a key precursor for heme synthesis?","options":["Succinyl-CoA","Citrate","Fumarate","Malate","α-Ketoglutarate"],"correct":0,"explain":"Succinyl-CoA condenses with glycine (catalyzed by ALA synthase, requiring pyridoxal phosphate) to form δ-aminolevulinic acid (ALA), the first committed step of heme biosynthesis. This reaction occurs in the mitochondrial matrix.","explainImg":""},
-    {"id":"tca004","topic":"Krebs Cycle","text":"Which TCA cycle enzyme directly produces GTP by substrate-level phosphorylation?","options":["Isocitrate dehydrogenase","Succinate dehydrogenase","Fumarase","Aconitase","Succinyl-CoA synthetase"],"correct":4,"explain":"Succinyl-CoA synthetase (also called succinate thiokinase) couples the hydrolysis of the high-energy thioester bond in succinyl-CoA to the phosphorylation of GDP to GTP (or ADP to ATP in some tissues).","explainImg":""},
-    {"id":"tca005","topic":"Krebs Cycle","text":"Thiamine (B1) deficiency impairs the TCA cycle by affecting which enzyme complex?","options":["Citrate synthase","Pyruvate dehydrogenase and α-ketoglutarate dehydrogenase","Succinate dehydrogenase","Aconitase","Malate dehydrogenase"],"correct":1,"explain":"Thiamine pyrophosphate (TPP) is an essential cofactor for both pyruvate dehydrogenase (PDH) and α-ketoglutarate dehydrogenase (α-KGDH). Thiamine deficiency causes Wernicke's encephalopathy and beriberi due to impaired energy metabolism in high-demand tissues.","explainImg":""},
-    {"id":"tca006","topic":"Krebs Cycle","text":"Succinate dehydrogenase is unique among TCA cycle enzymes because it is:","options":["Soluble in the matrix","Embedded in the inner mitochondrial membrane (Complex II)","Located in the cytosol","Associated with the outer mitochondrial membrane","A GTP-producing enzyme"],"correct":1,"explain":"Succinate dehydrogenase is the only TCA enzyme embedded in the inner mitochondrial membrane. It is identical to respiratory chain Complex II — it oxidizes succinate to fumarate, reducing FAD to FADH₂, which feeds electrons directly into the ubiquinone pool.","explainImg":""},
-    {"id":"tca007","topic":"Krebs Cycle","text":"Which reaction is generally considered the rate-limiting step of the TCA cycle under most physiological conditions?","options":["Citrate synthase","Aconitase","Isocitrate dehydrogenase","Malate dehydrogenase","Fumarase"],"correct":2,"explain":"Isocitrate dehydrogenase is a key regulatory enzyme. It is allosterically activated by ADP and Ca²⁺ and inhibited by ATP and NADH. By controlling flux at this step, the TCA cycle is coordinated with the cell's energy demands.","explainImg":""},
-    {"id":"tca008","topic":"Krebs Cycle","text":"If oxaloacetate (OAA) is depleted, which anaplerotic reaction can replenish it directly?","options":["Pyruvate → acetyl-CoA (PDH)","Glutamate → α-ketoglutarate (transamination)","Pyruvate → OAA (pyruvate carboxylase)","Succinyl-CoA → succinate","Fumarate → malate (fumarase)"],"correct":2,"explain":"Pyruvate carboxylase is the primary anaplerotic enzyme in the liver: pyruvate + CO₂ + ATP → OAA. It is activated by acetyl-CoA — a signal that acetyl-CoA is available but OAA is limiting, ensuring continued TCA cycle flux.","explainImg":""},
-    {"id":"tca009","topic":"Krebs Cycle","text":"Citrate exported from mitochondria to the cytosol is cleaved by ATP-citrate lyase to provide acetyl-CoA for:","options":["Glycolysis","Gluconeogenesis","Urea synthesis","Heme synthesis","Fatty acid and cholesterol synthesis"],"correct":4,"explain":"Citrate transport to the cytosol is the primary mechanism for exporting mitochondrial acetyl-CoA for biosynthesis. ATP-citrate lyase cleaves citrate into acetyl-CoA + OAA. This cytosolic acetyl-CoA is used for fatty acid synthesis and cholesterol (via HMG-CoA) synthesis.","explainImg":""},
-    {"id":"tca010","topic":"Krebs Cycle","text":"Which TCA cycle step involves an oxidative decarboxylation producing CO₂ and NADH?","options":["Citrate → isocitrate","Isocitrate → α-ketoglutarate","Succinate → fumarate","Malate → oxaloacetate","Fumarate → malate"],"correct":1,"explain":"Isocitrate dehydrogenase catalyzes the first oxidative decarboxylation: isocitrate → α-ketoglutarate + CO₂ + NADH. A second oxidative decarboxylation occurs at α-ketoglutarate dehydrogenase (α-ketoglutarate → succinyl-CoA + CO₂ + NADH).","explainImg":""},
-    {"id":"tca011","topic":"Krebs Cycle","text":"The pyruvate dehydrogenase complex (PDH) requires five coenzymes. Which combination correctly names all of them?","options":["TPP, biotin, CoA, FMN, NADP⁺","PLP, lipoic acid, CoA, FAD, NADP⁺","TPP, lipoic acid, CoA, FMN, NAD⁺","TPP, lipoic acid, CoA, FAD, NAD⁺","Biotin, lipoic acid, AMP, FAD, NAD⁺"],"correct":3,"explain":"PDH consists of three catalytic subunits: E1 (pyruvate decarboxylase, uses TPP), E2 (dihydrolipoyl transacetylase, uses lipoic acid and CoA), and E3 (dihydrolipoyl dehydrogenase, uses FAD and NAD⁺). All five coenzymes are essential; loss of any one arrests the entire complex.","explainImg":""},
-    {"id":"tca012","topic":"Krebs Cycle","text":"Pyruvate dehydrogenase (PDH) and α-ketoglutarate dehydrogenase (OGDH) are often discussed together. Which statement best describes what they genuinely share?","options":["Both use biotin and transfer a carboxyl group to a mobile carrier between subunits","Both are cytosolic and regulated by reversible phosphorylation via insulin-sensitive kinases","Both differ in E1 specificity but share an identical E2 dihydrolipoyl transacylase subunit","Both produce acetyl-CoA as their acyl-CoA product and share the same E1 substrate pocket","Both are E1/E2/E3 complexes using the same five coenzymes to catalyze oxidative decarboxylation"],"correct":4,"explain":"PDH and OGDH share the same three-component architecture (E1/TPP, E2/lipoic acid+CoA, E3/FAD+NAD⁺) and catalyze analogous oxidative decarboxylation reactions — PDH converts pyruvate → acetyl-CoA + CO₂, OGDH converts α-ketoglutarate → succinyl-CoA + CO₂. Their E3 subunit (dihydrolipoyl dehydrogenase) is in fact identical, so a single E3 deficiency impairs both complexes simultaneously.","explainImg":""},
-    {"id":"tca013","topic":"Krebs Cycle","text":"High concentrations of which metabolite simultaneously inhibit citrate synthase, isocitrate dehydrogenase, and α-KGDH, slowing the TCA cycle when reducing equivalents are in excess?","options":["NADH — accumulates when electron transport is saturated; direct product inhibitor at all three enzymes","ADP — signals low energy charge; acts as activator of isocitrate dehydrogenase and citrate synthase","Ca²⁺ — enters mitochondria during muscle contraction; activates isocitrate dehydrogenase, α-KGDH, and PDH phosphatase","Succinyl-CoA — direct product inhibitor of α-KGDH; downstream feedback inhibitor of citrate synthase","Acetyl-CoA — accumulates during β-oxidation; inhibits PDH but not all three TCA regulatory enzymes"],"correct":0,"explain":"NADH accumulation signals a high-energy, high-reduction state and inhibits all three major control points of the TCA cycle simultaneously. This product inhibition slows the cycle until NADH is re-oxidized by the respiratory chain. Ca²⁺ has the opposite effect — it activates the cycle during muscle activity — while ADP activates (not inhibits) isocitrate dehydrogenase.","explainImg":""},
-    {"id":"tca014","topic":"Krebs Cycle","text":"FADH₂ produced by succinate dehydrogenase yields fewer ATP than NADH. What is the primary mechanistic reason?","options":["FADH₂ reaches Complex I at a later binding site than NADH, reducing the number of protons pumped per pair","FADH₂ has a more negative reduction potential than NAD⁺/NADH and cannot reduce ubiquinone without an additional energy input","FADH₂ is protein-bound in Complex II and passes electrons directly to ubiquinone, completely bypassing Complex I","FADH₂ donates to Complex III via a dedicated flavin carrier, skipping both Complex I and Complex II","FADH₂ is oxidized on the intermembrane-space face, reducing the effective proton gradient for ATP synthase"],"correct":2,"explain":"NADH feeds electrons into Complex I, which pumps 4 H⁺ per electron pair → ~2.5 ATP. FADH₂ is covalently bound to succinate dehydrogenase (Complex II) and transfers electrons directly to ubiquinone, bypassing Complex I entirely — no proton pumping occurs at that step, yielding only ~1.5 ATP. The entry point into the respiratory chain is the decisive difference between the two carriers.","explainImg":""},
-    {"id":"tca015","topic":"Krebs Cycle","text":"Succinyl-CoA synthetase generates one GTP per turn of the human TCA cycle. What is the primary metabolic fate of this mitochondrial GTP?","options":["Hydrolyzed by mitochondrial GTPase; energy phosphorylates AMP to ADP via unusual two-step transphosphorylation","Stored in matrix as regulatory signal activating GTP-dependent kinases for organelle dynamics","Exported via adenine nucleotide translocator to activate cytosolic GTP-binding signaling proteins","Converted to ATP by nucleoside diphosphate kinase: GTP + ADP → GDP + ATP","Used by ATP synthase as alternative substrate, producing ATP without the proton gradient"],"correct":3,"explain":"NDP kinase catalyzes the freely reversible reaction GTP + ADP ⇌ GDP + ATP, making the TCA-derived GTP energetically equivalent to one ATP. GTP can also directly power cytosolic reactions — notably gluconeogenesis, where PEPCK uses GTP to convert OAA to phosphoenolpyruvate — underscoring its dual role as energy currency and metabolic signal.","explainImg":""},
-    {"id":"rc001","topic":"Respiratory Chain and OXPHOS","text":"Which complex of the respiratory chain accepts electrons from ubiquinol (QH₂) and passes them to cytochrome c?","options":["Complex I","Complex II","Complex IV","Complex V","Complex III (bc1 complex)"],"correct":4,"explain":"Complex III (ubiquinol-cytochrome c oxidoreductase) accepts electrons from ubiquinol and transfers them to cytochrome c via the Q cycle mechanism, simultaneously pumping 4 protons per 2 electrons across the inner mitochondrial membrane.","explainImg":""},
-    {"id":"rc002","topic":"Respiratory Chain and OXPHOS","text":"The proton gradient generated by the respiratory chain is used by ATP synthase (Complex V) via:","options":["Substrate-level phosphorylation","Chemiosmosis (Mitchell hypothesis)","Direct electron transfer to ADP","Oxidative decarboxylation","Transphosphorylation from GTP"],"correct":1,"explain":"According to Mitchell's chemiosmotic hypothesis, the proton-motive force (electrochemical gradient) generated by the respiratory chain drives protons back through the F₀ subunit of ATP synthase. This proton flow drives rotation of the c-ring, causing conformational changes in the F₁ subunit that synthesize ATP.","explainImg":""},
-    {"id":"rc003","topic":"Respiratory Chain and OXPHOS","text":"Cyanide is a potent inhibitor of cellular respiration because it blocks:","options":["Complex I","Complex III","ATP synthase","Complex IV (cytochrome c oxidase)","Complex II"],"correct":3,"explain":"Cyanide (CN⁻) binds to the Fe³⁺ form of cytochrome a3 in Complex IV, preventing electron transfer to O₂. This halts the entire electron transport chain, collapses the proton gradient, and stops ATP synthesis. Tissues with highest O₂ demand (brain, heart) are most vulnerable.","explainImg":""},
-    {"id":"rc004","topic":"Respiratory Chain and OXPHOS","text":"How many ATP molecules are produced per NADH oxidized in oxidative phosphorylation (using the P/O ratio of ~2.5)?","options":["1.0","1.5","2.5","3.5","2.0"],"correct":2,"explain":"The modern estimate of the P/O ratio for NADH is ~2.5 ATP per NADH (not the classic '3' from older texts). This accounts for the actual H⁺/ATP stoichiometry of ATP synthase (~8 protons per 3 ATP) and the energy cost of ATP/ADP transport.","explainImg":""},
-    {"id":"rc005","topic":"Respiratory Chain and OXPHOS","text":"Uncoupling proteins (UCPs) in brown adipose tissue dissipate the proton gradient as:","options":["Heat (thermogenesis)","ATP","NADH","CO₂","Mechanical work"],"correct":0,"explain":"UCP1 (thermogenin) allows protons to leak back across the inner mitochondrial membrane without driving ATP synthesis, dissipating the proton-motive force as heat. This is the basis of non-shivering thermogenesis in newborns and cold-adapted mammals.","explainImg":""},
-    {"id":"rc006","topic":"Respiratory Chain and OXPHOS","text":"Which mobile electron carrier shuttles electrons between Complex I/II and Complex III?","options":["Cytochrome c","Ubiquinone (Coenzyme Q)","FAD","FMN","Iron-sulfur clusters"],"correct":1,"explain":"Ubiquinone (CoQ/Q) is a lipid-soluble molecule that diffuses within the inner mitochondrial membrane, collecting electrons from Complex I and II (as QH₂) and delivering them to Complex III. Cytochrome c is the water-soluble carrier between Complex III and IV.","explainImg":""},
-    {"id":"rc007","topic":"Respiratory Chain and OXPHOS","text":"Rotenone, used as a pesticide and fish poison, inhibits the respiratory chain by blocking:","options":["Complex II","Complex III","Complex I (NADH dehydrogenase)","Complex IV","Complex V (ATP synthase)"],"correct":2,"explain":"Rotenone blocks the transfer of electrons from the iron-sulfur clusters of Complex I to ubiquinone. It inhibits NADH oxidation without affecting succinate oxidation (Complex II). Rotenone is also used experimentally to model Parkinson's disease pathology.","explainImg":""},
-    {"id":"rc008","topic":"Respiratory Chain and OXPHOS","text":"The final electron acceptor in the mitochondrial respiratory chain is:","options":["NAD⁺","Ubiquinone","Cytochrome c","Molecular oxygen (O₂)","Carbon dioxide (CO₂)"],"correct":3,"explain":"Molecular oxygen (O₂) is the terminal electron acceptor. Complex IV (cytochrome c oxidase) transfers electrons from cytochrome c to O₂, reducing it to water. This irreversible step drives the entire electron transport chain forward.","explainImg":""},
-    {"id":"rc009","topic":"Respiratory Chain and OXPHOS","text":"Oligomycin inhibits ATP synthesis by blocking:","options":["Cytochrome c oxidase","The F₀ proton channel of ATP synthase","Ubiquinone reduction","Complex I","Adenine nucleotide translocase"],"correct":1,"explain":"Oligomycin binds to the F₀ subunit of ATP synthase, blocking the proton channel. This prevents proton re-entry and ATP synthesis. Because the proton gradient cannot be dissipated, it also secondarily inhibits the respiratory chain.","explainImg":""},
-    {"id":"rc010","topic":"Respiratory Chain and OXPHOS","text":"Which of the following correctly describes the P/O ratio for FADH₂?","options":["~3.0","~2.5","~1.5","~1.0","~2.0"],"correct":2,"explain":"FADH₂ (generated at succinate dehydrogenase) donates electrons to ubiquinone, bypassing Complex I. Since Complex I pumps ~4 protons, bypassing it reduces the proton gradient contribution. The P/O ratio for FADH₂ is approximately 1.5 ATP.","explainImg":""},
-    {"id":"rc011","topic":"Respiratory Chain and OXPHOS","text":"Cytosolic NADH from glycolysis cannot cross the inner mitochondrial membrane. Which shuttle predominates in heart and liver, preserving the full ~2.5 ATP yield?","options":["Malate-aspartate shuttle — regenerates NADH in the matrix; ~2.5 ATP","Glycerol-3-phosphate shuttle — feeds electrons into Complex II; only ~1.5 ATP","Citrate shuttle — exports acetyl-CoA equivalents for cytosolic lipid synthesis","Carnitine shuttle — transports fatty acyl-CoA across the inner membrane","Pyruvate carrier — imports pyruvate into the matrix; no NADH transfer"],"correct":0,"explain":"The malate-aspartate shuttle uses malate dehydrogenase and aspartate aminotransferase on both membrane sides to funnel cytosolic NADH-equivalent reducing power into the matrix as NADH, entering at Complex I (~2.5 ATP). The glycerol-3-phosphate shuttle is faster but less efficient (~1.5 ATP, Complex II entry) and predominates in brain and skeletal muscle. The citrate, carnitine, and pyruvate carriers serve entirely different transport functions.","explainImg":""},
-    {"id":"rc012","topic":"Respiratory Chain and OXPHOS","text":"The Q cycle in Complex III results in net pumping of 4 H⁺ per 2 electrons. Which feature directly causes this amplification?","options":["Both electrons from QH₂ bypass the Rieske centre and flow directly to cytochrome b","Rieske accepts both electrons from QH₂ and donates them to two cytochrome c molecules","QH₂ first reduces FMN in the matrix before electrons reach cytochrome c","Cytochrome b conformational changes drive proton pumping without any semiquinone","QH₂ oxidation bifurcates: one electron to cytochrome c via Rieske, one to Qi-site semiquinone"],"correct":4,"explain":"At the Qo site, QH₂ loses its two electrons along separate paths: one travels via the Rieske [2Fe-2S] cluster and cytochrome c₁ to cytochrome c (high-potential chain), while the other passes through cytochrome b (bL → bH) to a ubiquinone at the Qi site, generating a semiquinone. A second QH₂ oxidation completes this to QH₂ at the Qi site, releasing 2 H⁺ to the matrix. This bifurcation effectively doubles proton translocation per electron pair reaching cytochrome c, yielding 4 H⁺/2e⁻ net.","explainImg":""},
-    {"id":"rc013","topic":"Respiratory Chain and OXPHOS","text":"What is the specific role of the Rieske iron-sulfur protein in Complex III?","options":["Accepts electrons from QH₂ at the Qo site and passes them to cytochrome c₁","Accepts electrons from NADH at the matrix face and transfers them via FMN to ubiquinone","Accepts electrons from cytochrome c and passes them to the copper centres of Complex IV","Donates electrons directly to O₂, generating superoxide at the Qo site","Transfers electrons from succinate dehydrogenase to ubiquinone at the Qi site"],"correct":0,"explain":"The Rieske protein contains a [2Fe-2S] cluster with an unusually high reduction potential (~+0.28 V), placing it between ubiquinol and cytochrome c₁ in the high-potential branch of the Q cycle. At the Qo site it accepts one of the two electrons from QH₂ and donates it to cytochrome c₁, which then reduces soluble cytochrome c. Physical movement of the Rieske head domain between cytochrome b and cytochrome c₁ is essential for the bifurcated electron transfer.","explainImg":""},
-    {"id":"rc014","topic":"Respiratory Chain and OXPHOS","text":"FMN is the primary electron acceptor from NADH in Complex I. Which statement correctly describes its function?","options":["Accepts electrons from ubiquinol; transfers them back to NAD⁺ in the matrix","Acts as the final electron sink in Complex I; stays reduced when PMF is low","Accepts electrons from succinate dehydrogenase FADH₂; relays them to Fe-S clusters","Accepts 2e⁻ from NADH at once; passes them individually through Fe-S clusters to CoQ","Pumps protons from matrix to IMS directly; no iron-sulfur cluster involvement"],"correct":3,"explain":"FMN is a two-electron acceptor that receives both electrons from NADH simultaneously, forming FMNH₂. It then re-donates them one at a time to a series of iron-sulfur clusters (N1a, N3, N1b, N4, N5, N6a/b, N2), which are obligate single-electron carriers. Electron flow through this chain is coupled to conformational changes that pump 4 H⁺ per NADH. This two-to-one electron conversion is FMN's defining role in Complex I.","explainImg":""},
-    {"id":"rc015","topic":"Respiratory Chain and OXPHOS","text":"In Boyer's binding-change mechanism, the proton-motive force does not directly form the ATP bond. What is its actual role?","options":["Donates a proton directly to the β-phosphate of ADP to drive bond formation","Opens a channel in F₁ allowing free ATP and ADP diffusion across the inner membrane","Drives electron transfer in F₁ that activates ADP toward inorganic phosphate","Generates NADPH in the matrix to supply energy for ATP bond formation","Drives c-ring rotation, turning the γ-subunit; β-subunit conformational changes release bound ATP"],"correct":4,"explain":"ATP actually forms spontaneously (ΔG ≈ 0) at the tight catalytic site of F₁ — bond formation itself requires no external energy. The proton-motive force drives rotation of the F₀ c-ring, which turns the γ-subunit inside F₁, cycling each of the three β-subunits through open → loose → tight conformations. The energy-requiring step is the transition from tight to open, which releases the newly formed ATP. This rotary catalysis was confirmed by Boyer and Walker, Nobel Prize 1997.","explainImg":""},
-    {"id":"rc016","topic":"Respiratory Chain and OXPHOS","text":"What is the thermodynamic driving force that moves electrons along the respiratory chain from NADH to O₂?","options":["The NADH/NAD⁺ concentration gradient across the inner membrane","The ΔE°' between NADH/NAD⁺ (−0.32 V) and O₂/H₂O (+0.82 V)","The mechanical rotation of ATP synthase pulling electrons toward Complex IV","The transmembrane pH gradient acidifying the IMS to drive electron transfer","The high cytochrome c concentration in the IMS acting as a permanent electron sink"],"correct":1,"explain":"Electron flow in the respiratory chain is driven by the difference in standard reduction potentials. The NADH/NAD⁺ couple has E°' = −0.32 V; the O₂/H₂O couple has E°' = +0.82 V, giving ΔE°' = +1.14 V overall. By ΔG°' = −nFΔE°', this corresponds to ~−220 kJ per mol of electron pairs — a large spontaneous free energy change that drives electrons from Complex I through to Complex IV, coupling to proton pumping at each step.","explainImg":""},
-    {"id":"rc017","topic":"Respiratory Chain and OXPHOS","text":"Strictly speaking, what is the direct product of the respiratory chain before ATP synthase acts on it?","options":["ATP — via substrate-level phosphorylation at each electron transfer step","NADPH — regenerated by mitochondrial transhydrogenase using electron-flow energy","An electrochemical proton gradient (proton-motive force) across the inner membrane","Heat — thermal energy released as electrons fall through the complexes","Reduced cytochrome c — accumulates in the IMS when ATP synthase is inhibited"],"correct":2,"explain":"The respiratory chain's sole direct output is the proton-motive force (PMF), built up by pumping H⁺ from the matrix to the IMS at Complexes I, III, and IV. The PMF has two components: membrane potential (ΔΨ ≈ 150–180 mV, the dominant term in mitochondria) and a pH gradient (ΔpH ≈ 0.5–1 unit). ATP synthase then consumes this PMF to drive phosphorylation. Crucially, the PMF can also power active transport and heat production via UCPs — ATP synthesis is secondary.","explainImg":""},
-    {"id":"fao001","topic":"Fatty Acid Oxidation","text":"Where does β-oxidation of long-chain fatty acids primarily occur?","options":["Cytosol","Endoplasmic reticulum","Mitochondrial matrix","Peroxisome","Lysosome"],"correct":2,"explain":"β-Oxidation of long-chain fatty acids occurs in the mitochondrial matrix. Fatty acids are activated to acyl-CoA in the cytosol, transported across the inner mitochondrial membrane via the carnitine shuttle, and then undergo successive rounds of β-oxidation.","explainImg":""},
-    {"id":"fao002","topic":"Fatty Acid Oxidation","text":"Which transport system is required to move long-chain acyl groups into the mitochondrial matrix?","options":["Malate-aspartate shuttle","Carnitine shuttle (CPT-I and CPT-II)","Acetyl-CoA translocase","ATP-ADP translocase","Citrate transport system"],"correct":1,"explain":"Long-chain acyl-CoA cannot cross the inner mitochondrial membrane directly. CPT-I (outer membrane) converts acyl-CoA to acylcarnitine, which is transported by carnitine-acylcarnitine translocase and reconverted to acyl-CoA by CPT-II (inner membrane).","explainImg":""},
-    {"id":"fao003","topic":"Fatty Acid Oxidation","text":"How many rounds of β-oxidation are needed to completely oxidize palmitoyl-CoA (C16:0)?","options":["6","7","8","9","5"],"correct":1,"explain":"Palmitoyl-CoA (16 carbons) requires 7 rounds of β-oxidation to produce 8 acetyl-CoA molecules. Each round shortens the chain by 2 carbons and produces 1 FADH₂ + 1 NADH + 1 acetyl-CoA.","explainImg":""},
-    {"id":"fao004","topic":"Fatty Acid Oxidation","text":"Which enzyme is inhibited by malonyl-CoA, thereby regulating entry of fatty acids into mitochondria?","options":["CPT-II","Acyl-CoA synthetase","CPT-I","Carnitine-acylcarnitine translocase","β-Hydroxyacyl-CoA dehydrogenase"],"correct":2,"explain":"CPT-I is allosterically inhibited by malonyl-CoA, the first committed intermediate of fatty acid synthesis. This ensures that fatty acid synthesis and oxidation are not simultaneously active — when malonyl-CoA is high, CPT-I is inhibited and fatty acids are not transported into mitochondria.","explainImg":""},
-    {"id":"fao005","topic":"Fatty Acid Oxidation","text":"What products are generated in each cycle of β-oxidation?","options":["1 NADH + 1 NADPH + 1 acetyl-CoA","1 FADH₂ + 1 NADH + 1 acetyl-CoA","2 FADH₂ + 1 acetyl-CoA","1 FADH₂ + 1 NADH + 1 succinyl-CoA","2 NADH + 1 acetyl-CoA"],"correct":1,"explain":"Each round of β-oxidation produces: 1 FADH₂ (acyl-CoA dehydrogenase step), 1 NADH (L-3-hydroxyacyl-CoA dehydrogenase step), and 1 acetyl-CoA (thiolase step). These feed into the respiratory chain and TCA cycle respectively.","explainImg":""},
-    {"id":"fao006","topic":"Fatty Acid Oxidation","text":"During β-oxidation of unsaturated fatty acids, which additional enzyme is required for double bonds in the cis configuration?","options":["Enoyl-CoA hydratase","2,4-Dienoyl-CoA reductase","Enoyl-CoA isomerase","3-Hydroxyacyl-CoA epimerase","Acyl-CoA dehydrogenase"],"correct":2,"explain":"Unsaturated fatty acids with double bonds at odd-numbered carbons (cis-Δ³) require enoyl-CoA isomerase to convert cis-Δ³-enoyl-CoA to the trans-Δ²-enoyl-CoA that is the normal β-oxidation substrate. Double bonds at even-numbered carbons require 2,4-dienoyl-CoA reductase.","explainImg":""},
-    {"id":"fao007","topic":"Fatty Acid Oxidation","text":"In which organelle does β-oxidation of very-long-chain fatty acids (>C22) primarily occur?","options":["Mitochondria","Smooth ER","Peroxisomes","Lysosomes","Nucleus"],"correct":2,"explain":"Very-long-chain fatty acids are first shortened by β-oxidation in peroxisomes to medium-chain fatty acids, which are then transferred to mitochondria for complete oxidation. Peroxisomal β-oxidation produces H₂O₂ (detoxified by catalase) rather than pumping protons.","explainImg":""},
-    {"id":"fao008","topic":"Fatty Acid Oxidation","text":"What is the net ATP yield from the complete oxidation of one molecule of palmitoyl-CoA (C16:0)?","options":["106 ATP","100 ATP","108 ATP","129 ATP","80 ATP"],"correct":0,"explain":"Palmitoyl-CoA oxidation yields 7 rounds × (1 FADH₂ + 1 NADH) + 8 acetyl-CoA. Using modern P/O ratios: 7×1.5 + 7×2.5 + 8×10 = 10.5 + 17.5 + 80 = 108, minus 2 for activation = 106 ATP equivalent.","explainImg":""},
-    {"id":"fao009","topic":"Fatty Acid Oxidation","text":"Carnitine deficiency leads to impaired fatty acid oxidation. Which symptom is most expected?","options":["Hyperglycemia","Hyperlipidemia with muscle weakness and hypoglycemia","Ketoacidosis","Elevated ammonia","Metabolic alkalosis"],"correct":1,"explain":"Without carnitine, long-chain fatty acids cannot enter mitochondria for β-oxidation. This causes accumulation of fatty acids (hyperlipidemia), muscle weakness (impaired energy supply), and hypoglycemia (inability to spare glucose by fat oxidation). Ketone body synthesis is also impaired.","explainImg":""},
-    {"id":"fao010","topic":"Fatty Acid Oxidation","text":"Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency is dangerous during fasting because:","options":["Excess ketone bodies cause acidosis","Fatty acids cannot be oxidized for energy, leading to hypoglycemia","Amino acid catabolism is impaired","Glycogen stores cannot be mobilized","Gluconeogenesis is inhibited by malonyl-CoA"],"correct":1,"explain":"MCAD deficiency prevents oxidation of medium-chain fatty acids. During fasting, when glucose is limited and fatty acid oxidation is critical, this leads to severe hypoglycemia. Ketogenesis is also impaired because acetyl-CoA supply from β-oxidation is reduced.","explainImg":""},
-    {"id":"fab001","topic":"Fatty Acid Biosynthesis","text":"Where does fatty acid synthesis primarily occur in the cell?","options":["Mitochondrial matrix","Cytosol","Endoplasmic reticulum","Nucleus","Peroxisome"],"correct":1,"explain":"Fatty acid synthesis occurs in the cytosol, catalyzed by fatty acid synthase (FAS). The building blocks (acetyl-CoA and malonyl-CoA) must be exported from the mitochondria as citrate, then cleaved by ATP-citrate lyase in the cytosol.","explainImg":""},
-    {"id":"fab002","topic":"Fatty Acid Biosynthesis","text":"What is the committed step of fatty acid biosynthesis?","options":["Acetyl-CoA → malonyl-CoA (acetyl-CoA carboxylase)","Malonyl-CoA → palmitate (FAS)","Citrate → acetyl-CoA (ATP-citrate lyase)","Palmitate → palmitoyl-CoA","Acetyl-CoA → acetoacetyl-CoA"],"correct":0,"explain":"Acetyl-CoA carboxylase (ACC) catalyzes the ATP-dependent carboxylation of acetyl-CoA to malonyl-CoA. This is the committed, rate-limiting step of fatty acid synthesis. ACC is activated by citrate (high energy/precursor supply) and inhibited by palmitoyl-CoA and by phosphorylation via AMPK.","explainImg":""},
-    {"id":"fab003","topic":"Fatty Acid Biosynthesis","text":"Which reducing cofactor is required by fatty acid synthase for the reductive steps?","options":["NADH","NADPH","FADH₂","ATP","CoASH"],"correct":1,"explain":"Fatty acid synthase requires NADPH for the two reductive steps per elongation cycle (ketoreduction and enoylreduction). NADPH is supplied mainly by the pentose phosphate pathway and the malic enzyme reaction. This is why NADPH is the 'reducing power' for biosynthesis.","explainImg":""},
-    {"id":"fab004","topic":"Fatty Acid Biosynthesis","text":"What is the primary product released by fatty acid synthase (FAS) in mammals?","options":["Stearate (C18:0)","Palmitate (C16:0)","Myristate (C14:0)","Arachidonate (C20:4)","Oleate (C18:1)"],"correct":1,"explain":"Mammalian FAS releases palmitate (C16:0) as the primary product. Further elongation to longer-chain fatty acids and desaturation occur in the endoplasmic reticulum by specific elongases and desaturases.","explainImg":""},
-    {"id":"fab005","topic":"Fatty Acid Biosynthesis","text":"How many molecules of malonyl-CoA are required to synthesize one molecule of palmitate from acetyl-CoA?","options":["6","7","8","14","16"],"correct":1,"explain":"Palmitate (C16:0) is synthesized from 1 acetyl-CoA starter unit and 7 malonyl-CoA extender units. Each malonyl-CoA adds 2 carbons (after decarboxylation), contributing 14 carbons; the starter acetyl-CoA adds 2 more, totaling 16.","explainImg":""},
-    {"id":"fab006","topic":"Fatty Acid Biosynthesis","text":"Acetyl-CoA carboxylase (ACC) is allosterically activated by:","options":["Palmitoyl-CoA","AMP","Citrate","Glucagon","Epinephrine"],"correct":2,"explain":"Citrate allosterically activates ACC by promoting its polymerization into the active filamentous form. High citrate signals an abundance of acetyl-CoA and energy, indicating conditions favorable for fat synthesis. Conversely, palmitoyl-CoA (end-product) and AMPK phosphorylation inhibit ACC.","explainImg":""},
-    {"id":"fab007","topic":"Fatty Acid Biosynthesis","text":"Which enzyme introduces the first double bond into saturated fatty acids in mammals, typically at the Δ9 position?","options":["Fatty acid elongase","Stearoyl-CoA desaturase (SCD, Δ9-desaturase)","Acetyl-CoA carboxylase","Phospholipase A2","FADS2 (Δ6-desaturase)"],"correct":1,"explain":"Stearoyl-CoA desaturase (SCD) introduces a cis double bond at the Δ9 position, converting stearoyl-CoA (C18:0) to oleoyl-CoA (C18:1, Δ9). Mammals lack Δ12 and Δ15 desaturases, making linoleic acid (Δ9,12) and α-linolenic acid (Δ9,12,15) essential dietary fatty acids.","explainImg":""},
-    {"id":"fab008","topic":"Fatty Acid Biosynthesis","text":"The acyl carrier protein (ACP) in FAS holds intermediates via which type of linkage?","options":["Ester bond to serine","Phosphodiester bond","Thioester bond to a phosphopantetheine group","Amide bond to lysine","Anhydride bond"],"correct":2,"explain":"Growing fatty acid chains are covalently attached to ACP via a thioester bond to the phosphopantetheine prosthetic group (derived from CoA). This thioester bond has high group transfer potential and is essential for the condensation reactions catalyzed by FAS.","explainImg":""},
-    {"id":"fab009","topic":"Fatty Acid Biosynthesis","text":"Insulin stimulates fatty acid synthesis primarily by:","options":["Directly activating FAS","Activating AMPK, which phosphorylates ACC","Activating a phosphatase that dephosphorylates and activates ACC","Increasing malonyl-CoA degradation","Inhibiting citrate export from mitochondria"],"correct":2,"explain":"Insulin activates protein phosphatase 2A, which dephosphorylates ACC, activating it. Insulin also induces transcription of FAS and ACC genes, increases glucose uptake (providing acetyl-CoA and NADPH via glycolysis and PPP), and inhibits AMPK.","explainImg":""},
-    {"id":"fab010","topic":"Fatty Acid Biosynthesis","text":"Which of the following best describes why linoleic acid (18:2, Δ9,12) is an essential fatty acid?","options":["Humans cannot synthesize fatty acids longer than C16","Humans lack the Δ12-desaturase needed to introduce the Δ12 double bond","Linoleic acid cannot be activated to acyl-CoA","β-Oxidation of linoleic acid is toxic","Linoleic acid is only found in animal fats"],"correct":1,"explain":"Mammals have desaturases for positions Δ9, Δ6, Δ5, and Δ4, but lack Δ12 and Δ15 desaturases. Therefore, linoleic acid (18:2 Δ9,12) and α-linolenic acid (18:3 Δ9,12,15) must be obtained from the diet and are classified as essential fatty acids.","explainImg":""},
-    {"id":"aac001","topic":"Amino Acid Catabolism","text":"What is the first step in the catabolism of most amino acids?","options":["Oxidative decarboxylation","Transamination or oxidative deamination","Phosphorylation","Reduction","Hydroxylation"],"correct":1,"explain":"The first step is usually removal of the amino group, either by transamination (transfer to α-ketoglutarate, producing glutamate) or oxidative deamination (glutamate dehydrogenase, releasing NH₄⁺). The resulting α-keto acid enters central metabolic pathways.","explainImg":""},
-    {"id":"aac002","topic":"Amino Acid Catabolism","text":"Pyridoxal phosphate (PLP) is the cofactor for which type of enzyme central to amino acid catabolism?","options":["Oxidases","Aminotransferases (transaminases)","Carboxylases","Kinases","Reductases"],"correct":1,"explain":"PLP (vitamin B6 derivative) forms a Schiff base with amino acids at the active site of aminotransferases, enabling transfer of the amino group to α-ketoglutarate. PLP is also required for decarboxylases, racemases, and serine/threonine dehydratases.","explainImg":""},
-    {"id":"aac003","topic":"Amino Acid Catabolism","text":"Phenylketonuria (PKU) results from a deficiency of phenylalanine hydroxylase. What accumulates as a result?","options":["Tyrosine","Phenylalanine and phenylpyruvate","Homogentisate","Fumarylacetoacetate","Melanin precursors"],"correct":1,"explain":"Without phenylalanine hydroxylase (which converts phenylalanine to tyrosine), phenylalanine accumulates and is shunted to phenylpyruvate, phenylacetate, and phenyllactate (collectively 'phenylketones'). These are neurotoxic, causing intellectual disability if untreated.","explainImg":""},
-    {"id":"aac004","topic":"Amino Acid Catabolism","text":"Maple syrup urine disease is caused by a deficiency in the branched-chain α-keto acid dehydrogenase complex, which affects catabolism of:","options":["Phenylalanine, tyrosine, tryptophan","Leucine, isoleucine, valine","Lysine, arginine, histidine","Methionine, cysteine, serine","Aspartate, glutamate, alanine"],"correct":1,"explain":"The branched-chain α-keto acid dehydrogenase (BCKDH) complex oxidatively decarboxylates the α-keto acids derived from leucine, isoleucine, and valine. Deficiency causes accumulation of these keto acids, which give urine a sweet maple syrup odor and cause severe neurological damage.","explainImg":""},
-    {"id":"aac005","topic":"Amino Acid Catabolism","text":"Which amino acid is the primary nitrogen carrier from peripheral tissues to the liver?","options":["Glutamine","Alanine","Glycine","Aspartate","Serine"],"correct":1,"explain":"Alanine is the primary nitrogen carrier via the glucose-alanine cycle: muscle transaminates pyruvate with amino group from amino acid catabolism to form alanine, which travels to the liver. There, alanine transaminase regenerates pyruvate (for gluconeogenesis) and glutamate (enters urea cycle).","explainImg":""},
-    {"id":"aac006","topic":"Amino Acid Catabolism","text":"Homocystinuria is associated with deficiency of cystathionine β-synthase. Which metabolic pathway is primarily affected?","options":["Phenylalanine degradation","Methionine catabolism (transsulfuration pathway)","Tryptophan catabolism","Histidine catabolism","Threonine degradation"],"correct":1,"explain":"Cystathionine β-synthase converts homocysteine + serine → cystathionine in the transsulfuration pathway. Deficiency causes homocysteine accumulation, leading to cardiovascular disease, lens dislocation, and intellectual disability. Vitamin B6, B12, and folate are used in treatment.","explainImg":""},
-    {"id":"aac007","topic":"Amino Acid Catabolism","text":"Glucogenic amino acids can be converted to glucose via gluconeogenesis. Which of the following is purely glucogenic?","options":["Leucine","Lysine","Alanine","Phenylalanine","Isoleucine"],"correct":2,"explain":"Alanine is purely glucogenic — it is transaminated to pyruvate, which can be converted to OAA (by pyruvate carboxylase) and then to glucose via gluconeogenesis. Leucine and lysine are purely ketogenic; phenylalanine and isoleucine are both glucogenic and ketogenic.","explainImg":""},
-    {"id":"aac008","topic":"Amino Acid Catabolism","text":"The catabolism of phenylalanine and tyrosine ultimately produces which TCA cycle and ketone body precursors?","options":["Oxaloacetate and malate","Fumarate and acetoacetate","Succinate and propionyl-CoA","α-Ketoglutarate and acetyl-CoA","Citrate and NADH"],"correct":1,"explain":"Phenylalanine is first hydroxylated to tyrosine. Tyrosine degradation proceeds through homogentisate → maleylacetoacetate → fumarylacetoacetate → fumarate + acetoacetate. This makes phenylalanine/tyrosine both glucogenic (fumarate → TCA → gluconeogenesis) and ketogenic (acetoacetate).","explainImg":""},
-    {"id":"aac009","topic":"Amino Acid Catabolism","text":"Which vitamin B6-dependent reaction removes the amino group from glutamate, releasing free ammonium?","options":["Transamination by AST","Oxidative deamination by glutamate dehydrogenase","Decarboxylation by glutamate decarboxylase","Reduction by glutamate reductase","Phosphorylation by glutamate kinase"],"correct":1,"explain":"Glutamate dehydrogenase (in the mitochondrial matrix) catalyzes: glutamate + NAD⁺ → α-ketoglutarate + NADH + NH₄⁺. This is the major route for releasing free ammonia in the liver for urea synthesis. The enzyme can use either NAD⁺ or NADP⁺ and is regulated by ATP, GTP (inhibit) and ADP, GDP (activate).","explainImg":""},
-    {"id":"aac010","topic":"Amino Acid Catabolism","text":"Alkaptonuria results from a defect in homogentisate oxidase. Which amino acids cannot be catabolized normally?","options":["Methionine and cysteine","Phenylalanine and tyrosine","Tryptophan and histidine","Leucine and isoleucine","Lysine and arginine"],"correct":1,"explain":"Homogentisate oxidase catalyzes a step in the degradation of phenylalanine and tyrosine. Its deficiency causes accumulation of homogentisic acid, which is excreted in urine (turns dark on standing) and deposits in connective tissues (ochronosis), causing arthritis.","explainImg":""},
-    {"id":"uc001","topic":"Urea Cycle","text":"In which two compartments of the hepatocyte does the urea cycle operate?","options":["Cytosol and lysosome","Mitochondrial matrix and cytosol","Endoplasmic reticulum and cytosol","Nucleus and cytosol","Peroxisome and cytosol"],"correct":1,"explain":"The first two reactions of the urea cycle occur in the mitochondrial matrix (CPS-I and OTC), while the remaining three reactions (ASS, ASL, arginase) occur in the cytosol. Citrulline is exported from the mitochondria via a specific transporter to continue the cycle.","explainImg":""},
-    {"id":"uc002","topic":"Urea Cycle","text":"Which enzyme catalyzes the rate-limiting step of the urea cycle?","options":["Ornithine transcarbamylase (OTC)","Carbamoyl phosphate synthetase I (CPS-I)","Argininosuccinate synthetase","Argininosuccinate lyase","Arginase"],"correct":1,"explain":"CPS-I is the rate-limiting enzyme of the urea cycle. It condenses NH₃ + CO₂ + 2 ATP → carbamoyl phosphate. It requires N-acetylglutamate (NAG) as an allosteric activator, which is synthesized from acetyl-CoA + glutamate when amino acid load is high.","explainImg":""},
-    {"id":"uc003","topic":"Urea Cycle","text":"N-Acetylglutamate (NAG) activates CPS-I. NAG is synthesized when amino acid catabolism increases, signaled by elevated levels of:","options":["Urea","Glutamine","Acetyl-CoA and glutamate","ATP","Arginine"],"correct":2,"explain":"NAG synthase is activated by arginine and uses acetyl-CoA + glutamate as substrates. When amino acids are being catabolized in large amounts, glutamate (from transamination) and acetyl-CoA accumulate, stimulating NAG synthesis and thereby activating CPS-I.","explainImg":""},
-    {"id":"uc004","topic":"Urea Cycle","text":"Ornithine transcarbamylase (OTC) deficiency is the most common urea cycle disorder. Its X-linked inheritance means affected males present with:","options":["Mild hyperammonemia","Severe neonatal hyperammonemia, often lethal","Urea accumulation","Argininosuccinate accumulation","Orotic aciduria only"],"correct":1,"explain":"OTC deficiency causes severe hyperammonemia in affected hemizygous males because carbamoyl phosphate cannot be transferred to ornithine and accumulates, overflowing into the pyrimidine synthesis pathway (producing orotic acid). Hyperammonemia causes cerebral edema and is often fatal neonatally.","explainImg":""},
-    {"id":"uc005","topic":"Urea Cycle","text":"Which amino acid is regenerated at the end of each turn of the urea cycle, serving as a carrier?","options":["Arginine","Citrulline","Aspartate","Ornithine","Glutamine"],"correct":3,"explain":"Ornithine is regenerated by arginase, which cleaves arginine to urea + ornithine. Ornithine is then transported back into the mitochondria to react with carbamoyl phosphate again, acting as the catalytic carrier molecule of the cycle.","explainImg":""},
-    {"id":"uc006","topic":"Urea Cycle","text":"Which nitrogen atom in urea comes from the direct addition of free ammonia (NH₄⁺) via CPS-I?","options":["Both nitrogen atoms","The nitrogen from aspartate","One nitrogen (from NH₃ via carbamoyl phosphate)","Neither — both come from glutamine","The nitrogen from arginine"],"correct":2,"explain":"Urea contains two nitrogen atoms. One comes from free ammonia (NH₃) incorporated by CPS-I into carbamoyl phosphate. The second comes from the amino group of aspartate, which is incorporated at the argininosuccinate synthetase step. Fumarate is released when aspartate donates its amino group.","explainImg":""},
-    {"id":"uc007","topic":"Urea Cycle","text":"Citrullinemia type I results from a deficiency of argininosuccinate synthetase (ASS). What accumulates in blood and urine?","options":["Ornithine","Citrulline","Argininosuccinate","Arginine","Carbamoyl phosphate"],"correct":1,"explain":"ASS catalyzes citrulline + aspartate → argininosuccinate. Its deficiency causes citrulline to accumulate dramatically in blood and urine (citrullinemia). Ammonia also rises because the urea cycle is blocked. Treatment includes protein restriction and sodium benzoate/phenylbutyrate.","explainImg":""},
-    {"id":"uc008","topic":"Urea Cycle","text":"Fumarate produced in the urea cycle by argininosuccinate lyase is important because it:","options":["Is directly excreted","Enters the TCA cycle, linking it to the urea cycle","Is converted to malate for gluconeogenesis only","Inhibits CPS-I","Is converted to aspartate in the cytosol only"],"correct":1,"explain":"Fumarate released by argininosuccinate lyase enters the TCA cycle (fumarate → malate → OAA). OAA can be transaminated to aspartate, which then re-enters the urea cycle. This connection is called the 'urea cycle–TCA cycle bicycle' and links nitrogen disposal to energy metabolism.","explainImg":""},
-    {"id":"uc009","topic":"Urea Cycle","text":"In hyperammonemia, which amino acid carries nitrogen from muscles to the liver for detoxification, and how?","options":["Alanine — via the glucose-alanine cycle; also glutamine — via amidation of glutamate","Aspartate — directly via blood","Glycine — via the glycine cleavage system","Serine — via hydroxymethyltransferase","Taurine — via conjugation"],"correct":0,"explain":"Two main nitrogen carriers: (1) Alanine (glucose-alanine cycle) — muscle transaminates pyruvate to alanine; liver extracts the amino group. (2) Glutamine — synthesized in muscle/brain by glutamine synthetase (fixes NH₃); released, taken up by liver and intestine, and deaminated by glutaminase.","explainImg":""},
-    {"id":"uc010","topic":"Urea Cycle","text":"Arginase deficiency causes argininemia. What is the distinguishing neurological feature compared to other urea cycle defects?","options":["Episodic vomiting","Progressive spastic diplegia and intellectual disability rather than acute hyperammonemia","Neonatal lethal hyperammonemia","Sensorineural hearing loss","Seizures from hypoglycemia"],"correct":1,"explain":"Arginase deficiency (argininemia) typically presents with progressive spastic diplegia and intellectual disability rather than life-threatening hyperammonemia, because alternative pathways can partially clear ammonia. Arginine accumulates and is believed to be neurotoxic. Ammonia elevation is milder than in other urea cycle disorders.","explainImg":""}
+    {
+      "id": "gly001",
+      "topic": "Glycolysis",
+      "text": "Where does glycolysis take place?",
+      "options": [
+        "In the mitochondria",
+        "In the cytosol",
+        "In the lysosome",
+        "In the nucleus",
+        "In the peroxisome"
+      ],
+      "correct": 1,
+      "explain": "Glycolysis is a cytosolic pathway that runs entirely in the cytoplasm. In contrast, the citric acid cycle and oxidative phosphorylation take place in the mitochondria. This spatial separation allows both pathways to be regulated independently. Glycolysis remains active in the cytosol even under anaerobic conditions.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly002",
+      "topic": "Glycolysis",
+      "text": "How much energy is released during ATP hydrolysis?",
+      "options": [
+        "−60 kJ/mol",
+        "−10 kJ/mol",
+        "−45 kJ/mol",
+        "−31 kJ/mol",
+        "−20 kJ/mol"
+      ],
+      "correct": 3,
+      "explain": "The hydrolysis of one phosphoanhydride bond of ATP releases approximately −31 kJ/mol under standard conditions. This value explains why ATP is considered the universal energy carrier of the cell. The free energy arises from electrostatic repulsion between phosphate groups and resonance stabilization of the resulting ADP and inorganic phosphate. Under cellular conditions the actual value can be even higher.",
+      "explainImg": "images/gly002.svg"
+    },
+    {
+      "id": "gly003",
+      "topic": "Glycolysis",
+      "text": "What distinguishes aerobic from anaerobic glycolysis?",
+      "options": [
+        "The further fate of the pyruvate produced",
+        "The number of ATP molecules consumed",
+        "The activity of phosphofructokinase 1",
+        "The number of reaction steps completed",
+        "The location of glucose phosphorylation"
+      ],
+      "correct": 0,
+      "explain": "Glycolysis itself proceeds identically in both cases and ends with pyruvate. The key difference lies in the further fate of pyruvate: aerobically it is imported into mitochondria and decarboxylated to acetyl-CoA. Anaerobically, pyruvate is reduced to lactate in the cytosol by lactate dehydrogenase to regenerate NAD⁺.",
+      "explainImg": "images/gly003.svg"
+    },
+    {
+      "id": "gly004",
+      "topic": "Glycolysis",
+      "text": "What product is formed during the anaerobic breakdown of pyruvate in the cytosol?",
+      "options": [
+        "Citrate",
+        "Acetyl-CoA",
+        "Succinate",
+        "Oxaloacetate",
+        "Lactate"
+      ],
+      "correct": 4,
+      "explain": "Under anaerobic conditions, pyruvate is reduced to lactate by lactate dehydrogenase (LDH). In the process, NADH is reoxidized to NAD⁺, which is essential for glycolysis to continue. Lactate is released into the blood and can be converted back to glucose in the liver via the Cori cycle. Clinically, lactate rises during hypoxia, sepsis, and intense exercise.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly005",
+      "topic": "Glycolysis",
+      "text": "What is the correct net balance of glycolysis?",
+      "options": [
+        "Glucose + 2 NAD⁺ + 4 ADP + 2 Pᵢ → 2 Pyruvate + 2 NADH + 4 ATP + 2 H₂O",
+        "Glucose + 4 ADP → 2 Pyruvate + 4 ATP + 2 CO₂",
+        "Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Pyruvate + 2 NADH + 2 ATP + 2 H₂O",
+        "Glucose + 2 ADP + 2 Pᵢ → 2 Pyruvate + 2 ATP + 2 NADH + 2 CO₂",
+        "Glucose + 2 NADH → 2 Pyruvate + 2 NAD⁺ + 4 ATP"
+      ],
+      "correct": 2,
+      "explain": "The net balance of glycolysis yields 2 ATP (4 produced minus 2 consumed in phase 1), 2 NADH, and 2 pyruvate per glucose. The NADH can supply additional ATP in the electron transport chain under aerobic conditions. Important: no CO₂ is produced in glycolysis — CO₂ is only released during oxidative decarboxylation of pyruvate.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly006",
+      "topic": "Glycolysis",
+      "text": "Which three enzymes are considered the key regulatory enzymes of glycolysis?",
+      "options": [
+        "Glucokinase, aldolase, pyruvate dehydrogenase",
+        "Hexokinase, phosphofructokinase 1, pyruvate kinase",
+        "Lactate dehydrogenase, hexokinase, phosphoglycerate kinase",
+        "Aldolase, enolase, phosphoglycerate mutase",
+        "Phosphoglycerate kinase, triose phosphate isomerase, enolase"
+      ],
+      "correct": 1,
+      "explain": "The three key enzymes of glycolysis catalyze irreversible, highly exergonic reactions and are the main targets of regulation. Hexokinase phosphorylates glucose to glucose-6-phosphate; PFK-1 is the most important regulatory enzyme; pyruvate kinase catalyzes the final ATP-producing step. All three are subject to allosteric and hormonal control.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly007",
+      "topic": "Glycolysis",
+      "text": "By which substance is phosphofructokinase 1 allosterically activated?",
+      "options": [
+        "ATP",
+        "Citrate",
+        "Glucose-6-phosphate",
+        "Phosphoenolpyruvate",
+        "Fructose-2,6-bisphosphate"
+      ],
+      "correct": 4,
+      "explain": "Fructose-2,6-bisphosphate is the strongest allosteric activator of PFK-1 and a central regulatory molecule. It is produced by PFK-2, whose activity is hormonally controlled: insulin promotes, glucagon inhibits PFK-2 activity. ATP and citrate inhibit PFK-1 (energy surplus), while AMP and ADP activate it.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly008",
+      "topic": "Glycolysis",
+      "text": "Which hormone inhibits the transcription of hexokinase?",
+      "options": [
+        "Glucagon",
+        "Insulin",
+        "Thyroxine",
+        "Adrenaline",
+        "Cortisol"
+      ],
+      "correct": 0,
+      "explain": "Glucagon signals low blood glucose and inhibits transcription of glycolytic enzymes such as hexokinase. Insulin has the opposite effect and increases their expression. This hormonal control of gene expression allows long-term adaptation of the glycolytic rate to nutritional status. Glucagon simultaneously promotes gluconeogenesis in the liver.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly009",
+      "topic": "Glycolysis",
+      "text": "What does the Cori cycle describe?",
+      "options": [
+        "Synthesis of glucose from amino acids in the muscle",
+        "Regeneration of NAD⁺ via the citric acid cycle in the liver",
+        "Breakdown of fatty acids to acetyl-CoA in the liver",
+        "Conversion of lactate to glucose between muscle and liver",
+        "Transport of pyruvate from the cytosol into mitochondria"
+      ],
+      "correct": 3,
+      "explain": "In the Cori cycle, lactate produced during anaerobic muscle metabolism is transported via the blood to the liver. There it is converted back to glucose by gluconeogenesis (2 lactate → 1 glucose), which is made available to the muscle again. The cycle costs net energy (6 ATP equivalents per glucose) and occurs mainly during intense physical exercise.",
+      "explainImg": "images/gly009.svg"
+    },
+    {
+      "id": "gly010",
+      "topic": "Glycolysis",
+      "text": "Which statement about the regulation of pyruvate kinase is correct?",
+      "options": [
+        "It is allosterically activated by citrate",
+        "It is activated by fructose-1,6-bisphosphate",
+        "It is allosterically inhibited by glucose-6-phosphate",
+        "Insulin inhibits expression of the pyruvate kinase gene",
+        "It is allosterically inhibited by AMP"
+      ],
+      "correct": 1,
+      "explain": "Pyruvate kinase is stimulated by fructose-1,6-bisphosphate in a feedforward activation: when PFK-1 is active and fructose-1,6-bisphosphate accumulates, pyruvate kinase is pre-activated. It is inhibited by ATP and alanine (energy surplus or sufficient amino acids). Insulin increases expression of the pyruvate kinase gene — the opposite of option D.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly011",
+      "topic": "Glycolysis",
+      "text": "What distinguishes glucokinase from hexokinase?",
+      "options": [
+        "Glucokinase is found in erythrocytes, hexokinase in the liver",
+        "Glucokinase has a lower Km for glucose than hexokinase",
+        "Glucokinase is not inhibited by glucose-6-phosphate",
+        "Glucokinase catalyzes the phosphorylation of fructose",
+        "Glucokinase consumes GTP instead of ATP in the reaction"
+      ],
+      "correct": 2,
+      "explain": "Glucokinase (hexokinase IV) is found mainly in the liver and pancreatic beta cells. It has a high Km (low affinity) for glucose, is not inhibited by glucose-6-phosphate, and is induced by insulin. These properties make it the glucose sensor of the liver: it only becomes active at high blood glucose and adapts phosphorylation to supply.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly012",
+      "topic": "Glycolysis",
+      "text": "Which combination allosterically inhibits phosphofructokinase 1?",
+      "options": [
+        "ATP and citrate",
+        "AMP and fructose-2,6-bisphosphate",
+        "ADP and glucose-6-phosphate",
+        "NAD⁺ and oxaloacetate",
+        "Insulin and glucagon"
+      ],
+      "correct": 0,
+      "explain": "High ATP levels signal energy surplus and inhibit PFK-1 to slow down glycolysis. Citrate, a citric acid cycle intermediate, also inhibits PFK-1 and signals that the cell has sufficient biosynthetic precursors. In contrast, AMP and ADP (energy deficit) and fructose-2,6-bisphosphate activate PFK-1.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly013",
+      "topic": "Glycolysis",
+      "text": "How many ATP molecules are produced directly and net in glycolysis?",
+      "options": [
+        "4 ATP, since four molecules are formed in phase 3",
+        "1 ATP, since only one substrate-level phosphorylation step exists",
+        "6 ATP, since the NADH contribution is included",
+        "2 ATP, since two are consumed in phase 1 and four are formed in phase 3",
+        "8 ATP, since glucose contains six carbon atoms"
+      ],
+      "correct": 3,
+      "explain": "In phase 1 (investment phase) 2 ATP are consumed (hexokinase and PFK-1). In phase 3 (payoff phase) 4 ATP are formed (2 × phosphoglycerate kinase and 2 × pyruvate kinase). The net gain is therefore 2 ATP per glucose. The NADH produced yields additional ATP under aerobic conditions — but only in the electron transport chain, not in glycolysis itself.",
+      "explainImg": "images/gly013.svg"
+    },
+    {
+      "id": "gly014",
+      "topic": "Glycolysis",
+      "text": "In which clinical condition is an elevated blood lactate level most likely?",
+      "options": [
+        "Hyperglycemia in uncontrolled type 2 diabetes",
+        "Long-term fasting without physical exertion",
+        "Elevated insulin levels after a meal",
+        "Chronic renal insufficiency without acidosis",
+        "Tissue hypoxia in shock or severe sepsis"
+      ],
+      "correct": 4,
+      "explain": "In tissue hypoxia (e.g. shock, sepsis, cardiac arrest) the electron transport chain cannot oxidize NADH sufficiently, causing increased reduction of pyruvate to lactate. This leads to lactic acidosis. A lactate > 2 mmol/L is a clinical warning value; values > 4 mmol/L indicate increased mortality risk. Regular lactate measurements are therefore standard in intensive care medicine.",
+      "explainImg": ""
+    },
+    {
+      "id": "gly015",
+      "topic": "Glycolysis",
+      "text": "What is the end product of phase 1 of glycolysis?",
+      "options": [
+        "Glucose-1-phosphate",
+        "Phosphoenolpyruvate",
+        "Fructose-1,6-bisphosphate",
+        "Glyceraldehyde-3-phosphate",
+        "1,3-Bisphosphoglycerate"
+      ],
+      "correct": 2,
+      "explain": "Phase 1 of glycolysis (investment phase) encompasses the conversion of glucose to fructose-1,6-bisphosphate consuming 2 ATP. Key enzymes are hexokinase (step 1) and phosphofructokinase 1 (step 3). The resulting fructose-1,6-bisphosphate is cleaved in phase 2 by aldolase into two C3 units: glyceraldehyde-3-phosphate (GAP) and dihydroxyacetone phosphate (DHAP).",
+      "explainImg": "images/gly015.svg"
+    },
+    {
+      "id": "gcn001",
+      "topic": "Gluconeogenesis",
+      "text": "Where does gluconeogenesis mainly take place?",
+      "options": [
+        "In skeletal muscle and the brain",
+        "In adipose tissue and the spleen",
+        "In cardiac muscle and the small intestine",
+        "In the lung and bone marrow",
+        "In the liver and kidney"
+      ],
+      "correct": 4,
+      "explain": "Gluconeogenesis occurs mainly in the liver, which accounts for up to 90% of new glucose synthesis. The kidney contributes especially during prolonged fasting and acidosis. Other organs such as muscle or brain cannot perform significant gluconeogenesis because they lack key enzymes (e.g. glucose-6-phosphatase).",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn002",
+      "topic": "Gluconeogenesis",
+      "text": "What are the three main precursor substrates for gluconeogenesis?",
+      "options": [
+        "Glucose, fructose and galactose",
+        "Lactate, amino acids and glycerol",
+        "Fatty acids, cholesterol and ketone bodies",
+        "Acetyl-CoA, NADH and ATP",
+        "Pyruvate, CO₂ and GTP"
+      ],
+      "correct": 1,
+      "explain": "The main substrates for gluconeogenesis are lactate (from anaerobic glycolysis, Cori cycle), glucogenic amino acids (e.g. alanine from muscle breakdown during fasting), and glycerol (from lipolysis in adipose tissue). Fatty acids cannot be converted to glucose in humans because acetyl-CoA cannot enter gluconeogenesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn003",
+      "topic": "Gluconeogenesis",
+      "text": "Why can gluconeogenesis not simply run glycolysis in reverse?",
+      "options": [
+        "Because different coenzymes are needed in the reverse direction",
+        "Because glucose cannot be phosphorylated in the liver",
+        "Because NADH is not available for the reverse reaction",
+        "Because three glycolytic reactions are thermodynamically irreversible",
+        "Because pyruvate cannot be transported into mitochondria"
+      ],
+      "correct": 3,
+      "explain": "Three glycolytic reactions are irreversible under physiological conditions: the reactions of hexokinase, phosphofructokinase 1, and pyruvate kinase. These must be bypassed in gluconeogenesis by specific circumventing reactions with their own enzymes. The remaining seven glycolytic reactions are reversible.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn004",
+      "topic": "Gluconeogenesis",
+      "text": "Which enzyme catalyzes the first step of gluconeogenesis starting from pyruvate?",
+      "options": [
+        "Pyruvate carboxylase",
+        "PEP carboxykinase",
+        "Fructose-1,6-bisphosphatase",
+        "Glucose-6-phosphatase",
+        "Pyruvate dehydrogenase"
+      ],
+      "correct": 0,
+      "explain": "Pyruvate carboxylase is located in the mitochondria and catalyzes the ATP-dependent carboxylation of pyruvate to oxaloacetate consuming HCO₃⁻. It requires biotin as a cofactor. Acetyl-CoA is an allosteric activator of pyruvate carboxylase — a signal that sufficient substrates for the citric acid cycle are available and excess pyruvate should be redirected into gluconeogenesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn005",
+      "topic": "Gluconeogenesis",
+      "text": "In which cellular compartment is oxaloacetate converted to PEP by PEP carboxykinase?",
+      "options": [
+        "In the intermembrane space of mitochondria",
+        "In the endoplasmic reticulum",
+        "In the cytosol",
+        "In the mitochondrial matrix",
+        "In the nucleus"
+      ],
+      "correct": 2,
+      "explain": "PEP carboxykinase (PEPCK) is a cytosolic enzyme that converts oxaloacetate to phosphoenolpyruvate (PEP) and CO₂ consuming GTP. Since oxaloacetate cannot directly cross the inner mitochondrial membrane, it is first reduced to malate, transported to the cytosol, and reoxidized to oxaloacetate there before PEPCK converts it to PEP.",
+      "explainImg": "images/gcn005.svg"
+    },
+    {
+      "id": "gcn006",
+      "topic": "Gluconeogenesis",
+      "text": "Which gluconeogenesis enzyme is localized in the endoplasmic reticulum?",
+      "options": [
+        "Pyruvate carboxylase",
+        "Fructose-1,6-bisphosphatase",
+        "PEP carboxykinase",
+        "Phosphoglycerate kinase",
+        "Glucose-6-phosphatase"
+      ],
+      "correct": 4,
+      "explain": "Glucose-6-phosphatase is localized in the endoplasmic reticulum (ER) and catalyzes the final step of gluconeogenesis: removal of the phosphate group from glucose-6-phosphate to free glucose. Only the liver and kidney possess this enzyme, which explains why only these organs can release glucose into the blood. Its absence causes Von Gierke disease.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn007",
+      "topic": "Gluconeogenesis",
+      "text": "What is the correct energy balance for gluconeogenesis forming 1 glucose from 2 pyruvate?",
+      "options": [
+        "Consumption of 2 ATP and 2 GTP, no NADH required",
+        "Consumption of 4 ATP, 2 GTP and 2 NADH",
+        "Consumption of 6 ATP and 2 FADH₂, no GTP required",
+        "Consumption of 2 ATP and 4 NADH, no GTP required",
+        "Consumption of 8 ATP and 4 GTP, 4 NADH required"
+      ],
+      "correct": 1,
+      "explain": "Gluconeogenesis from 2 pyruvate requires: 2 ATP for pyruvate carboxylase, 2 GTP for PEPCK, 2 ATP for phosphoglycerate kinase (reverse), and 2 NADH for the reverse of glyceraldehyde-3-phosphate dehydrogenase. The total balance is 4 ATP + 2 GTP + 2 NADH — far more energy than glycolysis produces. Gluconeogenesis is driven by glucose shortage, not by energy surplus.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn008",
+      "topic": "Gluconeogenesis",
+      "text": "What allosterically stimulates fructose-1,6-bisphosphatase?",
+      "options": [
+        "AMP and fructose-2,6-bisphosphate",
+        "ATP and glucose-6-phosphate",
+        "Insulin and pyruvate",
+        "Citrate",
+        "NADH and oxaloacetate"
+      ],
+      "correct": 3,
+      "explain": "Citrate activates fructose-1,6-bisphosphatase and simultaneously inhibits PFK-1 — a classic example of reciprocal regulation. High citrate levels signal that the citric acid cycle is saturated and glucose should be stored rather than burned. AMP and fructose-2,6-bisphosphate, in contrast, inhibit the bisphosphatase and activate PFK-1 to drive glycolysis during energy deficit.",
+      "explainImg": "images/gcn008.svg"
+    },
+    {
+      "id": "gcn009",
+      "topic": "Gluconeogenesis",
+      "text": "What mechanism drives gluconeogenesis when lactate rises in the blood?",
+      "options": [
+        "Law of mass action: higher substrate concentration drives the reaction toward glucose",
+        "Allosteric activation of pyruvate carboxylase by lactate",
+        "Hormonal induction of PEPCK by lactate directly",
+        "Activation of glucose-6-phosphatase by elevated lactate",
+        "Inhibition of glycolysis by lactate via PFK-1"
+      ],
+      "correct": 0,
+      "explain": "Gluconeogenesis is regulated by substrate availability (law of mass action): when blood concentrations of lactate, alanine, or glycerol rise, gluconeogenesis is driven purely by chemical equilibrium without hormonal intervention. In the Cori cycle, muscle supplies lactate that is directly used for glucose synthesis in the liver.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn010",
+      "topic": "Gluconeogenesis",
+      "text": "How does glucagon influence gluconeogenesis at the hormonal level?",
+      "options": [
+        "Glucagon inhibits gluconeogenesis by activating FOXO1",
+        "Glucagon inhibits PEPCK gene expression via cAMP",
+        "Glucagon increases PEPCK gene expression via cAMP and CREB",
+        "Glucagon activates insulin receptors in hepatocytes",
+        "Glucagon stimulates glycolysis and inhibits gluconeogenesis"
+      ],
+      "correct": 2,
+      "explain": "Glucagon binds to its G-protein-coupled receptor in hepatocytes and increases intracellular cAMP levels. cAMP activates protein kinase A, which phosphorylates the transcription factor CREB. Phosphorylated CREB increases transcription of PEPCK and glucose-6-phosphatase. Cortisol acts synergistically via the glucocorticoid receptor. This induction takes hours to days.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn011",
+      "topic": "Gluconeogenesis",
+      "text": "How does insulin inhibit gluconeogenesis at the molecular level?",
+      "options": [
+        "Insulin activates CREB and increases PEPCK transcription",
+        "Insulin directly inhibits pyruvate carboxylase by contact",
+        "Insulin activates FOXO1 and increases PEPCK expression",
+        "Insulin lowers cAMP directly by inhibiting adenylate cyclase",
+        "Insulin phosphorylates and inactivates FOXO1, which otherwise promotes PEPCK"
+      ],
+      "correct": 4,
+      "explain": "Insulin activates the PI3K/Akt signaling pathway, which leads to phosphorylation of the transcription factor FOXO1 by Akt (PKB). Phosphorylated FOXO1 exits the nucleus and can no longer promote transcription of PEPCK and glucose-6-phosphatase. FOXO1 in its active (unphosphorylated) state is thus a promoter of gluconeogenesis — insulin shuts it off by phosphorylation.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn012",
+      "topic": "Gluconeogenesis",
+      "text": "Which statement about Von Gierke disease (type 1a) is correct?",
+      "options": [
+        "The cause is a defect in fructose-1,6-bisphosphatase",
+        "The cause is a defect in glucose-6-phosphatase",
+        "The cause is a defect in pyruvate carboxylase",
+        "The cause is a defect in PEP carboxykinase",
+        "The cause is a defect in lactate dehydrogenase"
+      ],
+      "correct": 1,
+      "explain": "Von Gierke disease type 1a is inherited in an autosomal recessive manner and is caused by a defect in glucose-6-phosphatase in the ER. Without this enzyme, glucose-6-phosphate can be converted to free glucose neither from gluconeogenesis nor from glycogen breakdown. Consequences include severe fasting hypoglycemia, hepatomegaly from glycogen accumulation, lactic acidosis, and elevated uric acid and triglyceride levels.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn013",
+      "topic": "Gluconeogenesis",
+      "text": "Why cannot fatty acids contribute to gluconeogenesis in humans?",
+      "options": [
+        "Because fatty acids cannot reach the mitochondria",
+        "Because fatty acid breakdown does not generate ATP",
+        "Because fatty acids are directly oxidized to CO₂ and H₂O",
+        "Because acetyl-CoA cannot be converted to oxaloacetate or PEP",
+        "Because fatty acids competitively inhibit pyruvate carboxylase"
+      ],
+      "correct": 3,
+      "explain": "β-oxidation of fatty acids ends in acetyl-CoA. In the citric acid cycle, acetyl-CoA is completely oxidized to CO₂ — there is no net gain of oxaloacetate or other C4 compounds that could feed into gluconeogenesis. Therefore fatty acids are not gluconeogenic substrates. Glycerol (from triglycerides) can however enter gluconeogenesis as glycerol-3-phosphate.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn014",
+      "topic": "Gluconeogenesis",
+      "text": "In which condition is gluconeogenesis most strongly activated?",
+      "options": [
+        "Prolonged fasting with high glucagon and cortisol levels",
+        "Shortly after a carbohydrate-rich meal",
+        "During intense anaerobic muscle work alone",
+        "With high insulin levels and full glycogen stores",
+        "On an exclusively fat diet without protein intake"
+      ],
+      "correct": 0,
+      "explain": "During prolonged fasting, glucagon and cortisol are chronically elevated. Glucagon induces transcription of PEPCK and glucose-6-phosphatase via cAMP/CREB; cortisol acts synergistically. Simultaneously, muscle proteolysis (alanine) and lipolysis (glycerol) provide ample substrate. Insulin is suppressed, so FOXO1 remains active and gluconeogenic enzymes stay upregulated.",
+      "explainImg": ""
+    },
+    {
+      "id": "gcn015",
+      "topic": "Gluconeogenesis",
+      "text": "Which drug inhibits gluconeogenesis and is used as first-line therapy in type 2 diabetes?",
+      "options": [
+        "Glibenclamide (sulfonylurea)",
+        "Sitagliptin (DPP-4 inhibitor)",
+        "Metformin (biguanide)",
+        "Empagliflozin (SGLT-2 inhibitor)",
+        "Insulin glargine (long-acting insulin)"
+      ],
+      "correct": 2,
+      "explain": "Metformin is the most widely prescribed oral antidiabetic worldwide. It inhibits complex I of the mitochondrial respiratory chain, raising the AMP/ATP ratio and activating AMPK. AMPK phosphorylates and inactivates CREB coactivators (PGC-1α/TORC2), thereby reducing transcription of PEPCK and glucose-6-phosphatase. The result is a marked reduction in hepatic gluconeogenesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg001",
+      "topic": "Glycogen Metabolism",
+      "text": "Which enzyme adds glucose residues to the non-reducing end of glycogen?",
+      "options": [
+        "Glycogen phosphorylase",
+        "Glycogen synthase",
+        "Branching enzyme",
+        "UDP-glucose pyrophosphorylase",
+        "Debranching enzyme"
+      ],
+      "correct": 1,
+      "explain": "Glycogen synthase elongates glycogen chains by adding UDP-glucose to the non-reducing ends via α(1→4) glycosidic bonds. It requires a pre-existing glycogen primer (minimum 4 residues) or the protein glycogenin as initiator.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg002",
+      "topic": "Glycogen Metabolism",
+      "text": "What is the activated form of glucose used in glycogen synthesis?",
+      "options": [
+        "Glucose-1-phosphate",
+        "Glucose-6-phosphate",
+        "UDP-glucose",
+        "ADP-glucose",
+        "GDP-glucose"
+      ],
+      "correct": 2,
+      "explain": "Glucose must be activated to UDP-glucose by UDP-glucose pyrophosphorylase before it can be incorporated into glycogen. The UTP used in this reaction is hydrolyzed to UMP + PPi; subsequent pyrophosphatase activity drives the reaction forward.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg003",
+      "topic": "Glycogen Metabolism",
+      "text": "Glycogen phosphorylase cleaves glycogen by:",
+      "options": [
+        "Hydrolysis with water",
+        "Phosphorolysis using inorganic phosphate",
+        "Transferase reaction",
+        "Oxidative cleavage",
+        "Lysosomal α-glucosidase activity"
+      ],
+      "correct": 1,
+      "explain": "Glycogen phosphorylase performs phosphorolysis: it uses inorganic phosphate (Pi) to cleave α(1→4) bonds at non-reducing ends, releasing glucose-1-phosphate. This is energetically favorable since glucose-1-phosphate is already phosphorylated, saving one ATP compared to hydrolysis.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg004",
+      "topic": "Glycogen Metabolism",
+      "text": "Von Gierke disease (GSD type I) results from a deficiency of:",
+      "options": [
+        "Glycogen synthase",
+        "Glucose-6-phosphatase",
+        "Debranching enzyme",
+        "Acid maltase (α-glucosidase)",
+        "Liver glycogen phosphorylase"
+      ],
+      "correct": 1,
+      "explain": "Von Gierke disease is caused by glucose-6-phosphatase deficiency. Without this enzyme, the liver cannot release free glucose into the blood from either glycogenolysis or gluconeogenesis. This leads to severe fasting hypoglycemia and massive hepatic glycogen accumulation.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg005",
+      "topic": "Glycogen Metabolism",
+      "text": "Which hormone activates glycogenolysis in the liver via a cAMP-dependent pathway?",
+      "options": [
+        "Insulin",
+        "Glucagon",
+        "Cortisol",
+        "Aldosterone",
+        "Somatostatin"
+      ],
+      "correct": 1,
+      "explain": "Glucagon binds its GPCR on hepatocytes → adenylyl cyclase → cAMP → PKA activation → phosphorylase kinase activation → glycogen phosphorylase activation. Simultaneously, PKA phosphorylates and inactivates glycogen synthase, preventing futile cycling.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg006",
+      "topic": "Glycogen Metabolism",
+      "text": "The debranching enzyme has two catalytic activities. Which pair is correct?",
+      "options": [
+        "Kinase + phosphatase",
+        "4-α-glucanotransferase + amylo-1,6-glucosidase",
+        "Synthase + phosphorylase",
+        "Isomerase + lyase",
+        "Hydrolase + mutase"
+      ],
+      "correct": 1,
+      "explain": "The debranching enzyme first transfers a trisaccharide unit from a branch to the main chain (transferase activity), then hydrolyzes the remaining single glucose at the branch point (glucosidase activity), releasing free glucose rather than glucose-1-phosphate.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg007",
+      "topic": "Glycogen Metabolism",
+      "text": "McArdle disease (GSD type V) is characterized by muscle cramps during exercise due to deficiency of:",
+      "options": [
+        "Acid maltase",
+        "Liver phosphorylase",
+        "Muscle glycogen phosphorylase",
+        "Branching enzyme",
+        "Phosphofructokinase"
+      ],
+      "correct": 2,
+      "explain": "McArdle disease results from deficiency of muscle glycogen phosphorylase. Muscle cannot mobilize glycogen during exercise, leading to energy failure, painful cramps, and myoglobinuria. Blood lactate fails to rise after forearm ischemic exercise — a classic diagnostic test.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg008",
+      "topic": "Glycogen Metabolism",
+      "text": "Glycogen synthase is maximally active in its:",
+      "options": [
+        "Phosphorylated form",
+        "Dephosphorylated form",
+        "AMP-bound form",
+        "Glucagon-stimulated form",
+        "Citrate-inhibited form"
+      ],
+      "correct": 1,
+      "explain": "Glycogen synthase is active (a-form) when dephosphorylated and inactive (b-form) when phosphorylated. Insulin promotes glycogen synthesis by activating protein phosphatase 1 (PP1), which dephosphorylates and activates glycogen synthase.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg009",
+      "topic": "Glycogen Metabolism",
+      "text": "Which protein acts as a primer for glycogen synthesis by accepting the first glucose residues?",
+      "options": [
+        "Glycogenin",
+        "Glycogen synthase",
+        "Phosphoglucomutase",
+        "Laforin",
+        "Branching enzyme"
+      ],
+      "correct": 0,
+      "explain": "Glycogenin is a self-glucosylating protein that forms the primer for glycogen synthesis. It attaches the first glucose to a tyrosine residue, then extends the chain to ~8 residues before glycogen synthase takes over.",
+      "explainImg": ""
+    },
+    {
+      "id": "glg010",
+      "topic": "Glycogen Metabolism",
+      "text": "Insulin promotes glycogen synthesis by activating which phosphatase that dephosphorylates glycogen synthase?",
+      "options": [
+        "Protein phosphatase 1 (PP1)",
+        "Protein phosphatase 2A (PP2A)",
+        "Calcineurin (PP2B)",
+        "PTP1B",
+        "Phosphorylase kinase"
+      ],
+      "correct": 0,
+      "explain": "Insulin signaling activates PP1 through Akt-mediated phosphorylation of its regulatory subunit. PP1 then dephosphorylates glycogen synthase (activating it) and glycogen phosphorylase (inactivating it), coordinately promoting glycogen synthesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca001",
+      "topic": "Krebs Cycle",
+      "text": "Which enzyme catalyzes the condensation reaction that initiates the TCA cycle?",
+      "options": [
+        "Citrate synthase",
+        "Isocitrate dehydrogenase",
+        "Aconitase",
+        "Malate dehydrogenase",
+        "Fumarase"
+      ],
+      "correct": 0,
+      "explain": "Citrate synthase condenses acetyl-CoA (2C) with oxaloacetate (4C) to form citrate (6C). This is the entry point of the TCA cycle. The enzyme is regulated by the energy status of the cell: inhibited by ATP, NADH, and succinyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca002",
+      "topic": "Krebs Cycle",
+      "text": "How many NADH molecules are produced per complete turn of the TCA cycle?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct": 3,
+      "explain": "Three NADH molecules are produced per turn: at isocitrate dehydrogenase, α-ketoglutarate dehydrogenase, and malate dehydrogenase. One FADH₂ is also produced at succinate dehydrogenase, and one GTP at succinyl-CoA synthetase.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca003",
+      "topic": "Krebs Cycle",
+      "text": "Which TCA cycle intermediate is a key precursor for heme synthesis?",
+      "options": [
+        "Succinyl-CoA",
+        "Citrate",
+        "Fumarate",
+        "Malate",
+        "α-Ketoglutarate"
+      ],
+      "correct": 0,
+      "explain": "Succinyl-CoA condenses with glycine (catalyzed by ALA synthase, requiring pyridoxal phosphate) to form δ-aminolevulinic acid (ALA), the first committed step of heme biosynthesis. This reaction occurs in the mitochondrial matrix.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca004",
+      "topic": "Krebs Cycle",
+      "text": "Which TCA cycle enzyme directly produces GTP by substrate-level phosphorylation?",
+      "options": [
+        "Isocitrate dehydrogenase",
+        "Succinate dehydrogenase",
+        "Fumarase",
+        "Aconitase",
+        "Succinyl-CoA synthetase"
+      ],
+      "correct": 4,
+      "explain": "Succinyl-CoA synthetase (also called succinate thiokinase) couples the hydrolysis of the high-energy thioester bond in succinyl-CoA to the phosphorylation of GDP to GTP (or ADP to ATP in some tissues).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca005",
+      "topic": "Krebs Cycle",
+      "text": "Thiamine (B1) deficiency impairs the TCA cycle by affecting which enzyme complex?",
+      "options": [
+        "Citrate synthase",
+        "Pyruvate dehydrogenase and α-ketoglutarate dehydrogenase",
+        "Succinate dehydrogenase",
+        "Aconitase",
+        "Malate dehydrogenase"
+      ],
+      "correct": 1,
+      "explain": "Thiamine pyrophosphate (TPP) is an essential cofactor for both pyruvate dehydrogenase (PDH) and α-ketoglutarate dehydrogenase (α-KGDH). Thiamine deficiency causes Wernicke's encephalopathy and beriberi due to impaired energy metabolism in high-demand tissues.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca006",
+      "topic": "Krebs Cycle",
+      "text": "Succinate dehydrogenase is unique among TCA cycle enzymes because it is:",
+      "options": [
+        "Soluble in the matrix",
+        "Embedded in the inner mitochondrial membrane (Complex II)",
+        "Located in the cytosol",
+        "Associated with the outer mitochondrial membrane",
+        "A GTP-producing enzyme"
+      ],
+      "correct": 1,
+      "explain": "Succinate dehydrogenase is the only TCA enzyme embedded in the inner mitochondrial membrane. It is identical to respiratory chain Complex II — it oxidizes succinate to fumarate, reducing FAD to FADH₂, which feeds electrons directly into the ubiquinone pool.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca007",
+      "topic": "Krebs Cycle",
+      "text": "Which reaction is generally considered the rate-limiting step of the TCA cycle under most physiological conditions?",
+      "options": [
+        "Citrate synthase",
+        "Aconitase",
+        "Isocitrate dehydrogenase",
+        "Malate dehydrogenase",
+        "Fumarase"
+      ],
+      "correct": 2,
+      "explain": "Isocitrate dehydrogenase is a key regulatory enzyme. It is allosterically activated by ADP and Ca²⁺ and inhibited by ATP and NADH. By controlling flux at this step, the TCA cycle is coordinated with the cell's energy demands.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca008",
+      "topic": "Krebs Cycle",
+      "text": "If oxaloacetate (OAA) is depleted, which anaplerotic reaction can replenish it directly?",
+      "options": [
+        "Pyruvate → acetyl-CoA (PDH)",
+        "Glutamate → α-ketoglutarate (transamination)",
+        "Pyruvate → OAA (pyruvate carboxylase)",
+        "Succinyl-CoA → succinate",
+        "Fumarate → malate (fumarase)"
+      ],
+      "correct": 2,
+      "explain": "Pyruvate carboxylase is the primary anaplerotic enzyme in the liver: pyruvate + CO₂ + ATP → OAA. It is activated by acetyl-CoA — a signal that acetyl-CoA is available but OAA is limiting, ensuring continued TCA cycle flux.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca009",
+      "topic": "Krebs Cycle",
+      "text": "Citrate exported from mitochondria to the cytosol is cleaved by ATP-citrate lyase to provide acetyl-CoA for:",
+      "options": [
+        "Glycolysis",
+        "Gluconeogenesis",
+        "Urea synthesis",
+        "Heme synthesis",
+        "Fatty acid and cholesterol synthesis"
+      ],
+      "correct": 4,
+      "explain": "Citrate transport to the cytosol is the primary mechanism for exporting mitochondrial acetyl-CoA for biosynthesis. ATP-citrate lyase cleaves citrate into acetyl-CoA + OAA. This cytosolic acetyl-CoA is used for fatty acid synthesis and cholesterol (via HMG-CoA) synthesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca010",
+      "topic": "Krebs Cycle",
+      "text": "Which TCA cycle step involves an oxidative decarboxylation producing CO₂ and NADH?",
+      "options": [
+        "Citrate → isocitrate",
+        "Isocitrate → α-ketoglutarate",
+        "Succinate → fumarate",
+        "Malate → oxaloacetate",
+        "Fumarate → malate"
+      ],
+      "correct": 1,
+      "explain": "Isocitrate dehydrogenase catalyzes the first oxidative decarboxylation: isocitrate → α-ketoglutarate + CO₂ + NADH. A second oxidative decarboxylation occurs at α-ketoglutarate dehydrogenase (α-ketoglutarate → succinyl-CoA + CO₂ + NADH).",
+      "explainImg": ""
+    },
+    {
+      "id": "tca011",
+      "topic": "Krebs Cycle",
+      "text": "The pyruvate dehydrogenase complex (PDH) requires five coenzymes. Which combination correctly names all of them?",
+      "options": [
+        "TPP, biotin, CoA, FMN, NADP⁺",
+        "PLP, lipoic acid, CoA, FAD, NADP⁺",
+        "TPP, lipoic acid, CoA, FMN, NAD⁺",
+        "TPP, lipoic acid, CoA, FAD, NAD⁺",
+        "Biotin, lipoic acid, AMP, FAD, NAD⁺"
+      ],
+      "correct": 3,
+      "explain": "PDH consists of three catalytic subunits: E1 (pyruvate decarboxylase, uses TPP), E2 (dihydrolipoyl transacetylase, uses lipoic acid and CoA), and E3 (dihydrolipoyl dehydrogenase, uses FAD and NAD⁺). All five coenzymes are essential; loss of any one arrests the entire complex.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca012",
+      "topic": "Krebs Cycle",
+      "text": "Pyruvate dehydrogenase (PDH) and α-ketoglutarate dehydrogenase (OGDH) are often discussed together. Which statement best describes what they genuinely share?",
+      "options": [
+        "Both use biotin and transfer a carboxyl group to a mobile carrier between subunits",
+        "Both are cytosolic and regulated by reversible phosphorylation via insulin-sensitive kinases",
+        "Both differ in E1 specificity but share an identical E2 dihydrolipoyl transacylase subunit",
+        "Both produce acetyl-CoA as their acyl-CoA product and share the same E1 substrate pocket",
+        "Both are E1/E2/E3 complexes using the same five coenzymes to catalyze oxidative decarboxylation"
+      ],
+      "correct": 4,
+      "explain": "PDH and OGDH share the same three-component architecture (E1/TPP, E2/lipoic acid+CoA, E3/FAD+NAD⁺) and catalyze analogous oxidative decarboxylation reactions — PDH converts pyruvate → acetyl-CoA + CO₂, OGDH converts α-ketoglutarate → succinyl-CoA + CO₂. Their E3 subunit (dihydrolipoyl dehydrogenase) is in fact identical, so a single E3 deficiency impairs both complexes simultaneously.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca013",
+      "topic": "Krebs Cycle",
+      "text": "High concentrations of which metabolite simultaneously inhibit citrate synthase, isocitrate dehydrogenase, and α-KGDH, slowing the TCA cycle when reducing equivalents are in excess?",
+      "options": [
+        "NADH — accumulates when electron transport is saturated; direct product inhibitor at all three enzymes",
+        "ADP — signals low energy charge; acts as activator of isocitrate dehydrogenase and citrate synthase",
+        "Ca²⁺ — enters mitochondria during muscle contraction; activates isocitrate dehydrogenase, α-KGDH, and PDH phosphatase",
+        "Succinyl-CoA — direct product inhibitor of α-KGDH; downstream feedback inhibitor of citrate synthase",
+        "Acetyl-CoA — accumulates during β-oxidation; inhibits PDH but not all three TCA regulatory enzymes"
+      ],
+      "correct": 0,
+      "explain": "NADH accumulation signals a high-energy, high-reduction state and inhibits all three major control points of the TCA cycle simultaneously. This product inhibition slows the cycle until NADH is re-oxidized by the respiratory chain. Ca²⁺ has the opposite effect — it activates the cycle during muscle activity — while ADP activates (not inhibits) isocitrate dehydrogenase.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca014",
+      "topic": "Krebs Cycle",
+      "text": "FADH₂ produced by succinate dehydrogenase yields fewer ATP than NADH. What is the primary mechanistic reason?",
+      "options": [
+        "FADH₂ reaches Complex I at a later binding site than NADH, reducing the number of protons pumped per pair",
+        "FADH₂ has a more negative reduction potential than NAD⁺/NADH and cannot reduce ubiquinone without an additional energy input",
+        "FADH₂ is protein-bound in Complex II and passes electrons directly to ubiquinone, completely bypassing Complex I",
+        "FADH₂ donates to Complex III via a dedicated flavin carrier, skipping both Complex I and Complex II",
+        "FADH₂ is oxidized on the intermembrane-space face, reducing the effective proton gradient for ATP synthase"
+      ],
+      "correct": 2,
+      "explain": "NADH feeds electrons into Complex I, which pumps 4 H⁺ per electron pair → ~2.5 ATP. FADH₂ is covalently bound to succinate dehydrogenase (Complex II) and transfers electrons directly to ubiquinone, bypassing Complex I entirely — no proton pumping occurs at that step, yielding only ~1.5 ATP. The entry point into the respiratory chain is the decisive difference between the two carriers.",
+      "explainImg": ""
+    },
+    {
+      "id": "tca015",
+      "topic": "Krebs Cycle",
+      "text": "Succinyl-CoA synthetase generates one GTP per turn of the human TCA cycle. What is the primary metabolic fate of this mitochondrial GTP?",
+      "options": [
+        "Hydrolyzed by mitochondrial GTPase; energy phosphorylates AMP to ADP via unusual two-step transphosphorylation",
+        "Stored in matrix as regulatory signal activating GTP-dependent kinases for organelle dynamics",
+        "Exported via adenine nucleotide translocator to activate cytosolic GTP-binding signaling proteins",
+        "Converted to ATP by nucleoside diphosphate kinase: GTP + ADP → GDP + ATP",
+        "Used by ATP synthase as alternative substrate, producing ATP without the proton gradient"
+      ],
+      "correct": 3,
+      "explain": "NDP kinase catalyzes the freely reversible reaction GTP + ADP ⇌ GDP + ATP, making the TCA-derived GTP energetically equivalent to one ATP. GTP can also directly power cytosolic reactions — notably gluconeogenesis, where PEPCK uses GTP to convert OAA to phosphoenolpyruvate — underscoring its dual role as energy currency and metabolic signal.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc001",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Which complex of the respiratory chain accepts electrons from ubiquinol (QH₂) and passes them to cytochrome c?",
+      "options": [
+        "Complex I",
+        "Complex II",
+        "Complex IV",
+        "Complex V",
+        "Complex III (bc1 complex)"
+      ],
+      "correct": 4,
+      "explain": "Complex III (ubiquinol-cytochrome c oxidoreductase) accepts electrons from ubiquinol and transfers them to cytochrome c via the Q cycle mechanism, simultaneously pumping 4 protons per 2 electrons across the inner mitochondrial membrane.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc002",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "The proton gradient generated by the respiratory chain is used by ATP synthase (Complex V) via:",
+      "options": [
+        "Substrate-level phosphorylation",
+        "Chemiosmosis (Mitchell hypothesis)",
+        "Direct electron transfer to ADP",
+        "Oxidative decarboxylation",
+        "Transphosphorylation from GTP"
+      ],
+      "correct": 1,
+      "explain": "According to Mitchell's chemiosmotic hypothesis, the proton-motive force (electrochemical gradient) generated by the respiratory chain drives protons back through the F₀ subunit of ATP synthase. This proton flow drives rotation of the c-ring, causing conformational changes in the F₁ subunit that synthesize ATP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc003",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Cyanide is a potent inhibitor of cellular respiration because it blocks:",
+      "options": [
+        "Complex I",
+        "Complex III",
+        "ATP synthase",
+        "Complex IV (cytochrome c oxidase)",
+        "Complex II"
+      ],
+      "correct": 3,
+      "explain": "Cyanide (CN⁻) binds to the Fe³⁺ form of cytochrome a3 in Complex IV, preventing electron transfer to O₂. This halts the entire electron transport chain, collapses the proton gradient, and stops ATP synthesis. Tissues with highest O₂ demand (brain, heart) are most vulnerable.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc004",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "How many ATP molecules are produced per NADH oxidized in oxidative phosphorylation (using the P/O ratio of ~2.5)?",
+      "options": [
+        "1.0",
+        "1.5",
+        "2.5",
+        "3.5",
+        "2.0"
+      ],
+      "correct": 2,
+      "explain": "The modern estimate of the P/O ratio for NADH is ~2.5 ATP per NADH (not the classic '3' from older texts). This accounts for the actual H⁺/ATP stoichiometry of ATP synthase (~8 protons per 3 ATP) and the energy cost of ATP/ADP transport.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc005",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Uncoupling proteins (UCPs) in brown adipose tissue dissipate the proton gradient as:",
+      "options": [
+        "Heat (thermogenesis)",
+        "ATP",
+        "NADH",
+        "CO₂",
+        "Mechanical work"
+      ],
+      "correct": 0,
+      "explain": "UCP1 (thermogenin) allows protons to leak back across the inner mitochondrial membrane without driving ATP synthesis, dissipating the proton-motive force as heat. This is the basis of non-shivering thermogenesis in newborns and cold-adapted mammals.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc006",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Which mobile electron carrier shuttles electrons between Complex I/II and Complex III?",
+      "options": [
+        "Cytochrome c",
+        "Ubiquinone (Coenzyme Q)",
+        "FAD",
+        "FMN",
+        "Iron-sulfur clusters"
+      ],
+      "correct": 1,
+      "explain": "Ubiquinone (CoQ/Q) is a lipid-soluble molecule that diffuses within the inner mitochondrial membrane, collecting electrons from Complex I and II (as QH₂) and delivering them to Complex III. Cytochrome c is the water-soluble carrier between Complex III and IV.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc007",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Rotenone, used as a pesticide and fish poison, inhibits the respiratory chain by blocking:",
+      "options": [
+        "Complex II",
+        "Complex III",
+        "Complex I (NADH dehydrogenase)",
+        "Complex IV",
+        "Complex V (ATP synthase)"
+      ],
+      "correct": 2,
+      "explain": "Rotenone blocks the transfer of electrons from the iron-sulfur clusters of Complex I to ubiquinone. It inhibits NADH oxidation without affecting succinate oxidation (Complex II). Rotenone is also used experimentally to model Parkinson's disease pathology.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc008",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "The final electron acceptor in the mitochondrial respiratory chain is:",
+      "options": [
+        "NAD⁺",
+        "Ubiquinone",
+        "Cytochrome c",
+        "Molecular oxygen (O₂)",
+        "Carbon dioxide (CO₂)"
+      ],
+      "correct": 3,
+      "explain": "Molecular oxygen (O₂) is the terminal electron acceptor. Complex IV (cytochrome c oxidase) transfers electrons from cytochrome c to O₂, reducing it to water. This irreversible step drives the entire electron transport chain forward.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc009",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Oligomycin inhibits ATP synthesis by blocking:",
+      "options": [
+        "Cytochrome c oxidase",
+        "The F₀ proton channel of ATP synthase",
+        "Ubiquinone reduction",
+        "Complex I",
+        "Adenine nucleotide translocase"
+      ],
+      "correct": 1,
+      "explain": "Oligomycin binds to the F₀ subunit of ATP synthase, blocking the proton channel. This prevents proton re-entry and ATP synthesis. Because the proton gradient cannot be dissipated, it also secondarily inhibits the respiratory chain.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc010",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Which of the following correctly describes the P/O ratio for FADH₂?",
+      "options": [
+        "~3.0",
+        "~2.5",
+        "~1.5",
+        "~1.0",
+        "~2.0"
+      ],
+      "correct": 2,
+      "explain": "FADH₂ (generated at succinate dehydrogenase) donates electrons to ubiquinone, bypassing Complex I. Since Complex I pumps ~4 protons, bypassing it reduces the proton gradient contribution. The P/O ratio for FADH₂ is approximately 1.5 ATP.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc011",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Cytosolic NADH from glycolysis cannot cross the inner mitochondrial membrane. Which shuttle predominates in heart and liver, preserving the full ~2.5 ATP yield?",
+      "options": [
+        "Malate-aspartate shuttle — regenerates NADH in the matrix; ~2.5 ATP",
+        "Glycerol-3-phosphate shuttle — feeds electrons into Complex II; only ~1.5 ATP",
+        "Citrate shuttle — exports acetyl-CoA equivalents for cytosolic lipid synthesis",
+        "Carnitine shuttle — transports fatty acyl-CoA across the inner membrane",
+        "Pyruvate carrier — imports pyruvate into the matrix; no NADH transfer"
+      ],
+      "correct": 0,
+      "explain": "The malate-aspartate shuttle uses malate dehydrogenase and aspartate aminotransferase on both membrane sides to funnel cytosolic NADH-equivalent reducing power into the matrix as NADH, entering at Complex I (~2.5 ATP). The glycerol-3-phosphate shuttle is faster but less efficient (~1.5 ATP, Complex II entry) and predominates in brain and skeletal muscle. The citrate, carnitine, and pyruvate carriers serve entirely different transport functions.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc012",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "The Q cycle in Complex III results in net pumping of 4 H⁺ per 2 electrons. Which feature directly causes this amplification?",
+      "options": [
+        "Both electrons from QH₂ bypass the Rieske centre and flow directly to cytochrome b",
+        "Rieske accepts both electrons from QH₂ and donates them to two cytochrome c molecules",
+        "QH₂ first reduces FMN in the matrix before electrons reach cytochrome c",
+        "Cytochrome b conformational changes drive proton pumping without any semiquinone",
+        "QH₂ oxidation bifurcates: one electron to cytochrome c via Rieske, one to Qi-site semiquinone"
+      ],
+      "correct": 4,
+      "explain": "At the Qo site, QH₂ loses its two electrons along separate paths: one travels via the Rieske [2Fe-2S] cluster and cytochrome c₁ to cytochrome c (high-potential chain), while the other passes through cytochrome b (bL → bH) to a ubiquinone at the Qi site, generating a semiquinone. A second QH₂ oxidation completes this to QH₂ at the Qi site, releasing 2 H⁺ to the matrix. This bifurcation effectively doubles proton translocation per electron pair reaching cytochrome c, yielding 4 H⁺/2e⁻ net.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc013",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "What is the specific role of the Rieske iron-sulfur protein in Complex III?",
+      "options": [
+        "Accepts electrons from QH₂ at the Qo site and passes them to cytochrome c₁",
+        "Accepts electrons from NADH at the matrix face and transfers them via FMN to ubiquinone",
+        "Accepts electrons from cytochrome c and passes them to the copper centres of Complex IV",
+        "Donates electrons directly to O₂, generating superoxide at the Qo site",
+        "Transfers electrons from succinate dehydrogenase to ubiquinone at the Qi site"
+      ],
+      "correct": 0,
+      "explain": "The Rieske protein contains a [2Fe-2S] cluster with an unusually high reduction potential (~+0.28 V), placing it between ubiquinol and cytochrome c₁ in the high-potential branch of the Q cycle. At the Qo site it accepts one of the two electrons from QH₂ and donates it to cytochrome c₁, which then reduces soluble cytochrome c. Physical movement of the Rieske head domain between cytochrome b and cytochrome c₁ is essential for the bifurcated electron transfer.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc014",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "FMN is the primary electron acceptor from NADH in Complex I. Which statement correctly describes its function?",
+      "options": [
+        "Accepts electrons from ubiquinol; transfers them back to NAD⁺ in the matrix",
+        "Acts as the final electron sink in Complex I; stays reduced when PMF is low",
+        "Accepts electrons from succinate dehydrogenase FADH₂; relays them to Fe-S clusters",
+        "Accepts 2e⁻ from NADH at once; passes them individually through Fe-S clusters to CoQ",
+        "Pumps protons from matrix to IMS directly; no iron-sulfur cluster involvement"
+      ],
+      "correct": 3,
+      "explain": "FMN is a two-electron acceptor that receives both electrons from NADH simultaneously, forming FMNH₂. It then re-donates them one at a time to a series of iron-sulfur clusters (N1a, N3, N1b, N4, N5, N6a/b, N2), which are obligate single-electron carriers. Electron flow through this chain is coupled to conformational changes that pump 4 H⁺ per NADH. This two-to-one electron conversion is FMN's defining role in Complex I.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc015",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "In Boyer's binding-change mechanism, the proton-motive force does not directly form the ATP bond. What is its actual role?",
+      "options": [
+        "Donates a proton directly to the β-phosphate of ADP to drive bond formation",
+        "Opens a channel in F₁ allowing free ATP and ADP diffusion across the inner membrane",
+        "Drives electron transfer in F₁ that activates ADP toward inorganic phosphate",
+        "Generates NADPH in the matrix to supply energy for ATP bond formation",
+        "Drives c-ring rotation, turning the γ-subunit; β-subunit conformational changes release bound ATP"
+      ],
+      "correct": 4,
+      "explain": "ATP actually forms spontaneously (ΔG ≈ 0) at the tight catalytic site of F₁ — bond formation itself requires no external energy. The proton-motive force drives rotation of the F₀ c-ring, which turns the γ-subunit inside F₁, cycling each of the three β-subunits through open → loose → tight conformations. The energy-requiring step is the transition from tight to open, which releases the newly formed ATP. This rotary catalysis was confirmed by Boyer and Walker, Nobel Prize 1997.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc016",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "What is the thermodynamic driving force that moves electrons along the respiratory chain from NADH to O₂?",
+      "options": [
+        "The NADH/NAD⁺ concentration gradient across the inner membrane",
+        "The ΔE°' between NADH/NAD⁺ (−0.32 V) and O₂/H₂O (+0.82 V)",
+        "The mechanical rotation of ATP synthase pulling electrons toward Complex IV",
+        "The transmembrane pH gradient acidifying the IMS to drive electron transfer",
+        "The high cytochrome c concentration in the IMS acting as a permanent electron sink"
+      ],
+      "correct": 1,
+      "explain": "Electron flow in the respiratory chain is driven by the difference in standard reduction potentials. The NADH/NAD⁺ couple has E°' = −0.32 V; the O₂/H₂O couple has E°' = +0.82 V, giving ΔE°' = +1.14 V overall. By ΔG°' = −nFΔE°', this corresponds to ~−220 kJ per mol of electron pairs — a large spontaneous free energy change that drives electrons from Complex I through to Complex IV, coupling to proton pumping at each step.",
+      "explainImg": ""
+    },
+    {
+      "id": "rc017",
+      "topic": "Respiratory Chain and OXPHOS",
+      "text": "Strictly speaking, what is the direct product of the respiratory chain before ATP synthase acts on it?",
+      "options": [
+        "ATP — via substrate-level phosphorylation at each electron transfer step",
+        "NADPH — regenerated by mitochondrial transhydrogenase using electron-flow energy",
+        "An electrochemical proton gradient (proton-motive force) across the inner membrane",
+        "Heat — thermal energy released as electrons fall through the complexes",
+        "Reduced cytochrome c — accumulates in the IMS when ATP synthase is inhibited"
+      ],
+      "correct": 2,
+      "explain": "The respiratory chain's sole direct output is the proton-motive force (PMF), built up by pumping H⁺ from the matrix to the IMS at Complexes I, III, and IV. The PMF has two components: membrane potential (ΔΨ ≈ 150–180 mV, the dominant term in mitochondria) and a pH gradient (ΔpH ≈ 0.5–1 unit). ATP synthase then consumes this PMF to drive phosphorylation. Crucially, the PMF can also power active transport and heat production via UCPs — ATP synthesis is secondary.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao001",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Where does β-oxidation of long-chain fatty acids primarily occur?",
+      "options": [
+        "Cytosol",
+        "Endoplasmic reticulum",
+        "Mitochondrial matrix",
+        "Peroxisome",
+        "Lysosome"
+      ],
+      "correct": 2,
+      "explain": "β-Oxidation of long-chain fatty acids occurs in the mitochondrial matrix. Fatty acids are activated to acyl-CoA in the cytosol, transported across the inner mitochondrial membrane via the carnitine shuttle, and then undergo successive rounds of β-oxidation.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao002",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Which transport system is required to move long-chain acyl groups into the mitochondrial matrix?",
+      "options": [
+        "Malate-aspartate shuttle",
+        "Carnitine shuttle (CPT-I and CPT-II)",
+        "Acetyl-CoA translocase",
+        "ATP-ADP translocase",
+        "Citrate transport system"
+      ],
+      "correct": 1,
+      "explain": "Long-chain acyl-CoA cannot cross the inner mitochondrial membrane directly. CPT-I (outer membrane) converts acyl-CoA to acylcarnitine, which is transported by carnitine-acylcarnitine translocase and reconverted to acyl-CoA by CPT-II (inner membrane).",
+      "explainImg": ""
+    },
+    {
+      "id": "fao003",
+      "topic": "Fatty Acid Oxidation",
+      "text": "How many rounds of β-oxidation are needed to completely oxidize palmitoyl-CoA (C16:0)?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "Palmitoyl-CoA (16 carbons) requires 7 rounds of β-oxidation to produce 8 acetyl-CoA molecules. Each round shortens the chain by 2 carbons and produces 1 FADH₂ + 1 NADH + 1 acetyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao004",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Which enzyme is inhibited by malonyl-CoA, thereby regulating entry of fatty acids into mitochondria?",
+      "options": [
+        "CPT-II",
+        "Acyl-CoA synthetase",
+        "CPT-I",
+        "Carnitine-acylcarnitine translocase",
+        "β-Hydroxyacyl-CoA dehydrogenase"
+      ],
+      "correct": 2,
+      "explain": "CPT-I is allosterically inhibited by malonyl-CoA, the first committed intermediate of fatty acid synthesis. This ensures that fatty acid synthesis and oxidation are not simultaneously active — when malonyl-CoA is high, CPT-I is inhibited and fatty acids are not transported into mitochondria.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao005",
+      "topic": "Fatty Acid Oxidation",
+      "text": "What products are generated in each cycle of β-oxidation?",
+      "options": [
+        "1 NADH + 1 NADPH + 1 acetyl-CoA",
+        "1 FADH₂ + 1 NADH + 1 acetyl-CoA",
+        "2 FADH₂ + 1 acetyl-CoA",
+        "1 FADH₂ + 1 NADH + 1 succinyl-CoA",
+        "2 NADH + 1 acetyl-CoA"
+      ],
+      "correct": 1,
+      "explain": "Each round of β-oxidation produces: 1 FADH₂ (acyl-CoA dehydrogenase step), 1 NADH (L-3-hydroxyacyl-CoA dehydrogenase step), and 1 acetyl-CoA (thiolase step). These feed into the respiratory chain and TCA cycle respectively.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao006",
+      "topic": "Fatty Acid Oxidation",
+      "text": "During β-oxidation of unsaturated fatty acids, which additional enzyme is required for double bonds in the cis configuration?",
+      "options": [
+        "Enoyl-CoA hydratase",
+        "2,4-Dienoyl-CoA reductase",
+        "Enoyl-CoA isomerase",
+        "3-Hydroxyacyl-CoA epimerase",
+        "Acyl-CoA dehydrogenase"
+      ],
+      "correct": 2,
+      "explain": "Unsaturated fatty acids with double bonds at odd-numbered carbons (cis-Δ³) require enoyl-CoA isomerase to convert cis-Δ³-enoyl-CoA to the trans-Δ²-enoyl-CoA that is the normal β-oxidation substrate. Double bonds at even-numbered carbons require 2,4-dienoyl-CoA reductase.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao007",
+      "topic": "Fatty Acid Oxidation",
+      "text": "In which organelle does β-oxidation of very-long-chain fatty acids (>C22) primarily occur?",
+      "options": [
+        "Mitochondria",
+        "Smooth ER",
+        "Peroxisomes",
+        "Lysosomes",
+        "Nucleus"
+      ],
+      "correct": 2,
+      "explain": "Very-long-chain fatty acids are first shortened by β-oxidation in peroxisomes to medium-chain fatty acids, which are then transferred to mitochondria for complete oxidation. Peroxisomal β-oxidation produces H₂O₂ (detoxified by catalase) rather than pumping protons.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao008",
+      "topic": "Fatty Acid Oxidation",
+      "text": "What is the net ATP yield from the complete oxidation of one molecule of palmitoyl-CoA (C16:0)?",
+      "options": [
+        "106 ATP",
+        "100 ATP",
+        "108 ATP",
+        "129 ATP",
+        "80 ATP"
+      ],
+      "correct": 0,
+      "explain": "Palmitoyl-CoA oxidation yields 7 rounds × (1 FADH₂ + 1 NADH) + 8 acetyl-CoA. Using modern P/O ratios: 7×1.5 + 7×2.5 + 8×10 = 10.5 + 17.5 + 80 = 108, minus 2 for activation = 106 ATP equivalent.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao009",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Carnitine deficiency leads to impaired fatty acid oxidation. Which symptom is most expected?",
+      "options": [
+        "Hyperglycemia",
+        "Hyperlipidemia with muscle weakness and hypoglycemia",
+        "Ketoacidosis",
+        "Elevated ammonia",
+        "Metabolic alkalosis"
+      ],
+      "correct": 1,
+      "explain": "Without carnitine, long-chain fatty acids cannot enter mitochondria for β-oxidation. This causes accumulation of fatty acids (hyperlipidemia), muscle weakness (impaired energy supply), and hypoglycemia (inability to spare glucose by fat oxidation). Ketone body synthesis is also impaired.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao010",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency is dangerous during fasting because:",
+      "options": [
+        "Excess ketone bodies cause acidosis",
+        "Fatty acids cannot be oxidized for energy, leading to hypoglycemia",
+        "Amino acid catabolism is impaired",
+        "Glycogen stores cannot be mobilized",
+        "Gluconeogenesis is inhibited by malonyl-CoA"
+      ],
+      "correct": 1,
+      "explain": "MCAD deficiency prevents oxidation of medium-chain fatty acids. During fasting, when glucose is limited and fatty acid oxidation is critical, this leads to severe hypoglycemia. Ketogenesis is also impaired because acetyl-CoA supply from β-oxidation is reduced.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab001",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Where does fatty acid synthesis primarily occur in the cell?",
+      "options": [
+        "Mitochondrial matrix",
+        "Cytosol",
+        "Endoplasmic reticulum",
+        "Nucleus",
+        "Peroxisome"
+      ],
+      "correct": 1,
+      "explain": "Fatty acid synthesis occurs in the cytosol, catalyzed by fatty acid synthase (FAS). The building blocks (acetyl-CoA and malonyl-CoA) must be exported from the mitochondria as citrate, then cleaved by ATP-citrate lyase in the cytosol.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab002",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "What is the committed step of fatty acid biosynthesis?",
+      "options": [
+        "Acetyl-CoA → malonyl-CoA (acetyl-CoA carboxylase)",
+        "Malonyl-CoA → palmitate (FAS)",
+        "Citrate → acetyl-CoA (ATP-citrate lyase)",
+        "Palmitate → palmitoyl-CoA",
+        "Acetyl-CoA → acetoacetyl-CoA"
+      ],
+      "correct": 0,
+      "explain": "Acetyl-CoA carboxylase (ACC) catalyzes the ATP-dependent carboxylation of acetyl-CoA to malonyl-CoA. This is the committed, rate-limiting step of fatty acid synthesis. ACC is activated by citrate (high energy/precursor supply) and inhibited by palmitoyl-CoA and by phosphorylation via AMPK.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab003",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Which reducing cofactor is required by fatty acid synthase for the reductive steps?",
+      "options": [
+        "NADH",
+        "NADPH",
+        "FADH₂",
+        "ATP",
+        "CoASH"
+      ],
+      "correct": 1,
+      "explain": "Fatty acid synthase requires NADPH for the two reductive steps per elongation cycle (ketoreduction and enoylreduction). NADPH is supplied mainly by the pentose phosphate pathway and the malic enzyme reaction. This is why NADPH is the 'reducing power' for biosynthesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab004",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "What is the primary product released by fatty acid synthase (FAS) in mammals?",
+      "options": [
+        "Stearate (C18:0)",
+        "Palmitate (C16:0)",
+        "Myristate (C14:0)",
+        "Arachidonate (C20:4)",
+        "Oleate (C18:1)"
+      ],
+      "correct": 1,
+      "explain": "Mammalian FAS releases palmitate (C16:0) as the primary product. Further elongation to longer-chain fatty acids and desaturation occur in the endoplasmic reticulum by specific elongases and desaturases.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab005",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "How many molecules of malonyl-CoA are required to synthesize one molecule of palmitate from acetyl-CoA?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "14",
+        "16"
+      ],
+      "correct": 1,
+      "explain": "Palmitate (C16:0) is synthesized from 1 acetyl-CoA starter unit and 7 malonyl-CoA extender units. Each malonyl-CoA adds 2 carbons (after decarboxylation), contributing 14 carbons; the starter acetyl-CoA adds 2 more, totaling 16.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab006",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Acetyl-CoA carboxylase (ACC) is allosterically activated by:",
+      "options": [
+        "Palmitoyl-CoA",
+        "AMP",
+        "Citrate",
+        "Glucagon",
+        "Epinephrine"
+      ],
+      "correct": 2,
+      "explain": "Citrate allosterically activates ACC by promoting its polymerization into the active filamentous form. High citrate signals an abundance of acetyl-CoA and energy, indicating conditions favorable for fat synthesis. Conversely, palmitoyl-CoA (end-product) and AMPK phosphorylation inhibit ACC.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab007",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Which enzyme introduces the first double bond into saturated fatty acids in mammals, typically at the Δ9 position?",
+      "options": [
+        "Fatty acid elongase",
+        "Stearoyl-CoA desaturase (SCD, Δ9-desaturase)",
+        "Acetyl-CoA carboxylase",
+        "Phospholipase A2",
+        "FADS2 (Δ6-desaturase)"
+      ],
+      "correct": 1,
+      "explain": "Stearoyl-CoA desaturase (SCD) introduces a cis double bond at the Δ9 position, converting stearoyl-CoA (C18:0) to oleoyl-CoA (C18:1, Δ9). Mammals lack Δ12 and Δ15 desaturases, making linoleic acid (Δ9,12) and α-linolenic acid (Δ9,12,15) essential dietary fatty acids.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab008",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "The acyl carrier protein (ACP) in FAS holds intermediates via which type of linkage?",
+      "options": [
+        "Ester bond to serine",
+        "Phosphodiester bond",
+        "Thioester bond to a phosphopantetheine group",
+        "Amide bond to lysine",
+        "Anhydride bond"
+      ],
+      "correct": 2,
+      "explain": "Growing fatty acid chains are covalently attached to ACP via a thioester bond to the phosphopantetheine prosthetic group (derived from CoA). This thioester bond has high group transfer potential and is essential for the condensation reactions catalyzed by FAS.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab009",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Insulin stimulates fatty acid synthesis primarily by:",
+      "options": [
+        "Directly activating FAS",
+        "Activating AMPK, which phosphorylates ACC",
+        "Activating a phosphatase that dephosphorylates and activates ACC",
+        "Increasing malonyl-CoA degradation",
+        "Inhibiting citrate export from mitochondria"
+      ],
+      "correct": 2,
+      "explain": "Insulin activates protein phosphatase 2A, which dephosphorylates ACC, activating it. Insulin also induces transcription of FAS and ACC genes, increases glucose uptake (providing acetyl-CoA and NADPH via glycolysis and PPP), and inhibits AMPK.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab010",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Which of the following best describes why linoleic acid (18:2, Δ9,12) is an essential fatty acid?",
+      "options": [
+        "Humans cannot synthesize fatty acids longer than C16",
+        "Humans lack the Δ12-desaturase needed to introduce the Δ12 double bond",
+        "Linoleic acid cannot be activated to acyl-CoA",
+        "β-Oxidation of linoleic acid is toxic",
+        "Linoleic acid is only found in animal fats"
+      ],
+      "correct": 1,
+      "explain": "Mammals have desaturases for positions Δ9, Δ6, Δ5, and Δ4, but lack Δ12 and Δ15 desaturases. Therefore, linoleic acid (18:2 Δ9,12) and α-linolenic acid (18:3 Δ9,12,15) must be obtained from the diet and are classified as essential fatty acids.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac001",
+      "topic": "Amino Acid Catabolism",
+      "text": "What is the first step in the catabolism of most amino acids?",
+      "options": [
+        "Oxidative decarboxylation",
+        "Transamination or oxidative deamination",
+        "Phosphorylation",
+        "Reduction",
+        "Hydroxylation"
+      ],
+      "correct": 1,
+      "explain": "The first step is usually removal of the amino group, either by transamination (transfer to α-ketoglutarate, producing glutamate) or oxidative deamination (glutamate dehydrogenase, releasing NH₄⁺). The resulting α-keto acid enters central metabolic pathways.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac002",
+      "topic": "Amino Acid Catabolism",
+      "text": "Pyridoxal phosphate (PLP) is the cofactor for which type of enzyme central to amino acid catabolism?",
+      "options": [
+        "Oxidases",
+        "Aminotransferases (transaminases)",
+        "Carboxylases",
+        "Kinases",
+        "Reductases"
+      ],
+      "correct": 1,
+      "explain": "PLP (vitamin B6 derivative) forms a Schiff base with amino acids at the active site of aminotransferases, enabling transfer of the amino group to α-ketoglutarate. PLP is also required for decarboxylases, racemases, and serine/threonine dehydratases.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac003",
+      "topic": "Amino Acid Catabolism",
+      "text": "Phenylketonuria (PKU) results from a deficiency of phenylalanine hydroxylase. What accumulates as a result?",
+      "options": [
+        "Tyrosine",
+        "Phenylalanine and phenylpyruvate",
+        "Homogentisate",
+        "Fumarylacetoacetate",
+        "Melanin precursors"
+      ],
+      "correct": 1,
+      "explain": "Without phenylalanine hydroxylase (which converts phenylalanine to tyrosine), phenylalanine accumulates and is shunted to phenylpyruvate, phenylacetate, and phenyllactate (collectively 'phenylketones'). These are neurotoxic, causing intellectual disability if untreated.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac004",
+      "topic": "Amino Acid Catabolism",
+      "text": "Maple syrup urine disease is caused by a deficiency in the branched-chain α-keto acid dehydrogenase complex, which affects catabolism of:",
+      "options": [
+        "Phenylalanine, tyrosine, tryptophan",
+        "Leucine, isoleucine, valine",
+        "Lysine, arginine, histidine",
+        "Methionine, cysteine, serine",
+        "Aspartate, glutamate, alanine"
+      ],
+      "correct": 1,
+      "explain": "The branched-chain α-keto acid dehydrogenase (BCKDH) complex oxidatively decarboxylates the α-keto acids derived from leucine, isoleucine, and valine. Deficiency causes accumulation of these keto acids, which give urine a sweet maple syrup odor and cause severe neurological damage.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac005",
+      "topic": "Amino Acid Catabolism",
+      "text": "Which amino acid is the primary nitrogen carrier from peripheral tissues to the liver?",
+      "options": [
+        "Glutamine",
+        "Alanine",
+        "Glycine",
+        "Aspartate",
+        "Serine"
+      ],
+      "correct": 1,
+      "explain": "Alanine is the primary nitrogen carrier via the glucose-alanine cycle: muscle transaminates pyruvate with amino group from amino acid catabolism to form alanine, which travels to the liver. There, alanine transaminase regenerates pyruvate (for gluconeogenesis) and glutamate (enters urea cycle).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac006",
+      "topic": "Amino Acid Catabolism",
+      "text": "Homocystinuria is associated with deficiency of cystathionine β-synthase. Which metabolic pathway is primarily affected?",
+      "options": [
+        "Phenylalanine degradation",
+        "Methionine catabolism (transsulfuration pathway)",
+        "Tryptophan catabolism",
+        "Histidine catabolism",
+        "Threonine degradation"
+      ],
+      "correct": 1,
+      "explain": "Cystathionine β-synthase converts homocysteine + serine → cystathionine in the transsulfuration pathway. Deficiency causes homocysteine accumulation, leading to cardiovascular disease, lens dislocation, and intellectual disability. Vitamin B6, B12, and folate are used in treatment.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac007",
+      "topic": "Amino Acid Catabolism",
+      "text": "Glucogenic amino acids can be converted to glucose via gluconeogenesis. Which of the following is purely glucogenic?",
+      "options": [
+        "Leucine",
+        "Lysine",
+        "Alanine",
+        "Phenylalanine",
+        "Isoleucine"
+      ],
+      "correct": 2,
+      "explain": "Alanine is purely glucogenic — it is transaminated to pyruvate, which can be converted to OAA (by pyruvate carboxylase) and then to glucose via gluconeogenesis. Leucine and lysine are purely ketogenic; phenylalanine and isoleucine are both glucogenic and ketogenic.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac008",
+      "topic": "Amino Acid Catabolism",
+      "text": "The catabolism of phenylalanine and tyrosine ultimately produces which TCA cycle and ketone body precursors?",
+      "options": [
+        "Oxaloacetate and malate",
+        "Fumarate and acetoacetate",
+        "Succinate and propionyl-CoA",
+        "α-Ketoglutarate and acetyl-CoA",
+        "Citrate and NADH"
+      ],
+      "correct": 1,
+      "explain": "Phenylalanine is first hydroxylated to tyrosine. Tyrosine degradation proceeds through homogentisate → maleylacetoacetate → fumarylacetoacetate → fumarate + acetoacetate. This makes phenylalanine/tyrosine both glucogenic (fumarate → TCA → gluconeogenesis) and ketogenic (acetoacetate).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac009",
+      "topic": "Amino Acid Catabolism",
+      "text": "Which vitamin B6-dependent reaction removes the amino group from glutamate, releasing free ammonium?",
+      "options": [
+        "Transamination by AST",
+        "Oxidative deamination by glutamate dehydrogenase",
+        "Decarboxylation by glutamate decarboxylase",
+        "Reduction by glutamate reductase",
+        "Phosphorylation by glutamate kinase"
+      ],
+      "correct": 1,
+      "explain": "Glutamate dehydrogenase (in the mitochondrial matrix) catalyzes: glutamate + NAD⁺ → α-ketoglutarate + NADH + NH₄⁺. This is the major route for releasing free ammonia in the liver for urea synthesis. The enzyme can use either NAD⁺ or NADP⁺ and is regulated by ATP, GTP (inhibit) and ADP, GDP (activate).",
+      "explainImg": ""
+    },
+    {
+      "id": "aac010",
+      "topic": "Amino Acid Catabolism",
+      "text": "Alkaptonuria results from a defect in homogentisate oxidase. Which amino acids cannot be catabolized normally?",
+      "options": [
+        "Methionine and cysteine",
+        "Phenylalanine and tyrosine",
+        "Tryptophan and histidine",
+        "Leucine and isoleucine",
+        "Lysine and arginine"
+      ],
+      "correct": 1,
+      "explain": "Homogentisate oxidase catalyzes a step in the degradation of phenylalanine and tyrosine. Its deficiency causes accumulation of homogentisic acid, which is excreted in urine (turns dark on standing) and deposits in connective tissues (ochronosis), causing arthritis.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc001",
+      "topic": "Urea Cycle",
+      "text": "In which two compartments of the hepatocyte does the urea cycle operate?",
+      "options": [
+        "Cytosol and lysosome",
+        "Mitochondrial matrix and cytosol",
+        "Endoplasmic reticulum and cytosol",
+        "Nucleus and cytosol",
+        "Peroxisome and cytosol"
+      ],
+      "correct": 1,
+      "explain": "The first two reactions of the urea cycle occur in the mitochondrial matrix (CPS-I and OTC), while the remaining three reactions (ASS, ASL, arginase) occur in the cytosol. Citrulline is exported from the mitochondria via a specific transporter to continue the cycle.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc002",
+      "topic": "Urea Cycle",
+      "text": "Which enzyme catalyzes the rate-limiting step of the urea cycle?",
+      "options": [
+        "Ornithine transcarbamylase (OTC)",
+        "Carbamoyl phosphate synthetase I (CPS-I)",
+        "Argininosuccinate synthetase",
+        "Argininosuccinate lyase",
+        "Arginase"
+      ],
+      "correct": 1,
+      "explain": "CPS-I is the rate-limiting enzyme of the urea cycle. It condenses NH₃ + CO₂ + 2 ATP → carbamoyl phosphate. It requires N-acetylglutamate (NAG) as an allosteric activator, which is synthesized from acetyl-CoA + glutamate when amino acid load is high.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc003",
+      "topic": "Urea Cycle",
+      "text": "N-Acetylglutamate (NAG) activates CPS-I. NAG is synthesized when amino acid catabolism increases, signaled by elevated levels of:",
+      "options": [
+        "Urea",
+        "Glutamine",
+        "Acetyl-CoA and glutamate",
+        "ATP",
+        "Arginine"
+      ],
+      "correct": 2,
+      "explain": "NAG synthase is activated by arginine and uses acetyl-CoA + glutamate as substrates. When amino acids are being catabolized in large amounts, glutamate (from transamination) and acetyl-CoA accumulate, stimulating NAG synthesis and thereby activating CPS-I.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc004",
+      "topic": "Urea Cycle",
+      "text": "Ornithine transcarbamylase (OTC) deficiency is the most common urea cycle disorder. Its X-linked inheritance means affected males present with:",
+      "options": [
+        "Mild hyperammonemia",
+        "Severe neonatal hyperammonemia, often lethal",
+        "Urea accumulation",
+        "Argininosuccinate accumulation",
+        "Orotic aciduria only"
+      ],
+      "correct": 1,
+      "explain": "OTC deficiency causes severe hyperammonemia in affected hemizygous males because carbamoyl phosphate cannot be transferred to ornithine and accumulates, overflowing into the pyrimidine synthesis pathway (producing orotic acid). Hyperammonemia causes cerebral edema and is often fatal neonatally.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc005",
+      "topic": "Urea Cycle",
+      "text": "Which amino acid is regenerated at the end of each turn of the urea cycle, serving as a carrier?",
+      "options": [
+        "Arginine",
+        "Citrulline",
+        "Aspartate",
+        "Ornithine",
+        "Glutamine"
+      ],
+      "correct": 3,
+      "explain": "Ornithine is regenerated by arginase, which cleaves arginine to urea + ornithine. Ornithine is then transported back into the mitochondria to react with carbamoyl phosphate again, acting as the catalytic carrier molecule of the cycle.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc006",
+      "topic": "Urea Cycle",
+      "text": "Which nitrogen atom in urea comes from the direct addition of free ammonia (NH₄⁺) via CPS-I?",
+      "options": [
+        "Both nitrogen atoms",
+        "The nitrogen from aspartate",
+        "One nitrogen (from NH₃ via carbamoyl phosphate)",
+        "Neither — both come from glutamine",
+        "The nitrogen from arginine"
+      ],
+      "correct": 2,
+      "explain": "Urea contains two nitrogen atoms. One comes from free ammonia (NH₃) incorporated by CPS-I into carbamoyl phosphate. The second comes from the amino group of aspartate, which is incorporated at the argininosuccinate synthetase step. Fumarate is released when aspartate donates its amino group.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc007",
+      "topic": "Urea Cycle",
+      "text": "Citrullinemia type I results from a deficiency of argininosuccinate synthetase (ASS). What accumulates in blood and urine?",
+      "options": [
+        "Ornithine",
+        "Citrulline",
+        "Argininosuccinate",
+        "Arginine",
+        "Carbamoyl phosphate"
+      ],
+      "correct": 1,
+      "explain": "ASS catalyzes citrulline + aspartate → argininosuccinate. Its deficiency causes citrulline to accumulate dramatically in blood and urine (citrullinemia). Ammonia also rises because the urea cycle is blocked. Treatment includes protein restriction and sodium benzoate/phenylbutyrate.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc008",
+      "topic": "Urea Cycle",
+      "text": "Fumarate produced in the urea cycle by argininosuccinate lyase is important because it:",
+      "options": [
+        "Is directly excreted",
+        "Enters the TCA cycle, linking it to the urea cycle",
+        "Is converted to malate for gluconeogenesis only",
+        "Inhibits CPS-I",
+        "Is converted to aspartate in the cytosol only"
+      ],
+      "correct": 1,
+      "explain": "Fumarate released by argininosuccinate lyase enters the TCA cycle (fumarate → malate → OAA). OAA can be transaminated to aspartate, which then re-enters the urea cycle. This connection is called the 'urea cycle–TCA cycle bicycle' and links nitrogen disposal to energy metabolism.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc009",
+      "topic": "Urea Cycle",
+      "text": "In hyperammonemia, which amino acid carries nitrogen from muscles to the liver for detoxification, and how?",
+      "options": [
+        "Alanine — via the glucose-alanine cycle; also glutamine — via amidation of glutamate",
+        "Aspartate — directly via blood",
+        "Glycine — via the glycine cleavage system",
+        "Serine — via hydroxymethyltransferase",
+        "Taurine — via conjugation"
+      ],
+      "correct": 0,
+      "explain": "Two main nitrogen carriers: (1) Alanine (glucose-alanine cycle) — muscle transaminates pyruvate to alanine; liver extracts the amino group. (2) Glutamine — synthesized in muscle/brain by glutamine synthetase (fixes NH₃); released, taken up by liver and intestine, and deaminated by glutaminase.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc010",
+      "topic": "Urea Cycle",
+      "text": "Arginase deficiency causes argininemia. What is the distinguishing neurological feature compared to other urea cycle defects?",
+      "options": [
+        "Episodic vomiting",
+        "Progressive spastic diplegia and intellectual disability rather than acute hyperammonemia",
+        "Neonatal lethal hyperammonemia",
+        "Sensorineural hearing loss",
+        "Seizures from hypoglycemia"
+      ],
+      "correct": 1,
+      "explain": "Arginase deficiency (argininemia) typically presents with progressive spastic diplegia and intellectual disability rather than life-threatening hyperammonemia, because alternative pathways can partially clear ammonia. Arginine accumulates and is believed to be neurotoxic. Ammonia elevation is milder than in other urea cycle disorders.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph001",
+      "topic": "Water and pH",
+      "text": "What structural feature of water molecules enables them to form hydrogen bonds?",
+      "options": [
+        "A bent geometry with partial negative charge on O and partial positive charges on H atoms",
+        "A linear geometry that maximizes dipole alignment",
+        "Equal electronegativity of H and O in the O–H bond",
+        "The presence of non-polar O–H bonds",
+        "A trigonal planar arrangement of electron pairs around oxygen"
+      ],
+      "correct": 0,
+      "explain": "Water is a polar molecule with a bent geometry (~104.5°). Oxygen's high electronegativity creates a partial negative charge and two lone electron pairs, while hydrogen atoms carry partial positive charges. This polarity allows each molecule to form up to four hydrogen bonds: two as donor (via its H atoms) and two as acceptor (via the lone pairs on O). This extensive network explains water's anomalously high boiling point, surface tension, heat capacity, and solvent power.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph002",
+      "topic": "Water and pH",
+      "text": "Which formula correctly defines pH?",
+      "options": [
+        "pH = log[H⁺]",
+        "pH = −log[H⁺]",
+        "pH = −log[OH⁻]",
+        "pH = log Kw",
+        "pH = [H⁺] × [OH⁻]"
+      ],
+      "correct": 1,
+      "explain": "pH is the negative decimal logarithm of the molar proton concentration. Because [H⁺] in pure water is 10⁻⁷ mol/L, pH = 7. Option C describes pOH; option D gives 14 (a constant, not a definition); option E is dimensionally incorrect.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph003",
+      "topic": "Water and pH",
+      "text": "What is the ion product of water (Kw) at 25 °C?",
+      "options": [
+        "1 × 10⁻⁷ mol/L",
+        "1 × 10⁻¹⁴ mol²/L²",
+        "7.0 (dimensionless)",
+        "1 × 10⁻⁷ mol²/L²",
+        "14 × 10⁻⁷ mol²/L²"
+      ],
+      "correct": 1,
+      "explain": "Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴ mol²/L² at 25 °C. In pure water [H⁺] = [OH⁻] = 10⁻⁷ mol/L, hence pH = 7. Kw increases with temperature: at 37 °C it is ~2.4 × 10⁻¹⁴, meaning neutral pH at body temperature is closer to 6.8 — though blood is maintained at 7.35–7.45.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph004",
+      "topic": "Water and pH",
+      "text": "A solution has [H⁺] = 1 × 10⁻³ mol/L. What is its pH and character?",
+      "options": [
+        "pH 3, acidic",
+        "pH 3, basic",
+        "pH 11, acidic",
+        "pH −3, neutral",
+        "pH 7, neutral"
+      ],
+      "correct": 0,
+      "explain": "pH = −log(10⁻³) = 3. A pH below 7 indicates an acidic solution ([H⁺] > [OH⁻]). Each unit change in pH reflects a 10-fold change in [H⁺], so pH 3 is 10,000× more acidic than pH 7.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph005",
+      "topic": "Water and pH",
+      "text": "What does the Henderson-Hasselbalch equation describe?",
+      "options": [
+        "The dependence of enzyme velocity on substrate concentration",
+        "The relationship between pH, pKa, and the ratio [A⁻]/[HA]",
+        "The temperature dependence of pKa values",
+        "The relationship between osmolarity and pH",
+        "The relationship between Kw and temperature"
+      ],
+      "correct": 1,
+      "explain": "The equation is: pH = pKa + log([A⁻]/[HA]). It quantifies the pH of any buffer from its pKa and the ratio of conjugate base to acid. When [A⁻] = [HA], log(1) = 0 and pH = pKa — the buffering midpoint. Applied to blood: pH = 6.1 + log([HCO₃⁻]/[dissolved CO₂]).",
+      "explainImg": ""
+    },
+    {
+      "id": "wph006",
+      "topic": "Water and pH",
+      "text": "At what pH does a weak acid with pKa = 4.8 exist 50% as HA and 50% as A⁻?",
+      "options": [
+        "pH 2.4",
+        "pH 6.0",
+        "pH 9.6",
+        "pH 4.8",
+        "pH 7.0"
+      ],
+      "correct": 3,
+      "explain": "When [A⁻] = [HA], the logarithmic term in the Henderson-Hasselbalch equation equals zero, so pH = pKa = 4.8. This is the buffering midpoint with maximal buffer capacity. Effective buffering occurs within ±1 pH unit of the pKa; outside this range one species predominates and buffer capacity collapses.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph007",
+      "topic": "Water and pH",
+      "text": "Which is the most important extracellular buffer in blood?",
+      "options": [
+        "Phosphate buffer (H₂PO₄⁻/HPO₄²⁻)",
+        "Ammonia/ammonium (NH₃/NH₄⁺)",
+        "Bicarbonate/carbonic acid (HCO₃⁻/H₂CO₃)",
+        "Hemoglobin/oxyhemoglobin",
+        "Plasma albumin carboxylate groups"
+      ],
+      "correct": 2,
+      "explain": "The bicarbonate buffer system provides ~50% of total blood buffering capacity. Its pKa is 6.1, yet it is highly effective because the lungs continuously remove CO₂ (open system), keeping dissolved CO₂ low. The kidney adjusts [HCO₃⁻] over hours to days for long-term compensation. The normal [HCO₃⁻]/[H₂CO₃] ratio at blood pH 7.4 is approximately 20:1.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph008",
+      "topic": "Water and pH",
+      "text": "What is the normal pH range of arterial blood?",
+      "options": [
+        "6.8–7.2",
+        "7.0–7.2",
+        "7.35–7.45",
+        "7.5–7.8",
+        "7.2–7.6"
+      ],
+      "correct": 2,
+      "explain": "Normal arterial blood pH is 7.35–7.45, slightly alkaline, maintained by buffer systems, pulmonary CO₂ control, and renal HCO₃⁻ regulation. Below 7.35 is acidemia; above 7.45 is alkalemia. Values outside 7.0–7.8 are incompatible with life.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph009",
+      "topic": "Water and pH",
+      "text": "At what condition is the buffer capacity of a weak acid/base pair maximal?",
+      "options": [
+        "When pH = 2 × pKa",
+        "When pH = pKa + 3",
+        "When pH = pKa (equal concentrations of HA and A⁻)",
+        "When the solution is completely deprotonated (pH >> pKa)",
+        "When only the conjugate acid HA is present"
+      ],
+      "correct": 2,
+      "explain": "Buffer capacity (β) is maximal at pH = pKa where HA and A⁻ are equimolar. Mathematically β = 2.303 × C × α(1 − α), maximized at α = 0.5. Effective buffering occurs within ±1 pH unit around the pKa; outside this range capacity decreases sharply.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph010",
+      "topic": "Water and pH",
+      "text": "Which primary blood chemistry change characterizes metabolic acidosis?",
+      "options": [
+        "Rise in pCO₂ with normal HCO₃⁻",
+        "Fall in pCO₂ with normal HCO₃⁻",
+        "Fall in plasma [HCO₃⁻]",
+        "Rise in plasma [HCO₃⁻]",
+        "Fall in pO₂ with normal HCO₃⁻"
+      ],
+      "correct": 2,
+      "explain": "Metabolic acidosis is a primary reduction in plasma [HCO₃⁻] (< 22 mmol/L), pulling pH below 7.35. Causes include diabetic ketoacidosis, lactic acidosis (hypoxia, sepsis), renal failure, and severe diarrhea (HCO₃⁻ loss). Compensatory hyperventilation (Kussmaul breathing) lowers pCO₂ to partially restore the [HCO₃⁻]/[CO₂] ratio.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph011",
+      "topic": "Water and pH",
+      "text": "A patient hyperventilates due to anxiety. Which acid-base disturbance develops?",
+      "options": [
+        "Metabolic acidosis",
+        "Respiratory acidosis",
+        "Metabolic alkalosis",
+        "Respiratory alkalosis",
+        "Mixed respiratory and metabolic acidosis"
+      ],
+      "correct": 3,
+      "explain": "Hyperventilation eliminates CO₂ faster than it is produced, lowering pCO₂ (hypocapnia). The equilibrium CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ shifts left, reducing [H⁺] and raising pH above 7.45 — respiratory alkalosis. Clinical signs include paresthesias and carpopedal spasm (reduced ionized Ca²⁺ at higher pH) and lightheadedness. Treatment: controlled breathing or CO₂ rebreathing.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph012",
+      "topic": "Water and pH",
+      "text": "A patient's blood shows [HCO₃⁻] = 24 mmol/L and pCO₂ = 40 mmHg. Using pH = 6.1 + log([HCO₃⁻] / (0.03 × pCO₂)), what is the blood pH?",
+      "options": [
+        "6.1",
+        "7.0",
+        "7.4",
+        "7.7",
+        "8.1"
+      ],
+      "correct": 2,
+      "explain": "Dissolved CO₂ = 0.03 × 40 = 1.2 mmol/L. pH = 6.1 + log(24/1.2) = 6.1 + log(20) = 6.1 + 1.30 = 7.40. The normal [HCO₃⁻]/[dissolved CO₂] ratio of 20:1 always yields pH 7.4. The lung defends pCO₂; the kidney defends [HCO₃⁻]. This calculation is the basis of arterial blood gas interpretation.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph013",
+      "topic": "Water and pH",
+      "text": "What is the thermodynamic driving force of the hydrophobic effect?",
+      "options": [
+        "Electrostatic repulsion between nonpolar molecules and water",
+        "Entropy gain when ordered water cages around nonpolar groups are released into bulk water",
+        "Enthalpy gain from van der Waals bonds between hydrophobic molecules",
+        "Covalent bond formation between nonpolar groups",
+        "Entropy decrease when nonpolar molecules cluster together"
+      ],
+      "correct": 1,
+      "explain": "Nonpolar molecules cannot hydrogen-bond with water and force surrounding water into a rigid, low-entropy cage. When hydrophobic groups cluster, these cages dissolve into disordered bulk water, releasing many water molecules and dramatically increasing system entropy (ΔS > 0). This entropy-driven process drives membrane bilayer formation, protein hydrophobic core burial, and ligand-receptor docking.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph014",
+      "topic": "Water and pH",
+      "text": "Why does water far more effectively shield electrostatic interactions between ions compared with a nonpolar solvent?",
+      "options": [
+        "Water increases ionic charges by proton transfer reactions",
+        "Water has a very high dielectric constant (~80), orienting its dipoles around ions and weakening coulombic forces",
+        "Water covalently binds to ions and neutralizes their charge",
+        "Water's low boiling point allows rapid ion exchange",
+        "Hydrogen bonds in water directly neutralize ionic charges"
+      ],
+      "correct": 1,
+      "explain": "The relative permittivity (dielectric constant) ε of water at 25 °C is ~80 versus ~2 for hexane. Oriented hydration shells of water dipoles reduce the effective coulombic force between two charges by a factor of ε. This stabilizes charged and polar transition states in enzyme active sites, enables dissolution of salts, and allows biological polyelectrolytes (DNA, RNA) to exist in solution without self-aggregation.",
+      "explainImg": ""
+    },
+    {
+      "id": "wph015",
+      "topic": "Water and pH",
+      "text": "In which of the following reactions does water directly participate as a substrate?",
+      "options": [
+        "Transfer of phosphate from ATP to glucose by hexokinase",
+        "Reduction of NAD⁺ to NADH by glyceraldehyde-3-phosphate dehydrogenase",
+        "Hydrolysis of a peptide bond by a serine protease",
+        "Isomerization of glucose-6-phosphate to fructose-6-phosphate",
+        "Decarboxylation of pyruvate to acetyl-CoA by pyruvate dehydrogenase"
+      ],
+      "correct": 2,
+      "explain": "Serine proteases (trypsin, chymotrypsin, elastase) cleave peptide bonds using water as the second substrate. The catalytic serine attacks the carbonyl carbon forming an acyl-enzyme intermediate; a water molecule then performs deacylation, regenerating the enzyme and releasing the C-terminal fragment. Water also participates in phosphatase reactions, DNA hydrolysis, and hundreds of other metabolic hydrolase reactions.",
+      "explainImg": ""
+    }
   ]
 }
