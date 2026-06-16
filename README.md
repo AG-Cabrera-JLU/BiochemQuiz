@@ -1,4 +1,4 @@
-# BiochemQuiz · v0.6.4
+# BiochemQuiz · v0.6.17
 
 A live instructor-led quiz app for medical biochemistry students at JLU Giessen. The instructor projects the app on screen, students join via QR code on their phones, answer in real time, and results appear as a live bar chart once voting closes — no installation required for anyone.
 
@@ -10,7 +10,7 @@ A live instructor-led quiz app for medical biochemistry students at JLU Giessen.
 
 - **Real-time sync** via WebSocket — answers arrive instantly; bar chart updates in the background
 - **Results hidden during voting** — the bar chart is only shown to the instructor after the timer expires or "Stop timer" is clicked, so projected screens cannot influence student choices
-- **100 questions** across 9 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation, Fatty Acid Biosynthesis, Amino Acid Catabolism, Urea Cycle)
+- **157 questions** across 12 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation, Fatty Acid Biosynthesis, Amino Acid Catabolism, Urea Cycle, Water and pH, Proteins, Proteomics)
 - **3 languages** — EN / DE / ES, switchable in one click; questions, options, and explanations all translate
 - **5 answer options** (A–E) per question with full-text wrapping (no truncation)
 - **SVG countdown timer** with danger highlight in the last 10 seconds
@@ -162,12 +162,15 @@ Each question object:
 | Glycolysis | `gly` | gly001–gly015 |
 | Gluconeogenesis | `gcn` | gcn001–gcn015 |
 | Glycogen Metabolism | `glg` | glg001–glg010 |
-| Krebs Cycle | `tca` | tca001–tca010 |
-| Respiratory Chain and OXPHOS | `rc` | rc001–rc010 |
+| Krebs Cycle | `tca` | tca001–tca015 |
+| Respiratory Chain and OXPHOS | `rc` | rc001–rc017 |
 | Fatty Acid Oxidation | `fao` | fao001–fao010 |
 | Fatty Acid Biosynthesis | `fab` | fab001–fab010 |
 | Amino Acid Catabolism | `aac` | aac001–aac010 |
 | Urea Cycle | `uc` | uc001–uc010 |
+| Water and pH | `wph` | wph001–wph015 |
+| Proteins | `pro` | pro001–pro015 |
+| Proteomics | `ptx` | ptx001–ptx015 |
 
 ### Adding / editing / deleting questions
 

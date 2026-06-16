@@ -61,8 +61,8 @@ If you edit `text`, `options`, or `explain` in one language, also update the cor
 | Glycolysis | `gly` | gly001–gly015 |
 | Gluconeogenesis | `gcn` | gcn001–gcn015 |
 | Glycogen Metabolism | `glg` | glg001–glg010 |
-| Krebs Cycle | `tca` | tca001–tca010 |
-| Respiratory Chain and OXPHOS | `rc` | rc001–rc010 |
+| Krebs Cycle | `tca` | tca001–tca015 |
+| Respiratory Chain and OXPHOS | `rc` | rc001–rc017 |
 | Fatty Acid Oxidation | `fao` | fao001–fao010 |
 | Fatty Acid Biosynthesis | `fab` | fab001–fab010 |
 | Amino Acid Catabolism | `aac` | aac001–aac010 |
