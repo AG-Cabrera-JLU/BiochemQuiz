@@ -52,6 +52,7 @@
     "presetsTitle": "Saved presets",
     "savePreset": "Save current selection as preset",
     "exportPresets": "Export",
+    "importPresets": "Import",
     "noPresets": "No presets saved yet.",
     "presetQuestions": "questions",
     "loadPreset": "Load",
@@ -74,6 +75,11 @@
     "waitingQ": "Waiting for instructor to start the question...",
     "submitted": "Answer submitted!",
     "waitingReveal": "Waiting for instructor to reveal results...",
-    "explanation": "Explanation"
+    "explanation": "Explanation",
+    "sessionComplete": "Session complete",
+    "correctAnswers": "correct answers",
+    "yourScore": "Your score",
+    "notAnswered": "Not answered",
+    "keyboardHint": "Shortcuts: S = start · R = reveal · N = next · E = explanation · F = fullscreen"
   }
 }

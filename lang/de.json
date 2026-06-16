@@ -52,6 +52,7 @@
     "presetsTitle": "Gespeicherte Voreinstellungen",
     "savePreset": "Aktuelle Auswahl als Voreinstellung speichern",
     "exportPresets": "Exportieren",
+    "importPresets": "Importieren",
     "noPresets": "Noch keine Voreinstellungen gespeichert.",
     "presetQuestions": "Fragen",
     "loadPreset": "Laden",
@@ -74,6 +75,11 @@
     "waitingQ": "Warte auf den Dozenten...",
     "submitted": "Antwort abgeschickt!",
     "waitingReveal": "Warte auf Aufdeckung durch den Dozenten...",
-    "explanation": "Erklärung"
+    "explanation": "Erklärung",
+    "sessionComplete": "Sitzung abgeschlossen",
+    "correctAnswers": "richtige Antworten",
+    "yourScore": "Ihr Ergebnis",
+    "notAnswered": "Nicht beantwortet",
+    "keyboardHint": "Tastenkürzel: S = starten · R = aufdecken · N = weiter · E = Erklärung · F = Vollbild"
   }
 }

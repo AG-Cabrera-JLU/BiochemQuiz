@@ -292,6 +292,13 @@ img { max-width: 100%; }
   border-radius: 99px; padding: 5px 14px; margin-bottom: 0.75rem;
 }
 
+/* ── Score breakdown ── */
+.score-row { display:flex; align-items:flex-start; gap:10px; padding:0.55rem 0.75rem; border-bottom:1px solid var(--border); font-size:0.85rem; line-height:1.4; }
+.score-row:last-child { border-bottom:none; }
+.score-icon { font-size:1rem; flex-shrink:0; width:22px; text-align:center; margin-top:1px; }
+.score-q-text { flex:1; min-width:0; }
+.score-q-label { font-size:0.72rem; color:var(--text-muted); margin-bottom:2px; }
+
 /* ── Language-switch fade ── */
 #instructor-view, #student-view { transition: opacity 0.15s ease; }
 .lang-switching { opacity: 0 !important; }
@@ -334,7 +341,10 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       <span class="topbar-title">BiochemQuiz</span>
       <span class="topbar-sub" id="app-version-label">JLU Giessen · local</span>
     </div>
-    <div class="lang-toggle" id="lang-toggle"></div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button class="btn btn-sm" id="btn-fullscreen" onclick="toggleFullscreen()" title="Toggle fullscreen (F)">⛶</button>
+      <div class="lang-toggle" id="lang-toggle"></div>
+    </div>
   </div>
 
   <!-- Connection error -->
@@ -371,6 +381,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <span style="font-weight:600;font-size:0.9rem;" data-i18n="session.presetsTitle">Saved presets</span>
           <div style="display:flex;gap:6px;">
             <button class="btn btn-sm" onclick="downloadPresets()" data-i18n="session.exportPresets">Export</button>
+            <button class="btn btn-sm" onclick="document.getElementById('import-presets-file').click()" data-i18n="session.importPresets">Import</button>
+            <input type="file" id="import-presets-file" accept=".json" style="display:none" onchange="importPresets(this)">
           </div>
         </div>
         <div id="presets-list"></div>
@@ -382,7 +394,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
           <button class="btn btn-sm" onclick="selectAllPool()" data-i18n="session.selectAll">Select all</button>
           <button class="btn btn-sm" onclick="deselectAllPool()" data-i18n="session.deselectAll">Deselect all</button>
         </div>
-        <div id="session-pool-list" style="max-height:300px;overflow-y:auto;"></div>
+        <div id="session-pool-list" style="max-height:50vh;overflow-y:auto;"></div>
       </div>
       <div class="card">
         <div class="form-row">
@@ -556,13 +568,14 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
   <!-- State 4: session finished — score screen -->
   <div id="sv-finished" class="hidden">
     <div class="waiting-card card" style="text-align:center;padding:2rem 1.5rem;">
-      <p class="topbar-title" style="margin-bottom:1.25rem;">Session complete</p>
+      <p class="topbar-title" style="margin-bottom:1.25rem;" data-i18n="student.sessionComplete">Session complete</p>
       <div style="font-size:3rem;font-weight:700;color:var(--primary);line-height:1;">
         <span id="sv-score-correct">0</span><span style="font-size:1.5rem;color:var(--text-muted);">/<span id="sv-score-total">0</span></span>
       </div>
       <div style="font-size:1.1rem;color:var(--text-muted);margin-top:0.4rem;" id="sv-score-pct">0%</div>
-      <p style="margin-top:1.25rem;font-size:0.9rem;color:var(--text-muted);">correct answers</p>
+      <p style="margin-top:1.25rem;font-size:0.9rem;color:var(--text-muted);" data-i18n="student.correctAnswers">correct answers</p>
     </div>
+    <div id="sv-score-breakdown" style="margin-top:0.75rem;"></div>
   </div>
 
 </div><!-- end student-view -->
@@ -924,6 +937,37 @@ function copyStudentLink() {
 }
 
 // ══════════════════════════════════════════════════════════
+// FULLSCREEN
+// ══════════════════════════════════════════════════════════
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen().catch(() => {});
+  }
+}
+document.addEventListener('fullscreenchange', () => {
+  const btn = document.getElementById('btn-fullscreen');
+  if (btn) btn.textContent = document.fullscreenElement ? '✕⛶' : '⛶';
+});
+
+// ══════════════════════════════════════════════════════════
+// KEYBOARD SHORTCUTS (instructor only)
+// ══════════════════════════════════════════════════════════
+document.addEventListener('keydown', (e) => {
+  if (wsRole !== 'instructor') return;
+  if (!sessionData) return;
+  // Skip when typing in an input or textarea
+  if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+  const key = e.key.toLowerCase();
+  if (key === 's' && !sessionData.started && !sessionData.revealed) { e.preventDefault(); startQuestion(); }
+  else if (key === 'r' && !sessionData.revealed && sessionData.startedAt) { e.preventDefault(); revealQuestion(); }
+  else if (key === 'n' && sessionData.revealed && sessionData.currentIdx < sessionData.questions.length - 1) { e.preventDefault(); nextQuestion(); }
+  else if (key === 'e') { e.preventDefault(); if (!document.getElementById('explain-toggle-row').classList.contains('hidden')) toggleExplain(); }
+  else if (key === 'f') { e.preventDefault(); toggleFullscreen(); }
+});
+
+// ══════════════════════════════════════════════════════════
 // TABS
 // ══════════════════════════════════════════════════════════
 document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -968,6 +1012,7 @@ function renderBankList() {
     return `<div class="q-row">
       <div class="q-text">
         <span class="badge" style="margin-right:6px;">${esc(q.topic)}</span>
+        <span style="font-size:0.72rem;color:var(--text-hint);font-family:monospace;margin-right:6px;">${esc(q.id)}</span>
         ${esc(lq.text)}
       </div>
       <div class="q-actions">
@@ -1074,6 +1119,9 @@ const TOPIC_PREFIXES = {
   'fatty acid biosynthesis': 'fab', 'fettsäurebiosynthese': 'fab', 'biosíntesis de ácidos grasos': 'fab',
   'amino acid catabolism': 'aac', 'aminosäurekatabolismus': 'aac', 'catabolismo de aminoácidos': 'aac',
   'urea cycle': 'uc', 'harnstoffzyklus': 'uc', 'ciclo de la urea': 'uc',
+  'water and ph': 'wph', 'wasser und ph': 'wph', 'agua y ph': 'wph',
+  'proteins': 'pro', 'proteine': 'pro', 'proteínas': 'pro',
+  'proteomics': 'ptx', 'proteomik': 'ptx', 'proteómica': 'ptx',
 };
 
 function generateNextId(topic) {
@@ -1121,7 +1169,16 @@ function renderSessionChips() {
     const c = document.createElement('div');
     c.className = 'chip' + (sessionFilter === t2 ? ' active' : '');
     c.textContent = t2 === 'All' ? (deepGet(lang,'bank.filterAll') || 'All') : t2;
-    c.onclick = () => { sessionFilter = t2; renderSessionChips(); renderSessionPool(); };
+    c.onclick = () => {
+      sessionFilter = t2;
+      // Clicking a specific topic also selects all its questions
+      if (t2 !== 'All') {
+        const topicQs = allQuestions.filter(q => q.topic === t2);
+        topicQs.forEach(q => { if (!sessionPool.includes(q.id)) sessionPool.push(q.id); });
+      }
+      renderSessionChips();
+      renderSessionPool();
+    };
     wrap.appendChild(c);
   });
 }
@@ -1287,6 +1344,28 @@ function downloadPresets() {
   a.click();
 }
 
+function importPresets(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) throw new Error('Not an array');
+      presetCache = imported;
+      lsSavePresets(presetCache);
+      renderPresets();
+      await fetch('/api/presets', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(presetCache)
+      });
+    } catch { alert('Invalid preset file.'); }
+    input.value = '';
+  };
+  reader.readAsText(file);
+}
+
 // ══════════════════════════════════════════════════════════
 // SESSION — LAUNCH & CONTROL
 // ══════════════════════════════════════════════════════════
@@ -1371,6 +1450,14 @@ function renderActionRow(session) {
   row.innerHTML = '';
 
   if (!session.started) {
+    // Editable timer for this question
+    const timerWrap = document.createElement('div');
+    timerWrap.style.cssText = 'display:flex;align-items:center;gap:6px;';
+    timerWrap.innerHTML = `<label style="font-size:0.8rem;color:var(--text-muted);white-space:nowrap;">${t('session.timerLabel').replace(' (seconds)','').replace(' (Sekunden)','').replace(' (segundos)','')}:</label>
+      <input id="q-timer-override" type="number" min="10" max="600" value="${session.timerSecs}"
+        style="width:70px;border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:0.3rem 0.5rem;font-size:0.85rem;background:var(--bg);color:var(--text);">
+      <span style="font-size:0.8rem;color:var(--text-muted);">s</span>`;
+    row.appendChild(timerWrap);
     addBtn(row, t('session.startQ'), 'btn-primary', startQuestion);
   } else {
     addBtn(row, '+30s', 'btn-sm', () => addTime(30));
@@ -1402,6 +1489,12 @@ function addBtn(parent, label, cls, fn) {
 function startQuestion() {
   if (!sessionData) return;
   const q = sessionData.questions[sessionData.currentIdx];
+  // Apply per-question timer override if the input was changed
+  const overrideInput = document.getElementById('q-timer-override');
+  if (overrideInput) {
+    const overrideVal = Math.min(600, Math.max(10, parseInt(overrideInput.value) || sessionData.timerSecs));
+    sessionData.timerSecs = overrideVal;
+  }
   sessionData.started = true;
   sessionData.startedAt = Date.now();
   sessionData.revealed = false;
@@ -1611,11 +1704,15 @@ function renderResults() {
         <span class="bar-stat">${count} (${pct}%)</span>
       </li>`;
     }).join('');
+    const explainHtml = lq.explain
+      ? `<div class="explain-panel" style="margin-top:0.5rem;"><p class="explain-text">${esc(lq.explain)}</p>${q.explainImg ? `<img src="${esc(q.explainImg)}" class="explain-img" alt="">` : ''}</div>`
+      : '';
     return `<div class="card result-q-card">
       <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">${esc(q.topic)}</p>
       <p style="font-size:0.9rem;font-weight:500;margin-bottom:0.6rem;">${esc(lq.text)}</p>
       <ul class="bar-list">${bars}</ul>
       <p class="votes-count">${total} ${t('results.responses')}</p>
+      ${explainHtml}
     </div>`;
   }).join('');
 }
@@ -1684,6 +1781,28 @@ function handleStudentState(session, responses) {
     document.getElementById('sv-score-total').textContent   = total;
     const pct = total > 0 ? Math.round(correct / total * 100) : 0;
     document.getElementById('sv-score-pct').textContent = pct + '%';
+    // Per-question breakdown
+    const bdEl = document.getElementById('sv-score-breakdown');
+    if (bdEl) {
+      bdEl.innerHTML = '<div class="card" style="padding:0.25rem 0.25rem;">' +
+        session.questions.map((q, i) => {
+          const lq2 = localizeQ(q);
+          const myAns = myAnswers[q.id];
+          const correctIdx = lq2.correct;
+          const notAns = myAns === undefined;
+          const wasRight = !notAns && myAns === correctIdx;
+          const icon = notAns ? '—' : (wasRight ? '✓' : '✗');
+          const iconColor = notAns ? 'var(--text-muted)' : (wasRight ? 'var(--success)' : 'var(--danger)');
+          const myOptLabel = notAns ? t('student.notAnswered') : ('ABCDE'[myAns] + ' — ' + esc(lq2.options[myAns] || ''));
+          return `<div class="score-row">
+            <span class="score-icon" style="color:${iconColor};font-weight:700;">${icon}</span>
+            <div class="score-q-text">
+              <div style="font-weight:500;">Q${i+1}: ${esc(lq2.text)}</div>
+              <div class="score-q-label">${myOptLabel}</div>
+            </div>
+          </div>`;
+        }).join('') + '</div>';
+    }
     showStudentState('finished');
     clearInterval(svTimerInterval);
     return;
@@ -1767,8 +1886,17 @@ function handleStudentState(session, responses) {
     statusWrap.classList.add('hidden');
   }
 
-  // Explanation is shown only on the instructor's screen, not on student phones
-  document.getElementById('sv-explain').classList.add('hidden');
+  // Show explanation on student phones after reveal
+  const svExplain = document.getElementById('sv-explain');
+  if (session.revealed && (lq.explain || q.explainImg)) {
+    document.getElementById('sv-explain-text').textContent = lq.explain || '';
+    const svImg = document.getElementById('sv-explain-img');
+    if (q.explainImg) { svImg.src = q.explainImg; svImg.style.display = 'block'; }
+    else { svImg.style.display = 'none'; }
+    svExplain.classList.remove('hidden');
+  } else {
+    svExplain.classList.add('hidden');
+  }
 }
 
 function updateSvTimer(session) {

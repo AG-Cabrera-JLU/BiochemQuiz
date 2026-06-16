@@ -52,6 +52,7 @@
     "presetsTitle": "Preajustes guardados",
     "savePreset": "Guardar selección actual como preajuste",
     "exportPresets": "Exportar",
+    "importPresets": "Importar",
     "noPresets": "Aún no hay preajustes guardados.",
     "presetQuestions": "preguntas",
     "loadPreset": "Cargar",
@@ -74,6 +75,11 @@
     "waitingQ": "Esperando que el profesor inicie la pregunta...",
     "submitted": "¡Respuesta enviada!",
     "waitingReveal": "Esperando que el profesor revele los resultados...",
-    "explanation": "Explicación"
+    "explanation": "Explicación",
+    "sessionComplete": "Sesión completada",
+    "correctAnswers": "respuestas correctas",
+    "yourScore": "Tu puntuación",
+    "notAnswered": "Sin respuesta",
+    "keyboardHint": "Atajos: S = iniciar · R = revelar · N = siguiente · E = explicación · F = pantalla completa"
   }
 }
