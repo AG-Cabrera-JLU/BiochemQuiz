@@ -842,8 +842,9 @@ function handleInstructorState(session, responses) {
   if (!session || !session.active) return;
   if (session.finished) return;
 
-  const prevStarted  = sessionData?.started;
-  const prevRevealed = sessionData?.revealed;
+  const prevStarted   = sessionData?.started;
+  const prevRevealed  = sessionData?.revealed;
+  const prevTimerSecs = sessionData?.timerSecs;
   sessionData = session;
 
   if (session.started || session.revealed) {
@@ -854,6 +855,11 @@ function handleInstructorState(session, responses) {
   if (prevStarted !== session.started || prevRevealed !== session.revealed) {
     renderActionRow(session);
     if (!session.started) stopTimer();
+  }
+
+  // Restart local timer when extra time was added mid-question
+  if (session.started && !session.revealed && prevTimerSecs !== session.timerSecs) {
+    startTimer(session.timerSecs, session.startedAt);
   }
 }
 
@@ -1367,6 +1373,8 @@ function renderActionRow(session) {
   if (!session.started) {
     addBtn(row, t('session.startQ'), 'btn-primary', startQuestion);
   } else {
+    addBtn(row, '+30s', 'btn-sm', () => addTime(30));
+    addBtn(row, '+60s', 'btn-sm', () => addTime(60));
     addBtn(row, t('session.stopTimer'), '', stopQuestion);
   }
 
@@ -1408,6 +1416,10 @@ function stopQuestion() {
   broadcastSession(sessionData, false);
   stopTimer();
   renderActionRow(sessionData);
+}
+
+function addTime(seconds) {
+  wsSend({ type: 'add_time', seconds });
 }
 
 function revealQuestion() {

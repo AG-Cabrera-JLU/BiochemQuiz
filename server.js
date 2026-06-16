@@ -171,6 +171,27 @@ wss.on('connection', (ws, req) => {
       broadcastState();
     }
 
+    if (msg.type === 'add_time' && ws.role === 'instructor') {
+      const seconds = parseInt(msg.seconds) || 0;
+      if (seconds > 0 && state.session && state.session.started && !state.session.revealed) {
+        state.session.timerSecs += seconds;
+        cancelTimer();
+        const elapsed = Date.now() - state.session.startedAt;
+        const remaining = Math.max(0, state.session.timerSecs * 1000 - elapsed);
+        if (remaining > 0) {
+          state.timerTimeout = setTimeout(() => {
+            state.timerTimeout = null;
+            if (state.session && state.session.started && !state.session.revealed) {
+              state.session.started = false;
+              state.session.revealed = true;
+              broadcastState();
+            }
+          }, remaining);
+        }
+        broadcastState();
+      }
+    }
+
     if (msg.type === 'answer' && ws.role === 'student') {
       const { questionId, optionIndex, clientId } = msg;
       if (!state.session || !state.session.started) return;
