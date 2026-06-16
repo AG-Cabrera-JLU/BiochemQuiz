@@ -1245,6 +1245,81 @@
       "explainImg": ""
     },
     {
+      "id": "fao011",
+      "topic": "Fatty Acid Oxidation",
+      "text": "What is the first reaction in each round of β-oxidation?",
+      "options": [
+        "Hydration of a trans-Δ2 double bond by enoyl-CoA hydratase",
+        "Thiolytic cleavage by thiolase to release acetyl-CoA",
+        "NAD⁺-dependent oxidation of L-3-hydroxyacyl-CoA to 3-ketoacyl-CoA",
+        "FAD-dependent oxidation of acyl-CoA to produce trans-Δ2-enoyl-CoA",
+        "Carboxylation of the acyl-CoA chain at C-3 using ATP and bicarbonate"
+      ],
+      "correct": 3,
+      "explain": "The first step is catalyzed by acyl-CoA dehydrogenase (ACAD), which uses FAD as electron acceptor (not NAD⁺). The electrons are passed via FADH₂ to electron-transfer flavoprotein (ETF) and then to ubiquinone in the respiratory chain. The product is trans-Δ2-enoyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao012",
+      "topic": "Fatty Acid Oxidation",
+      "text": "Which stereoisomer of 3-hydroxyacyl-CoA is produced by enoyl-CoA hydratase during β-oxidation?",
+      "options": [
+        "D-3-Hydroxyacyl-CoA",
+        "A racemic mixture of D and L forms",
+        "2-Hydroxyacyl-CoA",
+        "trans-3-Hydroxyacyl-CoA",
+        "L-3-Hydroxyacyl-CoA"
+      ],
+      "correct": 4,
+      "explain": "Enoyl-CoA hydratase adds water across the trans-Δ2 double bond in a stereospecific manner, producing exclusively L-3-hydroxyacyl-CoA (S-configuration). This stereochemistry is critical because the next enzyme, L-3-hydroxyacyl-CoA dehydrogenase, is strictly specific for the L-form.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao013",
+      "topic": "Fatty Acid Oxidation",
+      "text": "In the third step of β-oxidation, L-3-hydroxyacyl-CoA is oxidized to 3-ketoacyl-CoA. Which cofactor is reduced?",
+      "options": [
+        "NAD⁺ → NADH",
+        "FAD → FADH₂",
+        "NADP⁺ → NADPH",
+        "Ubiquinone → ubiquinol",
+        "FMN → FMNH₂"
+      ],
+      "correct": 0,
+      "explain": "L-3-Hydroxyacyl-CoA dehydrogenase uses NAD⁺ as electron acceptor, generating NADH. This distinguishes it from step 1 (which uses FAD). The hydroxyl group at the β-carbon is oxidized to a keto group, yielding 3-ketoacyl-CoA ready for thiolytic cleavage.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao014",
+      "topic": "Fatty Acid Oxidation",
+      "text": "In the thiolase reaction (step 4 of β-oxidation), which products are formed when 3-ketoacyl-CoA reacts with coenzyme A?",
+      "options": [
+        "Malonyl-CoA and one acetyl-CoA unit",
+        "Two acetyl-CoA molecules, regardless of chain length",
+        "Succinyl-CoA and one acetyl-CoA unit",
+        "Acetyl-CoA and a two-carbon-shorter acyl-CoA",
+        "Propionyl-CoA and one acetyl-CoA unit"
+      ],
+      "correct": 3,
+      "explain": "Thiolase (3-ketoacyl-CoA thiolase) performs a thiolytic cleavage: CoA attacks the C2–C3 bond of 3-ketoacyl-CoA, releasing acetyl-CoA and an acyl-CoA that is two carbons shorter. This shortened acyl-CoA re-enters the cycle for the next round. Only the final round of an even-chain fatty acid yields two acetyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao015",
+      "topic": "Fatty Acid Oxidation",
+      "text": "The final round of β-oxidation of an odd-chain fatty acid yields propionyl-CoA. Which cofactor is essential for its subsequent conversion to succinyl-CoA?",
+      "options": [
+        "Thiamine pyrophosphate (TPP)",
+        "Pyridoxal phosphate (PLP)",
+        "FAD",
+        "Lipoic acid",
+        "Vitamin B12 (cobalamin)"
+      ],
+      "correct": 4,
+      "explain": "Propionyl-CoA is carboxylated by propionyl-CoA carboxylase (requires biotin) to D-methylmalonyl-CoA, epimerized to L-methylmalonyl-CoA, and converted to succinyl-CoA by methylmalonyl-CoA mutase — an enzyme that requires adenosylcobalamin (vitamin B12) as cofactor. Succinyl-CoA then enters the TCA cycle.",
+      "explainImg": ""
+    },
+    {
       "id": "fab001",
       "topic": "Fatty Acid Biosynthesis",
       "text": "Where does fatty acid synthesis primarily occur in the cell?",
@@ -1392,6 +1467,81 @@
       ],
       "correct": 1,
       "explain": "Mammals have desaturases for positions Δ9, Δ6, Δ5, and Δ4, but lack Δ12 and Δ15 desaturases. Therefore, linoleic acid (18:2 Δ9,12) and α-linolenic acid (18:3 Δ9,12,15) must be obtained from the diet and are classified as essential fatty acids.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab011",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "The KS domain of fatty acid synthase catalyzes which reaction in each elongation cycle?",
+      "options": [
+        "Transfer of malonyl from malonyl-CoA to the ACP phosphopantetheine group",
+        "NADPH-dependent reduction of β-ketoacyl-ACP to D-3-hydroxyacyl-ACP",
+        "Elimination of water from β-hydroxyacyl-ACP to give trans-Δ2-enoyl-ACP",
+        "Decarboxylative condensation of malonyl-ACP with the acyl-KS thioester",
+        "NADPH-dependent reduction of trans-Δ2-enoyl-ACP to the saturated acyl-ACP"
+      ],
+      "correct": 3,
+      "explain": "The KS domain condenses the acyl group (thioester-linked to KS) with malonyl-ACP. Decarboxylation of the malonyl group releases CO₂ and drives the condensation forward, yielding β-ketoacyl-ACP extended by two carbons. This is the chain-elongating condensation step of each FAS cycle.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab012",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "What is the stereochemistry of the product of β-ketoacyl-ACP reductase (KR) in the FAS cycle?",
+      "options": [
+        "D-3-Hydroxyacyl-ACP",
+        "L-3-Hydroxyacyl-ACP",
+        "trans-Δ2-Enoyl-ACP",
+        "cis-Δ2-Enoyl-ACP",
+        "3-Ketoacyl-ACP (unchanged)"
+      ],
+      "correct": 0,
+      "explain": "KR uses NADPH to reduce the β-keto group, producing D-3-hydroxyacyl-ACP. This is the opposite stereochemistry from β-oxidation, where enoyl-CoA hydratase produces the L-form. The stereochemical inversion reflects the independent evolutionary origins of the two opposing pathways.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab013",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "What type of double bond does the enoyl-ACP contain after the dehydration step in the FAS cycle?",
+      "options": [
+        "cis-Δ2 (Z-configuration)",
+        "cis-Δ3 (Z-configuration)",
+        "trans-Δ3 (E-configuration)",
+        "Conjugated diene at Δ2,Δ4",
+        "trans-Δ2 (E-configuration)"
+      ],
+      "correct": 4,
+      "explain": "β-Hydroxyacyl-ACP dehydratase eliminates water from D-3-hydroxyacyl-ACP to produce trans-Δ2-enoyl-ACP. This E-configuration double bond is the same geometry as in β-oxidation, but in FAS the next step (enoyl reductase) reduces it, whereas in β-oxidation this trans-Δ2 intermediate is the substrate for hydration.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab014",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Which of the following best describes the enoyl-ACP reductase (ER) reaction in the FAS cycle?",
+      "options": [
+        "Oxidizes acyl-ACP to trans-Δ2-enoyl-ACP with NADH as electron acceptor",
+        "Reduces trans-Δ2-enoyl-ACP to D-3-hydroxyacyl-ACP using FAD as cofactor",
+        "Transfers the completed acyl chain from ACP to CoA for cytosolic export",
+        "Reduces trans-Δ2-enoyl-ACP to the saturated acyl-ACP using NADPH",
+        "Cleaves the completed fatty acid chain from ACP, releasing free palmitate"
+      ],
+      "correct": 3,
+      "explain": "Enoyl-ACP reductase uses NADPH to reduce the trans-Δ2 double bond of enoyl-ACP, yielding a fully saturated acyl-ACP two carbons longer than the previous cycle's substrate. This completes one elongation round. The acyl-ACP is then used as the substrate for the next condensation cycle.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab015",
+      "topic": "Fatty Acid Biosynthesis",
+      "text": "Acetyl-CoA for cytosolic fatty acid synthesis is produced in mitochondria. How does it reach the cytosol?",
+      "options": [
+        "Acetyl-CoA diffuses across the inner membrane through non-specific channel proteins",
+        "Acetyl-CoA is first converted to propionyl-CoA for membrane transport into the cytosol",
+        "Ketone bodies shuttle the acetyl units across the membrane and are reconverted to acetyl-CoA",
+        "Acetyl-CoA is esterified with carnitine and exported via CPT-I and carnitine translocase",
+        "Citrate (from acetyl-CoA + OAA) is exported and cleaved to acetyl-CoA by ATP-citrate lyase"
+      ],
+      "correct": 4,
+      "explain": "The inner mitochondrial membrane is impermeable to acetyl-CoA and CoA. Acetyl-CoA condenses with oxaloacetate (citrate synthase) to form citrate, which is exported via the tricarboxylate carrier. In the cytosol, ATP-citrate lyase cleaves citrate into acetyl-CoA + OAA, making acetyl-CoA available for fatty acid synthesis.",
       "explainImg": ""
     },
     {

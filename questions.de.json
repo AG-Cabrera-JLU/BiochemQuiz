@@ -1245,6 +1245,81 @@
       "explainImg": ""
     },
     {
+      "id": "fao011",
+      "topic": "Fettsäureoxidation",
+      "text": "Was ist die erste Reaktion in jeder Runde der β-Oxidation?",
+      "options": [
+        "Hydratisierung einer trans-Δ2-Doppelbindung durch Enoyl-CoA-Hydratase",
+        "Thiolytische Spaltung durch Thiolase unter Freisetzung von Acetyl-CoA",
+        "NAD⁺-abhängige Oxidation von L-3-Hydroxyacyl-CoA zu 3-Ketoacyl-CoA",
+        "FAD-abhängige Oxidation von Acyl-CoA unter Bildung von trans-Δ2-Enoyl-CoA",
+        "Carboxylierung der Acyl-CoA-Kette an C-3 mithilfe von ATP und Bicarbonat"
+      ],
+      "correct": 3,
+      "explain": "Der erste Schritt wird durch die Acyl-CoA-Dehydrogenase (ACAD) katalysiert, die FAD als Elektronenakzeptor nutzt (nicht NAD⁺). Die Elektronen werden über FADH₂ auf das Elektronen-übertragende Flavoprotein (ETF) und dann auf Ubiquinon in der Atmungskette übertragen. Das Produkt ist trans-Δ2-Enoyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao012",
+      "topic": "Fettsäureoxidation",
+      "text": "Welches Stereoisomer von 3-Hydroxyacyl-CoA wird bei der β-Oxidation durch die Enoyl-CoA-Hydratase gebildet?",
+      "options": [
+        "D-3-Hydroxyacyl-CoA",
+        "Ein racemisches Gemisch aus D- und L-Form",
+        "2-Hydroxyacyl-CoA",
+        "trans-3-Hydroxyacyl-CoA",
+        "L-3-Hydroxyacyl-CoA"
+      ],
+      "correct": 4,
+      "explain": "Die Enoyl-CoA-Hydratase addiert Wasser stereoselektiv an die trans-Δ2-Doppelbindung und bildet ausschließlich L-3-Hydroxyacyl-CoA (S-Konfiguration). Diese Stereospezifität ist entscheidend, da das nächste Enzym, die L-3-Hydroxyacyl-CoA-Dehydrogenase, streng spezifisch für die L-Form ist.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao013",
+      "topic": "Fettsäureoxidation",
+      "text": "Im dritten Schritt der β-Oxidation wird L-3-Hydroxyacyl-CoA zu 3-Ketoacyl-CoA oxidiert. Welcher Cofaktor wird dabei reduziert?",
+      "options": [
+        "NAD⁺ → NADH",
+        "FAD → FADH₂",
+        "NADP⁺ → NADPH",
+        "Ubiquinon → Ubiquinol",
+        "FMN → FMNH₂"
+      ],
+      "correct": 0,
+      "explain": "Die L-3-Hydroxyacyl-CoA-Dehydrogenase nutzt NAD⁺ als Elektronenakzeptor und erzeugt NADH. Dies unterscheidet sie vom ersten Schritt (der FAD nutzt). Die Hydroxylgruppe am β-Kohlenstoff wird zur Ketogruppe oxidiert, wodurch 3-Ketoacyl-CoA für die anschließende thiolytische Spaltung bereitgestellt wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao014",
+      "topic": "Fettsäureoxidation",
+      "text": "Welche Produkte entstehen bei der Thiolase-Reaktion (Schritt 4 der β-Oxidation), wenn 3-Ketoacyl-CoA mit Coenzym A reagiert?",
+      "options": [
+        "Malonyl-CoA und eine Acetyl-CoA-Einheit",
+        "Zwei Acetyl-CoA-Moleküle, unabhängig von der Kettenlänge",
+        "Succinyl-CoA und eine Acetyl-CoA-Einheit",
+        "Acetyl-CoA und ein um zwei Kohlenstoffatome verkürztes Acyl-CoA",
+        "Propionyl-CoA und eine Acetyl-CoA-Einheit"
+      ],
+      "correct": 3,
+      "explain": "Die Thiolase (3-Ketoacyl-CoA-Thiolase) führt eine thiolytische Spaltung durch: CoA greift die C2–C3-Bindung von 3-Ketoacyl-CoA an und setzt Acetyl-CoA sowie ein um zwei Kohlenstoffatome verkürztes Acyl-CoA frei. Dieses verkürzte Acyl-CoA tritt erneut in den Zyklus ein. Nur die letzte Runde einer geradzahligen Fettsäure liefert zwei Acetyl-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao015",
+      "topic": "Fettsäureoxidation",
+      "text": "Die letzte Runde der β-Oxidation einer ungeradzahligen Fettsäure liefert Propionyl-CoA. Welcher Cofaktor ist für dessen anschließende Umwandlung zu Succinyl-CoA essenziell?",
+      "options": [
+        "Thiaminpyrophosphat (TPP)",
+        "Pyridoxalphosphat (PLP)",
+        "FAD",
+        "Liponsäure",
+        "Vitamin B12 (Cobalamin)"
+      ],
+      "correct": 4,
+      "explain": "Propionyl-CoA wird durch die Propionyl-CoA-Carboxylase (benötigt Biotin) zu D-Methylmalonyl-CoA carboxyliert, durch eine Epimerase zu L-Methylmalonyl-CoA umgewandelt und schließlich durch die Methylmalonyl-CoA-Mutase zu Succinyl-CoA isomerisiert — dieses Enzym benötigt Adenosylcobalamin (Vitamin B12) als Cofaktor. Succinyl-CoA gelangt dann in den Citratzyklus.",
+      "explainImg": ""
+    },
+    {
       "id": "fab001",
       "topic": "Fettsäurebiosynthese",
       "text": "Wo findet die Fettsäuresynthese hauptsächlich in der Zelle statt?",
@@ -1392,6 +1467,81 @@
       ],
       "correct": 1,
       "explain": "Säugetiere besitzen Desaturasen für die Positionen Δ9, Δ6, Δ5 und Δ4, jedoch nicht Δ12 und Δ15. Daher müssen Linolsäure (18:2 Δ9,12) und α-Linolensäure (18:3 Δ9,12,15) über die Nahrung zugeführt werden und gelten als essentielle Fettsäuren.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab011",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welche Reaktion katalysiert die KS-Domäne der Fettsäuresynthase in jedem Elongationszyklus?",
+      "options": [
+        "Übertragung von Malonyl von Malonyl-CoA auf die Phosphopantethein-Gruppe des ACP",
+        "NADPH-abhängige Reduktion von β-Ketoacyl-ACP zu D-3-Hydroxyacyl-ACP",
+        "Eliminierung von Wasser aus β-Hydroxyacyl-ACP unter Bildung von trans-Δ2-Enoyl-ACP",
+        "Decarboxylative Kondensation von Malonyl-ACP mit dem Acyl-KS-Thioester",
+        "NADPH-abhängige Reduktion von trans-Δ2-Enoyl-ACP zum gesättigten Acyl-ACP"
+      ],
+      "correct": 3,
+      "explain": "Die KS-Domäne kondensiert die Acylgruppe (als Thioester an KS gebunden) mit Malonyl-ACP. Die Decarboxylierung der Malonylgruppe setzt CO₂ frei und treibt die Kondensation voran, sodass ein um zwei Kohlenstoffatome verlängertes β-Ketoacyl-ACP entsteht. Dies ist der kettenverlängernde Kondensationsschritt jedes FAS-Zyklus.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab012",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welche Stereochemie weist das Produkt der β-Ketoacyl-ACP-Reduktase (KR) im FAS-Zyklus auf?",
+      "options": [
+        "D-3-Hydroxyacyl-ACP",
+        "L-3-Hydroxyacyl-ACP",
+        "trans-Δ2-Enoyl-ACP",
+        "cis-Δ2-Enoyl-ACP",
+        "3-Ketoacyl-ACP (unverändert)"
+      ],
+      "correct": 0,
+      "explain": "Die KR nutzt NADPH zur Reduktion der β-Ketogruppe und bildet D-3-Hydroxyacyl-ACP. Dies ist die entgegengesetzte Stereochemie zur β-Oxidation, bei der die Enoyl-CoA-Hydratase die L-Form erzeugt. Die stereochemische Umkehrung spiegelt die unabhängige evolutionäre Entstehung beider Stoffwechselwege wider.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab013",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welchen Typ von Doppelbindung enthält das Enoyl-ACP nach dem Dehydratisierungsschritt im FAS-Zyklus?",
+      "options": [
+        "cis-Δ2 (Z-Konfiguration)",
+        "cis-Δ3 (Z-Konfiguration)",
+        "trans-Δ3 (E-Konfiguration)",
+        "Konjugiertes Dien an Δ2,Δ4",
+        "trans-Δ2 (E-Konfiguration)"
+      ],
+      "correct": 4,
+      "explain": "Die β-Hydroxyacyl-ACP-Dehydratase eliminiert Wasser aus D-3-Hydroxyacyl-ACP und bildet trans-Δ2-Enoyl-ACP. Diese E-konfigurierte Doppelbindung entspricht geometrisch der in der β-Oxidation, doch in der FAS wird sie im nächsten Schritt (Enoyl-Reduktase) reduziert, während sie in der β-Oxidation das Substrat für die Hydratisierung darstellt.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab014",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Welche Aussage beschreibt die Enoyl-ACP-Reduktase (ER)-Reaktion im FAS-Zyklus am besten?",
+      "options": [
+        "Oxidiert Acyl-ACP zu trans-Δ2-Enoyl-ACP mit NADH als Elektronenakzeptor",
+        "Reduziert trans-Δ2-Enoyl-ACP zu D-3-Hydroxyacyl-ACP mithilfe von FAD",
+        "Überträgt die fertige Acylkette vom ACP auf CoA zum Transport in das Cytosol",
+        "Reduziert trans-Δ2-Enoyl-ACP zum gesättigten Acyl-ACP mithilfe von NADPH",
+        "Spaltet die fertige Fettsäurekette vom ACP ab und setzt freies Palmitat frei"
+      ],
+      "correct": 3,
+      "explain": "Die Enoyl-ACP-Reduktase nutzt NADPH zur Reduktion der trans-Δ2-Doppelbindung des Enoyl-ACP, wodurch ein vollständig gesättigtes Acyl-ACP entsteht, das zwei Kohlenstoffatome länger ist als das Substrat des vorherigen Zyklus. Dies schließt eine Elongationsrunde ab. Das Acyl-ACP wird dann für die nächste Kondensationsreaktion verwendet.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab015",
+      "topic": "Fettsäurebiosynthese",
+      "text": "Acetyl-CoA für die cytoplasmatische Fettsäuresynthese wird in Mitochondrien gebildet. Wie gelangt es ins Cytosol?",
+      "options": [
+        "Acetyl-CoA diffundiert durch unspezifische Kanalproteine der inneren Mitochondrienmembran",
+        "Acetyl-CoA wird zunächst zu Propionyl-CoA umgewandelt, das die innere Membran überquert",
+        "Ketonkörper transportieren die Acetyleinheiten über die Membran und werden im Cytosol zurückgewandelt",
+        "Acetyl-CoA wird mit Carnitin verestert und über CPT-I und Carnitin-Translokase exportiert",
+        "Citrat (aus Acetyl-CoA + OAA) wird exportiert und durch ATP-Citrat-Lyase zu Acetyl-CoA gespalten"
+      ],
+      "correct": 4,
+      "explain": "Die innere Mitochondrienmembran ist für Acetyl-CoA und CoA impermeabel. Acetyl-CoA kondensiert mit Oxalacetat (Citratsynthase) zu Citrat, das über den Tricarboxylat-Carrier exportiert wird. Im Cytosol spaltet die ATP-Citrat-Lyase Citrat in Acetyl-CoA und OAA, wodurch Acetyl-CoA für die Fettsäuresynthese verfügbar wird.",
       "explainImg": ""
     },
     {

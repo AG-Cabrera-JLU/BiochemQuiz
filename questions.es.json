@@ -1245,6 +1245,81 @@
       "explainImg": ""
     },
     {
+      "id": "fao011",
+      "topic": "Oxidación de ácidos grasos",
+      "text": "¿Cuál es la primera reacción en cada ronda de la β-oxidación?",
+      "options": [
+        "Hidratación de un doble enlace trans-Δ2 por la enoil-CoA hidratasa",
+        "Escisión tiolítica por la tiolasa para liberar acetil-CoA",
+        "Oxidación dependiente de NAD⁺ del L-3-hidroxiacil-CoA a 3-cetoacil-CoA",
+        "Oxidación dependiente de FAD del acil-CoA para producir trans-Δ2-enoil-CoA",
+        "Carboxilación del acil-CoA en C-3 mediante ATP y bicarbonato"
+      ],
+      "correct": 3,
+      "explain": "El primer paso está catalizado por la acil-CoA deshidrogenasa (ACAD), que usa FAD como aceptor de electrones (no NAD⁺). Los electrones se transfieren a través del FADH₂ a la proteína transportadora de electrones (ETF) y luego a la ubiquinona en la cadena respiratoria. El producto es el trans-Δ2-enoil-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao012",
+      "topic": "Oxidación de ácidos grasos",
+      "text": "¿Qué estereoisómero del 3-hidroxiacil-CoA produce la enoil-CoA hidratasa durante la β-oxidación?",
+      "options": [
+        "D-3-Hidroxiacil-CoA",
+        "Una mezcla racémica de las formas D y L",
+        "2-Hidroxiacil-CoA",
+        "trans-3-Hidroxiacil-CoA",
+        "L-3-Hidroxiacil-CoA"
+      ],
+      "correct": 4,
+      "explain": "La enoil-CoA hidratasa añade agua al doble enlace trans-Δ2 de forma estereoespecífica, produciendo exclusivamente L-3-hidroxiacil-CoA (configuración S). Esta estereoquímica es fundamental, ya que el siguiente enzima, la L-3-hidroxiacil-CoA deshidrogenasa, es estrictamente específico para la forma L.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao013",
+      "topic": "Oxidación de ácidos grasos",
+      "text": "En el tercer paso de la β-oxidación, el L-3-hidroxiacil-CoA se oxida a 3-cetoacil-CoA. ¿Qué cofactor se reduce?",
+      "options": [
+        "NAD⁺ → NADH",
+        "FAD → FADH₂",
+        "NADP⁺ → NADPH",
+        "Ubiquinona → ubiquinol",
+        "FMN → FMNH₂"
+      ],
+      "correct": 0,
+      "explain": "La L-3-hidroxiacil-CoA deshidrogenasa usa NAD⁺ como aceptor de electrones, generando NADH. Esto la distingue del paso 1 (que usa FAD). El grupo hidroxilo en el carbono β se oxida a un grupo ceto, produciendo 3-cetoacil-CoA listo para la escisión tiolítica.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao014",
+      "topic": "Oxidación de ácidos grasos",
+      "text": "En la reacción de la tiolasa (paso 4 de la β-oxidación), ¿qué productos se forman cuando el 3-cetoacil-CoA reacciona con la coenzima A?",
+      "options": [
+        "Malonil-CoA y una unidad de acetil-CoA",
+        "Dos moléculas de acetil-CoA, independientemente de la longitud de cadena",
+        "Succinil-CoA y una unidad de acetil-CoA",
+        "Acetil-CoA y un acil-CoA dos carbonos más corto",
+        "Propionil-CoA y una unidad de acetil-CoA"
+      ],
+      "correct": 3,
+      "explain": "La tiolasa (3-cetoacil-CoA tiolasa) realiza una escisión tiolítica: la CoA ataca el enlace C2–C3 del 3-cetoacil-CoA, liberando acetil-CoA y un acil-CoA con dos carbonos menos. Este acil-CoA acortado vuelve a entrar en el ciclo. Solo la última ronda de un ácido graso de cadena par produce dos acetil-CoA.",
+      "explainImg": ""
+    },
+    {
+      "id": "fao015",
+      "topic": "Oxidación de ácidos grasos",
+      "text": "La última ronda de la β-oxidación de un ácido graso de cadena impar produce propionil-CoA. ¿Qué cofactor es esencial para su conversión posterior a succinil-CoA?",
+      "options": [
+        "Tiamina pirofosfato (TPP)",
+        "Piridoxal fosfato (PLP)",
+        "FAD",
+        "Ácido lipoico",
+        "Vitamina B12 (cobalamina)"
+      ],
+      "correct": 4,
+      "explain": "El propionil-CoA es carboxilado por la propionil-CoA carboxilasa (requiere biotina) a D-metilmalonil-CoA, epimerizado a L-metilmalonil-CoA y convertido a succinil-CoA por la metilmalonil-CoA mutasa — enzima que requiere adenosilcobalamina (vitamina B12) como cofactor. El succinil-CoA entra entonces en el ciclo de Krebs.",
+      "explainImg": ""
+    },
+    {
       "id": "fab001",
       "topic": "Biosíntesis de Ácidos Grasos",
       "text": "¿Dónde ocurre principalmente la síntesis de ácidos grasos en la célula?",
@@ -1392,6 +1467,81 @@
       ],
       "correct": 1,
       "explain": "Los mamíferos tienen desaturasas para las posiciones Δ9, Δ6, Δ5 y Δ4, pero carecen de Δ12 y Δ15 desaturasas. Por lo tanto, el ácido linoleico (18:2 Δ9,12) y el ácido α-linolénico (18:3 Δ9,12,15) deben obtenerse de la dieta y se clasifican como ácidos grasos esenciales.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab011",
+      "topic": "Biosíntesis de ácidos grasos",
+      "text": "¿Qué reacción cataliza el dominio KS de la ácido graso sintasa en cada ciclo de elongación?",
+      "options": [
+        "Transferencia de malonil de malonil-CoA al grupo fosfopanteteína del ACP",
+        "Reducción dependiente de NADPH del β-cetoacil-ACP a D-3-hidroxiacil-ACP",
+        "Eliminación de agua del β-hidroxiacil-ACP para formar trans-Δ2-enoil-ACP",
+        "Condensación descarboxilativa del malonil-ACP con el tioéster acil-KS",
+        "Reducción dependiente de NADPH del trans-Δ2-enoil-ACP al acil-ACP saturado"
+      ],
+      "correct": 3,
+      "explain": "El dominio KS condensa el grupo acilo (unido por tioéster a KS) con el malonil-ACP. La descarboxilación del grupo malonilo libera CO₂ e impulsa la condensación, produciendo un β-cetoacil-ACP elongado en dos carbonos. Este es el paso de condensación que alarga la cadena en cada ciclo de la FAS.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab012",
+      "topic": "Biosíntesis de ácidos grasos",
+      "text": "¿Cuál es la estereoquímica del producto de la β-cetoacil-ACP reductasa (KR) en el ciclo de la FAS?",
+      "options": [
+        "D-3-Hidroxiacil-ACP",
+        "L-3-Hidroxiacil-ACP",
+        "trans-Δ2-Enoil-ACP",
+        "cis-Δ2-Enoil-ACP",
+        "3-Cetoacil-ACP (sin cambios)"
+      ],
+      "correct": 0,
+      "explain": "La KR usa NADPH para reducir el grupo β-ceto, produciendo D-3-hidroxiacil-ACP. Esta es la estereoquímica opuesta a la β-oxidación, donde la enoil-CoA hidratasa produce la forma L. La inversión estereoquímica refleja el origen evolutivo independiente de ambas rutas metabólicas opuestas.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab013",
+      "topic": "Biosíntesis de ácidos grasos",
+      "text": "¿Qué tipo de doble enlace contiene el enoil-ACP tras el paso de deshidratación en el ciclo de la FAS?",
+      "options": [
+        "cis-Δ2 (configuración Z)",
+        "cis-Δ3 (configuración Z)",
+        "trans-Δ3 (configuración E)",
+        "Dieno conjugado en Δ2,Δ4",
+        "trans-Δ2 (configuración E)"
+      ],
+      "correct": 4,
+      "explain": "La β-hidroxiacil-ACP deshidratasa elimina agua del D-3-hidroxiacil-ACP para producir trans-Δ2-enoil-ACP. Este doble enlace de configuración E es la misma geometría que en la β-oxidación, pero en la FAS el siguiente paso (la enoil reductasa) lo reduce, mientras que en la β-oxidación este intermediario es el sustrato para la hidratación.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab014",
+      "topic": "Biosíntesis de ácidos grasos",
+      "text": "¿Cuál de las siguientes opciones describe mejor la reacción de la enoil-ACP reductasa (ER) en el ciclo de la FAS?",
+      "options": [
+        "Oxida el acil-ACP a trans-Δ2-enoil-ACP con NADH como aceptor de electrones",
+        "Reduce el trans-Δ2-enoil-ACP a D-3-hidroxiacil-ACP usando FAD como cofactor",
+        "Transfiere la cadena acilo completada del ACP a CoA para exportarla al citosol",
+        "Reduce el trans-Δ2-enoil-ACP al acil-ACP saturado usando NADPH",
+        "Escinde la cadena de ácido graso completada del ACP, liberando palmitato libre"
+      ],
+      "correct": 3,
+      "explain": "La enoil-ACP reductasa usa NADPH para reducir el doble enlace trans-Δ2 del enoil-ACP, produciendo un acil-ACP completamente saturado con dos carbonos más que el sustrato del ciclo anterior. Esto completa una ronda de elongación. El acil-ACP se utiliza luego como sustrato para el siguiente ciclo de condensación.",
+      "explainImg": ""
+    },
+    {
+      "id": "fab015",
+      "topic": "Biosíntesis de ácidos grasos",
+      "text": "El acetil-CoA para la síntesis citosólica de ácidos grasos se produce en la mitocondria. ¿Cómo llega al citosol?",
+      "options": [
+        "El acetil-CoA difunde a través de proteínas de canal no específicas de la membrana mitocondrial interna",
+        "El acetil-CoA se convierte primero en propionil-CoA para el transporte a través de la membrana",
+        "Los cuerpos cetónicos transportan las unidades acetilo a través de la membrana y se reconvierten a acetil-CoA",
+        "El acetil-CoA se esterifica con carnitina y se exporta vía CPT-I y carnitina translocasa",
+        "El citrato (de acetil-CoA + OAA) se exporta y es escindido a acetil-CoA por la ATP-citrato liasa"
+      ],
+      "correct": 4,
+      "explain": "La membrana mitocondrial interna es impermeable al acetil-CoA y a la CoA. El acetil-CoA se condensa con oxalacetato (citrato sintasa) para formar citrato, que se exporta mediante el transportador de tricarboxilatos. En el citosol, la ATP-citrato liasa escinde el citrato en acetil-CoA y OAA, poniendo el acetil-CoA a disposición de la síntesis de ácidos grasos.",
       "explainImg": ""
     },
     {
