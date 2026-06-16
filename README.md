@@ -1,4 +1,4 @@
-# BiochemQuiz · v0.6.17
+# BiochemQuiz · v0.6.21
 
 A live instructor-led quiz app for medical biochemistry students at JLU Giessen. The instructor projects the app on screen, students join via QR code on their phones, answer in real time, and results appear as a live bar chart once voting closes — no installation required for anyone.
 
@@ -10,16 +10,19 @@ A live instructor-led quiz app for medical biochemistry students at JLU Giessen.
 
 - **Real-time sync** via WebSocket — answers arrive instantly; bar chart updates in the background
 - **Results hidden during voting** — the bar chart is only shown to the instructor after the timer expires or "Stop timer" is clicked, so projected screens cannot influence student choices
-- **157 questions** across 12 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation, Fatty Acid Biosynthesis, Amino Acid Catabolism, Urea Cycle, Water and pH, Proteins, Proteomics)
+- **167 questions** across 12 biochemistry topics (Glycolysis, Gluconeogenesis, Glycogen Metabolism, Krebs Cycle, Respiratory Chain & OXPHOS, Fatty Acid Oxidation, Fatty Acid Biosynthesis, Amino Acid Catabolism, Urea Cycle, Water and pH, Proteins, Proteomics)
 - **3 languages** — EN / DE / ES, switchable in one click; questions, options, and explanations all translate
 - **5 answer options** (A–E) per question with full-text wrapping (no truncation)
-- **SVG countdown timer** with danger highlight in the last 10 seconds
+- **SVG countdown timer** with danger highlight in the last 10 seconds; per-question timer override before each question starts
 - **QR code** auto-generated from the server's public URL — students scan to join
 - **Student answer changes** — students can revise their answer before the instructor reveals
-- **Explanation panel** — explanation text and optional diagrams shown after reveal
+- **Explanation panel** — shown to instructor on screen and to students on their phones after reveal; optional diagram image
+- **Student score screen** — shows total score and a per-question ✓/✗ breakdown with the student's chosen option
 - **Saved presets** — save named question selections (with timer setting) and reload them in one click from any device; export/import as JSON backup
-- **Question bank editor** — add, edit, delete questions in-app; auto-saves to disk
-- **CSV export** of session results
+- **Question bank editor** — add, edit, delete questions in-app; auto-saves to disk; question IDs visible in list
+- **Keyboard shortcuts** for the instructor: `S` = start question, `R` = reveal, `N` = next question, `E` = toggle explanation, `F` = fullscreen
+- **Fullscreen toggle** button in the instructor toolbar
+- **CSV export** of session results with explanation text per question in the Results tab
 - **Dark mode** (follows system preference)
 
 ---
@@ -98,12 +101,15 @@ To deploy your own:
 
 5. Click **Launch session** — the QR code appears on screen; students scan to join
 6. **Start question** → countdown begins; students answer on their phones
+   - Adjust the timer for the current question before clicking Start — the input defaults to the session timer but can be overridden per question
    - The bar chart is **not visible** while voting is open, so the projected screen does not reveal vote distribution
 7. **Stop timer** (or let it expire) → bar chart appears instantly with collected votes
-8. **Reveal** → students see correct (green) / wrong (red) on their phones; correct bar turns green
-9. **Show explanation** → explanation text and optional diagram appear below the chart
+8. **Reveal** → correct bar turns green; students see correct (green) / wrong (red) on their phones along with the explanation text
+9. **Show explanation** → explanation text and optional diagram appear on the instructor screen
 10. **Next question** → phones reset to waiting
-11. **End session** → Results tab shows full breakdown, exportable as CSV
+11. **End session** → Results tab shows full breakdown with explanations, exportable as CSV
+
+**Keyboard shortcuts (instructor view):** `S` start · `R` reveal · `N` next question · `E` toggle explanation · `F` fullscreen
 
 ### Saving presets permanently
 
@@ -224,7 +230,7 @@ Presets store a named question selection together with the timer duration so a l
 ### Backup / restore
 
 - **Export** — downloads the current in-memory presets as a JSON file
-- **Import** — uploads a JSON backup and replaces all current presets (does not affect `presets.json` on disk until committed)
+- **Import** — uploads a JSON backup and replaces all current presets in one click; also pushes to the server so other devices see the updated list immediately (does not affect `presets.json` on disk until committed)
 
 ---
 

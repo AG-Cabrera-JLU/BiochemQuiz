@@ -7,6 +7,11 @@
 - The pre-commit hook (`scripts/check-questions.js` + `npm version patch`) handles this automatically; do not double-bump manually.
 - After a bump, display the new version in the app header (it is read from `package.json` at load time via `/api/info`).
 
+## README upkeep
+
+- After every meaningful update, keep `README.md` in sync: update the version badge in the `# BiochemQuiz · vX.Y.Z` heading, the question count and topic list in the Features section, and the topic prefix table if new topics were added.
+- Commit and push the updated README in the same PR / push as the change so GitHub always shows the current state.
+
 ---
 
 ## Question Authoring Workflow
