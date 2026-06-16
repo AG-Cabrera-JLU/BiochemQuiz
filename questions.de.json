@@ -10,7 +10,8 @@
     "Aminosäurekatabolismus",
     "Harnstoffzyklus",
     "Wasser und pH",
-    "Proteine"
+    "Proteine",
+    "Proteomik"
   ],
   "questions": [
     {
@@ -2141,6 +2142,231 @@
       ],
       "correct": 2,
       "explain": "Anfinsen zeigte (Nobelpreis 1972), dass vollständig denaturierte Ribonuklease A (entfaltet mit Harnstoff + β-Mercaptoethanol) nach Entfernen der Denaturierungsmittel spontan zu voller enzymatischer Aktivität zurückfaltete. Dies bewies, dass alle Information für die korrekte Faltung in der Primärsequenz kodiert ist. Der native Zustand ist die thermodynamisch stabilste (energieärmste) Struktur. Chaperone unterstützen die Kinetik in vivo, verändern aber nicht das thermodynamische Ergebnis.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx001",
+      "topic": "Proteomik",
+      "text": "Was definiert den ‚Bottom-up'-Ansatz in der Proteomik?",
+      "options": [
+        "Intakte Proteine werden durch 2D-Gelelektrophorese getrennt und allein anhand ihres Molekulargewichts identifiziert",
+        "Proteine werden zuerst enzymatisch zu Peptiden verdaut, die dann massenspektrometrisch analysiert werden",
+        "Nukleotidsequenzen werden in silico translatiert, um das vollständige Proteom vorherzusagen",
+        "Proteinkomplexe werden aus Untereinheiten assembliert und durch native Massenspektrometrie analysiert",
+        "Proteine werden de novo aus Aminosäuren synthetisiert und durch UV-Absorbanz quantifiziert"
+      ],
+      "correct": 1,
+      "explain": "Bei der Bottom-up- (Shotgun-)Proteomik werden Proteine zunächst enzymatisch zu Peptiden verdaut, bevor sie massenspektrometrisch analysiert werden. Peptide ionisieren und fragmentieren vorhersagbarer als intakte Proteine, was eine datenbankgestützte Identifikation im Proteommaßstab ermöglicht. Im Gegensatz dazu werden bei der Top-down-Proteomik intakte Proteine ohne vorherigen Verdau analysiert.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx002",
+      "topic": "Proteomik",
+      "text": "Warum ist Trypsin die am häufigsten verwendete Protease in der Bottom-up-Proteomik?",
+      "options": [
+        "Es spaltet zwischen jedem Aminosäurepaar unabhängig von der Sequenz und erzeugt sehr kurze Peptide",
+        "Es erzeugt hochgeladene Peptide durch Spaltung N-terminal zu allen Prolin- und Glycinresten",
+        "Es spaltet C-terminal nach Lys und Arg und erzeugt Peptide, die für CID/HCD-Fragmentierung gut geeignet sind",
+        "Es ist die einzige Protease, deren Verdauprodukte vollständig mit der Umkehrphasen-LC kompatibel sind",
+        "Es spaltet C-terminal an Asp- und Glu-Resten und maximiert die Sequenzabdeckung saurer Peptide"
+      ],
+      "correct": 2,
+      "explain": "Trypsin spaltet Peptidbindungen C-terminal nach Lys (K) und Arg (R) — außer wenn Prolin folgt. Die entstehenden Peptide tragen an beiden Termini eine basische Gruppe und erzeugen unter CID/HCD-Fragmentierung effizient b- und y-Ionenserien. Ihre mittlere Länge von 7–20 Resten ist ideal für die LC-MS/MS-Analyse. Trypsin ist zudem hochspezifisch, robust und kostengünstig.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx003",
+      "topic": "Proteomik",
+      "text": "Welche Ionisierungsmethode verbindet Flüssigchromatographie mit Massenspektrometrie in der Proteomik?",
+      "options": [
+        "Matrix-unterstützte Laserdesorption/Ionisierung (MALDI)",
+        "Elektronenstoß-Ionisierung (EI)",
+        "Chemische Ionisierung bei Atmosphärendruck (APCI)",
+        "Elektrosprayionisierung (ESI)",
+        "Schnellatomionisierung (FAB)"
+      ],
+      "correct": 3,
+      "explain": "Die Elektrosprayionisierung (ESI) überführt Peptide in Lösung durch Anlegen einer Hochspannung (~1–4 kV) am LC-Eluat in mehrfach geladene Gasphasenionen. Die Lösungsmittelverdampfung überträgt Ladungen auf den Analyten. ESI ist einzigartig mit dem kontinuierlichen LC-Fluss kompatibel und erzeugt mehrfach geladene Ionen (z. B. [M+2H]²⁺, [M+3H]³⁺), die den zugänglichen Massenbereich erweitern.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx004",
+      "topic": "Proteomik",
+      "text": "Was geschieht bei MS/MS (Tandem-Massenspektrometrie) in einem Shotgun-Proteomik-Experiment?",
+      "options": [
+        "Zwei Massenspektrometer analysieren gleichzeitig dieselbe Probe, um die Massengenauigkeit zu verbessern",
+        "Ein Peptid-Vorläuferion wird ausgewählt, fragmentiert und die Produktionen werden gemessen",
+        "Das intakte Proteom wird zuerst analysiert, dann werden einzelne Proteine für eine Wiederholungsanalyse isoliert",
+        "Peptide werden vor dem Eintritt in das Massenspektrometer zweimal durch Flüssigchromatographie getrennt",
+        "Zwei Ionisierungsquellen erzeugen gleichzeitig komplementäre Ionenserien aus demselben Peptid"
+      ],
+      "correct": 1,
+      "explain": "Bei MS/MS (MS²) wird ein Vorläuferion im ersten Analysator (MS1) ausgewählt, durch HCD oder CID fragmentiert und die Produktionen (b- und y-Serien für tryptische Peptide) im zweiten Analysator (MS2) detektiert. Das Fragmentionenmuster ist charakteristisch für die Peptidsequenz und wird mit theoretischen Spektren aus einer Proteindatenbank zur Identifikation abgeglichen.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx005",
+      "topic": "Proteomik",
+      "text": "Was ist datenabhängige Akquisition (DDA) in der massenspektrometrischen Proteomik?",
+      "options": [
+        "Eine Methode, die alle Ionen in vordefinierten m/z-Fenstern unabhängig von ihrer Häufigkeit fragmentiert",
+        "Ein Ansatz, bei dem MS2 für die N häufigsten Ionen aus jedem MS1-Scan ausgelöst wird",
+        "Eine Technik, bei der der Bediener während der Messung manuell auswählt, welche Vorläuferionen fragmentiert werden sollen",
+        "Ein Modus, der nur MS1-Spektren aufzeichnet und die MS2-Fragmentierung vollständig überspringt",
+        "Ein Akquisitionsmodus, bei dem Fragmentspektren vor dem entsprechenden Vorläuferscan aufgezeichnet werden"
+      ],
+      "correct": 1,
+      "explain": "Bei der DDA führt das Gerät zunächst einen vollständigen MS1-Übersichtsscan durch, identifiziert die N häufigsten Vorläuferionen (typischerweise Top 10–20) und löst sequenziell MS2-Fragmentierung für jedes aus. Dynamischer Ausschluss verhindert wiederholte Fragmentierung derselben Ionen. DDA ist stochastisch: welche Peptide ausgewählt werden, hängt von ihrer aktuellen Häufigkeitsrangfolge ab.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx006",
+      "topic": "Proteomik",
+      "text": "Welche Einschränkung von DDA verursacht am stärksten eine mangelnde Reproduzierbarkeit zwischen LC-MS/MS-Replikaten?",
+      "options": [
+        "Hohe Kollisionsenergie im HCD verursacht übermäßige Backbone-Fragmentierung und Peptidzerstörung",
+        "ESI-Ionensuppression reduziert das Signal aller ko-eluierenden Peptide gleichmäßig",
+        "Die stochastische Top-N-Auswahl bewirkt, dass in jedem Lauf andere Peptide erfasst werden",
+        "Datenbanksuchalgorithmen erzeugen zu viele falsch positive Treffer zur akkuraten Bewertung von DDA-Spektren",
+        "Dynamischer Ausschluss sperrt hochabundante Vorläufer nach der ersten Auswahl dauerhaft aus der Analyse"
+      ],
+      "correct": 2,
+      "explain": "In komplexen Gemischen ko-eluieren Tausende von Peptiden, aber nur Top-N werden pro MS1-Zyklus ausgewählt. Geringe Schwankungen in Signalintensität und Ko-Elutionsmuster ändern, welche Peptide das Top-N erreichen, was zu 'fehlenden Werten' führt — ein Peptid wird in manchen Replikaten identifiziert, in anderen nicht. Dieses stochastische Sampling ist die zentrale Reproduzierbarkeitsproblematik bei DDA-basierter Quantifizierung.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx007",
+      "topic": "Proteomik",
+      "text": "Wie unterscheidet sich datenunabhängige Akquisition (DIA) grundlegend von DDA?",
+      "options": [
+        "DIA verwendet MALDI statt ESI und bietet damit reproduzierbarere und schnellere Ionenerzeugung",
+        "DIA fragmentiert alle Ionen in vordefinierten m/z-Fenstern unabhängig von ihrer Häufigkeit",
+        "DIA überspringt den MS1-Übersichtsscan und zielt nur auf vorausgewählte Peptide aus einer Spektralbibliothek ab",
+        "DIA verwendet kürzere LC-Gradienten und geringere Auflösung zur Maximierung des Probendurchsatzes",
+        "DIA erfordert Stabile-Isotopen-Markierung, während DDA mit unmarkierten Proben kompatibel ist"
+      ],
+      "correct": 1,
+      "explain": "Bei der DIA (z. B. SWATH-MS) durchläuft das Gerät vordefinierte m/z-Isolationsfenster (z. B. 25 Da breit, den gesamten m/z-Bereich abdeckend) und ko-fragmentiert alle Ionen in jedem Fenster. Jedes Peptid oberhalb der Nachweisgrenze wird in jedem Lauf erfasst. Identifikation und Quantifizierung erfolgen post-akquisitiv mittels Spektralbibliothek oder vorhergesagter Spektren (z. B. Spectronaut, DIA-NN).",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx008",
+      "topic": "Proteomik",
+      "text": "Welche Aussage vergleicht DDA und DIA in der Proteomik korrekt?",
+      "options": [
+        "DDA bietet vollständige Peptidabdeckung in jedem Lauf, da es alle detektierbaren Ionen fragmentiert",
+        "DDA ist gut reproduzierbar zwischen Läufen; DIA leidet unter stochastischer Auswahlvariation",
+        "DIA liefert nahezu vollständige, reproduzierbare Peptiddaten; DDA erzeugt mehr fehlende Werte",
+        "Beide Methoden fragmentieren alle detektierbaren Vorläuferionen gleichzeitig in einem einzigen MS1-Scan",
+        "DIA erfordert Isotopenmarkierung; DDA ist nur mit vollständig unmarkierten Proben durchführbar"
+      ],
+      "correct": 2,
+      "explain": "Die systematische fensterbasierte Fragmentierung der DIA stellt sicher, dass alle Peptide oberhalb der Empfindlichkeitsgrenze in jedem Lauf erfasst werden, was Datenmatrizen mit weit weniger fehlenden Werten erzeugt. Die stochastische Top-N-Auswahl der DDA führt zu variabler Abdeckung zwischen Replikaten. DIA wird zunehmend für Groß- und Kohortenstudien bevorzugt.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx009",
+      "topic": "Proteomik",
+      "text": "Was sind 'Missed Cleavages' beim tryptischen Verdau, und warum sind sie für die Datenbanksuche relevant?",
+      "options": [
+        "Peptide, die zu kurz sind, um auf der LC-Säule effizient detektiert oder retentiert zu werden",
+        "Trypsin-Schnittstellen N-terminal zu Prolin, die unerwartete nicht-tryptische Fragmente erzeugen",
+        "Stellen, an denen Trypsin nicht gespalten hat, sodass längere Peptide mit internen Lys- oder Arg-Resten entstehen",
+        "Posttranslationale Modifikationen, die MS2-Fragmentierung an spezifischen Sequenzpositionen blockieren",
+        "Peptide, die durch Adsorption an Plastikmaterial während der Probenaufbereitung verloren gehen"
+      ],
+      "correct": 2,
+      "explain": "Eine Missed Cleavage entsteht, wenn Trypsin an einem K- oder R-Rest nicht spaltet (z. B. aufgrund benachbarter Modifikationen, benachbartem Pro oder unvollständigem Verdau). Das entstehende Peptid überspannt zwei Schnittstellen und ist länger als erwartet. Datenbanksuchanfragen müssen Missed Cleavages berücksichtigen (typischerweise 0–2): zu viele erhöhen den Suchraum und die FDR, zu wenige führen zu verpassten Identifikationen.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx010",
+      "topic": "Proteomik",
+      "text": "Was ist der Zweck des Target-Decoy-Ansatzes bei der Proteomik-Datenbanksuche?",
+      "options": [
+        "Steigerung der Peptid-Spektrum-Treffer durch gleichzeitige Suche in zwei vorwärts-orientierten Datenbanken",
+        "Schätzung der Falschentdeckungsrate durch Einbeziehung umgekehrter oder zufälliger Decoy-Sequenzen",
+        "Verbesserung der Fragmentierung durch Ansteuerung spezifischer m/z-Werte bei der DDA-Akquisition",
+        "Ausschluss häufiger Kontaminanten wie Keratin und Trypsin aus den Analyseergebnissen",
+        "Normalisierung quantitativer Daten zwischen Proben mittels synthetischer Decoy-Peptide"
+      ],
+      "correct": 1,
+      "explain": "Eine Decoy-Datenbank aus umgekehrten oder zufälligen Sequenzen wird parallel zur echten (Target-)Datenbank durchsucht. Treffer auf Decoy-Sequenzen sind per Definition falsch positiv. FDR ≈ 2 × (Decoy-Treffer) / (Target-Treffer). Ein 1%-FDR-Schwellenwert ist Standard in der Proteomik — ca. 1% der gemeldeten Identifikationen sind voraussichtlich falsch. Unverzichtbar für die Fehlerkontrolle bei Zehntausenden von Spektren.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx011",
+      "topic": "Proteomik",
+      "text": "Welches Signal wird bei der markierungsfreien Quantifizierung (LFQ) zur Schätzung der Proteinabundanz verwendet?",
+      "options": [
+        "Die Anzahl der inkorporierten Stabile-Isotopen-Marker pro Peptid an jeder Modifikationsstelle",
+        "Die Fluoreszenzintensität kovalent gebundener Farbstoffmoleküle nach gelelektrophoretischer Trennung",
+        "Vorläuferionen-Peakflächen (XIC) oder Spektralzählungen über mehrere LC-MS-Läufe hinweg",
+        "Die Verschiebung der Peptid-Retentionszeit zwischen verschiedenen Probenbedingungen auf der Säule",
+        "Die Gesamtanzahl der Missed Cleavages pro Protein, normalisiert auf die Sequenzlänge"
+      ],
+      "correct": 2,
+      "explain": "LFQ verzichtet auf chemische Markierung. Die peakflächenbasierte LFQ extrahiert die XIC-Fläche (Extracted Ion Chromatogram) jedes Vorläufers über Läufe hinweg; das Spektral-Counting nutzt die Anzahl der einem Protein zugewiesenen MS2-Spektren als Abundanzproxy. XIC-basierte LFQ (z. B. MaxQuant-LFQ-Algorithmus) ist genauer und linear über einen weiteren dynamischen Bereich. Die Retentionszeitausrichtung zwischen Läufen ist entscheidend.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx012",
+      "topic": "Proteomik",
+      "text": "Was ist das Prinzip der Tandem-Massen-Tag (TMT)-Markierung in der quantitativen Proteomik?",
+      "options": [
+        "Proteine werden mit Fluoreszenzfarbstoffen verschiedener Farben vor dem Verdau markiert und durch Gel-Scanning quantifiziert",
+        "Peptide werden mit isobaren Tags markiert; probenspezifische Reporter-Ionen werden bei MS2 freigesetzt",
+        "Stabile-Isotopen-Aminosäuren werden metabolisch während des Zellwachstums eingebaut, um Proteome zu vergleichen",
+        "Peptide werden mit isotopisch verschiedenen Reagenzien vernetzt und im MS1 der verschiedenen Bedingungen verglichen",
+        "Proteine werden mit radioaktivem ³²P-Phosphat markiert und durch Autoradiografie detektiert und quantifiziert"
+      ],
+      "correct": 1,
+      "explain": "TMT-Reagenzien sind isobar — alle Varianten haben dieselbe Nominalmasse, sodass markierte Peptide aus verschiedenen Proben gemeinsam ko-eluieren und als einzelner Vorläufer in MS1 erscheinen. Bei der HCD-Fragmentierung setzt jedes Tag ein einzigartiges niedermassentiges Reporter-Ion frei (126–135 Da für TMTpro). Die Verhältnisse der Reporter-Ionen spiegeln die relative Proteinabundanz in bis zu 18 Proben gleichzeitig wider.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx013",
+      "topic": "Proteomik",
+      "text": "Wie wird ein Peptid aus einem MS2-Spektrum bei einer Datenbanksuche identifiziert?",
+      "options": [
+        "Das Molekulargewicht des intakten Peptids wird mit dem theoretischen Molekulargewicht aller Proteine in der Datenbank verglichen",
+        "Die Retentionszeit des Peptidpeaks wird mit einem Referenz-HPLC-Chromatogramm abgeglichen",
+        "Experimentelle Fragmentionenmassen werden mit theoretischen b/y-Ionenserien von Kandidatensequenzen verglichen",
+        "Der Isotopenhülle des Vorläufers wird dekonvolutiert, um die Aminosäurezusammensetzung direkt zu bestimmen",
+        "Der Ladungszustand des Vorläuferions wird algebraisch in die Peptidsequenz umgerechnet"
+      ],
+      "correct": 2,
+      "explain": "Suchmaschinen (Mascot, Sequest, Andromeda, MSFragger) generieren theoretische MS2-Spektren für alle Kandidatenpeptide, die zur gemessenen Vorläufermasse passen. Beobachtete Fragmentmassen (hauptsächlich b- und y-Ionen bei HCD/CID-Fragmentierung tryptischer Peptide) werden mit theoretischen Serien verglichen und bewertet. Das bestbewertete Peptid oberhalb eines Signifikanzschwellenwerts wird gemeldet; ein 1%-FDR-Target-Decoy-Filter kontrolliert falsch positive Treffer.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx014",
+      "topic": "Proteomik",
+      "text": "Was ist das 'Protein Inference Problem' in der Shotgun-Proteomik?",
+      "options": [
+        "Die Schwierigkeit, phosphorylierte Reste zu lokalisieren, wenn mehrere Stellen gleichzeitig modifiziert sind",
+        "Die Unfähigkeit, niedrig abundante Proteine zuverlässig zu detektieren, wenn hochabundante ko-eluieren",
+        "Die Mehrdeutigkeit bei der Zuordnung geteilter Peptide zu einem eindeutigen Protein bei überlappenden Isoformen",
+        "Die Schwierigkeit, Peptid-Retentionszeiten zwischen Läufen mit unterschiedlichen LC-Gradienten anzupassen",
+        "Die Herausforderung, echte MS2-Spektren von In-Source-Fragmentierungsartefakten in DDA zu trennen"
+      ],
+      "correct": 2,
+      "explain": "Viele tryptische Peptide werden zwischen Proteinisoformen, Spleißvarianten oder Paralogen geteilt. Ein Peptid-Treffer kann nicht eindeutig einer einzigen Quellprotein zugeordnet werden. Bioinformatikwerkzeuge wenden Parsimonie an (Occams Rasiermesser): sie berichten die minimale Proteinmenge, die alle beobachteten Peptide erklärt. Nur Proteine mit mindestens einem einzigartigen Peptid — das in keinem anderen Protein vorkommt — können sicher identifiziert und unabhängig quantifiziert werden.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx015",
+      "topic": "Proteomik",
+      "text": "Welche Strategie erhöht am besten die Sequenzabdeckung eines Proteins mit wenigen detektierbaren tryptischen Peptiden?",
+      "options": [
+        "Pepsin-Verdau, der nach hydrophoben Resten spaltet und sehr lange Peptide erzeugt",
+        "Thermolysin-Verdau, der N-terminal zu hydrophoben Resten unter denaturierenden Bedingungen spaltet",
+        "Proteinase K, die alle Proteine unspezifisch für maximale Verdaueffizienz abbaut",
+        "Multi-Enzym-Verdau mit Lys-C, Glu-C oder Asp-N zur Erzeugung komplementärer Peptidsätze",
+        "Zehnfache Erhöhung der Trypsinkonzentration, um Spaltung an allen möglichen Lys- und Arg-Stellen zu erzwingen"
+      ],
+      "correct": 3,
+      "explain": "Wenn einer Proteinregion K/R-Reste fehlen, erzeugt Trypsin Peptide, die für die LC-MS/MS-Analyse zu groß (> 25 Reste) oder zu klein (< 5 Reste) sind. Komplementäre Proteasen — Lys-C (nach K), Glu-C (nach E/D), Asp-N (vor D), Chymotrypsin (nach F/Y/W) — erzeugen einen anderen Peptidsatz aus demselben Protein. Multi-Enzym-Strategien sind Standard in der Strukturproteomik und bei PTM-Studien zur Maximierung der Sequenzabdeckung.",
       "explainImg": ""
     }
   ]

@@ -69,6 +69,7 @@ If you edit `text`, `options`, or `explain` in one language, also update the cor
 | Urea Cycle | `uc` | uc001–uc010 |
 | Water and pH | `wph` | wph001–wph015 |
 | Proteins | `pro` | pro001–pro015 |
+| Proteomics | `ptx` | ptx001–ptx015 |
 
 ---
 

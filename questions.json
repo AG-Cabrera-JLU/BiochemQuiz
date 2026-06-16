@@ -10,7 +10,8 @@
     "Amino Acid Catabolism",
     "Urea Cycle",
     "Water and pH",
-    "Proteins"
+    "Proteins",
+    "Proteomics"
   ],
   "questions": [
     {
@@ -2141,6 +2142,231 @@
       ],
       "correct": 2,
       "explain": "Anfinsen showed (Nobel Prize 1972) that fully denatured ribonuclease A (unfolded with urea + β-mercaptoethanol) spontaneously refolded to full enzymatic activity upon removal of denaturants. This proved all information for correct folding is encoded in the primary sequence. The native state is the thermodynamically most stable (lowest free energy) structure. Chaperones assist kinetics in vivo but do not alter the thermodynamic endpoint.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx001",
+      "topic": "Proteomics",
+      "text": "What defines the 'bottom-up' approach in proteomics?",
+      "options": [
+        "Intact proteins are separated by 2D-gel electrophoresis and identified by their molecular weight alone",
+        "Proteins are first digested into peptides, which are then analyzed by mass spectrometry",
+        "Nucleotide sequences are translated in silico to predict the full proteome",
+        "Protein complexes are assembled from subunits and analyzed by native mass spectrometry",
+        "Proteins are synthesized de novo from amino acids and quantified by UV absorbance"
+      ],
+      "correct": 1,
+      "explain": "In bottom-up (shotgun) proteomics, proteins are enzymatically digested into peptides before mass spectrometric analysis. Peptides ionize and fragment more predictably than intact proteins, making database-driven identification feasible at proteome scale. This contrasts with top-down proteomics, where intact proteins are analyzed directly without prior digestion.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx002",
+      "topic": "Proteomics",
+      "text": "Why is trypsin the most widely used protease in bottom-up proteomics?",
+      "options": [
+        "It cleaves between every amino acid pair regardless of sequence, generating very short peptides",
+        "It generates highly charged peptides by cleaving N-terminal to all proline and glycine residues",
+        "It cleaves C-terminally after Lys and Arg, producing peptides well suited for CID/HCD fragmentation",
+        "It is the only protease whose digests are fully compatible with reverse-phase liquid chromatography",
+        "It cleaves C-terminally at Asp and Glu residues, maximizing acidic peptide sequence coverage"
+      ],
+      "correct": 2,
+      "explain": "Trypsin cleaves peptide bonds C-terminally to Lys (K) and Arg (R) — except before Pro. The resulting peptides carry a basic residue at both termini, generating b- and y-ion series efficiently under CID/HCD fragmentation. Their average size of 7–20 residues is ideal for LC-MS/MS analysis. Trypsin is also highly specific, robust, and inexpensive.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx003",
+      "topic": "Proteomics",
+      "text": "Which ionization method interfaces liquid chromatography with mass spectrometry in proteomics?",
+      "options": [
+        "Matrix-assisted laser desorption/ionization (MALDI)",
+        "Electron impact ionization (EI)",
+        "Chemical ionization at atmospheric pressure (APCI)",
+        "Electrospray ionization (ESI)",
+        "Fast atom bombardment (FAB)"
+      ],
+      "correct": 3,
+      "explain": "Electrospray ionization (ESI) converts peptides in solution into multiply charged gas-phase ions by applying high voltage (~1–4 kV) to the LC eluent. Solvent evaporation transfers charges to the analyte. ESI is uniquely compatible with continuous LC flow and produces multiply charged ions (e.g., [M+2H]²⁺, [M+3H]³⁺), extending the accessible mass range. MALDI is a pulsed technique and less suited to online LC coupling.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx004",
+      "topic": "Proteomics",
+      "text": "What occurs during MS/MS (tandem mass spectrometry) in a shotgun proteomics experiment?",
+      "options": [
+        "Two mass spectrometers analyze the same sample simultaneously to improve mass accuracy",
+        "A peptide precursor ion is selected, fragmented, and the product ions are measured",
+        "The intact proteome is analyzed first, then individual proteins are isolated for re-analysis",
+        "Peptides are separated twice by liquid chromatography before entering the mass spectrometer",
+        "Two ionization sources generate complementary ion series from the same peptide simultaneously"
+      ],
+      "correct": 1,
+      "explain": "In MS/MS (MS²), a precursor ion is selected in the first analyzer (MS1), fragmented by HCD or CID, and the product ions (b- and y-series for tryptic peptides) are detected in the second analyzer (MS2). The fragment pattern is characteristic of the peptide sequence and is matched against theoretical spectra from a protein database for identification.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx005",
+      "topic": "Proteomics",
+      "text": "What is data-dependent acquisition (DDA) in mass spectrometry-based proteomics?",
+      "options": [
+        "A method that fragments all ions within predefined m/z isolation windows regardless of abundance",
+        "An approach where MS2 is triggered for the top-N most abundant ions detected in each MS1 scan",
+        "A technique where the operator manually selects which precursor ions to fragment during the run",
+        "A mode that records MS1 spectra only, skipping MS2 fragmentation entirely to maximize throughput",
+        "An acquisition mode where fragment spectra are recorded before the corresponding precursor scan"
+      ],
+      "correct": 1,
+      "explain": "In DDA, the instrument performs a full MS1 survey scan, identifies the N most abundant precursors (typically top 10–20), and sequentially triggers MS2 fragmentation of each. Dynamic exclusion transiently removes already-fragmented ions to avoid redundant sampling. DDA is stochastic: which peptides are selected depends on their real-time abundance rank relative to co-eluting species.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx006",
+      "topic": "Proteomics",
+      "text": "Which limitation of DDA most causes poor reproducibility between replicate LC-MS/MS runs?",
+      "options": [
+        "High collision energy in HCD causes excessive backbone fragmentation and peptide loss",
+        "ESI ion suppression reduces the signal of all co-eluting peptides by the same proportion",
+        "Top-N precursor selection is stochastic, so different peptides are sampled in each run",
+        "Database search engines produce too many false positives to accurately score DDA spectra",
+        "Dynamic exclusion permanently blocks detection of high-abundance precursors after first selection"
+      ],
+      "correct": 2,
+      "explain": "In complex mixtures, thousands of peptides co-elute but only top-N are selected per MS1 cycle. Minor fluctuations in signal intensity and co-elution patterns change which peptides reach the top-N between runs, causing 'missing values' — a peptide is identified in some replicates but not others. This stochastic sampling is the principal reproducibility challenge in DDA-based quantification.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx007",
+      "topic": "Proteomics",
+      "text": "How does data-independent acquisition (DIA) fundamentally differ from DDA?",
+      "options": [
+        "DIA uses MALDI instead of ESI, providing more reproducible and higher-throughput ion generation",
+        "DIA fragments all ions within predefined m/z windows regardless of abundance",
+        "DIA skips the MS1 survey scan and targets only pre-selected peptides from a spectral library",
+        "DIA uses shorter LC gradients and lower resolution to maximize the number of samples analyzed",
+        "DIA requires stable isotope labeling, while DDA is compatible with unlabeled samples only"
+      ],
+      "correct": 1,
+      "explain": "In DIA (e.g., SWATH-MS), the instrument cycles through predefined m/z isolation windows (e.g., 25 Da wide, covering the full m/z range) and co-fragments all ions within each window. Every peptide above the detection threshold is sampled in every run. Identification and quantification are performed post-acquisition using a spectral library or predicted spectra (e.g., Spectronaut, DIA-NN).",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx008",
+      "topic": "Proteomics",
+      "text": "Which statement correctly compares DDA and DIA in proteomics?",
+      "options": [
+        "DDA provides complete peptide coverage in every run because it fragments all detectable ions",
+        "DDA is highly reproducible across runs; DIA suffers from stochastic sampling variation",
+        "DIA gives near-complete, reproducible peptide data; DDA produces more missing values",
+        "Both methods fragment all detectable precursor ions simultaneously in a single MS1 scan",
+        "DIA requires isotope labeling; DDA can be performed on completely unlabeled samples only"
+      ],
+      "correct": 2,
+      "explain": "DIA's systematic window-based fragmentation ensures all peptides above sensitivity are sampled in every run, producing data matrices with far fewer missing values. DDA's stochastic top-N selection causes variable coverage between replicates. DIA is increasingly preferred for large-cohort and clinical studies due to its superior quantitative completeness and reproducibility.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx009",
+      "topic": "Proteomics",
+      "text": "What are 'missed cleavages' in a tryptic digest, and why do they matter for database searching?",
+      "options": [
+        "Peptides too short to be detected or retained efficiently on the LC column",
+        "Trypsin cleavage events N-terminal to proline that generate unexpected non-tryptic fragments",
+        "Sites where trypsin failed to cleave, producing peptides with internal Lys or Arg residues",
+        "Post-translational modifications that block MS2 fragmentation at specific sequence positions",
+        "Peptides lost during sample preparation by adsorption to plastic tube surfaces"
+      ],
+      "correct": 2,
+      "explain": "A missed cleavage occurs when trypsin fails to cut at a K or R residue (due to adjacent modifications, nearby Pro, or incomplete digestion). The peptide spans two cleavage sites and is longer than expected. Database searches must allow for missed cleavages (typically 0–2): allowing too many inflates search space and FDR; too few causes missed identifications.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx010",
+      "topic": "Proteomics",
+      "text": "In proteomics database searching, what is the purpose of the target-decoy approach?",
+      "options": [
+        "To increase peptide-spectrum matches by searching two forward databases simultaneously",
+        "To estimate the false discovery rate by including reversed or randomized decoy sequences",
+        "To improve fragmentation by targeting specific precursor m/z values during DDA acquisition",
+        "To exclude common contaminant proteins such as keratin and trypsin from the final results",
+        "To normalize quantitative data between samples using internal synthetic decoy peptides"
+      ],
+      "correct": 1,
+      "explain": "A decoy database of reversed or randomized sequences is searched alongside the real (target) database. Any match to a decoy is a false positive by definition. FDR ≈ 2 × (decoy hits) / (target hits). A 1% FDR threshold is proteomics standard, meaning ~1% of reported identifications are expected to be incorrect. This approach is essential for controlling errors at the scale of tens of thousands of spectra.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx011",
+      "topic": "Proteomics",
+      "text": "In label-free quantification (LFQ), what signal is used to estimate protein abundance?",
+      "options": [
+        "The number of stable isotope labels incorporated per peptide at each modification site",
+        "The fluorescence intensity of covalently attached dye molecules measured after gel separation",
+        "Precursor ion peak areas (XIC) or spectral counts accumulated across LC-MS runs",
+        "The shift in peptide retention time between different sample conditions on the LC column",
+        "The total number of missed cleavages per protein normalized to sequence length"
+      ],
+      "correct": 2,
+      "explain": "LFQ avoids chemical labeling. Peak area-based LFQ extracts the extracted ion chromatogram (XIC) area of each precursor across runs; spectral counting uses the number of MS2 spectra assigned to a protein as a proxy for abundance. XIC-based LFQ (e.g., MaxQuant LFQ algorithm) is more accurate and linear over a wider dynamic range. Retention time alignment across runs is critical.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx012",
+      "topic": "Proteomics",
+      "text": "What is the principle of tandem mass tag (TMT) labeling in quantitative proteomics?",
+      "options": [
+        "Proteins are labeled with fluorescent dyes of different colors before trypsin digestion and gel scanning",
+        "Peptides are labeled with isobaric tags; sample-specific reporter ions released upon MS2 fragmentation",
+        "Stable isotope amino acids are incorporated metabolically during cell growth to compare proteomes",
+        "Peptides are crosslinked with isotopically distinct reagents from each condition before MS1 measurement",
+        "Proteins are labeled with radioactive ³²P-phosphate groups for autoradiographic detection and quantification"
+      ],
+      "correct": 1,
+      "explain": "TMT reagents are isobaric — all variants have the same nominal mass, so labeled peptides from different samples co-elute and appear as a single precursor in MS1. Upon HCD fragmentation, each tag releases a unique low-mass reporter ion (126–135 Da for TMTpro). Reporter ion ratios report relative protein abundances across up to 18 samples, reducing instrument time and eliminating run-to-run variation.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx013",
+      "topic": "Proteomics",
+      "text": "How is a peptide identified from an MS2 spectrum in a database search?",
+      "options": [
+        "The molecular weight of the intact peptide is matched to the theoretical MW of all proteins in the database",
+        "The retention time of the peptide peak is compared to a reference HPLC chromatogram",
+        "Experimental fragment ion masses are matched to theoretical b/y-ion series of candidate sequences",
+        "The isotope envelope of the precursor is deconvoluted to determine the amino acid composition directly",
+        "The charge state of the precursor ion is algebraically converted into the peptide sequence"
+      ],
+      "correct": 2,
+      "explain": "Search engines (Mascot, Sequest, Andromeda, MSFragger) generate theoretical MS2 spectra for all candidate peptides consistent with the measured precursor mass. Observed fragment masses (primarily b- and y-ions for tryptic peptides fragmented by HCD/CID) are compared to theoretical series and scored. The top-scoring peptide above a significance threshold is reported; a 1% FDR target-decoy filter controls false positives.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx014",
+      "topic": "Proteomics",
+      "text": "What is the 'protein inference problem' in shotgun proteomics?",
+      "options": [
+        "The difficulty of locating phosphorylated residues when multiple sites are modified simultaneously",
+        "The inability to reliably detect low-abundance proteins co-eluting with highly abundant ones",
+        "The ambiguity in assigning shared peptides to a unique protein when isoforms overlap",
+        "The difficulty of aligning peptide retention times between LC-MS/MS runs with different gradients",
+        "The challenge of separating genuine MS2 spectra from in-source fragmentation artifacts in DDA"
+      ],
+      "correct": 2,
+      "explain": "Many tryptic peptides are shared between protein isoforms, splice variants, or paralogs. A peptide match cannot be unambiguously assigned to a single source protein. Tools apply parsimony (Occam's razor): report the minimal protein set explaining all observed peptides. Only proteins with at least one unique peptide — absent from all other proteins in the database — can be confidently reported and quantified independently.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx015",
+      "topic": "Proteomics",
+      "text": "Which strategy best increases sequence coverage of a protein with few detectable tryptic peptides?",
+      "options": [
+        "Pepsin digestion, which cleaves after hydrophobic residues and generates very long peptides",
+        "Thermolysin digestion, which cleaves N-terminally to hydrophobic residues under denaturing conditions",
+        "Proteinase K, which degrades all proteins non-specifically for maximum digestion efficiency",
+        "Multi-enzyme digestion using Lys-C, Glu-C, or Asp-N to generate complementary peptide sets",
+        "Increasing trypsin concentration 10-fold to force cleavage at all possible Lys and Arg sites"
+      ],
+      "correct": 3,
+      "explain": "When a protein region lacks K/R, trypsin generates peptides too large (> 25 residues) or too small (< 5 residues) for reliable LC-MS/MS detection. Complementary proteases — Lys-C (after K), Glu-C (after E/D), Asp-N (before D), chymotrypsin (after F/Y/W) — produce a different peptide set from the same protein. Multi-enzyme strategies are standard in structural proteomics and PTM studies to maximize coverage.",
       "explainImg": ""
     }
   ]

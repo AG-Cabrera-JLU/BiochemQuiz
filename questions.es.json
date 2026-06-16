@@ -10,7 +10,8 @@
     "Catabolismo de Aminoácidos",
     "Ciclo de la Urea",
     "Agua y pH",
-    "Proteínas"
+    "Proteínas",
+    "Proteómica"
   ],
   "questions": [
     {
@@ -2141,6 +2142,231 @@
       ],
       "correct": 2,
       "explain": "Anfinsen demostró (Premio Nobel 1972) que la RNasa A completamente desnaturalizada (con urea + β-mercaptoetanol) se replegó espontáneamente hasta recuperar plena actividad enzimática al retirar los desnaturalizantes. Esto demostró que toda la información para el plegamiento correcto está codificada en la secuencia primaria. El estado nativo es la estructura termodinámicamente más estable (mínima energía libre). Los chaperonas ayudan a la cinética in vivo pero no cambian el resultado termodinámico.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx001",
+      "topic": "Proteómica",
+      "text": "¿Qué define el enfoque 'bottom-up' en proteómica?",
+      "options": [
+        "Las proteínas intactas se separan por electroforesis en gel 2D y se identifican solo por su peso molecular",
+        "Las proteínas se digieren primero en péptidos, que luego se analizan por espectrometría de masas",
+        "Las secuencias de nucleótidos se traducen in silico para predecir el proteoma completo",
+        "Los complejos proteicos se ensamblan desde subunidades y se analizan por espectrometría de masas nativa",
+        "Las proteínas se sintetizan de novo a partir de aminoácidos y se cuantifican por absorbancia UV"
+      ],
+      "correct": 1,
+      "explain": "En proteómica bottom-up (shotgun), las proteínas se digieren enzimáticamente en péptidos antes del análisis por espectrometría de masas. Los péptidos se ionizan y fragmentan de forma más predecible que las proteínas intactas, lo que permite la identificación mediante búsqueda en bases de datos a escala de proteoma. Contrasta con la proteómica top-down, donde las proteínas intactas se analizan sin digestión previa.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx002",
+      "topic": "Proteómica",
+      "text": "¿Por qué la tripsina es la proteasa más utilizada en proteómica bottom-up?",
+      "options": [
+        "Escinde entre cada par de aminoácidos independientemente de la secuencia, generando péptidos muy cortos",
+        "Genera péptidos altamente cargados escindiendo N-terminalmente a todos los residuos de prolina y glicina",
+        "Escinde C-terminalmente tras Lys y Arg, produciendo péptidos bien adaptados para fragmentación CID/HCD",
+        "Es la única proteasa cuyos digeridos son completamente compatibles con la cromatografía de fase inversa",
+        "Escinde C-terminalmente en residuos Asp y Glu, maximizando la cobertura de péptidos ácidos"
+      ],
+      "correct": 2,
+      "explain": "La tripsina escinde los enlaces peptídicos C-terminalmente a Lys (K) y Arg (R) — excepto antes de Pro. Los péptidos resultantes llevan un residuo básico en ambos extremos, generando series de iones b e y eficientemente en fragmentación CID/HCD. Su tamaño medio de 7–20 residuos es ideal para LC-MS/MS. La tripsina es además altamente específica, robusta y económica.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx003",
+      "topic": "Proteómica",
+      "text": "¿Qué método de ionización interfaza la cromatografía líquida con la espectrometría de masas en proteómica?",
+      "options": [
+        "Desorción/ionización láser asistida por matriz (MALDI)",
+        "Ionización por impacto de electrones (EI)",
+        "Ionización química a presión atmosférica (APCI)",
+        "Ionización por electrospray (ESI)",
+        "Bombardeo con átomos rápidos (FAB)"
+      ],
+      "correct": 3,
+      "explain": "La ionización por electrospray (ESI) convierte los péptidos en solución en iones gaseosos multicargados aplicando alta tensión (~1–4 kV) al eluato de la columna LC. La evaporación del disolvente transfiere cargas al analito. ESI es únicamente compatible con el flujo continuo de LC y produce iones multicargados (p. ej., [M+2H]²⁺, [M+3H]³⁺), ampliando el rango de masas accesible. MALDI es pulsado y menos adecuado para el acoplamiento en línea con LC.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx004",
+      "topic": "Proteómica",
+      "text": "¿Qué ocurre durante MS/MS (espectrometría de masas en tándem) en un experimento de proteómica shotgun?",
+      "options": [
+        "Dos espectrómetros de masas analizan la misma muestra simultáneamente para mejorar la exactitud de masa",
+        "Un ion precursor peptídico se selecciona, fragmenta y los iones producto se miden",
+        "El proteoma intacto se analiza primero, luego proteínas individuales se aíslan para reanálisis",
+        "Los péptidos se separan dos veces por cromatografía líquida antes de entrar al espectrómetro de masas",
+        "Dos fuentes de ionización generan series de iones complementarias del mismo péptido simultáneamente"
+      ],
+      "correct": 1,
+      "explain": "En MS/MS (MS²), un ion precursor se selecciona en el primer analizador (MS1), se fragmenta por HCD o CID, y los iones producto (series b e y para péptidos trípticos) se detectan en el segundo analizador (MS2). El patrón de iones fragmento es característico de la secuencia peptídica y se compara con espectros teóricos de una base de datos de proteínas para la identificación.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx005",
+      "topic": "Proteómica",
+      "text": "¿Qué es la adquisición dependiente de datos (DDA) en proteómica basada en espectrometría de masas?",
+      "options": [
+        "Un método que fragmenta todos los iones en ventanas de m/z predefinidas independientemente de su abundancia",
+        "Un enfoque donde MS2 se activa para los N iones más abundantes detectados en cada barrido MS1",
+        "Una técnica donde el operador selecciona manualmente qué iones precursores fragmentar durante la adquisición",
+        "Un modo que registra solo espectros MS1, omitiendo la fragmentación MS2 para maximizar el rendimiento",
+        "Un modo de adquisición donde los espectros de fragmentos se registran antes del barrido precursor"
+      ],
+      "correct": 1,
+      "explain": "En DDA, el instrumento realiza un barrido MS1 completo, identifica los N precursores más abundantes (típicamente top 10–20) y activa secuencialmente la fragmentación MS2 de cada uno. La exclusión dinámica evita la fragmentación repetida del mismo ion. DDA es estocástico: qué péptidos se seleccionan depende de su rango de abundancia en tiempo real respecto a las especies coeluentes.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx006",
+      "topic": "Proteómica",
+      "text": "¿Qué limitación de DDA es la principal responsable de la baja reproducibilidad entre réplicas de LC-MS/MS?",
+      "options": [
+        "La alta energía de colisión en HCD causa fragmentación excesiva del esqueleto peptídico y pérdida de péptidos",
+        "La supresión iónica de ESI reduce la señal de todos los péptidos coeluentes en la misma proporción",
+        "La selección estocástica Top-N hace que diferentes péptidos se muestreen en cada inyección",
+        "Los algoritmos de búsqueda en bases de datos generan demasiados falsos positivos para puntuar espectros DDA",
+        "La exclusión dinámica bloquea permanentemente los precursores abundantes tras su primera selección y fragmentación"
+      ],
+      "correct": 2,
+      "explain": "En mezclas complejas, miles de péptidos coeluyen pero solo top-N se seleccionan por ciclo MS1. Pequeñas fluctuaciones en la intensidad de señal y patrones de coelución cambian qué péptidos alcanzan el top-N entre inyecciones, generando 'valores ausentes' — un péptido se identifica en algunas réplicas pero no en otras. Este muestreo estocástico es el principal reto de reproducibilidad en la cuantificación basada en DDA.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx007",
+      "topic": "Proteómica",
+      "text": "¿En qué se diferencia fundamentalmente la adquisición independiente de datos (DIA) de DDA?",
+      "options": [
+        "DIA usa MALDI en lugar de ESI, proporcionando una generación de iones más reproducible y de mayor rendimiento",
+        "DIA fragmenta todos los iones en ventanas de m/z predefinidas independientemente de su abundancia",
+        "DIA omite el barrido MS1 y solo apunta a péptidos preseleccionados de una biblioteca espectral",
+        "DIA usa gradientes LC más cortos y menor resolución para maximizar el número de muestras analizadas",
+        "DIA requiere marcaje con isótopos estables, mientras que DDA es compatible con muestras sin marcar"
+      ],
+      "correct": 1,
+      "explain": "En DIA (p. ej., SWATH-MS), el instrumento recorre ventanas de aislamiento de m/z predefinidas (p. ej., 25 Da de ancho, cubriendo todo el rango) y co-fragmenta todos los iones dentro de cada ventana. Cada péptido por encima del umbral de detección se muestrea en cada inyección. La identificación y cuantificación se realizan post-adquisición usando una biblioteca espectral o espectros predichos (p. ej., Spectronaut, DIA-NN).",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx008",
+      "topic": "Proteómica",
+      "text": "¿Qué afirmación compara correctamente DDA y DIA en proteómica?",
+      "options": [
+        "DDA proporciona cobertura peptídica completa en cada inyección porque fragmenta todos los iones detectables",
+        "DDA es muy reproducible entre inyecciones; DIA sufre de variación estocástica en el muestreo",
+        "DIA produce datos peptídicos casi completos y reproducibles; DDA genera más valores ausentes",
+        "Ambos métodos fragmentan simultáneamente todos los precursores detectables en un único barrido MS1",
+        "DIA requiere marcaje isotópico; DDA solo es compatible con muestras completamente sin marcar"
+      ],
+      "correct": 2,
+      "explain": "La fragmentación sistemática por ventanas de DIA garantiza que todos los péptidos sobre el umbral de sensibilidad se muestreen en cada inyección, produciendo matrices de datos con muchos menos valores ausentes. La selección estocástica top-N de DDA provoca cobertura variable entre réplicas. DIA es cada vez más preferida en estudios de cohortes grandes y clínicos por su completitud cuantitativa y reproducibilidad superiores.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx009",
+      "topic": "Proteómica",
+      "text": "¿Qué son los 'cortes incompletos' (missed cleavages) en una digestión tríptica y por qué importan en la búsqueda?",
+      "options": [
+        "Péptidos demasiado cortos para ser detectados o retenidos eficientemente en la columna LC",
+        "Sitios de escisión tríptica N-terminales a prolina que generan fragmentos no trípticos inesperados",
+        "Sitios donde la tripsina no escindió, produciendo péptidos con residuos internos de Lys o Arg",
+        "Modificaciones postraduccionales que bloquean la fragmentación MS2 en posiciones específicas de la secuencia",
+        "Péptidos perdidos durante la preparación de muestra por adsorción a superficies de tubos plásticos"
+      ],
+      "correct": 2,
+      "explain": "Un corte incompleto ocurre cuando la tripsina no escinde en un residuo K o R (debido a modificaciones adyacentes, Pro cercana o digestión incompleta). El péptido resultante abarca dos sitios de escisión y es más largo de lo esperado. Las búsquedas en bases de datos deben permitir cortes incompletos (típicamente 0–2): demasiados aumentan el espacio de búsqueda y la FDR; muy pocos causan identificaciones perdidas.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx010",
+      "topic": "Proteómica",
+      "text": "¿Cuál es el propósito del enfoque target-decoy en la búsqueda en bases de datos de proteómica?",
+      "options": [
+        "Aumentar las coincidencias péptido-espectro buscando en dos bases de datos directas simultáneamente",
+        "Estimar la tasa de descubrimiento falso incluyendo secuencias invertidas o aleatorias como señuelos",
+        "Mejorar la fragmentación apuntando a valores de m/z específicos durante la adquisición DDA",
+        "Excluir proteínas contaminantes comunes como queratina y tripsina de los resultados finales",
+        "Normalizar los datos cuantitativos entre muestras usando péptidos señuelo sintéticos internos"
+      ],
+      "correct": 1,
+      "explain": "Se busca una base de datos señuelo de secuencias invertidas o aleatorias junto con la base de datos real (target). Cualquier coincidencia con un señuelo es un falso positivo por definición. FDR ≈ 2 × (hits señuelo) / (hits target). Un umbral de FDR del 1% es estándar en proteómica — ~1% de las identificaciones reportadas se espera que sean incorrectas. Esencial para controlar errores a escala de decenas de miles de espectros.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx011",
+      "topic": "Proteómica",
+      "text": "En cuantificación sin marcaje (LFQ), ¿qué señal se usa para estimar la abundancia proteica?",
+      "options": [
+        "El número de marcadores de isótopos estables incorporados por péptido en cada sitio de modificación",
+        "La intensidad de fluorescencia de moléculas de colorante unidas covalentemente tras separación en gel",
+        "Áreas de picos de iones precursores (XIC) o recuentos espectrales acumulados entre inyecciones LC-MS",
+        "El desplazamiento en el tiempo de retención del péptido entre diferentes condiciones de muestra en la columna",
+        "El número total de cortes incompletos por proteína normalizado a la longitud de la secuencia"
+      ],
+      "correct": 2,
+      "explain": "LFQ evita el marcaje químico. La LFQ basada en áreas de pico extrae el área del cromatograma de ion extraído (XIC) de cada precursor entre inyecciones; el recuento espectral usa el número de eventos MS2 asignados a una proteína como proxy de abundancia. La LFQ basada en XIC (p. ej., algoritmo MaxQuant LFQ) es más precisa y lineal en un rango dinámico más amplio. La alineación del tiempo de retención entre inyecciones es crítica.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx012",
+      "topic": "Proteómica",
+      "text": "¿Cuál es el principio del marcaje con etiquetas de masa en tándem (TMT) en proteómica cuantitativa?",
+      "options": [
+        "Las proteínas se marcan con colorantes fluorescentes de diferentes colores antes de la digestión y se cuantifican por gel",
+        "Los péptidos se marcan con etiquetas isobáricas; iones reporteros específicos de muestra se liberan al fragmentar en MS2",
+        "Los aminoácidos con isótopos estables se incorporan metabólicamente durante el crecimiento celular para comparar proteomas",
+        "Los péptidos de diferentes condiciones se entrelazan con reactivos isotópicamente distintos antes de la medición MS1",
+        "Las proteínas se marcan con grupos ³²P-fosfato radiactivos para su detección y cuantificación autorradiográfica"
+      ],
+      "correct": 1,
+      "explain": "Los reactivos TMT son isobáricos — todas las variantes tienen la misma masa nominal, por lo que los péptidos marcados de diferentes muestras coeluyen y aparecen como un único precursor en MS1. Tras la fragmentación HCD, cada etiqueta libera un ion reportero de baja masa único (126–135 Da para TMTpro). Los cocientes de iones reporteros reflejan las abundancias proteicas relativas en hasta 18 muestras simultáneamente.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx013",
+      "topic": "Proteómica",
+      "text": "¿Cómo se identifica un péptido a partir de un espectro MS2 en una búsqueda en base de datos?",
+      "options": [
+        "El peso molecular del péptido intacto se compara con el PM teórico de todas las proteínas de la base de datos",
+        "El tiempo de retención del pico peptídico se compara con un cromatograma HPLC de referencia",
+        "Las masas de iones fragmento experimentales se comparan con las series teóricas de iones b/y de secuencias candidatas",
+        "La envolvente isotópica del precursor se deconvoluciona para determinar directamente la composición de aminoácidos",
+        "El estado de carga del ion precursor se convierte algebraicamente en la secuencia del péptido"
+      ],
+      "correct": 2,
+      "explain": "Los motores de búsqueda (Mascot, Sequest, Andromeda, MSFragger) generan espectros MS2 teóricos para todos los péptidos candidatos consistentes con la masa precursora medida. Las masas de fragmentos observados (principalmente iones b e y para péptidos trípticos fragmentados por HCD/CID) se comparan con series teóricas y se puntúan. El péptido con mejor puntuación se reporta; un filtro de FDR del 1% target-decoy controla los falsos positivos.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx014",
+      "topic": "Proteómica",
+      "text": "¿Qué es el 'problema de inferencia proteica' en proteómica shotgun?",
+      "options": [
+        "La dificultad de localizar residuos fosforilados cuando múltiples sitios están modificados simultáneamente",
+        "La incapacidad de detectar proteínas de baja abundancia de forma fiable cuando coeluyen con proteínas abundantes",
+        "La ambigüedad al asignar péptidos compartidos a una proteína única cuando se solapan isoformas",
+        "La dificultad de alinear tiempos de retención peptídicos entre inyecciones LC-MS con diferentes gradientes",
+        "El reto de separar espectros MS2 genuinos de artefactos de fragmentación in-source en DDA"
+      ],
+      "correct": 2,
+      "explain": "Muchos péptidos trípticos son compartidos entre isoformas, variantes de splicing o parálogos. Una coincidencia de péptido no puede asignarse de forma inequívoca a una única proteína fuente. Las herramientas bioinformáticas aplican parsimonia (navaja de Occam): reportan el conjunto mínimo de proteínas que explica todos los péptidos observados. Solo las proteínas con al menos un péptido único — ausente en todas las demás proteínas de la base de datos — pueden reportarse y cuantificarse de forma independiente.",
+      "explainImg": ""
+    },
+    {
+      "id": "ptx015",
+      "topic": "Proteómica",
+      "text": "¿Qué estrategia aumenta mejor la cobertura de secuencia de una proteína con pocos péptidos trípticos detectables?",
+      "options": [
+        "Digestión con pepsina, que escinde tras residuos hidrofóbicos y genera péptidos muy largos",
+        "Digestión con termolisina, que escinde N-terminalmente a residuos hidrofóbicos en condiciones desnaturalizantes",
+        "Proteinasa K, que degrada todas las proteínas de forma inespecífica para máxima eficiencia de digestión",
+        "Digestión multienzimática con Lys-C, Glu-C o Asp-N para generar conjuntos de péptidos complementarios",
+        "Aumentar diez veces la concentración de tripsina para forzar la escisión en todos los sitios Lys y Arg"
+      ],
+      "correct": 3,
+      "explain": "Cuando una región proteica carece de residuos K/R, la tripsina genera péptidos demasiado grandes (> 25 residuos) o demasiado pequeños (< 5 residuos) para LC-MS/MS fiable. Las proteasas complementarias — Lys-C (tras K), Glu-C (tras E/D), Asp-N (antes de D), quimotripsina (tras F/Y/W) — producen un conjunto de péptidos diferente de la misma proteína. Las estrategias multienzimáticas son estándar en proteómica estructural y estudios de PTM para maximizar la cobertura.",
       "explainImg": ""
     }
   ]
