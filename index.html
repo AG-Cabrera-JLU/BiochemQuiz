@@ -179,11 +179,16 @@ img { max-width: 100%; }
 /* ── SVG countdown ring ── */
 .ring-wrap { position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; }
 .ring-svg { transform: rotate(-90deg); }
-.ring-bg   { fill: none; stroke: var(--border); stroke-width: 5; }
-.ring-fill { fill: none; stroke: var(--primary); stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 1s linear, stroke 0.3s; }
+.ring-bg   { fill: none; stroke: var(--border); stroke-width: 4; }
+.ring-fill { fill: none; stroke: var(--primary); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1s linear, stroke 0.3s; }
 .ring-fill.danger { stroke: var(--danger); }
-.ring-number { font-size: 1.1rem; font-weight: 700; text-anchor: middle; dominant-baseline: central; fill: var(--text); }
-.sv-ring-number-text { font-size: 1.6rem; }
+.ring-number {
+  font-size: 1.45rem; font-weight: 700; text-anchor: middle; dominant-baseline: central;
+  fill: var(--text); font-variant-numeric: tabular-nums;
+  transition: fill 0.3s;
+}
+.ring-number.danger { fill: var(--danger); }
+.sv-ring-number-text { font-size: 2.1rem; }
 
 /* ── Bar chart ── */
 .bar-list { list-style: none; margin-bottom: 0.5rem; }
@@ -439,7 +444,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
               <circle class="ring-bg" cx="32" cy="32" r="27"/>
               <circle class="ring-fill" id="ring-fill" cx="32" cy="32" r="27"
                 stroke-dasharray="169.6" stroke-dashoffset="0"/>
-              <text class="ring-number" id="ring-number" x="32" y="50" transform="rotate(90,32,32)">90</text>
+              <text class="ring-number" id="ring-number" x="32" y="32" transform="rotate(90,32,32)">90</text>
             </svg>
           </div>
         </div>
@@ -547,7 +552,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
         <circle class="ring-bg"   cx="48" cy="48" r="40" stroke-width="6"/>
         <circle class="ring-fill" id="sv-ring-fill" cx="48" cy="48" r="40" stroke-width="6"
           stroke-dasharray="251.3" stroke-dashoffset="0"/>
-        <text class="ring-number sv-ring-number-text" id="sv-ring-number" x="48" y="74" transform="rotate(90,48,48)">—</text>
+        <text class="ring-number sv-ring-number-text" id="sv-ring-number" x="48" y="48" transform="rotate(90,48,48)">—</text>
       </svg>
     </div>
 
@@ -1599,7 +1604,9 @@ function setRing(fillId, numberId, current, total) {
   const circ = parseFloat(fill.getAttribute('stroke-dasharray')) || RING_CIRCUMFERENCE;
   const fraction = total > 0 ? current / total : 0;
   fill.style.strokeDashoffset = circ * (1 - fraction);
-  fill.classList.toggle('danger', current <= 10 && current > 0);
+  const isDanger = current <= 10 && current > 0;
+  fill.classList.toggle('danger', isDanger);
+  num.classList.toggle('danger', isDanger);
   num.textContent = current;
 }
 
