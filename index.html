@@ -210,7 +210,7 @@ img { max-width: 100%; }
 .preset-meta { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
 
 /* ── Action buttons row ── */
-.action-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.75rem; }
+.action-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 0.75rem; }
 
 /* ── Explanation panel ── */
 .explain-panel { background: var(--bg-secondary); border-radius: var(--radius); padding: 0.75rem 1rem; margin-top: 0.5rem; }
@@ -1455,14 +1455,6 @@ function renderActionRow(session) {
   row.innerHTML = '';
 
   if (!session.started) {
-    // Editable timer for this question
-    const timerWrap = document.createElement('div');
-    timerWrap.style.cssText = 'display:flex;align-items:center;gap:6px;';
-    timerWrap.innerHTML = `<label style="font-size:0.8rem;color:var(--text-muted);white-space:nowrap;">${t('session.timerLabel').replace(' (seconds)','').replace(' (Sekunden)','').replace(' (segundos)','')}:</label>
-      <input id="q-timer-override" type="number" min="10" max="600" value="${session.timerSecs}"
-        style="width:70px;border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:0.3rem 0.5rem;font-size:0.85rem;background:var(--bg);color:var(--text);">
-      <span style="font-size:0.8rem;color:var(--text-muted);">s</span>`;
-    row.appendChild(timerWrap);
     addBtn(row, t('session.startQ'), 'btn-primary', startQuestion);
   } else {
     addBtn(row, '+30s', 'btn-sm', () => addTime(30));
@@ -1480,6 +1472,16 @@ function renderActionRow(session) {
 
   const endBtn = addBtn(row, t('session.endSession'), isLast && session.revealed ? 'btn-primary' : 'btn-danger btn-sm', endSession);
   if (isLast) endBtn.disabled = !session.revealed;
+
+  if (!session.started) {
+    // Timer override — pushed to the far right, compact
+    const timerWrap = document.createElement('div');
+    timerWrap.style.cssText = 'display:flex;align-items:center;gap:3px;margin-left:auto;';
+    timerWrap.innerHTML = `<input id="q-timer-override" type="number" min="10" max="600" value="${session.timerSecs}"
+        style="width:46px;border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:0.25rem 0.3rem;font-size:0.85rem;background:var(--bg);color:var(--text);text-align:center;">
+      <span style="font-size:0.8rem;color:var(--text-muted);">s</span>`;
+    row.appendChild(timerWrap);
+  }
 }
 
 function addBtn(parent, label, cls, fn) {
