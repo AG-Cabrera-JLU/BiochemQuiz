@@ -23,7 +23,8 @@
     "cancel": "Cancelar",
     "deleteConfirm": "¿Eliminar esta pregunta?",
     "noQuestions": "Aún no hay preguntas. Agregue una abajo.",
-    "filterAll": "Todas"
+    "filterAll": "Todas",
+    "searchPlaceholder": "Buscar preguntas…"
   },
   "session": {
     "launchTitle": "Iniciar sesión",
@@ -59,7 +60,10 @@
     "presetNamePrompt": "Nombre del preajuste:",
     "shuffleLabel": "Mezclar preguntas",
     "students": "estudiantes conectados",
-    "keyboardHint": "S = iniciar · R = revelar · N = siguiente · E = explicación · F = pantalla completa"
+    "keyboardHint": "S = iniciar · R = revelar · N = siguiente · E = explicación · F = pantalla completa",
+    "pauseQ": "Pausar",
+    "resumeQ": "Reanudar",
+    "shuffleOptions": "Mezclar opciones de respuesta por alumno"
   },
   "results": {
     "title": "Resultados",
@@ -67,7 +71,9 @@
     "overallCorrect": "Correcto global",
     "exportCSV": "Exportar CSV",
     "noSession": "Aún no hay sesión completada. Inicie una sesión para ver resultados.",
-    "responses": "respuestas en total"
+    "responses": "respuestas en total",
+    "historyTitle": "Sesiones anteriores",
+    "clearHistory": "Borrar"
   },
   "student": {
     "connecting": "Conectando...",

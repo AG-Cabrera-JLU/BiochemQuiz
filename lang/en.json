@@ -23,7 +23,8 @@
     "cancel": "Cancel",
     "deleteConfirm": "Delete this question?",
     "noQuestions": "No questions yet. Add one below.",
-    "filterAll": "All"
+    "filterAll": "All",
+    "searchPlaceholder": "Search questions…"
   },
   "session": {
     "launchTitle": "Launch a session",
@@ -59,7 +60,10 @@
     "presetNamePrompt": "Preset name:",
     "shuffleLabel": "Shuffle questions",
     "students": "students connected",
-    "keyboardHint": "S = start · R = reveal · N = next · E = explanation · F = fullscreen"
+    "keyboardHint": "S = start · R = reveal · N = next · E = explanation · F = fullscreen",
+    "pauseQ": "Pause",
+    "resumeQ": "Resume",
+    "shuffleOptions": "Randomise answer options per student"
   },
   "results": {
     "title": "Results",
@@ -67,7 +71,9 @@
     "overallCorrect": "Overall correct",
     "exportCSV": "Export CSV",
     "noSession": "No completed session yet. Launch a session to see results here.",
-    "responses": "responses total"
+    "responses": "responses total",
+    "historyTitle": "Past sessions",
+    "clearHistory": "Clear"
   },
   "student": {
     "connecting": "Connecting...",

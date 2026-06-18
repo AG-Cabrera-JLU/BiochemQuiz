@@ -192,6 +192,37 @@ wss.on('connection', (ws, req) => {
       }
     }
 
+    if (msg.type === 'pause_timer' && ws.role === 'instructor') {
+      if (state.session && state.session.started && !state.session.revealed && !state.session.paused) {
+        cancelTimer();
+        state.session.paused = true;
+        state.session.pausedAt = Date.now();
+        broadcastState();
+      }
+    }
+
+    if (msg.type === 'resume_timer' && ws.role === 'instructor') {
+      if (state.session && state.session.paused) {
+        const pauseDuration = Date.now() - state.session.pausedAt;
+        state.session.startedAt += pauseDuration;
+        state.session.paused = false;
+        state.session.pausedAt = null;
+        const elapsed = Date.now() - state.session.startedAt;
+        const remaining = Math.max(0, state.session.timerSecs * 1000 - elapsed);
+        if (remaining > 0) {
+          state.timerTimeout = setTimeout(() => {
+            state.timerTimeout = null;
+            if (state.session && state.session.started && !state.session.revealed) {
+              state.session.started = false;
+              state.session.revealed = true;
+              broadcastState();
+            }
+          }, remaining);
+        }
+        broadcastState();
+      }
+    }
+
     if (msg.type === 'answer' && ws.role === 'student') {
       const { questionId, optionIndex, clientId } = msg;
       if (!state.session || !state.session.started) return;

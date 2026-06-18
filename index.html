@@ -333,6 +333,18 @@ img { max-width: 100%; }
 .text-muted { color: var(--text-muted); }
 .section-title { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
 hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 0; }
+
+/* ── Manual dark/light override (attribute beats media query via specificity) ── */
+html[data-theme="dark"] {
+  --bg: #1a1a1a; --bg-secondary: #242424; --text: #f0f0f0; --text-muted: #aaa;
+  --text-hint: #666; --border: rgba(255,255,255,0.12); --border-strong: rgba(255,255,255,0.28);
+  --primary-light: #1a3050; --success-light: #1c2e10; --danger-light: #2e1212;
+}
+html[data-theme="light"] {
+  --bg: #ffffff; --bg-secondary: #f5f5f3; --text: #1a1a1a; --text-muted: #666;
+  --text-hint: #999; --border: rgba(0,0,0,0.12); --border-strong: rgba(0,0,0,0.25);
+  --primary-light: #E6F1FB; --success-light: #EAF3DE; --danger-light: #FCEBEB;
+}
 </style>
 </head>
 <body>
@@ -349,6 +361,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       <span class="topbar-sub" id="app-version-label">JLU Giessen · local</span>
     </div>
     <div style="display:flex;align-items:center;gap:8px;">
+      <button class="btn btn-sm btn-theme" onclick="cycleTheme()" id="btn-theme-inst" title="Toggle theme">🌓</button>
       <button class="btn btn-sm" id="btn-fullscreen" onclick="toggleFullscreen()" title="Toggle fullscreen (F)">⛶</button>
       <div class="lang-toggle" id="lang-toggle"></div>
     </div>
@@ -372,6 +385,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       <span id="bank-count" class="text-muted" style="font-size:0.85rem;"></span>
       <button class="btn btn-primary btn-sm" id="btn-add-q" onclick="showAddForm()">+ <span data-i18n="bank.addBtn">Add question</span></button>
     </div>
+    <input class="form-input" id="bank-search" type="search" style="margin-bottom:0.5rem;" placeholder="Search questions…" oninput="bankSearch=this.value.toLowerCase();renderBankList();">
     <div class="chips" id="bank-chips"></div>
     <div id="bank-list"></div>
     <div id="bank-form" class="hidden"></div>
@@ -415,6 +429,10 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
         <div class="form-row" style="display:flex;align-items:center;gap:8px;">
           <input type="checkbox" id="shuffle-toggle" style="accent-color:var(--primary);width:16px;height:16px;flex-shrink:0;">
           <label for="shuffle-toggle" class="form-label" style="margin:0;cursor:pointer;" data-i18n="session.shuffleLabel">Shuffle questions</label>
+        </div>
+        <div class="form-row" style="display:flex;align-items:center;gap:8px;">
+          <input type="checkbox" id="shuffle-opts-toggle" style="accent-color:var(--primary);width:16px;height:16px;flex-shrink:0;">
+          <label for="shuffle-opts-toggle" class="form-label" style="margin:0;cursor:pointer;" data-i18n="session.shuffleOptions">Randomise answer options per student</label>
         </div>
         <button class="btn btn-primary" id="btn-launch" onclick="launchSession()" disabled>
           <span data-i18n="session.launchBtn">Launch session</span>
@@ -483,6 +501,13 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
 
   <!-- ── TAB 2: Results ── -->
   <div class="tab-panel" id="panel-results">
+    <div id="history-section" class="hidden" style="margin-bottom:1rem;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+        <span class="section-title" data-i18n="results.historyTitle">Past sessions</span>
+        <button class="btn btn-sm" onclick="clearHistory()" data-i18n="results.clearHistory">Clear</button>
+      </div>
+      <div id="history-list" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+    </div>
     <div id="results-empty" class="waiting-card">
       <p class="text-muted" data-i18n="results.noSession">No completed session yet. Launch a session to see results here.</p>
     </div>
@@ -511,6 +536,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
 
   <!-- Language toggle (persistent across all student states) -->
   <div class="sv-topbar">
+    <button class="btn btn-sm btn-theme" onclick="cycleTheme()" id="btn-theme-sv" title="Toggle theme" style="margin-right:auto;">🌓</button>
     <div class="lang-toggle" id="sv-lang-toggle"></div>
   </div>
 
@@ -600,7 +626,9 @@ let lang = {};
 let allQuestions = [];
 let currentLang = localStorage.getItem('biochemquiz_lang') || DEFAULT_LANG;
 let bankFilter = 'All';
+let bankSearch = '';
 let sessionFilter = 'All';
+let themeMode = localStorage.getItem('bq_theme') || 'auto';
 let sessionPool = []; // array of question ids checked in pool
 let sessionData = null; // full session object in instructor state
 let resultsData = null; // stored after session ends
@@ -630,6 +658,7 @@ let wsRole = 'instructor';
 window.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(location.search);
   wsRole = params.get('role') === 'student' ? 'student' : 'instructor';
+  applyTheme();
 
   if (wsRole === 'student') {
     document.getElementById('student-view').style.display = 'block';
@@ -647,6 +676,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     renderBankList();
     renderSessionChips();
     renderSessionPool();
+    renderHistoryList();
     fetchServerUrl();
     loadPresets();
     // Restore last session results so a page refresh doesn't wipe the Results tab
@@ -698,7 +728,12 @@ function applyLang() {
   allQuestions = questionsByLang[currentLang] || questionsByLang['en'];
   // Reset topic filters — names differ per language (e.g. Glycolysis → Glykolyse)
   bankFilter = 'All';
+  bankSearch = '';
   sessionFilter = 'All';
+  const bSearchEl = document.getElementById('bank-search');
+  if (bSearchEl) bSearchEl.value = '';
+  // Update search placeholder via i18n
+  if (bSearchEl) bSearchEl.placeholder = t('bank.searchPlaceholder') || 'Search questions…';
   if (allQuestions.length > 0) {
     if (wsRole === 'instructor') {
       renderBankChips();
@@ -866,20 +901,25 @@ function handleInstructorState(session, responses) {
   const prevStarted   = sessionData?.started;
   const prevRevealed  = sessionData?.revealed;
   const prevTimerSecs = sessionData?.timerSecs;
+  const prevPaused    = sessionData?.paused;
   sessionData = session;
 
-  if (session.started || session.revealed) {
+  if (session.started || session.revealed || session.paused) {
     refreshInstructorQuestion(session, responses);
   }
 
-  // Re-render action row whenever started/revealed state changes (covers server auto-reveal)
-  if (prevStarted !== session.started || prevRevealed !== session.revealed) {
+  // Re-render action row whenever started/revealed/paused state changes (covers server auto-reveal)
+  if (prevStarted !== session.started || prevRevealed !== session.revealed || prevPaused !== session.paused) {
     renderActionRow(session);
-    if (!session.started) stopTimer();
+    if (!session.started || session.paused) stopTimer();
+    // Restart timer on resume (paused→running)
+    if (session.started && !session.paused && !session.revealed && prevPaused) {
+      startTimer(session.timerSecs, session.startedAt);
+    }
   }
 
   // Restart local timer when extra time was added mid-question
-  if (session.started && !session.revealed && prevTimerSecs !== session.timerSecs) {
+  if (session.started && !session.revealed && !session.paused && prevTimerSecs !== session.timerSecs) {
     startTimer(session.timerSecs, session.startedAt);
   }
 }
@@ -1006,7 +1046,15 @@ function renderBankChips() {
 function renderBankList() {
   const list = document.getElementById('bank-list');
   const count = document.getElementById('bank-count');
-  const filtered = bankFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === bankFilter);
+  let filtered = bankFilter === 'All' ? allQuestions : allQuestions.filter(q => q.topic === bankFilter);
+  if (bankSearch) {
+    filtered = filtered.filter(q => {
+      const lq = localizeQ(q);
+      return lq.text.toLowerCase().includes(bankSearch) ||
+        (q.topic || '').toLowerCase().includes(bankSearch) ||
+        lq.options.some(o => (o || '').toLowerCase().includes(bankSearch));
+    });
+  }
   count.textContent = `${filtered.length} ${t('bank.count')}`;
 
   if (!filtered.length) {
@@ -1391,9 +1439,12 @@ function launchSession() {
     }
   }
 
+  const shuffleOptions = document.getElementById('shuffle-opts-toggle')?.checked || false;
+
   const session = {
     active: true, name, questions, currentIdx: 0, timerSecs, baseTimerSecs: timerSecs,
     startedAt: null, started: false, finished: false, revealed: false,
+    shuffleOptions,
     sessionId: Math.random().toString(36).slice(2) + Date.now().toString(36)
   };
 
@@ -1457,11 +1508,15 @@ function renderActionRow(session) {
   const isLast = session.currentIdx >= session.questions.length - 1;
   row.innerHTML = '';
 
-  if (!session.started) {
+  if (!session.started && !session.paused) {
     addBtn(row, t('session.startQ'), 'btn-primary', startQuestion);
+  } else if (session.paused) {
+    addBtn(row, t('session.resumeQ'), 'btn-primary', resumeQuestion);
+    addBtn(row, t('session.stopTimer'), '', stopQuestion);
   } else {
     addBtn(row, '+30s', 'btn-sm', () => addTime(30));
     addBtn(row, '+60s', 'btn-sm', () => addTime(60));
+    addBtn(row, t('session.pauseQ'), '', pauseQuestion);
     addBtn(row, t('session.stopTimer'), '', stopQuestion);
   }
 
@@ -1476,7 +1531,7 @@ function renderActionRow(session) {
   const endBtn = addBtn(row, t('session.endSession'), isLast && session.revealed ? 'btn-primary' : 'btn-danger btn-sm', endSession);
   if (isLast) endBtn.disabled = !session.revealed;
 
-  if (!session.started) {
+  if (!session.started && !session.paused) {
     // Timer override — pushed to the far right, compact
     const timerWrap = document.createElement('div');
     timerWrap.style.cssText = 'display:flex;align-items:center;gap:3px;margin-left:auto;';
@@ -1516,10 +1571,15 @@ function startQuestion() {
 function stopQuestion() {
   if (!sessionData) return;
   sessionData.started = false;
+  sessionData.paused = false;
+  sessionData.pausedAt = null;
   broadcastSession(sessionData, false);
   stopTimer();
   renderActionRow(sessionData);
 }
+
+function pauseQuestion() { wsSend({ type: 'pause_timer' }); }
+function resumeQuestion() { wsSend({ type: 'resume_timer' }); }
 
 function addTime(seconds) {
   wsSend({ type: 'add_time', seconds });
@@ -1528,6 +1588,8 @@ function addTime(seconds) {
 function revealQuestion() {
   if (!sessionData) return;
   sessionData.started = false;
+  sessionData.paused = false;
+  sessionData.pausedAt = null;
   sessionData.revealed = true;
   stopTimer();
   broadcastSession(sessionData, false);
@@ -1539,6 +1601,8 @@ function nextQuestion() {
   if (!sessionData) return;
   sessionData.currentIdx++;
   sessionData.started = false;
+  sessionData.paused = false;
+  sessionData.pausedAt = null;
   sessionData.startedAt = null;
   sessionData.revealed = false;
   sessionData.timerSecs = sessionData.baseTimerSecs || sessionData.timerSecs;
@@ -1567,6 +1631,7 @@ function endSession() {
     responses: JSON.parse(JSON.stringify(lastResponses))
   };
   try { sessionStorage.setItem('bq_results', JSON.stringify(resultsData)); } catch {}
+  pushToHistory({ date: new Date().toISOString(), session: resultsData.session, responses: resultsData.responses });
   renderResults();
 
   document.getElementById('session-active').classList.add('hidden');
@@ -1859,11 +1924,13 @@ function handleStudentState(session, responses) {
 
   // Timer
   clearInterval(svTimerInterval);
-  if (!session.revealed) {
+  if (session.paused) {
+    const elapsed = Math.floor((Date.now() - session.startedAt) / 1000);
+    setRing('sv-ring-fill', 'sv-ring-number', Math.max(0, session.timerSecs - elapsed), session.timerSecs);
+  } else if (!session.revealed) {
     updateSvTimer(session);
     svTimerInterval = setInterval(() => updateSvTimer(session), 500);
   } else {
-    clearInterval(svTimerInterval);
     setRing('sv-ring-fill', 'sv-ring-number', 0, session.timerSecs);
   }
 
@@ -1874,20 +1941,22 @@ function handleStudentState(session, responses) {
   const counts = lq.options.map((_, i) => r[i] || r[String(i)] || 0);
   const total  = counts.reduce((a,b) => a+b, 0);
 
+  const displayOpts = session.shuffleOptions
+    ? seededShuffle(lq.options, clientId + q.id)
+    : lq.options.map((v, i) => ({ v, i }));
+
   const wrap = document.getElementById('sv-answer-btns');
-  wrap.innerHTML = lq.options.map((opt, i) => {
-    const letter = 'ABCDE'[i];
+  wrap.innerHTML = displayOpts.map(({ v, i }, di) => {
+    const letter = 'ABCDE'[di];
     let cls = 'answer-btn';
     if (answered && studentAnswered === i) cls += ' selected';
     if (revealed && i === lq.correct) cls += ' correct';
     if (revealed && answered && studentAnswered === i && i !== lq.correct) cls += ' wrong';
-
     const pct = total > 0 ? Math.round(counts[i] / total * 100) : 0;
     const miniBar = revealed ? `<div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div><div class="answer-pct">${pct}%</div>` : '';
-
     return `<button class="${cls}" ${revealed?'disabled':''} onclick="submitAnswer(${i}, '${q.id}')">
       <span class="answer-letter">${letter}</span>
-      <span style="flex:1;">${esc(opt||'')}${miniBar}</span>
+      <span style="flex:1;">${esc(v||'')}${miniBar}</span>
     </button>`;
   }).join('');
 
@@ -1950,6 +2019,97 @@ function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function setEl(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
+
+// ══════════════════════════════════════════════════════════
+// DARK MODE
+// ══════════════════════════════════════════════════════════
+function applyTheme() {
+  const html = document.documentElement;
+  if (themeMode === 'dark') html.dataset.theme = 'dark';
+  else if (themeMode === 'light') html.dataset.theme = 'light';
+  else delete html.dataset.theme;
+  const icon = themeMode === 'dark' ? '🌙' : themeMode === 'light' ? '☀️' : '🌓';
+  document.querySelectorAll('.btn-theme').forEach(b => { b.textContent = icon; });
+}
+
+function cycleTheme() {
+  themeMode = themeMode === 'auto' ? 'dark' : themeMode === 'dark' ? 'light' : 'auto';
+  localStorage.setItem('bq_theme', themeMode);
+  applyTheme();
+}
+
+// ══════════════════════════════════════════════════════════
+// SESSION HISTORY
+// ══════════════════════════════════════════════════════════
+const BQ_HISTORY_KEY = 'bq_history';
+
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(BQ_HISTORY_KEY) || '[]'); } catch { return []; }
+}
+
+function pushToHistory(entry) {
+  const hist = loadHistory();
+  hist.unshift(entry);
+  if (hist.length > 10) hist.length = 10;
+  try { localStorage.setItem(BQ_HISTORY_KEY, JSON.stringify(hist)); } catch {}
+  renderHistoryList();
+}
+
+function clearHistory() {
+  localStorage.removeItem(BQ_HISTORY_KEY);
+  renderHistoryList();
+}
+
+function renderHistoryList() {
+  const hist = loadHistory();
+  const section = document.getElementById('history-section');
+  if (!section) return;
+  if (!hist.length) { section.classList.add('hidden'); return; }
+  section.classList.remove('hidden');
+  const list = document.getElementById('history-list');
+  list.innerHTML = hist.map((entry, i) => {
+    const date = entry.date ? new Date(entry.date).toLocaleDateString() : '?';
+    const name = entry.session?.name || '?';
+    const n = entry.session?.questions?.length || 0;
+    return `<button class="chip" onclick="loadHistoryEntry(${i})">${esc(date)} — ${esc(name)} (${n})</button>`;
+  }).join('');
+}
+
+function loadHistoryEntry(idx) {
+  const hist = loadHistory();
+  if (!hist[idx]) return;
+  resultsData = { session: hist[idx].session, responses: hist[idx].responses };
+  renderResults();
+  document.querySelectorAll('#history-list .chip').forEach((c, i) => c.classList.toggle('active', i === idx));
+}
+
+// ══════════════════════════════════════════════════════════
+// SEEDED SHUFFLE (for randomise answer options)
+// ══════════════════════════════════════════════════════════
+function mulberry32(seed) {
+  return function() {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = t + Math.imul(t ^ (t >>> 7), 61 | t) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function strHash(s) {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  return h;
+}
+
+function seededShuffle(arr, seedStr) {
+  const rng = mulberry32(strHash(seedStr));
+  const a = arr.map((v, i) => ({ v, i }));
+  for (let j = a.length - 1; j > 0; j--) {
+    const k = Math.floor(rng() * (j + 1));
+    [a[j], a[k]] = [a[k], a[j]];
+  }
+  return a;
+}
 </script>
 
 </body>

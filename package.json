@@ -1,6 +1,6 @@
 {
   "name": "biochemquiz",
-  "version": "0.6.26",
+  "version": "0.6.27",
   "description": "Live instructor-led biochemistry quiz app for JLU Giessen — WebSocket-based, EN/DE/ES, deployed on Render",
   "scripts": {
     "start": "node server.js",
