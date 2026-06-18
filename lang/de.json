@@ -58,7 +58,8 @@
     "loadPreset": "Laden",
     "presetNamePrompt": "Name der Voreinstellung:",
     "shuffleLabel": "Fragen mischen",
-    "students": "Studierende verbunden"
+    "students": "Studierende verbunden",
+    "keyboardHint": "S = starten · R = aufdecken · N = weiter · E = Erklärung · F = Vollbild"
   },
   "results": {
     "title": "Ergebnisse",
@@ -79,7 +80,6 @@
     "sessionComplete": "Sitzung abgeschlossen",
     "correctAnswers": "richtige Antworten",
     "yourScore": "Ihr Ergebnis",
-    "notAnswered": "Nicht beantwortet",
-    "keyboardHint": "Tastenkürzel: S = starten · R = aufdecken · N = weiter · E = Erklärung · F = Vollbild"
+    "notAnswered": "Nicht beantwortet"
   }
 }

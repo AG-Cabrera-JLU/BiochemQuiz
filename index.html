@@ -201,6 +201,8 @@ img { max-width: 100%; }
 .bar-fill   { height: 100%; background: var(--primary-light); border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
 .bar-fill.correct { background: var(--success-light); border: 1.5px solid var(--success); }
 .bar-stat   { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; width: 70px; text-align: right; flex-shrink: 0; }
+.bar-item.bar-correct .bar-letter { color: var(--success); font-weight: 700; }
+.bar-item.bar-correct .bar-text   { color: var(--success); font-weight: 600; }
 .votes-count { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
 /* ── Presets ── */
@@ -451,6 +453,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0.75rem 
       </div>
 
       <div class="action-row" id="action-row"></div>
+      <p style="font-size:0.72rem;color:var(--text-hint);margin-top:2px;letter-spacing:0.02em;" data-i18n="session.keyboardHint"></p>
 
       <div id="explain-toggle-row" class="hidden">
         <button class="btn btn-sm" onclick="toggleExplain()" id="btn-explain-toggle">
@@ -1524,7 +1527,9 @@ function addTime(seconds) {
 
 function revealQuestion() {
   if (!sessionData) return;
+  sessionData.started = false;
   sessionData.revealed = true;
+  stopTimer();
   broadcastSession(sessionData, false);
   renderActionRow(sessionData);
   refreshInstructorQuestion(sessionData, lastResponses);
@@ -1568,6 +1573,8 @@ function endSession() {
   document.getElementById('session-prelaunched').classList.remove('hidden');
   sessionData = null;
   sessionPool = [];
+  sessionFilter = 'All';
+  renderSessionChips();
   renderSessionPool();
 
   switchTab('results');
@@ -1629,10 +1636,10 @@ function buildBarItems(q, responsesForQ, revealed, instructorMode) {
     const pct    = total > 0 ? Math.round(count / total * 100) : 0;
     const isCorrect = i === q.correct;
     const showGreen = isCorrect && revealed;
-    return `<li class="bar-item">
+    return `<li class="bar-item${showGreen ? ' bar-correct' : ''}">
       <div class="bar-label">
         <span class="bar-letter">${'ABCDE'[i]}</span>
-        <span style="min-width:0;flex:1;word-break:break-word;">${esc(lq.options[i] || '')}</span>
+        <span class="bar-text" style="min-width:0;flex:1;word-break:break-word;">${esc(lq.options[i] || '')}${showGreen ? ' ✓' : ''}</span>
       </div>
       <div class="bar-track">
         <div class="bar-fill ${showGreen ? 'correct' : ''}" style="width:${pct}%"></div>

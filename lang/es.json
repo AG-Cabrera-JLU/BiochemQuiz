@@ -58,7 +58,8 @@
     "loadPreset": "Cargar",
     "presetNamePrompt": "Nombre del preajuste:",
     "shuffleLabel": "Mezclar preguntas",
-    "students": "estudiantes conectados"
+    "students": "estudiantes conectados",
+    "keyboardHint": "S = iniciar · R = revelar · N = siguiente · E = explicación · F = pantalla completa"
   },
   "results": {
     "title": "Resultados",
@@ -79,7 +80,6 @@
     "sessionComplete": "Sesión completada",
     "correctAnswers": "respuestas correctas",
     "yourScore": "Tu puntuación",
-    "notAnswered": "Sin respuesta",
-    "keyboardHint": "Atajos: S = iniciar · R = revelar · N = siguiente · E = explicación · F = pantalla completa"
+    "notAnswered": "Sin respuesta"
   }
 }

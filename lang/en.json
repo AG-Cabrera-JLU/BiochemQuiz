@@ -58,7 +58,8 @@
     "loadPreset": "Load",
     "presetNamePrompt": "Preset name:",
     "shuffleLabel": "Shuffle questions",
-    "students": "students connected"
+    "students": "students connected",
+    "keyboardHint": "S = start · R = reveal · N = next · E = explanation · F = fullscreen"
   },
   "results": {
     "title": "Results",
@@ -79,7 +80,6 @@
     "sessionComplete": "Session complete",
     "correctAnswers": "correct answers",
     "yourScore": "Your score",
-    "notAnswered": "Not answered",
-    "keyboardHint": "Shortcuts: S = start · R = reveal · N = next · E = explanation · F = fullscreen"
+    "notAnswered": "Not answered"
   }
 }
