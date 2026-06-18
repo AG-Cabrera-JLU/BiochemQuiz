@@ -1695,6 +1695,81 @@
       "explainImg": ""
     },
     {
+      "id": "aac011",
+      "topic": "Amino Acid Catabolism",
+      "text": "Which best describes the ping-pong (double-displacement) mechanism of aminotransferases?",
+      "options": [
+        "Both amino acid and keto acid bind simultaneously before any product leaves the enzyme",
+        "PLP accepts the amino group from the donor amino acid (→ PMP + keto acid), then PMP transfers it to α-ketoglutarate to regenerate PLP and form glutamate",
+        "Two enzyme subunits alternate in carrying the amino group between substrates",
+        "ATP activates the amino group prior to transfer to α-ketoglutarate",
+        "The reaction proceeds through a stable ternary enzyme–substrate complex"
+      ],
+      "correct": 1,
+      "explain": "In the ping-pong mechanism, PLP (bound to a lysine residue of the enzyme) first reacts with the amino acid donor: PLP accepts the amino group, becoming PMP, while the corresponding keto acid is released (\"ping\"). PMP then reacts with α-ketoglutarate, transfers the amino group to form glutamate, and regenerates PLP (\"pong\"). No ternary complex forms — the second substrate binds only after the first product has left.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac012",
+      "topic": "Amino Acid Catabolism",
+      "text": "Histidine catabolism begins with a unique non-transamination step. What is the first product, and which downstream intermediate has clinical diagnostic value?",
+      "options": [
+        "α-Ketoglutarate; accumulates in vitamin B6 deficiency",
+        "Urocanate; the downstream intermediate formiminoglutamate (FIGLU) accumulates in urine in folate deficiency",
+        "Imidazolone propionate; accumulates in renal failure",
+        "Histamine; elevated in mastocytosis",
+        "Glutamine; elevated in hyperammonemia"
+      ],
+      "correct": 1,
+      "explain": "Histidase catalyzes the non-oxidative elimination of the amino group from histidine to produce urocanate + NH₄⁺ — unlike most amino acids, which first undergo transamination. Urocanate is further metabolized to formiminoglutamate (FIGLU), which requires tetrahydrofolate (THF) to accept the formimino group. In folate deficiency, this step is blocked and FIGLU accumulates in urine after a histidine load, forming the basis of the classic FIGLU test.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac013",
+      "topic": "Amino Acid Catabolism",
+      "text": "Glutamate dehydrogenase releases the amino group from glutamate as NH₄⁺. What is the other direct product, and why is it particularly important in amino acid metabolism?",
+      "options": [
+        "Aspartate; directly feeds the urea cycle as nitrogen donor",
+        "α-Ketoglutarate; re-enters the TCA cycle and also serves as the universal amino group acceptor in transamination reactions",
+        "Succinate; provides FADH₂ for the respiratory chain",
+        "Oxaloacetate; can be converted to glucose via gluconeogenesis",
+        "Citrate; exported to the cytosol to support fatty acid synthesis"
+      ],
+      "correct": 1,
+      "explain": "Glutamate dehydrogenase (mitochondrial matrix) catalyzes: glutamate + NAD⁺ → α-ketoglutarate + NH₄⁺ + NADH. α-Ketoglutarate has a dual role: it re-enters the TCA cycle (anaplerosis) and acts as the universal amino group acceptor in transamination reactions, regenerating glutamate. This makes the glutamate/α-ketoglutarate pair the central nitrogen hub linking amino acid catabolism to the TCA cycle and urea synthesis. The enzyme is inhibited by GTP/ATP and activated by GDP/ADP.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac014",
+      "topic": "Amino Acid Catabolism",
+      "text": "In the glucose-alanine cycle, alanine exported from skeletal muscle arrives at the liver. What enzyme processes it there, and what are the metabolic fates of its two products?",
+      "options": [
+        "Alanine dehydrogenase; produces pyruvate (→ acetyl-CoA) and NH₄⁺ (→ excreted)",
+        "ALT (alanine aminotransferase); produces pyruvate (→ gluconeogenesis) and glutamate (→ urea cycle via glutamate dehydrogenase)",
+        "Aspartate aminotransferase; produces oxaloacetate (→ TCA) and glutamate (→ glutamine)",
+        "Pyruvate kinase; produces ATP and releases the amino group as NH₄⁺",
+        "Glutaminase; produces glutamate (→ TCA) and NH₄⁺ (→ urea cycle)"
+      ],
+      "correct": 1,
+      "explain": "In hepatocytes, ALT catalyzes: alanine + α-ketoglutarate → pyruvate + glutamate. Pyruvate enters gluconeogenesis, restoring blood glucose for export back to muscle. Glutamate is oxidatively deaminated by glutamate dehydrogenase, releasing NH₄⁺ for the urea cycle. The glucose-alanine cycle thus accomplishes two goals simultaneously: transporting muscle-derived nitrogen to the liver for safe disposal and recycling glucose carbon between liver and muscle.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac015",
+      "topic": "Amino Acid Catabolism",
+      "text": "Which pair of aminotransferases is routinely measured in serum to assess hepatocellular damage, and what does an AST:ALT ratio > 2 suggest?",
+      "options": [
+        "GDH and OTC; ratio > 2 indicates a urea cycle disorder",
+        "BCAT and BCKDH; ratio > 2 suggests maple syrup urine disease",
+        "ALT and AST; ratio > 2 suggests alcoholic liver disease",
+        "ALT and GGT; ratio > 2 indicates biliary obstruction",
+        "AST and LDH; ratio > 2 indicates myocardial infarction"
+      ],
+      "correct": 2,
+      "explain": "ALT (alanine aminotransferase) and AST (aspartate aminotransferase) are the standard serum markers of hepatocellular injury. ALT is more liver-specific; AST is also present in cardiac and skeletal muscle. Both require PLP (vitamin B6) as cofactor. In alcoholic liver disease, chronic alcohol use depletes PLP, disproportionately impairing ALT activity relative to AST, so the AST:ALT ratio typically exceeds 2:1 — a hallmark of alcoholic hepatitis.",
+      "explainImg": ""
+    },
+    {
       "id": "uc001",
       "topic": "Urea Cycle",
       "text": "In which two compartments of the hepatocyte does the urea cycle operate?",
@@ -1842,6 +1917,81 @@
       ],
       "correct": 1,
       "explain": "Arginase deficiency (argininemia) typically presents with progressive spastic diplegia and intellectual disability rather than life-threatening hyperammonemia, because alternative pathways can partially clear ammonia. Arginine accumulates and is believed to be neurotoxic. Ammonia elevation is milder than in other urea cycle disorders.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc011",
+      "topic": "Urea Cycle",
+      "text": "How many ATP equivalents does the urea cycle consume per molecule of urea produced?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 3,
+      "explain": "Two steps consume ATP: CPS-I uses 2 ATP (→ 2 ADP + 2 Pi), and argininosuccinate synthetase (ASS) cleaves 1 ATP to AMP + PPi, equivalent to 2 high-energy bonds. Total = 4 ATP equivalents per urea molecule. This high energy cost means the cycle is tightly regulated and only fully upregulated when protein catabolism is elevated.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc012",
+      "topic": "Urea Cycle",
+      "text": "A patient with acute liver failure develops confusion, asterixis, and cerebral edema with plasma ammonia of 500 µmol/L. Which mechanism best explains the cerebral edema?",
+      "options": [
+        "NH₃ directly disrupts the blood-brain barrier",
+        "Glutamine synthetase in astrocytes converts NH₃ + glutamate → glutamine, causing osmotic cell swelling",
+        "NH₃ activates NMDA receptors, increasing intracellular Na⁺",
+        "NH₃ inhibits Na⁺/K⁺-ATPase in brain endothelium",
+        "NH₃ acidifies cerebrospinal fluid, drawing water into cells"
+      ],
+      "correct": 1,
+      "explain": "In the brain, glutamine synthetase (predominantly in astrocytes) detoxifies NH₃ by synthesizing glutamine. Osmotic accumulation of glutamine within astrocytes causes cell swelling and cerebral edema. Simultaneously, depletion of glutamate impairs neuronal energy metabolism and TCA function. These changes collectively drive the confusion, asterixis, and coma of hepatic encephalopathy.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc013",
+      "topic": "Urea Cycle",
+      "text": "A male neonate with severe hyperammonemia has markedly elevated urinary orotic acid. Which enzyme deficiency is most consistent with these findings?",
+      "options": [
+        "Carbamoyl phosphate synthetase I (CPS-I)",
+        "Ornithine transcarbamylase (OTC)",
+        "Argininosuccinate synthetase",
+        "Argininosuccinate lyase",
+        "Arginase"
+      ],
+      "correct": 1,
+      "explain": "In OTC deficiency, carbamoyl phosphate cannot be transferred to ornithine and overflows into the cytosol, where it enters the pyrimidine synthesis pathway, producing excess orotic acid. CPS-I deficiency also causes hyperammonemia but reduces carbamoyl phosphate production, so orotic acid is low or normal. Elevated urinary orotic acid in a hyperammonemic neonate is therefore the key finding distinguishing OTC deficiency from CPS-I deficiency.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc014",
+      "topic": "Urea Cycle",
+      "text": "Argininosuccinate synthetase cleaves ATP to AMP + PPi instead of ADP + Pi. What is the metabolic advantage of this mechanism?",
+      "options": [
+        "It produces more usable energy than standard ATP hydrolysis",
+        "Rapid hydrolysis of PPi by pyrophosphatase makes the reaction essentially irreversible",
+        "It allows the reaction to run in reverse when cytosolic ATP falls",
+        "It generates NADH as a byproduct to power the urea cycle",
+        "It links argininosuccinate synthesis directly to the electron transport chain"
+      ],
+      "correct": 1,
+      "explain": "Cleavage of ATP to AMP + PPi consumes two high-energy bonds. Crucially, ubiquitous cytosolic pyrophosphatase immediately hydrolyzes PPi → 2 Pi, making the overall reaction thermodynamically irreversible and driving the urea cycle forward. This ATP → AMP + PPi strategy — shared with aminoacyl-tRNA synthetases and fatty acid activation — is a common device to make biosynthetic reactions irreversible.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc015",
+      "topic": "Urea Cycle",
+      "text": "A patient with liver cirrhosis and marginally elevated plasma ammonia develops acute kidney injury. Why does renal failure rapidly worsen ammonia management?",
+      "options": [
+        "The kidney performs its own urea synthesis via a partial urea cycle",
+        "Renal tubules normally excrete NH₄⁺ directly in urine, complementing hepatic urea synthesis; this route is lost in renal failure",
+        "The kidney activates muscle glutamine synthetase to buffer excess ammonia",
+        "Renal failure reduces arginine availability, blocking hepatic CPS-I",
+        "The kidney is the primary site of NAG synthesis, which activates CPS-I"
+      ],
+      "correct": 1,
+      "explain": "When hepatic urea cycle capacity is reduced, the kidneys compensate by excreting ammonium (NH₄⁺) directly in urine: glutaminase in renal tubules releases NH₃, which is trapped as NH₄⁺ in acidic urine. In hepatorenal syndrome, this route is eliminated, causing a rapid rise in systemic ammonia. Treatments (lactulose, rifaximin) target remaining alternative routes — trapping NH₄⁺ in stool and reducing intestinal NH₃ production.",
       "explainImg": ""
     },
     {

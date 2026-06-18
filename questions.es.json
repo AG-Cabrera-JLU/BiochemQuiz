@@ -1695,6 +1695,81 @@
       "explainImg": ""
     },
     {
+      "id": "aac011",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "¿Cuál describe mejor el mecanismo de ping-pong (doble desplazamiento) de las aminotransferasas?",
+      "options": [
+        "El aminoácido y el cetoácido se unen simultáneamente antes de que salga cualquier producto",
+        "El PLP acepta el grupo amino del aminoácido donante (→ PMP + cetoácido) y luego el PMP lo transfiere al α-cetoglutarato regenerando PLP y formando glutamato",
+        "Dos subunidades del enzima se alternan al transportar el grupo amino entre sustratos",
+        "El ATP activa el grupo amino antes de su transferencia al α-cetoglutarato",
+        "La reacción transcurre a través de un complejo ternario enzima–sustrato estable"
+      ],
+      "correct": 1,
+      "explain": "En el mecanismo de ping-pong, el PLP (unido covalentemente a un residuo lisina del enzima) reacciona primero con el aminoácido donante: el PLP acepta el grupo amino y se convierte en PMP, mientras se libera el cetoácido («ping»). El PMP reacciona entonces con el α-cetoglutarato, transfiere el grupo amino para formar glutamato y regenera el PLP («pong»). No se forma ningún complejo ternario — el segundo sustrato se une solo después de que el primer producto es liberado.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac012",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "El catabolismo de la histidina comienza con un paso no transaminativo único. ¿Cuál es el primer producto y qué intermediario posterior tiene valor diagnóstico clínico?",
+      "options": [
+        "α-Cetoglutarato; se acumula en la deficiencia de vitamina B6",
+        "Urocanato; el intermediario posterior formiminoglutamato (FIGLU) se acumula en orina en la deficiencia de folato",
+        "Imidazolonpropionato; se acumula en insuficiencia renal",
+        "Histamina; elevada en mastocitosis",
+        "Glutamina; elevada en hiperamonemia"
+      ],
+      "correct": 1,
+      "explain": "La histidasa cataliza la eliminación no oxidativa del grupo amino de la histidina produciendo urocanato + NH₄⁺ — a diferencia de la mayoría de aminoácidos, que primero se transaminan. El urocanato se metaboliza a formiminoglutamato (FIGLU); el paso final requiere tetrahidrofolato (THF) para aceptar el grupo formimino. En la deficiencia de folato, este paso queda bloqueado y el FIGLU se acumula en orina tras una carga de histidina — base del clásico «test de FIGLU».",
+      "explainImg": ""
+    },
+    {
+      "id": "aac013",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "La glutamato deshidrogenasa libera el grupo amino del glutamato como NH₄⁺. ¿Cuál es el otro producto directo y por qué es especialmente importante en el catabolismo de aminoácidos?",
+      "options": [
+        "Aspartato; entra directamente al ciclo de la urea como donante de nitrógeno",
+        "α-Cetoglutarato; re-entra al ciclo de Krebs y sirve como aceptor universal de grupos amino en las reacciones de transaminación",
+        "Succinato; proporciona FADH₂ para la cadena respiratoria",
+        "Oxalacetato; puede convertirse en glucosa mediante gluconeogénesis",
+        "Citrato; exportado al citosol para sustentar la síntesis de ácidos grasos"
+      ],
+      "correct": 1,
+      "explain": "La glutamato deshidrogenasa (matriz mitocondrial) cataliza: glutamato + NAD⁺ → α-cetoglutarato + NH₄⁺ + NADH. El α-cetoglutarato tiene un papel dual: re-entra al ciclo de Krebs (anaplerósis) y actúa como aceptor universal de grupos amino en las transaminaciones, regenerando glutamato. El par glutamato/α-cetoglutarato es así el nodo central de nitrógeno que conecta el catabolismo de aminoácidos con el ciclo de Krebs y la síntesis de urea. El enzima es inhibido por GTP/ATP y activado por GDP/ADP.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac014",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "En el ciclo glucosa-alanina, la alanina exportada por el músculo esquelético llega al hígado. ¿Qué enzima la procesa allí y cuáles son los destinos metabólicos de sus dos productos?",
+      "options": [
+        "Alanina deshidrogenasa; produce piruvato (→ acetil-CoA) y NH₄⁺ (→ excreción)",
+        "ALT (alanina aminotransferasa); produce piruvato (→ gluconeogénesis) y glutamato (→ ciclo de la urea mediante glutamato deshidrogenasa)",
+        "Aspartato aminotransferasa; produce oxalacetato (→ ciclo de Krebs) y glutamato (→ glutamina)",
+        "Piruvato cinasa; genera ATP y libera el grupo amino como NH₄⁺",
+        "Glutaminasa; produce glutamato (→ ciclo de Krebs) y NH₄⁺ (→ ciclo de la urea)"
+      ],
+      "correct": 1,
+      "explain": "En los hepatocitos, la ALT cataliza: alanina + α-cetoglutarato → piruvato + glutamato. El piruvato entra en la gluconeogénesis, restaurando la glucosa sanguínea para su exportación al músculo. El glutamato es desaminado oxidativamente por la glutamato deshidrogenasa, liberando NH₄⁺ para el ciclo de la urea. El ciclo glucosa-alanina cumple así dos objetivos simultáneamente: transportar nitrógeno derivado del músculo al hígado para su eliminación segura y reciclar el carbono de glucosa entre el hígado y el músculo.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac015",
+      "topic": "Catabolismo de Aminoácidos",
+      "text": "¿Qué par de aminotransferasas se mide de forma rutinaria en suero para evaluar el daño hepatocelular, y qué sugiere una razón AST:ALT > 2?",
+      "options": [
+        "GDH y OTC; razón > 2 indica un trastorno del ciclo de la urea",
+        "BCAT y BCKDH; razón > 2 sugiere enfermedad de la orina con olor a jarabe de arce",
+        "ALT y AST; razón > 2 sugiere hepatopatía alcohólica",
+        "ALT y GGT; razón > 2 indica obstrucción biliar",
+        "AST y LDH; razón > 2 indica infarto de miocardio"
+      ],
+      "correct": 2,
+      "explain": "La ALT (alanina aminotransferasa) y la AST (aspartato aminotransferasa) son los marcadores estándar de daño hepatocelular. La ALT es más específica del hígado; la AST también se eleva en daño cardíaco y muscular. Ambas requieren PLP (vitamina B6) como cofactor. En la hepatopatía alcohólica, el consumo crónico de alcohol agota las reservas de PLP, deteriorando la actividad de la ALT más que la de la AST, por lo que la razón AST:ALT típicamente supera 2:1 — un signo distintivo de la hepatitis alcohólica.",
+      "explainImg": ""
+    },
+    {
       "id": "uc001",
       "topic": "Ciclo de la Urea",
       "text": "¿En qué dos compartimentos del hepatocito opera el ciclo de la urea?",
@@ -1842,6 +1917,81 @@
       ],
       "correct": 1,
       "explain": "La deficiencia de arginasa (argininemia) se presenta típicamente con diplejía espástica progresiva y discapacidad intelectual en lugar de hiperamoniemia potencialmente mortal, ya que vías alternativas pueden eliminar el amoniaco parcialmente. La arginina se acumula y se considera neurotóxica. La elevación de amoniaco es más leve que en otros defectos del ciclo de la urea.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc011",
+      "topic": "Ciclo de la Urea",
+      "text": "¿Cuántos equivalentes de ATP consume el ciclo de la urea por molécula de urea producida?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 3,
+      "explain": "Dos pasos consumen ATP: CPS-I usa 2 ATP (→ 2 ADP + 2 Pi) y la argininosuccinato sintetasa (ASS) rompe 1 ATP a AMP + PPi, equivalente a 2 enlaces de alta energía. Total = 4 equivalentes de ATP por molécula de urea. Este alto costo energético explica por qué el ciclo está estrictamente regulado y solo se activa plenamente durante el catabolismo proteico elevado.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc012",
+      "topic": "Ciclo de la Urea",
+      "text": "Un paciente con insuficiencia hepática aguda desarrolla confusión, asterixis y edema cerebral con amoniaco plasmático de 500 µmol/L. ¿Qué mecanismo explica mejor el edema cerebral?",
+      "options": [
+        "El NH₃ altera directamente la barrera hematoencefálica",
+        "La glutamina sintetasa en astrocitos convierte NH₃ + glutamato → glutamina, causando hinchazón osmótica celular",
+        "El NH₃ activa receptores NMDA, aumentando el Na⁺ intracelular",
+        "El NH₃ inhibe la Na⁺/K⁺-ATPasa en el endotelio cerebral",
+        "El NH₃ acidifica el líquido cefalorraquídeo, atrayendo agua hacia las células"
+      ],
+      "correct": 1,
+      "explain": "En el cerebro, la glutamina sintetasa (principalmente en astrocitos) detoxifica el NH₃ sintetizando glutamina. La acumulación osmótica de glutamina dentro de los astrocitos provoca hinchazón celular y edema cerebral. Simultáneamente, el agotamiento de glutamato perjudica el metabolismo energético neuronal y la función del ciclo de Krebs. Estos cambios generan la confusión, asterixis y coma de la encefalopatía hepática.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc013",
+      "topic": "Ciclo de la Urea",
+      "text": "Un neonato masculino con hiperamonemia grave presenta ácido orótico urinario marcadamente elevado. ¿Qué deficiencia enzimática es más compatible con estos hallazgos?",
+      "options": [
+        "Carbamil fosfato sintetasa I (CPS-I)",
+        "Ornitina transcarbamilasa (OTC)",
+        "Argininosuccinato sintetasa",
+        "Argininosuccinato liasa",
+        "Arginasa"
+      ],
+      "correct": 1,
+      "explain": "En la deficiencia de OTC, el carbamil fosfato no puede transferirse a la ornitina y se desborda al citosol, donde entra en la síntesis de pirimidinas produciendo ácido orótico en exceso. La deficiencia de CPS-I también causa hiperamonemia, pero reduce la producción de carbamil fosfato, por lo que el ácido orótico es bajo o normal. El ácido orótico urinario elevado en un neonato hiperamonémico distingue la deficiencia de OTC de la de CPS-I.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc014",
+      "topic": "Ciclo de la Urea",
+      "text": "La argininosuccinato sintetasa hidroliza ATP a AMP + PPi en lugar de ADP + Pi. ¿Cuál es la ventaja metabólica de este mecanismo?",
+      "options": [
+        "Genera más energía utilizable que la hidrólisis estándar de ATP",
+        "La rápida hidrólisis del PPi por la pirofosfatasa hace la reacción esencialmente irreversible",
+        "Permite que la reacción funcione en sentido inverso cuando el ATP citosólico cae",
+        "Genera NADH como subproducto para impulsar el ciclo de la urea",
+        "Vincula directamente la síntesis de argininosuccinato con la cadena de transporte de electrones"
+      ],
+      "correct": 1,
+      "explain": "La ruptura de ATP a AMP + PPi consume dos enlaces de alta energía. Crucialmente, la pirofosfatasa citosólica ubícua hidroliza PPi → 2 Pi de inmediato, haciendo la reacción global termodinámicamente irreversible e impulsando el ciclo hacia adelante. Esta estrategia ATP → AMP + PPi — compartida con las aminoacil-ARNt sintetasas y la activación de ácidos grasos — es un mecanismo común para asegurar la irreversibilidad de las reacciones biosintéticas.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc015",
+      "topic": "Ciclo de la Urea",
+      "text": "Un paciente con cirrosis hepática y amoniaco plasmático levemente elevado desarrolla una lesión renal aguda. ¿Por qué el fallo renal deteriora tan rápidamente el manejo del amoniaco?",
+      "options": [
+        "El riñón realiza su propio ciclo de la urea",
+        "Los túbulos renales normalmente excretan NH₄⁺ directamente en la orina, complementando la síntesis hepática de urea; esta ruta se pierde en la insuficiencia renal",
+        "El fallo renal activa la glutamina sintetasa muscular para tamponar el exceso de amoniaco",
+        "La insuficiencia renal reduce la disponibilidad de arginina, bloqueando la CPS-I hepática",
+        "El riñón es el principal sitio de síntesis de NAG, que activa la CPS-I"
+      ],
+      "correct": 1,
+      "explain": "Cuando la capacidad del ciclo de la urea hepático está reducida, los riñones compensan excretando amonio (NH₄⁺) directamente en la orina: la glutaminasa de los túbulos renales libera NH₃, que queda atrapado como NH₄⁺ en la orina ácida. En el síndrome hepatorrenal, esta ruta se elimina, provocando un rápido aumento del amoniaco sistémico. Los tratamientos (lactulosa, rifaximina) se dirigen a las rutas alternativas restantes: atrapar NH₄⁺ en las heces y reducir la producción intestinal de NH₃.",
       "explainImg": ""
     },
     {

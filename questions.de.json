@@ -1695,6 +1695,81 @@
       "explainImg": ""
     },
     {
+      "id": "aac011",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Welche Aussage beschreibt den Ping-Pong-(Doppelverschiebungs-)Mechanismus der Aminotransferasen am besten?",
+      "options": [
+        "Aminosäure und Ketosäure binden gleichzeitig, bevor ein Produkt das Enzym verlässt",
+        "PLP nimmt die Aminogruppe der Donor-Aminosäure auf (→ PMP + Ketosäure), dann überträgt PMP sie auf α-Ketoglutarat unter Regeneration von PLP und Bildung von Glutamat",
+        "Zwei Enzymuntereinheiten wechseln sich ab, die Aminogruppe zwischen den Substraten zu transportieren",
+        "ATP aktiviert die Aminogruppe vor der Übertragung auf α-Ketoglutarat",
+        "Die Reaktion verläuft über einen stabilen ternären Enzym-Substrat-Komplex"
+      ],
+      "correct": 1,
+      "explain": "Im Ping-Pong-Mechanismus reagiert PLP (kovalent an einen Lysinrest gebunden) zuerst mit der Donor-Aminosäure: PLP nimmt die Aminogruppe auf und wird zu PMP, während die Ketosäure freigesetzt wird („Ping\"). PMP reagiert dann mit α-Ketoglutarat, überträgt die Aminogruppe und bildet Glutamat, wobei PLP regeneriert wird („Pong\"). Es entsteht kein ternärer Komplex – das zweite Substrat bindet erst, nachdem das erste Produkt freigesetzt wurde.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac012",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Der Histidinkatabolismus beginnt mit einem ungewöhnlichen, nicht-transaminierenden Schritt. Welches ist das erste Produkt, und welches nachgeordnete Intermediat hat klinisch-diagnostische Bedeutung?",
+      "options": [
+        "α-Ketoglutarat; akkumuliert bei Vitamin-B6-Mangel",
+        "Urocanat; das nachgeordnete Intermediat Formiminoglutamat (FIGLU) akkumuliert bei Folatmangel im Urin",
+        "Imidazolonpropionat; akkumuliert bei Niereninsuffizienz",
+        "Histamin; erhöht bei Mastozytose",
+        "Glutamin; erhöht bei Hyperammonämie"
+      ],
+      "correct": 1,
+      "explain": "Histidase katalysiert die nicht-oxidative Eliminierung der Aminogruppe aus Histidin zu Urocanat + NH₄⁺ – im Unterschied zu den meisten Aminosäuren, die zunächst transaminiert werden. Urocanat wird weiter zu Formiminoglutamat (FIGLU) abgebaut; der letzte Schritt erfordert Tetrahydrofolat (THF) als Formimino-Akzeptor. Bei Folatmangel ist dieser Schritt blockiert, und FIGLU akkumuliert nach einer Histidin-Belastung im Urin – die Basis des klassischen FIGLU-Tests.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac013",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Die Glutamat-Dehydrogenase setzt die Aminogruppe aus Glutamat als NH₄⁺ frei. Welches ist das andere direkte Produkt, und warum ist es für den Aminosäurekatabolismus besonders wichtig?",
+      "options": [
+        "Aspartat; direkt als Stickstoffdonor in den Harnstoffzyklus eingeschleust",
+        "α-Ketoglutarat; re-enters den Citratzyklus und dient als universeller Aminogruppenakzeptor bei Transaminierungsreaktionen",
+        "Succinat; liefert FADH₂ für die Atmungskette",
+        "Oxalacetat; kann über Gluconeogenese zu Glucose umgewandelt werden",
+        "Citrat; wird ins Zytosol exportiert, um die Fettsäuresynthese zu versorgen"
+      ],
+      "correct": 1,
+      "explain": "Glutamat-Dehydrogenase (Mitochondrienmatrix) katalysiert: Glutamat + NAD⁺ → α-Ketoglutarat + NH₄⁺ + NADH. α-Ketoglutarat übernimmt eine Doppelrolle: Es re-enters den Citratzyklus (Anaplerose) und fungiert als universeller Aminogruppenakzeptor bei Transaminierungen. Das Paar Glutamat/α-Ketoglutarat bildet so den zentralen Stickstoff-Hub, der Aminosäurekatabolismus, Citratzyklus und Harnstoffsynthese verbindet. Das Enzym wird durch GTP/ATP gehemmt und durch GDP/ADP aktiviert.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac014",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Beim Glukose-Alanin-Zyklus trifft aus dem Skelettmuskel exportiertes Alanin in der Leber ein. Welches Enzym verarbeitet es dort, und welche Stoffwechselwege nehmen seine zwei Produkte?",
+      "options": [
+        "Alanin-Dehydrogenase; bildet Pyruvat (→ Acetyl-CoA) und NH₄⁺ (→ Ausscheidung)",
+        "ALT (Alanin-Aminotransferase); bildet Pyruvat (→ Gluconeogenese) und Glutamat (→ Harnstoffzyklus über Glutamat-Dehydrogenase)",
+        "Aspartat-Aminotransferase; bildet Oxalacetat (→ Citratzyklus) und Glutamat (→ Glutamin)",
+        "Pyruvatkinase; erzeugt ATP und setzt die Aminogruppe als NH₄⁺ frei",
+        "Glutaminase; bildet Glutamat (→ Citratzyklus) und NH₄⁺ (→ Harnstoffzyklus)"
+      ],
+      "correct": 1,
+      "explain": "In Hepatozyten katalysiert ALT: Alanin + α-Ketoglutarat → Pyruvat + Glutamat. Pyruvat fließt in die Gluconeogenese und stellt Blutglukose für den Export zurück in den Muskel bereit. Glutamat wird durch Glutamat-Dehydrogenase oxidativ desaminiert und setzt NH₄⁺ für den Harnstoffzyklus frei. Der Glukose-Alanin-Zyklus erfüllt damit zwei Ziele gleichzeitig: muskelstämmigen Stickstoff zur Leber zu transportieren und Glukosekohlenstoff zwischen Leber und Muskel zu recyceln.",
+      "explainImg": ""
+    },
+    {
+      "id": "aac015",
+      "topic": "Aminosäurekatabolismus",
+      "text": "Welche zwei Aminotransferasen werden routinemäßig im Serum zur Beurteilung hepatozellulärer Schäden gemessen, und was deutet ein AST:ALT-Quotient > 2 an?",
+      "options": [
+        "GDH und OTC; Quotient > 2 weist auf eine Harnstoffzyklusstörung hin",
+        "BCAT und BCKDH; Quotient > 2 deutet auf Ahornsirupkrankheit hin",
+        "ALT und AST; Quotient > 2 deutet auf alkoholische Lebererkrankung hin",
+        "ALT und GGT; Quotient > 2 weist auf Gallenobstruktion hin",
+        "AST und LDH; Quotient > 2 weist auf Myokardinfarkt hin"
+      ],
+      "correct": 2,
+      "explain": "ALT (Alanin-Aminotransferase) und AST (Aspartat-Aminotransferase) sind die Standardmarker hepatozellulärer Schädigung. ALT ist leberspezifischer; AST ist auch in Herz- und Skelettmuskel erhöht. Beide benötigen PLP (Vitamin B6) als Kofaktor. Bei alkoholischer Lebererkrankung erschöpft chronischer Alkoholkonsum die PLP-Reserven und beeinträchtigt die ALT-Aktivität stärker als die AST, sodass das AST:ALT-Verhältnis typischerweise > 2:1 beträgt – ein Kennzeichen der alkoholischen Hepatitis.",
+      "explainImg": ""
+    },
+    {
       "id": "uc001",
       "topic": "Harnstoffzyklus",
       "text": "In welchen zwei Kompartimenten des Hepatozyten läuft der Harnstoffzyklus ab?",
@@ -1842,6 +1917,81 @@
       ],
       "correct": 1,
       "explain": "Arginase-Mangel (Argininämie) manifestiert sich typischerweise mit progressiver spastischer Diplegie und geistiger Behinderung, nicht mit lebensbedrohlicher Hyperammonämie, da alternative Wege Ammoniak teilweise eliminieren können. Arginin akkumuliert und gilt als neurotoxisch. Die Ammoniakerhöhung ist milder als bei anderen Harnstoffzyklusdefekten.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc011",
+      "topic": "Harnstoffzyklus",
+      "text": "Wie viele ATP-Äquivalente verbraucht der Harnstoffzyklus pro erzeugtem Harnstoffmolekül?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 3,
+      "explain": "Zwei Schritte verbrauchen ATP: CPS-I verwendet 2 ATP (→ 2 ADP + 2 Pi) und Argininosuccinat-Synthetase (ASS) spaltet 1 ATP zu AMP + PPi, was 2 energiereichen Bindungen entspricht. Insgesamt werden 4 ATP-Äquivalente pro Harnstoffmolekül verbraucht. Diese hohen Energiekosten erklären, warum der Zyklus streng reguliert und erst bei erhöhtem Proteinkatabolismus vollständig aktiviert wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc012",
+      "topic": "Harnstoffzyklus",
+      "text": "Ein Patient mit akutem Leberversagen entwickelt Verwirrtheit, Asterixis und Hirnödem bei einem Plasma-Ammoniak von 500 µmol/L. Welcher Mechanismus erklärt das Hirnödem am besten?",
+      "options": [
+        "NH₃ schädigt direkt die Blut-Hirn-Schranke",
+        "Glutaminsynthetase in Astrozyten wandelt NH₃ + Glutamat → Glutamin um und verursacht osmotisches Zellschwellen",
+        "NH₃ aktiviert NMDA-Rezeptoren und erhöht intrazellulares Na⁺",
+        "NH₃ hemmt die Na⁺/K⁺-ATPase im Hirnendothel",
+        "NH₃ versäuert den Liquor und zieht Wasser in die Zellen"
+      ],
+      "correct": 1,
+      "explain": "Im Gehirn entgiftet Glutaminsynthetase (überwiegend in Astrozyten) NH₃ durch Glutaminsynthese. Die osmotische Glutaminakkumulation in Astrozyten bewirkt Zellschwellung und Hirnödem. Gleichzeitig schädigt die Glutamatverarmung den Neurotransmitterstoffwechsel und die Citratzyklus-Funktion. Diese Veränderungen verursachen die Verwirrtheit, Asterixis und das Koma der hepatischen Enzephalopathie.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc013",
+      "topic": "Harnstoffzyklus",
+      "text": "Ein männliches Neugeborenes mit schwerer Hyperammonämie zeigt stark erhöhte Orotoazidurie im Urin. Welcher Enzymmangel ist am wahrscheinlichsten?",
+      "options": [
+        "Carbamoylphosphat-Synthetase I (CPS-I)",
+        "Ornithin-Transcarbamylase (OTC)",
+        "Argininosuccinat-Synthetase",
+        "Argininosuccinat-Lyase",
+        "Arginase"
+      ],
+      "correct": 1,
+      "explain": "Bei OTC-Mangel kann Carbamoylphosphat nicht auf Ornithin übertragen werden und überfließt in das Zytosol, wo es in die Pyrimidinsynthese einmündet und überschüssige Orotsäure erzeugt. CPS-I-Mangel verursacht ebenfalls Hyperammonämie, reduziert jedoch die Carbamoylphosphatproduktion, sodass die Orotsäure niedrig oder normal bleibt. Erhöhte Orotoazidurie beim hyperammonämischen Neugeborenen unterscheidet daher den OTC-Mangel vom CPS-I-Mangel.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc014",
+      "topic": "Harnstoffzyklus",
+      "text": "Argininosuccinat-Synthetase spaltet ATP zu AMP + PPi statt zu ADP + Pi. Welchen Stoffwechselvorteil bietet dieser Mechanismus?",
+      "options": [
+        "Es wird mehr nutzbare Energie freigesetzt als bei der Standard-ATP-Hydrolyse",
+        "Die rasche PPi-Hydrolyse durch Pyrophosphatase macht die Reaktion praktisch irreversibel",
+        "Sie ermöglicht die Umkehr der Reaktion bei niedrigem zytosolischem ATP",
+        "NADH entsteht als Nebenprodukt, um den Harnstoffzyklus anzutreiben",
+        "Die Argininosuccinat-Synthese wird direkt mit der Atmungskette verknüpft"
+      ],
+      "correct": 1,
+      "explain": "Die Spaltung von ATP zu AMP + PPi verbraucht zwei energiereiche Bindungen. Entscheidend ist, dass die ubiquitäre Pyrophosphatase PPi sofort zu 2 Pi hydrolysiert und die Reaktion damit thermodynamisch irreversibel macht. Diese ATP → AMP + PPi-Strategie – auch bei Aminoacyl-tRNA-Synthetasen und der Fettsäureaktivierung angewendet – ist ein häufiger Mechanismus zur Sicherstellung der Irreversibilität biosynthetischer Reaktionen.",
+      "explainImg": ""
+    },
+    {
+      "id": "uc015",
+      "topic": "Harnstoffzyklus",
+      "text": "Ein Patient mit Leberzirrhose und leicht erhöhtem Plasma-Ammoniak entwickelt ein akutes Nierenversagen. Warum verschlechtert das Nierenversagen den Ammoniak-Haushalt so rasch?",
+      "options": [
+        "Die Niere besitzt einen eigenen Harnstoffzyklus",
+        "Renale Tubuli scheiden normalerweise NH₄⁺ direkt im Urin aus und ergänzen so die hepatische Harnstoffsynthese; diese Route geht beim Nierenversagen verloren",
+        "Das Nierenversagen aktiviert die muskuläre Glutaminsynthetase zur Ammoniak-Pufferung",
+        "Nierenversagen reduziert die Arginin-Verfügbarkeit und blockiert die hepatische CPS-I",
+        "Die Niere ist der Hauptsyntheseort für NAG, das CPS-I aktiviert"
+      ],
+      "correct": 1,
+      "explain": "Wenn die hepatische Harnstoffzykluskapazität reduziert ist, kompensieren die Nieren durch direkte NH₄⁺-Ausscheidung im Urin: Glutaminase in renalen Tubuli setzt NH₃ frei, das im sauren Urin als NH₄⁺ gebunden wird. Beim hepatorenalen Syndrom entfällt dieser Weg, und der systemische Ammoniakspiegel steigt rasch an. Therapeutisch werden Laktulose (NH₄⁺-Bindung im Stuhl) und Rifaximin (Reduktion intestinaler NH₃-Produktion) eingesetzt.",
       "explainImg": ""
     },
     {
