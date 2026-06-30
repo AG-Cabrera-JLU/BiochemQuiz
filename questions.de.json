@@ -11,7 +11,8 @@
     "Harnstoffzyklus",
     "Wasser und pH",
     "Proteine",
-    "Proteomik"
+    "Proteomik",
+    "Enzymkinetik"
   ],
   "questions": [
     {
@@ -2667,6 +2668,306 @@
       ],
       "correct": 3,
       "explain": "Wenn einer Proteinregion K/R-Reste fehlen, erzeugt Trypsin Peptide, die für die LC-MS/MS-Analyse zu groß (> 25 Reste) oder zu klein (< 5 Reste) sind. Komplementäre Proteasen — Lys-C (nach K), Glu-C (nach E/D), Asp-N (vor D), Chymotrypsin (nach F/Y/W) — erzeugen einen anderen Peptidsatz aus demselben Protein. Multi-Enzym-Strategien sind Standard in der Strukturproteomik und bei PTM-Studien zur Maximierung der Sequenzabdeckung.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek001",
+      "topic": "Enzymkinetik",
+      "text": "Was ist die Definition von Km in der Michaelis-Menten-Kinetik?",
+      "options": [
+        "Die Substratkonzentration, bei der die Reaktionsgeschwindigkeit gleich der Hälfte von Vmax ist",
+        "Die Substratkonzentration, bei der das Enzym vollständig gesättigt vorliegt",
+        "Die maximale Anzahl an Substratmolekülen, die ein einzelnes Enzymmolekül gleichzeitig binden kann",
+        "Die Dissoziationskonstante des Enzym-Substrat-Komplexes allein",
+        "Die Enzymkonzentration, die benötigt wird, um die maximale Reaktionsgeschwindigkeit zu erreichen"
+      ],
+      "correct": 0,
+      "explain": "Km (Michaelis-Konstante) ist die Substratkonzentration [S], bei der die Reaktionsgeschwindigkeit v genau der Hälfte von Vmax entspricht. Sie spiegelt die Affinität des Enzyms für sein Substrat wider: Ein niedriges Km bedeutet hohe Affinität (Halbsättigung bei niedrigem [S]), ein hohes Km bedeutet niedrige Affinität. Km entspricht der echten Dissoziationskonstante Ks nur dann, wenn k₂ >> k₋₁ gilt.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek002",
+      "topic": "Enzymkinetik",
+      "text": "Ein kompetitiver Inhibitor erhöht das apparente Km, ohne Vmax zu verändern. Wie kann diese Hemmung überwunden werden?",
+      "options": [
+        "Durch Absenken der Reaktionstemperatur unter den Optimalwert des Enzyms",
+        "Durch Erhöhung der Substratkonzentration, um den Inhibitor zu verdrängen",
+        "Durch Zugabe eines exogenen Kofaktors zur Stabilisierung der aktiven Enzymkonformation",
+        "Durch Einstellung des pH-Wertes auf das saure Optimum des jeweiligen Enzyms",
+        "Durch Erhöhung der Gesamtenzymkonzentration im Reaktionsansatz"
+      ],
+      "correct": 1,
+      "explain": "Kompetitive Inhibitoren binden reversibel an das aktive Zentrum und konkurrieren direkt mit dem Substrat. Durch Zugabe von überschüssigem Substrat wird der Inhibitor verdrängt und die volle Aktivität wiederhergestellt – daher bleibt Vmax unverändert. Das apparente Km steigt, weil bei Anwesenheit des Inhibitors mehr Substrat benötigt wird, um Vmax/2 zu erreichen.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek003",
+      "topic": "Enzymkinetik",
+      "text": "Was stellt der y-Achsenabschnitt im Lineweaver-Burk-Diagramm (1/v gegen 1/[S]) dar?",
+      "options": [
+        "Den negativen Kehrwert der Michaelis-Konstante, also −1/Km",
+        "Den direkten Wert der Michaelis-Konstante Km ohne Transformation",
+        "Den Kehrwert der maximalen Reaktionsgeschwindigkeit, also 1/Vmax",
+        "Die katalytische Effizienz des Enzyms ausgedrückt als kcat/Km",
+        "Den Kehrwert des Hill-Kooperativitätskoeffizienten, also 1/n"
+      ],
+      "correct": 2,
+      "explain": "Die Lineweaver-Burk-Gleichung lautet: 1/v = (Km/Vmax)·(1/[S]) + 1/Vmax. Für 1/[S] = 0 ergibt sich der y-Achsenabschnitt = 1/Vmax, der x-Achsenabschnitt ergibt −1/Km. Das Diagramm ermöglicht die grafische Bestimmung beider Konstanten, verstärkt aber Fehler bei niedrigen [S]-Werten, weshalb heute meist nichtlineare Regression der Michaelis-Menten-Gleichung bevorzugt wird.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek004",
+      "topic": "Enzymkinetik",
+      "text": "Welcher kinetische Parameter beschreibt die katalytische Gesamteffizienz eines Enzyms am besten?",
+      "options": [
+        "Vmax allein, da er den maximalen katalytischen Ausstoß des Enzyms erfasst",
+        "Km allein, da ein niedrigeres Km immer einem effizienteren Enzym entspricht",
+        "kcat allein, da er die Substratumwandlungen pro Enzymmolekül pro Sekunde zählt",
+        "kcat/Km, da er Substrataffinität und katalytische Geschwindigkeit in einem Wert vereint",
+        "Vmax multipliziert mit Km, da beide Parameter gemeinsam berücksichtigt werden müssen"
+      ],
+      "correct": 3,
+      "explain": "Die katalytische Effizienz wird am besten als kcat/Km (Spezifitätskonstante) ausgedrückt. Sie beschreibt, wie effizient ein Enzym bei niedrigem [S] (weit unterhalb der Sättigung) Substrat umsetzt, und hat die Einheit M⁻¹s⁻¹. Die theoretische Obergrenze liegt bei ~10⁸–10⁹ M⁻¹s⁻¹ (diffusionskontrolliert). Enzyme in diesem Bereich – z. B. Carboanhydrase, Acetylcholinesterase – gelten als 'kinetisch perfekt'.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek005",
+      "topic": "Enzymkinetik",
+      "text": "Was ist das entscheidende mechanistische Merkmal, das die unkompetitive von der kompetitiven Hemmung unterscheidet?",
+      "options": [
+        "Nur kompetitive Inhibitoren bewirken, dass das Enzym sein Substrat mit höherer Affinität bindet",
+        "Durch Zugabe von überschüssigem Substrat kann eine unkompetitive, nicht aber eine kompetitive Hemmung aufgehoben werden",
+        "Kompetitive Inhibitoren erhöhen Km, während unkompetitive Inhibitoren Km in allen Fällen unverändert lassen",
+        "Nur unkompetitive Inhibitoren interagieren ausschließlich mit der freien Enzymform",
+        "Unkompetitive Inhibitoren binden ausschließlich an den bereits gebildeten Enzym-Substrat-Komplex (ES)"
+      ],
+      "correct": 4,
+      "explain": "Unkompetitive Inhibitoren binden ausschließlich an den ES-Komplex, nicht an das freie Enzym. Dadurch sinken sowohl das apparente Vmax als auch das apparente Km um den gleichen Faktor α'. Im Lineweaver-Burk-Diagramm entstehen parallele Geraden (gleiche Steigung, höherer y-Achsenabschnitt). Mehr Substrat hebt diese Hemmung nicht auf – im Gegensatz zur kompetitiven Hemmung.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek006",
+      "topic": "Enzymkinetik",
+      "text": "Der Hill-Koeffizient (n) eines monomeren Enzyms mit einfacher Michaelis-Menten-Kinetik beträgt:",
+      "options": [
+        "0, da monomere Enzyme keine messbare Substratbindung aufweisen",
+        "1, da eine einzelne Bindungsstelle keine Kooperativität zwischen Stellen erzeugt",
+        "2, da jedes Enzymmolekül genau ein Substrat verarbeitet und ein Produkt freisetzt",
+        "0,5, weil bei Km nur die Hälfte der aktiven Stellen besetzt ist",
+        "Werte über 1, da jede Substratbindung das nächste Bindungsereignis fördert"
+      ],
+      "correct": 1,
+      "explain": "Ein Hill-Koeffizient von n = 1 bedeutet keine Kooperativität und eine hyperbolische v-[S]-Kurve gemäß der Michaelis-Menten-Gleichung. n > 1 zeigt positive Kooperativität an (sigmoide Kurve, z. B. Hämoglobin und O₂ mit n ≈ 2,8), n < 1 negative Kooperativität. Die allgemeine Hill-Gleichung lautet: v = Vmax·[S]ⁿ / (K'ⁿ + [S]ⁿ).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek007",
+      "topic": "Enzymkinetik",
+      "text": "Welche Aussage über allosterische Enzyme ist korrekt?",
+      "options": [
+        "Sie befolgen ausnahmslos die Standard-Michaelis-Menten-Hyperbelkinetik",
+        "Ihr Hill-Koeffizient liegt unabhängig vom vorhandenen Effektor immer unter 1",
+        "Es gibt kein definiertes Km, da auf sie keine Substratsättigungskinetik zutrifft",
+        "Eine sigmoide v-[S]-Kurve zeigt positive Kooperativität zwischen den Bindungsuntereinheiten an",
+        "Sie werden ausschließlich durch das Endprodukt des von ihnen kontrollierten Stoffwechselwegs gehemmt"
+      ],
+      "correct": 3,
+      "explain": "Allosterische Enzyme zeigen typischerweise sigmoide Substratsättigungskurven als Kennzeichen positiver Kooperativität. Die Substratbindung an einer Untereinheit stabilisiert den aktiven R-Zustand und erhöht die Affinität benachbarter Untereinheiten (MWC-Modell). Aktivatoren verschieben die Kurve nach links, Inhibitoren nach rechts. Der Hill-Koeffizient n > 1 quantifiziert die Kooperativität. Beispiele: ATCase, PFK-1, Hämoglobin.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek008",
+      "topic": "Enzymkinetik",
+      "text": "Welche Aussage beschreibt den Mechanismus der kompetitiven Hemmung korrekt?",
+      "options": [
+        "Der Inhibitor bindet das aktive Zentrum des freien Enzyms und konkurriert direkt mit dem Substrat",
+        "Der Inhibitor bindet ausschließlich an den Enzym-Substrat-Komplex und reduziert Vmax um die Hälfte",
+        "Der Inhibitor bindet ausschließlich an eine allosterische Stelle am Enzym-Substrat-Komplex",
+        "Der Inhibitor modifiziert kovalent einen Cysteinrest, der sich tief im Enzyminneren befindet",
+        "Der Inhibitor erhöht Km und senkt gleichzeitig Vmax unter allen experimentellen Bedingungen"
+      ],
+      "correct": 0,
+      "explain": "Kompetitive Inhibitoren – oft Substratanaloga – binden reversibel an das aktive Zentrum des freien Enzyms und blockieren den Substratzugang. Km steigt (mehr [S] nötig, um den Inhibitor zu verdrängen), aber Vmax bleibt bei sättigenden [S]-Konzentrationen unverändert. Dieses Muster ist diagnostisch: Im Lineweaver-Burk-Diagramm schneiden sich die Geraden auf der y-Achse (gleiches Vmax, unterschiedliche Steigungen und x-Achsenabschnitte).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek009",
+      "topic": "Enzymkinetik",
+      "text": "Welchen allgemeinen Effekt hat eine Temperaturerhöhung von 25 °C auf 37 °C bei enzymkatalysierten Reaktionen?",
+      "options": [
+        "Sowohl kcat als auch Km sinken gleichzeitig bei der Mehrheit der getesteten Enzyme",
+        "kcat bleibt unverändert, aber die Häufigkeit nicht-produktiver Substratkollisionen nimmt ab",
+        "Die Reaktionsgeschwindigkeit steigt bis zu einem thermischen Optimum, danach denaturiert das Enzym",
+        "Vmax sinkt, da das aktive Zentrum sich entfaltet, bevor ein kinetischer Nutzen sichtbar wird",
+        "Km steigt proportional zur Temperatur, da Substratbindungsinteraktionen schwächer werden"
+      ],
+      "correct": 2,
+      "explain": "Die Enzymaktivität steigt mit der Temperatur (ca. Verdoppelung pro 10 °C – Arrhenius-Gleichung) bis zu einem Optimum. Darüber hinaus führt thermische Denaturierung zum Aktivitätsverlust. Das Optimum liegt für menschliche Enzyme typischerweise bei 37–40 °C. Das Verhältnis von Aktivitätszunahme zu Inaktivierung bestimmt das beobachtete Temperatur-Aktivitäts-Profil jedes Enzyms.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek010",
+      "topic": "Enzymkinetik",
+      "text": "Was gibt die kcat (Wechselzahl) eines Enzyms an?",
+      "options": [
+        "Die Substratkonzentration, bei der die Reaktion halbmaximale Geschwindigkeit erreicht",
+        "Den Anteil der Enzymmoleküle, die sich im aktiven Zustand im Gleichgewicht befinden",
+        "Das Verhältnis von produktbildenden zu nicht-produktiven Substratkollisionen pro Sekunde",
+        "Die Gesamtsubstratmenge, die von allen Enzymmolekülen im Ansatz pro Minute umgesetzt wird",
+        "Die maximale Anzahl von Substratmolekülen, die ein einzelnes Enzymmolekül pro Sekunde umsetzt"
+      ],
+      "correct": 4,
+      "explain": "kcat (Wechselzahl) wird bei sättigender [S] gemessen und gibt die Anzahl der pro Enzymmolekül und Sekunde umgesetzten Substratmoleküle an (Einheit: s⁻¹). Carboanhydrase erreicht kcat ≈ 10⁶ s⁻¹; die meisten Stoffwechselenzyme liegen zwischen 1 und 10⁴ s⁻¹. Zusammen mit Km bestimmt kcat die katalytische Effizienz kcat/Km.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek011",
+      "topic": "Enzymkinetik",
+      "text": "Welche kinetischen Parameter verändern sich bei der reinen nicht-kompetitiven Hemmung?",
+      "options": [
+        "Nur Km steigt; Vmax bleibt – wie bei der kompetitiven Hemmung – unverändert",
+        "Nur Vmax sinkt, während das apparente Km um den gleichen Faktor ebenfalls sinkt",
+        "Sowohl Km als auch Vmax steigen proportional zur eingesetzten Inhibitorkonzentration",
+        "Vmax sinkt proportional zur Inhibitorkonzentration; das apparente Km bleibt konstant",
+        "Km sinkt, während Vmax gleichzeitig steigt, was einer scheinbaren Enzymaktivierung entspricht"
+      ],
+      "correct": 3,
+      "explain": "Bei der reinen nicht-kompetitiven Hemmung bindet der Inhibitor gleich gut an das freie Enzym und den ES-Komplex, senkt Vmax ohne die Substratbindung zu beeinflussen (Km unverändert). Im Lineweaver-Burk-Diagramm haben die Geraden für verschiedene Inhibitorkonzentrationen denselben x-Achsenabschnitt (−1/Km), aber unterschiedliche y-Achsenabschnitte (1/Vmax); die Geraden sind nicht parallel.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek012",
+      "topic": "Enzymkinetik",
+      "text": "Was besagt das Induced-fit-Modell der Enzym-Substrat-Wechselwirkung?",
+      "options": [
+        "Das aktive Zentrum des Enzyms verändert seine Konformation bei der Substratbindung, um die Katalyse zu optimieren",
+        "Das Substrat verändert seine eigene Form, um exakt in ein starres, vorgeformtes aktives Zentrum zu passen",
+        "Mehrere Substratmoleküle induzieren gemeinsam gleichförmige Kooperativitätsänderungen in allen Untereinheiten",
+        "Das Enzym setzt ein Zwischenprodukt frei, das anschließend die Bindung des nächsten Substrats induziert",
+        "Die Kofaktorbindung veranlasst das Enzym, sein aktives Zentrum für den anschließenden Substrateintritt zu öffnen"
+      ],
+      "correct": 0,
+      "explain": "Das Induced-fit-Modell von Koshland (1958) besagt, dass die Substratbindung eine Konformationsänderung im Enzym auslöst, die eine optimale Komplementarität zwischen aktivem Zentrum und Substrat erzeugt. Dies steht im Gegensatz zum starren Schlüssel-Schloss-Modell (Fischer, 1894). Das Modell erklärt, warum manche Nicht-Substrate zwar binden, aber nicht umgesetzt werden: Sie lösen die korrekte Katalysegeometrie nicht aus.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek013",
+      "topic": "Enzymkinetik",
+      "text": "Welche Bedingung erzeugt eine sigmoide statt einer hyperbolischen Substratsättigungskurve?",
+      "options": [
+        "Das Enzym besitzt nur eine einzige aktive Stelle pro gesamter Polypeptidkette",
+        "Kompetitive Inhibitoren sind bei Konzentrationen weit oberhalb des Ki-Wertes vorhanden",
+        "Die Substratkonzentration liegt weit oberhalb des Km des eingesetzten Enzyms",
+        "Das Reaktionsprodukt hemmt das Enzym stark in nicht-kompetitiver Weise",
+        "Das Enzym zeigt positive Kooperativität mit mehreren Substrat-bindenden Untereinheiten"
+      ],
+      "correct": 4,
+      "explain": "Eine sigmoide v-[S]-Kurve ist das Kennzeichen positiver Kooperativität: Die Substratbindung an einer Untereinheit erhöht die Affinität der benachbarten Untereinheiten (T-Zustand → R-Zustand). Das macht das Enzym zu einem sensitiven molekularen Schalter, der empfindlich auf kleine [S]-Änderungen reagiert. Der Hill-Koeffizient n > 1 quantifiziert die Steilheit des Sigmoids; n = 1 ergibt eine Hyperbel.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek014",
+      "topic": "Enzymkinetik",
+      "text": "Wie verändert ein reiner nicht-kompetitiver Inhibitor das Erscheinungsbild des Lineweaver-Burk-Diagramms?",
+      "options": [
+        "Er verschiebt den x-Achsenabschnitt nach rechts, während der y-Achsenabschnitt völlig unverändert bleibt",
+        "Er dreht die Gerade um den x-Achsenabschnitt und verändert dabei nur die Steigung",
+        "Er erhöht den y-Achsenabschnitt, während der x-Achsenabschnitt an derselben Position verbleibt",
+        "Er verschiebt den x-Achsenabschnitt nach links und erhöht gleichzeitig den y-Achsenabschnitt",
+        "Er erniedrigt beide Achsenabschnitte um den gleichen Faktor, was einer parallelen Verschiebung nach unten entspricht"
+      ],
+      "correct": 2,
+      "explain": "Nicht-kompetitive Hemmung senkt Vmax, ohne Km zu verändern. Im Lineweaver-Burk-Diagramm steigt der y-Achsenabschnitt (1/Vmax↑), während der x-Achsenabschnitt (−1/Km) unverändert bleibt. Die Geraden für steigende Inhibitorkonzentrationen schneiden sich daher am selben x-Achsenabschnitt – das diagnostische Muster der reinen nicht-kompetitiven Hemmung.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek015",
+      "topic": "Enzymkinetik",
+      "text": "Ein Enzym hat Km = 0,1 mM und Vmax = 100 µmol/min. Wie groß ist die Geschwindigkeit bei [S] = 0,1 mM?",
+      "options": [
+        "100 µmol/min, da [S] gleich Km ist und das Enzym vollständige Sättigung erreicht",
+        "50 µmol/min, da bei [S] = Km die Geschwindigkeit genau Vmax geteilt durch zwei beträgt",
+        "25 µmol/min, da das Substrat unterhalb des physiologischen Sättigungsschwellenwerts liegt",
+        "75 µmol/min, da bei Km nur ein Viertel der aktiven Stellen unbesetzt ist",
+        "10 µmol/min, da Km nur 10 % der für die Sättigung benötigten Konzentration markiert"
+      ],
+      "correct": 1,
+      "explain": "Per Definition ist Km die [S], bei der v = Vmax/2. Einsetzen in die Michaelis-Menten-Gleichung ergibt: v = 100 × 0,1/(0,1 + 0,1) = 100 × 0,5 = 50 µmol/min. Bei [S] = 10 × Km erreicht das Enzym ~91 % von Vmax; vollständige Sättigung wird theoretisch nie erreicht, sondern nur asymptotisch angenähert.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek016",
+      "topic": "Enzymkinetik",
+      "text": "Ein Kofaktor, der während der gesamten Katalyse fest und dauerhaft an sein Enzym gebunden bleibt, wird bezeichnet als:",
+      "options": [
+        "Kosubstrat, da es vorübergehend teilnimmt und nach jedem Zyklus freigesetzt wird",
+        "Apoenzym, da es den Proteinanteil des Enzyms ohne jeglichen Kofaktor darstellt",
+        "Zymogen, da es proteolytische Spaltung benötigt, um katalytisch aktiv zu werden",
+        "Prosthetische Gruppe, die sich nach jedem einzelnen katalytischen Turnover ablöst",
+        "Prosthetische Gruppe, die kovalent oder fest an das Enzym gebunden bleibt"
+      ],
+      "correct": 4,
+      "explain": "Prosthetische Gruppen sind Nicht-Protein-Kofaktoren (organisch oder metallisch), die fest oder kovalent an das Enzym gebunden bleiben und sich nach jedem Turnover nicht lösen. Beispiele: FAD in der Succinat-Dehydrogenase, Häm in Cytochrom c, Biotin in der Pyruvat-Carboxylase. Kosubstrate (NAD⁺, CoA) unterscheiden sich: Sie binden vorübergehend und werden nach jedem Reaktionszyklus freigesetzt.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek017",
+      "topic": "Enzymkinetik",
+      "text": "Welche Aussage über das aktive Zentrum eines Enzyms ist korrekt?",
+      "options": [
+        "Es ist eine dreidimensionale Tasche aus katalytischen und Bindungsresten, die das Substrat spezifisch erkennt",
+        "Es erstreckt sich über die gesamte Enzymoberfläche, um die für den Substratkontakt verfügbare Fläche zu maximieren",
+        "Es ist ein hydrophiler Kanal, der unpolare und hydrophobe Substratmoleküle gezielt ausschließt",
+        "Es hat in allen Mitgliedern derselben Enzymsuperfamilie eine identische Struktur ohne Ausnahme",
+        "Es enthält immer einen obligatorischen Metallion-Kofaktor, der für die Substratbindung unerlässlich ist"
+      ],
+      "correct": 0,
+      "explain": "Das aktive Zentrum ist eine dreidimensionale Spalte oder Tasche, die von Aminosäureresten gebildet wird, die in der Primärsequenz weit voneinander entfernt, aber durch die Proteinfaltung zusammengebracht werden. Es umfasst eine substratbindende Region (bestimmt die Spezifität) und katalytische Reste (His, Asp, Ser, Cys, Lys usw.). Aktive Zentren liegen häufig in hydrophoben Taschen, die Wasser ausschließen und Reaktanten konzentrieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek018",
+      "topic": "Enzymkinetik",
+      "text": "Welchen Effekt hat ein drastischer pH-Abfall von pH 7 auf pH 3 typischerweise auf die Enzymaktivität?",
+      "options": [
+        "Die Aktivität steigt, da die Protonierung des Substrats dessen Bindung an das aktive Zentrum verbessert",
+        "Bei Enzymen mit saurem pH-Optimum wie Pepsin oder Magenlipase wird kein Effekt beobachtet",
+        "Die Ionisierungszustände der aktiven Zentrum-Reste werden gestört, was die Aktivität stark reduziert oder aufhebt",
+        "Allosterische Enzyme werden dauerhaft aktiviert, da der pH-Abfall sie im aktiven R-Zustand fixiert",
+        "Das Substrat denaturiert statt des Enzyms selbst, wodurch das apparente Km stark abfällt"
+      ],
+      "correct": 2,
+      "explain": "Die Enzymaktivität hängt entscheidend von den Protonierungszuständen der aktiven Zentrum-Reste ab (His, Asp, Glu, Cys, Lys). Ein pH-Abfall von 7 auf 3 protoniert Reste, die deprotoniert vorliegen sollten (z. B. His-ε-NH wird +NH), was die Katalyse stört. Die meisten menschlichen Enzyme haben ein pH-Optimum bei ~7,4. Ausnahmen wie Pepsin (Optimum ~pH 2) sind an ihre Umgebung angepasst. Extremer pH kann das Protein irreversibel denaturieren.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek019",
+      "topic": "Enzymkinetik",
+      "text": "Was ist Rückkopplungshemmung im Kontext der metabolischen Enzymregulation?",
+      "options": [
+        "Aktivierung des ersten Enzyms eines Stoffwechselwegs durch sein eigenes unmittelbares Reaktionsprodukt",
+        "Hemmung des letzten Enzyms eines Wegs durch das allererste Substrat desselben Wegs",
+        "Kompetitive Hemmung eines zentralen Enzyms durch ein vorgelagertes Stoffwechselzwischenprodukt",
+        "Hemmung eines frühen regulatorischen Enzyms durch das Endprodukt desselben Stoffwechselwegs",
+        "Allosterische Aktivierung eines nachgeschalteten Enzyms durch einen aktivierenden Effektor aus vorgelagerten Schritten"
+      ],
+      "correct": 3,
+      "explain": "Rückkopplungs- (Endprodukt-)Hemmung tritt auf, wenn das Endprodukt eines Stoffwechselwegs allosterisch ein Enzym am oder nahe dem Beginn des Wegs hemmt – typischerweise den ersten festgelegten Schritt. Dies schafft einen selbstregulierenden Regelkreis: Produktakkumulation verlangsamt die eigene Produktion. Klassische Beispiele: CTP hemmt ATCase in der Pyrimidinsynthese; Isoleucin hemmt Threonindesaminase in der verzweigtkettigen Aminosäuresynthese.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek020",
+      "topic": "Enzymkinetik",
+      "text": "Welche Aussage über Enzymkatalyse und den Übergangszustand ist korrekt?",
+      "options": [
+        "Enzyme erhöhen die Aktivierungsenergieschranke, was die Reaktion paradoxerweise beschleunigt",
+        "Enzyme stabilisieren den Übergangszustand und senken dadurch die benötigte Aktivierungsenergie",
+        "Enzyme verschieben das Reaktionsgleichgewicht in Richtung Produkte, indem sie zusätzliche freie Energie liefern",
+        "Enzyme verändern das Gesamt-ΔG der Reaktion durch feste Bindung des Substratmoleküls",
+        "Enzyme senken die Aktivierungsenergie ausschließlich für die Rückwärtsreaktion, nicht für die Vorwärtsreaktion"
+      ],
+      "correct": 1,
+      "explain": "Enzyme beschleunigen Reaktionen durch Stabilisierung des Übergangszustands (höchstenergetischer Punkt auf der Reaktionskoordinate), was die Aktivierungsenergie Ea verringert. Das Gesamt-ΔG der Reaktion und die Gleichgewichtskonstante bleiben unverändert – die Thermodynamik wird nicht beeinflusst. Mechanismen: elektrostatische Stabilisierung, kovalente Intermediate, Näherungs- und Orientierungseffekte sowie allgemeine Säure-Base-Katalyse.",
       "explainImg": ""
     }
   ]

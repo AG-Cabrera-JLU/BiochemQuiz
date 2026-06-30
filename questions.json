@@ -11,7 +11,8 @@
     "Urea Cycle",
     "Water and pH",
     "Proteins",
-    "Proteomics"
+    "Proteomics",
+    "Enzyme Kinetics"
   ],
   "questions": [
     {
@@ -2667,6 +2668,306 @@
       ],
       "correct": 3,
       "explain": "When a protein region lacks K/R, trypsin generates peptides too large (> 25 residues) or too small (< 5 residues) for reliable LC-MS/MS detection. Complementary proteases — Lys-C (after K), Glu-C (after E/D), Asp-N (before D), chymotrypsin (after F/Y/W) — produce a different peptide set from the same protein. Multi-enzyme strategies are standard in structural proteomics and PTM studies to maximize coverage.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek001",
+      "topic": "Enzyme Kinetics",
+      "text": "What is the definition of Km in Michaelis-Menten kinetics?",
+      "options": [
+        "The substrate concentration at which reaction velocity equals half of Vmax",
+        "The substrate concentration at which the enzyme is completely saturated",
+        "The maximum number of substrate molecules a single enzyme molecule can bind at once",
+        "The dissociation constant of the enzyme-substrate complex alone",
+        "The enzyme concentration needed to achieve maximum reaction velocity"
+      ],
+      "correct": 0,
+      "explain": "Km (Michaelis constant) is the substrate concentration [S] at which the reaction velocity v is exactly half of Vmax. It reflects the affinity of the enzyme for its substrate: a low Km means high affinity (half-saturation at low [S]), while a high Km means low affinity. Km equals the true dissociation constant Ks only when k₂ >> k₋₁ (rapid-equilibrium assumption).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek002",
+      "topic": "Enzyme Kinetics",
+      "text": "A competitive inhibitor raises apparent Km without changing Vmax. How can this inhibition be overcome?",
+      "options": [
+        "By lowering the reaction temperature below the enzyme optimum",
+        "By increasing substrate concentration to outcompete the inhibitor",
+        "By adding an exogenous cofactor to stabilize the active enzyme conformation",
+        "By adjusting the pH to the enzyme's acid optimum value",
+        "By raising total enzyme concentration added to the reaction mixture"
+      ],
+      "correct": 1,
+      "explain": "Competitive inhibitors bind reversibly to the active site, competing directly with substrate. Adding excess substrate displaces the inhibitor, restoring full activity — so Vmax is unchanged. The apparent Km rises because a higher [S] is needed to reach Vmax/2 in the presence of the inhibitor. This excess-substrate rescue is the defining diagnostic for competitive inhibition.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek003",
+      "topic": "Enzyme Kinetics",
+      "text": "In a Lineweaver-Burk plot (1/v vs. 1/[S]), what does the y-intercept represent?",
+      "options": [
+        "The negative reciprocal of the Michaelis constant, equal to −1/Km",
+        "The direct value of the Michaelis constant Km without transformation",
+        "The reciprocal of maximum velocity, equal to 1/Vmax",
+        "The catalytic efficiency of the enzyme expressed as kcat/Km",
+        "The reciprocal of the Hill cooperativity coefficient, equal to 1/n"
+      ],
+      "correct": 2,
+      "explain": "The Lineweaver-Burk equation is 1/v = (Km/Vmax)·(1/[S]) + 1/Vmax. Setting 1/[S] = 0 gives the y-intercept = 1/Vmax, and the x-intercept = −1/Km. The plot allows graphical determination of both kinetic constants, but amplifies error at low [S] values, so modern analysis uses nonlinear regression of the Michaelis-Menten equation directly.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek004",
+      "topic": "Enzyme Kinetics",
+      "text": "Which kinetic parameter best describes the overall catalytic efficiency of an enzyme?",
+      "options": [
+        "Vmax alone, because it captures the maximum catalytic output of the enzyme",
+        "Km alone, because lower Km always corresponds to a more efficient enzyme",
+        "kcat alone, because it counts substrate conversions per enzyme molecule per second",
+        "kcat/Km, because it combines substrate affinity with catalytic rate in one value",
+        "Vmax multiplied by Km, because both parameters must be balanced together"
+      ],
+      "correct": 3,
+      "explain": "Catalytic efficiency is best expressed as kcat/Km (the specificity constant). It describes how efficiently an enzyme converts substrate at low [S], far from saturation, and has units of M⁻¹s⁻¹. The diffusion-controlled upper limit is ~10⁸–10⁹ M⁻¹s⁻¹. Enzymes near this limit — carbonic anhydrase, acetylcholinesterase — are called 'kinetically perfect.'",
+      "explainImg": ""
+    },
+    {
+      "id": "ek005",
+      "topic": "Enzyme Kinetics",
+      "text": "What is the key mechanistic feature that distinguishes uncompetitive from competitive inhibition?",
+      "options": [
+        "Only competitive inhibitors cause the enzyme to bind substrate with greater affinity",
+        "Adding excess substrate can fully reverse uncompetitive but not competitive inhibition",
+        "Competitive inhibitors raise Km, while uncompetitive inhibitors leave Km unchanged in all cases",
+        "Only uncompetitive inhibitors interact exclusively with the free enzyme form alone",
+        "Uncompetitive inhibitors bind only to the already-formed enzyme-substrate (ES) complex"
+      ],
+      "correct": 4,
+      "explain": "Uncompetitive inhibitors bind exclusively to the ES complex, not to the free enzyme. This lowers both apparent Vmax and apparent Km by the same factor α'. On a Lineweaver-Burk plot, uncompetitive inhibition gives parallel lines (same slope, higher y-intercept). Adding more substrate does NOT rescue activity — unlike competitive inhibition — because the inhibitor traps the ES complex.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek006",
+      "topic": "Enzyme Kinetics",
+      "text": "The Hill coefficient (n) for a monomeric enzyme obeying simple Michaelis-Menten kinetics equals:",
+      "options": [
+        "0, because monomeric enzymes show no measurable substrate binding events at all",
+        "1, because a single binding site produces no cooperativity between sites",
+        "2, because each enzyme molecule processes exactly one substrate and one product",
+        "0.5, reflecting that only half the active sites are occupied at the Km concentration",
+        "Values greater than 1, because any substrate binding event promotes the next binding"
+      ],
+      "correct": 1,
+      "explain": "A Hill coefficient of n = 1 indicates no cooperativity and a purely hyperbolic v-[S] relationship — the Michaelis-Menten equation. n > 1 indicates positive cooperativity (sigmoidal curve, e.g., hemoglobin binding O₂ with n ≈ 2.8), and n < 1 indicates negative cooperativity. The Hill equation generalizes to v = Vmax·[S]ⁿ / (K'ⁿ + [S]ⁿ).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek007",
+      "topic": "Enzyme Kinetics",
+      "text": "Which statement about allosteric enzymes is correct?",
+      "options": [
+        "They always obey standard Michaelis-Menten hyperbolic kinetics without exception",
+        "Their Hill coefficient is always below 1 regardless of the effector molecules present",
+        "They lack a defined Km because no substrate saturation kinetics apply to them",
+        "A sigmoidal v-[S] curve indicates positive cooperativity among binding subunits",
+        "They are inhibited exclusively by the final product of the pathway they control"
+      ],
+      "correct": 3,
+      "explain": "Allosteric enzymes typically display sigmoidal substrate saturation curves, the hallmark of positive cooperativity. Substrate binding at one subunit stabilizes the active R-state, increasing affinity at neighboring subunits (concerted MWC model). Activators shift the curve left (lower S₀.₅); inhibitors shift it right. The Hill coefficient n > 1 quantifies cooperativity. Examples: ATCase, PFK-1, hemoglobin.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek008",
+      "topic": "Enzyme Kinetics",
+      "text": "Which statement correctly describes the mechanism of competitive inhibition?",
+      "options": [
+        "The inhibitor binds the active site of the free enzyme, competing directly with substrate",
+        "The inhibitor binds only to the enzyme-substrate complex and reduces Vmax by half",
+        "The inhibitor binds an allosteric site on the enzyme-substrate complex exclusively",
+        "The inhibitor covalently modifies a cysteine residue located deep within the enzyme",
+        "The inhibitor raises Km while simultaneously lowering Vmax under all experimental conditions"
+      ],
+      "correct": 0,
+      "explain": "Competitive inhibitors — often substrate analogues — bind reversibly to the active site of the free enzyme, physically blocking substrate access. Km increases (more [S] needed to overcome the inhibitor), but Vmax is unchanged at saturating [S]. This pattern is diagnostic: on a Lineweaver-Burk plot the lines intersect on the y-axis (same Vmax, different slopes and x-intercepts).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek009",
+      "topic": "Enzyme Kinetics",
+      "text": "What is the general effect of raising temperature from 25 °C to 37 °C on enzyme-catalysed reactions?",
+      "options": [
+        "Both kcat and Km decrease simultaneously for the majority of enzymes tested",
+        "kcat is unaffected but the frequency of non-productive substrate collisions decreases",
+        "Reaction rate increases up to a thermal optimum, after which the enzyme denatures",
+        "Vmax drops because the active site unfolds before any kinetic benefit can be observed",
+        "Km rises proportionally to temperature as substrate binding interactions become weaker"
+      ],
+      "correct": 2,
+      "explain": "Temperature increases enzyme activity (roughly doubles per 10 °C — Arrhenius equation) up to an optimum. Above this point, thermal denaturation disrupts the three-dimensional structure and destroys activity. For human body enzymes the optimum is around 37–40 °C. The ratio of activity increase versus inactivation determines the observed temperature-activity profile for each enzyme.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek010",
+      "topic": "Enzyme Kinetics",
+      "text": "What does the kcat (turnover number) of an enzyme represent?",
+      "options": [
+        "The substrate concentration at which the reaction achieves half-maximal velocity",
+        "The fraction of enzyme molecules that are in the active conformation at equilibrium",
+        "The ratio of productive to non-productive substrate collisions with the enzyme per second",
+        "The total substrate converted by all enzyme molecules present in the assay per minute",
+        "The maximum number of substrate molecules one enzyme molecule converts to product per second"
+      ],
+      "correct": 4,
+      "explain": "kcat (turnover number) is measured at saturating [S] and reports the number of substrate molecules converted to product per active enzyme molecule per second (units: s⁻¹). Carbonic anhydrase has kcat ≈ 10⁶ s⁻¹; most metabolic enzymes range from 1–10⁴ s⁻¹. Together with Km, kcat determines catalytic efficiency kcat/Km.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek011",
+      "topic": "Enzyme Kinetics",
+      "text": "In pure non-competitive inhibition, which kinetic parameters change?",
+      "options": [
+        "Only Km increases; Vmax remains unchanged, just as in competitive inhibition",
+        "Only Vmax decreases while apparent Km also decreases by the same factor",
+        "Both Km and Vmax increase in proportion to the inhibitor concentration used",
+        "Vmax decreases proportionally to inhibitor concentration; apparent Km stays constant",
+        "Km decreases while Vmax increases simultaneously, creating an apparent activation"
+      ],
+      "correct": 3,
+      "explain": "In pure non-competitive inhibition the inhibitor binds equally to the free enzyme and the ES complex, reducing Vmax without affecting substrate binding (Km unchanged). On a Lineweaver-Burk plot, lines for different inhibitor concentrations share the same x-intercept (−1/Km) but have different y-intercepts (1/Vmax), and are not parallel. Vmax decreases by factor (1 + [I]/Ki).",
+      "explainImg": ""
+    },
+    {
+      "id": "ek012",
+      "topic": "Enzyme Kinetics",
+      "text": "What does the induced-fit model of enzyme-substrate interaction propose?",
+      "options": [
+        "The enzyme active site undergoes a conformational change upon substrate binding to optimise catalysis",
+        "The substrate changes its own shape to match a rigid, preformed active-site cavity exactly",
+        "Multiple substrate molecules together induce cooperativity changes uniformly across all subunits",
+        "The enzyme releases an intermediate product that then induces binding of the next substrate",
+        "Cofactor binding induces the enzyme to open its active site for subsequent substrate entry"
+      ],
+      "correct": 0,
+      "explain": "Koshland's induced-fit model (1958) proposes that substrate binding triggers a conformational change in the enzyme, achieving optimal complementarity between active site and substrate. This contrasts with Fischer's rigid lock-and-key model (1894). Induced fit explains substrate specificity and why some non-substrate ligands bind but are not catalyzed: they fail to induce the correct catalytic geometry.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek013",
+      "topic": "Enzyme Kinetics",
+      "text": "Which condition causes the substrate saturation curve to be sigmoidal rather than hyperbolic?",
+      "options": [
+        "The enzyme has only one single active site per entire polypeptide chain",
+        "Competitive inhibitors are present at concentrations well above the Ki value",
+        "Substrate concentration is far in excess of the Km of the enzyme involved",
+        "The reaction product strongly inhibits the enzyme in a non-competitive manner",
+        "The enzyme exhibits positive cooperativity with multiple substrate-binding subunits"
+      ],
+      "correct": 4,
+      "explain": "A sigmoidal v-[S] curve is the hallmark of positive cooperativity: substrate binding at one subunit increases the affinity of neighbouring subunits, shifting the enzyme from T-state to R-state. This makes the enzyme a sensitive molecular switch responding sharply to small changes in [S]. The Hill coefficient n > 1 quantifies the steepness of the sigmoid; n = 1 gives a hyperbola.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek014",
+      "topic": "Enzyme Kinetics",
+      "text": "How does a pure non-competitive inhibitor alter the appearance of a Lineweaver-Burk plot?",
+      "options": [
+        "It shifts the x-intercept to the right while leaving the y-intercept completely unchanged",
+        "It rotates the line around the x-intercept, changing only the slope of the line",
+        "It raises the y-intercept while leaving the x-intercept at the same position on the axis",
+        "It moves the x-intercept to the left and simultaneously raises the y-intercept value",
+        "It lowers both intercepts by the same factor, producing a parallel downward shift"
+      ],
+      "correct": 2,
+      "explain": "Non-competitive inhibition decreases Vmax without altering Km. In the Lineweaver-Burk plot, a lower Vmax means a higher y-intercept (1/Vmax↑). Because Km is unchanged, the x-intercept (−1/Km) stays fixed. Lines for increasing inhibitor concentrations therefore pivot around the same x-intercept — this is the diagnostic pattern for pure non-competitive inhibition.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek015",
+      "topic": "Enzyme Kinetics",
+      "text": "An enzyme has Km = 0.1 mM and Vmax = 100 µmol/min. What is the velocity at [S] = 0.1 mM?",
+      "options": [
+        "100 µmol/min, because [S] equals Km and the enzyme reaches complete saturation",
+        "50 µmol/min, because at [S] = Km the velocity is exactly Vmax divided by two",
+        "25 µmol/min, because the substrate remains below the physiological saturation threshold",
+        "75 µmol/min, because only one quarter of active sites remain unoccupied at Km",
+        "10 µmol/min, because Km marks only 10 % of the concentration needed for saturation"
+      ],
+      "correct": 1,
+      "explain": "By definition, Km is the [S] at which v = Vmax/2. Substituting into the Michaelis-Menten equation: v = 100 × 0.1/(0.1 + 0.1) = 100 × 0.5 = 50 µmol/min. This is the most direct application of the Km definition and a common exam calculation. At [S] = 10 × Km the enzyme reaches ~91 % of Vmax; full saturation is never theoretically achieved.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek016",
+      "topic": "Enzyme Kinetics",
+      "text": "A cofactor that is tightly and permanently bound to its enzyme throughout catalysis is called:",
+      "options": [
+        "A cosubstrate, because it participates transiently and is released after every cycle",
+        "An apoenzyme, because it is the protein part of the enzyme without any cofactor attached",
+        "A zymogen, because it requires proteolytic cleavage before it can become catalytically active",
+        "A prosthetic group that dissociates from the enzyme after each individual catalytic turnover",
+        "A prosthetic group that remains tightly or covalently attached to the enzyme at all times"
+      ],
+      "correct": 4,
+      "explain": "Prosthetic groups are non-protein cofactors (organic or metal) that remain tightly or covalently attached to the enzyme throughout catalysis and do not dissociate after each turnover. Examples: FAD in succinate dehydrogenase, heme in cytochrome c, biotin in pyruvate carboxylase. Cosubstrates (NAD⁺, CoA) differ: they bind transiently and are released after each reaction cycle.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek017",
+      "topic": "Enzyme Kinetics",
+      "text": "Which statement about the active site of an enzyme is correct?",
+      "options": [
+        "It is a three-dimensional pocket lined by catalytic and binding residues that recognise substrate specifically",
+        "It spans the entire enzyme surface to maximise the area available for substrate contact",
+        "It is a hydrophilic channel that specifically excludes non-polar and hydrophobic substrate molecules",
+        "It has an identical structure in all members of the same enzyme superfamily without exception",
+        "It always contains an obligatory metal ion cofactor that is essential for substrate binding"
+      ],
+      "correct": 0,
+      "explain": "The active site is a three-dimensional cleft or pocket formed by amino acid residues that may be distant in primary sequence but are brought together by protein folding. It contains a substrate-binding region (determines specificity) and catalytic residues (His, Asp, Ser, Cys, Lys, etc.). Active sites are often hydrophobic pockets that exclude water and concentrate reactants to lower the effective Km.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek018",
+      "topic": "Enzyme Kinetics",
+      "text": "What effect does a drastic drop in pH from 7 to 3 typically have on enzyme activity?",
+      "options": [
+        "Activity increases because protonating the substrate improves its binding to the active site",
+        "No effect is observed for enzymes with acidic pH optima such as pepsin or gastric lipase",
+        "Active-site residue ionization states are disrupted, generally abolishing or severely reducing activity",
+        "Allosteric enzymes are permanently activated because the pH drop locks them in the R-state",
+        "The substrate denatures rather than the enzyme, causing the apparent Km to decrease sharply"
+      ],
+      "correct": 2,
+      "explain": "Enzyme activity depends critically on the protonation states of active-site residues (His, Asp, Glu, Cys, Lys). A pH drop from 7 to 3 protonates residues that should be deprotonated (e.g., His-ε-NH becomes +NH), disrupting catalysis. Most human enzymes have a pH optimum near 7.4. Exceptions like pepsin (optimum ~pH 2) are adapted for the gastric environment. Extreme pH can also irreversibly denature the protein.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek019",
+      "topic": "Enzyme Kinetics",
+      "text": "What is feedback inhibition in the context of metabolic enzyme regulation?",
+      "options": [
+        "Activation of the pathway's first enzyme by its own immediate reaction product",
+        "Inhibition of the pathway's last enzyme by the very first substrate of that pathway",
+        "Competitive inhibition of a central enzyme by an upstream pathway intermediate",
+        "Inhibition of an early regulatory enzyme by the final end-product of the same pathway",
+        "Allosteric activation of a downstream enzyme by an activating effector from further upstream"
+      ],
+      "correct": 3,
+      "explain": "Feedback (end-product) inhibition occurs when the final product of a metabolic pathway allosterically inhibits an enzyme at or near the beginning of the pathway — typically the first committed step. This creates a self-regulating circuit: product accumulation slows its own production. Classic examples: CTP inhibiting ATCase in pyrimidine synthesis; isoleucine inhibiting threonine deaminase in branched-chain amino acid synthesis.",
+      "explainImg": ""
+    },
+    {
+      "id": "ek020",
+      "topic": "Enzyme Kinetics",
+      "text": "Which statement about enzyme catalysis and the transition state is correct?",
+      "options": [
+        "Enzymes raise the activation energy barrier, which paradoxically accelerates the reaction forward",
+        "Enzymes stabilise the transition state, thereby lowering the activation energy required for reaction",
+        "Enzymes shift the reaction equilibrium toward products by supplying additional free energy",
+        "Enzymes change the overall ΔG of the reaction through tight binding of the substrate molecule",
+        "Enzymes lower the activation energy only for the reverse reaction, not for the forward direction"
+      ],
+      "correct": 1,
+      "explain": "Enzymes accelerate reactions by stabilising the transition state (highest-energy point on the reaction coordinate), which lowers the activation energy Ea needed to proceed. The overall ΔG of the reaction and the equilibrium constant are unchanged — thermodynamics is unaffected. Mechanisms include electrostatic stabilisation, covalent intermediates, proximity/orientation effects, and general acid-base catalysis.",
       "explainImg": ""
     }
   ]
